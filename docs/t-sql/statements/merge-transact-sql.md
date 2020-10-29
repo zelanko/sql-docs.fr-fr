@@ -4,7 +4,7 @@ title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -25,18 +25,21 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098848"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679082"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
-Exécute des opérations d'insertion, de mise à jour ou de suppression sur une table cible à partir des résultats d'une jointure avec une table source. Par exemple, synchronisez deux tables en insérant, mettant à jour ou supprimant des lignes dans une seule table selon les différences trouvées dans l'autre table.  
+Exécute des opérations d'insertion, de mise à jour ou de suppression sur une table cible à partir des résultats d'une jointure avec une table source. Par exemple, synchronisez deux tables en insérant, mettant à jour ou supprimant des lignes dans une seule table selon les différences trouvées dans l'autre table. 
+
+> [!NOTE]
+> MERGE est actuellement en préversion pour Azure Synapse Analytics.
   
 **Conseil relatif aux performances :** Le comportement conditionnel décrit pour l'instruction MERGE fonctionne mieux lorsque les deux tables ont un mélange complexe de caractéristiques correspondantes. Par exemple, l'insertion d'une ligne si elle n'existe pas ou la mise à jour d’une ligne si elle correspond. Vous pouvez améliorer les performances et l'extensibilité lors d'une simple mise à jour d'une table basée sur les lignes d'une autre table en utilisant les instructions INSERT, UPDATE et DELETE. Par exemple :  
   
@@ -233,6 +236,7 @@ Spécifie le modèle de correspondance de graphe. Pour plus d’informations sur
 >[!NOTE]
 > Dans Azure Synapse Analytics, la commande MERGE (préversion) présente les différences suivantes par rapport à SQL Server et à Azure SQL Database.  
 > - Une mise à jour MERGE correspond à une paire suppression-insertion. Le nombre de lignes affectées par une mise à jour MERGE comprend les lignes supprimées et insérées. 
+> - Pendant la préversion, la commande MERGE ne fonctionne pas avec les tables avec des contraintes UNIQUES.  Ce sera résolu bientôt dans une version ultérieure.
 > - La prise en charge de tables présentant des types de distribution différents est décrite dans le tableau suivant :
 
 >|Clause MERGE dans Azure Synapse Analytics|Table de distribution CIBLE prise en charge| Table de distribution SOURCE prise en charge|Comment|  

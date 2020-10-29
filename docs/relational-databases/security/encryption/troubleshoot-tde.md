@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867942"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679254"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erreurs courantes liées au chiffrement transparent des données avec des clés managées par le client dans Azure Key Vault
 
@@ -34,7 +34,7 @@ Dans les 8 premières heures, si le problème d’accès à la clé Azure Key V
 
 Si une base de données inaccessible n’est plus nécessaire, elle peut être supprimée immédiatement pour arrêter les coûts. Toutes les autres actions sur la base de données ne sont pas autorisées tant que l’accès à la clé Azure Key Vault n’a pas été restauré et que la base de données est de nouveau en ligne. La modification de l’option TDE à partir des clés managées par le client sur le serveur n’est pas non plus possible lorsqu’une base de données chiffrée avec des clés managées par le client est inaccessible. Cela est nécessaire pour protéger les données contre tout accès non autorisé, tandis que les autorisations sur le protecteur TDE ont été révoquées. 
 
-Lorsqu’une base de données est inaccessible pendant plus de 8 heures, elle ne peut plus être corrigée automatiquement. Si l’accès à la clé Azure Key Vault a été restauré après cette période, vous devez revalider manuellement l’accès à la clé pour remettre la base de données en ligne. Dans ce cas, la remise en ligne de la base de données peut être très longue, selon la taille de celle-ci. Une fois la base de données de nouveau en ligne, les paramètres précédemment configurés tels que le [groupe de basculement](/azure/sql-database/sql-database-auto-failover-group) ou l’historique de récupération jusqu’à une date et heure, ainsi que toutes les étiquettes, **seront perdus**. Par conséquent, nous vous recommandons d’implémenter un système de notifications à l’aide de [groupes d’actions](/azure/azure-monitor/platform/action-groups) qui permettent d’être informé et de traiter les problèmes sous-jacents d’accès aux clés dès que possible. 
+Lorsqu’une base de données est inaccessible pendant plus de 8 heures, elle ne peut plus être corrigée automatiquement. Si l’accès à la clé Azure Key Vault a été restauré après cette période, vous devez revalider manuellement l’accès à la clé pour remettre la base de données en ligne. Dans ce cas, la remise en ligne de la base de données peut être très longue, selon la taille de celle-ci. Une fois la base de données de nouveau en ligne, les paramètres précédemment configurés tels que le [groupe de basculement](/azure/sql-database/sql-database-auto-failover-group) ou l’historique de récupération jusqu’à une date et heure, ainsi que toutes les étiquettes, **seront perdus** . Par conséquent, nous vous recommandons d’implémenter un système de notifications à l’aide de [groupes d’actions](/azure/azure-monitor/platform/action-groups) qui permettent d’être informé et de traiter les problèmes sous-jacents d’accès aux clés dès que possible. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erreurs courantes provoquant l’inaccessibilité des bases de données
 
@@ -80,7 +80,7 @@ Utilisez la cmdlet ou commande suivante pour configurer une identité Azure AD (
 
 - Azure CLI : [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) avec l’option `--assign_identity`.
 
-Dans le portail Azure, accédez au coffre de clés, puis à **Stratégies d’accès**. Procédez comme suit : 
+Dans le portail Azure, accédez au coffre de clés, puis à **Stratégies d’accès** . Procédez comme suit : 
 
  1. Utilisez le bouton **Ajouter** pour ajouter l’AppId du serveur créé à l’étape précédente. 
  1. Attribuez les autorisations de clé suivantes : Get, Wrap et Unwrap 
@@ -159,9 +159,9 @@ Pour identifier l’URI de la clé et le coffre de clés :
 
 Vérifiez que l’instance SQL Server logique dispose des autorisations d’accès pour le coffre de clés et des autorisations appropriées pour accéder à la clé :
 
-- Dans le portail Azure, accédez au coffre de clés > **Stratégies d’accès**. Recherchez l’AppId de l’instance SQL Server logique.  
+- Dans le portail Azure, accédez au coffre de clés > **Stratégies d’accès** . Recherchez l’AppId de l’instance SQL Server logique.  
 - Si l’AppId est présent, vérifiez qu’il dispose des autorisations de clé suivantes : Get, Wrap et Unwrap.
-- Si l’AppId n’est pas présent, ajoutez-le à l’aide du bouton **Ajouter**. 
+- Si l’AppId n’est pas présent, ajoutez-le à l’aide du bouton **Ajouter** . 
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Obtention de l’état TDE depuis le journal d’activité
 

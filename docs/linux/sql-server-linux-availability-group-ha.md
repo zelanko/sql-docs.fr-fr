@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 9ab42b6628f34c020d02dcffac130601dddb1938
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 8c48facb150d527cc1c03c0d5cd9ca0849a889f0
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784807"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679271"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Haute disponibilité et protection des données pour les configurations des groupes de disponibilité
 
@@ -62,8 +62,8 @@ Un groupe de disponibilité avec trois réplicas synchrones peut fournir une mis
 |Comportement de disponibilité |échelle lecture|Haute disponibilité et </br> protection de données | Protection de données|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Indisponibilité du réplica principal |Basculement automatique. Le nouveau principal est en lecture/écriture. |Basculement automatique. Le nouveau principal est en lecture/écriture. |Basculement automatique. Le nouveau principal n’est pas disponible pour les transactions utilisateur jusqu’à la récupération du principal précédent puis se joint au groupe de disponibilité comme réplica secondaire. |
-|Une indisponibilité du réplica secondaire  | Le principal est en lecture/écriture. Aucun basculement automatique si le principal échoue. |Le principal est en lecture/écriture. Aucun basculement automatique en cas d’échec du principal également. | Le principal n’est pas disponible pour les transactions utilisateur. |
+|Indisponibilité du réplica principal |Basculement automatique. Le nouveau principal est en lecture/écriture. |Basculement automatique. Le nouveau principal est en lecture/écriture. |Basculement automatique. Le nouveau principal n’est pas disponible pour les transactions utilisateur jusqu’à la récupération du principal précédent puis se joint au groupe de disponibilité comme réplica secondaire. |
+|Une indisponibilité du réplica secondaire  | Le principal est en lecture/écriture. Aucun basculement automatique si le principal échoue. |Le principal est en lecture/écriture. Aucun basculement automatique en cas d’échec du principal également. | Le principal n’est pas disponible pour les transactions utilisateur. |
 
 <sup>\*</sup> Par défaut
 
@@ -81,7 +81,7 @@ Un groupe de disponibilité avec deux réplicas synchrones offre une mise à l�
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Le nouveau principal est en lecture/écriture.| Basculement automatique. Le nouveau principal n’est pas disponible pour les transactions utilisateur jusqu’à la récupération du principal précédent puis se joint au groupe de disponibilité comme réplica secondaire.|
-|Une indisponibilité du réplica secondaire  |Le principal est en lecture/écriture, il est exposé à des pertes de données. |Le principal n’est pas disponible pour les transactions utilisateur jusqu’à la récupération du secondaire.|
+|Une indisponibilité du réplica secondaire  |Le principal est en lecture/écriture, il est exposé à des pertes de données. |Le principal n’est pas disponible pour les transactions utilisateur jusqu’à la récupération du secondaire.|
 
 <sup>\*</sup> Par défaut
 
@@ -99,7 +99,7 @@ Un groupe de disponibilité avec deux réplicas synchrones (ou plus) et un répl
 Dans le diagramme des groupes de disponibilité, un réplica principal envoie (push) des données de configuration au réplica secondaire et au réplica de configuration uniquement. Le réplica secondaire reçoit également les données utilisateur. Le réplica de configuration uniquement ne reçoit pas de données utilisateur. Le réplica secondaire est en mode de disponibilité synchrone. Le réplica de configuration uniquement ne contient pas les bases de données dans le groupe de disponibilité, uniquement les métadonnées relatives au groupe de disponibilité. Les données de configuration sur le réplica de configuration uniquement sont validées de façon synchrone.
 
 > [!NOTE]
-> Un groupe de disponibilité avec un réplica de configuration uniquement est nouveau pour SQL Server 2017 CU1. Toutes les instances de SQL Server dans le groupe de disponibilité doivent avoir la version SQL Server 2017 CU1 ou ultérieure. 
+> Un groupe de disponibilité avec un réplica de configuration uniquement est nouveau pour SQL Server 2017 CU1. Toutes les instances de SQL Server dans le groupe de disponibilité doivent avoir la version SQL Server 2017 CU1 ou ultérieure. 
 
 La valeur par défaut pour `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. Le tableau suivant décrit le comportement de disponibilité. 
 
@@ -107,9 +107,9 @@ La valeur par défaut pour `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. 
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Indisponibilité du réplica principal | Basculement automatique. Le nouveau principal est en lecture/écriture. | Basculement automatique. Le nouveau principal n’est pas disponible pour les transactions utilisateur. |
-|Interruption du réplica secondaire | Le principal est en lecture/écriture, en cours d’exécution exposée à la perte de données (si le principal échoue et ne peut pas être récupéré). Aucun basculement automatique en cas d’échec du principal également. | Le principal n’est pas disponible pour les transactions utilisateur. Aucun réplica à basculer si le principal échoue également. |
-|Interruption du réplica de configuration uniquement | Le principal est en lecture/écriture. Aucun basculement automatique en cas d’échec du principal également. | Le principal est en lecture/écriture. Aucun basculement automatique en cas d’échec du principal également. |
-|Interruption du réplica secondaire synchrone + configuration uniquement| Le principal n’est pas disponible pour les transactions utilisateur. Aucun basculement automatique. | Le principal n’est pas disponible pour les transactions utilisateur. Aucun réplica à basculer si le principal échoue également. |
+|Interruption du réplica secondaire | Le principal est en lecture/écriture, en cours d’exécution exposée à la perte de données (si le principal échoue et ne peut pas être récupéré). Aucun basculement automatique en cas d’échec du principal également. | Le principal n’est pas disponible pour les transactions utilisateur. Aucun réplica à basculer si le principal échoue également. |
+|Interruption du réplica de configuration uniquement | Le principal est en lecture/écriture. Aucun basculement automatique en cas d’échec du principal également. | Le principal est en lecture/écriture. Aucun basculement automatique en cas d’échec du principal également. |
+|Interruption du réplica secondaire synchrone + configuration uniquement| Le principal n’est pas disponible pour les transactions utilisateur. Aucun basculement automatique. | Le principal n’est pas disponible pour les transactions utilisateur. Aucun réplica à basculer si le principal échoue également. |
 
 <sup>\*</sup> Par défaut
 

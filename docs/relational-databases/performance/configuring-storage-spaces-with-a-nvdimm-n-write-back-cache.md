@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 438bb53d76763ecb7179638591f0353cb1bedf6f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 7f95a343074ce2fb9f7f54c3121b0db6beafe34d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891889"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679235"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91891889"
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Get-PhysicalDisk](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
+ ![Capture d’écran d’une fenêtre Windows PowerShell montrant la sortie de l’applet de commande Get-PhysicalDisk.](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
   
 > [!NOTE]  
 >  Avec les périphériques NVDIMM-N, vous n’avez plus besoin de sélectionner les périphériques précis qui peuvent être des cibles de cache en écriture différée.  
@@ -47,7 +47,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
+ ![Capture d’écran d’une fenêtre Windows PowerShell montrant la sortie de l’applet de commande $pd.](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>Création du pool de stockage  
  À l’aide de la variable $pd contenant les disques physiques, il est facile de créer le pool de stockage en utilisant l’applet de commande PowerShell New-StoragePool.  
@@ -56,7 +56,7 @@ $pd | Select FriendlyName, MediaType, BusType
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
- ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
+ ![Capture d’écran d’une fenêtre Windows PowerShell montrant la sortie de l’applet de commande New-StoragePool.](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
 ## <a name="creating-the-virtual-disk-and-volume"></a>Création du disque virtuel et du volume  
  Maintenant qu’un pool a été créé, l’étape suivante consiste à extraire un disque virtuel et à le formater. Ici, un seul disque virtuel est créé et l’applet de commande PowerShell New-Volume peut servir à rationaliser ce processus :  
@@ -65,15 +65,15 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
 New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
- ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
+ ![Capture d’écran d’une fenêtre Windows PowerShell montrant la sortie de l’applet de commande New-Volume.](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
  Le disque virtuel est créé, initialisé et formaté avec NTFS. La capture d’écran ci-dessous montre que sa taille s’élève à 300 Go et que celle de son cache d’écriture s’élève à 1 Go, le tout hébergé sur les NVDIMM-N.  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Capture d’écran d’une fenêtre Windows PowerShell montrant la sortie de l’applet de commande Get-VirtualDisk.](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  Vous pouvez désormais voir ce nouveau volume sur votre serveur. Vous pouvez utiliser ce lecteur pour votre journal des transactions SQL Server.  
   
- ![Lecteur Log_Space](../../relational-databases/performance/media/log-space-drive.png "Lecteur Log_Space")  
+ ![Capture d’écran d’une fenêtre de l’Explorateur de fichiers dans la page Ce PC montrant le lecteur Log_Space.](../../relational-databases/performance/media/log-space-drive.png "Lecteur Log_Space")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Espaces de stockage Windows dans Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
