@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: Dans cette série de tutoriels en cinq parties, apprenez à incorporer du code R dans des procédures stockées SQL Server et des fonctions T-SQL avec SQL Machine Learning pour prédire les tarifs des taxis de New York à l’aide de la classification binaire.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f9f1b43b9c49cebaed706bf3c8448881c4df46
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173599"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412560"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Didacticiel R : Prédire les tarifs des taxis de New York avec classification binaire
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -72,6 +72,10 @@ Dans la [cinquième partie](r-taxi-classification-deploy-model.md), vous apprend
 + Installer les [bibliothèques R](../package-management/r-package-information.md)
 
 + [Octroi d’autorisations d’exécution de scripts Python](../security/user-permission.md)
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
++ À compter de SQL Server 2019, le mécanisme d’isolation vous oblige à accorder les autorisations appropriées au répertoire dans lequel le fichier de traçage est stocké. Pour savoir comment définir ces autorisations, consultez la [section Autorisations de fichiers dans SQL Server 2019 sur Windows : Modifications de l’isolation dans Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
 
 + Restaurer la [Base de données de démonstration Taxis de New York](demo-data-nyctaxi-in-sql.md)
 

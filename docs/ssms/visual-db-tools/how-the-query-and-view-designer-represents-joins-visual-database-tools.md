@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462795"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439353"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Représentation des jointures dans le Concepteur de requêtes et de vues (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,26 +41,26 @@ La forme de l'icône au milieu de la ligne de jointure indique la façon dont le
   
 |**Icône de la ligne de jointure**|**Description**|  
 |----------------------|-------------------|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Icône Visual Database Tools")|Jointure interne (créée avec un opérateur « égal »).|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Icône Visual Database Tools")|Jointure interne basée sur l'opérateur « plus grand que ».|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbij.gif "Icône Visual Database Tools")|Jointure externe dans laquelle toutes les lignes de la table représentée à gauche seront incluses, même si elles n'ont pas de correspondance dans la table en relation.|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbik.gif "Icône Visual Database Tools")|Jointure externe dans laquelle toutes les lignes de la table représentée à droite seront incluses, même si elles n'ont pas de correspondance dans la table en relation.|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbil.gif "Icône Visual Database Tools")|Jointure externe entière dans laquelle toutes les lignes des deux tables seront incluses, même si elles n'ont pas de correspondance dans la table en relation.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|Jointure interne (créée avec un opérateur « égal »).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|Jointure interne basée sur l'opérateur « plus grand que ».|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|Jointure externe dans laquelle toutes les lignes de la table représentée à gauche seront incluses, même si elles n'ont pas de correspondance dans la table en relation.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|Jointure externe dans laquelle toutes les lignes de la table représentée à droite seront incluses, même si elles n'ont pas de correspondance dans la table en relation.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|Jointure externe entière dans laquelle toutes les lignes des deux tables seront incluses, même si elles n'ont pas de correspondance dans la table en relation.|  
   
 Les symboles présents aux extrémités de la ligne de jointure indiquent le type de jointure. Le tableau suivant fait la liste des types de jointures et des icônes affichées aux extrémités de la ligne de jointure.  
   
 |**Icône aux extrémités de la ligne de jointure**|**Type de jointure**|  
 |---------------------------------|--------------------|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbim.gif "Icône Visual Database Tools")|Jointure Un-à-un.|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbin.gif "Icône Visual Database Tools")|Jointure Un-à-plusieurs.|  
-|![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbio.gif "Icône Visual Database Tools")|Le Concepteur de requêtes et de vues ne peut pas déterminer le type de jointure. Ce cas s'observe surtout lorsque vous avez créé une jointure manuellement.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|Jointure Un-à-un.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|Jointure Un-à-plusieurs.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|Le Concepteur de requêtes et de vues ne peut pas déterminer le type de jointure. Ce cas s'observe surtout lorsque vous avez créé une jointure manuellement.|  
   
 ## <a name="sql-pane"></a>volet SQL  
 Dans une instruction SQL, une jointure peut être exprimée de plusieurs façons différentes. La syntaxe exacte dépend de la base de données utilisée et de la façon dont la jointure a été définie.  
   
 Pour spécifier une jointure de tables, vous disposez de plusieurs options de syntaxe :  
   
--   **Qualificateur JOIN pour la clause FROM**.   Les mots clés INNER et OUTER spécifient le type de jointure. Il s'agit de la syntaxe standard du SQL ANSI 92.  
+-   **Qualificateur JOIN pour la clause FROM** .   Les mots clés INNER et OUTER spécifient le type de jointure. Il s'agit de la syntaxe standard du SQL ANSI 92.  
   
     Par exemple, si vous joignez les tables `publishers` et `pub_info` sur la base de la colonne `pub_id` de chaque table, vous obtenez une instruction SQL similaire à la suivante :  
   
@@ -72,7 +72,7 @@ Pour spécifier une jointure de tables, vous disposez de plusieurs options de sy
   
     En cas de jointure externe, le mot INNER est remplacé par les mots LEFT OUTER ou RIGHT OUTER.  
   
--   **Clause WHERE comparant des colonnes des deux tables**.   Une clause WHERE apparaît si la base de données ne prend pas en charge la syntaxe JOIN (ou si vous l'avez entrée vous-même). Si la jointure est créée dans la clause WHERE, les noms des deux tables apparaissent dans la clause FROM.  
+-   **Clause WHERE comparant des colonnes des deux tables** .   Une clause WHERE apparaît si la base de données ne prend pas en charge la syntaxe JOIN (ou si vous l'avez entrée vous-même). Si la jointure est créée dans la clause WHERE, les noms des deux tables apparaissent dans la clause FROM.  
   
     Par exemple, l'instruction suivante joint les tables `publishers` et `pub_info` .  
   

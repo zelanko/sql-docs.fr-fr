@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a509b16abc2c52f504cf3783f5fb22370faaef94
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956750"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793746"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer des modèles Machine Learning préformés sur SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Cet article explique comment utiliser PowerShell pour ajouter des modèles Machine Learning préentraînés gratuits pour l’*analyse des sentiments* et la *génération de fonctionnalités d’images* à une instance SQL Server avec l’intégration R ou Python. Les modèles préformés sont générés par Microsoft et prêts à être utilisés. Ils sont d’ailleurs ajoutés à une instance suite à l’installation. Pour plus d’informations sur ces modèles, consultez la section [Ressources](#bkmk_resources) de cet article.
+Cet article explique comment utiliser PowerShell pour ajouter des modèles Machine Learning préentraînés gratuits pour l’ *analyse des sentiments* et la *génération de fonctionnalités d’images* à une instance SQL Server avec l’intégration R ou Python. Les modèles préformés sont générés par Microsoft et prêts à être utilisés. Ils sont d’ailleurs ajoutés à une instance suite à l’installation. Pour plus d’informations sur ces modèles, consultez la section [Ressources](#bkmk_resources) de cet article.
 
 Une fois installés, les modèles préformés sont considérés comme des détails d’implémentation qui alimentent des fonctions spécifiques dans les bibliothèques MicrosoftML (R) et microsoftml (Python). Vous ne devez pas (et ne pouvez pas) afficher, personnaliser ou reformer les modèles. Vous ne pouvez pas non plus les traiter en tant que ressource indépendante dans du code personnalisé ou dans d’autres fonctions couplées. 
 
@@ -27,7 +27,7 @@ Pour utiliser les modèles préformés, appelez les fonctions indiquées dans le
 
 | Fonction R (MicrosoftML) | Fonction Python (MicrosoftML) | Usage |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](//machine-learning-server/python-reference/microsoftml/get-sentiment) | Génère un score de sentiment positif-négatif sur les entrées de texte. |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | Génère un score de sentiment positif-négatif sur les entrées de texte. |
 | [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrait des informations de texte à partir des entrées du fichier image. |
 
 ## <a name="prerequisites"></a>Prérequis
@@ -73,11 +73,11 @@ Si les modèles sont déjà installés, passez directement à [l’étape de val
 
 ## <a name="download-the-installation-script"></a>Télécharger le script d’installation
 
-Cliquez sur [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) pour télécharger le fichier **Install-MLModels.ps1**.
+Cliquez sur [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) pour télécharger le fichier **Install-MLModels.ps1** .
 
 ## <a name="execute-with-elevated-privileges"></a>Exécuter avec des privilèges élevés
 
-1. Démarrez PowerShell. Dans la barre des tâches, cliquez avec le bouton droit sur l’icône de programme PowerShell, puis sélectionnez **Exécuter en tant qu’administrateur**.
+1. Démarrez PowerShell. Dans la barre des tâches, cliquez avec le bouton droit sur l’icône de programme PowerShell, puis sélectionnez **Exécuter en tant qu’administrateur** .
 2. Entrez un chemin d’accès complet au fichier de script de script d’installation et incluez le nom de l’instance. En partant du principe que vous utilisez le dossier Téléchargements et une instance par défaut, la commande peut ressembler à ce qui suit :
 
    ```powershell
@@ -196,7 +196,7 @@ Le lien suivant inclut un exemple de code appelant les modèles préformés.
 
 ## <a name="research-and-resources"></a>Recherche et ressources
 
-Actuellement, les modèles qui sont disponibles sont les modèles de réseau neuronal profond pour l’analyse des sentiments et la classification des images. Tous les modèles préformés ont été formés à l’aide du Microsoft [Computation Network Toolkit](https://cntk.ai/Features/Index.html) ou **CNTK**.
+Actuellement, les modèles qui sont disponibles sont les modèles de réseau neuronal profond pour l’analyse des sentiments et la classification des images. Tous les modèles préformés ont été formés à l’aide du Microsoft [Computation Network Toolkit](https://cntk.ai/Features/Index.html) ou **CNTK** .
 
 La configuration de chaque réseau reposait sur les implémentations de référence suivantes :
 

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193641"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793776"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Déployer le modèle R et l’utiliser dans SQL Server (procédure pas à pas)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ Cet article illustre les deux méthodes les plus courantes d’utilisation d’u
 
 ## <a name="batch-scoring"></a>Scoring par lot
 
-Créez une procédure stockée, *PredictTipBatchMode*, qui génère plusieurs prédictions, en transmettant une requête SQL ou une table comme entrée. Une table de résultats est retournée, que vous pouvez insérer directement dans une table ou écrire dans un fichier.
+Créez une procédure stockée, *PredictTipBatchMode* , qui génère plusieurs prédictions, en transmettant une requête SQL ou une table comme entrée. Une table de résultats est retournée, que vous pouvez insérer directement dans une table ou écrire dans un fichier.
 
 - Elle obtient un jeu de données d’entrée sous la forme d’une requête SQL.
 - Elle appelle le modèle de régression logistique formé que vous avez enregistré à la leçon précédente.
@@ -72,13 +72,13 @@ Créez une procédure stockée, *PredictTipBatchMode*, qui génère plusieurs pr
     END
     ```
 
-    + Vous utilisez une instruction SELECT pour appeler le modèle stocké à partir d’une table SQL. Le modèle est récupéré à partir de la table en tant que donnée **varbinary(max)** , stocké dans la variable SQL _\@lmodel2_, puis transmis comme paramètre *mod* à la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Vous utilisez une instruction SELECT pour appeler le modèle stocké à partir d’une table SQL. Le modèle est récupéré à partir de la table en tant que donnée **varbinary(max)** , stocké dans la variable SQL _\@lmodel2_ , puis transmis comme paramètre *mod* à la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Les données utilisées comme entrées pour le scoring sont définies en tant que requête SQL et stockées sous forme de chaîne dans _\@l’entrée_ de la variable SQL. À mesure que les données sont récupérées de la base de données, elles sont stockées dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut des données d’entrée pour la procédure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Vous pouvez définir un autre nom de variable si nécessaire à l’aide du paramètre _\@input_data_1_name_.
+    + Les données utilisées comme entrées pour le scoring sont définies en tant que requête SQL et stockées sous forme de chaîne dans _\@l’entrée_ de la variable SQL. À mesure que les données sont récupérées de la base de données, elles sont stockées dans une trame de données appelée *InputDataSet* , qui est simplement le nom par défaut des données d’entrée pour la procédure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Vous pouvez définir un autre nom de variable si nécessaire à l’aide du paramètre _\@input_data_1_name_ .
 
-    + Pour générer les scores, la procédure stockée appelle la fonction rxPredict à partir de la bibliothèque **RevoScaleR**.
+    + Pour générer les scores, la procédure stockée appelle la fonction rxPredict à partir de la bibliothèque **RevoScaleR** .
 
-    + La valeur renvoyée, *Score*, est la probabilité que le chauffeur reçoive un pourboire, selon le modèle. Si vous le souhaitez, vous pouvez facilement appliquer un filtre aux valeurs renvoyées pour les regrouper selon qu’un pourboire est obtenu ou non.  Par exemple, une probabilité de moins de 0,5 signifie qu’aucun pourboire n’est susceptible d’être obtenu.
+    + La valeur renvoyée, *Score* , est la probabilité que le chauffeur reçoive un pourboire, selon le modèle. Si vous le souhaitez, vous pouvez facilement appliquer un filtre aux valeurs renvoyées pour les regrouper selon qu’un pourboire est obtenu ou non.  Par exemple, une probabilité de moins de 0,5 signifie qu’aucun pourboire n’est susceptible d’être obtenu.
   
 2.  Pour appeler la procédure stockée en mode lot, vous définissez la requête requise en tant qu’entrée dans la procédure stockée. Vous trouverez ci-dessous la requête SQL que vous pouvez exécuter dans SSMS pour vérifier qu’elle fonctionne.
 
@@ -192,13 +192,13 @@ La procédure stockée *PredictTipSingleMode* illustre cette approche. Elle pren
     END
     ```
 
-2. Dans SQL Server Management Studio, vous pouvez utiliser la procédure **EXEC** [!INCLUDE[tsql](../../includes/tsql-md.md)] (ou **EXECUTE**) pour appeler la procédure stockée et la transmettre aux entrées requises. Par exemple, essayez d’exécuter cette instruction dans Management Studio :
+2. Dans SQL Server Management Studio, vous pouvez utiliser la procédure **EXEC** [!INCLUDE[tsql](../../includes/tsql-md.md)] (ou **EXECUTE** ) pour appeler la procédure stockée et la transmettre aux entrées requises. Par exemple, essayez d’exécuter cette instruction dans Management Studio :
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    Les valeurs transmises ici correspondent, respectivement, aux variables_passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ et _dropoff\_longitude_.
+    Les valeurs transmises ici correspondent, respectivement, aux variables _passenger\_count_ , _trip_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ et _dropoff\_longitude_ .
 
 3. Pour exécuter ce même appel à partir du code R, il vous suffit de définir une variable R qui contient l’appel de procédure stockée complet, comme ce qui suit :
 
@@ -206,9 +206,9 @@ La procédure stockée *PredictTipSingleMode* illustre cette approche. Elle pren
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    Les valeurs transmises ici correspondent, respectivement, aux variables _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ et _dropoff\_longitude_.
+    Les valeurs transmises ici correspondent, respectivement, aux variables _passenger\_count_ , _trip\_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ et _dropoff\_longitude_ .
 
-4. Appelez `sqlQuery` (à partir du package **RODBC**), puis transmettez la chaîne de connexion et la variable de type chaîne contenant l’appel de procédure stockée.
+4. Appelez `sqlQuery` (à partir du package **RODBC** ), puis transmettez la chaîne de connexion et la variable de type chaîne contenant l’appel de procédure stockée.
 
     ```R
     # predict with stored procedure in single mode
@@ -230,4 +230,4 @@ Vous pouvez également explorer ces exemples et ressources supplémentaires :
 + [Scénarios de science des données et modèles de solutions](data-science-scenarios-and-solution-templates.md)
 + [Analytique avancée en base de données](r-taxi-classification-introduction.md)
 + [How-to guides for data analysis and operationalization](/machine-learning-server/r/how-to-introduction) (Guides pratiques pour l’opérationnalisation et l’analyse des données)
-+ [Additional Resources for Machine Learning Server and Microsoft R](//machine-learning-server/resources-more) (Ressources supplémentaires pour Machine Learning Server et Microsoft R)
++ [Additional Resources for Machine Learning Server and Microsoft R](/machine-learning-server/resources-more) (Ressources supplémentaires pour Machine Learning Server et Microsoft R)

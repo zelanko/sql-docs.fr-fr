@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: Dans la troisième partie de cette série de didacticiels, vous utiliserez des fonctions T-SQL pour créer et stocker des fonctionnalités à partir d’exemples de données avec SQL Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 25f61771524d170ade9914605916c6f2cffc6d3b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193701"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412570"
 ---
 # <a name="r-tutorial-create-data-features"></a>Didacticiel R : Créer des caractéristiques de données
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,11 +40,11 @@ Dans la [cinquième partie](./python-taxi-classification-deploy-model.md), vous 
 
 ## <a name="about-feature-engineering"></a>À propos de l’ingénierie des caractéristiques
 
-Après plusieurs séries d’exploration de données, vous avez recueilli des informations utiles grâce aux données et vous êtes prêt à passer à *l’ingénierie des caractéristiques*. Ce processus de création de caractéristiques pertinentes à partir des données brutes est une étape essentielle de la création de modèles analytiques.
+Après plusieurs séries d’exploration de données, vous avez recueilli des informations utiles grâce aux données et vous êtes prêt à passer à *l’ingénierie des caractéristiques* . Ce processus de création de caractéristiques pertinentes à partir des données brutes est une étape essentielle de la création de modèles analytiques.
 
 Dans ce jeu de données, les valeurs de distance sont basées sur la distance signalée au compteur, et ne représentent pas nécessairement la distance géographique ou la véritable distance parcourue. Ainsi, vous devrez calculer la distance directe entre les lieux de prise en charge et de dépose, en utilisant les coordonnées disponibles dans le dataset source « NYC Taxi ». Vous pouvez pour cela utiliser la [formule de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) dans une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] personnalisée.
 
-Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_, pour calculer la distance à l’aide de la formule de Haversine, et utiliser une seconde fonction T-SQL personnalisée, _fnEngineerFeatures_, pour créer une table contenant toutes les caractéristiques.
+Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_ , pour calculer la distance à l’aide de la formule de Haversine, et utiliser une seconde fonction T-SQL personnalisée, _fnEngineerFeatures_ , pour créer une table contenant toutes les caractéristiques.
 
 Le processus global est le suivant :
 
@@ -58,9 +58,9 @@ Le processus global est le suivant :
 
 La fonction _fnCalculateDistance_ doit avoir été téléchargée et inscrite auprès de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre de la préparation de ce didacticiel. Prenez le temps de passer le code en revue.
   
-1. Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], développez **Programmabilité**, **Fonctions** puis **Fonctions scalaires**.   
+1. Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], développez **Programmabilité** , **Fonctions** puis **Fonctions scalaires** .   
 
-2. Cliquez avec le bouton droit sur _fnCalculateDistance_, puis sélectionnez **Modifier** pour ouvrir le script [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une nouvelle fenêtre de requête.
+2. Cliquez avec le bouton droit sur _fnCalculateDistance_ , puis sélectionnez **Modifier** pour ouvrir le script [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une nouvelle fenêtre de requête.
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
@@ -92,9 +92,9 @@ La fonction _fnCalculateDistance_ doit avoir été téléchargée et inscrite au
 
 ## <a name="generate-the-features-using-_fnengineerfeatures_"></a>Génération des caractéristiques à l’aide de _fnEngineerFeatures_
 
-Pour ajouter les valeurs calculées à une table qui peut être utilisée pour l’apprentissage du modèle, vous allez utiliser une autre fonction, _fnEngineerFeatures_. La nouvelle fonction appelle la fonction T-SQL créée précédemment, _fnCalculateDistance_, pour obtenir la distance directe entre les lieux de prise en charge et de dépose des passagers. 
+Pour ajouter les valeurs calculées à une table qui peut être utilisée pour l’apprentissage du modèle, vous allez utiliser une autre fonction, _fnEngineerFeatures_ . La nouvelle fonction appelle la fonction T-SQL créée précédemment, _fnCalculateDistance_ , pour obtenir la distance directe entre les lieux de prise en charge et de dépose des passagers. 
 
-1. Prenez une minute pour examiner le code de la fonction T-SQL personnalisée, _fnEngineerFeatures_, qui doit avoir été créé pour vous dans le cadre de la préparation de cette procédure pas à pas.
+1. Prenez une minute pour examiner le code de la fonction T-SQL personnalisée, _fnEngineerFeatures_ , qui doit avoir été créé pour vous dans le cadre de la préparation de cette procédure pas à pas.
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
