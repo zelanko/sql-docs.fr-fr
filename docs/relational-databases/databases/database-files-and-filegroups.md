@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192279"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497006"
 ---
 # <a name="database-files-and-filegroups"></a>Groupes de fichiers et fichiers de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "92192279"
 |Secondary|Fichier de données facultatif défini par l'utilisateur. Les données peuvent être réparties sur plusieurs disques en plaçant chaque fichier sur un lecteur de disque distinct. L'extension de fichier recommandée est .ndf.|  
 |Journal des transactions|Ce journal contient les informations utilisées pour la récupération de la base de données. Chaque base de données doit posséder au moins un fichier journal. L'extension de fichier recommandée pour les journaux des transactions est .ldf.|  
   
- Par exemple, il est possible de créer une base de données simple appelée **Sales**, incluant un fichier primaire qui contient toutes les données et tous les objets, et un fichier journal qui contient les informations du journal des transactions. Il est possible de créer une base de données plus complexe, appelée **Orders**, incluant un fichier primaire et cinq fichiers secondaires. Les données et les objets de la base de données sont répartis dans les six fichiers, et les quatre fichiers journaux contiennent les informations du journal des transactions.  
+ Par exemple, il est possible de créer une base de données simple appelée **Sales** , incluant un fichier primaire qui contient toutes les données et tous les objets, et un fichier journal qui contient les informations du journal des transactions. Il est possible de créer une base de données plus complexe, appelée **Orders** , incluant un fichier primaire et cinq fichiers secondaires. Les données et les objets de la base de données sont répartis dans les six fichiers, et les quatre fichiers journaux contiennent les informations du journal des transactions.  
   
  Par défaut, les données et les journaux de transactions sont placés sur le même lecteur et le même chemin pour traiter les systèmes à disque unique. Cette configuration n'est pas forcément optimale pour les environnements de production. Nous vous recommandons de placer les fichiers de données et les fichiers journaux sur des disques distincts.  
 
@@ -212,6 +212,7 @@ Suggestions relatives à l’utilisation de fichiers et de groupes de fichiers 
 - Placez dans des groupes différents les tables qui sont utilisées dans les mêmes requêtes jointes. Cette étape permettra d'améliorer les performances, grâce aux entrées/sorties de disques parallèles qui recherchent les données jointes.
 - Placez dans des groupes de fichiers différents les tables fréquemment consultées et les index non-cluster qui leur appartiennent. L'utilisation de différents groupes de fichiers améliorera les performances, en raison des entrées/sorties parallèles si les fichiers sont situés sur des disques physiques différents.
 - Ne placez pas les fichiers journaux de transactions sur le même disque physique que les autres fichiers et groupes de fichiers.
+- Si vous devez étendre un volume ou une partition où se trouvent des fichiers de base de données à l’aide d’outils tels que [DiskPart](/windows-server/administration/windows-commands/diskpart), vous devez sauvegarder toutes les bases de données système et utilisateur, et arrêter les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en premier. En outre, une fois que les volumes de disque ont été étendus, vous devez exécuter la commande [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) pour garantir l’intégrité physique de toutes les bases de données résidant sur le volume.
 
 Pour plus d’informations sur les recommandations relatives à la gestion du fichier journal de transactions, consultez [Gérer la taille du fichier journal des transactions](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 

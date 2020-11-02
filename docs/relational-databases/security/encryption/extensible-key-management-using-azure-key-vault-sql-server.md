@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: a70ae767aa0f9ed079b616402f3857e03fc3d9dc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867836"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679059"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gestion de clés extensible à l'aide d'Azure Key Vault (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91867836"
    
  L’illustration suivante compare la hiérarchie de clés de gestion de service classique au système Azure Key Vault.  
   
- ![ekm-key-hierarchy-traditional](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
+ ![Diagramme qui compare la hiérarchie de clés de gestion de service classique au système Azure Key Vault.](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-traditional.png "ekm-key-hierarchy-traditional")  
   
    
  Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sert de pont entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et Azure Key Vault. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut donc optimiser l’extensibilité, les hautes performances et la haute disponibilité du service Azure Key Vault. L’illustration suivante représente le fonctionnement de la hiérarchie de clé dans l’architecture du fournisseur EKM avec Azure Key Vault et le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

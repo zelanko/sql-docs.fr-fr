@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 2365440fd87789a30e67c8c5effcbf0e85b8bc24
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210624"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638992"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -107,10 +107,10 @@ ms.locfileid: "91210624"
     |--------------------|-----------------|  
     |/QUIET ou /Q|Spécifie que le programme d'installation doit s'exécuter sans interface utilisateur.|  
     |/ACTION=REBUILDDATABASE|Spécifie que le programme d'installation doit recréer les bases de données système.|  
-    |/INSTANCENAME=*Nom_Instance*|Représente le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour l'instance par défaut, entrez MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS=*comptes*|Spécifie les comptes de groupes Windows ou les comptes individuels à ajouter au rôle serveur fixe **sysadmin** . Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur**. Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez **NT AUTHORITY\SYSTEM**.|  
-    |[ /SAPWD=*MotDePasseFort* ]|Spécifie le mot de passe du compte d’**administrateur système (sa)** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **&#42;&#42; Remarque sur la sécurité &#42;&#42;** Le compte **sa** est un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bien connu, souvent ciblé par les utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion **sa** .<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
-    |[ /SQLCOLLATION=*NomClassement* ]|Spécifie un nouveau classement au niveau du serveur. Ce paramètre est facultatif. S'il n'est pas spécifié, c'est le classement actuel du serveur qui est utilisé.<br /><br /> **\*\* Important \*\*** La modification du classement de niveau serveur ne modifie pas le classement des bases de données utilisateur existantes. En revanche, les bases de données utilisateur qui seront créées utiliseront le nouveau classement par défaut.<br /><br /> Pour plus d’informations, consultez [Définir ou modifier le classement du serveur](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
+    |/INSTANCENAME= *Nom_Instance*|Représente le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour l'instance par défaut, entrez MSSQLSERVER.|  
+    |/SQLSYSADMINACCOUNTS= *comptes*|Spécifie les comptes de groupes Windows ou les comptes individuels à ajouter au rôle serveur fixe **sysadmin** . Lorsque vous spécifiez plusieurs comptes, utilisez l'espace comme séparateur. Par exemple, entrez **BUILTIN\Administrateurs MonDomaine\MonUtilisateur** . Lorsque vous spécifiez un compte qui contient un espace vide dans son nom, placez le compte entre guillemets doubles. Par exemple, entrez **NT AUTHORITY\SYSTEM** .|  
+    |[ /SAPWD= *MotDePasseFort* ]|Spécifie le mot de passe du compte d’ **administrateur système (sa)** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce paramètre est requis si l’instance utilise le mode Authentification mixte (authentification[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows).<br /><br /> **&#42;&#42; Remarque sur la sécurité &#42;&#42;** Le compte **sa** est un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bien connu, souvent ciblé par les utilisateurs malveillants. Il est par conséquent essentiel d'utiliser un mot de passe fort pour la connexion **sa** .<br /><br /> Ne spécifiez pas ce paramètre pour le mode Authentification Windows.|  
+    |[ /SQLCOLLATION= *NomClassement* ]|Spécifie un nouveau classement au niveau du serveur. Ce paramètre est facultatif. S'il n'est pas spécifié, c'est le classement actuel du serveur qui est utilisé.<br /><br /> **\*\* Important \*\*** La modification du classement de niveau serveur ne modifie pas le classement des bases de données utilisateur existantes. En revanche, les bases de données utilisateur qui seront créées utiliseront le nouveau classement par défaut.<br /><br /> Pour plus d’informations, consultez [Définir ou modifier le classement du serveur](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Spécifie le nombre de fichiers de données tempdb Cette valeur peut être augmentée jusqu’à 8 ou jusqu’au nombre de cœurs, la valeur la plus élevée étant applicable.<br /><br /> Valeur par défaut : 8 ou le nombre de cœurs (la plus petite valeur des deux).|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Spécifie la taille initiale en Mo de chaque fichier de données tempdb. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Spécifie l’incrément de croissance de chaque fichier de données tempdb en Mo. La valeur 0 indique que la croissance automatique est désactivée et qu'aucun espace supplémentaire n'est autorisé. Le programme d’installation autorise la taille maximale de 1 024 Mo.<br /><br /> Valeur par défaut : 64|  
@@ -149,15 +149,15 @@ ms.locfileid: "91210624"
   
 1.  Lancez le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (setup.exe) à partir du média de distribution.  
   
-2.  Dans la zone de navigation gauche, cliquez sur **Maintenance**, puis sur **Réparer**.  
+2.  Dans la zone de navigation gauche, cliquez sur **Maintenance** , puis sur **Réparer** .  
   
 3.  La règle de support du programme d'installation et les routines de fichiers sont exécutées pour garantir que les composants requis sont installés sur votre système et que les règles de validation du programme d'installation ont été correctement exécutées sur l'ordinateur. Cliquez sur **OK** ou sur **Installer** pour continuer.  
   
-4.  Dans la page Sélectionner une instance, sélectionnez l'instance à réparer, puis cliquez sur **Suivant**.  
+4.  Dans la page Sélectionner une instance, sélectionnez l'instance à réparer, puis cliquez sur **Suivant** .  
   
-5.  Les règles de réparation sont exécutées pour valider l'opération. Pour continuer, cliquez sur **Suivant**.  
+5.  Les règles de réparation sont exécutées pour valider l'opération. Pour continuer, cliquez sur **Suivant** .  
   
-6.  Dans la page **Prêt à réparer** , cliquez sur **Réparer**. La page Terminé indique que l'opération est terminée.  
+6.  Dans la page **Prêt à réparer** , cliquez sur **Réparer** . La page Terminé indique que l'opération est terminée.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Créer une nouvelle base de données msdb  
 
@@ -190,7 +190,7 @@ ms.locfileid: "91210624"
   
 10. Sauvegardez la base de données **msdb** .  
 
-##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Régénérer la base de données tempdb  
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Regénérer la base de données tempdb  
 
 Si la base de données **tempdb** est endommagée et que le moteur de base de données ne démarre pas, vous pouvez régénérer **tempdb** sans avoir à régénérer toutes les bases de données système.
   
@@ -206,10 +206,10 @@ Si la base de données **tempdb** est endommagée et que le moteur de base de do
    > [!Note] 
    > Assurez-vous que la fenêtre d’invite de commandes reste ouverte après le démarrage du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La fermeture de la fenêtre d’invite de commandes met fin au processus.
 
-1. Connectez-vous au serveur à l’aide de **sqlcmd**, puis utilisez la procédure stockée suivante pour réinitialiser l’état de la base de données tempdb.
+1. Connectez-vous au serveur à l’aide de **sqlcmd** , puis utilisez la procédure stockée suivante pour réinitialiser l’état de la base de données tempdb.
 
    ```sql
-   exec master..sp_resetstatus Tempdb
+   exec master..sp_resetstatus tempdb
    ```
 
 1. Arrêtez le serveur en appuyant sur CTRL+C dans la fenêtre d’invite de commandes

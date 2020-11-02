@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8baedeb74c111207f55e7d2c77ee44a9c6eef27a
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d749835aa5a71aa99cd0f8f417b7e0ace68b467f
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688282"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496866"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL)
 
@@ -66,7 +66,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -139,7 +139,7 @@ REMOVE FILE *logical_file_name* Supprime la description du fichier logique d’u
 *logical_file_name* Spécifie le nom logique utilisé pour référencer le fichier dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!WARNING]
-> Vous pouvez supprimer un fichier de base de données qui est associé à des sauvegardes `FILE_SNAPSHOT`, mais les instantanés associés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence au fichier de base de données. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, voir [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)(en anglais). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).
+> Vous pouvez supprimer un fichier de base de données qui est associé à des sauvegardes `FILE_SNAPSHOT`, mais les instantanés associés ne sont pas supprimés pour éviter l’invalidation des sauvegardes qui font référence au fichier de base de données. Le fichier est tronqué, mais il n’est pas supprimé physiquement afin de conserver les sauvegardes FILE_SNAPSHOT. Pour plus d’informations, voir [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)(en anglais). **S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).
 
 MODIFY FILE Spécifie le fichier à modifier. Vous pouvez changer une seule propriété \<filespec> à la fois. La clause NAME doit toujours être spécifiée dans \<filespec> pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.
 
@@ -211,7 +211,7 @@ SIZE *size* Spécifie la taille du fichier. SIZE ne s'applique pas aux groupes d
 
 Quand elle est spécifiée avec l’instruction ADD FILE, la propriété *size* correspond à la taille initiale du fichier. Quand elle est spécifiée avec MODIFY FILE, *size* représente la nouvelle taille du fichier et doit avoir une valeur supérieure à la taille actuelle du fichier.
 
-Quand la propriété *size* n’est pas spécifiée pour le fichier primaire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la taille du fichier primaire dans la base de données **model**. Quand un fichier de données secondaire ou un fichier journal est spécifié sans sa propriété *size*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise une taille de fichier égale à 1 Mo.
+Quand la propriété *size* n’est pas spécifiée pour le fichier primaire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la taille du fichier primaire dans la base de données **model** . Quand un fichier de données secondaire ou un fichier journal est spécifié sans sa propriété *size* , [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise une taille de fichier égale à 1 Mo.
 
 Les indications Ko, Mo, Go et To peuvent être utilisées pour indiquer qu'il s'agit de kilo-octets, mégaoctets, gigaoctets ou téraoctets. La valeur par défaut est Mo. Précisez un nombre entier sans aucune décimale. Pour spécifier une fraction d'un mégaoctet, convertissez la valeur en kilo-octet en multipliant le nombre par 1024. Par exemple, spécifiez 1536 Ko au lieu de 1,5 MB (1,5 x 1024 = 1536).
 
@@ -221,9 +221,9 @@ Les indications Ko, Mo, Go et To peuvent être utilisées pour indiquer qu'il s'
 > - Quand un chemin UNC est spécifié pour le fichier
 > - Pour les groupes de fichiers `FILESTREAM` et `MEMORY_OPTIMIZED_DATA`
 
-MAXSIZE { *max_size*| UNLIMITED } Spécifie la taille maximale que peut atteindre le fichier.
+MAXSIZE { *max_size* | UNLIMITED } Spécifie la taille maximale que peut atteindre le fichier.
 
-*max_size* Spécifie la taille de fichier maximale. Les indications Ko, Mo, Go et To peuvent être utilisées pour indiquer qu'il s'agit de kilo-octets, mégaoctets, gigaoctets ou téraoctets. La valeur par défaut est Mo. Précisez un nombre entier sans aucune décimale. Si vous ne spécifiez pas la propriété *max_size*, le fichier peut s’accroître jusqu’à occuper tout l’espace disque disponible.
+*max_size* Spécifie la taille de fichier maximale. Les indications Ko, Mo, Go et To peuvent être utilisées pour indiquer qu'il s'agit de kilo-octets, mégaoctets, gigaoctets ou téraoctets. La valeur par défaut est Mo. Précisez un nombre entier sans aucune décimale. Si vous ne spécifiez pas la propriété *max_size* , le fichier peut s’accroître jusqu’à occuper tout l’espace disque disponible.
 
 UNLIMITED Spécifie que la taille du fichier peut croître jusqu’à ce que le disque soit plein. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un fichier journal spécifié avec une croissance illimitée a une taille maximale de 2 To et un fichier de données une taille maximale de 16 To. Aucune taille maximale n'est définie lorsque cette option est spécifiée pour un conteneur FILESTREAM. Il continue à grandir jusqu'à ce que le disque soit saturé.
 
@@ -269,7 +269,7 @@ CONTAINS FILESTREAM Spécifie que le groupe de fichiers stocke des objets BLOB (
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures)
+**S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures)
 
 Spécifie que le groupe de fichiers stocke des données mémoire optimisées dans le système de fichiers. Pour plus d’informations, consultez l’article [OLTP en mémoire (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Un seul groupe de fichiers `MEMORY_OPTIMIZED_DATA` est autorisé par base de données. Pour créer des tables mémoire optimisées, le groupe de fichiers ne peut pas être vide. Il doit y avoir au moins un fichier. *filegroup_name* fait référence à un chemin. Le chemin d'accès jusqu'au dernier dossier doit exister, et le dernier dossier ne doit pas exister.
 
@@ -282,17 +282,17 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
 
 \<filegroup_updatability_option> Définit la propriété read-only ou read/write du groupe de fichiers.
 
-DEFAULT Remplace le groupe de fichiers par défaut de la base de données par *filegroup_name*. Dans une base de données, un seul groupe de fichiers peut être choisi comme groupe de fichiers par défaut. Pour plus d'informations, consultez [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
+DEFAULT Remplace le groupe de fichiers par défaut de la base de données par *filegroup_name* . Dans une base de données, un seul groupe de fichiers peut être choisi comme groupe de fichiers par défaut. Pour plus d'informations, consultez [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
 
-NAME = *new_filegroup_name* Remplace le nom du groupe de fichiers par *new_filegroup_name*.
+NAME = *new_filegroup_name* Remplace le nom du groupe de fichiers par *new_filegroup_name* .
 
-AUTOGROW_SINGLE_FILE **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
+AUTOGROW_SINGLE_FILE **S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
 
 Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, seule sa taille augmente. Il s’agit de la valeur par défaut.
 
 AUTOGROW_ALL_FILES
 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
+**S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures)
 
 Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, la taille de tous les fichiers augmente.
 
@@ -686,7 +686,7 @@ GO
         [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;
+        **_\* SQL Managed Instance \*_**<br />&nbsp;
     :::column-end:::
 :::row-end:::
 
@@ -776,13 +776,13 @@ SIZE *size* Spécifie la taille du fichier.
 
 Quand elle est spécifiée avec l’instruction ADD FILE, la propriété *size* correspond à la taille initiale du fichier. Quand elle est spécifiée avec MODIFY FILE, *size* représente la nouvelle taille du fichier et doit avoir une valeur supérieure à la taille actuelle du fichier.
 
-Quand la propriété *size* n’est pas spécifiée pour le fichier primaire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la taille du fichier primaire dans la base de données **model**. Quand un fichier de données secondaire ou un fichier journal est spécifié sans sa propriété *size*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise une taille de fichier égale à 1 Mo.
+Quand la propriété *size* n’est pas spécifiée pour le fichier primaire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la taille du fichier primaire dans la base de données **model** . Quand un fichier de données secondaire ou un fichier journal est spécifié sans sa propriété *size* , [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise une taille de fichier égale à 1 Mo.
 
 Les indications Ko, Mo, Go et To peuvent être utilisées pour indiquer qu'il s'agit de kilo-octets, mégaoctets, gigaoctets ou téraoctets. La valeur par défaut est Mo. Précisez un nombre entier sans aucune décimale. Pour spécifier une fraction d'un mégaoctet, convertissez la valeur en kilo-octet en multipliant le nombre par 1024. Par exemple, spécifiez 1536 Ko au lieu de 1,5 MB (1,5 x 1024 = 1536).
 
-MAXSIZE { *max_size*| UNLIMITED } Spécifie la taille maximale que peut atteindre le fichier.
+MAXSIZE { *max_size* | UNLIMITED } Spécifie la taille maximale que peut atteindre le fichier.
 
-*max_size* Spécifie la taille de fichier maximale. Les indications Ko, Mo, Go et To peuvent être utilisées pour indiquer qu'il s'agit de kilo-octets, mégaoctets, gigaoctets ou téraoctets. La valeur par défaut est Mo. Précisez un nombre entier sans aucune décimale. Si vous ne spécifiez pas la propriété *max_size*, le fichier peut s’accroître jusqu’à occuper tout l’espace disque disponible.
+*max_size* Spécifie la taille de fichier maximale. Les indications Ko, Mo, Go et To peuvent être utilisées pour indiquer qu'il s'agit de kilo-octets, mégaoctets, gigaoctets ou téraoctets. La valeur par défaut est Mo. Précisez un nombre entier sans aucune décimale. Si vous ne spécifiez pas la propriété *max_size* , le fichier peut s’accroître jusqu’à occuper tout l’espace disque disponible.
 
 UNLIMITED Spécifie que la taille du fichier peut croître jusqu’à ce que le disque soit plein. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un fichier journal spécifié avec une croissance illimitée a une taille maximale de 2 To et un fichier de données une taille maximale de 16 To.
 
@@ -819,9 +819,9 @@ MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT 
 
 \<filegroup_updatability_option> Définit la propriété read-only ou read/write du groupe de fichiers.
 
-DEFAULT Remplace le groupe de fichiers par défaut de la base de données par *filegroup_name*. Dans une base de données, un seul groupe de fichiers peut être choisi comme groupe de fichiers par défaut. Pour plus d'informations, consultez [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
+DEFAULT Remplace le groupe de fichiers par défaut de la base de données par *filegroup_name* . Dans une base de données, un seul groupe de fichiers peut être choisi comme groupe de fichiers par défaut. Pour plus d'informations, consultez [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).
 
-NAME = *new_filegroup_name* Remplace le nom du groupe de fichiers par *new_filegroup_name*.
+NAME = *new_filegroup_name* Remplace le nom du groupe de fichiers par *new_filegroup_name* .
 
 AUTOGROW_SINGLE_FILE
 

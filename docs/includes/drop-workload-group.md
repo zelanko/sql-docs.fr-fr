@@ -1,6 +1,6 @@
 Supprime un groupe de charges de travail du gouverneur de ressources défini par l'utilisateur existant.
 
-![Icône du lien de rubrique](../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Conventions syntaxiques de Transact-SQL](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -11,7 +11,7 @@ DROP WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>Arguments
 
-*group_name* : nom d'un groupe de charges de travail défini par l'utilisateur existant.
+*group_name*  : nom d'un groupe de charges de travail défini par l'utilisateur existant.
 
 ## <a name="remarks"></a>Notes 
 

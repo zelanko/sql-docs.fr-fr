@@ -28,12 +28,12 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e00e040e74faf9e37b58a258dfe93a84388be767
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 14ff75ebf7d8498ed35d5e2a0e5ef55cec14831c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497761"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679075"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +73,7 @@ Si les options SET ARITHABORT et SET ANSI WARNINGS sont désactivées (OFF) et q
 > [!NOTE]  
 >  Si ni SET ARITHABORT ni SET ARITHIGNORE ne sont définies, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie la valeur NULL avec un message d'avertissement s’affiche après l'exécution de la requête.  
   
-Si ANSI_WARNINGS a la valeur ON et que le mode de compatibilité de la base de données est défini sur 90 ou une valeur supérieure, ARITHABORT est implicitement activé, quelle que soit la valeur de son paramètre. Si le niveau de compatibilité de base de données est défini à 80 ou moins, la valeur ON doit être affectée de manière explicite à l'option ARITHABORT.  
+Si ANSI_WARNINGS a la valeur ON et que le niveau de compatibilité de la base de données est défini sur 90 ou une valeur supérieure, ARITHABORT est implicitement activé, quel que soit son paramètre de valeur. Si le niveau de compatibilité de base de données est défini à 80 ou moins, la valeur ON doit être affectée de manière explicite à l'option ARITHABORT.  
   
 Pour l'évaluation de l'expression, si l'option SET ARITHABORT est désactivée (OFF) et qu’une instruction INSERT, DELETE ou UPDATE rencontre une erreur arithmétique, un dépassement de capacité, une division par zéro ou une erreur de domaine, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insère ou met à jour une valeur NULL. Si la colonne cible ne peut pas prendre la valeur NULL, l'action d'insertion ou de mise à jour échoue et l'utilisateur voit une erreur.  
   
@@ -118,35 +118,35 @@ INSERT INTO t1
 VALUES (255, 1);  
 GO  
   
-PRINT '*** SET ARITHABORT ON';  
+PRINT '**_ SET ARITHABORT ON';  
 GO  
 -- SET ARITHABORT ON and testing.  
 SET ARITHABORT ON;  
 GO  
   
-PRINT '*** Testing divide by zero during SELECT';  
+PRINT '_*_ Testing divide by zero during SELECT';  
 GO  
 SELECT a / b AS ab   
 FROM t1;  
 GO  
   
-PRINT '*** Testing divide by zero during INSERT';  
+PRINT '_*_ Testing divide by zero during INSERT';  
 GO  
 INSERT INTO t2  
 SELECT a / b AS ab    
 FROM t1;  
 GO  
   
-PRINT '*** Testing tinyint overflow';  
+PRINT '_*_ Testing tinyint overflow';  
 GO  
 INSERT INTO t2  
 SELECT a + b AS ab   
 FROM t1;  
 GO  
   
-PRINT '*** Resulting data - should be no data';  
+PRINT '_*_ Resulting data - should be no data';  
 GO  
-SELECT *   
+SELECT _   
 FROM t2;  
 GO  
   
@@ -161,29 +161,29 @@ SET ARITHABORT OFF;
 GO  
   
 -- This works properly.  
-PRINT '*** Testing divide by zero during SELECT';  
+PRINT '**_ Testing divide by zero during SELECT';  
 GO  
 SELECT a / b AS ab    
 FROM t1;  
 GO  
   
 -- This works as if SET ARITHABORT was ON.  
-PRINT '*** Testing divide by zero during INSERT';  
+PRINT '_*_ Testing divide by zero during INSERT';  
 GO  
 INSERT INTO t2  
 SELECT a / b AS ab    
 FROM t1;  
 GO  
-PRINT '*** Testing tinyint overflow';  
+PRINT '_*_ Testing tinyint overflow';  
 GO  
 INSERT INTO t2  
 SELECT a + b AS ab   
 FROM t1;  
 GO  
   
-PRINT '*** Resulting data - should be 0 rows';  
+PRINT '_*_ Resulting data - should be 0 rows';  
 GO  
-SELECT *   
+SELECT _   
 FROM t2;  
 GO  
   

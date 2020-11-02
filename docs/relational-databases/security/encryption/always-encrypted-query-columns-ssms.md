@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37ac7271be5090f17db16f67968df6eca138856d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866533"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679032"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Interroger des colonnes en utilisant Always Encrypted avec SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ L’exécution de requêtes SELECT qui récupèrent le texte chiffré des donné
 ### <a name="example"></a>Exemple
 En supposant que `SSN` est une colonne chiffrée dans la table `Patients` , la requête ci-dessous récupère les valeurs de chiffrement binaires, si Always Encrypted est désactivé pour la connexion de base de données.   
 
-![always-encrypted-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
+![Capture d’écran de la requête SELECT [SSN] FROM [dbo].[Patients] et des résultats de la requête affichés sous forme de valeurs de texte chiffré binaire.](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>Récupération de valeurs de texte brut stockées dans des colonnes chiffrées    
 Pour récupérer des valeurs à partir d’une colonne chiffrée en tant que texte brut (pour déchiffrer les valeurs) :   
@@ -49,7 +49,7 @@ Pour récupérer des valeurs à partir d’une colonne chiffrée en tant que tex
 ### <a name="example"></a>Exemple
 En supposant que le SSN est une colonne `char(11)` chiffrée dans la table `Patients` , la requête, illustrée ci-dessous, renvoie les valeurs en texte brut, si Always Encrypted est activé pour la connexion de base de données et si vous avez accès à la clé principale de colonne configurée pour la colonne `SSN` .   
 
-![always-encrypted-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
+![Capture d’écran de la requête SELECT [SSN] FROM [Clinic].[dbo].[Patients] et des résultats de la requête affichés sous forme de valeurs de texte brut.](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>Envoi de valeurs en texte brut ciblant des colonnes chiffrées       
 Pour exécuter une requête qui envoie une valeur ciblant une colonne chiffrée, par exemple une requête qui insère, met à jour ou filtre une valeur stockée dans une colonne chiffrée :
@@ -63,7 +63,7 @@ Pour exécuter une requête qui envoie une valeur ciblant une colonne chiffrée,
 ### <a name="example"></a>Exemple
 En supposant que `SSN` est une colonne `char(11)` chiffrée dans la table `Patients` , le script ci-dessous tente de trouver une ligne contenant `'795-73-9838'` dans la colonne SSN pour retourner la valeur de la colonne `LastName` , à condition qu’Always Encrypted soit activé pour la connexion de base de données, que le paramétrage pour Always Encrypted soit activé pour la fenêtre de l’éditeur de requête et que vous ayez accès à la clé principale de colonne configurée pour la colonne `SSN` .   
 
-![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
+![Capture d’écran de la requête DECLARE @SSN CHAR(11) = '795-73-9838' SELECT [LastName] FROM [dbo].[Patients] WHERE [SSN] = @SSN et des résultats de la requête.](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>Autorisations pour interroger des colonnes chiffrées
 
@@ -72,7 +72,7 @@ Pour exécuter des requêtes sur des colonnes chiffrées, y compris des requête
 Outre les autorisations ci-dessus, pour déchiffrer des résultats de requête ou pour chiffrer les paramètres de requête (générés par le paramétrage de variables Transact-SQL), vous devez également accéder à la clé principale de colonne protégeant les colonnes cibles :
 
 - **Magasin de certificats - Ordinateur local** Vous devez avoir un accès `Read` au certificat utilisé comme clé principale de colonne, ou être l’administrateur de l’ordinateur.   
-- **Azure Key Vault** : Vous avez besoin des autorisations `get`, `unwrapKey` et `verify` sur le coffre contenant la clé principale de colonne.
+- **Azure Key Vault**  : Vous avez besoin des autorisations `get`, `unwrapKey` et `verify` sur le coffre contenant la clé principale de colonne.
 - **Fournisseur du magasin de clés (KSP)**  : les autorisations et les informations d’identification nécessaires qu’il vous est demandé d’entrer quand vous utilisez un magasin de clés ou une clé, dépendent du magasin et de la configuration du fournisseur KSP.   
 - **Fournisseur de services de chiffrement (CSP)**  : les autorisations et les informations d’identification nécessaires qu’il vous est demandé d’entrer quand vous utilisez un magasin de clés ou une clé, dépendent du magasin et de la configuration du fournisseur CSP.
 
@@ -87,25 +87,25 @@ L’activation d’Always Encrypted pour une connexion de base de données indiq
 
 Si vous n’activez pas Always Encrypted pour une connexion, le fournisseur .NET Framework pour SQL Server utilisé par SSMS n’essaie pas de chiffrer les paramètres de requête ou de déchiffrer les résultats.
 
-Vous pouvez activer ou désactiver Always Encrypted quand vous créez une connexion ou quand vous modifiez une connexion existante avec la boîte de dialogue **Se connecter au serveur**. 
+Vous pouvez activer ou désactiver Always Encrypted quand vous créez une connexion ou quand vous modifiez une connexion existante avec la boîte de dialogue **Se connecter au serveur** . 
 
 Pour activer (désactiver) Always Encrypted :
 1. Ouvrez la boîte de dialogue **Se connecter au serveur** (pour plus d’informations, consultez, [Se connecter à une instance SQL Server](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance)).
 1. Cliquez sur **Options >>** .
 1. Si vous utilisez SSMS 18 ou ultérieur :
-    1. Sélectionnez l’onglet **Always Encrypted**.
+    1. Sélectionnez l’onglet **Always Encrypted** .
     1. Pour activer Always Encrypted, sélectionnez **Activer Always Encrypted (chiffrement de colonne)** . Pour désactiver Always Encrypted, vérifiez que **Activer Always Encrypted (chiffrement de colonne)** n’est pas sélectionné.
-    1. Si vous utilisez [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] et que votre instance SQL Server est configurée avec une enclave sécurisée, vous pouvez spécifier une URL d’attestation d’enclave. Si votre instance SQL Server n’utilise pas d’enclave sécurisée, veillez à laisser vide la zone de texte **URL d’attestation d’enclave**. Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md).
+    1. Si vous utilisez [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] et que votre instance SQL Server est configurée avec une enclave sécurisée, vous pouvez spécifier une URL d’attestation d’enclave. Si votre instance SQL Server n’utilise pas d’enclave sécurisée, veillez à laisser vide la zone de texte **URL d’attestation d’enclave** . Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md).
 1. Si vous utilisez SSMS 17 ou antérieur :
-    1. Sélectionnez l’onglet **Propriétés supplémentaires**.
-    1. Pour activer Always Encrypted, tapez `Column Encryption Setting = Enabled`. Pour désactiver Always Encrypted, spécifiez `Column Encryption Setting = Disabled` ou supprimez la valeur de **Paramètre de chiffrement de colonne** dans l’onglet **Propriétés supplémentaires** (sa valeur est **Désactivé**).   
- 1. Cliquez sur **Connecter**.
+    1. Sélectionnez l’onglet **Propriétés supplémentaires** .
+    1. Pour activer Always Encrypted, tapez `Column Encryption Setting = Enabled`. Pour désactiver Always Encrypted, spécifiez `Column Encryption Setting = Disabled` ou supprimez la valeur de **Paramètre de chiffrement de colonne** dans l’onglet **Propriétés supplémentaires** (sa valeur est **Désactivé** ).   
+ 1. Cliquez sur **Connecter** .
 
 > [!TIP]
 > Pour activer/désactiver Always Encrypted pour une fenêtre de l’éditeur de requête existante :   
 > 1.    Cliquez avec le bouton droit n’importe où dans la fenêtre de l’éditeur de requête.
 > 2.    Sélectionnez **Connexion** > **Changer la connexion...** . Ceci va ouvrir la boîte de dialogue **Se connecter au serveur** pour la connexion actuelle de la fenêtre de l’éditeur de requête. 
-> 2.    Activez ou désactivez Always Encrypted en suivant les étapes ci-dessus, puis cliquez sur **Se connecter**.  
+> 2.    Activez ou désactivez Always Encrypted en suivant les étapes ci-dessus, puis cliquez sur **Se connecter** .  
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Paramétrage pour Always Encrypted   
  
@@ -127,17 +127,17 @@ Pour activer/désactiver le paramétrage d’Always Encrypted pour la fenêtre a
 
 1. Sélectionnez **Requête** dans le menu principal.
 2. Sélectionnez **Options de requête…** .
-3. Accédez à **Exécution** > **Avancé**.
-4. Sélectionnez ou désélectionnez **Activer le paramétrage d’Always Encrypted**.
-5. Cliquez sur **OK**.
+3. Accédez à **Exécution** > **Avancé** .
+4. Sélectionnez ou désélectionnez **Activer le paramétrage d’Always Encrypted** .
+5. Cliquez sur **OK** .
 
 Pour activer/désactiver le paramétrage d’Always Encrypted pour de prochaines fenêtres d’éditeur de requête :
 
 1. Sélectionnez **Outils** dans le menu principal.
 2. Sélectionnez **Options...** .
-3. Accédez à **Exécution de la requête** > **SQL Server** > **Avancé**.
-4. Sélectionnez ou désélectionnez **Activer le paramétrage d’Always Encrypted**.
-5. Cliquez sur **OK**.
+3. Accédez à **Exécution de la requête** > **SQL Server** > **Avancé** .
+4. Sélectionnez ou désélectionnez **Activer le paramétrage d’Always Encrypted** .
+5. Cliquez sur **OK** .
 
 Si vous exécutez une requête dans une fenêtre de l’éditeur de requête qui utilise une connexion de base de données avec Always Enabled activé, mais que le paramétrage n’est pas activé pour la fenêtre de l’éditeur de requête, vous serez invité à l’activer.
 
@@ -183,17 +183,17 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio utilise la technologie Intellisense pour vous indiquer quelles variables peuvent être paramétrées avec succès et quelles tentatives de paramétrage échouent (et pourquoi).   
 
-Une déclaration de variable pouvant être paramétrée avec succès est marquée avec un trait de soulignement d’avertissement dans l’éditeur de requête. Si vous placez le curseur sur une instruction de déclaration marquée avec un trait de soulignement d’avertissement, vous verrez les résultats du processus de paramétrage, y compris les valeurs des propriétés clés de l’objet [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) résultant (sur lequel la variable est mappée) : [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [Size](/dotnet/api/system.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). Vous pouvez également voir la liste complète de toutes les variables correctement paramétrées dans l’onglet **Avertissement** de l’affichage **Liste d’erreurs** . Pour ouvrir l’affichage **Liste d’erreurs** , sélectionnez **Affichage** à partir du menu principal, puis sélectionnez **Liste d’erreurs**.    
+Une déclaration de variable pouvant être paramétrée avec succès est marquée avec un trait de soulignement d’avertissement dans l’éditeur de requête. Si vous placez le curseur sur une instruction de déclaration marquée avec un trait de soulignement d’avertissement, vous verrez les résultats du processus de paramétrage, y compris les valeurs des propriétés clés de l’objet [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) résultant (sur lequel la variable est mappée) : [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [Size](/dotnet/api/system.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). Vous pouvez également voir la liste complète de toutes les variables correctement paramétrées dans l’onglet **Avertissement** de l’affichage **Liste d’erreurs** . Pour ouvrir l’affichage **Liste d’erreurs** , sélectionnez **Affichage** à partir du menu principal, puis sélectionnez **Liste d’erreurs** .    
 
-Si SQL Server Management Studio a tenté de paramétrer une variable, mais que le paramétrage a échoué, la déclaration de la variable sera marquée avec un soulignement d’erreur. Si vous placez le curseur sur l’instruction de déclaration marquée avec un soulignement d’erreur, vous obtiendrez des informations sur l’erreur. Vous pouvez également voir la liste complète des erreurs de paramétrage pour toutes les variables dans l’onglet **Erreur** de l’affichage **Liste d’erreurs** . Pour ouvrir l’affichage **Liste d’erreurs** , sélectionnez **Affichage** à partir du menu principal, puis sélectionnez **Liste d’erreurs**.   
+Si SQL Server Management Studio a tenté de paramétrer une variable, mais que le paramétrage a échoué, la déclaration de la variable sera marquée avec un soulignement d’erreur. Si vous placez le curseur sur l’instruction de déclaration marquée avec un soulignement d’erreur, vous obtiendrez des informations sur l’erreur. Vous pouvez également voir la liste complète des erreurs de paramétrage pour toutes les variables dans l’onglet **Erreur** de l’affichage **Liste d’erreurs** . Pour ouvrir l’affichage **Liste d’erreurs** , sélectionnez **Affichage** à partir du menu principal, puis sélectionnez **Liste d’erreurs** .   
 
 La capture d’écran ci-dessous montre un exemple de six déclarations de variable. SQL Server Management Studio a paramétré avec succès les trois premières variables. Les trois dernières variables n’ont pas respecté les conditions préalables pour le paramétrage, et par conséquent, SQL Server Management Studio n’a pas tenté de les paramétrer (les déclarations ne sont pas marquées d’une quelconque façon).
 
-![always-encrypted-parameter-warnings](../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png)
+![Capture d’écran montrant un exemple de six déclarations de variables avec trois correctement paramétrées et trois échecs ainsi que les messages d’avertissement associés.](../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png)
  
 Un autre exemple ci-dessous montre deux variables qui répondent aux conditions préalables pour le paramétrage, mais la tentative de paramétrage a échoué, car les variables sont initialisées de manière incorrecte.    
  
-![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
+![Capture d’écran montrant un exemple de deux déclarations de variables qui finissent par échouer avec les messages d’erreur associés.](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
 > [!NOTE]
 > Étant donné que Always Encrypted prend en charge un sous-ensemble limité de conversions de type, dans de nombreux cas, il est nécessaire que le type de données d’une variable Transact-SQL soit identique au type de colonne de base de données ciblée. Par exemple, en supposant que le type de la colonne `SSN` dans la `Patients` table est `char(11)`, la requête ci-après échoue, dans la mesure où le type de la variable `@SSN` ( `nchar(11)`), ne correspond pas au type de la colonne.   

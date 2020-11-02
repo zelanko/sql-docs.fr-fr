@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 597792aa200edf6dcb9cfe49c95ab5e1befa0c55
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194082"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92343651"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>Extension Azure DevOps SQL Server Integration Services (SSIS) DevOps Tools
 
@@ -344,6 +344,12 @@ Le schéma JSON de configuration comporte trois couches :
 |sensible|Détermine si la valeur de la variable d’environnement est sensible.|Les entrées valides sont : <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Notes de publication
+
+### <a name="version-103"></a>Version 1.0.3
+
+Date de publication : 21 octobre 2020
+
+- Autorisation de la spécification du suffixe de chaîne de connexion pour la tâche de déploiement SSIS et la tâche de configuration du catalogue SSIS.
 
 ### <a name="version-102"></a>Version 1.0.2
 

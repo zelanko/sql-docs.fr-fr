@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 64680ae71e34d1da94bf0ec8b2ab1ef75cd3c4d3
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867248"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679026"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted avec enclaves sécurisées
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -49,9 +49,9 @@ Dans [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encry
 
 Avec les enclaves sécurisées, Always Encrypted protège la confidentialité des données sensibles, tout en offrant les avantages suivants :
 
-- **Chiffrement sur place** : les opérations de chiffrement des données sensibles (par exemple, le chiffrement des données initiales ou la permutation d’une clé de chiffrement de colonne) sont effectuées à l’intérieur de l’enclave sécurisée et ne nécessitent pas le déplacement des données en dehors de la base de données. Vous pouvez émettre le chiffrement sur place à l’aide de l’instruction Transact-SQL ALTER TABLE, et vous n’avez pas besoin d’utiliser des outils, comme l’Assistant Always Encrypted dans SSMS ou la cmdlet PowerShell Set-SqlColumnEncryption.
+- **Chiffrement sur place**  : les opérations de chiffrement des données sensibles (par exemple, le chiffrement des données initiales ou la permutation d’une clé de chiffrement de colonne) sont effectuées à l’intérieur de l’enclave sécurisée et ne nécessitent pas le déplacement des données en dehors de la base de données. Vous pouvez émettre le chiffrement sur place à l’aide de l’instruction Transact-SQL ALTER TABLE, et vous n’avez pas besoin d’utiliser des outils, comme l’Assistant Always Encrypted dans SSMS ou la cmdlet PowerShell Set-SqlColumnEncryption.
 
-- **Calculs riches** : les opérations sur des colonnes chiffrées, notamment les critères spéciaux (prédicat LIKE) et les comparaisons de plages, sont prises en charge à l’intérieur de l’enclave sécurisée, ce qui rend Always Encrypted accessible à une large gamme d’applications et de scénarios qui requièrent que ces calculs s’effectuent dans le système de base de données.
+- **Calculs riches**  : les opérations sur des colonnes chiffrées, notamment les critères spéciaux (prédicat LIKE) et les comparaisons de plages, sont prises en charge à l’intérieur de l’enclave sécurisée, ce qui rend Always Encrypted accessible à une large gamme d’applications et de scénarios qui requièrent que ces calculs s’effectuent dans le système de base de données.
 
 ## <a name="secure-enclave-attestation"></a>Attestation d’enclave sécurisée
 
@@ -63,14 +63,14 @@ Le processus d’attestation pris en charge par SQL Server pour les enclaves sé
 
 ## <a name="supported-client-drivers"></a>Pilotes clients pris en charge
 
-Pour utiliser Always Encrypted avec enclaves sécurisées, une application doit utiliser un pilote client qui prend en charge la fonctionnalité. Vous devez configurer l’application et le pilote client pour autoriser les calculs d’enclave et l’attestation d’enclave. Pour plus d’informations, notamment la liste des pilotes clients pris en charge, consultez [Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves.md).
+Pour utiliser Always Encrypted avec enclaves sécurisées, une application doit utiliser un pilote client qui prend en charge la fonctionnalité. Vous devez configurer l’application et le pilote client pour autoriser les calculs d’enclave et l’attestation d’enclave. Pour plus d’informations, notamment la liste des pilotes clients pris en charge, consultez [Développer des applications à l’aide d’Always Encrypted](always-encrypted-client-development.md).
 
 ## <a name="enclave-enabled-keys"></a>Clés prenant en charge l’enclave
 
 Always Encrypted avec enclaves sécurisées introduit le concept des clés prenant en charge l’enclave :
 
-- **Clé principale de colonne prenant en charge l’enclave** : clé principale de colonne qui possède la propriété ENCLAVE_COMPUTATIONS spécifiée dans l’objet de métadonnées de la clé principale de colonne à l’intérieur de la base de données. L’objet de métadonnées de la clé principale de colonne doit également contenir une signature valide des propriétés des métadonnées.
-- **Clé de chiffrement de colonne prenant en charge l’enclave** : clé de chiffrement de colonne qui est chiffrée avec une clé principale de colonne prenant en charge l’enclave.
+- **Clé principale de colonne prenant en charge l’enclave**  : clé principale de colonne qui possède la propriété ENCLAVE_COMPUTATIONS spécifiée dans l’objet de métadonnées de la clé principale de colonne à l’intérieur de la base de données. L’objet de métadonnées de la clé principale de colonne doit également contenir une signature valide des propriétés des métadonnées.
+- **Clé de chiffrement de colonne prenant en charge l’enclave**  : clé de chiffrement de colonne qui est chiffrée avec une clé principale de colonne prenant en charge l’enclave.
 
 Lorsque le moteur SQL Server détermine les opérations, spécifiées dans une requête, qui doivent être effectuées à l’intérieur de l’enclave sécurisée, le moteur SQL Server demande que le pilote client partage les clés de chiffrement de colonne qui sont nécessaires pour les calculs avec l’enclave sécurisée. Le pilote client partage les clés de chiffrement de colonne uniquement si les clés prennent en charge l’enclave (c’est-à-dire qu’elles sont chiffrées avec des clés principales de colonne prenant en charge l’enclave) et qu’elles sont correctement signées. Sinon, la requête échoue.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ec09eb43fdd00d57860abf1f40e5010084eded97
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866998"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524030"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Regrouper les modifications apportées à des lignes connexes à l'aide d'enregistrements logiques
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "91866998"
   
  ![Enregistrement logique impliquant trois tables, avec les noms de colonnes uniquement](../../../relational-databases/replication/merge/media/logical-records-01.gif "Enregistrement logique impliquant trois tables, avec les noms de colonnes uniquement")  
   
- La table **Customers** est la table parent dans cette relation et possède une colonne clé primaire **CustID**. La table **Orders** possède une colonne clé primaire **OrderID**, avec une contrainte de clé étrangère sur la colonne **CustID** qui fait référence à la colonne **CustID** de la table **Customers** . De la même façon, la table **OrderItems** possède une colonne clé primaire **OrderItemID**, avec une contrainte de clé étrangère sur la colonne **OrderID** qui fait référence à la colonne **OrderID** de la table **Orders** .  
+ La table **Customers** est la table parent dans cette relation et possède une colonne clé primaire **CustID** . La table **Orders** possède une colonne clé primaire **OrderID** , avec une contrainte de clé étrangère sur la colonne **CustID** qui fait référence à la colonne **CustID** de la table **Customers** . De la même façon, la table **OrderItems** possède une colonne clé primaire **OrderItemID** , avec une contrainte de clé étrangère sur la colonne **OrderID** qui fait référence à la colonne **OrderID** de la table **Orders** .  
   
  Dans cet exemple, un enregistrement logique est constitué de toutes les lignes de la table **Orders** associées à une valeur **CustID** unique et de toutes les lignes de la table **OrderItems** associées aux lignes de la table **Orders** . Ce diagramme illustre toutes les lignes des trois tables figurant dans l'enregistrement logique de Customer2 :  
   
- ![Enregistrement logique impliquant trois tables avec valeurs](../../../relational-databases/replication/merge/media/logical-records-02.gif "Enregistrement logique impliquant trois tables avec valeurs")  
+ ![Première capture d’écran d’un enregistrement logique impliquant trois tables avec valeurs.](../../../relational-databases/replication/merge/media/logical-records-02.gif "Enregistrement logique impliquant trois tables avec valeurs")  
   
  Pour définir une relation d'enregistrement logique entre articles, consultez [Définir une relation d'enregistrement logique entre des articles de table de fusion](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91866998"
 ### <a name="the-application-of-changes-as-a-unit"></a>Application des modifications en tant qu'unité  
  Si le traitement de fusion est interrompu, par exemple en cas d'abandon de la connexion, le jeu partiellement exécuté de modifications répliquées liées est restauré lorsque vous utilisez les enregistrements logiques. Prenons l'exemple d'un Abonné qui ajoute une nouvelle commande ( **OrderID** = 6) et deux nouvelles lignes dans la table **OrderItems** ( **OrderItemID** = 10 et **OrderItemID** = 11) pour **OrderID** = 6.  
   
- ![Enregistrement logique impliquant trois tables avec valeurs](../../../relational-databases/replication/merge/media/logical-records-04.gif "Enregistrement logique impliquant trois tables avec valeurs")  
+ ![Deuxième capture d’écran d’un enregistrement logique impliquant trois tables avec valeurs.](../../../relational-databases/replication/merge/media/logical-records-04.gif "Enregistrement logique impliquant trois tables avec valeurs")  
   
  Si le processus de réplication est interrompu après l'exécution de la ligne **Orders** de **OrderID** = 6 mais avant la fin de l'exécution de **OrderItems** 10 et 11 et que vous n'utilisez pas les enregistrements logiques, la valeur **OrderTotal** pour **OrderID** = 6 ne correspondra pas à la somme des valeurs **OrderAmount** des lignes **OrderItems** . Si vous utilisez les enregistrements logiques, la ligne **Orders** de **OrderID** = 6 n'est pas validée tant que les modifications de **OrderItems** liées ne sont pas répliquées.  
   
@@ -131,11 +131,11 @@ ms.locfileid: "91866998"
   
      ![Table enfant avec plusieurs tables parentes](../../../relational-databases/replication/merge/media/logical-records-03.gif "Table enfant avec plusieurs tables parentes")  
   
-     Vous ne pouvez pas utiliser un enregistrement logique pour représenter les trois tables de cette relation car les lignes de **ClassMembers** ne sont pas associées à une ligne de clé primaire unique. Les tables **Classes** et **ClassMembers** peuvent néanmoins constituer un enregistrement logique, de même que les tables **ClassMembers** et **Students**mais pas les trois ensemble.  
+     Vous ne pouvez pas utiliser un enregistrement logique pour représenter les trois tables de cette relation car les lignes de **ClassMembers** ne sont pas associées à une ligne de clé primaire unique. Les tables **Classes** et **ClassMembers** peuvent néanmoins constituer un enregistrement logique, de même que les tables **ClassMembers** et **Students** mais pas les trois ensemble.  
   
 -   La publication ne peut pas contenir des relations de filtre de jointure circulaires.  
   
-     Dans l'exemple des tables **Customers**, **Orders**et **OrderItems**, vous ne pourriez pas utiliser des enregistrements logiques si la table **Orders** possèdait également une contrainte de clé étrangère qui faisait référence à la table **OrderItems** .  
+     Dans l'exemple des tables **Customers** , **Orders** et **OrderItems** , vous ne pourriez pas utiliser des enregistrements logiques si la table **Orders** possèdait également une contrainte de clé étrangère qui faisait référence à la table **OrderItems** .  
   
 ## <a name="performance-implications-of-logical-records"></a>Impact des enregistrements logiques sur les performances  
  La fonctionnalité d'enregistrement logique a une incidence sur les performances. Si vous n'utilisez pas les enregistrements logiques, l'Agent de réplication peut traiter toutes les modifications d'un article donné en même temps et, comme les modifications sont appliquées ligne par ligne, le verrouillage et les activités du journal des transactions requis pour l'application des modifications sont minimes.  

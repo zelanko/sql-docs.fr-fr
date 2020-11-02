@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 61790d066d6cdf0d3e2a520cca740823b78fc6dc
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115829"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524044"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Créer et exécuter des tâches SQL Server Agent sur Linux
 
@@ -60,11 +60,11 @@ Pour utiliser SQL Server Agent sur Linux, vous devez avant tout activer SQL Serv
 
 ## <a name="create-a-sample-database"></a>Créer un exemple de base de données
 
-Suivez les étapes suivantes pour créer un exemple de base de données nommé **SampleDB**. Cette base de données est utilisée pour la tâche de sauvegarde quotidienne.
+Suivez les étapes suivantes pour créer un exemple de base de données nommé **SampleDB** . Cette base de données est utilisée pour la tâche de sauvegarde quotidienne.
 
 1. Sur votre machine Linux, ouvrez une session du terminal Bash.
 
-1. Utilisez **sqlcmd** pour exécuter une commande Transact-SQL **CREATE DATABASE**.
+1. Utilisez **sqlcmd** pour exécuter une commande Transact-SQL **CREATE DATABASE** .
 
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q 'CREATE DATABASE SampleDB'
@@ -78,7 +78,7 @@ Suivez les étapes suivantes pour créer un exemple de base de données nommé *
 
 ## <a name="create-a-job-with-transact-sql"></a>Créer une tâche avec Transact-SQL
 
-Les tâches suivantes permettent de créer une tâche SQL Server Agent sur Linux avec les commandes Transact-SQL. La tâche exécute une sauvegarde quotidienne de l’exemple de base de données **SampleDB**.
+Les tâches suivantes permettent de créer une tâche SQL Server Agent sur Linux avec les commandes Transact-SQL. La tâche exécute une sauvegarde quotidienne de l’exemple de base de données **SampleDB** .
 
 > [!TIP]
 > Vous pouvez utiliser tout client T-SQL pour exécuter ces commandes. Par exemple, sur Linux, vous pouvez utiliser [sqlcmd](sql-server-linux-setup-tools.md) ou [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md). À partir de Windows Server distant, vous pouvez également exécuter des requêtes dans SQL Server Management Studio (SSMS) ou utiliser l’interface IU pour la gestion des tâches, décrite dans la section suivante.
@@ -155,7 +155,7 @@ Vous pouvez également créer et gérer des tâches à distance à l’aide de S
 
 1. Démarrez SSMS sur Windows et connectez-vous à votre instance Linux. Pour plus d’informations, consultez [Gérer SQL Server sur Linux avec SSMS](sql-server-linux-manage-ssms.md).
 
-1. Vérifiez que vous avez bien créé un exemple de base de données nommé **SampleDB**.
+1. Vérifiez que vous avez bien créé un exemple de base de données nommé **SampleDB** .
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 
@@ -179,9 +179,9 @@ Vous pouvez également créer et gérer des tâches à distance à l’aide de S
 
 1. Créez une nouvelle planification de tâches.
 
-   ![Planification du travail](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
+   ![Capture d’écran de la boîte de dialogue Nouvelle tâche, avec l’option Planifications et l’option Nouveau mises en évidence.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
-   ![Planification du travail](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
+   ![Capture d’écran de la boîte de dialogue Nouvelle tâche, avec l’option OK mise en évidence.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
 1. Démarrez votre tâche.
 

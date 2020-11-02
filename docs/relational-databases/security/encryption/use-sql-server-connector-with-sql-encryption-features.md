@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32d0e4ea4ca6457701ae5ed4710d5213b3fe164c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725952"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679011"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ Une fois les parties I à IV de la rubrique Étapes de la configuration de la ge
  
 Vous devez créer des informations d’identification et une connexion, puis créer une clé de chiffrement de base de données qui chiffre les données et les journaux dans la base de données. Pour chiffrer une base de données, l’autorisation **CONTROL** sur la base de données est exigée. Le graphique suivant montre la hiérarchie de la clé de chiffrement lors de l’utilisation du coffre Azure Key Vault.  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![Diagramme montrant la hiérarchie de la clé de chiffrement lors de l’utilisation du coffre Azure Key Vault.](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **Créer des informations d’identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le moteur de base de données à utiliser pour le chiffrement TDE**  
   
@@ -50,13 +50,13 @@ Vous devez créer des informations d’identification et une connexion, puis cr�
      Modifiez le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] ci-dessous comme suit :  
   
     -   Modifiez l’argument `IDENTITY` (`ContosoDevKeyVault`) de sorte qu’il pointe vers votre coffre Azure Key Vault.
-        - Si vous utilisez **Azure global**, remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
+        - Si vous utilisez **Azure global** , remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
         - Si vous utilisez un **cloud privé Azure** (par exemple, Azure Government, Azure Chine 21Vianet ou Azure Allemagne), remplacez l’argument `IDENTITY` par l’URI du coffre renvoyée à l’étape 3 de la Partie II. N’incluez pas « https:// » dans l’URI du coffre.   
   
     -   Remplacez la première partie de l’argument `SECRET` par l’ **ID client** Azure Active Directory mentionné dans la Partie I. Dans cet exemple, l’ **ID client** est `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
-        >  Vous devez supprimer les tirets de l’ **ID client**.  
+        >  Vous devez supprimer les tirets de l’ **ID client** .  
   
     -   Complétez la deuxième partie de l’argument `SECRET` avec la **Clé secrète client** mentionnée dans la Partie 1. Dans cet exemple, la **clé secrète client** de la Partie 1 est `ReplaceWithAADClientSecret`. 
   
@@ -116,13 +116,13 @@ Vous devez créer des informations d’identification et une connexion, puis cr�
     GO  
     ```  
   
-     À l’aide de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], vérifiez que le chiffrement TDE a été activé en vous connectant à votre base de données avec l’Explorateur d’objets. Cliquez avec le bouton droit sur votre base de données, pointez sur **Tâches**, puis cliquez sur **Gérer le chiffrement de base de données**.  
+     À l’aide de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], vérifiez que le chiffrement TDE a été activé en vous connectant à votre base de données avec l’Explorateur d’objets. Cliquez avec le bouton droit sur votre base de données, pointez sur **Tâches** , puis cliquez sur **Gérer le chiffrement de base de données** .  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![Capture d’écran montrant l’Explorateur d’objets avec l’option Tâches > Gérer le chiffrement de base de données sélectionnée.](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      Dans la boîte de dialogue **Gérer le chiffrement de base de données** , vérifiez que le chiffrement TDE est activé et quelle clé asymétrique chiffre la clé DEK.  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![Capture d’écran de la boîte de dialogue Gérer le chiffrement de base de données avec l’option Définir le chiffrement de la base de données sur sélectionnée et une bannière jaune indiquant que TDE est à présent activé.](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      Vous pouvez aussi exécuter le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant. Un état de chiffrement de 3 indique une base de données.  
   
@@ -149,15 +149,15 @@ Le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a besoin des informations d’
      Modifiez le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] ci-dessous comme suit :  
   
     -   Modifiez l’argument `IDENTITY` (`ContosoDevKeyVault`) de sorte qu’il pointe vers votre coffre Azure Key Vault.
-        - Si vous utilisez **Azure global**, remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
+        - Si vous utilisez **Azure global** , remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
         - Si vous utilisez un **cloud privé Azure** (par exemple, Azure Government, Azure Chine 21Vianet ou Azure Allemagne), remplacez l’argument `IDENTITY` par l’URI du coffre renvoyée à l’étape 3 de la Partie II. N’incluez pas « https:// » dans l’URI du coffre.    
   
     -   Remplacez la première partie de l’argument `SECRET` par l’ **ID client** Azure Active Directory mentionné dans la Partie I. Dans cet exemple, l’ **ID client** est `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  Vous devez supprimer les tirets de l’ **ID client**.  
+        >  Vous devez supprimer les tirets de l’ **ID client** .  
   
-    -   Complétez la deuxième partie de l’argument `SECRET` avec la **clé secrète client** mentionnée dans la Partie I. Dans cet exemple, la **clé secrète client** de la Partie I est `Replace-With-AAD-Client-Secret`. La chaîne finale pour l’argument `SECRET` est une longue séquence de lettres et de chiffres, *sans tirets*.   
+    -   Complétez la deuxième partie de l’argument `SECRET` avec la **clé secrète client** mentionnée dans la Partie I. Dans cet exemple, la **clé secrète client** de la Partie I est `Replace-With-AAD-Client-Secret`. La chaîne finale pour l’argument `SECRET` est une longue séquence de lettres et de chiffres, *sans tirets* .   
   
         ```sql  
         USE master;  
@@ -217,7 +217,7 @@ Le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a besoin des informations d’
     
     Pour restaurer une sauvegarde de base de données chiffrée avec TDE, l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cible doit tout d’abord avoir une copie de la clé Key Vault asymétrique utilisée pour le chiffrement. Voici comment procéder :  
     
-    - Si la clé asymétrique d’origine utilisée pour le chiffrement TDE n’est plus dans Key Vault, restaurez la sauvegarde de clé Key Vault ou réimportez la clé à partir d’un module HSM local. **Important :** Pour que l’empreinte numérique de la clé corresponde à celle enregistrée dans la sauvegarde de base de données, la clé doit avoir le **même nom que la clé Key Vault**, comme c’était le cas initialement.
+    - Si la clé asymétrique d’origine utilisée pour le chiffrement TDE n’est plus dans Key Vault, restaurez la sauvegarde de clé Key Vault ou réimportez la clé à partir d’un module HSM local. **Important :** Pour que l’empreinte numérique de la clé corresponde à celle enregistrée dans la sauvegarde de base de données, la clé doit avoir le **même nom que la clé Key Vault** , comme c’était le cas initialement.
     
     - Appliquez les étapes 1 et 2 sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cible.
     

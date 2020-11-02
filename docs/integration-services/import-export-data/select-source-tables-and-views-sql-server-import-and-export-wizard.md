@@ -12,36 +12,36 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dad9a87c5055e8dfd8292dca048b5f9d239c1e94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57485f68a1e9418e3d9d2402257599bf54e1ad7b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346785"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439313"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Sélectionner les tables et les vues sources (Assistant Importation et Exportation SQL Server)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Une fois que vous avez indiqué que vous voulez copier la totalité d’une table ou après avoir fourni une requête, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche la page **Sélectionner les tables et les vues sources**. Dans cette page, vous sélectionnez les tables et les vues existantes à copier. Vous mappez ensuite les tables sources aux tables de destination nouvelles ou existantes. Si vous le souhaitez, vous pouvez aussi passer en revue le mappage des colonnes et afficher un aperçu des exemples de données.
+  Une fois que vous avez indiqué que vous voulez copier la totalité d’une table ou après avoir fourni une requête, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche la page **Sélectionner les tables et les vues sources** . Dans cette page, vous sélectionnez les tables et les vues existantes à copier. Vous mappez ensuite les tables sources aux tables de destination nouvelles ou existantes. Si vous le souhaitez, vous pouvez aussi passer en revue le mappage des colonnes et afficher un aperçu des exemples de données.
 
 > [!TIP]
 > Si vous devez copier plusieurs bases de données SQL Server ou des objets de base de données SQL Server autres que des tables et des vues, utilisez l’Assistant Copie de base de données au lieu de l’Assistant Importation et exportation. Pour plus d’informations, consultez [Utiliser l’Assistant Copie de base de données](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="screen-shot---if-youre-going-to-copy-tables"></a>Capture d’écran - Si vous allez copier des tables  
- La capture d’écran suivante montre un exemple de la page **Sélectionner les tables et les vues sources** de l’Assistant quand vous avez sélectionné auparavant l’option **Copier les données à partir d’une ou plusieurs tables ou vues** dans la page **Spécifier la copie ou l’interrogation de table**. La liste indique toutes les tables et vues disponibles à partir de la source de données.
+ La capture d’écran suivante montre un exemple de la page **Sélectionner les tables et les vues sources** de l’Assistant quand vous avez sélectionné auparavant l’option **Copier les données à partir d’une ou plusieurs tables ou vues** dans la page **Spécifier la copie ou l’interrogation de table** . La liste indique toutes les tables et vues disponibles à partir de la source de données.
  
 Dans cet exemple, la liste **Source** contient toutes les tables dans l’exemple de base de données AdventureWorks. La ligne sélectionnée montre que l’utilisateur souhaite copier la table **Sales.Customer** à partir de la source vers la nouvelle table **Sales.CustomerNew** dans la destination. 
    
- ![Page Sélectionner des tables de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/select-tables1.png "Page Sélectionner des tables de l’Assistant Importation et Exportation")
+ ![Capture d’écran montrant la page Sélectionner des tables de l’Assistant Importation et exportation, lorsque vous souhaitez copier des tables.](../../integration-services/import-export-data/media/select-tables1.png "Page Sélectionner des tables de l’Assistant Importation et Exportation")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>Capture d’écran - Si vous avez fourni une requête  
- La capture d’écran suivante montre un exemple de la page **Sélectionner les tables et les vues sources** de l’Assistant lorsque vous avez sélectionné auparavant l’option **Écrire une requête pour spécifier les données à transférer** dans la page **Spécifier la copie ou l’interrogation de table**. La liste **Source** ne contient qu’une seule ligne, dans laquelle l’élément nommé `[Query]` représente la requête que vous avez indiquée dans la page **Fournir une requête source**.
+ La capture d’écran suivante montre un exemple de la page **Sélectionner les tables et les vues sources** de l’Assistant lorsque vous avez sélectionné auparavant l’option **Écrire une requête pour spécifier les données à transférer** dans la page **Spécifier la copie ou l’interrogation de table** . La liste **Source** ne contient qu’une seule ligne, dans laquelle l’élément nommé `[Query]` représente la requête que vous avez indiquée dans la page **Fournir une requête source** .
  
 Dans cet exemple, l’utilisateur souhaite copier les résultats de la requête à partir de la source vers la table **Sales.CustomerNew** dans la destination.  
     
- ![Page Sélectionner des tables de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/select-tables2.png "Page Sélectionner des tables de l’Assistant Importation et Exportation")  
+ ![Capture d’écran montrant la page Sélectionner des tables de l’Assistant Importation et exportation, si vous avez fourni une requête.](../../integration-services/import-export-data/media/select-tables2.png "Page Sélectionner des tables de l’Assistant Importation et Exportation")  
 
 ## <a name="select-source-and-destination-tables"></a>Sélectionner des tables sources et de destination 
 **Source**  
@@ -64,7 +64,7 @@ Cliquez sur **Modifier les mappages** pour afficher la boîte de dialogue **Mapp
 Pour plus d’informations, consultez [Mappages de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
 
 **Préversion**  
-Cliquez sur **Aperçu** pour afficher un aperçu de 200 lignes d’exemples de données maximum dans la boîte de dialogue **Aperçu des données**. Cela confirme que l’Assistant va copier les données que vous souhaitez copier. Pour plus d’informations, consultez [Aperçu des données](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
+Cliquez sur **Aperçu** pour afficher un aperçu de 200 lignes d’exemples de données maximum dans la boîte de dialogue **Aperçu des données** . Cela confirme que l’Assistant va copier les données que vous souhaitez copier. Pour plus d’informations, consultez [Aperçu des données](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
   
 Après avoir affiché un aperçu des données, vous souhaiterez peut-être modifier les options que vous avez sélectionnées dans les pages précédentes de l’Assistant. Pour effectuer ces modifications, retournez dans la page **Sélectionner les tables et les vues sources** , puis cliquez sur **Précédent** pour retourner aux pages précédentes où vous pouvez modifier vos sélections.  
 
@@ -75,22 +75,22 @@ Après avoir affiché un aperçu des données, vous souhaiterez peut-être modif
 
 ### <a name="excel-source-tables"></a>Tables sources Excel
 La liste des tables et des vues sources d’une source de données Excel comprend deux types d’objets Excel.
--   **Feuilles de calcul**. Les noms de feuille de calcul sont suivis du signe dollar ($) : par exemple, **« Sheet1$ »**.
+-   **Feuilles de calcul** . Les noms de feuille de calcul sont suivis du signe dollar ($) : par exemple, **« Sheet1$ »** .
 -   **Plages nommées.** Les plages nommées, le cas échéant, sont répertoriées par nom.
 
-Si vous souhaitez charger des données à partir d’une plage de cellules spécifique, sans nom ou vers celle-ci (par exemple, **[Sheet1$A1:B4]**), vous devez écrire une requête. Retournez dans la page **Spécifier la copie ou l’interrogation de table** et sélectionnez **Écrire une requête pour spécifier les données à transférer**.
+Si vous souhaitez charger des données à partir d’une plage de cellules spécifique, sans nom ou vers celle-ci (par exemple, **[Sheet1$A1:B4]** ), vous devez écrire une requête. Retournez dans la page **Spécifier la copie ou l’interrogation de table** et sélectionnez **Écrire une requête pour spécifier les données à transférer** .
 
 ### <a name="excel-destination-tables"></a>Tables de destination Excel
 Si vous exportez des données vers Excel, vous pouvez spécifier la destination par l’une des trois méthodes suivantes.
--   **Feuille de calcul.** Pour spécifier une feuille de calcul, ajouter le caractère $ à la fin du nom de la feuille et ajouter des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$]**.
--   **Plage nommée.** Pour spécifier une plage nommée, utilisez simplement le nom de la plage. Par exemple, **MyDataRange**.
+-   **Feuille de calcul.** Pour spécifier une feuille de calcul, ajouter le caractère $ à la fin du nom de la feuille et ajouter des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$]** .
+-   **Plage nommée.** Pour spécifier une plage nommée, utilisez simplement le nom de la plage. Par exemple, **MyDataRange** .
 -   **Plage sans nom.** Pour spécifier une plage de cellules que vous n’avez pas nommée, ajoutez le caractère $ à la fin du nom de la feuille, ajoutez la spécification de plage ainsi que des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$A1:B4]** .
 
 > [!TIP]
 > Quand vous utilisez Excel comme source ou destination, cliquez sur **Modifier les mappages** et vérifiez les mappages de types de données dans la page **Mappages de colonnes** . 
 
 ## <a name="whats-next"></a>Et ensuite ?  
- Une fois que vous avez sélectionné les tables et vues existantes à copier et que vous les avez mappées à leurs destinations, la page suivante est **Enregistrer et exécuter le package**. Dans cette page, vous spécifiez si vous souhaitez exécuter l’opération de copie immédiatement. Selon votre configuration, vous pouvez également être en mesure d’enregistrer le package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] créé par l’Assistant pour le personnaliser et le réutiliser ultérieurement. Pour plus d’informations, consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
+ Une fois que vous avez sélectionné les tables et vues existantes à copier et que vous les avez mappées à leurs destinations, la page suivante est **Enregistrer et exécuter le package** . Dans cette page, vous spécifiez si vous souhaitez exécuter l’opération de copie immédiatement. Selon votre configuration, vous pouvez également être en mesure d’enregistrer le package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] créé par l’Assistant pour le personnaliser et le réutiliser ultérieurement. Pour plus d’informations, consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Voir aussi
 [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  

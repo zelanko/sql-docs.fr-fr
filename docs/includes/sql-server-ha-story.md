@@ -146,7 +146,7 @@ L’un des avantages des groupes de disponibilité est que la haute disponibilit
  
 À l’exception des groupes de disponibilité avec un type de cluster Aucun, les groupes de disponibilité nécessitent que tous les réplicas fassent partie du même cluster sous-jacent, qu’il s’agisse d’un cluster WSFC ou de Pacemaker. Cela signifie que, dans l’illustration ci-dessus, le cluster WSFC est étiré sur deux centres de données différents, ce qui augmente la complexité, quelle que soit la plateforme (Windows Server ou Linux). Le fait d’étirer les clusters sur la distance ajoute de la complexité. À compter de SQL Server 2016, un groupe de disponibilité distribué permet à un groupe de disponibilité de configurer des groupes de disponibilité sur des clusters différents. Ceci permet de découpler l’exigence selon laquelle tous les nœuds doivent participer au même cluster et facilite donc la configuration de la récupération d’urgence. Pour plus d’informations sur les groupes de disponibilité distribués, consultez [Groupes de disponibilité distribués](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
-![Groupe de disponibilité distribué](media/sql-server-ha-story/image11.png)
+![Diagramme d’un groupe de disponibilité distribué.](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Instances de cluster de basculement Always On
 
@@ -216,7 +216,7 @@ Avant d’aborder les scénarios multiplateformes et d’interopérabilité, vou
 
 Les groupes de disponibilité distribués sont conçus pour englober les configurations de groupe de disponibilité, que les deux clusters sous-jacents des groupes de disponibilité soient deux clusters WSFC distincts, des distributions Linux ou un cluster WSFC et une distribution Linux. Le groupe de disponibilité distribué est la méthode principale pour une solution multiplateforme. Un groupe de disponibilité distribué constitue également la solution principale pour les migrations comme la conversion d’une infrastructure SQL Server basée sur Windows Server en infrastructure basée sur Linux si tel est le souhait de votre entreprise. Comme indiqué ci-dessus, les groupes de disponibilité et notamment les groupes de disponibilité distribués réduisent le temps d’indisponibilité d’une application. Voici un exemple de groupe de disponibilité distribué qui englobe un cluster WSFC et Pacemaker.
 
-![Groupe de disponibilité distribué](media/sql-server-ha-story/image9.png)
+![Diagramme montrant un groupe de disponibilité distribué qui englobe un cluster WSFC et Pacemaker.](media/sql-server-ha-story/image9.png)
  
 Si un groupe de disponibilité est configuré avec un type de cluster Aucun, il peut s’étendre sur Windows Server et Linux, ainsi que sur plusieurs distributions Linux. Comme cette configuration n’est pas vraiment une configuration de haute disponibilité, elle ne doit pas être utilisée pour les déploiements critiques, mais plutôt dans des scénarios de migration/mise à jour ou d’échelle lecture.
 
@@ -233,7 +233,7 @@ Depuis leur introduction dans SQL Server 2012, les réplicas secondaires peuven
 
 La possibilité de mettre à plus haute échelle des copies accessibles en lecture d’une base de données via les groupes de disponibilité a été introduite avec les groupes de disponibilité distribués dans SQL Server 2016. Cela permet aux entreprises d’avoir des copies en lecture seule de la base de données non seulement localement, mais aussi au niveau régional et mondial avec un minimum de configuration, et de réduire le trafic réseau et la latence en exécutant les requêtes localement. Chaque réplica principal d’un groupe de disponibilité peut amorcer deux autres groupes de disponibilité, même s’il ne s’agit pas d’une copie entièrement accessible en lecture/écriture, de sorte que chaque groupe de disponibilité distribué peut prendre en charge jusqu'à 27 copies des données accessibles en lecture. 
 
-![Groupe de disponibilité distribué](media/sql-server-ha-story/image11.png)
+![Diagramme montrant un groupe de disponibilité distribué relatif à l’échelle lecture.](media/sql-server-ha-story/image11.png)
 
 À partir de SQL Server 2017, il est possible de créer pratiquement en temps réel une solution en lecture seule avec des groupes de disponibilité configurés avec un type de cluster Aucun. Si l’objectif est d’utiliser des groupes de disponibilité pour des réplicas secondaires accessibles en lecture et non pour la disponibilité, cette opération est plus simple que l’utilisation d’un cluster WSFC ou de Pacemaker, et donne au groupe de disponibilité l’avantage de l’accessibilité en lecture dans une méthode de déploiement plus simple. 
 

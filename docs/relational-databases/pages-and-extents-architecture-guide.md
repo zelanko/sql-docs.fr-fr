@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991850"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439393"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ Jusqu’à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] compris, [!INCLUDE[ssN
 > [!NOTE]
 > Jusqu'à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] compris, l’indicateur de trace 1118 peut être utilisé pour modifier l’allocation par défaut afin de toujours utiliser des extensions uniformes. Pour plus d’informations sur cet indicateur de trace, consultez [DBCC TRACEON - Indicateurs de Trace](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> À partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la fonctionnalité fournie par l’indicateur de trace 1118 est automatiquement activée pour tempdb. Pour les bases de données utilisateur, ce comportement est contrôlé par l’option `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, avec la valeur par défaut définie sur OFF, et l’indicateur de trace 1118 n’a aucun effet. Pour plus d’informations, consultez [Options SET d’ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> À partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la fonctionnalité fournie par l’indicateur de trace 1118 est automatiquement activée pour tempdb et toutes les bases de données utilisateur. Pour les bases de données utilisateur, ce comportement est contrôlé par l’option `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, avec la valeur par défaut définie sur OFF, et l’indicateur de trace 1118 n’a aucun effet. Pour plus d’informations, consultez [Options SET d’ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 À partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la fonction système `sys.dm_db_database_page_allocations` peut fournir des informations d’allocation de page pour une base de données, une table, un index et une partition.
 
@@ -182,7 +182,7 @@ Quand le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a besoin d�
 
 Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] n’alloue une nouvelle étendue à une unité d’allocation que s’il ne trouve pas rapidement une page suffisamment grande dans une étendue existante pour accueillir la ligne à insérer. 
 
-<a name="ProportionalFill"></a> Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] alloue des étendues à partir de celles qui sont disponibles dans le groupe de fichiers à l’aide d’un **algorithme d’allocation de remplissage proportionnel**. Si, dans un même groupe de fichiers composé de deux fichiers, l’un d’entre eux dispose de deux fois plus d’espace disponible que l’autre, deux pages sont allouées à partir du fichier ayant le plus d’espace disponible pour chacune des pages allouées à partir de l’autre fichier. Cela signifie que chaque fichier d'un groupe doit avoir un pourcentage identique d'espace utilisé. 
+<a name="ProportionalFill"></a> Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] alloue des étendues à partir de celles qui sont disponibles dans le groupe de fichiers à l’aide d’un **algorithme d’allocation de remplissage proportionnel** . Si, dans un même groupe de fichiers composé de deux fichiers, l’un d’entre eux dispose de deux fois plus d’espace disponible que l’autre, deux pages sont allouées à partir du fichier ayant le plus d’espace disponible pour chacune des pages allouées à partir de l’autre fichier. Cela signifie que chaque fichier d'un groupe doit avoir un pourcentage identique d'espace utilisé. 
 
 ## <a name="tracking-modified-extents"></a>Suivi des extensions modifiées 
 

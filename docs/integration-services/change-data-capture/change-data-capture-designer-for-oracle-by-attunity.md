@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd8252fab91afb8b9a457f0c05f76bb8b77ecf78
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484713"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255716"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Concepteur de capture de données modifiées pour Oracle par Attunity
 
@@ -33,7 +33,11 @@ ms.locfileid: "88484713"
   
 -   Éditeur de propriétés d'instance de capture de données modifiées : cette boîte de dialogue permet de modifier n'importe quelle instance de service de capture de données modifiées Oracle. Pour plus d'informations sur la modification des propriétés d'une instance de capture de données modifiées, consultez [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
- Le service et le concepteur de capture des changements de données Microsoft® pour Oracle par Attunity pour Microsoft SQL Server® 2016 font partie du Feature Pack de SQL Server 2016. Téléchargez les composants du Feature Pack à partir de la [page web SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ Téléchargez Microsoft Change Data Capture Designer pour Oracle par Attunity pour obtenir la version de SQL Server correspondante à partir des liens ci-dessous :
+
+- [Feature Pack Microsoft SQL Server 2016 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Feature Pack Microsoft SQL Server 2017 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Feature Pack Microsoft SQL Server 2019 Integration Services](https://www.microsoft.com/download/details.aspx?id=100303) 
   
 ## <a name="in-this-documentation"></a>Dans cette documentation  
   

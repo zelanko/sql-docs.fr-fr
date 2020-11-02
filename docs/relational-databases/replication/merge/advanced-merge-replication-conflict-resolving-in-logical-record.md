@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f076f67c09d28ff4725587e3470d56e81b1c9aef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c7e51f31643e61d5847395a92dae50c7ee5eaeb
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883824"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524004"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflit de réplication de fusion avancée - Résolution dans les enregistrements logiques
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85883824"
  Pour spécifier le niveau de suivi et de résolution des conflits pour un article, consultez [Modifier les options de la réplication de fusion](../../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 ## <a name="conflict-detection"></a>Détection des conflits  
- La façon dont les conflits sont détectés pour les enregistrements logiques est déterminée par deux propriétés d'article : **column_tracking** et **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et les versions ultérieures prennent également en charge la détection au niveau des enregistrements logiques.  
+ La façon dont les conflits sont détectés pour les enregistrements logiques est déterminée par deux propriétés d'article : **column_tracking** et **logical_record_level_conflict_detection** . [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et les versions ultérieures prennent également en charge la détection au niveau des enregistrements logiques.  
   
  La propriété d'article **logical_record_level_conflict_detection** peut être définie à TRUE ou à FALSE. La valeur doit être définie seulement pour l'article parent du plus haut niveau et sera ignorée par les articles enfants. Si cette valeur est FALSE, la réplication de fusion détecte les conflits comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], en se basant uniquement sur la valeur de la propriété **column_tracking** de l'article. Si cette valeur est TRUE, la réplication de fusion ignore la propriété **column_tracking** de l'article et détecte un conflit si des modifications sont effectuées à un endroit quelconque de l'enregistrement logique. Considérons par exemple ce scénario :  
   
  ![Enregistrement logique impliquant trois tables avec valeurs](../../../relational-databases/replication/merge/media/logical-records-05.gif "Enregistrement logique impliquant trois tables avec valeurs")  
   
- Un conflit est détecté si deux utilisateurs modifient des valeurs pour l'enregistrement logique Customer2 dans les tables **Customers**, **Orders**ou **OrderItems** . Cet exemple concerne des modifications effectuées via une instruction UPDATE, mais le conflit peut aussi être détecté pour des modifications effectuées avec des instructions INSERT ou DELETE.  
+ Un conflit est détecté si deux utilisateurs modifient des valeurs pour l'enregistrement logique Customer2 dans les tables **Customers** , **Orders** ou **OrderItems** . Cet exemple concerne des modifications effectuées via une instruction UPDATE, mais le conflit peut aussi être détecté pour des modifications effectuées avec des instructions INSERT ou DELETE.  
   
 ## <a name="conflict-resolution"></a>Résolution de conflits  
  Par défaut, la réplication de fusion utilise une logique basée sur les priorités pour résoudre les conflits. Si une modification conflictuelle est effectuée dans deux bases de données d'Abonné, la modification pour l'Abonné ayant la priorité d'abonnement la plus élevée l'emporte, ou bien, si les priorités sont identiques, la première modification à atteindre le serveur de publication l'emporte. Avec une détection au niveau des lignes ou au niveau des colonnes, la ligne gagnante tout entière remplace toujours la ligne perdante.  
@@ -76,7 +76,7 @@ ms.locfileid: "85883824"
   
  Les conflits étant résolus au niveau de l'enregistrement logique, les modifications gagnantes effectuées sur le serveur de publication remplacent les modifications effectuées dans les tables de l'Abonné lors du processus de réplication.  
   
- ![Séries de tables affichant les modifications apportées aux lignes associées](../../../relational-databases/replication/merge/media/logical-records-06.gif "Séries de tables affichant les modifications apportées aux lignes associées")  
+ ![Première série de tables affichant les modifications apportées aux lignes associées.](../../../relational-databases/replication/merge/media/logical-records-06.gif "Séries de tables affichant les modifications apportées aux lignes associées")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Détection au niveau des colonnes, résolution au niveau des enregistrements logiques  
  Dans cet exemple, la publication est configurée avec :  
@@ -91,7 +91,7 @@ ms.locfileid: "85883824"
   
  Les conflits étant résolus au niveau de l'enregistrement logique, lors de la synchronisation, les modifications gagnantes effectuées sur le serveur de publication remplacent les modifications effectuées dans les tables de l'Abonné.  
   
- ![Séries de tables affichant les modifications apportées aux lignes associées](../../../relational-databases/replication/merge/media/logical-records-07.gif "Séries de tables affichant les modifications apportées aux lignes associées")  
+ ![Deuxième série de tables affichant les modifications apportées aux lignes associées.](../../../relational-databases/replication/merge/media/logical-records-07.gif "Séries de tables affichant les modifications apportées aux lignes associées")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Détection au niveau des enregistrements logiques, résolution au niveau des enregistrements logiques  
  Dans cet exemple, la publication est configurée avec :  
@@ -100,11 +100,11 @@ ms.locfileid: "85883824"
   
 -   **logical_record_level_conflict_resolution** est TRUE  
   
- Un serveur de publication et un Abonné démarrent avec le même jeu de données. Le serveur de publication modifie la colonne **custcol1** dans la table **customers** . L'Abonné modifie la colonne **ordercol1** dans la table **orders** . Il n'y a pas de modifications pour la même ligne ou les mêmes colonnes, mais parce que des modifications sont effectuées dans le même enregistrement logique pour **custid**=1, les modifications sont détectées en tant que conflit au niveau de l'enregistrement logique.  
+ Un serveur de publication et un Abonné démarrent avec le même jeu de données. Le serveur de publication modifie la colonne **custcol1** dans la table **customers** . L'Abonné modifie la colonne **ordercol1** dans la table **orders** . Il n'y a pas de modifications pour la même ligne ou les mêmes colonnes, mais parce que des modifications sont effectuées dans le même enregistrement logique pour **custid** =1, les modifications sont détectées en tant que conflit au niveau de l'enregistrement logique.  
   
  Les conflits étant résolus au niveau de l'enregistrement logique, lors de la synchronisation, les modifications gagnantes effectuées sur le serveur de publication remplacent les modifications effectuées dans les tables de l'Abonné.  
   
- ![Séries de tables affichant les modifications apportées aux lignes associées](../../../relational-databases/replication/merge/media/logical-records-08.gif "Séries de tables affichant les modifications apportées aux lignes associées")  
+ ![Troisième série de tables affichant les modifications apportées aux lignes associées.](../../../relational-databases/replication/merge/media/logical-records-08.gif "Séries de tables affichant les modifications apportées aux lignes associées")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

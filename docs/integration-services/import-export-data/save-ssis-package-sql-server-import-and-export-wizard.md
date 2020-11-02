@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 379973cb0174e25a91b6a3dfb0ed7cc319efd842
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc69ad61d1f2eb025d4a5fcae317ba787da61860
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346815"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439303"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Enregistrer le package SSIS (Assistant Importation et Exportation SQL Server)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Si vous avez indiqué dans la page **Enregistrer et exécuter le package** que vous souhaitiez enregistrer vos paramètres sous la forme d’un package SQL Server Integration Service (SSIS), l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche l’option **Enregistrer le package SSIS**. Cette page vous permet de spécifier d’autres options pour l’enregistrement du package créé par l’Assistant.  
+  Si vous avez indiqué dans la page **Enregistrer et exécuter le package** que vous souhaitiez enregistrer vos paramètres sous la forme d’un package SQL Server Integration Service (SSIS), l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche l’option **Enregistrer le package SSIS** . Cette page vous permet de spécifier d’autres options pour l’enregistrement du package créé par l’Assistant.  
 
 Les options proposées dans la page **Enregistrer le package SSIS** varient en fonction du choix que vous avez effectué préalablement dans la page **Enregistrer et exécuter le package** pour l’enregistrement du package : dans SQL Server ou dans le système de fichiers. Pour avoir un autre aperçu de la page **Enregistrer et exécuter le package** , consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
@@ -47,14 +47,14 @@ La capture d’écran suivante montre la première partie de la page **Enregistr
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>Capture d’écran : Enregistrer le package dans SQL Server
 
- La capture d’écran suivante montre la page **Enregistrer le package SSIS** de l’Assistant si vous avez sélectionné l’option **SQL Server** dans la page **Enregistrer et exécuter le package**. 
+ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de l’Assistant si vous avez sélectionné l’option **SQL Server** dans la page **Enregistrer et exécuter le package** . 
   
-![Page Enregistrer le package SSIS de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/save-package2.png "Page Enregistrer le package SSIS de l’Assistant Importation et Exportation")  
+![Capture d’écran montrant la page Enregistrer le package SSIS de l’Assistant Importation et exportation, si vous avez sélectionné l’option SQL Server dans la page Enregistrer et exécuter le package.](../../integration-services/import-export-data/media/save-package2.png "Page Enregistrer le package SSIS de l’Assistant Importation et Exportation")  
 
 ## <a name="options-to-specify-target--sql-server"></a>Options à spécifier (Cible = SQL Server) 
 
  > [!NOTE]
- > L’Assistant enregistre le package dans la table **sysssispackages** de la base de données **msdb**. Cette option **n’enregistre pas** le package dans la base de données du catalogue SSIS (SSISDB).  
+ > L’Assistant enregistre le package dans la table **sysssispackages** de la base de données **msdb** . Cette option **n’enregistre pas** le package dans la base de données du catalogue SSIS (SSISDB).  
  
  **Nom du serveur**  
  Tapez ou sélectionnez le nom du serveur de destination.  
@@ -73,9 +73,9 @@ Si vous avez choisi d’utiliser l’authentification SQL Server, entrez le mot
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>Capture d’écran : Enregistrer le package dans le système de fichiers
  
-La capture d’écran suivante montre la page **Enregistrer le package SSIS** de l’Assistant si vous avez sélectionné l’option **Système de fichiers** dans la page **Enregistrer et exécuter le package**. 
+La capture d’écran suivante montre la page **Enregistrer le package SSIS** de l’Assistant si vous avez sélectionné l’option **Système de fichiers** dans la page **Enregistrer et exécuter le package** . 
   
-![Page Enregistrer le package SSIS de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/save-package1.png "Page Enregistrer le package SSIS de l’Assistant Importation et Exportation")  
+![Capture d’écran montrant la page Enregistrer le package SSIS de l’Assistant Importation et exportation, si vous avez sélectionné l’options Système de fichiers dans la page Enregistrer et exécuter le package.](../../integration-services/import-export-data/media/save-package1.png "Page Enregistrer le package SSIS de l’Assistant Importation et Exportation")  
 
 ## <a name="options-to-specify-target--file-system"></a>Options à spécifier (Cible = Système de fichiers)
 
@@ -88,12 +88,12 @@ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de
 >  Souvenez-vous de l’endroit où vous enregistrez le fichier du package.  
   
  **Parcourir**  
- (Facultatif) Vous pouvez rechercher et sélectionner le chemin du fichier de destination dans la boîte de dialogue **Enregistrer le package**.  
+ (Facultatif) Vous pouvez rechercher et sélectionner le chemin du fichier de destination dans la boîte de dialogue **Enregistrer le package** .  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Présentation des deux pages d’options pour l’enregistrement du package  
  La page **Enregistrer le package SSIS** est l’une des deux pages dans lesquelles vous choisissez les options d’enregistrement du package SSIS.  
   
--   Dans la page précédente, **Enregistrer et exécuter le package**, vous choisissez d’enregistrer le package dans SQL Server ou sous forme de fichier. Vous pouvez également choisir des paramètres de sécurité pour le package enregistré. Pour avoir un autre aperçu de la page **Enregistrer et exécuter le package** , consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+-   Dans la page précédente, **Enregistrer et exécuter le package** , vous choisissez d’enregistrer le package dans SQL Server ou sous forme de fichier. Vous pouvez également choisir des paramètres de sécurité pour le package enregistré. Pour avoir un autre aperçu de la page **Enregistrer et exécuter le package** , consultez [Enregistrer et exécuter le package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
   
 -   Dans la page active, vous indiquez un nom pour le package et des informations complémentaires sur l’emplacement où doit être enregistré le package.  
  
@@ -104,7 +104,7 @@ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de
   
 -   Pour exécuter un package à partir de la ligne de commande ou d’un fichier de commandes, consultez [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md).  
   
--   Si vous avez enregistré le package dans SQL Server dans la base de données **msdb** , connectez-vous au service Integration Services. Ensuite, dans SQL Server Management Studio, dans l’Explorateur d’objets, accédez à **Packages stockés | MSDB**, cliquez avec le bouton droit sur le package, puis sélectionnez **Exécuter le package**.
+-   Si vous avez enregistré le package dans SQL Server dans la base de données **msdb** , connectez-vous au service Integration Services. Ensuite, dans SQL Server Management Studio, dans l’Explorateur d’objets, accédez à **Packages stockés | MSDB** , cliquez avec le bouton droit sur le package, puis sélectionnez **Exécuter le package** .
 
 -   Si vous avez enregistré le package dans le système de fichiers, consultez [Exécuter des packages Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md) pour exécuter le package dans l’environnement de développement. Vous devez ajouter le package à un projet Integration Services pour pouvoir l’ouvrir et l’exécuter.  
 
@@ -112,7 +112,7 @@ La capture d’écran suivante montre la page **Enregistrer le package SSIS** de
  Pour savoir comment personnaliser le package enregistré, consultez [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="whats-next"></a>Et ensuite ?  
- Une fois que vous avez spécifié les autres options d’enregistrement du package, la page suivante s’intitule **Terminer l’Assistant**. Cette page vous permet d’examiner les choix effectués dans l’Assistant et de lancer l’opération. Pour plus d’informations, consultez [Terminer l’Assistant](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
+ Une fois que vous avez spécifié les autres options d’enregistrement du package, la page suivante s’intitule **Terminer l’Assistant** . Cette page vous permet d’examiner les choix effectués dans l’Assistant et de lancer l’opération. Pour plus d’informations, consultez [Terminer l’Assistant](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
 ## <a name="see-also"></a>Voir aussi  
 [Enregistrer des packages](../../integration-services/save-packages.md)  

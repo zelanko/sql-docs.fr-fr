@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943004"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524016"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Utiliser l’Assistant Table externe avec des sources de données ODBC
 
@@ -45,7 +45,7 @@ Sélectionnez **Suivant** pour continuer.
 
 ## <a name="create-a-database-master-key"></a>Créer une clé principale de base de données
 
-Lors de cette étape, vous allez créer une clé principale de base de données. La création d’une clé principale est obligatoire. Une clé principale sécurise les informations d’identification utilisées par une source de données externe. Choisissez un mot de passe fort pour votre clé principale. Sauvegardez également la clé principale à l’aide de **BACKUP MASTER KEY**. Conservez la sauvegarde en lieu sûr, en dehors de votre lieu de travail.
+Lors de cette étape, vous allez créer une clé principale de base de données. La création d’une clé principale est obligatoire. Une clé principale sécurise les informations d’identification utilisées par une source de données externe. Choisissez un mot de passe fort pour votre clé principale. Sauvegardez également la clé principale à l’aide de **BACKUP MASTER KEY** . Conservez la sauvegarde en lieu sûr, en dehors de votre lieu de travail.
 
 ![Créer une clé principale de base de données](media/data-virtualization/virtualize-data-master-key.png)
 
@@ -58,13 +58,13 @@ Lors de cette étape, entrez votre source de données externe et les détails de
 
 L’étape suivante consiste à configurer les informations d’identification. Entrez un nom pour les informations d’identification. Ce nom correspond aux informations d’identification incluses dans l’étendue de la base de données qui servent à stocker en toute sécurité les informations de connexion pour la source de données externe que vous créez. par exemple `TestCred`. Entrez un nom d’utilisateur et un mot de passe pour la connexion à la source de données.
 
-![Informations d’identification de la source de données externe](media/data-virtualization/data-source-credentials.png)
+![Capture d’écran montrant l’étape 3 : Créer une connexion à votre source de données.](media/data-virtualization/data-source-credentials.png)
 
 ## <a name="external-data-table-mapping"></a>Mappage de tables de données externes
 
 Dans la page suivante, sélectionnez les tables pour lesquelles vous souhaitez créer des vues externes. Quand vous sélectionnez des bases de données parentes, les tables enfants sont également incluses. Une fois les tables sélectionnées, une table de mappage apparaît à droite. Ici, vous pouvez modifier les types. Vous pouvez également changer le nom de la table externe sélectionnée.
 
-![Informations d’identification de la source de données externe](media/data-virtualization/data-table-map.png)
+![Capture d’écran montrant l’étape 4 : Mapper vos objets de source de données à votre table externe.](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Pour changer la vue du mappage, double-cliquez sur une autre table sélectionnée.
@@ -78,11 +78,11 @@ Cette étape fournit un récapitulatif de vos sélections. Elle indique le nom d
 
 ![Écran Récapitulatif](media/data-virtualization/virtualize-data-summary.png)
 
-Si vous sélectionnez **Créer**, l’objet de source de données externe créé dans la base de données de destination apparaît.
+Si vous sélectionnez **Créer** , l’objet de source de données externe créé dans la base de données de destination apparaît.
 
 ![Sources de données externes](media/data-virtualization/external-data-sources.png)
 
-Si vous sélectionnez **Générer un script**, la requête T-SQL qui est générée pour créer l’objet de source de données externe apparaît.
+Si vous sélectionnez **Générer un script** , la requête T-SQL qui est générée pour créer l’objet de source de données externe apparaît.
 
 ![Générer un script](media/data-virtualization/generated-script.png)
 

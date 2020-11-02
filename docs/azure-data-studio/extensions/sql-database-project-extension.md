@@ -8,17 +8,18 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
-ms.date: 09/22/2020
-ms.openlocfilehash: 65006891a6633a75482f9a32c328dea0d8bf76fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.date: 10/22/2020
+ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123103"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496740"
 ---
 # <a name="sql-database-projects-extension-preview"></a>Extension des projets SQL Database (préversion)
 
 L’extension des projets SQL Database (préversion) est une extension pour le développement de bases de données SQL dans un environnement de développement basé sur un projet. 
+
 
 ## <a name="features"></a>Fonctionnalités
 
@@ -32,16 +33,20 @@ L’extension des projets SQL Database (préversion) est une extension pour le d
 8. Déployez un projet unique.
 9. Chargez les détails de connexion (authentification Windows SQL) et les variables SQLCMD à partir du profil de déploiement.
 
+Regardez cette courte vidéo (10 minutes) qui présente l’extension SQL Database Projects d’Azure Data Studio :
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
+
 ## <a name="install-the-sql-database-projects-extension"></a>Installer l’extension des projets SQL Database
 
-1. Ouvrez le gestionnaire d’extensions pour accéder aux extensions disponibles.  Pour cela, sélectionnez l’icône des extensions ou l’option **Extensions** dans le menu **Affichage**.
+1. Ouvrez le gestionnaire d’extensions pour accéder aux extensions disponibles.  Pour cela, sélectionnez l’icône des extensions ou l’option **Extensions** dans le menu **Affichage** .
 2. Identifiez l’extension *des projets SQL Database* en tapant tout ou partie du nom dans la zone de recherche de l’extension. Sélectionnez une extension disponible pour afficher ses détails.
 
    ![Installer l’extension](media/sql-database-projects-extension/install-database-projects.png)
 
-3. Sélectionnez l’extension de votre choix et **installez-la**.
+3. Sélectionnez l’extension de votre choix et **installez-la** .
 4. Sélectionnez **Recharger** pour activer l’extension (nécessaire uniquement la première fois que vous installez une extension).
-5. Sélectionnez l’icône fichiers à partir de la barre d’activité ou sélectionnez **Explorer** dans le menu **Affichage**. Une nouvelle icône pour les**Projets**  est désormais disponible.
+5. Sélectionnez l’icône fichiers à partir de la barre d’activité ou sélectionnez **Explorer** dans le menu **Affichage** . Une nouvelle icône pour les **Projets**  est désormais disponible.
 
    > [!NOTE]
    > Le kit SDK .NET Core est requis pour la fonctionnalité de génération de projet, et vous serez invité à l’installer s’il ne peut pas être détecté par l’extension.  Le kit SDK .NET Core (3.1 ou version ultérieure) peut être téléchargé et installé à partir de [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).

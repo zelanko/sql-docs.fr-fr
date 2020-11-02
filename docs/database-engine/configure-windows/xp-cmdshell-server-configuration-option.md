@@ -13,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
 ms.date: 06/12/2020
-ms.openlocfilehash: b2d4364d01b871364fda3ac42d98536e99269c29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 004a7b0a50a657632bb2b9970f0558857d416494
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763948"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257975"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>xp_cmdshell (option de configuration de serveur)
 
@@ -29,9 +29,12 @@ Cet article explique comment activer l’option de configuration **xp_cmdshell**
 Avant d’activer cette option, il est important de prendre en compte les implications potentielles en matière de sécurité.
 
 - Le code récemment développé ne doit pas utiliser la procédure stockée **xp_cmdshell** et, en général, il doit être désactivé.
-- Certaines applications héritées nécessitent l’activation de **xp_cmdshell**. Si elles ne peuvent pas être modifiés pour éviter l’utilisation de cette procédure stockée, vous pouvez l’activer comme indiqué ci-dessous.
+- Certaines applications héritées nécessitent l’activation de **xp_cmdshell** . Si elles ne peuvent pas être modifiés pour éviter l’utilisation de cette procédure stockée, vous pouvez l’activer comme indiqué ci-dessous.
 
-Si vous devez activer **xp_cmdshell**, vous pouvez utiliser la [gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) ou exécuter la procédure stockée système **sp_configure**, comme indiqué dans l’exemple de code suivant :  
+> [!NOTE]  
+> Si **xp_cmdshell** doit être utilisé, il est recommandé, pour des raisons de sécurité, de l’activer uniquement pendant la durée d’exécution de la tâche qui l’exige.
+
+Si vous devez activer **xp_cmdshell** , vous pouvez utiliser la [gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) ou exécuter la procédure stockée système **sp_configure** , comme indiqué dans l’exemple de code suivant :  
   
 ``` sql
 -- To allow advanced options to be changed.  

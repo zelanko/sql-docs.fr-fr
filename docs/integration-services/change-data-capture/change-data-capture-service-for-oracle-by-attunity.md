@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0854e117ccc765b9e4b47011e589244e71730810
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351215"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257972"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Service de capture de données modifiées pour Oracle par Attunity
 
@@ -27,7 +27,11 @@ ms.locfileid: "88351215"
   
 ## <a name="installation"></a>Installation  
 
-Le service et le concepteur de capture de données modifiées Microsoft pour Oracle par Attunity pour Microsoft SQL Server 2016 font partie du Feature Pack de SQL Server 2016. Téléchargez les composants du Feature Pack à partir de la [page web SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).
+Téléchargez le concepteur et le service de capture de données modifiées Microsoft pour Oracle par Attunity pour obtenir la version de SQL Server correspondante à partir des liens ci-dessous :
+
+- [Feature Pack Microsoft SQL Server 2016 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Feature Pack Microsoft SQL Server 2017 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Feature Pack Microsoft SQL Server 2019 Integration Services](https://www.microsoft.com/download/details.aspx?id=100303)
   
  Le service de capture de données modifiées pour Oracle peut être installé sur un ordinateur Windows pris en charge doté d’un accès à la base de données Oracle source qui est capturée et à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible où la base de données CDC cible réside. Le service de capture de données modifiées n'a pas besoin d'une installation locale de la base de données Oracle ou de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , uniquement de leurs clients pris en charge. Pour plus d'informations sur l'emplacement d'installation des composants de base de données requis, consultez **Composants requis pour la base de données** dans cette rubrique.  
   
@@ -44,7 +48,7 @@ Le service et le concepteur de capture de données modifiées Microsoft pour Ora
 -   Windows Server 2016
   
 ## <a name="database-prerequisites"></a>Composants requis pour la base de données  
- Pour utiliser le service de capture de données modifiées pour Oracle, vous devez installer le logiciel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client Oracle. Il s'agit d'un composant requis qui doit être obtenu auprès d'Oracle et installé avant d'installer le service de capture de données modifiées Oracle. En outre, vous devez installer le client SQL Server ODBC à l'aide du programme d'installation de SQL Server.  
+ Pour utiliser le service CDC Oracle, vous devez installer un client Oracle qui est compatible avec la version de la base de données Oracle. Il s'agit d'un composant requis qui doit être obtenu auprès d'Oracle et installé avant d'installer le service de capture de données modifiées Oracle. En outre, vous devez installer le client SQL Server ODBC à l'aide du programme d'installation de SQL Server.  
   
  Le service de capture de données modifiées pour Oracle prend en charge les versions suivantes :  
   
@@ -55,7 +59,7 @@ Le service et le concepteur de capture de données modifiées Microsoft pour Ora
 -   Oracle Database 12c en installation classique. (L’installation multi-locataire n’est pas prise en charge.)  
   
 ### <a name="target-sql-server-database"></a>Base de données SQL Server cible  
- Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="running-the-installation-program"></a>Exécution du programme d'installation  
  Pour installer le service de capture de données modifiées pour Oracle, ouvrez l'Assistant Installation de la plateforme Windows que vous utilisez (32/64 bit) et suivez les instructions à l'écran.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05f9a1bad426ad38b832597876522e67d1f01d73
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a268de26245955dd6be838e822f1cb84b693324
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537051"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497024"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89537051"
 ### <a name="the-data-file"></a>Fichier de données  
  Un fichier de données contient des lignes provenant d'une ou de plusieurs tables mémoire optimisées qui ont été insérées par plusieurs transactions dans le cadre d'opérations INSERT ou UPDATE. Par exemple, une ligne peut provenir de la table mémoire optimisée t1 et la ligne suivante de la table mémoire optimisée t2. Les lignes sont ajoutées au fichier de données dans l'ordre des transactions du journal des transactions, ce qui permet un accès séquentiel aux données. Ceci permet un meilleur ordre de grandeur pour le débit des E/S, par rapport à des E/S aléatoires.  
   
- Une fois que le fichier de données est plein, les lignes insérées par les nouvelles transactions sont stockées dans un autre fichier de données. Au fil du temps, les lignes provenant de tables mémoire optimisées durables sont stockées dans un ou plusieurs fichiers de données et chaque fichier de données contient des lignes provenant d'une plage disjointe mais contigüe de transactions. Par exemple, un fichier de données dont l'horodateur de validation de transaction est dans une plage de (100, 200) contient toutes les lignes insérées par les transactions dont l'horodateur de validation est supérieur à 100 et inférieur ou égal à 200. L'horodateur de validation est un nombre à croissance monotone attribué à une transaction lorsqu'elle est prête pour la validation. Chaque transaction a un horodateur de validation unique.  
+ Une fois que le fichier de données est plein, les lignes insérées par les nouvelles transactions sont stockées dans un autre fichier de données. Au fil du temps, les lignes provenant de tables à mémoire optimisée durables sont stockées dans un ou plusieurs fichiers de données et chaque fichier de données contenant des lignes constitue une plage de transactions disjointe, mais contigüe. Par exemple, un fichier de données dont l'horodateur de validation de transaction est dans une plage de (100, 200) contient toutes les lignes insérées par les transactions dont l'horodateur de validation est supérieur à 100 et inférieur ou égal à 200. L'horodateur de validation est un nombre à croissance monotone attribué à une transaction lorsqu'elle est prête pour la validation. Chaque transaction a un horodateur de validation unique.  
   
  Lorsqu'une ligne est supprimée ou mise à jour, elle n'est pas supprimée ou modifiée sur place dans le fichier de données, mais les lignes supprimées sont suivies dans un autre type de fichier : le fichier delta. Les opérations de mise à jour sont traitées comme un tuple d'opérations de suppression et d'insertion pour chaque ligne. Cela supprime les E/S aléatoires dans le fichier de données.  
  

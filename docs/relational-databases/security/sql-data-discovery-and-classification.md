@@ -11,29 +11,29 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ed1b0cb22d26895d5b01e59d36ede00f44ce4cd1
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867767"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439496"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Découverte et classification des données SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-La fonctionnalité Découverte et classification des données introduit un nouvel outil intégré à [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) pour la **découverte**, la **classification**, l’**étiquetage**  &  la **création de rapport** concernant les données sensibles dans vos bases de données.
+La fonctionnalité Découverte et classification des données introduit un nouvel outil intégré à [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) pour la **découverte** , la **classification** , l’ **étiquetage**  &  la **création de rapport** concernant les données sensibles dans vos bases de données.
 La découverte et la classification de vos données les plus sensibles (professionnelles, financières, médicales, etc.) peuvent jouer un rôle essentiel dans la protection des informations de votre organisation. Elles peuvent servir d’infrastructure pour :
 * Contribuer à répondre aux normes de confidentialité des données.
 * Contrôler l’accès aux bases de données/colonnes contenant des données sensibles et en renforcer la sécurité.
 
 > [!NOTE]
-> La fonctionnalité Découverte et classification des données est **prise en charge pour SQL Server 2012 et ultérieur et peut être utilisée avec [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) ou ultérieur**. Pour Azure SQL Database, consultez [Découverte et classification des données Azure SQL Database](/azure/sql-database/sql-database-data-discovery-and-classification/).
+> La fonctionnalité Découverte et classification des données est **prise en charge pour SQL Server 2012 et ultérieur et peut être utilisée avec [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) ou ultérieur** . Pour Azure SQL Database, consultez [Découverte et classification des données Azure SQL Database](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a name="overview"></a><a id="subheading-1"></a>Vue d’ensemble
 La fonctionnalité Découverte et classification des données introduit un ensemble de services avancées, qui forment un nouveau paradigme de protection des informations SQL visant à protéger les données et pas seulement la base de données :
 
-* **Découverte et recommandations** : le moteur de classification analyse votre base de données et identifie les colonnes contenant des données potentiellement sensibles. Il fournit ensuite un moyen simple d’examiner et appliquer les recommandations de classification appropriée, ainsi que de classifier manuellement des colonnes.
-* **Étiquetage** : des étiquettes de classification de sensibilité peuvent être marquées de manière permanente sur les colonnes.
+* **Découverte et recommandations**  : le moteur de classification analyse votre base de données et identifie les colonnes contenant des données potentiellement sensibles. Il fournit ensuite un moyen simple d’examiner et appliquer les recommandations de classification appropriée, ainsi que de classifier manuellement des colonnes.
+* **Étiquetage**  : des étiquettes de classification de sensibilité peuvent être marquées de manière permanente sur les colonnes.
 * **Visibilité** : L’état de classification de la base de données peut être consulté dans un rapport détaillé imprimable/exportable à utiliser à des fins de conformité et d’audit, ainsi que pour d’autres besoins.
 
 ## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>Découverte, classification et étiquetage des colonnes sensibles
@@ -47,49 +47,49 @@ La classification comprend deux attributs de métadonnées :
 
 1. Dans SQL Server Management Studio (SSMS), connectez-vous à SQL Server.
 
-2. Dans l’Explorateur d’objets SSMS, cliquez avec le bouton droit sur la base de données à classifier et choisissez **Tâches** > **Découverte et classification des données** > **Classifier les données**.
+2. Dans l’Explorateur d’objets SSMS, cliquez avec le bouton droit sur la base de données à classifier et choisissez **Tâches** > **Découverte et classification des données** > **Classifier les données** .
 
-   ![Volet de navigation][0]
+   ![Capture d’écran montrant l’Explorateur d’objets SSMS avec l’option Tâches > Découverte et classification des données > Classifier les données... sélectionnée.][0]
 
 3. Le moteur de classification analyse votre base de données pour identifier les colonnes contenant des données potentiellement sensibles et fournit la liste des **classifications de colonne recommandées** :
 
     * Pour consulter la liste des classifications de colonne recommandées, cliquez sur la zone de notification des recommandations en haut ou sur le panneau de recommandations en bas de la fenêtre :
 
-        ![Volet de navigation][2]
+        ![Capture d’écran montrant la notification qui indique la découverte de 39 colonnes avec des recommandations de classification. Cliquez ici pour les afficher.][2]
 
-        ![Volet de navigation][3]
+        ![Capture d’écran montrant la notification qui indique 39 colonnes avec des recommandations de classification (cliquez pour afficher).][3]
 
     * Passez en revue la liste des recommandations :
         * Pour accepter une recommandation associée à une colonne spécifique, cochez la case dans la colonne de gauche de la ligne concernée. Vous pouvez également accepter *toutes les recommandations* en cochant la case dans l’en-tête de table de recommandations.
 
         * Vous pouvez changer le type d’informations et l’étiquette de sensibilité recommandés à l’aide des zones de liste déroulante.        
 
-        ![Volet de navigation][4]
+        ![Capture d’écran montrant la liste des recommandations.][4]
 
-    * Pour appliquer les recommandations sélectionnées, cliquez sur le bouton bleu **Accepter les recommandations sélectionnées**.
+    * Pour appliquer les recommandations sélectionnées, cliquez sur le bouton bleu **Accepter les recommandations sélectionnées** .
 
-        ![Volet de navigation][5]
+        ![Capture d’écran du bouton Accepter les recommandations sélectionnées.][5]
 
 4. Vous pouvez aussi, en guise d’alternative, **classifier manuellement** des colonnes ou, en plus de la classification basée sur les recommandations :
 
     * Cliquez sur **Ajouter une classification** dans le menu en haut de la fenêtre.
 
-        ![Volet de navigation][6]
+        ![Capture d’écran montrant le menu supérieur avec l’option Ajouter une classification en évidence.][6]
 
     * Dans la fenêtre contextuelle qui apparaît, sélectionnez le schéma > table > colonne que vous souhaitez classifier, ainsi que l’étiquette de sensibilité et le type d’informations. Cliquez sur le bouton bleu **Ajouter une classification** en bas de la fenêtre contextuelle.
 
-        ![Volet de navigation][7]
+        ![Capture d’écran montrant la fenêtre contextuelle Ajouter une classification.][7]
 
 5. Pour terminer votre classification et étiqueter de manière permanente les colonnes de base de données avec les nouvelles métadonnées de classification, cliquez sur **Enregistrer** dans le menu en haut de la fenêtre.
 
-    ![Volet de navigation][8]
+    ![Capture d’écran montrant le menu supérieur avec l’option Enregistrer en évidence.][8]
 
 
-6. Pour générer un rapport avec un récapitulatif complet de l’état de classification de la base de données, cliquez sur **Afficher le rapport** dans le menu supérieur de la fenêtre. (Vous pouvez également générer un rapport à l’aide de SSMS. Cliquez avec le bouton droit sur la base de données dans laquelle vous souhaitez générer le rapport, puis choisissez **Tâches** > **Découverte et classification des données** > **Générer le rapport**.)
+6. Pour générer un rapport avec un récapitulatif complet de l’état de classification de la base de données, cliquez sur **Afficher le rapport** dans le menu supérieur de la fenêtre. (Vous pouvez également générer un rapport à l’aide de SSMS. Cliquez avec le bouton droit sur la base de données dans laquelle vous souhaitez générer le rapport, puis choisissez **Tâches** > **Découverte et classification des données** > **Générer le rapport** .)
 
-    ![Volet de navigation][9]
+    ![Capture d’écran montrant le menu supérieur avec l’option Afficher le rapport en évidence.][9]
 
-    ![Volet de navigation][10]
+    ![Capture d’écran montrant le rapport de classification des données SQL.][10]
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>Gérer la stratégie de protection des informations avec SSMS
 
@@ -97,15 +97,15 @@ Vous pouvez gérer la stratégie de protection des informations à l’aide de [
 
 1. Dans SQL Server Management Studio (SSMS), connectez-vous à SQL Server.
 
-2. Dans l’Explorateur d’objets SSMS, cliquez avec le bouton droit sur l’une de vos bases de données et choisissez **Tâches** > **Découverte et classification des données**.
+2. Dans l’Explorateur d’objets SSMS, cliquez avec le bouton droit sur l’une de vos bases de données et choisissez **Tâches** > **Découverte et classification des données** .
 
    Les options de menu suivantes vous permettent de gérer la stratégie de protection des informations :
 
-* **Définir la stratégie de protection des informations** : utilise la stratégie de protection des informations telle que définie dans le fichier JSON sélectionné.
+* **Définir la stratégie de protection des informations**  : utilise la stratégie de protection des informations telle que définie dans le fichier JSON sélectionné.
 
-* **Exporter la stratégie de protection des informations** : exporte la stratégie de protection des informations dans un fichier JSON.
+* **Exporter la stratégie de protection des informations**  : exporte la stratégie de protection des informations dans un fichier JSON.
 
-* **Réinitialiser la stratégie de protection des informations** : rétablit la stratégie de protection des informations par défaut.
+* **Réinitialiser la stratégie de protection des informations**  : rétablit la stratégie de protection des informations par défaut.
 
 > [!IMPORTANT]
 > Le fichier de stratégie de protection des informations n’est pas stocké dans l’ordinateur SQL Server.
@@ -116,7 +116,7 @@ Vous pouvez gérer la stratégie de protection des informations à l’aide de [
 SQL Server 2019 introduit la vue de catalogue système [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md). Cette vue retourne les types d’informations et les étiquettes de sensibilité. 
 
 > [!NOTE]
-> Cette vue nécessite l’autorisation **VIEW ANY SENSITIVITY CLASSIFICATION**. Pour plus d'informations, consultez [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15).
+> Cette vue nécessite l’autorisation **VIEW ANY SENSITIVITY CLASSIFICATION** . Pour plus d'informations, consultez [Metadata Visibility Configuration](./metadata-visibility-configuration.md?view=sql-server-ver15).
 
 Sur les instances SQL Server 2019, interrogez `sys.sensitivity_classifications` pour passer en revue toutes les colonnes classifiées avec leurs classifications correspondantes. Par exemple : 
 
@@ -190,7 +190,7 @@ FROM
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
 Vous pouvez utiliser T-SQL pour ajouter/supprimer des classifications de colonne, ainsi que pour récupérer toutes les classifications pour la base de données entière.
 
-- Ajouter/mettre à jour la classification d’une ou plusieurs colonnes : [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+- Ajouter/Mettre à jour la classification d’une ou plusieurs colonnes : [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 - Supprimer la classification d’une ou plusieurs colonnes : [DROP SENSITIVITY CLASSIFICATION](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 # <a name="powershell-cmdlet"></a>[Applet de commande PowerShell](#tab/sql-powelshell)

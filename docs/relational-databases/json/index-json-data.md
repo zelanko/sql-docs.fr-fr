@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499242"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439463"
 ---
 # <a name="index-json-data"></a>Indexer des données JSON
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ Vous n’avez pas besoin de réécrire vos requêtes. Si vous utilisez des expre
 ### <a name="execution-plan-for-this-example"></a>Plan d’exécution pour cet exemple
 Voici le plan d’exécution de la requête utilisée dans cet exemple.  
   
-![Plan d’exécution](../../relational-databases/json/media/jsonindexblog1.png "Plan d’exécution")  
+![Capture d’écran montrant le plan d’exécution pour cet exemple.](../../relational-databases/json/media/jsonindexblog1.png "Plan d’exécution")  
   
 Au lieu d’une analyse de table complète, SQL Server effectue une recherche dans l’index non-cluster et recherche les lignes qui répondent aux conditions spécifiées. Il utilise ensuite une recherche de clé dans la table `SalesOrderHeader` pour extraire les autres colonnes référencées dans la requête. Dans cet exemple, il s’agit de `SalesOrderNumber` et `OrderDate`.  
  
@@ -138,13 +138,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Si vous examinez le plan d’exécution, vous pouvez constater qu’il utilise les valeurs triées de l’index non-cluster.  
   
- ![Plan d’exécution](../../relational-databases/json/media/jsonindexblog2.png "Plan d’exécution")  
+ ![Capture d’écran montrant un plan d’exécution qui utilise des valeurs triées de l’index non cluster.](../../relational-databases/json/media/jsonindexblog2.png "Plan d’exécution")  
   
  Bien que la requête comporte une clause `ORDER BY`, le plan d’exécution n’utilise pas d’opérateur de tri. L’index JSON est déjà trié selon les règles cyrilliques serbes. Par conséquent, SQL Server peut utiliser l’index non-cluster dans lequel les résultats sont déjà triés.  
   
  Toutefois, si vous changez le classement de l’expression `ORDER BY`, par exemple en ajoutant `COLLATE French_100_CI_AS_SC` après la fonction `JSON_VALUE`, vous obtenez un autre plan d’exécution de requête.  
   
- ![Plan d’exécution](../../relational-databases/json/media/jsonindexblog3.png "Plan d’exécution")  
+ ![Capture d’écran montrant un plan d’exécution différent.](../../relational-databases/json/media/jsonindexblog3.png "Plan d’exécution")  
   
  Étant donné que l’ordre des valeurs de l’index n’est pas compatible avec les règles de classement françaises, SQL Server ne peut pas utiliser l’index pour trier les résultats. Par conséquent, il ajoute un opérateur de tri qui trie les résultats à l’aide des règles de classement françaises.  
  

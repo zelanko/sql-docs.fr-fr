@@ -12,12 +12,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcaae9b53ace5a79e3e1e2c5ccc3e0dc2449306c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 08a3bbf542911c31681f72c74ed783cf6ae79d99
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545186"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439528"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89545186"
   
 1.  Lancez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Cliquez sur **Nouvelle requête**.  
+2.  Cliquez sur **Nouvelle requête** .  
   
 3.  Collez ce code dans la nouvelle fenêtre de requête et exécutez chaque section.  
 
@@ -138,13 +138,13 @@ ms.locfileid: "89545186"
   
 2.  Dans l'Explorateur d'objets, cliquez avec le bouton droit sur la base de données que vous souhaitez surveiller.  
   
-3.  Dans le menu contextuel, sélectionnez **Rapports** -> **Standard Rapports** -> **Utilisation de la mémoire par les objets optimisés en mémoires**.  
+3.  Dans le menu contextuel, sélectionnez **Rapports** -> **Standard Rapports** -> **Utilisation de la mémoire par les objets optimisés en mémoires** .  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
+ ![Capture d’écran montrant l’Explorateur d’objets avec l’option Rapports > Rapports standard > Utilisation de la mémoire par les objets mémoire optimisés sélectionnée.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
  Ce rapport affiche la consommation de la mémoire par la base de données créée précédemment.  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
+ ![Capture d’écran du rapport Utilisation totale de la mémoire par les objets mémoire optimisés.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> Utilisation d'DMVs  
  Il existe un certain nombre de DMV disponibles pour surveiller la mémoire consommée par les tables, index, objets système optimisés en mémoire et par les structures d'exécution.  

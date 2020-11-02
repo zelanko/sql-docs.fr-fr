@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac19c1c8e0dfc2e8a8cf4711400eb3c5cb29b5f2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 3800029fb04f058f6f2a0f00ed3f859d1385782e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784831"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523884"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurer le groupe de disponibilité Always On SQL Server sur Windows et Linux (multiplateforme)
 
@@ -69,7 +69,7 @@ Les étapes de création du groupe de disponibilité sont les mêmes que celles 
 
    L’image suivante affiche cette étape complète.
 
-   ![Activer les groupes de disponibilité Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Capture d’écran d’une fenêtre Git Bash montrant la commande.](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. Configurez le fichier hôtes sur les deux serveurs ou enregistrez les noms de serveurs avec DNS.
 
@@ -110,7 +110,7 @@ Les étapes de création du groupe de disponibilité sont les mêmes que celles 
 
    Dans le diagramme suivant, la propriété et le groupe sont définis correctement pour le certificat et la clé.
 
-   ![Activer les groupes de disponibilité Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Capture d’écran d’une fenêtre Git Bash montrant .cer et .pvk dans le dossier /var/opt/mssql/data.](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. Sur le réplica secondaire, créez une connexion à la base de données et un mot de passe, puis créez une clé principale.
