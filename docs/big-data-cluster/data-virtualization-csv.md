@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 6981eea5cb4d327303755adc74d5610637eb70b0
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 6625e985781f3980c44bef9b6dbd408243ac78a9
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588255"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523849"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>Virtualiser des données CSV à partir d’un pool de stockage (clusters Big Data)
 
@@ -31,18 +31,18 @@ Les clusters Big Data SQL Server peuvent virtualiser des données à partir de f
 
 Dans Azure Data Studio (ADS), [connectez-vous à l’instance maître de SQL Server](connect-to-big-data-cluster.md#master) de votre cluster Big Data. Une fois connecté, développez les éléments HDFS dans l’Explorateur d’objets pour localiser le ou les fichiers CSV dont vous souhaitez virtualiser les données. 
 
-Pour les besoins de ce tutoriel, nous allons créer un répertoire nommé **Data**.
+Pour les besoins de ce tutoriel, nous allons créer un répertoire nommé **Data** .
 
 1. Cliquez avec le bouton droit sur le menu contextuel du répertoire racine HDFS.
-2. Cliquez sur **Nouveau répertoire**.
-3. Nommez le nouveau répertoire *Data*.
+2. Cliquez sur **Nouveau répertoire** .
+3. Nommez le nouveau répertoire *Data* .
 
-Chargez l’exemple de données. Pour une procédure pas à pas simple, vous pouvez utiliser un exemple de fichier de données CSV. Cet article utilise les données sur les causes des retards aériens du [ministère américain des Transports (USDOT)](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1). Téléchargez les données brutes et extrayez-les sur votre ordinateur. Nommez le fichier *airline_delay_causes.csv*.
+Chargez l’exemple de données. Pour une procédure pas à pas simple, vous pouvez utiliser un exemple de fichier de données CSV. Cet article utilise les données sur les causes des retards aériens du [ministère américain des Transports (USDOT)](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1). Téléchargez les données brutes et extrayez-les sur votre ordinateur. Nommez le fichier *airline_delay_causes.csv* .
 
 Pour charger l’exemple de fichier une fois celui-ci extrait :
 
 1. Dans Azure Data Studio, *cliquez avec le bouton droit* sur le nouveau répertoire que vous avez créé. 
-2. Cliquez sur **Charger des fichiers**.
+2. Cliquez sur **Charger des fichiers** .
 
 ![Exemple de fichier CSV dans HDFS](media/data-virtualization/100-csv-sample-file-hdfs.png)
 
@@ -65,13 +65,13 @@ Dans ADS, cliquez avec le bouton droit sur le fichier CSV, puis sélectionnez **
 
 Spécifiez la base de données, la source de données, un nom de table, le schéma et le nom du format de fichier externe de la table.
 
-Cliquez sur **Suivant**.
+Cliquez sur **Suivant** .
 
 ## <a name="preview-data"></a>Aperçu des données
 
 Azure Data Studio fournit un aperçu des données importées.
 
-![Informations d’identification de la source de données externe](media/data-virtualization/130-csv-preview-data.png)
+![Capture d’écran montrant la fenêtre Créer une table externe à partir d’un fichier CSV avec un aperçu des données importées.](media/data-virtualization/130-csv-preview-data.png)
 
 Une fois terminé, cliquez sur **Suivant** pour continuer.
 
@@ -79,9 +79,9 @@ Une fois terminé, cliquez sur **Suivant** pour continuer.
 
 Dans la fenêtre suivante, vous pouvez modifier les colonnes de la table externe que vous avez l’intention de créer. Vous pouvez modifier le nom de la colonne, modifier le type des données et autoriser les lignes pouvant accepter la valeur Null. 
 
-![Informations d’identification de la source de données externe](media/data-virtualization/140-csv-modify-columns.png)
+![Capture d’écran de la fenêtre Créer une table externe à partir d’un fichier CSV montrant l’Étape 3 : Modifier les colonnes.](media/data-virtualization/140-csv-modify-columns.png)
 
-Après avoir vérifié les colonnes de destination, cliquez sur **Suivant**.
+Après avoir vérifié les colonnes de destination, cliquez sur **Suivant** .
 
 ## <a name="summary"></a>Résumé
 
@@ -89,9 +89,9 @@ Cette étape fournit un récapitulatif de vos sélections. Elle fournit le nom d
 
 ![Écran Récapitulatif](media/data-virtualization/150-csv-virtualize-data-summary.png)
 
-Si vous cliquez sur **Créer la table**, SQL Server crée la table externe dans la base de données de destination.
+Si vous cliquez sur **Créer la table** , SQL Server crée la table externe dans la base de données de destination.
 
-Si vous cliquez sur **Générer un script**, Azure Data Studio crée la requête T-SQL pour créer la table externe.
+Si vous cliquez sur **Générer un script** , Azure Data Studio crée la requête T-SQL pour créer la table externe.
 
 Une fois la table créée, vous pouvez l’interroger directement en utilisant T-SQL à partir de l’instance de SQL Server.
 

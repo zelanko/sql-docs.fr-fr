@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a4c032315ef6fb17578ffcdfc7116f3a93293ac8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862824"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793816"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Que sont les correctifs de sécurité étendus pour SQL Server ?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -56,7 +56,7 @@ Si vous migrez vos charges de travail vers des machines Virtuelles Azure (IaaS),
 
 Les machines virtuelles Azure qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur **Windows Server 2008 R2 et versions ultérieures** reçoivent automatiquement des ESU par le biais de canaux de mise à jour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existants quand la machine virtuelle est configurée pour utiliser la [mise à jour corrective automatisée](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching).
 
-Pour les machines virtuelles Azure qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur **Windows Server 2008** et les machines virtuelles qui n’ont ***pas* été configurées pour la [mise à jour corrective automatisée](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** , vous devez télécharger et déployer manuellement les correctifs ESU comme décrit dans la section [Environnements locaux ou hébergés](#on-premises-or-hosted-environments).
+Pour les machines virtuelles Azure qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur **Windows Server 2008** et les machines virtuelles qui n’ont **_pas_ été configurées pour la [mise à jour corrective automatisée](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)** , vous devez télécharger et déployer manuellement les correctifs ESU comme décrit dans la section [Environnements locaux ou hébergés](#on-premises-or-hosted-environments).
 
 ### <a name="on-premises-or-hosted-environments"></a>Environnements locaux ou hébergés
 Si vous disposez de Software Assurance, vous pouvez acheter un abonnement aux correctifs de sécurité étendus (ESU, Extended Security Update) pour une durée allant jusqu’à trois ans après la date de la fin du support, dans le cadre d’un Accord Entreprise (EA), d’un contrat d’abonnement entreprise (EAS), d’un accord de mise en œuvre serveur et cloud (SCE) ou d’un accord de mise en œuvre pour des solutions Education (EES). Vous pouvez acheter des ESU uniquement pour les serveurs que vous devez couvrir. Vous pouvez acheter des ESU directement auprès de Microsoft ou d’un partenaire de licence Microsoft. 
@@ -80,18 +80,18 @@ Pour enregistrer vos instances de [!INCLUDE[ssNoVersion](../../includes/ssnovers
 Pour créer le registre SQL Server, procédez comme suit :
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com). 
-1. Sélectionnez l'option pour **Créer une ressource**. 
+1. Sélectionnez l'option pour **Créer une ressource** . 
 1. Tapez `SQL Server registry` dans la zone de recherche.  
-1. Choisissez l’option **Registre SQL Server** publiée par [!INCLUDE[msCoName](../../includes/msconame-md.md)] puis, sélectionnez **Créer**. 
+1. Choisissez l’option **Registre SQL Server** publiée par [!INCLUDE[msCoName](../../includes/msconame-md.md)] puis, sélectionnez **Créer** . 
 
-   ![Choisissez le service de registres SQL Server](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![Capture d’écran du portail Azure montrant comment créer un registre SQL Server.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. Sous **Détails du projet**, choisissez votre abonnement dans la liste déroulante. Ensuite, choisissez un **Groupe de ressources** existant ou sélectionnez **Créer un nouveau** pour créer un nouveau groupe de ressources pour votre nouveau service de registres SQL Server. 
-1. Sous **Détails du service**, indiquez un nom et une région pour votre nouvelle ressource **Registre SQL Server** : 
+1. Sous **Détails du projet** , choisissez votre abonnement dans la liste déroulante. Ensuite, choisissez un **Groupe de ressources** existant ou sélectionnez **Créer un nouveau** pour créer un nouveau groupe de ressources pour votre nouveau service de registres SQL Server. 
+1. Sous **Détails du service** , indiquez un nom et une région pour votre nouvelle ressource **Registre SQL Server**  : 
 
-   ![Choisissez le service de registres SQL Server](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![Capture d’écran du registre SQL Server montrant l’onglet De base.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
-1. Sélectionnez **Évaluer et Créer** pour évaluer les détails de votre **Registre SQL Server**. Sélectionnez **Créer** une fois la validation passée. 
+1. Sélectionnez **Évaluer et Créer** pour évaluer les détails de votre **Registre SQL Server** . Sélectionnez **Créer** une fois la validation passée. 
 
 ## <a name="register-instances-for-esus"></a>Enregistrer des instances pour des ESU
 
@@ -102,12 +102,12 @@ Une fois que la ressource **Registre SQL Server** est déployée, vous pouvez ch
 Pour enregistrer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unique, procédez comme suit :
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com). 
-1. Accédez à votre ressource **Registre SQL Server**. 
-1. Sélectionnez **+ Enregistrer** dans le volet **Vue d’ensemble** : 
+1. Accédez à votre ressource **Registre SQL Server** . 
+1. Sélectionnez **+ Enregistrer** dans le volet **Vue d’ensemble**  : 
 
    ![Choisissez enregistrer pour enregistrer une seule instance de SQL Server](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
 
-1. Fournissez les informations requises comme détaillées dans ce tableau et sélectionnez **Enregistrer** : 
+1. Fournissez les informations requises comme détaillées dans ce tableau et sélectionnez **Enregistrer**  : 
 
    |**Valeur**| **Description**|
    | :-------| :------------- |
@@ -123,7 +123,7 @@ Pour enregistrer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 
    <sup>1</sup> Uniquement nécessaire pour les machines virtuelles Azure. 
 
-L’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nouvellement enregistrée est désormais visible dans la section **Enregistrer des instances** du volet **Vue d’ensemble** : 
+L’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nouvellement enregistrée est désormais visible dans la section **Enregistrer des instances** du volet **Vue d’ensemble**  : 
 
 ![Instances enregistrées](media/sql-server-extended-security-updates/registered-sql-instance.png)
 
@@ -134,8 +134,8 @@ Une fois qu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 Plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être enregistrées en téléchargeant un fichier .CSV. Une fois votre [fichier .CSV correctement mis en forme](#formatting-requirements-for-csv-file), vous pouvez suivre ces étapes pour enregistrer en bloc vos instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec la ressource de Registre SQL Server : 
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com). 
-1. Accédez à votre ressource **Registre SQL Server**. 
-1. Sélectionnez **Enregistrer en bloc** dans le volet **Vue d’ensemble** :  
+1. Accédez à votre ressource **Registre SQL Server** . 
+1. Sélectionnez **Enregistrer en bloc** dans le volet **Vue d’ensemble**  :  
 
    ![Choisissez Enregistrer en bloc pour enregistrer plusieurs instances de SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
@@ -200,7 +200,7 @@ Une fois vos instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 Pour télécharger des ESU, procédez comme suit : 
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com). 
-1. Accédez à votre ressource **Registre SQL Server**. 
+1. Accédez à votre ressource **Registre SQL Server** . 
 1. Sélectionnez **Correctifs de sécurité** dans le volet de navigation. 
 
    ![Vérifier les mises à jour disponibles dans le volet des correctifs de sécurité](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
@@ -209,7 +209,7 @@ Pour télécharger des ESU, procédez comme suit :
 
 ## <a name="configure-regional-redundancy"></a>Configurer la redondance régionale 
 
-Les clients qui ont besoin d’une redondance régionale pour leur **Registre SQL Server** peuvent créer des données d’inscription dans deux régions distinctes. Les clients peuvent ensuite télécharger les mises à jour de sécurité à partir de l’une ou l’autre région, en fonction de la disponibilité du service **Registre SQL Server**. 
+Les clients qui ont besoin d’une redondance régionale pour leur **Registre SQL Server** peuvent créer des données d’inscription dans deux régions distinctes. Les clients peuvent ensuite télécharger les mises à jour de sécurité à partir de l’une ou l’autre région, en fonction de la disponibilité du service **Registre SQL Server** . 
 
 Pour la redondance régionale, le service **Registre SQL Server** doit être créé dans deux régions différentes, et votre inventaire SQL Server doit être réparti entre ces deux services. De cette façon, la moitié de vos serveurs SQL sont inscrits auprès du service de registre dans une région, puis l’autre moitié de vos serveurs SQL Server sont inscrits auprès du service de registre dans l’autre région. 
 
@@ -323,7 +323,7 @@ Pour obtenir des conseils sur la façon d’optimiser les performances de [!INCL
 - [Page de fin du support SQL Server 2008 / 2008 R2 ](https://aka.ms/sqleos)
 - [Forum aux questions (FAQ) sur les correctifs de sécurité étendus](https://aka.ms/sqleosfaq)
 - [Centre de réponse aux problèmes de sécurité Microsoft (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [Gérer les mises à jour Windows à l’aide d’Azure Automation](/azure/automation/automation-tutorial-update-management)
+- [Gérer les mises à jour Windows à l’aide d’Azure Automation](/azure/automation/update-management/overview)
 - [Mise à jour corrective automatisée de SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Guide de migration de données Microsoft](https://datamigration.microsoft.com/)
 - [Migration Azure : options lift-and-shift pour déplacer votre SQL Server 2008 / 2008 R2 actuel vers une machine virtuelle Azure](https://azure.microsoft.com/services/azure-migrate/)

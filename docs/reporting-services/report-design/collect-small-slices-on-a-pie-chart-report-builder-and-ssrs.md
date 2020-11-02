@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4e51e1a12f28ae18ff6ba833ace19a1a97ba72dd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462063"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907237"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Regrouper des petits secteurs sur un graphique à secteurs (Générateur de rapports et SSRS)
 Les graphiques à secteurs contenant trop de secteurs peuvent être confus. Apprenez à regrouper de nombreux petits secteurs d’un graphique à secteurs en un seul dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
@@ -23,7 +23,7 @@ Les graphiques à secteurs contenant trop de secteurs peuvent être confus. Appr
  
  Le [Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) vous guide pas à pas dans la procédure de regroupement de petits secteurs en un seul, si vous voulez essayer avec des exemples de données.
  
- ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![Capture d’écran d’un graphique en secteurs du générateur de rapports montrant le secteur Autre.](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  Vous pouvez également regrouper des petits secteurs en un deuxième graphique à secteurs appelé à partir d'un secteur regroupé du premier graphique à secteurs. Le deuxième graphique à secteurs est alors tracé à droite du graphique à secteurs d'origine.  
   
@@ -38,26 +38,26 @@ Les graphiques à secteurs contenant trop de secteurs peuvent être confus. Appr
   
 3.  Dans la section **Général** , développez le nœud **CustomAttributes** .  
   
-4.  Définissez la propriété CollectedStyle sur **SingleSlice**.  
+4.  Définissez la propriété CollectedStyle sur **SingleSlice** .  
 
-    ![report-builder-pie-chart-single-slice-property](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Capture d’écran d’un graphique en secteurs du générateur de rapports montrant comment configurer une propriété à un seul secteur.](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
   
 5.  Définissez la valeur de seuil de regroupement et le type de seuil. Vous trouverez ci-dessous quelques manières parmi les plus courantes de définir des seuils de regroupement.  
   
     -   **Par pourcentage.** Par exemple, pour regrouper en un secteur les secteurs de votre graphique inférieurs à 10 %, procédez comme suit :  
   
-         Définissez la propriété CollectedThresholdUsePercent sur **True**.  
+         Définissez la propriété CollectedThresholdUsePercent sur **True** .  
   
-         Définissez la propriété CollectedThreshold sur **10**.  
+         Définissez la propriété CollectedThreshold sur **10** .  
   
         > [!NOTE]  
-        >  Si vous définissez la propriété CollectedStyle sur **SingleSlice**, la propriété CollectedThreshold sur une valeur supérieure à **100** et la propriété CollectedThresholdUsePercent sur **True**, le graphique lève une exception, car il ne peut pas calculer de pourcentage. Pour résoudre ce problème, définissez la propriété CollectedThreshold sur une valeur inférieure à **100**.  
+        >  Si vous définissez la propriété CollectedStyle sur **SingleSlice** , la propriété CollectedThreshold sur une valeur supérieure à **100** et la propriété CollectedThresholdUsePercent sur **True** , le graphique lève une exception, car il ne peut pas calculer de pourcentage. Pour résoudre ce problème, définissez la propriété CollectedThreshold sur une valeur inférieure à **100** .  
   
     -   **Par valeur des données.** Par exemple, pour regrouper en un secteur les secteurs de votre graphique inférieurs à 5000, procédez comme suit :  
   
-         Définissez la propriété CollectedThresholdUsePercent sur **False**.  
+         Définissez la propriété CollectedThresholdUsePercent sur **False** .  
   
-         Définissez la propriété CollectedThreshold sur **5000**.  
+         Définissez la propriété CollectedThreshold sur **5000** .  
   
 6.  Définissez la propriété CollectedLabel sur une chaîne représentant l’étiquette de texte à afficher dans le secteur regroupé.  
   
@@ -67,9 +67,9 @@ Les graphiques à secteurs contenant trop de secteurs peuvent être confus. Appr
   
 1.  Suivez les étapes 1 à 3 ci-dessus.  
   
-2.  Définissez la propriété CollectedStyle sur **CollectedPie**.  
+2.  Définissez la propriété CollectedStyle sur **CollectedPie** .  
   
-3.  Définissez la propriété CollectedThresholdproperty sur une valeur représentant le seuil de regroupement des petits secteurs en un seul secteur. Lorsque la propriété CollectedStyle est définie sur **CollectedPie**, la propriété CollectedThresholdUsePercentproperty est toujours définie sur **True**, et le seuil de regroupement est toujours exprimé en pourcentage.  
+3.  Définissez la propriété CollectedThresholdproperty sur une valeur représentant le seuil de regroupement des petits secteurs en un seul secteur. Lorsque la propriété CollectedStyle est définie sur **CollectedPie** , la propriété CollectedThresholdUsePercentproperty est toujours définie sur **True** , et le seuil de regroupement est toujours exprimé en pourcentage.  
   
 4.  (Facultatif) Définissez les propriétés CollectedColor, CollectedLabel, CollectedLegendText et CollectedToolTip. Toutes les autres propriétés nommées « Collected » ne s'appliquent pas au regroupement de secteurs.  
   

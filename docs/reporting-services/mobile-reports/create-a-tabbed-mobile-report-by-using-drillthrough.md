@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99e176988287a457738a05a4a7ab71653b281070
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95b153be1b4dc5a45effeb678ca0ccef83f06e6e
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448034"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907337"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Créer un rapport mobile tabulé à l’aide de l’extraction
 Découvrez comment créer un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] qui apparaît et fonctionne comme un rapport tabulé à l’aide de l’extraction et des paramètres.
 
 Par exemple, dans ce rapport, les jauges de la partie supérieure fonctionnent comme des onglets. Quand vous cliquez sur la jauge des transports, les données qui se trouvent dans le reste du graphique sont filtrées sur les données relatives aux transports.
 
-![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
+![Capture d’écran montrant le rapport Finances - Transport, avec la jauge des transports sélectionnée.](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
 
 En réalité, il s’agit d’un ensemble de cinq rapports, ayant chacun un paramètre différent qui permet de filtrer les données en fonction de la jauge sélectionnée en haut du rapport. Vous commencez par créer cinq rapports. Ensuite, pour chacun des cinq rapports, vous faites des quatre autres jauges des extractions pour les quatre autres rapports.
 
@@ -37,11 +37,11 @@ Voici les étapes de cet exemple :
     * Stockage
     * Dépenses diverses
 
-   ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
+   ![Capture d’écran d’un rapport nommé « Ventes », comportant cinq jauges :](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
 2. Définissez **Accentuation** sur **On** pour la jauge Ventes afin qu’elle contraste avec le reste du rapport ; dans le cas présent, blanc sur noir.
 
-    ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
+    ![Capture d’écran de la jauge Ventes avec une flèche rouge pointant vers le curseur Accentuation sur la position Activé.](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
 3. Enregistrez le rapport sur un serveur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
 
@@ -62,19 +62,19 @@ Dans cette section, vous définissez chaque jauge (à part la jauge Ventes) comm
 
 1. Dans le rapport Ventes, sélectionnez la jauge Transport.
 
-    ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
+    ![Capture d’écran du rapport Ventes avec une flèche rouge reliant la jauge Transport à l’option Cible d’extraction.](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
-2. Sélectionnez l’onglet **Disposition**, puis dans le volet **Propriétés visuelles**, sélectionnez **Cible d’extraction**.
+2. Sélectionnez l’onglet **Disposition** , puis dans le volet **Propriétés visuelles** , sélectionnez **Cible d’extraction** .
 
-3. Sélectionnez **Rapport mobile**.
+3. Sélectionnez **Rapport mobile** .
 
 4. Accédez au rapport qui sera la destination de l’extraction et sélectionnez-le ; dans le cas présent « Finances - Transport ».
 
-    ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
+    ![Capture d’écran de la boîte de dialogue Ouvrir à partir du serveur, avec l’option Finances - Transport mise en évidence.](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
-5. Dans **Configurer le rapport cible**, sélectionnez le paramètre de filtrer du rapport, puis sélectionnez **Appliquer**.
+5. Dans **Configurer le rapport cible** , sélectionnez le paramètre de filtrer du rapport, puis sélectionnez **Appliquer** .
 
-   ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
+   ![Capture d’écran de la section Configurer le rapport cible montrant les paramètres du rapport Finances - Transport.](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
 6. Répétez ces étapes pour chaque autre jauge du rapport Ventes. 
 
@@ -92,11 +92,11 @@ Dans cette section, vous définissez chaque jauge (à part la jauge Ventes) comm
 
 2. Notez que chaque jauge présente une icône d’extraction en haut à droite.
 
-    ![Web-Viewer-drillthrough-icon-mobile-report-builder](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
+    ![Capture d’écran de la jauge Carburant.](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
 
 3. Sélectionnez l’une des jauges pour accéder au rapport filtré des données de cette jauge.
 
-   ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
+   ![Capture d’écran montrant le rapport Finances - Transport avec une flèche rouge pointant vers la jauge Transport, qui est encadrée en rouge.](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
 ### <a name="see-also"></a>Voir aussi
     

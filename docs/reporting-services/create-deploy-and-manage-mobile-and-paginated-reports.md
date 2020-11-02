@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e75947d7ea4b47c7c2fef3e37cfd6b5b73b48533
-ms.sourcegitcommit: 4231364ab5bc15b74952ca5d20508b7ba9ca347e
+ms.openlocfilehash: db705ffc6bd3f7f961ea569883b77934e9689f9f
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86291146"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679198"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Qu’est-ce que SQL Server Reporting Services (SSRS) ?
 
@@ -54,7 +54,7 @@ Ces sources vous permettent de rester informé des nouvelles fonctionnalités de
 
 ## <a name="paginated-reports"></a>Rapports paginés
 
-![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
+![Image des rapports paginés sur l’écran d’un poste de travail et d’une tablette.](../reporting-services/media/ssrs-paginated-reports.png)
 
 Reporting Services est associé à des rapports paginés « traditionnels », idéaux pour les documents à disposition fixe optimisés pour l’impression, tels que les fichiers PDF et Word.
 
@@ -67,7 +67,7 @@ Cette charge de travail BI principale existe toujours aujourd’hui, donc nous l
 
 ## <a name="mobile-reports"></a>Rapports mobiles
 
-![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
+![Image de rapports mobiles sur l’écran d’un poste de travail et d’une tablette.](../reporting-services/media/ssrs-mobile-reports.png)
 
 Avec le succès de l’informatique mobile, les utilisateurs ont aujourd’hui des besoins différents en matière de création de rapports. L’affichage des rapports à la disposition fixe ne convient pas vraiment quand il s’agit de tablettes et de téléphones. Quelque chose conçu pour un grand écran de PC ne constitue pas une expérience optimale sur un petit écran de téléphone, qui est non seulement plus petit, mais peut aussi avoir une orientation portrait ou paysage.
 
@@ -79,7 +79,7 @@ Quand vous créez des visualisations, l’Éditeur de rapports mobiles génère 
 
 ## <a name="web-portal"></a>Portail web
 
-![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
+![Image du portail web sur l’écran d’un ordinateur portable.](../reporting-services/media/ssrs-web-portal.png)
 
 Pour les utilisateurs finaux de Reporting Services en mode natif, la porte d’entrée est un portail web moderne que vous pouvez afficher dans la plupart des navigateurs. Vous pouvez accéder à tous vos indicateurs de performance clés et rapports paginés et mobiles Reporting Services dans le nouvel portail. Les indicateurs de performance clés peuvent exposer des métriques métier clés en un clin d’œil dans le navigateur, sans qu’il soit nécessaire d’ouvrir un rapport.
 

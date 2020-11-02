@@ -1,1 +1,1 @@
-<Token>**S’APPLIQUE À :** ![Oui](media/yes-icon.png).NET Framework ![Non](media/no-icon.png).NET Core ![Non](media/no-icon.png).NET standard </Token>
+<Token>**S’APPLIQUE À :** :::image type="icon" source="media/yes-icon.png":::.NET Framework :::image type="icon" source="media/no-icon.png":::.NET Core :::image type="icon" source="media/no-icon.png":::.NET Standard </Token>

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462353"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907247"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
 Étapes permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] sur le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et de les afficher dans les applications mobiles Power BI.
@@ -46,14 +46,14 @@ Pour suivre la procédure, vous avez besoin de ces produits :
   
 Vous pouvez créer une source de données partagée pour vos rapports mobiles à partir de n’importe quelle source de données prise en charge par Reporting Services. Consultez la [liste des sources de données prises en charge](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-1. À partir de votre portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , cliquez sur **Nouveau** > **Source de données**.  
+1. À partir de votre portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , cliquez sur **Nouveau** > **Source de données** .  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Entrez vos informations de source de données > **OK**.  
+3. Entrez vos informations de source de données > **OK** .  
   
     Par défaut, les sources de données ne sont pas affichées sur le portail.    
    
-5. Pour afficher les sources de données, cliquez sur **Affichage** > **Source de données**.  
+5. Pour afficher les sources de données, cliquez sur **Affichage** > **Source de données** .  
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
@@ -70,18 +70,18 @@ Utilisez un outil client [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md
 1. À partir de votre portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , cliquez sur **Nouveau** > **Rapport paginé** pour démarrer [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
-2. Cliquez sur **Nouveau jeu de données**.  
+2. Cliquez sur **Nouveau jeu de données** .  
   
    ![PBI_SSMRP_RBNewDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-rbnewdataset.png)  
    
-3. Cliquez sur **Sélectionner d’autres sources de données**.  
+3. Cliquez sur **Sélectionner d’autres sources de données** .  
    
 4. Dans le champ Nom, tapez le nom du serveur où vous avez enregistré votre source de données au format suivant :   
    
-   Nom : https://*localhost*/ReportServer  
+   Nom : https:// *localhost* /ReportServer  
    Éléments de type : Sources de données (*.rsds)  
    
-5. Cliquez sur **Ouvrir**et accédez à la source de données que vous avez créée sur ce serveur.  
+5. Cliquez sur **Ouvrir** et accédez à la source de données que vous avez créée sur ce serveur.  
    
 6. Sélectionnez votre source de données et cliquez à nouveau sur **Ouvrir** .    
   
@@ -96,12 +96,12 @@ Vous pouvez maintenant utiliser le jeu de données comme base pour vos indicateu
 ## <a name=""></a><a name="create-KPI">Créer un indicateur de performance clé</a>  
 Vous créez les indicateurs de performance clés directement sur le portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .    
   
-1. En haut à droite du portail web, cliquez sur **Nouveau** > **Nouveau KPI**.   
+1. En haut à droite du portail web, cliquez sur **Nouveau** > **Nouveau KPI** .   
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
    Dans l’écran de création d’indicateur de performance clé, vous pouvez entrer manuellement des valeurs ou utiliser un jeu de données partagé.    
-2. Dans **Valeur** , remplacez **Définir manuellement** par **Champ de jeu de données**.  
+2. Dans **Valeur** , remplacez **Définir manuellement** par **Champ de jeu de données** .  
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
@@ -115,19 +115,19 @@ Vous créez les indicateurs de performance clés directement sur le portail web 
      
 5. Choisissez l’agrégation souhaitée. Les indicateurs de performance clés ne pouvant afficher qu’un seul nombre, le champ est agrégé pour afficher ce nombre.
 
-   ![Reporting services-kpi-pick-agrégation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
+   ![Capture d’écran de la section Choisir le champ dans AWSalesYTD, montrant la section Agrégation moyenne.](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
-6. Cliquez sur **OK**.
+6. Cliquez sur **OK** .
 
-7. Dans la zone **Jeu de tendances** , cliquez sur **Tendance de jeu de données**.  
+7. Dans la zone **Jeu de tendances** , cliquez sur **Tendance de jeu de données** .  
   
 6. Dans la zone **Sélectionner une tendance de jeu de données** , cliquez sur le bouton de sélection ( **...** ).  
    
-7. Sélectionnez un champ et cliquez sur **OK**.  
+7. Sélectionnez un champ et cliquez sur **OK** .  
 
    ![PBI_SSMRP_KPIPickTrend](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipicktrend.png)  
   
-8. Donnez un nom à votre indicateur de performance clé et choisissez un type de visualisation, puis cliquez sur **Créer**.   
+8. Donnez un nom à votre indicateur de performance clé et choisissez un type de visualisation, puis cliquez sur **Créer** .   
   
    L’indicateur de performance clé s’affiche sur le portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .  
    
@@ -165,7 +165,7 @@ Quand vous ouvrez [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. Cliquez sur l’onglet **Disposition**.  
+6. Cliquez sur l’onglet **Disposition** .  
   
 7. Cliquez sur l’onglet Options ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) en haut à droite de l’arborescence pour afficher le menu qu’il contient.   
   
@@ -183,12 +183,12 @@ Quand vous ouvrez [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.
   
 4. Sélectionnez le serveur, puis sélectionnez le jeu de données que vous avez créé.  
    
-3. Sous l’onglet **Données** , dans le volet **Propriétés des données** , remplacez **La taille représente**, **La couleur représente**et d’autres propriétés par des champs de vos propres données. 
+3. Sous l’onglet **Données** , dans le volet **Propriétés des données** , remplacez **La taille représente** , **La couleur représente** et d’autres propriétés par des champs de vos propres données. 
    
-   *  Les champs**La taille représente**, **La couleur représente**et **Valeur centrale personnalisée** doivent contenir des valeurs numériques. 
+   *  Les champs **La taille représente** , **La couleur représente** et **Valeur centrale personnalisée** doivent contenir des valeurs numériques. 
    *  **Regrouper par** étant une catégorie, c’est un champ de texte.
    
-   ![ssrs-mobile-report-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
+   ![Capture d’écran de la section Propriétés des données.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
    
 6. Sélectionnez **Aperçu** pour voir l’arborescence mise à jour avec vos données.  
 
@@ -200,19 +200,19 @@ Nous allons ajouter une jauge pour comparer les ventes de cette année à celles
 
 2. Là encore, nous commençons avec des données simulées. 
 
-   Notez que dans **Propriétés visuelles**, par défaut **Les valeurs élevées sont préférables**et **Étiquette de l’écart** est un **Pourcentage de la cible**. Vous pouvez modifier la valeur **Arrêts de plage** par défaut, mais pour l’instant elle convient très bien.
+   Notez que dans **Propriétés visuelles** , par défaut **Les valeurs élevées sont préférables** et **Étiquette de l’écart** est un **Pourcentage de la cible** . Vous pouvez modifier la valeur **Arrêts de plage** par défaut, mais pour l’instant elle convient très bien.
 
-   ![ssrs-mobile-report-donut-visual-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
+   ![Capture d’écran de la section Plages définies dans les propriétés visuelles en anneau du rapport mobile.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
-3. Sous l’onglet **Données** , sélectionnez la table contenant vos données et sélectionnez le champ **Valeur principale** et celui auquel vous souhaitez le comparer dans **Valeur de comparaison**.
+3. Sous l’onglet **Données** , sélectionnez la table contenant vos données et sélectionnez le champ **Valeur principale** et celui auquel vous souhaitez le comparer dans **Valeur de comparaison** .
 
-4. Vous pouvez choisir différentes agrégations pour parvenir à un nombre pour **Valeur principale** et un autre pour **Valeur de comparaison**. Par défaut, il s’agit d’une somme.
+4. Vous pouvez choisir différentes agrégations pour parvenir à un nombre pour **Valeur principale** et un autre pour **Valeur de comparaison** . Par défaut, il s’agit d’une somme.
 
-   ![ssrs-mobile-report-donut-sum](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
+   ![Capture d’écran des options ou de la valeur de comparaison.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-sum.png)
 
 5. Sélectionnez **Aperçu** pour obtenir un aperçu. 
 
-   ![ssrs-mobile-report-donut-preview](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
+   ![Capture d’écran de l’aperçu en anneau du rapport mobile.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-preview.png)
 
 ## <a name="add-a-selection-list-as-a-filter"></a>Ajouter une liste de sélection comme filtre
 
@@ -220,19 +220,19 @@ Les listes de sélection jouent le rôle de filtres dans Power BI et Excel. Nous
 
 1. Sous l’onglet **Disposition** , faites glisser une liste de sélection à droite de l’arborescence et faites glisser le coin inférieur droit pour qu’elle fasse deux cases de large et toute la hauteur de la zone de dessin (cinq cases). 
 
-   ![ssrs-mobile-report-selection-list](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
+   ![Capture d’écran de la liste de sélection du rapport mobile.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list.png)
 
-2. Sous l’onglet **Données** , **Propriétés des données**, affectez à **Clés** et **Étiquettes** un champ dans vos données que vous souhaitez filtrer.
+2. Sous l’onglet **Données** , **Propriétés des données** , affectez à **Clés** et **Étiquettes** un champ dans vos données que vous souhaitez filtrer.
 
-   ![ssrs-mobile-report-selection-list-data-properties](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
+   ![Capture d’écran de la section Propriétés de données de la liste de sélection du rapport mobile.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-selection-list-data-properties.png)
    
 ## <a name="create-a-mobile-report-for-phones"></a>Créer un rapport mobile pour les téléphones  
   
 Maintenant que vous avez créé des visuels sur la présentation principale, vous pouvez créer un rapport mobile avec une présentation spécialement optimisée pour vos utilisateurs de téléphone.    
   
-1. Dans le coin supérieur droit, cliquez sur l’icône de zone de dessin > **Téléphone**.  
+1. Dans le coin supérieur droit, cliquez sur l’icône de zone de dessin > **Téléphone** .  
   
-2. Sous l’onglet Disposition sous **Instances de contrôles**sont affichés les deux graphiques que vous avez créés.   
+2. Sous l’onglet Disposition sous **Instances de contrôles** sont affichés les deux graphiques que vous avez créés.   
   
 3. Faites glisser l’arborescence sur la zone de dessin de téléphone, et faites en sorte qu’elle mesure quatre colonnes sur trois lignes.  
   
@@ -242,11 +242,11 @@ Vous pouvez enregistrer votre rapport localement ou sur un portail web [!INCLUDE
   
 1. Cliquez sur l’icône d’enregistrement en haut à gauche.   
    
-2. Pour le partager avec d’autres personnes et l’afficher sur un appareil mobile, cliquez sur **Enregistrer sur le serveur**.  
+2. Pour le partager avec d’autres personnes et l’afficher sur un appareil mobile, cliquez sur **Enregistrer sur le serveur** .  
   
 3. Sur le serveur, accédez au dossier où vous souhaitez enregistrer votre rapport mobile.  
   
-4. Cliquez sur **Choisir un dossier** > **Enregistrer**.  
+4. Cliquez sur **Choisir un dossier** > **Enregistrer** .  
   
    Un message confirme que le rapport a été enregistré.  
     
@@ -268,10 +268,10 @@ Pour afficher votre rapport [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnover
   
 1.  Ouvrez et connectez-vous à l’application Power BI sur votre appareil mobile.  
     
-2.  Pour afficher vos rapports mobiles Reporting Services et vos indicateurs de performance clés, appuyez sur **Reporting Services**.  
+2.  Pour afficher vos rapports mobiles Reporting Services et vos indicateurs de performance clés, appuyez sur **Reporting Services** .  
 ![PBI_iPad_GetStartedSm](../../reporting-services/mobile-reports/media/pbi-ipad-getstartedsm.png)  
   
-3. Appuyez sur l’icône d’options ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) en haut à gauche, puis appuyez sur **Se connecter au serveur**.  
+3. Appuyez sur l’icône d’options ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) en haut à gauche, puis appuyez sur **Se connecter au serveur** .  
   
    ![PBI_iPad_SSMRP_ConnectCrop](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-connectcrop.png)  
   

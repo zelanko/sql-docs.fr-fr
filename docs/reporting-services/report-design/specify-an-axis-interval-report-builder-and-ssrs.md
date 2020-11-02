@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c9ca24186a1b3b2a9fed9f1b3fa9454aa020f9b
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6b756d7db3a41787da2a9a1a30f1c82b9a72317c
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934938"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907177"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Spécifier un intervalle d'axe (Générateur de rapports et SSRS)
 Apprenez à modifier le nombre d’étiquettes et les graduations sur l’axe des catégories (abscisses) dans un graphique, en définissant l’intervalle d’axe dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -36,24 +36,24 @@ Pour définir l’intervalle d’axe avec des exemples de données, voir [Tutori
 
 Dans cet histogramme, l’intervalle des étiquettes horizontales est défini sur Auto.
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![Capture d’écran de l’aperçu d’un histogramme du générateur de rapports, avec l’intervalle de l’axe X défini sur Auto.](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
-1.  Cliquez avec le bouton droit sur l’axe des catégories, puis cliquez sur **Propriétés de l’axe horizontal**.   
+1.  Cliquez avec le bouton droit sur l’axe des catégories, puis cliquez sur **Propriétés de l’axe horizontal** .   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![Capture d’écran d’un histogramme du générateur de rapports montrant comment définir les étiquettes de l’axe X.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  Dans la boîte de dialogue **Propriétés de l’axe horizontal** > onglet **Options de l’axe**, définissez **Intervalle** sur **1** pour afficher chaque étiquette de groupe de catégorie. Pour afficher une étiquette de groupe de catégories sur deux sur l’axe des abscisses, tapez **2**. 
+2.  Dans la boîte de dialogue **Propriétés de l’axe horizontal** > onglet **Options de l’axe** , définissez **Intervalle** sur **1** pour afficher chaque étiquette de groupe de catégorie. Pour afficher une étiquette de groupe de catégories sur deux sur l’axe des abscisses, tapez **2** . 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![Capture d’écran d’un histogramme du générateur de rapports montrant comment définir l’intervalle de l’axe X sur 1.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    L’histogramme affiche maintenant toutes les étiquettes de son axe horizontal.
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  Lorsque vous définissez un intervalle d’axe, tout l’étiquetage automatique est désactivé. Si vous spécifiez une valeur pour l’intervalle d’axe, vous pouvez constater un comportement d’étiquetage imprévisible en fonction du nombre de catégories sur l’axe des abscisses.  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     L’histogramme affiche maintenant toutes les étiquettes de son axe horizontal.
+     
+     ![Capture d’écran de l’aperçu d’un histogramme du générateur de rapports montrant les étiquettes de l’axe X.](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  Lorsque vous définissez un intervalle d’axe, tout l’étiquetage automatique est désactivé. Si vous spécifiez une valeur pour l’intervalle d’axe, vous pouvez constater un comportement d’étiquetage imprévisible en fonction du nombre de catégories sur l’axe des abscisses.  
 
 ## <a name="change-the-label-interval-in-properties-pane"></a>Modifier l’intervalle des étiquettes dans le volet Propriétés
 
@@ -61,15 +61,15 @@ Vous pouvez également définir l’intervalle des étiquettes dans le volet Pro
 
 1.  Dans l’affichage Conception de rapport, cliquez sur le graphique, puis sélectionnez les étiquettes de l’axe horizontal.
 
-3. Dans le volet Propriétés, affectez la valeur **1**à LabelInterval.
+3. Dans le volet Propriétés, affectez la valeur **1** à LabelInterval.
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Capture d’écran d’un histogramme du générateur de rapports montrant comment définir l’intervalle de l’étiquette.](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     Le graphique a la même apparence en mode Conception. 
     
 5.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Capture d’écran de l’aperçu d’un histogramme du générateur de rapports montrant l’intervalle de l’étiquette défini sur la valeur 1.](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Le graphique affiche maintenant toutes ses étiquettes.
   
@@ -77,9 +77,9 @@ Vous pouvez également définir l’intervalle des étiquettes dans le volet Pro
 
 Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] définit l’intervalle d’axe sur Auto. Cette procédure explique comment réaffecter la valeur par défaut. 
   
-1.  Cliquez avec le bouton droit sur l’axe de graphique à modifier, puis cliquez sur **Propriétés de l’axe**. 
+1.  Cliquez avec le bouton droit sur l’axe de graphique à modifier, puis cliquez sur **Propriétés de l’axe** . 
   
-2.  Dans la boîte de dialogue **Propriétés de l’axe horizontal** > onglet **Options de l’axe**, définissez **Intervalle** sur **Auto**. Le graphique affiche le nombre optimal d'étiquettes de catégories qui peuvent s'ajuster le long de l'axe.  
+2.  Dans la boîte de dialogue **Propriétés de l’axe horizontal** > onglet **Options de l’axe** , définissez **Intervalle** sur **Auto** . Le graphique affiche le nombre optimal d'étiquettes de catégories qui peuvent s'ajuster le long de l'axe.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

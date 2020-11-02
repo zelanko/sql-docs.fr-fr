@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f953a8ee9371f3e8919d53f017f27a7e863a52ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: abcdda5a396451508df78610eeb4f7bc417484d5
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448394"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907347"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Ouvrir un rapport mobile avec des paramètres spécifiques de chaîne de requête | Reporting Services
 Si vous avez un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] avec des paramètres et une source de données [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)], vous pouvez inclure des paramètres de chaîne de requête dans l’URL du rapport afin qu’il s’ouvre automatiquement avec les valeurs que vous avez spécifiées. 
@@ -24,7 +24,7 @@ Si vous avez un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
 
 2. Recherchez le nom de l’ensemble de données sur l’onglet dans la partie inférieure du tableau, et le nom de champ souhaité. 
     
-    ![mobile-report-publisher-parameter-data-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
+    ![Capture d’écran de la vue de données des paramètres de l’éditeur de rapports mobiles.](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-data-view.png)
     
 2.  La syntaxe de l’URL dépend de votre source de données. 
 
@@ -47,7 +47,7 @@ Si vous avez un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
     
 3.  Cette URL ouvre le rapport sur le serveur, automatiquement filtrée sur la valeur de paramètre spécifiée.
 
-    ![mobile-report-publisher-parameter-web-portal-view](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
+    ![Capture d’écran des paramètres de l’éditeur de rapports mobiles dans le portail web, avec une flèche pointant vers l’URL et le texte « ?TimeChartLoD.@category=Clothing » encadré.](../../reporting-services/mobile-reports/media/mobile-report-publisher-parameter-web-portal-view.png)
 
 ### <a name="see-also"></a>Voir aussi
 

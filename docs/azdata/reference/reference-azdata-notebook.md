@@ -9,18 +9,18 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd3d46ece53f15b694b28083e36d5cb991e2b411
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 4a0e171861d01d7a3afe7904905d373aa5e57639
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358117"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678727"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 S'applique à l'[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-L’article suivant fournit des informations de référence sur les commandes **sql ** dans l’outil **azdata**. Pour plus d’informations sur les commandes **azdata**, consultez [azdata reference](reference-azdata.md)
+L’article suivant fournit des informations de référence sur les commandes **sql** dans l’outil **azdata** . Pour plus d’informations sur les commandes **azdata** , consultez [azdata reference](reference-azdata.md)
 
 ## <a name="commands"></a>Commandes
 
@@ -39,7 +39,7 @@ Afficher un notebook.  Ceci montre toutes les cellules.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
-Afficher un notebook.  Ceci montre toutes les cellules, sauf si une cellule avec une erreur dans sa sortie est rencontrée.  Dans ce cas, la sortie s’arrête.
+Afficher un notebook.  Ceci montre toutes les cellules, sauf celles dont la sortie signale des erreurs.  Dans ce cas, la sortie s’arrête.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```
@@ -112,7 +112,7 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). 
+Pour plus d’informations sur les autres commandes **azdata** , consultez [azdata reference](reference-azdata.md). 
 
-Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata](..\install\deploy-install-azdata.md).
+Pour plus d’informations sur l’installation de l’outil **azdata** , consultez [Installer azdata](..\install\deploy-install-azdata.md).
 

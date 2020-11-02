@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 47964ebf5702542452227589e1426948825cc216
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891299"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678875"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Intégration du serveur de rapports Power BI (Gestionnaire de configuration)
 
@@ -50,7 +50,7 @@ Exécutez la procédure suivante dans le Gestionnaire de configuration [!INCLUDE
 
 1. Sélectionnez la page d’intégration de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 
-2. Sélectionnez **S’inscrire auprès de Power BI**.
+2. Sélectionnez **S’inscrire auprès de Power BI** .
 
     >[!Note]
     > Assurez-vous que le port 443 n’est pas bloqué.
@@ -79,17 +79,17 @@ Dans la page **Power BI** du Gestionnaire de configuration, cliquez sur le bouto
 
 Utilisez l’option **Mettre à jour l’inscription** si la configuration de votre serveur de rapports est modifiée. Par exemple, si vous voulez ajouter ou supprimer les URL que vos utilisateurs emploient pour accéder au [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-- Dans le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , sélectionnez l’ **URL du portail web**.
+- Dans le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , sélectionnez l’ **URL du portail web** .
 
-     Sélectionnez **Avancé**.
+     Sélectionnez **Avancé** .
 
-- Sélectionnez **Ajouter** pour ajouter une nouvelle identité HTTP pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , puis sélectionnez **OK**.
+- Sélectionnez **Ajouter** pour ajouter une nouvelle identité HTTP pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , puis sélectionnez **OK** .
 
      L’icône [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] change pour indiquer que la configuration du serveur a été modifiée.  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
-- Dans la page **Intégration de Power BI** , sélectionnez **Mettre à jour l’inscription**.
+- Dans la page **Intégration de Power BI** , sélectionnez **Mettre à jour l’inscription** .
 
-     Vous êtes invité à vous connecter à Azure AD. La page est actualisée et la nouvelle URL apparaît dans la liste **URL de redirection**.
+     Vous êtes invité à vous connecter à Azure AD. La page est actualisée et la nouvelle URL apparaît dans la liste **URL de redirection** .
 
 ##  <a name="summary-of-the-power-bi-integration-and-pin-process"></a><a name="bkmk_integration_process"></a> Résumé de l’intégration de Power BI et du processus d’épinglage
 
@@ -113,7 +113,7 @@ Cette section présente les étapes de base et les technologies impliquées dans
 
 1. Les utilisateurs prévisualisent les rapports dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] la première fois qu’ils cliquent pour épingler un élément de rapport dans le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Ils sont redirigés vers la page de connexion Azure AD. Ils peuvent également se connecter à partir de la page [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **Mes paramètres**. Lorsque des utilisateurs se connectent au client géré Azure, une relation est établie entre leur compte Azure et les autorisations [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Pour plus d’informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
+2. Ils sont redirigés vers la page de connexion Azure AD. Ils peuvent également se connecter à partir de la page [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **Mes paramètres** . Lorsque des utilisateurs se connectent au client géré Azure, une relation est établie entre leur compte Azure et les autorisations [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Pour plus d’informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. Un jeton de sécurité utilisateur est renvoyé au serveur de rapports.
 
@@ -125,11 +125,11 @@ Cette section présente les étapes de base et les technologies impliquées dans
 
 7. Un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est créé pour gérer l’actualisation planifiée de l’élément de rapport sur la vignette de tableau de bord. L’abonnement utilise le jeton de sécurité créé lors de la connexion de l’utilisateur.
 
-     Le jeton est valable **90 jours**, après quoi les utilisateurs doivent se reconnecter pour en créer un. Une fois le jeton expiré, les vignettes épinglées restent affichées sur le tableau de bord, mais les données ne sont plus actualisées.  Les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisés pour les éléments épinglés génèrent une erreur tant qu’un nouveau jeton n’est pas créé. Consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](../my-settings-for-power-bi-integration-web-portal.md). pour plus d’informations.
+     Le jeton est valable **90 jours** , après quoi les utilisateurs doivent se reconnecter pour en créer un. Une fois le jeton expiré, les vignettes épinglées restent affichées sur le tableau de bord, mais les données ne sont plus actualisées.  Les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisés pour les éléments épinglés génèrent une erreur tant qu’un nouveau jeton n’est pas créé. Consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](../my-settings-for-power-bi-integration-web-portal.md). pour plus d’informations.
 
 Lorsqu’un utilisateur épingle un élément pour la deuxième fois, les étapes 1 à 4 sont ignorées. L’ID d’application et les URL sont récupérés auprès de la base de données ReportServer et la procédure reprend à l’étape 5.
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![Diagramme montrant ce qui se passe lorsqu’un utilisateur épingle un élément de rapport à un tableau de bord.](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **Lorsqu’un abonnement se déclenche pour actualiser une vignette de tableau de bord :**
 
@@ -143,7 +143,7 @@ Lorsqu’un utilisateur épingle un élément pour la deuxième fois, les étape
 
 5. Si le jeton n’est pas valide, une erreur est renvoyée et consignée avec le serveur de rapports.  Aucun état ou autre information n’est envoyé au tableau de bord.
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![Diagramme montrant ce qui se passe lorsqu’un abonnement se déclenche pour actualiser une vignette de tableau de bord.](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

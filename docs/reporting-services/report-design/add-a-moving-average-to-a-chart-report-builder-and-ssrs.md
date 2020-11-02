@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 3820bee4c008bb82a2c1ffdb8a4a6bfb00335958
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255698"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907263"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Ajouter une moyenne mobile à un graphique (Générateur de rapports et SSRS)
 Une moyenne mobile est une moyenne des données de votre série, calculée sur une période de temps définie. Dans des rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la moyenne mobile peut être indiquée sur le graphique pour identifier des tendances significatives.  
 
-![didacticiel-histogramme-générateur-de-rapports](../../reporting-services/media/report-builder-column-chart-tutorial.png)
+![Capture d’écran d’un graphique des ventes.](../../reporting-services/media/report-builder-column-chart-tutorial.png)
   
  La formule de moyenne mobile est l'indicateur de prix le plus populaire utilisé dans les analyses techniques. De nombreuses autres formules, y compris la moyenne, la médiane et l'écart type, peuvent également être dérivées d'une série sur le graphique. Lors de la spécification d'une moyenne mobile, chaque formule peut comporter un ou plusieurs paramètres qui doivent être spécifiés.  
  
@@ -34,7 +34,7 @@ Une moyenne mobile est une moyenne des données de votre série, calculée sur u
   
 ## <a name="to-add-a-calculated-moving-average-to-a-series-on-the-chart"></a>Pour ajouter une moyenne mobile calculée à une série sur le graphique  
   
-1.  Cliquez avec le bouton droit sur un champ dans la zone **Valeurs** , puis cliquez sur **Ajouter une série calculée**. La boîte de dialogue **Propriétés de la série calculée** s'ouvre.  
+1.  Cliquez avec le bouton droit sur un champ dans la zone **Valeurs** , puis cliquez sur **Ajouter une série calculée** . La boîte de dialogue **Propriétés de la série calculée** s'ouvre.  
   
 2.  Sélectionnez l’option **Moyenne mobile** dans la liste déroulante **Formule** .  
   

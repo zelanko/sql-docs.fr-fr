@@ -8,12 +8,12 @@ description: Découvrez comment personnaliser l’apparence de votre portail web
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55b0557f6b6cf1a80219a492d4ce79a897be22ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2079a44a4b9f3977ae09f83685efa122e9467a96
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888119"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907207"
 ---
 # <a name="branding-the-web-portal"></a>Personnalisation du portail web
 
@@ -85,7 +85,7 @@ Par exemple, si le fichier colors.json a les valeurs suivantes.
 "primaryContrast":"#ffffff"   
 ```
 
-Le résultat traité recherche la variable LESS **\@primaryButtonBg** et vérifie qu'elle correspond à la propriété json appelée **primary**, soit #009900 dans cet exemple. Il affiche donc la feuille CSS correcte.  
+Le résultat traité recherche la variable LESS **\@primaryButtonBg** et vérifie qu'elle correspond à la propriété json appelée **primary** , soit #009900 dans cet exemple. Il affiche donc la feuille CSS correcte.  
 
 ```css
     .btn-primary {   
@@ -98,8 +98,8 @@ Tous les boutons principaux apparaissent en texte blanc sur fond vert foncé.
   
 Le fichier colors.json, pour Reporting Services, comporte deux catégories principales regroupant les éléments.  
   
-- **Interface**: inclut les éléments spécifiques au portail web de Reporting Services.  
-- **Thème**: inclut les éléments spécifiques aux rapports mobiles que vous créez.  
+- **Interface** : inclut les éléments spécifiques au portail web de Reporting Services.  
+- **Thème** : inclut les éléments spécifiques aux rapports mobiles que vous créez.  
   
 La section Interface est divisée selon les regroupements suivants.  
   
@@ -116,7 +116,7 @@ La section Interface est divisée selon les regroupements suivants.
 
 La première fois que vous vous connectez à un serveur avec l'Éditeur de rapports mobiles, sur lequel un package de marque a été déployé, le thème sera ajouté aux thèmes disponibles que vous pouvez utiliser dans le menu supérieur droit de l'application.  
   
-![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![Capture d’écran de la boîte de dialogue Choisir une palette de couleurs.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 Vous pouvez ensuite utiliser ce thème pour les rapports mobiles que vous créez, même s’ils ne sont pas destinés au même serveur sur lequel vous avez déployé le thème.   
   
@@ -132,17 +132,17 @@ Pour ajouter, télécharger ou supprimer un package de marque, vous pouvez proc�
   
 1.  Sélectionnez l’icône en forme d’ **engrenage** dans le coin supérieur droit.  
   
-2.  Sélectionnez **Paramètres du site**.  
+2.  Sélectionnez **Paramètres du site** .  
   
-    ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
+    ![Capture d’écran de la liste déroulante Paramètres, avec l’option Paramètres du site mise en évidence.](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  Sélectionnez **Personnalisation**.  
+3.  Sélectionnez **Personnalisation** .  
   
-    ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
+    ![Capture d’écran de la page Paramètres du site, avec l’option Personnalisation sélectionnée.](../reporting-services/media/ssrsbranding.png) 
   
-L’option**Package de marque actuellement installé** affiche le nom du package qui a été chargé, ou aucun nom (None).  
+L’option **Package de marque actuellement installé** affiche le nom du package qui a été chargé, ou aucun nom (None).  
   
-L’option**Charger le package de marque** appliquera le package au le portail web La modification est immédiatement appliquée.  
+L’option **Charger le package de marque** appliquera le package au le portail web La modification est immédiatement appliquée.  
   
 Vous pouvez également **télécharger** ou **supprimer** le package. La suppression du package réinitialisera immédiatement le portail web à la marque par défaut.  
   
@@ -150,7 +150,7 @@ Vous pouvez également **télécharger** ou **supprimer** le package. La suppres
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

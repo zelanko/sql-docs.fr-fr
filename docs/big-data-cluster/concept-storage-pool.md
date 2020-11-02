@@ -9,22 +9,22 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d810220e0bd1148d4f572638c3ac67d4c3b44c0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e8bc204c3f93d4a4ebbd26876bc8c3e23bad8047
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257239"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914288"
 ---
-# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>Qu’est-ce que le pool de stockage ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]) ?
+# <a name="what-is-the-storage-pool-in-a-sql-server-big-data-cluster"></a>Qu’est-ce que le pool de stockage dans un cluster Big Data SQL Server ?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Cet article décrit le rôle du *pool de stockage SQL Server* dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (BDC). Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de stockage SQL.
+Cet article décrit le rôle du *pool de stockage SQL Server* dans un cluster Big Data SQL Server. Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de stockage.
 
 ## <a name="storage-pool-architecture"></a>Architecture du pool de stockage
 
-Le pool de stockage est le cluster HDFS (Hadoop) local dans l’écosystème BDC SQL Server. Il fournit un stockage persistant pour les données non structurées et semi-structurées. Les fichiers de données, comme les fichiers Parquet ou de texte délimité, peuvent être stockés dans le pool de stockage. Pour conserver le stockage, un volume persistant est attaché à chaque pod du pool. Les fichiers de pool de stockage sont accessibles via [PolyBase](../relational-databases/polybase/polybase-guide.md) par le biais de SQL Server ou directement à l’aide d’une passerelle Apache Knox.
+Le pool de stockage est le cluster HDFS (Hadoop) local d’un cluster Big Data SQL Server. Il fournit un stockage persistant pour les données non structurées et semi-structurées. Les fichiers de données, comme les fichiers Parquet ou de texte délimité, peuvent être stockés dans le pool de stockage. Pour rendre le stockage persistant, chaque pod du pool est attaché à un volume persistant. Les fichiers de pool de stockage sont accessibles via [PolyBase](../relational-databases/polybase/polybase-guide.md) par le biais de SQL Server ou directement à l’aide d’une passerelle Apache Knox.
 
 Une configuration HDFS classique se compose d’un ensemble d’ordinateurs matériels auxquels du stockage est attaché. Les données sont réparties en blocs entre les différents nœuds pour la tolérance de panne et l’exploitation du traitement parallèle. L’un des nœuds du cluster fonctionne comme le nœud de nom et contient les informations de métadonnées relatives aux fichiers se trouvant dans les nœuds de données.
 

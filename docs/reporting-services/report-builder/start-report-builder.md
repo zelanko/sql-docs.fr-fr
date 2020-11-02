@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00a954a23cf9b17a58c3272a03222019400ae891
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290760"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907037"
 ---
 # <a name="start-report-builder"></a>Démarrer le Générateur de rapports
 
@@ -30,7 +30,7 @@ ms.locfileid: "80290760"
   
  La première fois que vous démarrez [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir du portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode intégré SharePoint, vous êtes invité à le télécharger à partir du Centre de téléchargement Microsoft. 
  
-![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
+![Capture d’écran du message « Nous ouvrons le Générateur de rapports... »](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  Le Générateur de rapports peut également être [installé sur votre ordinateur par un administrateur ou par vous-même à partir du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=219138). Pour plus d’informations, consultez « Installer le Générateur de rapports avec Systems Manager Server » dans [Installer le Générateur de rapports](../../reporting-services/install-windows/install-report-builder.md) .
  
@@ -40,9 +40,9 @@ ms.locfileid: "80290760"
   
 ## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>Pour démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir du portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  Dans le navigateur Web, tapez l'URL du serveur de rapports dans la barre d'adresses. Par défaut, l’URL est https://\<*nom_serveur*>/reports.  
+1.  Dans le navigateur Web, tapez l'URL du serveur de rapports dans la barre d'adresses. Par défaut, l’URL est https://\<*servername*>/reports.  
   
-2.  Dans la barre supérieure du portail web, sélectionnez **Nouveau** > **Rapport paginé**.  
+2.  Dans la barre supérieure du portail web, sélectionnez **Nouveau** > **Rapport paginé** .  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
@@ -56,15 +56,15 @@ ms.locfileid: "80290760"
   
 2.  Ouvrez la bibliothèque.  
   
-3.  Cliquez sur **Documents**.  
+3.  Cliquez sur **Documents** .  
   
-4.  Dans le menu **Nouveau document** , cliquez sur **Rapport du Générateur de rapports**.  
+4.  Dans le menu **Nouveau document** , cliquez sur **Rapport du Générateur de rapports** .  
   
      Lorsque vous l’effectuez pour la première fois, cette opération lance l’Assistant [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] SQL Server. Pour plus d'informations, consultez [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) .  
   
      Le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] s’ouvre, et vous permet de créer un rapport paginé ou d’ouvrir un rapport sur le serveur de rapports.  
   
-     **Remarque** Si le menu **Nouveau document** n’inclut pas **Rapport du Générateur de rapports**, **Modèle du générateur de rapports**ni **Source de données du rapport**, il convient d’ajouter les types de contenus correspondants à la bibliothèque SharePoint. Pour plus d’informations, consultez [Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+     **Remarque** Si le menu **Nouveau document** n’inclut pas **Rapport du Générateur de rapports** , **Modèle du générateur de rapports** ni **Source de données du rapport** , il convient d’ajouter les types de contenus correspondants à la bibliothèque SharePoint. Pour plus d’informations, consultez [Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

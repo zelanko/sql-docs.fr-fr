@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57de001599923d46139883f2f8a691f9d682abf3
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773650"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914308"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Qu’est-ce que l’instance principale dans un cluster Big Data SQL Server ?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Cet article décrit le rôle de l’*instance principale SQL Server* dans un cluster Big Data pour SQL Server 2019. L’instance principale est une instance SQL Server s’exécutant dans un cluster Big Data pour gérer la connectivité, les requêtes avec scale-out, les métadonnées et les bases de données utilisateur, et les services Machine Learning.
+Cet article décrit le rôle de l’ *instance maître SQL Server* dans un cluster Big Data SQL Server. L’instance maître est une instance SQL Server s’exécutant dans un cluster Big Data SQL Server pour gérer la connectivité, les requêtes avec scale-out, les métadonnées, les bases de données utilisateur et les services Machine Learning.
 
 L’instance principale SQL Server fournit les fonctionnalités suivantes :
 
@@ -36,8 +36,8 @@ L’instance principale SQL Server contient le moteur de requête avec scale-out
 
 En plus des bases de données système SQL Server standard, l’instance principale SQL contient également les éléments suivants :
 
-- Une base de données de métadonnées qui contient les métadonnées des tables HDFS
-- Un mappage des partitions du plan de données
+- Une base de données de métadonnées qui contient les métadonnées des tables HDFS.
+- Un mappage des partitions du plan de données.
 - Des détails sur les tables externes qui fournissent l’accès au plan de données du cluster.
 - Des sources de données externes PolyBase et des tables externes définies dans les bases de données utilisateur.
 
@@ -51,9 +51,9 @@ Dans le cadre d’un cluster Big Data SQL Server, les services Machine Learning 
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Avantages des services Machine Learning dans un cluster Big Data
 
-SQL Server 2019 permet de joindre facilement des données Big Data aux données dimensionnelles généralement stockées dans la base de données des entreprises. La valeur des données Big Data augmente considérablement quand elles ne sont pas seulement dans les mains de certaines parties d’une organisation, mais sont également incluses dans les rapports, les tableaux de bord et les applications. En même temps, les scientifiques des données peuvent continuer à utiliser les outils de l’écosystème Spark/HDFS, et disposer d’un accès facile et en temps réel aux données de l’instance principale SQL Server et dans des sources de données externes accessibles _via_ l’instance principale SQL Server.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] permet de joindre facilement des données Big Data aux données dimensionnelles généralement stockées dans la base de données des entreprises. La valeur des données Big Data augmente considérablement quand elles ne sont pas seulement dans les mains de certaines parties d’une organisation, mais sont également incluses dans les rapports, les tableaux de bord et les applications. En même temps, les scientifiques des données peuvent continuer à utiliser les outils de l’écosystème Spark/HDFS, et disposer d’un accès facile et en temps réel aux données de l’instance principale SQL Server et dans des sources de données externes accessibles _via_ l’instance principale SQL Server.
 
-Avec [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vous pouvez en faire plus avec vos lacs de données d’entreprise. Les développeurs et les analystes SQL Server peuvent :
+Avec [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vous pouvez en faire plus avec vos lacs de données d’entreprise. Les développeurs et les analystes SQL Server peuvent :
 
 * Créer des applications qui utilisent des données provenant de lacs de données d’entreprise.
 * Travailler sur l’ensemble des données avec des requêtes Transact-SQL.

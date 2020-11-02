@@ -22,12 +22,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9356ae3c4783df003233c4db7ab4bbaf9501a2d
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454354"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523949"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Mise en route en exécutant l’Assistant Activer la base de données pour Stretch
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88454354"
   
 1.  Dans SQL Server Management Studio, dans l'Explorateur d'objets, sélectionnez la base de données pour laquelle vous souhaitez activer Stretch.  
   
-2.  Cliquez avec le bouton droit et sélectionnez **Tâches**, puis **Stretch**. Ensuite, sélectionnez **Activer** pour lancer l’Assistant.  
+2.  Cliquez avec le bouton droit et sélectionnez **Tâches** , puis **Stretch** . Ensuite, sélectionnez **Activer** pour lancer l’Assistant.  
   
 ##  <a name="introduction"></a><a name="Intro"></a> Introduction  
  Passez en revue l'objectif de l'assistant et les conditions préalables.  
@@ -69,7 +69,7 @@ Les tables qui contiennent un grand nombre de lignes apparaissent en haut de la 
 |**Nom**|Spécifie le nom de la table dans la base de données.|  
 |(sans titre)|Un symbole dans cette colonne peut représenter un avertissement qui ne vous empêche pas d’activer la table sélectionnée pour Stretch. Il peut également représenter un problème de blocage qui empêche l’activation de la table sélectionnée pour Stretch, par exemple, si la table utilise un type de données non pris en charge. Placez le curseur sur le symbole pour afficher plus d'informations dans une info-bulle. Pour plus d’informations, consultez [Limitations concernant Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).|  
 |**Étendu**|Indique si la table est déjà activée pour Stretch.|  
-|**Migrer**|Vous pouvez migrer une table entière (**Table entière**) ou spécifier un filtre sur une colonne existante de la table. Si vous voulez utiliser une fonction de filtre différente pour sélectionner les lignes à migrer, exécutez l’instruction ALTER TABLE pour spécifier la fonction de filtre lorsque vous quittez l’Assistant. Pour plus d’informations sur la fonction de filtre, consultez [Sélectionner les lignes à migrer à l’aide d’une fonction de filtre](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Pour plus d’informations sur l’application de la fonction, consultez [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) ou [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
+|**Migrer**|Vous pouvez migrer une table entière ( **Table entière** ) ou spécifier un filtre sur une colonne existante de la table. Si vous voulez utiliser une fonction de filtre différente pour sélectionner les lignes à migrer, exécutez l’instruction ALTER TABLE pour spécifier la fonction de filtre lorsque vous quittez l’Assistant. Pour plus d’informations sur la fonction de filtre, consultez [Sélectionner les lignes à migrer à l’aide d’une fonction de filtre](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Pour plus d’informations sur l’application de la fonction, consultez [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) ou [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**Lignes**|Spécifie le nombre de lignes dans la table.|  
 |**Taille (Ko)**|Spécifie la taille de la table en Ko.|  
   
@@ -80,13 +80,13 @@ Les tables qui contiennent un grand nombre de lignes apparaissent en haut de la 
   
      ![Définir un prédicat de filtre basé sur une date](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Définir un prédicat de filtre basé sur une date")  
   
-2.  Dans la boîte de dialogue **Sélectionner les lignes à étendre** , sélectionnez **Sélectionner des lignes**.  
+2.  Dans la boîte de dialogue **Sélectionner les lignes à étendre** , sélectionnez **Sélectionner des lignes** .  
   
-3.  Dans le champ **Nom**, fournissez un nom pour la fonction de filtre.  
+3.  Dans le champ **Nom** , fournissez un nom pour la fonction de filtre.  
   
 4.  Pour la clause **Where** , choisissez une colonne de la table, sélectionnez un opérateur, puis fournissez une valeur.  
   
-5.  Cliquez sur **Vérifier** pour tester la fonction. Si la fonction renvoie des résultats de la table (autrement dit, s’il y a des lignes à migrer qui répondent à la condition), le test affiche **Succès**.  
+5.  Cliquez sur **Vérifier** pour tester la fonction. Si la fonction renvoie des résultats de la table (autrement dit, s’il y a des lignes à migrer qui répondent à la condition), le test affiche **Succès** .  
 
 > [!NOTE] 
 > La zone de texte qui affiche la requête de filtre est en lecture seule. Vous ne pouvez pas modifier la requête dans la zone de texte.
@@ -116,7 +116,7 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
   
 3.  Sélectionnez la région Azure à utiliser pour Stretch Database.
     -   Si vous créez un serveur, il est créé dans cette région.  
-    -   Si vous disposez de serveurs existants dans la région sélectionnée, l’Assistant les répertorie lorsque vous choisissez **Serveur existant**.
+    -   Si vous disposez de serveurs existants dans la région sélectionnée, l’Assistant les répertorie lorsque vous choisissez **Serveur existant** .
   
      Pour réduire la latence, choisissez la région Azure dans laquelle se trouve votre serveur SQL Server. Pour plus d'informations sur les régions, consultez [Régions Azure](https://azure.microsoft.com/regions/).  
   
@@ -138,7 +138,7 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
   
         2.  Sélectionnez la méthode d'authentification.  
   
-            -   Si vous sélectionnez **Authentification SQL Server**, entrez un nom de connexion et un mot de passe d’administrateur.  
+            -   Si vous sélectionnez **Authentification SQL Server** , entrez un nom de connexion et un mot de passe d’administrateur.  
   
             -   Sélectionnez **Authentification intégrée Active Directory** pour utiliser un compte de service fédéré pour SQL Server afin de communiquer avec le serveur Azure distant. Si le serveur sélectionné n’est pas intégré à Azure Active Directory, cette option n’apparaît pas.
   
@@ -149,11 +149,11 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
   
  Si une clé principale de base de données existe déjà, entrez son mot de passe.  
   
- ![Page d’informations d’identification sécurisées de l’Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Page d’informations d’identification sécurisées de l’Assistant Stretch Database")  
+ ![Capture d’écran montrant la page Informations d’identification sécurisées de l’Assistant Stretch Database, avec la zone de mot de passe vide.](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Page d’informations d’identification sécurisées de l’Assistant Stretch Database")  
   
  Si la base de données ne dispose pas d’une clé principale existante, entrez un mot de passe fort pour créer une clé principale de base de données.  
   
- ![Page d’informations d’identification sécurisées de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Page d’informations d’identification sécurisées de l’Assistant Stretch Database")  
+ ![Capture d’écran montrant la page Informations d’identification sécurisées de l’Assistant Stretch Database, avec les champs Nouveau mot de passe et Confirmer le mot de passe renseignés.](../../relational-databases/tables/media/stretch-wizard-6.png "Page d’informations d’identification sécurisées de l’Assistant Stretch Database")  
   
  Pour plus d’informations sur la clé principale de base de données, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) et [Créer une clé principale de base de données](../../relational-databases/security/encryption/create-a-database-master-key.md). Pour plus d’informations sur les informations d’identification créées par l’Assistant, consultez [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   

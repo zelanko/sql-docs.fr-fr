@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17294f4e7f26b3402655e0033cddedeb7bc69a3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fef66452820975107e06e20a4085978163d957d
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448455"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907078"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>Conserver la mise en forme de la date pour Analysis Services dans les rapports mobiles
 Ajoutez une mesure à un dataset partagé dans le Générateur de rapports pour que les dates des sources de données [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] conservent leur type de données dans l’ [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)].
@@ -27,15 +27,15 @@ Pour contourner ce problème, ajoutez un membre calculé quand vous créez un da
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>Créer une mesure pour conserver le type de données d’un champ de date
 
-1. Créez une mesure pour contenir la valeur du champ de date en question, puis dans le champ expression, choisissez le niveau ou la hiérarchie de la date et ajoutez **.CurrentMember.MemberValue**. Par exemple :
+1. Créez une mesure pour contenir la valeur du champ de date en question, puis dans le champ expression, choisissez le niveau ou la hiérarchie de la date et ajoutez **.CurrentMember.MemberValue** . Par exemple :
  
    [Internet Sales].[Ship Date].CurrentMember.MemberValue
    
-   ![ssas-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
+   ![Capture d’écran de la boîte de dialogue Générateur de membres calculés avec la zone de texte Expression mise en évidence.](../../reporting-services/mobile-reports/media/ssas-calculated-member-report-builder.png)
    
 2. Vous pouvez à présent ajouter ce membre calculé à l’ensemble de colonnes. Pour cela, faites-le glisser à partir de la liste Membres calculés en bas à gauche et déplacez-le dans la grille de colonnes de droite.  
 
-   ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
+   ![Capture d’écran du concepteur de requêtes avec la section Membres calculés mise en évidence.](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
 ### <a name="see-also"></a>Voir aussi
 

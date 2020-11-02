@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 74f3306167a4c2fbc248f65e5384ea9847f48f7a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680596"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678915"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Comment utiliser Visual Studio Code pour déployer des applications sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -153,7 +153,7 @@ Vous pouvez voir dans la barre latérale toutes les applications que vous avez d
 
 Si vous cliquez sur `Links`, vous voyez que vous pouvez accéder au fichier `swagger.json` de votre application déployée, ce qui vous permet d’écrire vos propres clients qui appellent votre application :
 
-![Fichier Swagger](media/vs-extension/swagger.png)
+![Capture d’écran de l’interface utilisateur VS Code montrant le fichier swagger.json.](media/vs-extension/swagger.png)
 
 Pour plus d’informations, consultez [Utiliser des applications sur des clusters Big Data](app-consume.md).
 

@@ -9,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 640f8a5b04f9045f905f86ef6d34924ea849bd80
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448202"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907081"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 Dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], vous ajoutez des *navigateurs* pour filtrer les données dans les visualisations en fonction d’une période ou d’une sélection. 
 
 Les navigateurs sont semblables aux segments dans Power BI et les tableaux croisés dynamiques Excel, mais présentent également certaines caractéristiques.
 
-Les**navigateurs de temps** filtrent les tables en sélectionnant les lignes qui appartiennent à une période spécifique. 
+Les **navigateurs de temps** filtrent les tables en sélectionnant les lignes qui appartiennent à une période spécifique. 
 
-Les**navigateurs par sélection** filtrent les tables en sélectionnant les lignes pour lesquelles une certaine valeur de colonne correspond à la valeur de clé sélectionnée ; ou, dans le cas des arborescences hiérarchiques, pour lesquelles une certaine valeur de colonne appartient à la sous-arborescence de la valeur de clé sélectionnée. Il existe deux types de navigateurs par sélection :
+Les **navigateurs par sélection** filtrent les tables en sélectionnant les lignes pour lesquelles une certaine valeur de colonne correspond à la valeur de clé sélectionnée ; ou, dans le cas des arborescences hiérarchiques, pour lesquelles une certaine valeur de colonne appartient à la sous-arborescence de la valeur de clé sélectionnée. Il existe deux types de navigateurs par sélection :
 * Les listes de sélection sont des tables d’une seule colonne que vous pouvez utiliser pour filtrer votre rapport mobile, à l’image des segments dans Power BI et Excel.
 * Les grilles de tableau de bord filtrent également le rapport mobile et peuvent également contenir 
   
@@ -42,7 +42,7 @@ Par défaut, le navigateur de temps filtre tous les éléments visuels dans le r
   
 Vous pouvez déconnecter une visualisation du navigateur de temps.   
 1. Sélectionnez la visualisation, puis sélectionnez l’onglet **Données** .  
-2. Dans **Propriétés des données**, sélectionnez **Options**.  
+2. Dans **Propriétés des données** , sélectionnez **Options** .  
 3. Décochez la case **filtré par** .  
   
    ![SSMRP_ClearTimeFilter](../../reporting-services/mobile-reports/media/ssmrp-cleartimefilter.png)  
@@ -53,25 +53,25 @@ La liste de sélection filtre les données d’un rapport mobile en faisant corr
 
 1. À partir de l’onglet **Disposition** , faites glisser **Liste de sélection** vers l’aire de conception et redimensionnez-la comme vous le souhaitez.
 
-2. Sélectionnez l’onglet **Données** , puis dans le volet **Propriétés des données** sous **Clés**, sélectionnez la table et la colonne à utiliser comme filtre. 
+2. Sélectionnez l’onglet **Données** , puis dans le volet **Propriétés des données** sous **Clés** , sélectionnez la table et la colonne à utiliser comme filtre. 
 
-3. Sous **Étiquettes**, sélectionnez la colonne portant l’étiquette à afficher. La colonne clé et la colonne d'étiquette peuvent être les mêmes.  
+3. Sous **Étiquettes** , sélectionnez la colonne portant l’étiquette à afficher. La colonne clé et la colonne d'étiquette peuvent être les mêmes.  
   
    Dans le cas de données d’arborescence hiérarchique, sélectionnez une colonne clé parente.  
   
-4. Après avoir défini les propriétés de données, sous **Tables filtrées par liste de sélection**, sélectionnez les tables à filtrer et la colonne à utiliser comme filtre. Cette colonne doit établir une correspondance avec les valeurs dans la colonne clé de la liste de sélection. 
+4. Après avoir défini les propriétés de données, sous **Tables filtrées par liste de sélection** , sélectionnez les tables à filtrer et la colonne à utiliser comme filtre. Cette colonne doit établir une correspondance avec les valeurs dans la colonne clé de la liste de sélection. 
 
 Pour chaque visualisation du rapport mobile que la liste de sélection doit filtrer :
 
 1. Sélectionnez la visualisation, sélectionnez l’onglet **Données** et dans le volet **Propriétés des données** , sélectionnez **Options** en regard du nom de champ.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Capture d’écran des options de la colonne Catégorie développées, avec l’option Filtrer par état/région sélectionnée.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. Sous **filtré par**, sélectionnez la liste de sélection.
+2. Sous **filtré par** , sélectionnez la liste de sélection.
 
 Quand vous affichez le rapport mobile en mode aperçu ou dans le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et que vous sélectionnez une valeur dans la liste de sélection, les autres visualisations du rapport mobile sont filtrées.
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![Capture d’écran montrant le rapport mobile avec « Washington » sélectionné dans la liste États/Régions, et les villes de l’État de Washington dans les résultats retournés.](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## <a name="scorecard-grid"></a>Grille de tableau de bord  
   
@@ -79,11 +79,11 @@ Le filtre de grille de tableau de bord fonctionne de façon semblable au filtre 
 
 1. À partir de l’onglet **Disposition** , faites glisser **Grille de tableau de bord** vers l’aire de conception et redimensionnez-la comme vous le souhaitez.
 
-2. Sélectionnez l’onglet **Données** , puis dans le volet **Propriétés des données** sous **Clés**, sélectionnez la table et la colonne à utiliser comme filtre. 
+2. Sélectionnez l’onglet **Données** , puis dans le volet **Propriétés des données** sous **Clés** , sélectionnez la table et la colonne à utiliser comme filtre. 
 
-3. Sous **Étiquettes**, sélectionnez la colonne portant l’étiquette à afficher. La colonne clé et la colonne d'étiquette peuvent être les mêmes.  
+3. Sous **Étiquettes** , sélectionnez la colonne portant l’étiquette à afficher. La colonne clé et la colonne d'étiquette peuvent être les mêmes.  
   
-4. Pour ajouter un indicateur de score, dans le volet **Colonnes de données** , sélectionnez **Ajouter un score**.   
+4. Pour ajouter un indicateur de score, dans le volet **Colonnes de données** , sélectionnez **Ajouter un score** .   
   
 5. Attribuez un nom à l’indicateur de score, puis sélectionnez **Options** pour définir les mêmes propriétés que pour un indicateur dans une grille de données :  
   
@@ -92,17 +92,17 @@ Le filtre de grille de tableau de bord fonctionne de façon semblable au filtre 
    * Champ de comparaison
    * Sens des valeurs
   
-6. Pour ajouter un indicateur de valeur, dans le volet **Colonnes de données** , sélectionnez **Ajouter une valeur**.
+6. Pour ajouter un indicateur de valeur, dans le volet **Colonnes de données** , sélectionnez **Ajouter une valeur** .
 
 7. Nommez l'indicateur de valeur comme vous le souhaitez, choisissez sa colonne source dans la table et sélectionnez sa mise en forme.  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![Capture d’écran montrant les options disponibles pour un nouveau score.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
-8. Après avoir défini les propriétés de données, sous **Tables filtrées par liste de sélection**, sélectionnez les tables à filtrer et la colonne à utiliser comme filtre. Cette colonne doit établir une correspondance avec les valeurs dans la colonne clé de la liste de sélection. 
+8. Après avoir défini les propriétés de données, sous **Tables filtrées par liste de sélection** , sélectionnez les tables à filtrer et la colonne à utiliser comme filtre. Cette colonne doit établir une correspondance avec les valeurs dans la colonne clé de la liste de sélection. 
 
 Quand vous affichez le rapport mobile en mode aperçu ou dans le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et que vous sélectionnez une valeur dans la grille de tableau de bord, les autres visualisations du rapport mobile sont filtrées.
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![Capture d’écran de la carte de performance d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## <a name="set-which-visualizations-are-filtered"></a>Définir les visualisations à filtrer  
   
@@ -112,9 +112,9 @@ Vous pouvez choisir les visualisations qu’un navigateur doit filtrer dans le r
 
 1. Sélectionnez la visualisation, sélectionnez l’onglet **Données** et dans le volet **Propriétés des données** , sélectionnez **Options** en regard du nom de champ.
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![Autre capture d’écran des options de la colonne Catégorie développées, avec l’option Filtrer par état/région sélectionnée.](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
-2. Sous **filtré par**, sélectionnez le navigateur. Chaque visualisation peut être filtrée par plusieurs navigateurs.
+2. Sous **filtré par** , sélectionnez le navigateur. Chaque visualisation peut être filtrée par plusieurs navigateurs.
   
 ## <a name="cascading-filters"></a>Filtres en cascade   
   

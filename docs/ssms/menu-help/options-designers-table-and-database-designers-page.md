@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94d40ea597c0d9c09fd463e8a5cd8f9e965b6908
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e62c2d30e4678c8b41223003db35b13e8d15ac
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370838"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679244"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Options (Concepteurs - Page Concepteurs de bases de données et de tables)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Utilisez cette page pour déterminer le comportement par défaut du concepteur. Pour accéder aux paramètres, dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Concepteurs** , puis cliquez sur **Concepteur de bases de données et de tables**.  
+Utilisez cette page pour déterminer le comportement par défaut du concepteur. Pour accéder aux paramètres, dans le menu **Outils** , cliquez sur **Options** , développez le dossier **Concepteurs** , puis cliquez sur **Concepteur de bases de données et de tables** .  
   
 ## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
 **Remplacer la valeur du délai d'attente de la chaîne de connexion pour les mises à jour du Concepteur de tables**  
@@ -73,7 +73,7 @@ Sélectionnez le mode d'affichage des tables dans les concepteurs :
   
 -   **Nom uniquement**  
   
-    Affiche uniquement l'en-tête de la table avec son nom.  
+    Affiche uniquement l’en-tête de la table avec son nom.  
   
 -   **Personnalisée**  
   

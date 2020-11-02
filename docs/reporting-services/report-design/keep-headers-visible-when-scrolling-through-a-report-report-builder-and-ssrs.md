@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255492"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907107"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Laisser les en-têtes visibles lors du défilement d'un rapport (Générateur de rapports et SSRS)
   Pour empêcher les étiquettes de lignes et de colonnes de disparaître de l'écran après le rendu d'un rapport, vous pouvez figer les en-têtes de lignes ou de colonnes.  
@@ -28,20 +28,20 @@ ms.locfileid: "84255492"
   
  L'image suivante illustre une table.  
   
- ![Table](../../reporting-services/report-design/media/table.png "Table de charge de travail")  
+ ![Capture d’écran d’une table.](../../reporting-services/report-design/media/table.png "Table de charge de travail")  
   
  L'image suivante illustre une matrice.  
   
- ![Matrice](../../reporting-services/report-design/media/matrix.png "Matrix")  
+ ![Capture d’écran d’une matrice.](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>Pour garder les en-têtes de groupes de matrice visibles pendant le défilement  
   
-1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel**.  
+1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel** .  
   
-2.  Sous l'onglet **Général** , sous **En-têtes de lignes** ou **En-têtes de colonnes**, sélectionnez **L'en-tête doit rester visible pendant le défilement**.  
+2.  Sous l'onglet **Général** , sous **En-têtes de lignes** ou **En-têtes de colonnes** , sélectionnez **L'en-tête doit rester visible pendant le défilement** .  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -53,13 +53,13 @@ ms.locfileid: "84255492"
   
      Le volet Groupes de lignes affiche les membres statiques et dynamiques hiérarchiques pour la hiérarchie de groupes de lignes, et le volet Groupes de colonnes affiche une vue semblable pour la hiérarchie de groupes de colonnes.  
   
-2.  Dans la partie droite du volet de regroupement, cliquez sur la flèche orientée vers le bas, puis sur **Mode avancé**.  
+2.  Dans la partie droite du volet de regroupement, cliquez sur la flèche orientée vers le bas, puis sur **Mode avancé** .  
   
 3.  Cliquez sur le membre statique (ligne ou colonne) que vous souhaitez laisser visible pendant le défilement. Le volet Propriétés affiche les propriétés du **membre du tableau matriciel** .  
   
      ![Propriétés de membre de tableau matriciel](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Propriétés de membre de tableau matriciel")  
   
-4.  Dans le volet Propriétés, affectez à **FixedData** la valeur **True**.  
+4.  Dans le volet Propriétés, affectez à **FixedData** la valeur **True** .  
   
 5.  Répétez cette étape pour tous les membres adjacents que vous souhaitez laisser visibles pendant le défilement.  
   

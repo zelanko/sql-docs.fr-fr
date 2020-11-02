@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f28c3feb8d8cd2fe68ab093241ac4390768b6487
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d775b0346ce2838abeec4bebce55762afd3b0adc
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448231"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907327"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Regrouper des données par colonnes ou par lignes dans un rapport mobile | Reporting Services
 L’ [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]vous permet d’organiser vos données par colonnes ou par lignes dans de nombreux types de graphiques. La procédure détaillée qui suit vous indique la marche à suivre.
@@ -27,37 +27,37 @@ Les étapes suivantes utilisent une table de totaux de comparaison avec les donn
 
 1. Faites glisser un **Graphique de totaux de comparaison** de l’onglet **Disposition** jusqu’à l’aire de conception et agrandissez-le.
 
-2. Sélectionnez l’onglet **Données** . La table SimulatedTable contient une série de colonnes : des métriques (de **Metric1** à **Metric5**) et des **comparaisons** (de **Comparison1 à Comparison5**). 
+2. Sélectionnez l’onglet **Données** . La table SimulatedTable contient une série de colonnes : des métriques (de **Metric1** à **Metric5** ) et des **comparaisons** (de **Comparison1 à Comparison5** ). 
 
-   ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
+   ![Capture d’écran des colonnes du groupe de données de rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
-3. Dans le volet **Propriétés des données** , la **Série principale** est **SimulatedTable**. Si vous cliquez sur la flèche à côté de **Série principale**, vous pouvez voir que les métriques (de **Metric1** à **Metric5** ) sont sélectionnées.
+3. Dans le volet **Propriétés des données** , la **Série principale** est **SimulatedTable** . Si vous cliquez sur la flèche à côté de **Série principale** , vous pouvez voir que les métriques (de **Metric1** à **Metric5** ) sont sélectionnées.
 
-   ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
+   ![Capture d’écran des options en regard de Série principale.](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   De même, pour **Série de comparaison** -- , les comparaisons (de **Comparison1** à **Comparison5**) sont sélectionnées.
+   De même, pour **Série de comparaison** -- , les comparaisons (de **Comparison1** à **Comparison5** ) sont sélectionnées.
    
-4. Sélectionnez **Aperçu**.
+4. Sélectionnez **Aperçu** .
 
-   ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
+   ![Capture d’écran de l’aperçu du graphique des totaux de comparaisons.](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
    Chaque barre du graphique représente une colonne dans la table. Les barres épaisses correspondent aux colonnes de métriques, tandis que les barres plus fines correspondent aux colonnes de comparaison.
 
 5. Sélectionnez la flèche Précédent dans le coin supérieur gauche pour quitter le mode Aperçu.
 
-6. Sous l’onglet **Disposition** , dans le volet **Propriétés visuelles** , faites passer la **Structure des données** de **Par colonnes** à **Par lignes**.  
+6. Sous l’onglet **Disposition** , dans le volet **Propriétés visuelles** , faites passer la **Structure des données** de **Par colonnes** à **Par lignes** .  
 
-7. Sélectionnez l’onglet **Données** . La table SimulatedTable comprend désormais une colonne **Catégorie** (catégories A à E), suivie des colonnes **Métrique** et **Comparaison**. 
+7. Sélectionnez l’onglet **Données** . La table SimulatedTable comprend désormais une colonne **Catégorie** (catégories A à E), suivie des colonnes **Métrique** et **Comparaison** . 
 
-   ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
+   ![Capture d’écran des lignes du groupe de données de rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 
 8.  Le volet **Propriétés des données** propose à présent une zone Colonne Catégorie qui répertorie les éléments de la colonne Catégorie de SimulatedTable. Dans Série principale, vous pouvez choisir la colonne à utiliser pour les valeurs. Par défaut, l’ [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] sélectionne Metric1 à Metric5 comme série principale et Comparison1 à Comparison5 comme série de comparaison. 
 
-    ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
+    ![Capture d’écran des options en regard de Série de comparaison.](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
-9. Sélectionnez **Aperçu**.
+9. Sélectionnez **Aperçu** .
 
-   ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
+   ![Capture d’écran de l’aperçu du graphique des totaux de comparaisons mis à jour.](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 
    Chaque barre du graphique représente les valeurs de chaque catégorie dans la colonne Catégorie.
 

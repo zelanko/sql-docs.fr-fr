@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b486d0fbb8e0f2c8595251de386bb9f133ac73cf
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 73fe5c5b7be90d8c351aa08b3d5fe0247ecfceb0
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379624"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914330"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>Présentation des pools de données dans un cluster Big Data SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Cet article décrit le rôle des *pools de données SQL Server* dans un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Les sections suivantes décrivent l’architecture, les fonctionnalités et les scénarios d’utilisation d’un pool de données SQL.
+Cet article décrit le rôle des *pools de données SQL Server* dans un cluster Big Data SQL Server. Les sections suivantes décrivent l’architecture, les fonctionnalités et les scénarios d’utilisation d’un pool de données.
 
 Cette vidéo de 5 minutes présente des pools de données et vous montre comment interroger des données à partir de pools de données :
 
@@ -28,11 +28,11 @@ Cette vidéo de 5 minutes présente des pools de données et vous montre comment
 
 ## <a name="data-pool-architecture"></a>Architecture du pool de données
 
-Un pool de données se compose d’une ou plusieurs instances de pool de données SQL Server qui fournissent un stockage SQL Server persistant pour le cluster. Il permet d’interroger les performances des données mises en cache par rapport à des sources de données externes et de décharger le travail. Les données sont ingérées dans le pool de données à l’aide de requêtes T-SQL ou de travaux Spark. Afin d’améliorer les performances dans les jeux de données volumineux, les données ingérées sont distribuées dans partitions et stockées dans toutes les instances SQL Server du pool. Les méthodes de distributions prises en charge sont tourniquet (Round Robin) et répliquées. Pour l’optimisation de l’accès en lecture, un index columstore en cluster est créé sur chaque table de chaque instance du pool de données. Un pool de données constitue le DataMart scale-out pour les Clusters Big Data SQL.
+Un pool de données se compose d’une ou plusieurs instances de pool de données SQL Server qui fournissent un stockage SQL Server persistant pour le cluster. Il permet d’interroger les performances des données mises en cache par rapport à des sources de données externes et de décharger le travail. Les données sont ingérées dans le pool de données à l’aide de requêtes T-SQL ou de travaux Spark. Afin d’améliorer les performances dans les jeux de données volumineux, les données ingérées sont distribuées dans partitions et stockées dans toutes les instances SQL Server du pool. Les méthodes de distributions prises en charge sont tourniquet (Round Robin) et répliquées. Pour l’optimisation de l’accès en lecture, un index columstore en cluster est créé sur chaque table de chaque instance du pool de données. Un pool de données constitue le DataMart avec scale-out des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 ![DataMart avec scale-out](media/concept-data-pool/data-virtualization-improvements.png)
 
-L’accès aux instances SQL Server dans le pool de données est géré à partir de l’instance SQL Server Master. Une source de données externe pour le pool de données est créée, avec les tables externes PolyBase pour stocker le cache de données. En arrière-plan, le contrôleur crée une base de données dans le pool de données avec des tables qui correspondent aux tables externes. À partir de l’instance maître SQL Server, le flux de travail est transparent ; le contrôleur redirige les requêtes de table externe spécifiques vers les instances de SQL Server dans le pool de données, qui peut être via le pool de calcul, exécute des requêtes et retourne le jeu de résultats. Les données du pool de données peuvent uniquement être ingérées ou interrogées et ne peuvent pas être modifiées. Toutes les actualisations de données nécessitent donc une suppression de la table, suivie de la recréation de la table et du remplissage ultérieur des données. 
+L’accès aux instances SQL Server du pool de données est géré à partir de l’instance maître SQL Server. Une source de données externe pour le pool de données est créée, avec les tables externes PolyBase pour stocker le cache de données. En arrière-plan, le contrôleur crée une base de données dans le pool de données avec des tables qui correspondent aux tables externes. À partir de l’instance maître SQL Server, le workflow est transparent : le contrôleur redirige les requêtes de table externe vers les instances SQL Server du pool de données (peut-être via le pool de calcul), exécute des requêtes et retourne le jeu de résultats. Les données du pool de données peuvent uniquement être ingérées ou interrogées et ne peuvent pas être modifiées. Toutes les actualisations de données nécessitent donc une suppression de la table, suivie de la recréation de la table et du remplissage ultérieur des données.
 
 ## <a name="data-pool-scenarios"></a>Scénarios de pools de données
 

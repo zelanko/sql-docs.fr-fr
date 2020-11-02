@@ -26,19 +26,19 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3c5b3c399dfe95e1cbfa521e1a67044d4c5be8e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: e33750c6c62b1de3b889399fca46dbf5aa83b3fd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935210"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907277"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer une carte ou une couche (Générateur de rapports et SSRS)
   Une carte est un ensemble de couches. Quand vous ajoutez une carte à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous définissez la première couche. Vous pouvez créer des couches supplémentaires à l'aide de l'Assistant Couche.  
   
  Pour ajouter, supprimer ou modifier des options pour une couche, la méthode la plus simple consiste à utiliser l'Assistant Couche. Vous pouvez également modifier manuellement des options dans le volet Carte. Pour afficher le volet **Carte** , cliquez dans la carte sur l’aire de conception du rapport. L'illustration suivante affiche les différentes parties du volet :  
   
- ![rsMapLayerZone](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![Capture d’écran de la section Couches montrant la barre d’outils Couche, la visibilité de la couche, le nom de la couche, le type de la source de données spatiales, le type de la couche, l’ajustement du niveau de zoom et l’ajustement du centre d’affichage.](../../reporting-services/report-design/media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  Les couches sont dessinées de bas en haut, dans l'ordre dans lequel elles apparaissent dans le volet Carte. Dans l'illustration ci-dessus, la couche de mosaïques est dessinée en premier et la couche de polygones en dernier. Les couches dessinées ultérieurement peuvent masquer des éléments cartographiques de couches dessinées antérieurement. Vous pouvez modifier l'ordre des couches à l'aide des touches de direction de la barre d'outils du volet Carte. Pour afficher ou masquer des couches, activez ou désactivez l'icône de visibilité. Vous pouvez modifier la transparence d’une couche dans la page **Visibilité** de la boîte de dialogue des propriétés **Données de couche** .  
   
@@ -46,12 +46,12 @@ ms.locfileid: "91935210"
   
 |Symbole|Description|Quand l’utiliser|  
 |------------|-----------------|-----------------|  
-|![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Assistant Couche|Pour ajouter une couche à l'aide d’un Assistant, cliquez sur **Assistant Nouvelle couche**.|  
-|![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Ajouter une couche|Pour ajouter une couche manuellement, cliquez sur **Ajouter une couche**, puis sur le type de couche à ajouter.|  
-|![rs_IconMapPolygonLayer](../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif "rs_IconMapPolygonLayer")|Couche de polygones|Ajoutez une couche qui affiche des zones ou des formes basées sur des jeux de coordonnées de polygones.|  
-|![rs_IconMapLineLayer](../../reporting-services/report-design/media/rs-iconmaplinelayer.gif "rs_IconMapLineLayer")|Couche de lignes|Ajoutez une couche qui affiche des chemins ou des itinéraires basés sur des jeux de coordonnées de lignes.|  
-|![rs_IconMapPointLayer](../../reporting-services/report-design/media/rs-iconmappointlayer.gif "rs_IconMapPointLayer")|Couche de points|Ajoutez une couche qui affiche des emplacements basés sur des jeux de coordonnées de points.|  
-|![rs_IconMapTileLayer](../../reporting-services/report-design/media/rs-iconmaptilelayer.gif "rs_IconMapTileLayer")|Couche de mosaïques|Ajoutez une couche qui affiche des mosaïques Bing correspondant à la zone de la vue cartographique actuelle telle que définie par la fenêtre d'affichage.|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmaplayerwizard.gif":::|Assistant Couche|Pour ajouter une couche à l'aide d’un Assistant, cliquez sur **Assistant Nouvelle couche** .|  
+|:::image type="icon" source="../../reporting-services/media/rs-iconmapaddlayer.gif":::|Ajouter une couche|Pour ajouter une couche manuellement, cliquez sur **Ajouter une couche** , puis sur le type de couche à ajouter.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappolygonlayer.gif":::|Couche de polygones|Ajoutez une couche qui affiche des zones ou des formes basées sur des jeux de coordonnées de polygones.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaplinelayer.gif":::|Couche de lignes|Ajoutez une couche qui affiche des chemins ou des itinéraires basés sur des jeux de coordonnées de lignes.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmappointlayer.gif":::|Couche de points|Ajoutez une couche qui affiche des emplacements basés sur des jeux de coordonnées de points.|  
+|:::image type="icon" source="../../reporting-services/report-design/media/rs-iconmaptilelayer.gif":::|Couche de mosaïques|Ajoutez une couche qui affiche des mosaïques Bing correspondant à la zone de la vue cartographique actuelle telle que définie par la fenêtre d'affichage.|  
   
  La zone de la vue cartographique est affichée au bas du volet Carte. Pour modifier le centre ou les options de zoom de la carte, utilisez les touches de direction pour ajuster le centre d'affichage et le curseur pour ajuster le niveau de zoom.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "91935210"
   
 ##  <a name="to-add-a-layer-from-the-map-layer-wizard"></a><a name="AddLayer"></a> Pour ajouter une couche à partir de l’Assistant Couche  
   
--   Dans le ruban, dans le menu **Insérer** , cliquez sur **Carte**, puis sur **Carte Wizard**. L'Assistant vous permet d'ajouter une couche à la carte existante. La plupart des pages des Assistants Carte et Couche sont identiques.  
+-   Dans le ruban, dans le menu **Insérer** , cliquez sur **Carte** , puis sur **Carte Wizard** . L'Assistant vous permet d'ajouter une couche à la carte existante. La plupart des pages des Assistants Carte et Couche sont identiques.  
   
      Pour plus d’informations, consultez [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -76,22 +76,22 @@ ms.locfileid: "91935210"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur le type de couche que vous voulez ajouter : **Point**, **Ligne**, ou **Polygone**.  
+2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur le type de couche que vous voulez ajouter : **Point** , **Ligne** , ou **Polygone** .  
   
     > [!NOTE]  
     >  Bien qu'il soit possible d'ajouter une couche et de la configurer manuellement, nous vous recommandons d'utiliser l'Assistant Couche pour ajouter de nouvelles couches. Pour lancer l’Assistant à partir de la barre d’outils du volet Carte, cliquez sur le bouton de l’Assistant Couche (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
-3.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche**.  
+3.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche** .  
   
-4.  Dans **Utiliser les données spatiales de**, sélectionnez la source de données spatiales. Les options varient selon votre sélection.  
+4.  Dans **Utiliser les données spatiales de** , sélectionnez la source de données spatiales. Les options varient selon votre sélection.  
   
      Si vous souhaitez visualiser des données analytiques de votre rapport sur cette couche, procédez comme suit :  
   
-    1.  Cliquez sur **Données analytiques**.  
+    1.  Cliquez sur **Données analytiques** .  
   
-    2.  Dans **Dataset analytique**, cliquez sur le nom du dataset qui contient les données analytiques et les champs de correspondance pour générer une relation entre des données analytiques et spatiales.  
+    2.  Dans **Dataset analytique** , cliquez sur le nom du dataset qui contient les données analytiques et les champs de correspondance pour générer une relation entre des données analytiques et spatiales.  
   
-    3.  Cliquez sur **Add**.  
+    3.  Cliquez sur **Add** .  
   
     4.  Tapez le nom du champ de correspondance du dataset spatial.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "91935210"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Dans le volet Carte, cliquez avec le bouton droit sur la couche, puis cliquez sur  **Données de couche**.  
+2.  Dans le volet Carte, cliquez avec le bouton droit sur la couche, puis cliquez sur  **Données de couche** .  
   
-3.  Cliquez sur **Filtres**.  
+3.  Cliquez sur **Filtres** .  
   
 4.  Définissez une équation de filtre pour limiter les données analytiques utilisées dans l'affichage de la carte. Pour plus d’informations, consultez [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
@@ -123,13 +123,13 @@ ms.locfileid: "91935210"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche**.  
+2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche** .  
   
-3.  Dans **Utiliser les données spatiales de**, sélectionnez **Données incorporées dans le rapport**.  
+3.  Dans **Utiliser les données spatiales de** , sélectionnez **Données incorporées dans le rapport** .  
   
-4.  Pour charger les éléments cartographiques d’un rapport existant ou pour créer des éléments cartographiques à partir d’un fichier ESRI, cliquez sur **Parcourir**, pointez sur le fichier, puis cliquez sur **Ouvrir**. Les éléments cartographiques sont incorporés dans cette définition de rapport. Les données spatiales sur lesquelles vous pointez doivent correspondre au type de couche. Par exemple, pour une couche de points, vous devez pointer sur les données spatiales qui spécifient des jeux de coordonnées de points.  
+4.  Pour charger les éléments cartographiques d’un rapport existant ou pour créer des éléments cartographiques à partir d’un fichier ESRI, cliquez sur **Parcourir** , pointez sur le fichier, puis cliquez sur **Ouvrir** . Les éléments cartographiques sont incorporés dans cette définition de rapport. Les données spatiales sur lesquelles vous pointez doivent correspondre au type de couche. Par exemple, pour une couche de points, vous devez pointer sur les données spatiales qui spécifient des jeux de coordonnées de points.  
   
-5.  Dans **Champ spatial**, spécifiez le nom du champ qui contient les données spatiales. Vous devrez peut-être déterminer ce nom à partir de la source de données spatiales.  
+5.  Dans **Champ spatial** , spécifiez le nom du champ qui contient les données spatiales. Vous devrez peut-être déterminer ce nom à partir de la source de données spatiales.  
   
     > [!NOTE]  
     >  Si vous ne connaissez pas le nom du champ et que vous avez ouvert un fichier de forme ESRI, utilisez plutôt l’option **Lien vers le fichier de forme ESRI** .  
@@ -140,11 +140,11 @@ ms.locfileid: "91935210"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche**.  
+2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche** .  
   
-3.  Dans **Utiliser les données spatiales de**, sélectionnez **Lien vers le fichier de forme ESRI**.  
+3.  Dans **Utiliser les données spatiales de** , sélectionnez **Lien vers le fichier de forme ESRI** .  
   
-4.  Dans **Nom de fichier**, tapez l’emplacement d’un fichier de forme ESRI ou cliquez sur **Parcourir** pour sélectionner un fichier de forme ESRI.  
+4.  Dans **Nom de fichier** , tapez l’emplacement d’un fichier de forme ESRI ou cliquez sur **Parcourir** pour sélectionner un fichier de forme ESRI.  
   
     > [!NOTE]  
     >  Si le fichier de forme se trouve sur votre ordinateur local, les données spatiales sont incorporées dans la définition de rapport. Pour récupérer les données dynamiquement lors du traitement du rapport, vous devez télécharger le fichier ESRI .shp et son fichier de support .dbf sur le serveur de rapports. Pour plus d’informations, consultez [Charger un fichier ou un rapport](../reports/upload-a-file-or-report-report-manager.md).  
@@ -155,13 +155,13 @@ ms.locfileid: "91935210"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche**.  
+2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche** .  
   
-3.  Dans **Utiliser les données spatiales de**, sélectionnez **Champ spatial dans un dataset**.  
+3.  Dans **Utiliser les données spatiales de** , sélectionnez **Champ spatial dans un dataset** .  
   
-4.  Dans **Nom du dataset**, cliquez sur le nom d’un dataset du rapport qui contient les données spatiales souhaitées.  
+4.  Dans **Nom du dataset** , cliquez sur le nom d’un dataset du rapport qui contient les données spatiales souhaitées.  
   
-5.  Dans **Nom du champ spatial**, cliquez sur le nom du champ du dataset qui contient les données spatiales.  
+5.  Dans **Nom du champ spatial** , cliquez sur le nom du champ du dataset qui contient les données spatiales.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -169,17 +169,17 @@ ms.locfileid: "91935210"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur **Couche de mosaïques**.  
+2.  Dans la barre d’outils, cliquez sur le bouton **Ajouter une couche** puis, dans la liste déroulante, cliquez sur **Couche de mosaïques** .  
   
     > [!NOTE]  
     >  Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
-3.  Cliquez avec le bouton droit sur la couche de mosaïques dans le volet Carte, puis sélectionnez **Propriétés des mosaïques**.  
+3.  Cliquez avec le bouton droit sur la couche de mosaïques dans le volet Carte, puis sélectionnez **Propriétés des mosaïques** .  
   
-4.  Dans **Options de mosaïque**, sélectionnez un style de mosaïque. Si les mosaïques Bing sont disponibles, la couche sur l'aire de conception est mise à jour avec le style que vous sélectionnez.  
+4.  Dans **Options de mosaïque** , sélectionnez un style de mosaïque. Si les mosaïques Bing sont disponibles, la couche sur l'aire de conception est mise à jour avec le style que vous sélectionnez.  
   
     > [!NOTE]  
-    >  Une couche de mosaïques peut également être ajoutée lorsque vous ajoutez une couche de polygones, de lignes ou de points dans l'Assistant Carte ou Couche. Dans la page **Choisir des options de vue cartographique et de données spatiales** , sélectionnez l’option **Ajouter un arrière-plan Bing Maps pour cette vue cartographique**.  
+    >  Une couche de mosaïques peut également être ajoutée lorsque vous ajoutez une couche de polygones, de lignes ou de points dans l'Assistant Carte ou Couche. Dans la page **Choisir des options de vue cartographique et de données spatiales** , sélectionnez l’option **Ajouter un arrière-plan Bing Maps pour cette vue cartographique** .  
   
 ##  <a name="to-change-the-drawing-order-of-a-layer"></a><a name="DrawingOrder"></a> Pour modifier l'ordre de dessin d'une couche  
   
@@ -193,11 +193,11 @@ ms.locfileid: "91935210"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche**.  
+2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Données de couche** .  
   
-3.  Cliquez sur **Visibilité**.  
+3.  Cliquez sur **Visibilité** .  
   
-4.  Dans **Options de transparence**, tapez une valeur qui représente le pourcentage de transparence, par exemple **40**. Un facteur de transparence de zéro (0 %) signifie que la couche est opaque. Un facteur de transparence de 100 % signifie que vous ne verrez pas la couche dans le rapport.  
+4.  Dans **Options de transparence** , tapez une valeur qui représente le pourcentage de transparence, par exemple **40** . Un facteur de transparence de zéro (0 %) signifie que la couche est opaque. Un facteur de transparence de 100 % signifie que vous ne verrez pas la couche dans le rapport.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -205,11 +205,11 @@ ms.locfileid: "91935210"
   
 1.  Cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Propriétés des mosaïques**.  
+2.  Cliquez avec le bouton droit sur la couche, puis cliquez sur **Propriétés des mosaïques** .  
   
-3.  Cliquez sur **Visibilité**.  
+3.  Cliquez sur **Visibilité** .  
   
-4.  Dans **Options de transparence**, tapez une valeur qui représente le pourcentage de transparence, par exemple **40**.  
+4.  Dans **Options de transparence** , tapez une valeur qui représente le pourcentage de transparence, par exemple **40** .  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -219,7 +219,7 @@ ms.locfileid: "91935210"
   
 2.  Dans le volet Carte, cliquez sur la couche de mosaïques pour la sélectionner. Le volet Propriétés affiche les propriétés de la couche de mosaïques.  
   
-3.  Dans le volet Propriétés, attribuez à UseSecureConnection la valeur **True**.  
+3.  Dans le volet Propriétés, attribuez à UseSecureConnection la valeur **True** .  
   
  La connexion au service Web Bing Maps utilise le service HTTP SSL pour récupérer des mosaïques Bing pour cette couche. Le protocole TLS (Transport Layer Security) était précédemment appelé protocole SSL (Secure Sockets Layer).
   
@@ -237,11 +237,11 @@ ms.locfileid: "91935210"
   
 1.  Définissez les options de **Visibilité** pour contrôler l’affichage d’une couche.  
   
-    -   Dans le volet Couches, cliquez avec le bouton droit sur une couche pour la sélectionner puis, dans la barre d’outils Couches, cliquez sur Propriétés pour ouvrir **Propriétés de la couche**.  
+    -   Dans le volet Couches, cliquez avec le bouton droit sur une couche pour la sélectionner puis, dans la barre d’outils Couches, cliquez sur Propriétés pour ouvrir **Propriétés de la couche** .  
   
-    -   Cliquez sur **Visibilité**.  
+    -   Cliquez sur **Visibilité** .  
   
-    -   Dans Visibilité de la couche, sélectionnez **Afficher ou masquer en fonction d’une valeur de zoom**.  
+    -   Dans Visibilité de la couche, sélectionnez **Afficher ou masquer en fonction d’une valeur de zoom** .  
   
     -   Entrez les valeurs de zoom maximale et minimale pour l'affichage de la couche.  
   

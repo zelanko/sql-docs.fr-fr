@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/20/2020
-ms.openlocfilehash: f70911bbb2f7907e5fa083622ae11d9e947aa592
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.date: 10/27/2020
+ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257876"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734645"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notes de publication de SQL Server Management Studio (SSMS)
 
@@ -25,6 +25,64 @@ ms.locfileid: "92257876"
 Cet article fournit des détails sur les mises à jour, les améliorations et les correctifs de bogues des versions actuelles et précédentes de SSMS.
 
 ## <a name="current-ssms-release"></a>Version actuelle de SSMS
+
+### <a name="1871"></a>18.7.1
+
+![télécharger](media/download-icon.png) [Télécharger SSMS 18.7](download-sql-server-management-studio-ssms.md)
+
+- Numéro de version : 18.7.1
+- Numéro de build : 15.0.18358.0
+- Date de publication : 27 octobre 2020
+
+[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2147207&clcid=0x40a)
+
+SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vous avez besoin d’une version précédente de SSMS, consultez les [versions précédentes de SSMS](release-notes-ssms.md#previous-ssms-releases).
+
+#### <a name="whats-new-in-1871"></a>Nouveautés de la version 18.7.1
+
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
+
+#### <a name="bug-fixes-in-1871"></a>Correctifs de bogues dans la version 18.7.1
+
+| Nouvel élément | Détails |
+|----------|---------|
+| Magasin des requêtes | Correction de l’erreur qui était levée lorsque vous cliquiez avec le bouton droit sur le nœud Explorateur d’objets dans Magasin des requêtes. |
+
+
+#### <a name="known-issues-1871"></a>Problèmes connus (18.7.1)
+
+| Nouvel élément | Détails | Solution de contournement |
+|----------|---------|------------|
+| Analysis Services | Erreur lors de la connexion à SSAS via msmdpump.dll. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). | N/A |
+| Analysis Services | Dans de rares cas, lors de l’utilisation de la mise à niveau, il peut y avoir un message d’erreur « L’objet n’est pas défini sur l’instance d’un objet » lors d’une tentative d’ouverture de l’éditeur DAX après la mise à niveau de SSMS. | Pour résoudre ce problème, désinstallez, puis réinstallez SSMS. |
+| SSMS général | La boîte de dialogue Nouvelle spécification de l’audit du serveur peut provoquer le blocage de SSMS avec une erreur de violation d’accès. | N/A |
+| SSMS général | Les extensions SSMS utilisant SMO doivent être recompilées pour cibler le nouveau package SMO v161 spécifique à SSMS. Une préversion est disponible à l’adresse https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Les extensions compilées avec des versions 160 antérieures du package Microsoft.SqlServer.SqlManagementObjects continueront de fonctionner. | N/A |
+| Integration Services | Lorsque vous importez ou exportez des packages dans Integration Services ou exportez des packages dans Azure-SSIS Integration Runtime, des scripts sont perdus pour les packages contenant des tâches/composants de script. Solution de contournement : Supprimer le dossier « C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild ». | N/A |
+| Integration Services | Les connexions à distance à Integration Services peuvent échouer avec le message « Le service spécifié n’existe pas en tant que service installé. » sur les systèmes d’exploitation récents. Solution de contournement : Identifiez l’emplacement du Registre associé aux services d'intégration sous Computer\HKEY_CLASSES_ROOT\AppID et Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID et dans ces ruches, renommez la clé de Registre « LocalService » en « LocalService_A » pour la version spécifique des services d’intégration que vous essayez de connecter | N/A |
+| Explorateur d’objets | Les versions de SSMS antérieures à 18.7 ont un changement cassant dans l’Explorateur d’objets en raison des modifications du moteur relatives à [Azure Synapse Analytics SQL à la demande](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Pour continuer à utiliser l’Explorateur d’objets dans SSMS avec Azure Synapse Analytics SQL à la demande, vous avez besoin de SSMS 18.7 ou version ultérieure. |
+
+Pour connaître les autres problèmes connus et pour envoyer vos commentaires à l’équipe produit, accédez à [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server).
+
+## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
+
+Téléchargez les versions précédentes de SSMS en sélectionnant le lien de téléchargement de la section associée.
+
+| Version de SSMS | Numéro de build | Date de publication |
+|--------------|--------------|--------------|
+| [18,7](#187) | 15.0.18357.0 | 20 octobre 2020 |
+| [18.6](#186) | 15.0.18338.0 | 22 juillet 2020 |
+| [18.5.1](#1851) | 15.0.18333.0 | 9 juin 2020 |
+| [18.5](#185) | 15.0.18330.0 | 7 avril 2020 |
+| [18.4](#184) | 15.0.18206.0 | 4 novembre 2019 |
+| [18.3.1](#1831) | 15.0.18183.0 | 2 octobre 2019 |
+| [18.2](#182) | 15.0.18142.0 | 25 juillet 2019 |
+| [18.1](#181) | 15.0.18131.0 | 11 juin 2019 |
+| [18.0](#180) | 15.0.18118.0 | 24 avril 2019 |
+| [17.9.1](#1791) | 14.0.17289.0 | 21 novembre 2018 |
+| [16.5.3](#1653) | 13.0.16106.4 | 30 janvier 2017 |
 
 ### <a name="187"></a>18,7
 
@@ -38,7 +96,7 @@ Cet article fournit des détails sur les mises à jour, les améliorations et le
 
 SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vous avez besoin d’une version précédente de SSMS, consultez les [versions précédentes de SSMS](release-notes-ssms.md#previous-ssms-releases).
 
-### <a name="whats-new-in-187"></a>Nouveautés de la version 18.7
+#### <a name="whats-new-in-187"></a>Nouveautés de la version 18.7
 
 [!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
 
@@ -53,7 +111,7 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 | ShowPlan | Opérateur PREDICT ajouté. |
 | Interface utilisateur XEvent | Ajout de la fonctionnalité de script des événements étendus à l’aide du nom de wait_type. Les utilisateurs doivent utiliser la valeur de colonne map_value au lieu de map_key dans le prédicat de filtre wait_type, car la valeur de clé est soumise à modification lors de la mise à niveau de la version. Correctif : Ajout d’une case à cocher et de l’option données aux utilisateurs, pour choisir map_value ou map_key pour la valeur de prédicat de filtre wait_type. |
 
-### <a name="bug-fixes-in-187"></a>Correctifs de bogues dans la version 18.7
+#### <a name="bug-fixes-in-187"></a>Correctifs de bogues dans la version 18.7
 
 | Nouvel élément | Détails |
 |----------|---------|
@@ -101,28 +159,8 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 | SSMS général | Les extensions SSMS utilisant SMO doivent être recompilées pour cibler le nouveau package SMO v161 spécifique à SSMS. Une préversion est disponible à l’adresse https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Les extensions compilées avec des versions 160 antérieures du package Microsoft.SqlServer.SqlManagementObjects continueront de fonctionner. | N/A |
 | Integration Services | Lorsque vous importez ou exportez des packages dans Integration Services ou exportez des packages dans Azure-SSIS Integration Runtime, des scripts sont perdus pour les packages contenant des tâches/composants de script. Solution de contournement : Supprimer le dossier « C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild ». | N/A |
 | Integration Services | Les connexions à distance à Integration Services peuvent échouer avec le message « Le service spécifié n’existe pas en tant que service installé. » sur les systèmes d’exploitation récents. Solution de contournement : Identifiez l’emplacement du Registre associé aux services d'intégration sous Computer\HKEY_CLASSES_ROOT\AppID et Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID et dans ces ruches, renommez la clé de Registre « LocalService » en « LocalService_A » pour la version spécifique des services d’intégration que vous essayez de connecter | N/A |
-| Explorateur d’objets | Les versions de SSMS antérieures à 18.7 ont un changement cassant dans l’Explorateur d’objets en raison des modifications du moteur relatives à [Azure Synapse Analytics SQL à la demande](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Pour continuer à utiliser l’Explorateur d’objets dans SSMS avec Azure Synapse Analytics SQL à la demande, vous avez besoin de SSMS 18.7 ou version ultérieure.
-
-Pour connaître les autres problèmes connus et pour envoyer vos commentaires à l’équipe produit, accédez à [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server).
-
-## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
-
-[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
-
-Téléchargez les versions précédentes de SSMS en sélectionnant le lien de téléchargement de la section associée.
-
-| Version de SSMS | Numéro de build | Date de publication |
-|--------------|--------------|--------------|
-| [18.6](#186) | 15.0.18338.0 | 22 juillet 2020 |
-| [18.5.1](#1851) | 15.0.18333.0 | 9 juin 2020 |
-| [18.5](#185) | 15.0.18330.0 | 7 avril 2020 |
-| [18.4](#184) | 15.0.18206.0 | 4 novembre 2019 |
-| [18.3.1](#1831) | 15.0.18183.0 | 2 octobre 2019 |
-| [18.2](#182) | 15.0.18142.0 | 25 juillet 2019 |
-| [18.1](#181) | 15.0.18131.0 | 11 juin 2019 |
-| [18.0](#180) | 15.0.18118.0 | 24 avril 2019 |
-| [17.9.1](#1791) | 14.0.17289.0 | 21 novembre 2018 |
-| [16.5.3](#1653) | 13.0.16106.4 | 30 janvier 2017 |
+| Explorateur d’objets | Les versions de SSMS antérieures à 18.7 ont un changement cassant dans l’Explorateur d’objets en raison des modifications du moteur relatives à [Azure Synapse Analytics SQL à la demande](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Pour continuer à utiliser l’Explorateur d’objets dans SSMS avec Azure Synapse Analytics SQL à la demande, vous avez besoin de SSMS 18.7 ou version ultérieure. |
+| Magasin des requêtes | Le nœud Explorateur d’objets du Magasin des requêtes génère une erreur lors d’un clic droit. | Accédez directement aux éléments en développant le nœud et en cliquant avec le bouton droit sur les options enfants. |
 
 ### <a name="186"></a>18.6
 
@@ -134,7 +172,7 @@ Téléchargez les versions précédentes de SSMS en sélectionnant le lien de t�
 
 [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
 
-### <a name="whats-new-in-186"></a>Nouveautés de la version 18.6
+#### <a name="whats-new-in-186"></a>Nouveautés de la version 18.6
 
 | Nouvel élément | Détails |
 |----------|---------|
@@ -147,7 +185,7 @@ Téléchargez les versions précédentes de SSMS en sélectionnant le lien de t�
 | SMO / Création de scripts | Ajout de la prise en charge des scripts de masquage dynamique des données sur [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (anciennement SQL Azure DW). |
 | SMO / Création de scripts | Ajout de la prise en charge des scripts de stratégie de sécurité sur [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (anciennement SQL DW). |
 
-### <a name="bug-fixes-in-186"></a>Correctifs de bogues dans la version 18.6
+#### <a name="bug-fixes-in-186"></a>Correctifs de bogues dans la version 18.6
 
 | Nouvel élément | Détails |
 |----------|---------|
@@ -193,7 +231,7 @@ Téléchargez les versions précédentes de SSMS en sélectionnant le lien de t�
 
 [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40a)
 
-### <a name="bug-fixes-in-1851"></a>Correctifs de bogues dans la version 18.5.1
+#### <a name="bug-fixes-in-1851"></a>Correctifs de bogues dans la version 18.5.1
 
 | Nouvel élément | Détails |
 |----------|---------|
@@ -202,7 +240,7 @@ Téléchargez les versions précédentes de SSMS en sélectionnant le lien de t�
 | Analysis Services | Correction d’un problème qui empêchait les utilisateurs d’interroger SSAS 2017 et les versions antérieures avec les autorisations sur les données des cellules. |
 | SSMS général | [Concepteur de tables : suppression du bip sonore émis lors d’une tentative de tabulation dans une grille Concepteur de tables](https://feedback.azure.com/forums/908035/suggestions/40318435) |
 
-### <a name="known-issues-1851"></a>Problèmes connus (18.5.1)
+#### <a name="known-issues-1851"></a>Problèmes connus (18.5.1)
 
 | Nouvel élément | Détails | Solution de contournement |
 |----------|---------|------------|
@@ -221,7 +259,7 @@ Téléchargez les versions précédentes de SSMS en sélectionnant le lien de t�
 
 [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
 
-### <a name="whats-new-in-185"></a>Nouveautés de la version 18.5
+#### <a name="whats-new-in-185"></a>Nouveautés de la version 18.5
 
 | Nouvel élément | Détails |
 |----------|---------|
@@ -242,7 +280,7 @@ Téléchargez les versions précédentes de SSMS en sélectionnant le lien de t�
 | SMO/Création de scripts | [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Les champs Plateforme, Nom et engineEdition peuvent désormais contenir des listes séparées par des virgules ( *Plateforme* ) habituelles : \[*Windows* , *Linux*\]), pas seulement les expressions régulières ( *Plateforme* : *\/Windows\|Linux\/* )
 | SMO/Création de scripts | [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md) : ajout de 13 règles d’évaluation. Pour plus d’informations, accédez à [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api)). |
 
-### <a name="bug-fixes-in-185"></a>Correctifs de bogues dans la version 18.5
+#### <a name="bug-fixes-in-185"></a>Correctifs de bogues dans la version 18.5
 
 | Nouvel élément | Détails |
 |----------|---------|
@@ -298,7 +336,7 @@ Téléchargez les versions précédentes de SSMS en sélectionnant le lien de t�
 | SMO/Création de scripts | [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Lien d’aide erroné dans la règle XTPHashAvgChainBuckets. |
 | Interface utilisateur XEvent | Correction d’un problème où les éléments de la grille étaient sélectionnés en cas de pointage. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/38262124) et [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
-### <a name="known-issues-185"></a>Problèmes connus (18.5)
+#### <a name="known-issues-185"></a>Problèmes connus (18.5)
 
 | Nouvel élément | Détails | Solution de contournement |
 |----------|---------|------------|
@@ -432,7 +470,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 
 [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
 
-### <a name="whats-new-in-182"></a>Nouveautés de la version 18.2
+#### <a name="whats-new-in-182"></a>Nouveautés de la version 18.2
 
 | Nouvel élément | Détails |
 |----------|---------|
@@ -623,7 +661,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Classification des données|Ajout d’une nouvelle fonctionnalité de « classification des données » à SMO. L’objet Column expose de nouvelles propriétés : SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId et IsClassified (en lecture seule). Pour plus d’informations, consultez [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)|
 |Classification des données|Ajout d’un nouvel élément de menu « Rapport de classification » au menu volant « Classification des données ».|
 |Classification des données| Recommandations mises à jour.|
-|Mise à niveau du niveau de compatibilité de la base de données|Ajout d’une nouvelle option sous ***Nom de la base de données*** > ***Tâches*** > ***Mise à niveau de la base de données*** . Celle-ci démarre le nouvel **Assistant Paramétrage de requêtes** pour guider l’utilisateur dans le processus suivant : Collecte d’une ligne de base de performances avant la mise à niveau du niveau de compatibilité de la base de données. Mise à niveau vers le niveau de compatibilité de la base de données souhaité.  Collecte d’un deuxième passage de données de performances sur la même charge de travail. Détection des régressions de la charge de travail et indication de recommandations testées pour améliorer les performances de la charge de travail.  Ce processus est semblable au processus de mise à niveau de base de données documenté dans la rubrique [Scénarios d’utilisation du Magasin des requêtes](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), à l’exception de la dernière étape où l’Assistant Paramétrage de requêtes ne s’appuie pas sur un état valide antérieur connu pour générer des recommandations.|
+|Mise à niveau du niveau de compatibilité de la base de données|Ajout d’une nouvelle option sous **_Nom de la base de données_ *_ > _* _Tâches_ *_ > _* _Mise à niveau de la base de données_ *_. Celle-ci démarre le nouvel _* Assistant Paramétrage de requêtes** pour guider l’utilisateur dans le processus suivant : Collecte d’une ligne de base de performances avant la mise à niveau du niveau de compatibilité de la base de données. Mise à niveau vers le niveau de compatibilité de la base de données souhaité.  Collecte d’un deuxième passage de données de performances sur la même charge de travail. Détection des régressions de la charge de travail et indication de recommandations testées pour améliorer les performances de la charge de travail.  Ce processus est semblable au processus de mise à niveau de base de données documenté dans la rubrique [Scénarios d’utilisation du Magasin des requêtes](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), à l’exception de la dernière étape où l’Assistant Paramétrage de requêtes ne s’appuie pas sur un état valide antérieur connu pour générer des recommandations.|
 |Assistant Application de la couche Données|Ajout de la prise en charge de l’importation/exportation de l’application de la couche Données avec des tables de graphe.|
 |Assistant Importation d’un fichier plat|Ajout d’une logique pour notifier l’utilisateur que l’importation peut avoir abouti à un renommage des colonnes.|
 |Integration Services (SSIS)|Les clients peuvent désormais planifier des packages SSIS sur les runtimes d’intégration Azure-SSIS qui se trouvent dans le cloud Azure Government.|

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037648"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523967"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Se connecter à SQL Server ou Azure SQL Database
 
@@ -27,25 +27,25 @@ Pour travailler avec des serveurs et des bases de données, vous devez d’abord
   
 ## <a name="connecting-to-a-server"></a>Connexion à un serveur  
 
-1. Dans l’**Explorateur d’objets**, cliquez sur **Connexion > Moteur de base de données...**.
+1. Dans l’ **Explorateur d’objets** , cliquez sur **Connexion > Moteur de base de données...** .
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![se connecter](../media/connect-to-server/connect-db-engine.png)
 
-1. Renseignez l’écran **Se connecter au serveur** et cliquez sur **Connexion** :
+1. Renseignez l’écran **Se connecter au serveur** et cliquez sur **Connexion**  :
 
    ![connect to server](../media/connect-to-server/connect.png)
 
 1. Si vous vous connectez à un serveur SQL Azure, vous serez peut-être invité à vous connecter pour créer une règle de pare-feu. Cliquez sur **Connexion...** (sinon, passez à l’étape 6 ci-dessous)
 
-   ![pare-feu](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![Capture d’écran de la boîte de dialogue Nouvelle règle de pare-feu, avec l’option Connexion mise en évidence.](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. Une fois que vous êtes connecté, l’écran est prérempli avec votre adresse IP spécifique. Si votre adresse IP change souvent, il peut être plus simple d’accorder l’accès à une plage, donc sélectionnez l’option qui convient le mieux à votre environnement. 
 
-   ![pare-feu](../media/connect-to-server/new-firewall-rule.png)
+   ![Capture d’écran de la boîte de dialogue Nouvelle règle de pare-feu, avec l’option Ajouter mon adresse IP cliente sélectionnée et l’option OK mise en évidence.](../media/connect-to-server/new-firewall-rule.png)
 
-1. Pour créer la règle de pare-feu et vous connecter au serveur, cliquez sur **OK**.
+1. Pour créer la règle de pare-feu et vous connecter au serveur, cliquez sur **OK** .
 
-1. Le serveur s’affiche dans l’**Explorateur d’objets** après vous être connecté :
+1. Le serveur s’affiche dans l’ **Explorateur d’objets** après vous être connecté :
 
    ![connected](../media/connect-to-server/connected.png)
 

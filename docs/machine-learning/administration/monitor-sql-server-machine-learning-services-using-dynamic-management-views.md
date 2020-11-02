@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115537"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679214"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Surveiller SQL Server Machine Learning Services à l’aide de vues de gestion dynamique (DMV)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -250,9 +250,9 @@ La requête retourne les colonnes suivantes :
 | Colonne                   | Description  |
 |--------------------------|--------------|
 | pool_name                | Nom du pool de ressources. Les pools de ressources SQL Server sont préfixés avec `SQL Server` et les pools de ressources externes avec `External Pool`. |
-| total_cpu_usage_hours    | L’utilisation cumulative de l’UC, en millisecondes, depuis que les statistiques du gouverneur de ressources ont été réinitialisées. |
-| read_io_completed_total  | Total d'entrées/sorties de lecture terminées depuis que les statistiques du gouverneur de ressources ont été réinitialisées.              |
-| write_io_completed_total | Total des entrées/sorties d'écriture terminées depuis que les statistiques du gouverneur de ressources ont été réinitialisées.             |
+| total_cpu_usage_hours    | L’utilisation cumulative du processeur, en millisecondes, depuis que les statistiques de Resource Governor ont été réinitialisées. |
+| read_io_completed_total  | Total d’entrées/sorties de lecture terminées depuis que les statistiques de Resource Governor ont été réinitialisées.              |
+| write_io_completed_total | Total d’entrées/sorties d’écriture terminées depuis que les statistiques de Resource Governor ont été réinitialisées.             |
 
 ## <a name="installed-packages"></a>Packages installés
 

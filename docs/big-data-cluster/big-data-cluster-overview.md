@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765738"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914338"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -22,9 +22,7 @@ ms.locfileid: "88765738"
 
 À compter de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] vous permettent de déployer des clusters scalables de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes. Ces composants sont exécutés côte à côte pour que vous puissiez lire, écrire et traiter du Big Data à partir de Transact-SQL ou Spark, afin de pouvoir combiner et analyser facilement vos données relationnelles de grande valeur avec du Big Data volumineux.
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit les clusters Big Data SQL Server.
-
-Utilisez les clusters Big Data SQL Server pour :
+Utilisez [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] pour effectuer les tâches suivantes :
 
 - [Déployer des clusters scalables](./deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes. 
 - Lire, écrire et traiter les données du Big Data à partir de Transact-SQL ou de Spark.
@@ -45,7 +43,7 @@ Les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 
 ### <a name="data-virtualization"></a>Virtualisation de données
 
-En tirant parti de [SQL Server Polybase](../relational-databases/polybase/polybase-guide.md), les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] peuvent interroger des sources de données externes sans déplacer ni copier les données. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit de nouveaux connecteurs aux sources de données.
+En tirant parti de [PolyBase](../relational-databases/polybase/polybase-guide.md), les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] peuvent interroger des sources de données externes sans déplacer ni copier les données. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit de nouveaux connecteurs aux sources de données.
 
 ![Virtualisation de données](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -75,7 +73,7 @@ Vous pouvez utiliser [Azure Data Studio](../azure-data-studio/what-is.md) pour e
 - Des extraits de code intégrés pour les tâches de gestion courantes
 - La possibilité de parcourir le système HDFS, de charger des fichiers, de prévisualiser des fichiers et de créer des répertoires
 - La possibilité de créer, d’ouvrir et d’exécuter des notebooks compatibles Jupyter
-- Un assistant Virtualisation des données pour simplifier la création de sources de données externes (avec l’**extension de virtualisation de données**).
+- Un assistant Virtualisation des données pour simplifier la création de sources de données externes (avec l’ **extension de virtualisation de données** ).
 
 ## <a name="architecture"></a><a id="architecture"></a> Architecture
 
@@ -96,7 +94,7 @@ Dans les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nove
 
 ### <a name="big-data-clusters-architecture"></a>Architecture des clusters Big Data
 
-Le diagramme suivant montre les composants d’un cluster Big Data pour SQL Server.
+Le diagramme suivant montre les composants d’un cluster Big Data SQL Server :
 
 ![Vue d’ensemble de l’architecture](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
@@ -121,4 +119,4 @@ Le pool de stockage est composé de pods de pool de stockage constitués de SQL 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur le déploiement des clusters Big Data SQL Server, consultez [Bien démarrer avec les clusters Big Data SQL Server](deploy-get-started.md).
+Pour plus d’informations sur le déploiement des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez [Bien démarrer avec [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).

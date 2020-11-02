@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: d78df7ed144c1cb94f486a20bd65ffc9c1c9cafb
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005973"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496707"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notes de version de SqlPackage.exe
 
@@ -57,7 +57,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Correctifs
 | Fonctionnalité | Détails |
 | :------ | :------ | 
-| Déploiement | Correction d’un script de déploiement incorrect généré lors du ciblage d’Azure SQL Database Managed Instance en tant qu’utilisateur non sysadmin  | 
+| Déploiement | Correction d’un script de déploiement incorrect qui était généré lorsqu’un utilisateur non sysadmin ciblait Azure SQL Managed Instance  | 
 | Déploiement | Résolution du chargement des contributeurs de déploiement lors de l’exécution d’actions de script | 
 | Aide | Sortie correcte de la durée calendaire dans sqlpackage lorsque l’opération prend plus d’une journée | 
 | Déploiement | Correction de l’inscription dacpac lors du déploiement de .NET Core | 
@@ -356,7 +356,7 @@ Build : &nbsp; 14.0.3917.1
 
 | Fix | Détails |
 | :-- | :------ |
-| Importer | Lors de l’importation d’un .bacpac Azure SQL Database dans une instance locale, correction des erreurs liées au fait que _Les clés principales de base de données sans mot de passe ne sont pas prises en charge dans cette version de SQL Server_. |
+| Importer | Lors de l’importation d’un .bacpac Azure SQL Database dans une instance locale, correction des erreurs liées au fait que _Les clés principales de base de données sans mot de passe ne sont pas prises en charge dans cette version de SQL Server_ . |
 | Graph | Correction d’une erreur de pseudo-colonnes non résolue pour les tables de graphe. |
 | Comparaison de schémas | Correction de l’authentification SQL pour comparer les schémas. | 
 | &nbsp; | &nbsp; |

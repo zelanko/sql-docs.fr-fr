@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: b1158cf4a88bb491b8ed1cb492eec1c3021cb6f9
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689436"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907057"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Démarrer des valeurs de graphique à secteurs en haut du graphique à secteurs (Générateur de rapports et SSRS)
 Par défaut, dans les graphiques à secteurs des rapports paginés de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , la première valeur du dataset démarre à 90 degrés du haut du graphique à secteurs. 
 
-![report-builder-pie-chart-start-at-90](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Capture d’écran d’un graphique en secteurs du générateur de rapports, avec le jeu de données démarrant à 90 degrés.](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
 
 *Les valeurs du graphique démarrent à 90 degrés.*
 
 Vous pouvez préférer avoir la première valeur en haut. 
 
-![report-builder-pie-chart-start-at-top](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Capture d’écran d’un graphique en secteurs du générateur de rapports, avec le jeu de données démarrant en haut.](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
 
 *Les valeurs du graphique commencent en haut du graphique.*
   
@@ -33,9 +33,9 @@ Vous pouvez préférer avoir la première valeur en haut.
   
 1.  Cliquez sur les secteurs.  
   
-2.  Si le volet **Propriétés** n'est pas ouvert, cliquez sur **Propriétés** sous l'onglet **Affichage**.  
+2.  Si le volet **Propriétés** n'est pas ouvert, cliquez sur **Propriétés** sous l'onglet **Affichage** .  
   
-3.  Dans le volet **Propriétés** , sous **Attributs personnalisés**, remplacez la valeur de **PieStartAngle** définie sur **0** par **270**.  
+3.  Dans le volet **Propriétés** , sous **Attributs personnalisés** , remplacez la valeur de **PieStartAngle** définie sur **0** par **270** .  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   

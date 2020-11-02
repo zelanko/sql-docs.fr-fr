@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3379d5eb53bc255a09e255d4986eb924912e5eb3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed45f77f509d3206340a2f52e6d3b31ac6824d87
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79447990"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907187"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Ajouter des visualisations aux rapports mobiles Reporting Services
 Les graphiques sont une partie essentielle de la visualisation des données. Découvrez les graphiques que vous pouvez utiliser dans les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pour couvrir un large éventail de scénarios. 
@@ -28,10 +28,10 @@ Certaines propriétés s’appliquent à tous les graphiques, tandis que d’aut
 ### <a name="number-format"></a>Format des nombres
 Vous pouvez affecter différents formats de nombres dans un graphique dans [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] , par exemple : général, devise avec ou sans décimales, pourcentages avec ou sans décimales, et ainsi de suite. Dans un graphique, la mise en forme des nombres s’applique aux annotations d’axe, ainsi qu’aux fenêtres contextuelles de points de données. Vous définissez la mise en forme des nombres individuellement dans chaque graphique, et non dans le rapport mobile global. 
 
-* Pour définir le format des nombres, sélectionnez l’onglet **Disposition** , sélectionnez un graphique sur l’aire de conception puis, dans le panneau **Propriétés visuelles** , sélectionnez un **Format de nombre**. 
+* Pour définir le format des nombres, sélectionnez l’onglet **Disposition** , sélectionnez un graphique sur l’aire de conception puis, dans le panneau **Propriétés visuelles** , sélectionnez un **Format de nombre** . 
   
 ### <a name="legend"></a>Légende
-* Pour afficher la légende d’un graphique, sélectionnez l’onglet **Disposition** , sélectionnez un graphique sur l’aire de conception puis, dans le panneau **Propriétés visuelles** , affectez la valeur **Activé** à **Afficher la légende**.
+* Pour afficher la légende d’un graphique, sélectionnez l’onglet **Disposition** , sélectionnez un graphique sur l’aire de conception puis, dans le panneau **Propriétés visuelles** , affectez la valeur **Activé** à **Afficher la légende** .
   
 ### <a name="series"></a>Série
 Chaque métrique ou valeur individuelle affichée sur un graphique est appelée série. Plusieurs séries peuvent partager un axe X et un axe Y. Les séries sont définies dans le volet Propriétés des données de la vue Données en sélectionnant une ou plusieurs tables de données et champs. Chaque champ se traduit sur la visualisation du graphique par une série de points de données spécifique ayant sa propre couleur.  
@@ -39,15 +39,15 @@ Chaque métrique ou valeur individuelle affichée sur un graphique est appelée 
 ### <a name="change-aggregation"></a>Modifier l’agrégation 
 Pour les champs numériques dans les graphiques, l’agrégation par défaut est la somme. Vous pouvez la modifier et choisir Moyenne, Nombre, Minimum, Maximum, Premier ou Dernier.
 
-* Sélectionnez l’onglet **Données** puis, dans **Propriétés des données**, sélectionnez **Options** en regard du champ numérique > sélectionnez une agrégation différente.
+* Sélectionnez l’onglet **Données** puis, dans **Propriétés des données** , sélectionnez **Options** en regard du champ numérique > sélectionnez une agrégation différente.
 
 ### <a name="set-or-clear-filters"></a>Définir ou effacer des filtres
 
 Si vous ajoutez un navigateur pour filtrer votre rapport mobile, vous pouvez identifier les graphiques que vous souhaitez filtrer.
 
-1. Sélectionnez l’onglet **Données** et, dans **Propriétés des données**, sélectionnez **Options**.
+1. Sélectionnez l’onglet **Données** et, dans **Propriétés des données** , sélectionnez **Options** .
 
-2. Sous **Filtré par**sont affichés les navigateurs que vous pouvez sélectionner ou effacer.
+2. Sous **Filtré par** sont affichés les navigateurs que vous pouvez sélectionner ou effacer.
 
 En savoir plus sur [l’ajout de navigateurs pour filtrer un rapport mobile](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md).
    
@@ -55,37 +55,37 @@ En savoir plus sur [l’ajout de navigateurs pour filtrer un rapport mobile](../
   
 Le graphique de temps est le graphique le plus basique dans [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. L’axe des heures (et dates) du graphique est défini automatiquement sur le premier champ de date/heure valide dans la table de données.  
 
-![mobile-report-time-chart](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
+![Capture d’écran d’un graphique de temps d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-time-chart.png)
 
 1. Faites glisser un **Graphique de temps** de l’onglet **Disposition** vers l’aire de conception et redimensionnez-le.
 
-2. Par défaut, il s’agit d’un graphique à barres empilées. Vous pouvez changer le type dans **Visualisation des séries**.
+2. Par défaut, il s’agit d’un graphique à barres empilées. Vous pouvez changer le type dans **Visualisation des séries** .
 
-3. Si le graphique a besoin de données qui ne sont pas encore dans le rapport, sélectionnez l’onglet **Données** > **Ajouter des données** pour [obtenir des données à partir d’Excel ou d’un jeu de données partagé](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
+3. Si le graphique a besoin de données qui ne sont pas encore dans le rapport, sélectionnez l’onglet **Données**  > **Ajouter des données** pour [obtenir des données à partir d’Excel ou d’un jeu de données partagé](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
-3. Dans le volet **Propriétés des données** , la **Série principale** est **SimulatedTable**. Cliquez sur la flèche dans la zone > sélectionnez votre table.
+3. Dans le volet **Propriétés des données** , la **Série principale** est **SimulatedTable** . Cliquez sur la flèche dans la zone > sélectionnez votre table.
 
-5. Si vous affectez la valeur **Par colonnes** à **Structure des données** (sous l’onglet **Disposition** > volet **Propriétés visuelles**), ici dans le volet **Propriétés des données** vous pouvez sélectionner plusieurs colonnes de valeurs numériques.
+5. Si vous affectez la valeur **Par colonnes** à **Structure des données** (sous l’onglet **Disposition**  > volet **Propriétés visuelles** ), ici dans le volet **Propriétés des données** vous pouvez sélectionner plusieurs colonnes de valeurs numériques.
 
-   Si vous affectez la valeur **Par lignes** à **Structure des données**, ici dans le volet **Propriétés des données** vous pouvez sélectionner un **Champ de nom de la série** et une colonne de valeurs numériques.
+   Si vous affectez la valeur **Par lignes** à **Structure des données** , ici dans le volet **Propriétés des données** vous pouvez sélectionner un **Champ de nom de la série** et une colonne de valeurs numériques.
    
 En savoir plus sur le [regroupement des données par colonnes ou par lignes](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   
 ## <a name="category-charts"></a>Graphiques à catégories  
   
-Contrairement aux graphiques de temps, dans un graphique à catégories vous regroupez sur un champ autre qu’un champ de date/heure sur l’axe X. Ce regroupement, appelé *coordonnée de catégorie*, doit être sur un champ de type chaîne, pas de type numérique.
+Contrairement aux graphiques de temps, dans un graphique à catégories vous regroupez sur un champ autre qu’un champ de date/heure sur l’axe X. Ce regroupement, appelé *coordonnée de catégorie* , doit être sur un champ de type chaîne, pas de type numérique.
 
-![mobile-report-category-chart](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
+![Capture d’écran d’un graphique de catégories d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-category-chart.png)   
 
 1. Faites glisser un **Graphique à catégories** de l’onglet **Disposition** vers l’aire de conception, redimensionnez-le et [obtenez des données](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)si nécessaire.
 
-2. Sélectionnez l’onglet **Données** et, dans le volet **Propriétés des données** , sous **Coordonnée de catégorie**, sélectionnez une table et un champ pour le regroupement. Ce champ figurera sur l’axe X du graphique résultant.
+2. Sélectionnez l’onglet **Données** et, dans le volet **Propriétés des données** , sous **Coordonnée de catégorie** , sélectionnez une table et un champ pour le regroupement. Ce champ figurera sur l’axe X du graphique résultant.
 
-3. Sous **Série principale**, sélectionnez la table et les champs numériques à agréger pour chaque catégorie. 
+3. Sous **Série principale** , sélectionnez la table et les champs numériques à agréger pour chaque catégorie. 
   
 ## <a name="totals-charts"></a>Graphiques de totaux  
 
-![mobile-report-totals-chart](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
+![Capture d’écran d’un graphique de totaux d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-totals-chart.png)
   
 Le graphique Totaux remplit deux fonctions distinctes : 
 * Il ne présente pas plusieurs séries, mais uniquement la somme (ou total) de la série principale définie. 
@@ -95,41 +95,41 @@ En savoir plus sur le [regroupement des données par colonnes ou par lignes](../
   
 ## <a name="comparison-charts"></a>Graphiques de comparaison  
   
-Les graphiques de temps, de catégorie et de totaux sont également disponibles en tant que *graphiques de comparaison*. Dans un graphique de comparaison, vous pouvez spécifier non seulement une série principale, mais également une deuxième série de comparaison. Vous pouvez afficher les séries principales et de comparaison de trois façons différentes.
+Les graphiques de temps, de catégorie et de totaux sont également disponibles en tant que *graphiques de comparaison* . Dans un graphique de comparaison, vous pouvez spécifier non seulement une série principale, mais également une deuxième série de comparaison. Vous pouvez afficher les séries principales et de comparaison de trois façons différentes.
 
-![mobile-report-comparison-time-chart](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
+![Capture d’écran d’un graphique de temps de comparaison d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-comparison-time-chart.png)
 
 1. Faites glisser un **Graphique de comparaison** (temps, catégorie ou totaux) de l’onglet **Disposition** vers l’aire de conception, redimensionnez-le et [obtenez des données](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)si nécessaire.
 
-2. Dans le volet **Propriétés visuelles** , dans **Visualisation des séries**, sélectionnez l’un des éléments suivants : 
+2. Dans le volet **Propriétés visuelles** , dans **Visualisation des séries** , sélectionnez l’un des éléments suivants : 
    * Barres et barres fines
    * Courbes et barres
    * Barres et aires en escalier 
 
 Dans les graphiques de comparaison, vous pouvez choisir d’avoir les mêmes couleurs de graphique sur les valeurs principales et les valeurs de comparaison dans une série.
 
-* Dans le volet **Propriétés visuelles** , affectez la valeur **Activé** à l’option **Réutiliser les couleurs sur les séries de comparaison**.
+* Dans le volet **Propriétés visuelles** , affectez la valeur **Activé** à l’option **Réutiliser les couleurs sur les séries de comparaison** .
 
-   Si vous affectez la valeur **Activé**, la palette de couleurs est réinitialisée entre le dessin de la série principale et le dessin de la série de comparaison. Les valeurs associées dans les deux séries sont donc identiques. 
+   Si vous affectez la valeur **Activé** , la palette de couleurs est réinitialisée entre le dessin de la série principale et le dessin de la série de comparaison. Les valeurs associées dans les deux séries sont donc identiques. 
 
-   Si vous affectez la valeur **Désactivé**, la palette de couleurs continue sa rotation normale pendant le dessin de la série principale après la série de comparaison, empêchant la coordination de couleurs potentiellement trompeuse entre les deux ensembles de séries.  
+   Si vous affectez la valeur **Désactivé** , la palette de couleurs continue sa rotation normale pendant le dessin de la série principale après la série de comparaison, empêchant la coordination de couleurs potentiellement trompeuse entre les deux ensembles de séries.  
   
 ## <a name="pie-and-funnel-charts"></a>Graphiques en secteurs et graphiques en entonnoir  
   
 Les graphiques en secteurs et les graphiques en entonnoir font partie des visualisations les plus simples. Vous pouvez structurer les données par lignes ou par colonnes. 
 * Les **graphiques en secteurs** dans les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] peuvent être des secteurs, des anneaux ou des anneaux avec un total au centre. Les graphiques en secteurs conviennent pour l’affichage de la taille relative de différentes parties d’un entier. Trop de secteurs rend la lecture difficile.
-* Les**graphiques en entonnoir** sont souvent utilisés pour afficher les étapes d’un processus, tel que les ventes.
+* Les **graphiques en entonnoir** sont souvent utilisés pour afficher les étapes d’un processus, tel que les ventes.
 
-![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
+![Capture d’écran d’un graphique en entonnoir d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
 
 ### <a name="structure-pie-and-funnel-chart-data-by-rows-or-by-columns"></a>Structurer les données des graphiques en secteurs et des graphiques en entonnoir par lignes ou par colonnes
 1. Faites glisser un **Graphique en secteurs** ou un **Graphique en entonnoir** de l’onglet **Disposition** vers l’aire de conception, redimensionnez-le et [obtenez des données](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)si nécessaire.
-2. Dans le volet **Propriétés visuelles** sous **Structure des données**, sélectionnez l’une des options suivantes :
+2. Dans le volet **Propriétés visuelles** sous **Structure des données** , sélectionnez l’une des options suivantes :
    * **Structure des données**
    * **Structure des données**
-3. Si vous avez sélectionné **Par colonnes**, sélectionnez l’onglet **Données** et, dans le volet **Propriétés des données** , sous **Série principale**, sélectionnez la table et tous les champs que vous souhaitez agréger dans le graphique à secteurs ou en entonnoir. Les noms de champ servent à étiqueter chaque zone du graphique obtenu.
+3. Si vous avez sélectionné **Par colonnes** , sélectionnez l’onglet **Données** et, dans le volet **Propriétés des données** , sous **Série principale** , sélectionnez la table et tous les champs que vous souhaitez agréger dans le graphique à secteurs ou en entonnoir. Les noms de champ servent à étiqueter chaque zone du graphique obtenu.
 
-   Si vous avez sélectionné **Par lignes**, sélectionnez l’onglet **Données** et, dans le volet **Propriétés des données** , sous **Colonne de catégorie**, sélectionnez la table et la colonne contenant les valeurs à utiliser pour le regroupement et les étiquettes dans le graphique à secteurs. Sous Colonne de la série principale, sélectionnez un champ numérique pour les valeurs du graphique.
+   Si vous avez sélectionné **Par lignes** , sélectionnez l’onglet **Données** et, dans le volet **Propriétés des données** , sous **Colonne de catégorie** , sélectionnez la table et la colonne contenant les valeurs à utiliser pour le regroupement et les étiquettes dans le graphique à secteurs. Sous Colonne de la série principale, sélectionnez un champ numérique pour les valeurs du graphique.
 
 En savoir plus sur le [regroupement des données par colonnes ou par lignes](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md). 
 
@@ -137,7 +137,7 @@ En savoir plus sur le [regroupement des données par colonnes ou par lignes](../
   
 Les treemaps affichent des métriques en appliquant leurs valeurs à la taille et à la couleur des mosaïques dans une grille rectangulaire. 
 
-![mobile-report-group-treemap](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
+![Capture d’écran d’un compartimentage de groupes d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-group-treemap.png)
 
 1. Faites glisser un **Tree Map** de l’onglet **Disposition** vers l’aire de conception, redimensionnez-le et [obtenez des données](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)si nécessaire.
 2.  Sélectionnez l’onglet **Données** et, dans **Propriétés des données** : 
@@ -155,7 +155,7 @@ Par défaut, les treemaps sont hiérarchiques et regroupent les mosaïques tout 
 
 Vous pouvez désactiver le regroupement pour que les mosaïques soient disposées uniquement par taille et par couleur. 
 
-* Sélectionnez l’onglet **Disposition** et affectez la valeur **Activé** à **Arborescence à deux niveaux**.   
+* Sélectionnez l’onglet **Disposition** et affectez la valeur **Activé** à **Arborescence à deux niveaux** .   
 
 ## <a name="waterfall-charts"></a>Graphiques en cascade
 
@@ -175,15 +175,15 @@ Les graphiques en cascade constituent un bon choix :
 
 1. Faites glisser un **Graphique en cascade** de l’onglet **Disposition** vers l’aire de conception, redimensionnez-le et [obtenez des données](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)si nécessaire.
 
-    ![mobile-report-waterfall-chart-icon](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
+    ![Capture d’écran d’une icône de graphique en cascade d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart-icon.png)
     
-2.  Sélectionnez l’onglet **Données** et dans le panneau **Propriétés des données** , sélectionnez un champ de catégorie dans vos données pour **Category Coordinate**(Coordonnées de catégorie) et un champ numérique pour **Série principale**: 
+2.  Sélectionnez l’onglet **Données** et dans le panneau **Propriétés des données** , sélectionnez un champ de catégorie dans vos données pour **Category Coordinate** (Coordonnées de catégorie) et un champ numérique pour **Série principale** : 
 
-    ![mobile-report-waterfall-data](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
+    ![Capture d’écran de données en cascade d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-data.png)
     
 3. Sélectionnez l’onglet **Disposition** pour afficher le graphique en cascade dans l’aperçu.
 
-   ![mobile-report-waterfall-chart](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
+   ![Capture d’écran d’un graphique en cascade d’un rapport mobile.](../../reporting-services/mobile-reports/media/mobile-report-waterfall-chart.png)
    
    Les mois à perte, comme février, juin et juillet, sont indiqués en rouge. 
    Les mois avec gain, comme septembre, octobre et novembre, sont indiqués en vert. 
