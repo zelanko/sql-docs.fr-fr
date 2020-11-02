@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257331"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793696"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Démarrage rapide : Connexion et interrogation de données avec Azure Data Studio à l’aide d’un pool SQL dédié dans Azure Synapse Analytics
 
@@ -36,7 +36,7 @@ Utilisez Azure Data Studio pour établir une connexion à votre serveur Azure Sy
 
 1. La première fois que vous exécutez Azure Data Studio, la page **Connexion** doit s’ouvrir. Si la page **Connexion** n’apparaît pas, sélectionnez **Ajouter une connexion** ou l’icône **Nouvelle connexion** dans la barre latérale **SERVEURS** :
    
-   ![Icône de nouvelle connexion](media/quickstart-sql-dw/new-connection-icon.png)
+   ![Capture d’écran de la page Connexion avec l’icône Nouvelle connexion mise en évidence.](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. Cet article utilise la *connexion SQL* , mais *l'authentification Windows* est aussi prise en charge. Renseignez les champs comme suit en utilisant le nom du serveur, le nom d’utilisateur et le mot de passe de *votre* serveur Azure SQL :
 
@@ -136,7 +136,7 @@ L’éditeur de requête est toujours connecté à la base de données *MASTER* 
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 
-Si vous n’avez pas l’intention de continuer à utiliser les exemples de bases de données créés dans cet article, [supprimez le groupe de ressources](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
+Si vous n’avez pas l’intention de continuer à utiliser les exemples de bases de données créés dans cet article, [supprimez le groupe de ressources](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations, consultez [Connexion à Synapse SQL avec Azure Data Studio](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio).
