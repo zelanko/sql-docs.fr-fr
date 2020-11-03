@@ -21,12 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9f566216c0dfd9f30a35c9472db433ad71e2f3c
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544669"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294393"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "89544669"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]numéro de version principale. Sa valeur peut être NULL.|  
 |**software_minor_version**|**tinyint**|Numéro de version secondaire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sa valeur peut être NULL.|  
 |**software_build_version**|**smallint**|Numéro de build de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sa valeur peut être NULL.|  
-|**time_zone**|**smallint**|Différence entre l'heure locale (lieu où l'opération de sauvegarde se déroule) et le temps universel UTC, exprimée en intervalles de 15 minutes. Les valeurs peuvent être comprises entre - 48 et + 48 incluses. La valeur 127 signifie inconnu. Par exemple, -20 correspond à l'heure de l'Est (USA) soit 5 heures après l'heure universelle UTC. Sa valeur peut être NULL.|  
+|**time_zone**|**smallint**|Différence entre l’heure locale (où l’opération de sauvegarde est effectuée) et le temps universel coordonné (UTC, Universal Time Coordinated) par intervalles de 15 minutes au moment du démarrage de l’opération de sauvegarde. Les valeurs peuvent être comprises entre - 48 et + 48 incluses. La valeur 127 signifie inconnu. Par exemple, -20 correspond à l'heure de l'Est (USA) soit 5 heures après l'heure universelle UTC. Sa valeur peut être NULL.|  
 |**mtf_minor_version**|**tinyint**|Numéro de la version mineure de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format Sa valeur peut être NULL.|  
 |**first_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal correspondant au premier enregistrement ou à l'enregistrement le plus ancien du journal dans le jeu de sauvegardes Sa valeur peut être NULL.|  
 |**last_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal correspondant à l'enregistrement du journal suivant après le jeu de sauvegarde. Sa valeur peut être NULL.|  
@@ -92,7 +92,7 @@ ms.locfileid: "89544669"
 |**is_copy_only**|**bit**|1 = Sauvegarde de copie unique. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|ID du branchement de récupération de début. Cela correspond à **FirstRecoveryForkID** de RESTORE HEADERONLY.<br /><br /> Pour les sauvegardes de données, **first_recovery_fork_guid** est égal à **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|ID du branchement de récupération de fin. Cela correspond à **RecoveryForkID** de RESTORE HEADERONLY.<br /><br /> Pour les sauvegardes de données, **first_recovery_fork_guid** est égal à **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** n’est pas égal à **last_recovery_fork_guid**, il s’agit du numéro séquentiel dans le journal du point de fourche. Dans le cas contraire, la valeur est NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** n’est pas égal à **last_recovery_fork_guid** , il s’agit du numéro séquentiel dans le journal du point de fourche. Dans le cas contraire, la valeur est NULL.|  
 |**database_guid**|**uniqueidentifier**|ID unique de la base de données. Cela correspond à **BindingId** de RESTORE HEADERONLY. Lors de la restauration de la base de données, une nouvelle valeur est attribuée.|  
 |**family_guid**|**uniqueidentifier**|ID unique de la base de données d'origine lors de sa création. Cette valeur demeure identique lors de la restauration de la base de données, même sous un nom différent.|  
 |**differential_base_lsn**|**numeric(25,0)**|Numéro de séquence d'enregistrement de base pour les sauvegardes différentielles. Pour une sauvegarde différentielle unique ; les modifications dont le LSN est supérieur ou égal à **differential_base_lsn** sont incluses dans la sauvegarde différentielle.<br /><br /> Pour une différentielle multibase, la valeur est NULL et le LSN de base doit être déterminé au niveau du fichier (consultez [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Pour les types de sauvegarde non différentiels, la valeur est toujours NULL.|  
