@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890909"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734667"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Voir et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données (DTA)
 
@@ -96,7 +96,7 @@ ms.locfileid: "91890909"
   
 3.  Arrivé au terme de la nouvelle session, ou après chargement de la session existante par l'outil, cliquez sur **Appliquer les recommandations** dans le menu **Actions** .  
   
-4.  Dans la boîte de dialogue **Appliquer les recommandations** , choisissez **Appliquer maintenant** ou **Planifier pour une date ultérieure**. Si vous choisissez **Planifier pour une date ultérieure**, sélectionnez la date et l'heure de l'application des recommandations.  
+4.  Dans la boîte de dialogue **Appliquer les recommandations** , choisissez **Appliquer maintenant** ou **Planifier pour une date ultérieure**. Si vous choisissez **Planifier pour une date ultérieure** , sélectionnez la date et l'heure de l'application des recommandations.  
   
 5.  Cliquez sur **OK** pour appliquer les recommandations.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "91890909"
   
 2.  Copiez et collez [l’Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) dans votre éditeur XML ou dans un éditeur de texte. Utilisez cet exemple pour créer un fichier d'entrée XML pour votre session de paramétrage. Pour plus d'informations sur l'exécution de cette tâche, consultez la section « Créer des fichiers d'entrée XML » dans [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-3.  Modifiez les éléments **TuningOptions** et **Configuration** dans l'exemple de fichier d'entrée XML. Dans l'élément **TuningOptions** , spécifiez les structures de création physique PDS dont doit tenir compte l'Assistant Paramétrage du moteur de base de données au cours de la session de paramétrage. Dans l'élément **Configuration** , spécifiez les structures PDS qui correspondent à la configuration hypothétique des structures PDS de la base de données que doit analyser l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations sur les attributs et les éléments enfants utilisables avec les éléments parents **TuningOptions** et **Configuration**, consultez [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Modifiez les éléments **TuningOptions** et **Configuration** dans l'exemple de fichier d'entrée XML. Dans l'élément **TuningOptions** , spécifiez les structures de création physique PDS dont doit tenir compte l'Assistant Paramétrage du moteur de base de données au cours de la session de paramétrage. Dans l'élément **Configuration** , spécifiez les structures PDS qui correspondent à la configuration hypothétique des structures PDS de la base de données que doit analyser l'Assistant Paramétrage du moteur de base de données. Pour plus d’informations sur les attributs et les éléments enfants utilisables avec les éléments parents **TuningOptions** et **Configuration** , consultez [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Enregistrez le fichier d'entrée avec l'extension **.xml** .  
   
@@ -176,7 +176,7 @@ ms.locfileid: "91890909"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     Le schéma XML de l’Assistant Paramétrage du moteur de base de données est également disponible en ligne sur [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta).  
+     Le schéma XML de l’Assistant Paramétrage du moteur de base de données est également disponible en ligne sur [https://schemas.microsoft.com/sqlserver/2004/07/dta/](https://schemas.microsoft.com/sqlserver/2004/07/dta/).  
   
 6.  Après avoir créé une charge de travail et un fichier d’entrée XML, vous êtes prêt à envoyer le fichier d’entrée vers l’utilitaire de ligne de commande **dta** pour l’analyser. Veillez à donner un nom au fichier de sortie XML pour l’argument **-ox** de l’utilitaire. Cette opération crée un fichier de sortie XML dont la configuration recommandée est spécifiée dans l'élément **Configuration** . Si vous souhaitez exécuter de nouveau l'Assistant Paramétrage du moteur de base de données pour vérifier une autre configuration hypothétique basée sur la sortie, vous pouvez copier et coller le contenu de l'élément **Configuration** du fichier de sortie dans un nouveau fichier d'entrée XML ou dans votre fichier d'origine. Pour plus d’informations sur l’utilisation d’un fichier d’entrée XML avec l’utilitaire **dta** , consultez la section « Paramétrer une base de données à l’aide de l’utilitaire dta » de l’article [SDémarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -203,11 +203,11 @@ ms.locfileid: "91890909"
 4.  Double cliquez sur le nom d'une session de paramétrage pour charger ses données dans l'Assistant Paramétrage du moteur de base de données. Une fois les données de la session chargées, vous pouvez sélectionner n'importe quel onglet afin d'afficher les informations relatives à cette session de paramétrage.  
   
 ### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>Évaluer des sessions de paramétrage existantes en tant que configurations hypothétiques  
- Suivez les étapes suivantes pour évaluer une session de paramétrage existante. L'évaluation d'une session de paramétrage existante implique l'examen et l'édition de ses recommandations, puis le reparamétrage. Par exemple, si vous décidez que vous voulez uniquement créer des index sur la **table1**, vous pouvez supprimer la création des vues indexées et du partitionnement d'une recommandation de paramétrage existante. L'Assistant Paramétrage du moteur de base de données crée alors une nouvelle session de paramétrage et ajuste la charge de travail de vos bases de données au moyen des recommandations éditées, envisagées en tant que configuration hypothétique. Cela signifie que l'Assistant Paramétrage du moteur de base de données ajuste la charge de travail des bases de données comme si les recommandations éditées avaient été mises en œuvre, ce qui vous permet de réaliser une analyse de simulation limitée. Il s'agit d'une analyse de simulation limitée dans la mesure où, lorsque vous utilisez le GUI de l'Assistant Paramétrage du moteur de base de données, vous ne pouvez choisir qu'un sous-ensemble d'une recommandation existante. Pour réaliser une analyse complète de scénarios spécifiant une configuration hypothétique entièrement nouvelle, non basée sur un sous-ensemble d’une session précédente de paramétrage, vous devez utiliser le fichier d’entrée XML de l’Assistant Paramétrage du moteur de base de données avec l’utilitaire de ligne de commande **dta** .  
+ Suivez les étapes suivantes pour évaluer une session de paramétrage existante. L'évaluation d'une session de paramétrage existante implique l'examen et l'édition de ses recommandations, puis le reparamétrage. Par exemple, si vous décidez que vous voulez uniquement créer des index sur la **table1** , vous pouvez supprimer la création des vues indexées et du partitionnement d'une recommandation de paramétrage existante. L'Assistant Paramétrage du moteur de base de données crée alors une nouvelle session de paramétrage et ajuste la charge de travail de vos bases de données au moyen des recommandations éditées, envisagées en tant que configuration hypothétique. Cela signifie que l'Assistant Paramétrage du moteur de base de données ajuste la charge de travail des bases de données comme si les recommandations éditées avaient été mises en œuvre, ce qui vous permet de réaliser une analyse de simulation limitée. Il s'agit d'une analyse de simulation limitée dans la mesure où, lorsque vous utilisez le GUI de l'Assistant Paramétrage du moteur de base de données, vous ne pouvez choisir qu'un sous-ensemble d'une recommandation existante. Pour réaliser une analyse complète de scénarios spécifiant une configuration hypothétique entièrement nouvelle, non basée sur un sous-ensemble d’une session précédente de paramétrage, vous devez utiliser le fichier d’entrée XML de l’Assistant Paramétrage du moteur de base de données avec l’utilitaire de ligne de commande **dta** .  
   
 ##### <a name="to-evaluate-an-existing-tuning-session"></a>Pour évaluer une session de paramétrage existante  
   
-1.  Après avoir démarré l’Assistant Paramétrage du moteur de base de données, double cliquez sur une session de paramétrage dans la moitié supérieure du **Moniteur de session**, ce qui charge les données de la session dans l’Assistant Paramétrage du moteur de base de données.  
+1.  Après avoir démarré l’Assistant Paramétrage du moteur de base de données, double cliquez sur une session de paramétrage dans la moitié supérieure du **Moniteur de session** , ce qui charge les données de la session dans l’Assistant Paramétrage du moteur de base de données.  
   
 2.  Cliquez sur la barre de **Progression** pour vérifier le journal de paramétrage, qui contient des informations sur les erreurs liées à tout événement de la charge de travail que l'Assistant Paramétrage du moteur de base de données ne peut ajuster. Cette information peut vous aider à évaluer l'efficience de la charge de travail.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "91890909"
   
 6.  Dans le menu **Actions** , cliquez sur **Évaluer les recommandations**. L'Assistant Paramétrage du moteur de base de données crée une nouvelle session de paramétrage qui utilise les recommandations éditées en tant que configuration hypothétique. Pour afficher la configuration hypothétique au format XML, choisissez **Cliquez ici pour afficher la section configuration**.  
   
-7.  Sous l'onglet **Général** , tapez un **Nom de session**et assurez-vous que la **Charge de travail** correcte est spécifiée.  
+7.  Sous l'onglet **Général** , tapez un **Nom de session** et assurez-vous que la **Charge de travail** correcte est spécifiée.  
   
 8.  Dans l'onglet **Options de paramétrage** , vous pouvez spécifier une heure de paramétrage ou n'importe laquelle des **Options avancées**.  
   
@@ -230,11 +230,11 @@ ms.locfileid: "91890909"
   
 ##### <a name="to-create-new-tuning-sessions-by-cloning-existing-sessions"></a>Pour créer de nouvelles sessions de paramétrage en clonant des sessions existantes  
   
-1.  Après avoir démarré l’Assistant Paramétrage du moteur de base de données, double cliquez sur une session de paramétrage dans la moitié supérieure du **Moniteur de session**, ce qui charge les données de la session dans l’Assistant Paramétrage du moteur de base de données.  
+1.  Après avoir démarré l’Assistant Paramétrage du moteur de base de données, double cliquez sur une session de paramétrage dans la moitié supérieure du **Moniteur de session** , ce qui charge les données de la session dans l’Assistant Paramétrage du moteur de base de données.  
   
 2.  Dans le menu **Actions** , cliquez sur **Cloner la session**.  
   
-3.  Sous l'onglet **Général** , tapez un **Nom de session**et assurez-vous que la **Charge de travail** correcte est spécifiée.  
+3.  Sous l'onglet **Général** , tapez un **Nom de session** et assurez-vous que la **Charge de travail** correcte est spécifiée.  
   
 4.  Dans l'onglet **Options de paramétrage** , vous pouvez spécifier une heure de paramétrage, les structures du modèle physique que l'Assistant Paramétrage du moteur de base de données doit penser à créer, ainsi que ce qu'il doit penser à supprimer dans ses recommandations.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "91890909"
 ##  <a name="user-interface-descriptions"></a><a name="UI"></a> Descriptions de l'interface utilisateur  
   
 ### <a name="sessions-monitor"></a>Moniteur de sessions  
- Le**Moniteur de session** affiche des informations sur les sessions ouvertes dans l'Assistant Paramétrage du moteur de base de données. Pour afficher des informations sur la session dans la fenêtre des propriétés, sélectionnez un nom de session dans le **Moniteur de session**.  
+ Le **Moniteur de session** affiche des informations sur les sessions ouvertes dans l'Assistant Paramétrage du moteur de base de données. Pour afficher des informations sur la session dans la fenêtre des propriétés, sélectionnez un nom de session dans le **Moniteur de session**.  
   
 ### <a name="recommendations-tab"></a>Onglet Recommandations  
  L'onglet **Recommandations** apparaît une fois que l'Assistant Paramétrage du moteur de base de données a terminé l'analyse d'une charge de travail. Cette grille contient les recommandations pour chaque objet pris en compte. Le cas échéant, les recommandations relatives aux partitions sont présentées dans la grille supérieure tandis que les recommandations relatives aux index sont présentées dans la grille inférieure. Les grilles ne s'affichent pas s'il n'existe aucune recommandation.  

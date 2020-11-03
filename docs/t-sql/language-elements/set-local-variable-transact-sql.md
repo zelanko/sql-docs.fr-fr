@@ -19,17 +19,17 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f27289f3363ea503e365c9398d387dcb71222b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 49ddfeda6b720d774e2b1d7c089fb295d185e40a
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195495"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067383"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Affecte la valeur indiquée à la variable locale spécifiée, précédemment créée en utilisant l’instruction DECLARE @*local_variable*.  
+Affecte la valeur indiquée à la variable locale spécifiée, précédemment créée en utilisant l’instruction DECLARE @ *local_variable*.  
   
 ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,14 +63,14 @@ SET
 ```  
 Syntaxe pour Azure Synapse Analytics et Parallel Data Warehouse :  
 ```syntaxsql
-SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
+SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Arguments
 **@** _local_variable_  
-Nom d’une variable de tout type sauf **cursor**, **text**, **ntext**, **image** ou **table**. Les noms de variables doivent commencer par une arobase ( **@** ). Les noms de variable doivent respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
+Nom d’une variable de tout type sauf **cursor** , **text** , **ntext** , **image** ou **table**. Les noms de variables doivent commencer par une arobase ( **@** ). Les noms de variable doivent respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
 *property_name*  
 Propriété d’un type défini par l’utilisateur.  
@@ -82,7 +82,7 @@ Champ public d’un type défini par l’utilisateur.
 Nom d’un type CLR (Common Language Runtime) défini par l’utilisateur.  
   
 `{ . | :: }`  
-Définit la méthode d'un type CLR défini par l'utilisateur. Pour une méthode d’instance (non statique), utilisez un point (**.**). Pour une méthode statique, utilisez deux fois un deux-points (**::**). Pour appeler une méthode, une propriété ou un champ de type CLR défini par l'utilisateur, vous devez avoir l'autorisation EXECUTE sur le type.  
+Définit la méthode d'un type CLR défini par l'utilisateur. Pour une méthode d’instance (non statique), utilisez un point ( **.** ). Pour une méthode statique, utilisez deux fois un deux-points ( **::** ). Pour appeler une méthode, une propriété ou un champ de type CLR défini par l'utilisateur, vous devez avoir l'autorisation EXECUTE sur le type.  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 Méthode d’un type défini par l’utilisateur qui utilise un ou plusieurs arguments pour modifier l’état d’une instance d’un type. Les méthodes statiques doivent être publiques.  
@@ -159,7 +159,7 @@ Indique qu'un message d'avertissement est envoyé au client lorsque le curseur e
 FOR *select_statement*  
 Instruction SELECT standard qui définit le jeu de résultats du curseur. Les mots clés FOR BROWSE et INTO ne sont pas autorisés dans l’instruction *select_statement* d’une déclaration de curseur.  
   
-Si vous utilisez DISTINCT, UNION, GROUP BY ou HAVING ou si vous incluez une expression d’agrégation dans *select_list*, le curseur créé est de type STATIC.  
+Si vous utilisez DISTINCT, UNION, GROUP BY ou HAVING ou si vous incluez une expression d’agrégation dans *select_list* , le curseur créé est de type STATIC.  
   
 Si chaque table sous-jacente ne dispose pas d’un index unique et d’un curseur SCROLL ISO ou si un curseur KEYSET [!INCLUDE[tsql](../../includes/tsql-md.md)] est demandé, le curseur est automatiquement de type STATIC.  
   
@@ -169,7 +169,7 @@ READ ONLY
 Empêche les mises à jour par l'intermédiaire de ce curseur. Le curseur ne peut pas être référencé dans une clause WHERE CURRENT OF d’une instruction UPDATE ou DELETE. Cette option remplace la possibilité par défaut de mise à jour d'un curseur. Ce mot clé est désormais représenté par les mots READ et ONLY séparés par un espace, au lieu d'un trait de soulignement (READ_ONLY).  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-Définit les colonnes qui peuvent être mises à jour par le curseur. Si OF *column_name* [**,**...*n*] est fourni, seules les colonnes indiquées autorisent les modifications. Lorsqu’aucune liste n’est spécifiée, toutes les colonnes peuvent être mises à jour, sauf si le curseur a été défini en tant que curseur READ_ONLY.  
+Définit les colonnes qui peuvent être mises à jour par le curseur. Si OF *column_name* [ **,**... *n* ] est fourni, seules les colonnes indiquées autorisent les modifications. Lorsqu’aucune liste n’est spécifiée, toutes les colonnes peuvent être mises à jour, sauf si le curseur a été défini en tant que curseur READ_ONLY.  
   
 ## <a name="remarks"></a>Notes  
 Dès qu’une variable est déclarée, elle est initialisée avec la valeur NULL. Utilisez l’instruction SET pour assigner une valeur autre que NULL à une variable déclarée. L'instruction SET qui affecte une valeur à la variable renvoie une seule valeur. Lorsque vous initialisez plusieurs variables, utilisez une instruction SET distincte pour chaque variable locale.  

@@ -1,6 +1,6 @@
 ---
+title: Plan de maintenance, onglet Conception
 description: Plan de maintenance, onglet Conception
-title: Plan de maintenance (onglet Conception) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,22 @@ f1_keywords:
 - sql13.swb.maint.maintplanproperties.optimizations.f1
 - sql13.swb.maint.planeditor.f1
 - sql13.swb.maint.subplaneditor.f1
+- Task.FileExtension
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e56d4d52cee3ac75354acd17d7496d062bc3ed73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cc3aaec07d038ed6218a7a20268e94f23d3949
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420873"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067315"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de maintenance, onglet Conception
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   Utilisez **Plan de maintenance (onglet Conception)** pour spécifier les propriétés d’un plan de maintenance et de ses sous-plans. Faites glisser des tâches de la barre d'outils jusqu'au concepteur de plan. Cliquez avec le bouton droit sur des groupes de tâches pour créer des branchements de chemins d'exécution. Les plans de maintenance sont enregistrés en tant que packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui sont exécutés par les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+ Utilisez **Plan de maintenance (onglet Conception)** pour spécifier les propriétés d’un plan de maintenance et de ses sous-plans. Faites glisser des tâches de la barre d'outils jusqu'au concepteur de plan. Cliquez avec le bouton droit sur des groupes de tâches pour créer des branchements de chemins d'exécution. Les plans de maintenance sont enregistrés en tant que packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui sont exécutés par les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
  **Ajouter le sous-plan**  
@@ -60,7 +63,7 @@ ms.locfileid: "88420873"
  **Aire du concepteur**  
  Conception et entretien des plans de maintenance. Utilisez l'aire du concepteur pour ajouter des tâches de maintenance à un plan, supprimer des tâches d'un plan, spécifier des liens de précédence entre des tâches et indiquer les branchements et le parallélisme des tâches.  
   
- Un lien de précédence entre deux tâches établit une relation entre ces tâches. La seconde tâche (la *tâche dépendante*) s’exécute seulement si le résultat d’exécution de la première tâche (la *tâche prioritaire*) correspond aux critères spécifiés. En général, le résultat d'exécution spécifié est **Succès**, **Échec**ou **À l'achèvement**. L'aire du concepteur de plan de maintenance est basée sur l'aire du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Pour plus d’informations, consultez [Contraintes de précédence](../../integration-services/control-flow/precedence-constraints.md).  
+ Un lien de précédence entre deux tâches établit une relation entre ces tâches. La seconde tâche (la *tâche dépendante* ) s’exécute seulement si le résultat d’exécution de la première tâche (la *tâche prioritaire* ) correspond aux critères spécifiés. En général, le résultat d'exécution spécifié est **Succès** , **Échec** ou **À l'achèvement**. L'aire du concepteur de plan de maintenance est basée sur l'aire du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Pour plus d’informations, consultez [Contraintes de précédence](../../integration-services/control-flow/precedence-constraints.md).  
   
  Comme exemple, il est possible de spécifier une tâche Défragmenter l'index qui doit s'exécuter seulement si une tâche Vérifier l'intégrité de la base de données antérieure s'est terminée correctement. La fonctionnalité de liaison des tâches par priorités permet également de traiter les conditions d'erreur ou d'échec dans un plan. Par exemple, si la tâche Vérifier l'intégrité de la base de données a échoué, une tâche Notifier l'opérateur peut informer un utilisateur ou un opérateur de l'échec.  
   
@@ -76,14 +79,14 @@ ms.locfileid: "88420873"
   
  Pour spécifier des liens de précédence entre deux tâches, commencez par faire glisser les tâches sur la surface de dessin, puis cliquez sur la tâche qui apparaît en premier (tâche précédente) et faites glisser la flèche jusqu'à la tâche dépendante. Une fois qu'un lien de précédence a été établi, le concepteur affiche une flèche reliant les deux tâches, de la tâche prioritaire vers la tâche dépendante. Par défaut, quand un lien est établi au préalable, la contrainte du lien est définie de telle sorte que la tâche dépendante s’exécute uniquement si le résultat de l’exécution de la tâche prioritaire est **Succès**.  
   
- Pour modifier les propriétés d’un lien de précédence, double-cliquez sur le lien pour démarrer l’ **Éditeur de contrainte de précédence**. Cela fournit de nombreuses options pour spécifier les conditions logiques qui déterminent si la tâche dépendante s'exécute. Par exemple, le **Résultat d’exécution** peut prendre la valeur **Échec**, auquel cas la tâche dépendante s’exécute uniquement si la tâche prioritaire échoue. Il est également possible de modifier la propriété du résultat d’exécution d’un lien en spécifiant **Succès**, **Échec**ou **À l’achèvement**en cliquant avec le bouton droit sur le lien, puis en effectuant une sélection dans le menu contextuel.  
+ Pour modifier les propriétés d’un lien de précédence, double-cliquez sur le lien pour démarrer l’ **Éditeur de contrainte de précédence**. Cela fournit de nombreuses options pour spécifier les conditions logiques qui déterminent si la tâche dépendante s'exécute. Par exemple, le **Résultat d’exécution** peut prendre la valeur **Échec** , auquel cas la tâche dépendante s’exécute uniquement si la tâche prioritaire échoue. Il est également possible de modifier la propriété du résultat d’exécution d’un lien en spécifiant **Succès** , **Échec** ou **À l’achèvement** en cliquant avec le bouton droit sur le lien, puis en effectuant une sélection dans le menu contextuel.  
   
- Pour spécifier un branchement de tâche, commencez par créer des liens de précédence entre deux tâches. Ensuite, placez une autre tâche dépendante sur la surface de dessin, qui s'exécute sur un autre résultat que la première tâche dépendante. Cliquez sur la tâche précédente et faites glisser la seconde flèche à partir de la tâche prioritaire vers la tâche dépendante. Pour modifier le résultat d’exécution (**Succès**, **Échec**, **À l’achèvement**) qui entraîne l’exécution d’une tâche dépendante, double-cliquez sur la flèche du lien et modifiez le champ **Résultat d’exécution** . Vous pouvez également cliquer avec le bouton droit sur le lien et sélectionner la valeur du résultat d'exécution souhaitée dans le menu contextuel.  
+ Pour spécifier un branchement de tâche, commencez par créer des liens de précédence entre deux tâches. Ensuite, placez une autre tâche dépendante sur la surface de dessin, qui s'exécute sur un autre résultat que la première tâche dépendante. Cliquez sur la tâche précédente et faites glisser la seconde flèche à partir de la tâche prioritaire vers la tâche dépendante. Pour modifier le résultat d’exécution ( **Succès** , **Échec** , **À l’achèvement** ) qui entraîne l’exécution d’une tâche dépendante, double-cliquez sur la flèche du lien et modifiez le champ **Résultat d’exécution** . Vous pouvez également cliquer avec le bouton droit sur le lien et sélectionner la valeur du résultat d'exécution souhaitée dans le menu contextuel.  
   
  Pour spécifier le parallélisme des tâches, liez deux tâches dépendantes ou plus à une tâche prioritaire unique. Modifiez les propriétés des liens de précédence de sorte que les champs Résultat d'exécution des liens qui pointent sur les tâches dépendantes qui s'exécutent en parallèle ont la même valeur.  
   
 ## <a name="additional-features-available-from-the-shortcut-menu"></a>Fonctionnalités supplémentaires disponibles à partir du menu contextuel  
- Pour afficher des options supplémentaires, sélectionnez une ou plusieurs tâches sur la surface de dessin, puis cliquez avec le bouton droit pour afficher le menu contextuel. Outre les options classiques **Couper**, **Copier**, **Coller**, **Supprimer**et **Tout sélectionner**, les options spéciales ci-après sont disponibles pour certaines tâches.  
+ Pour afficher des options supplémentaires, sélectionnez une ou plusieurs tâches sur la surface de dessin, puis cliquez avec le bouton droit pour afficher le menu contextuel. Outre les options classiques **Couper** , **Copier** , **Coller** , **Supprimer** et **Tout sélectionner** , les options spéciales ci-après sont disponibles pour certaines tâches.  
   
  **Ajouter une annotation**  
  Ajoute une note descriptive sur l’aire de conception.  

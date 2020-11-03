@@ -6,7 +6,7 @@
   href: sql-server/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: What's New
+    - name: Nouveautés
       items:
         - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -1869,7 +1869,7 @@
           items:
             - name: Créer
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Supprimer
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifier
               href: relational-databases/tables/modify-edge-constraint.md
@@ -10180,6 +10180,8 @@
   items:
     - name: Vue d’ensemble
       href: sql-server/azure-arc/overview.md
+    - name: Notes de publication
+      href: sql-server/azure-arc/release-notes.md
     - name: Se connecter
       href: sql-server/azure-arc/connect.md
     - name: Connecter à grande échelle

@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "92193729"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Nouveautés d’Integration Services dans SQL Server 2016
@@ -203,7 +203,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
  Le nouveau niveau de journalisation **RuntimeLineage** dans le catalogue SSIS permet de collecter les données nécessaires pour le suivi des informations de lignage dans le flux de données. Vous pouvez analyser ces informations de lignage pour mapper la relation de lignage entre différentes tâches. Les éditeurs de logiciels indépendants et les développeurs peuvent créer des outils de mappage de lignage personnalisés à l’aide de ces informations. 
 
 ####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> Nouveau niveau de journalisation personnalisé dans le catalogue SSIS  
- Dans les versions antérieures du catalogue SSIS, vous pouvez choisir l’un des quatre niveaux de journalisation intégrés ( **None, Basic, Performance ou Verbose** ) quand vous exécutez un package. SQL Server 2016 ajoute le niveau de journalisation **RuntimeLineage** . En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Dans les versions antérieures du catalogue SSIS, vous pouvez choisir l’un des quatre niveaux de journalisation intégrés ( **None, Basic, Performance ou Verbose** ) quand vous exécutez un package. SQL Server 2016 ajoute le niveau de journalisation **RuntimeLineage**. En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> Noms de colonnes pour les erreurs contenues dans le flux de données  
  Lorsque vous redirigez les lignes contenant des erreurs vers une sortie d'erreur dans le flux de données, la sortie contient un identificateur numérique pour la colonne dans laquelle l'erreur s'est produite, mais n'affiche pas le nom de la colonne. Il existe désormais plusieurs façons de rechercher ou d’afficher le nom de la colonne dans laquelle l’erreur s’est produite.  

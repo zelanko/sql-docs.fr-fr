@@ -29,12 +29,12 @@ ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
-ms.openlocfilehash: 1944728a05db49a194b2c1f070695fd16ee095d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06776d309042483f879dd3d31d9f6bae62119037
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479006"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067485"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -71,6 +71,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
         ENCRYPTION BY PASSWORD ='encryption_password'   
       )   
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -78,18 +79,18 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *certname*  
  Nom du certificat à sauvegarder.
 
- TO FILE = '*path_to_file*'  
+ TO FILE = ' *path_to_file* '  
  Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel le certificat doit être enregistré. Il peut s’agir d’un chemin d’accès local ou d’un chemin d’accès UNC à un emplacement réseau. Si seul un nom de fichier est spécifié, le fichier sera enregistré dans le dossier de données utilisateur de l’instance par défaut (qui peut être ou non le dossier DATA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Pour la base de données locale SQL Server Express, le dossier de données utilisateur par défaut de l’instance correspond au chemin d’accès spécifié par la variable d’environnement `%USERPROFILE%` pour le compte qui a créé l’instance.  
 
  WITH PRIVATE KEY Spécifie que la clé privée du certificat doit être enregistrée dans un fichier. Cette clause est facultative.
 
- FILE = '*path_to_private_key_file*'  
+ FILE = ' *path_to_private_key_file* '  
  Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel la clé privée doit être enregistrée. Il peut s’agir d’un chemin d’accès local ou d’un chemin d’accès UNC à un emplacement réseau. Si seul un nom de fichier est spécifié, le fichier sera enregistré dans le dossier de données utilisateur de l’instance par défaut (qui peut être ou non le dossier DATA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Pour la base de données locale SQL Server Express, le dossier de données utilisateur par défaut de l’instance correspond au chemin d’accès spécifié par la variable d’environnement `%USERPROFILE%` pour le compte qui a créé l’instance.  
 
- ENCRYPTION BY PASSWORD = '*encryption_password*'  
+ ENCRYPTION BY PASSWORD = ' *encryption_password* '  
  Mot de passe utilisé pour chiffrer la clé privée avant de l'enregistrer dans le fichier de sauvegarde. Le mot de passe est sujet à des vérifications de la complexité.  
   
- DECRYPTION BY PASSWORD = '*decryption_password*'  
+ DECRYPTION BY PASSWORD = ' *decryption_password* '  
  Mot de passe utilisé pour déchiffrer la clé privée avant de sauvegarder la clé. Cet argument n’est pas nécessaire si le certificat est chiffré par la clé principale. 
   
 ## <a name="remarks"></a>Notes  

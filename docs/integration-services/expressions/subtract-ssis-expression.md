@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0615678e5c6613b5b709f711dc3f2cf9e7dfa8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d4235e64f59814075a5d0d57e24d5345b9876a0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425361"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243683"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Soustraction) (expression SSIS)
 
@@ -44,10 +44,9 @@ numeric_expression1 - numeric_expression2
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
 ## <a name="remarks"></a>Notes  
- Ajoutez l'expression unaire négative entre parenthèses pour garantir que l'expression est évaluée dans l'ordre correct  
-  
-## <a name="remarks"></a>Notes  
- Si l'un des opérandes est NULL, le résultat est NULL.  
+ - Ajoutez l'expression unaire négative entre parenthèses pour garantir que l'expression est évaluée dans l'ordre correct  
+
+ - Si l'un des opérandes est NULL, le résultat est NULL.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant soustrait des littéraux numériques.  
