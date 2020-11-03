@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17199fb610f707c77a6610d34c8b1a5f0166de13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2767a89347329ee084c8b055bcb444dc4e78117
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424851"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243528"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Exécution asynchrone (méthode d’interrogation)
-Avant ODBC 3,8 et le kit de développement logiciel (SDK) Windows 7, les opérations asynchrones étaient uniquement autorisées sur les fonctions d’instruction. Pour plus d’informations, consultez **exécution des opérations d’instruction de manière asynchrone**, plus loin dans cette rubrique.  
+Avant ODBC 3,8 et le kit de développement logiciel (SDK) Windows 7, les opérations asynchrones étaient uniquement autorisées sur les fonctions d’instruction. Pour plus d’informations, consultez **exécution des opérations d’instruction de manière asynchrone** , plus loin dans cette rubrique.  
   
  ODBC 3,8 dans le kit de développement logiciel (SDK) Windows 7 a introduit une exécution asynchrone sur les opérations liées à la connexion. Pour plus d’informations, consultez la section **exécution d’opérations de connexion de manière asynchrone** , plus loin dans cette rubrique.  
   
@@ -201,7 +201,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  Pour spécifier que les fonctions exécutées avec une connexion particulière doivent être exécutées de façon asynchrone, l’application appelle **SQLSetConnectAttr** et définit l’attribut SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE sur SQL_ASYNC_DBC_ENABLE_ON. La définition d’un attribut de connexion avant d’établir une connexion s’exécute toujours de façon synchrone. En outre, l’opération qui définit l’attribut de connexion SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE avec **SQLSetConnectAttr** s’exécute toujours de façon synchrone.  
   
- Une application peut activer l’opération asynchrone avant d’établir une connexion. Étant donné que le gestionnaire de pilotes ne peut pas déterminer le pilote à utiliser avant d’établir une connexion, le gestionnaire de pilotes renvoie toujours la valeur réussite dans **SQLSetConnectAttr**. Toutefois, la connexion peut échouer si le pilote ODBC ne prend pas en charge les opérations asynchrones.  
+ Une application peut activer l’opération asynchrone avant d’établir une connexion. Étant donné que le gestionnaire de pilotes ne peut pas déterminer le pilote à utiliser avant d’établir une connexion, le gestionnaire de pilotes renvoie toujours la valeur réussite dans **SQLSetConnectAttr** . Toutefois, la connexion peut échouer si le pilote ODBC ne prend pas en charge les opérations asynchrones.  
   
  En général, il peut y avoir au plus une fonction d’exécution asynchrone associée à un handle de connexion ou un handle d’instruction particulier. Toutefois, un descripteur de connexion peut avoir plusieurs descripteurs d’instruction associés. S’il n’y a pas d’opération asynchrone en cours d’exécution sur le handle de connexion, un descripteur d’instruction associé peut exécuter une opération asynchrone. De même, vous pouvez avoir une opération asynchrone sur un handle de connexion si aucune opération asynchrone n’est en cours sur un handle d’instruction associé. Une tentative d’exécution d’une opération asynchrone à l’aide d’un handle qui exécute actuellement une opération asynchrone retourne HY010, « erreur de séquence de fonction ».  
   
@@ -233,23 +233,22 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  Si une connexion est ouverte ou fermée de manière asynchrone, l’opération est terminée lorsque l’application reçoit SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO dans l’appel de fonction d’origine.  
   
- Une nouvelle fonction a été ajoutée à ODBC 3,8, **SQLCancelHandle**. Cette fonction annule les six fonctions de connexion (**SQLBrowseConnect**, **SQLConnect**, **SQLDisconnect**, **SQLDriverConnect**, **SQLEndTran**et **SQLSetConnectAttr**). Une application doit appeler **SQLGetFunctions** pour déterminer si le pilote prend en charge **SQLCancelHandle**. Comme avec **SQLCancel**, si **SQLCancelHandle** retourne Success, cela ne signifie pas que l’opération a été annulée. Une application doit rappeler la fonction d’origine pour déterminer si l’opération a été annulée. **SQLCancelHandle** vous permet d’annuler des opérations asynchrones sur des handles de connexion ou des handles d’instruction. L’utilisation de **SQLCancelHandle** pour annuler une opération sur un handle d’instruction est identique à l’appel de **SQLCancel**.  
+ Une nouvelle fonction a été ajoutée à ODBC 3,8, **SQLCancelHandle** . Cette fonction annule les six fonctions de connexion ( **SQLBrowseConnect** , **SQLConnect** , **SQLDisconnect** , **SQLDriverConnect** , **SQLEndTran** et **SQLSetConnectAttr** ). Une application doit appeler **SQLGetFunctions** pour déterminer si le pilote prend en charge **SQLCancelHandle** . Comme avec **SQLCancel** , si **SQLCancelHandle** retourne Success, cela ne signifie pas que l’opération a été annulée. Une application doit rappeler la fonction d’origine pour déterminer si l’opération a été annulée. **SQLCancelHandle** vous permet d’annuler des opérations asynchrones sur des handles de connexion ou des handles d’instruction. L’utilisation de **SQLCancelHandle** pour annuler une opération sur un handle d’instruction est identique à l’appel de **SQLCancel** .  
   
- Il n’est pas nécessaire de prendre en charge à la fois les opérations de connexion **SQLCancelHandle** et asynchrones. Un pilote peut prendre en charge des opérations de connexion asynchrones, mais pas **SQLCancelHandle**, ou vice versa.  
+ Il n’est pas nécessaire de prendre en charge à la fois les opérations de connexion **SQLCancelHandle** et asynchrones. Un pilote peut prendre en charge des opérations de connexion asynchrones, mais pas **SQLCancelHandle** , ou vice versa.  
   
  Les opérations de connexion asynchrone et **SQLCancelHandle** peuvent également être utilisées par les applications ODBC 3. x et ODBC 2. x avec un pilote ODBC 3,8 et le gestionnaire de pilotes ODBC 3,8. Pour plus d’informations sur la façon d’activer une ancienne application pour utiliser les nouvelles fonctionnalités de la version ODBC ultérieure, consultez [matrice de compatibilité](../../../odbc/reference/develop-app/compatibility-matrix.md).  
   
 ### <a name="connection-pooling"></a>Regroupement de connexions  
- Chaque fois que le regroupement de connexions est activé, les opérations asynchrones sont uniquement prises en charge au minimum pour établir une connexion (avec **SQLConnect** et **SQLDriverConnect**) et fermer une connexion avec **SQLDisconnect**. Toutefois, une application doit toujours être en mesure de gérer le SQL_STILL_EXECUTING valeur de retour de **SQLConnect**, **SQLDriverConnect**et **SQLDisconnect**.  
+ Chaque fois que le regroupement de connexions est activé, les opérations asynchrones sont uniquement prises en charge au minimum pour établir une connexion (avec **SQLConnect** et **SQLDriverConnect** ) et fermer une connexion avec **SQLDisconnect** . Toutefois, une application doit toujours être en mesure de gérer le SQL_STILL_EXECUTING valeur de retour de **SQLConnect** , **SQLDriverConnect** et **SQLDisconnect** .  
   
  Lorsque le regroupement de connexions est activé, **SQLEndTran** et **SQLSetConnectAttr** sont pris en charge pour les opérations asynchrones.  
   
-## <a name="example"></a>Exemple  
+## <a name="examples"></a>Exemples  
   
-### <a name="description"></a>Description  
+### <a name="a-enable-asynchronous-execution-of-connection-functions"></a>R. Activer l’exécution asynchrone des fonctions de connexion
+
  L’exemple suivant montre comment utiliser **SQLSetConnectAttr** pour activer l’exécution asynchrone pour les fonctions liées à la connexion.  
-  
-### <a name="code"></a>Code  
   
 ```  
 BOOL AsyncConnect (SQLHANDLE hdbc)   
@@ -298,12 +297,9 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ```  
   
-## <a name="example"></a>Exemple  
-  
-### <a name="description"></a>Description  
+### <a name="b-asynchronous-commit-operations"></a>B. Opérations de validation asynchrone 
+
  Cet exemple montre des opérations de validation asynchrones. Les opérations de restauration peuvent également être effectuées de cette manière.  
-  
-### <a name="code"></a>Code  
   
 ```  
 BOOL AsyncCommit ()   

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d676d32426678720f76de1ff04c355a54998dd1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408735"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235576"
 ---
 # <a name="sql-graph-architecture"></a>Architecture du graphique SQL  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -31,7 +31,7 @@ Découvrez comment SQL Graph est conçu. Le fait de connaître les principes de 
 Les utilisateurs peuvent créer un graphique par base de données. Un graphique est une collection de tables de nœuds et d’arêtes. Les tables de nœuds ou d’arêtes peuvent être créées sous n’importe quel schéma de la base de données, mais elles appartiennent toutes à un graphique logique. Une table de nœuds est une collection de nœuds de type similaire. Par exemple, une table de nœuds Person contient tous les nœuds person appartenant à un graphique. De même, une table Edge est une collection de bords similaires. Par exemple, une table d’amis contient tous les bords qui connectent une personne à une autre personne. Étant donné que les nœuds et les bords sont stockés dans des tables, la plupart des opérations prises en charge sur les tables standard sont prises en charge sur les tables de nœuds ou d’arêtes. 
  
  
-![architecture SQL-Graph](../../relational-databases/graphs/media/sql-graph-architecture.png "Architecture de la base de données SQL Graph")   
+![Diagramme montrant l’architecture de la base de données SQL Graph.](../../relational-databases/graphs/media/sql-graph-architecture.png "Architecture de la base de données SQL Graph")   
 
 Figure 1 : architecture de la base de données SQL Graph
  
@@ -56,7 +56,7 @@ Comme pour la `$node_id` colonne, il est recommandé que les utilisateurs créen
 
 La figure 2 montre comment les tables de nœuds et de périphérie sont stockées dans la base de données. 
 
-![person-Friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Nœud Person et tables de bord des amis")   
+![Diagramme montrant la représentation de la table de nœuds et du bord.](../../relational-databases/graphs/media/person-friends-tables.png "Nœud Person et tables de bord des amis")   
 
 Figure 2 : représentation d’une table de nœuds et d’un bord
 

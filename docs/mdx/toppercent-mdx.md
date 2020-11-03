@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412858"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243538"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -52,7 +52,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  À l’instar de la fonction [BottomPercent](../mdx/bottompercent-mdx.md) , la fonction Coen- **pourcentage** arrête toujours la hiérarchie.  
   
-## <a name="example"></a>Exemple  
+## <a name="examples"></a>Exemples  
+
+### <a name="a-return-toppercent"></a>R. Retourner le pourcentage
+
  L'exemple suivant retourne les villes les mieux classées représentant 10 % des ventes des revendeurs pour la catégorie Bike. Le résultat est trié par ordre décroissant, en commençant par la ville associé aux meilleures ventes.  
   
 ```  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>Exemple  
- La procédure pas à pas suivante permet de comprendre l’effet des valeurs négatives dans le *numeric_expression*. D'abord, établissons le contexte sous-jacent au comportement.  
+### <a name="b-understand-the-effect-of-negative-values"></a>B. Comprendre l’effet des valeurs négatives
+
+ La procédure pas à pas suivante permet de comprendre l’effet des valeurs négatives dans le *numeric_expression* . D'abord, établissons le contexte sous-jacent au comportement.  
   
  La requête suivante retourne une table contenant le montant des ventes (Sales Amount), le coût total du produit (Total Product Cost) et le profit brut (Gross Profit) des revendeurs, triés par ordre de profit décroissant. Notez qu'il y a uniquement des valeurs négatives pour les profits ; par conséquent, la plus petite perte apparaît en haut.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e59cb5565ca518dc927f29e684401bf8fc6d5822
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418315"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235366"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Prise en main avec la console SSMA pour Sybase (SybaseToSQL)
 Cette section décrit la procédure de lancement et de prise en main de l’application de console SSMA pour Sybase. Les conventions utilisées dans une fenêtre de sortie de console SSMA standard sont également répertoriées dans les présentes.  
@@ -53,7 +53,7 @@ Fonctionnalités supplémentaires :
 ## <a name="ssma-console-output-conventions"></a>Conventions de sortie de la console SSMA  
 Lors de l’exécution des commandes de script SSMA et des options, le programme de console affiche les résultats et les messages (informations, erreurs, etc.) à l’utilisateur sur la console ou, si nécessaire, redirige vers un fichier de sortie XML. Chaque type de message dans la sortie est signifié par une couleur unique. Par exemple, le message texte en blanc indique les commandes du fichier de script. la couleur verte représente une invite pour les entrées utilisateur, et ainsi de suite.  
   
-![SSMAConsoleOutput_Sybase](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
+![Capture d’écran montrant un exemple de sortie Sybase de la console SSMA.](../../ssma/sybase/media/ssmaconsoleoutput_sybase.JPG "SSMAConsoleOutput_Sybase")  
   
 L’interprétation des couleurs de la sortie de la console s’affiche dans le tableau suivant :  
   

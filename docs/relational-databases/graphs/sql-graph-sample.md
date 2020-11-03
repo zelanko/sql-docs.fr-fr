@@ -15,24 +15,24 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331049"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235539"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Créer une base de données de graphiques et exécuter des requêtes de critères spéciaux à l’aide de T-SQL
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-Cet exemple fournit un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script pour créer une base de données de graphiques avec des nœuds et des bords, puis utiliser la nouvelle clause match pour faire correspondre des modèles et parcourir le graphique. Cet exemple de script fonctionnera à la fois sur Azure SQL Database et[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Cet exemple fournit un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script pour créer une base de données de graphiques avec des nœuds et des bords, puis utiliser la nouvelle clause match pour faire correspondre des modèles et parcourir le graphique. Cet exemple de script fonctionnera à la fois sur Azure SQL Database et [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>Exemple de schéma
 
 Cet exemple crée un schéma de graphique, comme illustré à la figure 1, pour un réseau social hypothétique qui a des nœuds personnes, restaurant et ville. Ces nœuds sont connectés l’un à l’autre à l’aide de Friends, j’aime, vit et trouve les bords.
 
-![person-villes-restaurants-tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Exemple de base de données SQL Graph")  
+![Le diagramme montrant un exemple de schéma avec des nœuds restaurant, ville, personne et résidant, localisé, aime les bords.](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Exemple de base de données SQL Graph")  
 Figure 1 : exemple de schéma avec restaurant, City, les nœuds Person et habite, situer, aime bords.
 
 ## <a name="sample-script"></a>Exemple de script
@@ -167,4 +167,4 @@ Ce script utilise la nouvelle syntaxe T-SQL pour créer des tables de nœuds et 
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Créer un nœud de graphique ou une table d’arêtes  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Insérer dans une table de nœuds ou d’arêtes  |
-|[Faire correspondre &#40;&#41;Transact-SQL](../../t-sql/queries/match-sql-graph.md)  |Utilisez MATCH pour faire correspondre un modèle ou parcourir le graphique  |
+|[Faire correspondre &#40;&#41;Transact-SQL ](../../t-sql/queries/match-sql-graph.md)  |Utilisez MATCH pour faire correspondre un modèle ou parcourir le graphique  |
