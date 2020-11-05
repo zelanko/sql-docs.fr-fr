@@ -6,24 +6,25 @@ ms.technology: ssdt
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
+- sql.data.tools.sqleditor
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b6a045900509fbf7aff58f477f079747e413bf0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c9bb76ddd3ee5f5c0828f5c9ef181f98e26f94d
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883166"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067071"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Utiliser l'Éditeur Transact-SQL pour modifier et exécuter des scripts
 
 L'Éditeur Transact\-SQL vous offre une expérience d'édition et de débogage enrichie lorsque vous utilisez des scripts. Il est appelé lorsque vous utilisez le menu contextuel **Afficher le code** pour ouvrir une entité de base de données dans une base de données connectée ou un projet. Il s'ouvre aussi automatiquement lorsque vous utilisez le menu contextuel **Nouvelle requête** de l'Explorateur d'objets SQL Server, ou lorsque vous ajoutez un nouvel objet de script à un projet de base de données.  
   
-Si vous n'êtes pas connecté à une base de données, mais que vous souhaitez exécuter une requête par rapport à une base de données, vous pouvez aussi utiliser la boîte de dialogue **Nouvelle connexion à la requête** de l'option de menu Éditeur **SQL** -> ** Transact\-SQL** pour vous connecter à une base de données et démarrer l'Éditeur Transact\-SQL.  
+Si vous n'êtes pas connecté à une base de données, mais que vous souhaitez exécuter une requête par rapport à une base de données, vous pouvez aussi utiliser la boîte de dialogue **Nouvelle connexion à la requête** de l'option de menu Éditeur **SQL** -> **Transact\-SQL** pour vous connecter à une base de données et démarrer l'Éditeur Transact\-SQL.  
   
 L'Éditeur Transact\-SQL comprend un volet **T-SQL** principal où vous pouvez écrire et modifier des scripts Transact\-SQL. L'éditeur prend en charge IntelliSense, ainsi que le codage en couleurs de la syntaxe facilitant la lisibilité des instructions complexes. Il prend aussi en charge la fonction de recherche et remplacement, les commentaires en bloc, les polices et les couleurs personnalisées et la numérotation des lignes. Vous pouvez aussi modifier la base de données par rapport à laquelle le script de l'éditeur sera exécuté. Pour plus d’informations, consultez [Procédure : cloner une base de données existante](../ssdt/how-to-clone-an-existing-database.md). Le volet de **résultats** affiche les résultats de la requête dans une grille ou dans le texte. Vous pouvez également rediriger les résultats de la requête vers un fichier. Le volet de **message** affiche des erreurs, des avertissements et des messages d'information retournés lors de l'exécution d'un script. Lorsque les statistiques du client sont activées, le volet **Statistiques** affiche des informations regroupées par catégorie sur l'exécution de la requête. Le volet **Plan d'exécution** affiche les méthodes d'extraction de données choisies par SQL Server, ainsi que le coût d'exécution de requêtes et d'instructions spécifiques.  
   
