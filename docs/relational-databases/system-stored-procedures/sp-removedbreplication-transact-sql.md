@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01fc666444891836011b80e77492b1cdebbefff5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b8b8918bf659e6965fed1f9af0342f8295947509
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538646"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364842"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbname'` Nom de la base de données. *dbname* est de type **sysname**, avec NULL comme valeur par défaut. Lorsque la valeur est NULL, la base de données actuelle est utilisée.  
+`[ @dbname = ] 'dbname'` Nom de la base de données. *dbname* est de type **sysname** , avec NULL comme valeur par défaut. Lorsque la valeur est NULL, la base de données actuelle est utilisée.  
   
 `[ @type = ] type` Type de réplication pour lequel les objets de base de données sont supprimés. le *type* est **nvarchar (5)** et peut prendre l’une des valeurs suivantes.  
   
@@ -62,15 +62,17 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
  les **sp_removedbreplication** ne peuvent pas être utilisées sur une base de données marquée en lecture seule.  
   
-## <a name="example"></a>Exemple  
- [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
-  
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_removedbreplication**.  
   
-## <a name="example"></a> Exemple  
+## <a name="examples"></a>Exemples
+
+### <a name="a-remove-replication-objects-adventureworks2012replica-subscription-database"></a>R. Supprimer les objets de réplication, base de données d’abonnement AdventureWorks2012Replica
+ [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-```  
+### <a name="b-remove-replication-objects-adventureworksreplica-subscription-database"></a>B. Supprimer les objets de réplication, base de données d’abonnement AdventureWorksReplica
+  
+```sql
 -- Remove replication objects from the subscription database on MYSUB.  
 DECLARE @subscriptionDB AS sysname  
 SET @subscriptionDB = N'AdventureWorksReplica'  

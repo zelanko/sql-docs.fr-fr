@@ -14,12 +14,12 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 6447c5088e0fd338618a4601abf47c8b3344d796
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868214"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364743"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -185,9 +185,9 @@ from @Items
     }  
     ```  
   
-## <a name="example"></a>Exemple  
+## <a name="examples"></a>Exemples  
   
-### <a name="description"></a>Description  
+### <a name="a-use-row-streaming-one-row-per-call"></a>R. Utiliser la diffusion de ligne, une ligne par appel
  Cet exemple montre que vous pouvez utiliser la diffusion en continu de ligne, une ligne par appel à SQLPutData, avec ODBC TVP, de la même façon que vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
   
  Avant de générer l'exemple, remplacez le nom du serveur dans la chaîne de connexion.  
@@ -215,7 +215,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>Code  
+#### <a name="code"></a>Code  
   
 ```cpp
 #define UNICODE  
@@ -373,9 +373,7 @@ EXIT:
 }  
 ```  
   
-## <a name="example"></a>Exemple  
-  
-### <a name="description"></a>Description  
+### <a name="b-use-row-streaming-multiple-rows-per-call"></a>B. Utiliser la diffusion en continu de lignes, plusieurs lignes par appel  
  Cet exemple montre que vous pouvez utiliser la diffusion en continu de lignes, plusieurs lignes par appel à SQLPutData, avec ODBC TVP, de la même façon que vous pouvez utiliser BCP.exe pour charger des données dans une base de données.  
   
  Avant de générer l'exemple, remplacez le nom du serveur dans la chaîne de connexion.  
@@ -403,7 +401,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>Code  
+#### <a name="code"></a>Code  
   
 ```cpp
 #define UNICODE  

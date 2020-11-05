@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1a185ef8fe998a614de8ca56451966894a461f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9ea62e350628099685b372362a3d6d075a90367b
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549939"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364826"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,17 +45,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_server = ] 'table_server'` Nom du serveur lié pour lequel les informations de colonne doivent être retournées. *table_server* est de **type sysname**, sans valeur par défaut.  
+`[ @table_server = ] 'table_server'` Nom du serveur lié pour lequel les informations de colonne doivent être retournées. *table_server* est de **type sysname** , sans valeur par défaut.  
   
-`[ @table_name = ] 'table_name'` Nom de la table pour laquelle les informations de colonne doivent être retournées. *table_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_name = ] 'table_name'` Nom de la table pour laquelle les informations de colonne doivent être retournées. *table_name* est de **type sysname** , avec NULL comme valeur par défaut.  
   
-`[ @table_schema = ] 'table_schema'` Nom de schéma de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_SCHEMA* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_schema = ] 'table_schema'` Nom de schéma de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_SCHEMA* est de **type sysname** , avec NULL comme valeur par défaut.  
   
-`[ @table_catalog = ] 'table_catalog'` Nom du catalogue de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_CATALOG* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_catalog = ] 'table_catalog'` Nom du catalogue de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_CATALOG* est de **type sysname** , avec NULL comme valeur par défaut.  
   
-`[ @column_name = ] 'column'` Nom de la colonne de base de données pour laquelle des informations doivent être fournies. *Column* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @column_name = ] 'column'` Nom de la colonne de base de données pour laquelle des informations doivent être fournies. *Column* est de **type sysname** , avec NULL comme valeur par défaut.  
   
-`[ @ODBCVer = ] 'ODBCVer'` Est la version de ODBC en cours d’utilisation. *ODBCVer* est de **type int**, avec 2 comme valeur par défaut. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Consultez la spécification ODBC SQLColumns pour connaître les différences de comportement entre les versions 2 et 3.  
+`[ @ODBCVer = ] 'ODBCVer'` Est la version de ODBC en cours d’utilisation. *ODBCVer* est de **type int** , avec 2 comme valeur par défaut. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Consultez la spécification ODBC SQLColumns pour connaître les différences de comportement entre les versions 2 et 3.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  Aucun  
@@ -64,7 +64,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nom du qualificateur de la table ou de la vue. Divers produits SGBD prennent en charge les noms de tables en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
+|**TABLE_CAT**|**sysname**|Nom du qualificateur de la table ou de la vue. Divers produits SGBD prennent en charge les noms de tables en trois parties ( _qualificateur_**.** _propriétaire_**.** _nom_ ). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table ou de la vue. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de table ou de vue. Ce champ retourne toujours une valeur.|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **table_name** retournée. Ce champ retourne toujours une valeur.|  
@@ -87,15 +87,14 @@ sp_columns_ex [ @table_server = ] 'table_server'
  Pour plus d'informations, consultez la documentation de Microsoft ODBC.  
   
 ## <a name="remarks"></a>Notes  
- **sp_columns_ex** est exécuté en interrogeant l’ensemble de lignes COLUMNS de l’interface **IDBSchemaRowset** du fournisseur OLE DB correspondant à *table_server*. Les paramètres *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*et *Column* sont passés à cette interface pour limiter les lignes retournées.  
+- **sp_columns_ex** est exécuté en interrogeant l’ensemble de lignes COLUMNS de l’interface **IDBSchemaRowset** du fournisseur OLE DB correspondant à *table_server*. Les paramètres *table_name* , *TABLE_SCHEMA* , *TABLE_CATALOG* et *Column* sont passés à cette interface pour limiter les lignes retournées.  
   
- **sp_columns_ex** retourne un jeu de résultats vide si le fournisseur de OLE DB du serveur lié spécifié ne prend pas en charge l’ensemble de lignes COLUMNS de l’interface **IDBSchemaRowset** .  
+- **sp_columns_ex** retourne un jeu de résultats vide si le fournisseur de OLE DB du serveur lié spécifié ne prend pas en charge l’ensemble de lignes COLUMNS de l’interface **IDBSchemaRowset** .  
+  
+- **sp_columns_ex** suit la configuration requise pour les identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
-  
-## <a name="remarks"></a>Notes  
- **sp_columns_ex** suit la configuration requise pour les identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple qui suit retourne le type de données de la colonne `JobTitle` de la table `HumanResources.Employee` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur le serveur lié `Seattle1`.  

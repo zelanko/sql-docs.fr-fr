@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_copies (Azure SQL Database)
-title: sys. dm_database_copies (Azure SQL Database) | Microsoft Docs
+title: sys.dm_database_copies (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.service: sql-database
@@ -20,19 +20,19 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 178fda9bb96fc84acd1527f172c6a6728a1ec22e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: acdb347af36812095df03f61ae9f118493496e51
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543921"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364771"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Retourne des informations sur une copie de base de données.  
   
-Pour renvoyer des informations sur les liens de géo-réplication, utilisez les vues [sys. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) ou [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponibles dans SQL Database V12).
+Pour renvoyer des informations sur les liens de géo-réplication, utilisez les vues [sys.geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) ou [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (disponibles dans SQL Database V12).
   
   
 |Nom de la colonne|Type de données|Description|  
@@ -60,6 +60,6 @@ Pour renvoyer des informations sur les liens de géo-réplication, utilisez les 
  Cette vue est disponible uniquement dans la base de données **Master** à la connexion du principal au niveau du serveur.  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez utiliser la vue **sys. dm_database_copies** dans la base de données **Master** du serveur source ou cible [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Lorsque la copie de base de données s'achève avec succès et que la nouvelle base de données devient ONLINE, la ligne dans la vue **sys.dm_database_copies** est supprimée automatiquement.  
+ Vous pouvez utiliser la vue **sys.dm_database_copies** dans la base de données **Master** du serveur source ou cible [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Lorsque la copie de base de données s'achève avec succès et que la nouvelle base de données devient ONLINE, la ligne dans la vue **sys.dm_database_copies** est supprimée automatiquement.  
   
   
