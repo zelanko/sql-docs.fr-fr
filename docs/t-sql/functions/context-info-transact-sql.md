@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad1dea00f71039a3dfb37386bfd7ebe63b53a6d6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 0a6ff9b888601403029ef8c830dd8dd674aa1f10
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990252"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235644"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,8 +48,8 @@ CONTEXT_INFO()
 La valeur **context_info**.
   
 Si **context_info** n’était pas défini :
--   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], renvoie la valeur NULL.  
--   Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], renvoie un GUID unique spécifique à la session.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une valeur NULL.  
+-   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] retourne un GUID unique spécifique à la session.  
   
 ## <a name="remarks"></a>Remarques  
 La fonctionnalité MARS (Multiple Active Result Sets) permet aux applications d'exécuter simultanément plusieurs traitements ou requêtes sur la même connexion. Lorsqu'un des traitements d’une connexion MARS exécute la procédure SET CONTEXT_INFO, la fonction `CONTEXT_INFO` renvoie la nouvelle valeur de contexte lorsque la fonction `CONTEXT_INFO` est exécutée dans le même traitement que l'instruction SET. Si la fonction `CONTEXT_INFO` s’exécute dans un ou plusieurs autres traitements de la connexion, la fonction `CONTEXT_FUNCTION` ne retourne pas la nouvelle valeur, sauf si ces traitements ont démarré après l’achèvement du traitement qui a exécuté l’instruction SET.
@@ -61,7 +61,7 @@ Ne nécessite aucune autorisation particulière. Les vues système suivantes sto
 - **sys.sysprocesses**
   
 ## <a name="examples"></a>Exemples  
-Cet exemple simple attribue à `0x1256698456` la valeur **context_info**, puis utilise la fonction `CONTEXT_INFO` pour extraire la valeur.
+Cet exemple simple attribue à `0x1256698456` la valeur **context_info** , puis utilise la fonction `CONTEXT_INFO` pour extraire la valeur.
   
 ```sql
 SET CONTEXT_INFO 0x1256698456;  

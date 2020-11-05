@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76768274921bceb17ba9ea05c73850f449441082
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: d45c26459b43fecaedf401bf98d0a5346da34dbb
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810129"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243558"
 ---
 # <a name="temporal-tables"></a>Tables temporelles
 
@@ -79,7 +79,7 @@ Les sources de données réelles sont dynamiques et la plupart des décisions co
 
 La table actuelle contient la valeur actuelle pour chaque ligne. La table d’historique contient la valeur précédente de chaque ligne, le cas échéant, ainsi que l’heure de début et l’heure de fin de la période pendant laquelle elle était valide.
 
-![Temporal-HowWorks](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
+![Diagramme illustrant le fonctionnement d’une table temporelle.](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
 
 L’exemple simple suivant illustre un scénario dont les informations se trouvent dans une table Employee appartenant à une base de données de ressources humaines hypothétique :
 
@@ -99,19 +99,19 @@ CREATE TABLE dbo.Employee
 WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 ```
 
-- **Opérations INSERT :** lors d’une opération **INSERT**, le système définit la valeur de la colonne **SysStartTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système et il attribue à la colonne **SysEndTime** la valeur maximale de 9999-12-31. La ligne est alors marquée comme ouverte.
-- **Opérations UPDATE :** lors d’une opération **UPDATE**, le système stocke la valeur précédente de la ligne dans la table d’historique et il définit la valeur de la colonne **SysEndTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système. La ligne est alors marquée comme fermée, avec une période enregistrée pendant laquelle la ligne était valide. Dans la table actuelle, la ligne est mise à jour avec la nouvelle valeur et le système définit la valeur de la colonne **SysStartTime** sur l’heure de début de la transaction (dans le fuseau horaire UTC) d’après l’horloge du système. La valeur de la ligne mise à jour dans la table actuelle pour la colonne **SysEndTime** conserve la valeur maximale de 9999-12-31.
-- **Opérations DELETE :** lors d’une opération **DELETE**, le système stocke la valeur précédente de la ligne dans la table d’historique et il définit la valeur de la colonne **SysEndTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système. La ligne est alors marquée comme fermée et la période pendant laquelle la ligne précédente était valide est enregistrée. Dans la table actuelle, la ligne est supprimée. Les requêtes de la table actuelle ne renvoient pas cette ligne. Seules les requêtes qui traitent des données d’historique renvoient les données pour lesquelles une ligne est fermée.
-- **Opérations MERGE :** lors d’une opération **MERGE**, l’opération se comporte exactement comme si un maximum de trois instructions (une instruction **INSERT**, une instruction **UPDATE** et/ou une instruction **DELETE**) s’exécutait, selon ce qui est spécifié comme actions dans l’instruction **MERGE**.
+- **Opérations INSERT :** lors d’une opération **INSERT** , le système définit la valeur de la colonne **SysStartTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système et il attribue à la colonne **SysEndTime** la valeur maximale de 9999-12-31. La ligne est alors marquée comme ouverte.
+- **Opérations UPDATE :** lors d’une opération **UPDATE** , le système stocke la valeur précédente de la ligne dans la table d’historique et il définit la valeur de la colonne **SysEndTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système. La ligne est alors marquée comme fermée, avec une période enregistrée pendant laquelle la ligne était valide. Dans la table actuelle, la ligne est mise à jour avec la nouvelle valeur et le système définit la valeur de la colonne **SysStartTime** sur l’heure de début de la transaction (dans le fuseau horaire UTC) d’après l’horloge du système. La valeur de la ligne mise à jour dans la table actuelle pour la colonne **SysEndTime** conserve la valeur maximale de 9999-12-31.
+- **Opérations DELETE :** lors d’une opération **DELETE** , le système stocke la valeur précédente de la ligne dans la table d’historique et il définit la valeur de la colonne **SysEndTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système. La ligne est alors marquée comme fermée et la période pendant laquelle la ligne précédente était valide est enregistrée. Dans la table actuelle, la ligne est supprimée. Les requêtes de la table actuelle ne renvoient pas cette ligne. Seules les requêtes qui traitent des données d’historique renvoient les données pour lesquelles une ligne est fermée.
+- **Opérations MERGE :** lors d’une opération **MERGE** , l’opération se comporte exactement comme si un maximum de trois instructions (une instruction **INSERT** , une instruction **UPDATE** et/ou une instruction **DELETE** ) s’exécutait, selon ce qui est spécifié comme actions dans l’instruction **MERGE**.
 
 > [!IMPORTANT]
 > Les heures enregistrées dans les colonnes datetime2 système sont basées sur l’heure de début de la transaction proprement dite. Par exemple, toutes les lignes insérées dans une seule transaction ont la même heure UTC enregistrée dans la colonne correspond au début de la période **SYSTEM_TIME** .
 
 ## <a name="how-do-i-query-temporal-data"></a>Comment interroger des données temporelles
 
-La clause**FROM** _\<table\>_ de l’instruction **SELECT** utilise une nouvelle clause **FOR SYSTEM_TIME** avec cinq sous-clauses temporelles spécifiques pour interroger les données des tables actives et d’historique. Cette nouvelle syntaxe de l’instruction **SELECT** est prise en charge directement sur une table unique, propagée par plusieurs jointures et par des vues sur plusieurs tables temporelles.
+La clause **FROM** _\<table\>_ de l’instruction **SELECT** utilise une nouvelle clause **FOR SYSTEM_TIME** avec cinq sous-clauses temporelles spécifiques pour interroger les données des tables actives et d’historique. Cette nouvelle syntaxe de l’instruction **SELECT** est prise en charge directement sur une table unique, propagée par plusieurs jointures et par des vues sur plusieurs tables temporelles.
 
-![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
+![Diagramme montrant le fonctionnement de l’interrogation de données temporelles.](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
 
 La requête suivante recherche les versions de ligne dans la table Employee pour lesquelles EmployeeID vaut 1000 et qui ont été actives pendant au moins une partie de la période comprise entre le 1er janvier 2014 et le 1er janvier 2015 (limite supérieure comprise) :
 
@@ -123,7 +123,7 @@ SELECT * FROM Employee
 ```
 
 > [!NOTE]
-> **FOR SYSTEM_TIME** filtre les lignes dont la période de validité indique une durée égale à zéro (**SysStartTime** = **SysEndTime**).
+> **FOR SYSTEM_TIME** filtre les lignes dont la période de validité indique une durée égale à zéro ( **SysStartTime** = **SysEndTime** ).
 > Ces lignes sont générées si vous effectuez plusieurs mises à jour sur la même clé primaire au sein de la même transaction.
 > Dans ce cas, l’interrogation des données temporelles renvoie uniquement les versions de ligne avant les transactions et celles qui sont devenues réelles après les transactions.
 > Si vous devez inclure ces lignes dans l’analyse, interrogez la table d’historique directement.
@@ -132,9 +132,9 @@ Dans le tableau ci-dessous, SysStartTime dans la colonne Lignes qualifiées repr
 
 |Expression|Lignes qualifiées|Description|
 |----------------|---------------------|-----------------|
-|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Renvoie une table avec une ligne contenant les valeurs qui étaient réelles (actuelles) au moment spécifié dans le passé. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés de manière à renvoyer les valeurs de la ligne qui était valide au moment spécifié par le paramètre *<date_time>* . La valeur d’une ligne est considérée comme valide si la valeur *system_start_time_column_name* est inférieure ou égale à celle du paramètre *<date_time>* et si la valeur *system_end_time_column_name* est supérieure à celle du paramètre *<date_time>* .|
-|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Renvoie une table avec les valeurs de toutes les versions de ligne qui étaient actives pendant l’intervalle de temps spécifié, sans tenir compte du fait qu’elles soient devenues actives avant la valeur du paramètre *<start_date_time>* pour l’argument FROM ou qu’elles aient cessé d’être actives après la valeur du paramètre *<end_date_time>* pour l’argument TO. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés de manière à renvoyer les valeurs de toutes les versions de ligne qui étaient actives à tout moment de l’intervalle spécifié. Les lignes qui ont cessé d’être actives exactement à la limite inférieure définie par le point de terminaison FROM ne sont pas incluses. Les enregistrements qui sont devenus actifs exactement à la limite supérieure définie par le point de terminaison TO ne sont pas inclus non plus.|
-|**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|Identique à la description de **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time> ci-dessus, sauf que la table de lignes renvoyée inclut des lignes qui sont devenues actives sur la limite supérieure définie par le point de terminaison <end_date_time>.|
+|**AS OF** <date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Renvoie une table avec une ligne contenant les valeurs qui étaient réelles (actuelles) au moment spécifié dans le passé. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés de manière à renvoyer les valeurs de la ligne qui était valide au moment spécifié par le paramètre *<date_time>* . La valeur d’une ligne est considérée comme valide si la valeur *system_start_time_column_name* est inférieure ou égale à celle du paramètre *<date_time>* et si la valeur *system_end_time_column_name* est supérieure à celle du paramètre *<date_time>* .|
+|**FROM** <start_date_time> **TO** <end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Renvoie une table avec les valeurs de toutes les versions de ligne qui étaient actives pendant l’intervalle de temps spécifié, sans tenir compte du fait qu’elles soient devenues actives avant la valeur du paramètre *<start_date_time>* pour l’argument FROM ou qu’elles aient cessé d’être actives après la valeur du paramètre *<end_date_time>* pour l’argument TO. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés de manière à renvoyer les valeurs de toutes les versions de ligne qui étaient actives à tout moment de l’intervalle spécifié. Les lignes qui ont cessé d’être actives exactement à la limite inférieure définie par le point de terminaison FROM ne sont pas incluses. Les enregistrements qui sont devenus actifs exactement à la limite supérieure définie par le point de terminaison TO ne sont pas inclus non plus.|
+|**BETWEEN** <start_date_time> **AND** <end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|Identique à la description de **FOR SYSTEM_TIME FROM** <start_date_time> **TO** <end_date_time> ci-dessus, sauf que la table de lignes renvoyée inclut des lignes qui sont devenues actives sur la limite supérieure définie par le point de terminaison <end_date_time>.|
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|Renvoie une table avec les valeurs de toutes les versions de ligne qui ont été ouvertes et fermées dans l’intervalle de temps spécifié, défini par les deux valeurs datetime de l’argument CONTAINED IN. Les lignes qui sont devenues actives exactement sur la limite inférieure ou qui ont cessé d’être actives exactement sur la limite supérieure sont incluses.|
 |**ALL**|Toutes les lignes|Renvoie l’union de lignes appartenant à la table actuelle et à la table d’historique.|
 

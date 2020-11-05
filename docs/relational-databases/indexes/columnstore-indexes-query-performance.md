@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7e2aaa0e01a5ca5295bc9f315c44cd7358b1d9f
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408795"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036108"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Index columnstore - Performances des requêtes
 
@@ -95,7 +95,7 @@ ms.locfileid: "88408795"
  Pour plus d’informations sur les rowgroups, consultez [Indications pour la conception d’index columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### <a name="batch-mode-execution"></a>Exécution en mode batch    
- L’exécution en mode batch désigne le fait de traiter simultanément un jeu de lignes, pouvant généralement contenir jusqu’à 900 lignes, pour gagner en efficacité. Par exemple, la requête `SELECT SUM (Sales) FROM SalesData` agrège les ventes totales de la table SalesData. En mode batch, le moteur d’exécution de la requête calcule l’agrégat dans le groupe de 900 valeurs. Cela permet de répartir les coûts d’accès aux métadonnées et d’autres types de traitement entre toutes les lignes du lot, plutôt que de payer les coûts par ligne, réduisant ainsi considérablement le chemin de code. Le traitement en mode batch s’effectue sur les données compressées quand cela est possible et élimine certains opérateurs d’échange utilisés par le traitement en mode ligne. Cette méthode accélère l’exécution des requêtes analytiques par ordre de grandeur.    
+ L’[exécution en mode batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) désigne le fait de traiter simultanément un jeu de lignes, pouvant généralement contenir jusqu’à 900 lignes, pour gagner en efficacité. Par exemple, la requête `SELECT SUM (Sales) FROM SalesData` agrège les ventes totales de la table SalesData. En mode batch, le moteur d’exécution de la requête calcule l’agrégat dans le groupe de 900 valeurs. Cela permet de répartir les coûts d’accès aux métadonnées et d’autres types de traitement entre toutes les lignes du lot, plutôt que de payer les coûts par ligne, réduisant ainsi considérablement le chemin de code. Le traitement en mode batch s’effectue sur les données compressées quand cela est possible et élimine certains opérateurs d’échange utilisés par le traitement en mode ligne. Cette méthode accélère l’exécution des requêtes analytiques par ordre de grandeur.    
     
  Il n’est pas possible d’exécuter tous les opérateurs d’exécution de requête en mode batch. Par exemple, les opérations DML comme Insert, Delete ou Update sont exécutées ligne par ligne. Les opérateurs en mode batch ciblent les opérateurs tels que Scan, Join, Aggregate, Sort, etc. pour améliorer la vitesse de traitement des requêtes. Depuis l’introduction de l’index columnstore dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], nous nous efforçons d’étendre la prise en charge d’opérateurs exécutables en mode batch. Le tableau ci-dessous répertorie les opérateurs exécutables en mode batch pour chaque version du produit.    
     
@@ -119,6 +119,8 @@ ms.locfileid: "88408795"
 |Window Aggregates||N/D|N/D|Oui|Nouvel opérateur dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
 <sup>1</sup> S’applique à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], aux niveaux Premium [!INCLUDE[ssSDS](../../includes/sssds-md.md)], aux niveaux Standard (S3 et ultérieur) et à tous les niveaux vCore, ainsi qu’à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+
+Pour plus d’informations, consultez le [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
     
 ### <a name="aggregate-pushdown"></a>Agrégation en mode Push    
  Chemin d’exécution standard utilisé pour le calcul d’agrégation qui récupère les lignes qualifiées du nœud SCAN et agrège les valeurs en mode batch. Cette méthode offre de bonnes performances, mais dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l’opération d’agrégation peut être transmise en mode Push vers le nœud SCAN pour améliorer les performances de calcul d’agrégation par ordre de grandeur avec l’exécution en mode batch. Cela est possible si les conditions suivantes sont remplies : 

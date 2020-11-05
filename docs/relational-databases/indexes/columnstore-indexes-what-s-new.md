@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678d3b76d33babe7e2097eafefcd21ff78702f84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93781a1eb3e18c4eb623f33d294274f02db4f9a
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408635"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036109"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Index columnstore - Nouveautés
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,25 +29,26 @@ ms.locfileid: "88408635"
 ## <a name="feature-summary-for-product-releases"></a>Synthèse des fonctionnalités pour les versions du produit  
  Ce tableau récapitule les principales fonctionnalités des index columnstore et des produits dans lesquels ils sont disponibles.  
 
-|Fonctionnalité d’index columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|Exécution en mode batch pour les requêtes multithread|Oui|Oui|Oui|Oui|Oui|Oui| 
-|Exécution en mode batch pour les requêtes monothread|||Oui|Oui|Oui|Oui|  
-|Option de compression de l’archivage||Oui|Oui|Oui|Oui|Oui|  
-|Isolement de capture instantanée et isolement de capture instantanée Read Committed|||Oui|Oui|Oui|Oui| 
-|Spécifier l’index columnstore lors de la création d’une table|||Oui|Oui|Oui|Oui|  
-|Always On prend en charge les index columnstore|Oui|Oui|Oui|Oui|Oui|Oui| 
-|Le secondaire accessible en lecture Always On prend en charge les index columnstore non-cluster en lecture seule|Oui|Oui|Oui|Oui|Oui|Oui|  
-|Le secondaire accessible en lecture Always On prend en charge les index columnstore actualisables|||Oui|Oui|||  
-|Index columnstore non-cluster en lecture seule sur segment de mémoire ou arbre B (B-tree)|Oui|Oui|oui <sup>1</sup>|oui <sup>1</sup>|oui <sup>1</sup>|oui <sup>1</sup>|  
-|Index columnstore non-cluster actualisable sur segment de mémoire ou arbre B (B-tree)|||Oui|Oui|Oui|Oui|  
-|Index B-tree supplémentaires autorisés sur un segment de mémoire ou arbre B (B-tree) ayant un index columnstore non-cluster|Oui|Oui|Oui|Oui|Oui|Oui|  
-|Index columnstore cluster actualisable||Oui|Oui|Oui|Oui|Oui|  
-|Index B-tree sur un index columnstore cluster|||Oui|Oui|Oui|Oui|  
-|Index columnstore sur une table optimisée en mémoire|||Oui|Oui|Oui|Oui|  
-|Définition d’index columnstore non-cluster prenant en charge l’utilisation d’une condition filtrée|||Oui|Oui|Oui|Oui|  
-|Option de temporisation de la compression pour les index columnstore dans `CREATE TABLE` et `ALTER TABLE`|||Oui|Oui|Oui|Oui|
-|Un index columnstore peut avoir une colonne calculée non persistante||||Oui|||   
+|Fonctionnalité d’index columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|Exécution en mode batch pour les requêtes multithread|Oui|Oui|Oui|Oui|Oui|Oui|Oui| 
+|Exécution en mode batch pour les requêtes monothread|||Oui|Oui|Oui|Oui|Oui|  
+|Option de compression de l’archivage||Oui|Oui|Oui|Oui|Oui|Oui|  
+|Isolement de capture instantanée et isolement de capture instantanée Read Committed|||Oui|Oui|Oui|Oui|Oui| 
+|Spécifier l’index columnstore lors de la création d’une table|||Oui|Oui|Oui|Oui|Oui|  
+|Always On prend en charge les index columnstore|Oui|Oui|Oui|Oui|Oui|Oui|Oui| 
+|Le secondaire accessible en lecture Always On prend en charge les index columnstore non-cluster en lecture seule|Oui|Oui|Oui|Oui|Oui|Oui|Oui|  
+|Le secondaire accessible en lecture Always On prend en charge les index columnstore actualisables|||Oui||Oui|||  
+|Index columnstore non-cluster en lecture seule sur segment de mémoire ou arbre B (B-tree)|Oui|Oui|oui <sup>1</sup>|oui <sup>1</sup>|oui <sup>1</sup>|oui <sup>1</sup>|oui <sup>1</sup>|  
+|Index columnstore non-cluster actualisable sur segment de mémoire ou arbre B (B-tree)|||Oui|Oui|Oui|Oui|Oui|  
+|Index B-tree supplémentaires autorisés sur un segment de mémoire ou arbre B (B-tree) ayant un index columnstore non-cluster|Oui|Oui|Oui|Oui|Oui|Oui|Oui|  
+|Index columnstore cluster actualisable||Oui|Oui|Oui||Oui|Oui|  
+|Index B-tree sur un index columnstore cluster|||Oui|Oui||Oui|Oui|  
+|Index columnstore sur une table optimisée en mémoire|||Oui|Oui||Oui|Oui|  
+|Définition d’index columnstore non-cluster prenant en charge l’utilisation d’une condition filtrée|||Oui|Oui|Oui|Oui|Oui|  
+|Option de temporisation de la compression pour les index columnstore dans `CREATE TABLE` et `ALTER TABLE`|||Oui|Oui|Oui|Oui|Oui|
+|Un index columnstore peut avoir une colonne calculée non persistante||||Oui|Oui|||   
+|Prise en charge de la fusion en arrière-plan du moteur de tuple||||||Oui|Oui|Oui|
   
  <sup>1</sup> Pour créer un index columnstore non-cluster en lecture seule, stockez l’index sur un groupe de fichiers en lecture seule.  
  
@@ -60,11 +61,11 @@ ms.locfileid: "88408635"
 ### <a name="functional"></a>Fonctionnelle
 - À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], le moteur de tuple est aidé par une tâche de fusion en arrière-plan qui compresse automatiquement les rowgroups delta OPEN plus petits qui existent depuis un certain temps, tel que déterminé par un seuil interne, ou qui fusionne les rowgroups COMPRESSED à partir desquels un grand nombre de lignes a été supprimé. Auparavant, une opération de réorganisation d’index était nécessaire pour fusionner les rowgroups avec des données partiellement supprimées. Cela améliore la qualité de l’index columnstore dans le temps. 
 
-## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] ajoute ces nouvelles fonctionnalités.
+## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ajoute ces nouvelles fonctionnalités.
 
 ### <a name="functional"></a>Fonctionnelle
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] prend en charge les colonnes calculées non persistantes dans les index columnstore cluster. Les colonnes calculées non persistantes ne sont pas prises en charge dans les index columnstore cluster. Vous ne pouvez pas créer un index non-cluster sur un index columnstore qui comporte une colonne calculée. 
+- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] prend en charge les colonnes calculées non persistantes dans les index columnstore cluster. Les colonnes calculées non persistantes ne sont pas prises en charge dans les index columnstore cluster. Vous ne pouvez pas créer un index non-cluster sur un index columnstore qui comporte une colonne calculée. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ajoute des améliorations clés pour optimiser les performances et la flexibilité des index columnstore. Ces améliorations touchent les scénarios d’entreposage de données et permettent l’analytique opérationnelle en temps réel.  

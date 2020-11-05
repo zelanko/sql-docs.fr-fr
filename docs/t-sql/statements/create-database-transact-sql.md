@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Syntaxe de création de base de données pour SQL Server, Azure SQL Database, Azure Synapse Analytics et Système de plateforme d’analyse
 ms.custom: references_regions
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 211ed452674eb5cfc8d33d648fbefc66913ba4bd
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496914"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235396"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -176,9 +176,9 @@ CREATE DATABASE database_snapshot_name
 
 *database_name* correspond au nom de la nouvelle base de données. Les noms de base de données doivent être uniques au sein d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).
 
-*database_name* peut comporter 128 caractères maximum, à moins qu’aucun nom logique ne soit spécifié pour le fichier journal. Si aucun nom logique de fichier journal n’est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère *logical_file_name* et the *os_file_name* pour le journal en ajoutant un suffixe à *database_name* . Cela limite la taille de *database_name* à 123 caractères de sorte que le nom logique du fichier généré ne comporte pas plus de 128 caractères.
+*database_name* peut comporter 128 caractères maximum, à moins qu’aucun nom logique ne soit spécifié pour le fichier journal. Si aucun nom logique de fichier journal n’est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère *logical_file_name* et the *os_file_name* pour le journal en ajoutant un suffixe à *database_name*. Cela limite la taille de *database_name* à 123 caractères de sorte que le nom logique du fichier généré ne comporte pas plus de 128 caractères.
 
-Si le nom de fichier de données n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise *database_name* à la fois comme *logical_file_name* et comme *os_file_name* . Le chemin d'accès par défaut est obtenu à partir du Registre. Le chemin par défaut peut être modifié à l’aide de **Propriétés du serveur (page Paramètres de base de données)** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La modification du chemin d'accès par défaut requiert le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Si le nom de fichier de données n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise *database_name* à la fois comme *logical_file_name* et comme *os_file_name*. Le chemin d'accès par défaut est obtenu à partir du Registre. Le chemin par défaut peut être modifié à l’aide de **Propriétés du serveur (page Paramètres de base de données)** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La modification du chemin d'accès par défaut requiert le redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 CONTAINMENT = { NONE | PARTIAL }
 
@@ -426,7 +426,7 @@ Pour obtenir des descriptions de NAME et FILENAME et leurs valeurs, consultez le
 > [!NOTE]
 > Quand vous créez un instantané de base de données, les autres options \<filespec> et le mot clé PRIMARY ne sont pas autorisés.
 
-AS SNAPSHOT OF *source_database_name* spécifie que la base de données créée est un instantané de la base de données source spécifiée par *source_database_name* . Les bases de données d'instantané et source doivent se trouver sur la même instance.
+AS SNAPSHOT OF *source_database_name* spécifie que la base de données créée est un instantané de la base de données source spécifiée par *source_database_name*. Les bases de données d'instantané et source doivent se trouver sur la même instance.
 
 Pour plus d'informations, consultez [Instantanés de base de données](#database-snapshots) dans la section Notes.
 
@@ -464,7 +464,7 @@ Nous vous recommandons d'utiliser un réseau de zone de stockage (SAN, Storage A
 
 ## <a name="database-snapshots"></a>Instantanés de base de données
 
-Vous pouvez utiliser l’instruction `CREATE DATABASE` pour créer une vue en lecture seule statique, un *instantané de base de données* de la *base de données source* . Chaque instantané de base de données est transactionnellement cohérent avec la base de données source existante au moment de la création de l'instantané. Une base de données source peut posséder plusieurs instantanés.
+Vous pouvez utiliser l’instruction `CREATE DATABASE` pour créer une vue en lecture seule statique, un *instantané de base de données* de la *base de données source*. Chaque instantané de base de données est transactionnellement cohérent avec la base de données source existante au moment de la création de l'instantané. Une base de données source peut posséder plusieurs instantanés.
 
 > [!NOTE]
 > Quand vous créez un instantané de base de données, l'instruction `CREATE DATABASE` ne peut pas faire référence à des fichiers journaux, hors connexion, de restauration ou anciens.
@@ -979,7 +979,7 @@ CATALOG_COLLATION : spécifie le classement par défaut du catalogue de métado
 BACKUP_STORAGE_REDUNDANCY spécifie comment la restauration à un point dans le temps et les sauvegardes à conservation longue d’une base de données sont répliquées. La géorestauration, ou la possibilité de récupérer après une panne d’une région, est disponible seulement quand la base de données est créée avec la redondance de stockage de sauvegarde « GEO ». Sauf spécification explicite, les bases de données créées avec T-SQL utilisent un stockage de sauvegarde géoredondant. 
 
 > [!IMPORTANT]
-> L’option BACKUP_STORAGE_REDUNDANCY pour Azure SQL Database est disponible en préversion publique seulement dans la région Azure Asie Sud-Est.  
+> L’option BACKUP_STORAGE_REDUNDANCY pour Azure SQL Database est uniquement disponible en préversion publique dans la région Brésil Sud et mise à la disposition générale dans la région Azure Asie Sud-Est.  
 
 EDITION : spécifie la couche de service de la base de données.
 
@@ -1165,7 +1165,7 @@ L’argument `CATALOG_COLLATION` est uniquement disponible lors de la création 
 
 La copie d’une base de données à l’aide de l’instruction `CREATE DATABASE` est une opération asynchrone. Par conséquent, une connexion au serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] n'est pas nécessaire pendant toute la durée du processus de copie. L’instruction `CREATE DATABASE` redonne le contrôle à l’utilisateur après la création de l’entrée dans sys.databases, mais avant que l’opération de copie de base de données soit terminée. Autrement dit, l'instruction `CREATE DATABASE` est renvoyée avec succès lorsque la copie de base de données est encore en cours.
 
-- Surveillance du processus de copie sur un serveur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] : Interroger les colonnes `percentage_complete` ou `replication_state_desc` des [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) ou de la colonne `state` dans la vue **sys.databases** . La vue [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) peut aussi être utilisée, car elle retourne l’état des opérations de base de données, y compris la copie de base de données.
+- Surveillance du processus de copie sur un serveur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] : Interroger les colonnes `percentage_complete` ou `replication_state_desc` des [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) ou de la colonne `state` dans la vue **sys.databases**. La vue [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) peut aussi être utilisée, car elle retourne l’état des opérations de base de données, y compris la copie de base de données.
 
 Lorsque le processus de copie est terminé avec succès, la base de données de destination est cohérente avec la base de données source au niveau des transactions.
 
@@ -1548,37 +1548,37 @@ WITH (
 
 *database_name* est le nom de la nouvelle base de données. Pour plus d’informations sur les noms de bases de données autorisés, consultez « Règles de nommage d’objet » et « Noms de bases de données réservés » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-AUTOGROW = ON | **OFF** spécifie si les paramètres *replicated_size* , *distributed_size* et *log_size* pour cette base de données croissent automatiquement en fonction des besoins au-delà de leur taille spécifiée. La valeur par défaut est **OFF** .
+AUTOGROW = ON | **OFF** spécifie si les paramètres *replicated_size* , *distributed_size* et *log_size* pour cette base de données croissent automatiquement en fonction des besoins au-delà de leur taille spécifiée. La valeur par défaut est **OFF**.
 
 Si AUTOGROW est ON, *replicated_size* , *distributed_size* , et *log_size* croissent en fonction des besoins (et non par blocs de la taille spécifiée initiale) lors de chaque insertion de données, mise à jour ou autre action nécessitant davantage de stockage que ce qui a déjà été alloué.
 
 Si AUTOGROW est OFF, les tailles n’augmentent pas automatiquement. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retourne une erreur en cas de tentative d’exécution d’une action qui exige que *replicated_size* , *distributed_size* ou *log_size* croisse au-delà de sa valeur spécifiée.
 
-AUTOGROW est ON pour toutes les tailles ou OFF pour toutes les tailles. Par exemple, vous ne pouvez pas définir AUTOGROW ON pour *log_size* sans le définir également pour *replicated_size* .
+AUTOGROW est ON pour toutes les tailles ou OFF pour toutes les tailles. Par exemple, vous ne pouvez pas définir AUTOGROW ON pour *log_size* sans le définir également pour *replicated_size*.
 
-*replicated_size* [Go] est un nombre positif. Définit la taille (en gigaoctets entier ou décimal) pour l’espace total alloué aux tables répliquées et aux données correspondantes *sur chaque nœud de calcul* . Pour plus d’informations sur les exigences liées aux valeurs *replicated_size* minimales et maximales, consultez « Valeurs minimales et maximales » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*replicated_size* [Go] est un nombre positif. Définit la taille (en gigaoctets entier ou décimal) pour l’espace total alloué aux tables répliquées et aux données correspondantes *sur chaque nœud de calcul*. Pour plus d’informations sur les exigences liées aux valeurs *replicated_size* minimales et maximales, consultez « Valeurs minimales et maximales » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Si AUTOGROW est ON, les tables répliquées sont autorisées à croître au-delà de cette limite.
 
-Si AUTOGROW est OFF, une erreur est retournée si un utilisateur tente de créer une table répliquée, d’insérer des données dans une table répliquée existante, ou de mettre à jour une table répliquée existante d’une manière qui augmenterait la taille au-delà de *replicated_size* .
+Si AUTOGROW est OFF, une erreur est retournée si un utilisateur tente de créer une table répliquée, d’insérer des données dans une table répliquée existante, ou de mettre à jour une table répliquée existante d’une manière qui augmenterait la taille au-delà de *replicated_size*.
 
-*distributed_size* [Go] est un nombre positif. Taille (en gigaoctets entier ou décimal) pour l’espace total alloué aux tables distribuées et aux données correspondantes *à l’échelle de l’appliance* . Pour plus d’informations sur les exigences liées aux valeurs *distributed_size* minimales et maximales, consultez « Valeurs minimales et maximales » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+*distributed_size* [Go] est un nombre positif. Taille (en gigaoctets entier ou décimal) pour l’espace total alloué aux tables distribuées et aux données correspondantes *à l’échelle de l’appliance*. Pour plus d’informations sur les exigences liées aux valeurs *distributed_size* minimales et maximales, consultez « Valeurs minimales et maximales » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Si AUTOGROW est ON, les tables distribuées sont autorisées à croître au-delà de cette limite.
 
-Si AUTOGROW est OFF, une erreur est retournée si un utilisateur tente de créer une table distribuée, d’insérer des données dans une table distribuée existante, ou de mettre à jour une table distribuée existante d’une manière qui augmenterait la taille au-delà de *replicated_size* .
+Si AUTOGROW est OFF, une erreur est retournée si un utilisateur tente de créer une table distribuée, d’insérer des données dans une table distribuée existante, ou de mettre à jour une table distribuée existante d’une manière qui augmenterait la taille au-delà de *replicated_size*.
 
-*log_size* [Go] est un nombre positif. Taille (en gigaoctets entier ou décimal) du journal des transactions *à l’échelle de l’appliance* .
+*log_size* [Go] est un nombre positif. Taille (en gigaoctets entier ou décimal) du journal des transactions *à l’échelle de l’appliance*.
 
 Pour plus d’informations sur les exigences liées aux valeurs *log_size* minimales et maximales, consultez « Valeurs minimales et maximales » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Si AUTOGROW est ON, le fichier journal est autorisé à croître au-delà de cette limite. Utilisez l’instruction [DBCC SHRINKLOG (Azure Synapse Analytics)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) afin de réduire la taille des fichiers journaux à leur taille d’origine.
 
-Si AUTOGROW est OFF, une erreur est retournée pour toute action qui augmenterait la taille du journal sur un nœud de calcul au-delà de *log_size* .
+Si AUTOGROW est OFF, une erreur est retournée pour toute action qui augmenterait la taille du journal sur un nœud de calcul au-delà de *log_size*.
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite l’autorisation `CREATE ANY DATABASE` dans la base de données master ou l’appartenance au rôle serveur fixe **sysadmin** .
+Nécessite l’autorisation `CREATE ANY DATABASE` dans la base de données master ou l’appartenance au rôle serveur fixe **sysadmin**.
 
 L'exemple suivant fournit l'autorisation de créer une base de données à l'utilisateur de base de données Fay.
 
@@ -1601,7 +1601,7 @@ Pour plus d’informations sur les contraintes minimales et maximales sur les ba
 
 Lors de la création d’une base de données, il doit y avoir suffisamment d’espace libre disponible *sur chaque nœud de calcul* pour allouer le total combiné des tailles suivantes :
 
-- Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec des tables de la taille de *replicated_table_size* .
+- Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec des tables de la taille de *replicated_table_size*.
 - Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec des tables de la taille de ( *distributed_table_size* / nombre de nœuds de calcul).
 - Journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la taille de ( *log_size* / nombre de nœuds de calcul).
 

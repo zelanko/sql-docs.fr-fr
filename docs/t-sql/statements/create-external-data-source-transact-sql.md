@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 562063245f2c8aaf5204385be20e6687554d5d46
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: f54f2fdce030f477a9e203daa837287dff86f107
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300185"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043848"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -119,7 +119,7 @@ Remarques et conseils supplémentaires lors de la définition de l’emplacement
 - Spécifiez `Driver={<Name of Driver>}` lors de la connexion via `ODBC`.
 - `wasbs` est facultatif, mais recommandé pour l’accès aux comptes de stockage Azure, car les données seront envoyées à l’aide d’une connexion TLS/SSL sécurisée.
 - `abfs` ou `abfss` API ne sont pas prises en charge lors de l’accès aux comptes de stockage Azure.
-- L’option d’espace de noms hiérarchique pour les comptes de stockage Azure (V2) n’est pas prise en charge. Vérifiez que cette option reste **désactivée** .
+- L’option d’espace de noms hiérarchique pour les comptes de stockage Azure (V2) n’est pas prise en charge. Vérifiez que cette option reste **désactivée**.
 - Pour garantir la réussite des requêtes PolyBase lors du basculement du `Namenode` Hadoop, envisagez d’utiliser une adresse IP virtuelle pour le `Namenode`du cluster Hadoop. Dans le cas contraire, exécutez une commande [ALTER EXTERNAL DATA SOURCE][alter_eds] pour pointer vers le nouvel emplacement.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -493,7 +493,7 @@ Spécifie les informations d’identification limitées à la base de données s
 
 Remarques et conseils supplémentaires lors de la création d’informations d’identification :
 
-- Pour charger les données à partir du stockage Azure dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], utilisez une clé de stockage Azure.
+- Pour charger des données à partir de Stockage Azure dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], utilisez une signature d’accès partagé (jeton SAS).
 - `CREDENTIAL` est requis uniquement si les données ont été sécurisées. `CREDENTIAL` n’est pas requis pour les jeux de données qui autorisent l’accès anonyme.
 - Lorsque `TYPE` = `BLOB_STORAGE`, les informations d’identification doivent être créées avec l’identité `SHARED ACCESS SIGNATURE`. En outre, le jeton SAS doit être configuré comme suit :
   - Retirez le caractère `?` en tête lorsqu’il est configuré en tant que secret

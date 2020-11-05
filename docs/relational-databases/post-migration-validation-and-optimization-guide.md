@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891129"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235450"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
 
@@ -32,7 +32,7 @@ Voici quelques-uns des scénarios de performance courants rencontrés après la 
 
 ## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Régression des requêtes en raison d’un changement de version CE
 
-**S’applique à : migration de ** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à : migration de** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Quand vous migrez d’une ancienne version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (ou une version ultérieure) et que vous passez au tout dernier [niveau de compatibilité de la base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), il est possible que les performances d’une charge de travail fassent l’objet d’une régression.
 
@@ -44,7 +44,7 @@ Pour plus d’informations sur les changements apportés à l’optimiseur de re
 
 Remplacez le [niveau de compatibilité de base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) par celui de la version de la source, puis suivez la procédure de mise à niveau recommandée que présente l’image suivante :
 
-![requête-magasin-utilisation-5](../relational-databases/performance/media/query-store-usage-5.png "requête-magasin-utilisation-5")  
+![Diagramme montrant le workflow de mise à niveau recommandé.](../relational-databases/performance/media/query-store-usage-5.png "requête-magasin-utilisation-5")  
 
 Pour plus d’informations à ce sujet, consultez [Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -94,7 +94,7 @@ Les index incorrects ou manquants provoquent des suppléments d’E/S qui entra�
 > [!NOTE]
 > Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existe dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en l’état ne concerne pas ce scénario.
 
-L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut uniquement prendre en compte les informations connues au moment de la compilation. Si une charge de travail s’appuie sur des prédicats qui ne peuvent être connus qu’au moment de l’exécution, le potentiel d’un mauvais choix de plan augmente. Pour permettre l’amélioration de la qualité d’un plan, les prédicats doivent être **SARGable**, ou **S**earch **Arg**ument**able**.
+L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut uniquement prendre en compte les informations connues au moment de la compilation. Si une charge de travail s’appuie sur des prédicats qui ne peuvent être connus qu’au moment de l’exécution, le potentiel d’un mauvais choix de plan augmente. Pour permettre l’amélioration de la qualité d’un plan, les prédicats doivent être **SARGable** , ou **S** earch **Arg** ument **able**.
 
 Voici quelques exemples de prédicats non SARGable :
 -   Conversions de données implicites, par exemple de VARCHAR à NVARCHAR, ou de INT à VARCHAR. Recherchez les avertissements d’exécution liés à CONVERT_IMPLICIT dans les plans d’exécution réels. La conversion d’un type vers un autre type peut également entraîner une perte de précision.

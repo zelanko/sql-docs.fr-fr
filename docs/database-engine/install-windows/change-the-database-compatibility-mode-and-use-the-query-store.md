@@ -15,12 +15,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09451cc9897962566905f66400cb185a5d2211da
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895388"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243698"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modifier le niveau de compatibilité de la base de données et utiliser le magasin des requêtes
 
@@ -46,7 +46,7 @@ Le processus de mise à niveau permettant d’activer la nouvelle fonctionnalit�
   
 Le flux de travail recommandé pour mettre à niveau le processeur de requêtes vers la dernière version du code est documenté dans la [section Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server de la rubrique Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) et est illustré ci-dessous.  
   
-![requête-magasin-utilisation-5](../../relational-databases/performance/media/query-store-usage-5.png "requête-magasin-utilisation-5") 
+![Diagramme montrant le workflow recommandé pour la mise à niveau du processeur de requêtes vers la dernière version du code.](../../relational-databases/performance/media/query-store-usage-5.png "requête-magasin-utilisation-5") 
 
 Depuis [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, les utilisateurs peuvent être guidés tout au long du workflow recommandé en utilisant l’Assistant Paramétrage de requêtes. Pour plus d’informations, consultez [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requêtes](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

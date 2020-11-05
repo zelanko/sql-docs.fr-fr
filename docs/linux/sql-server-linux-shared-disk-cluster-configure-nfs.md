@@ -9,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 06cd2218a2a194ab3345fc9ed00ae40e17f0141d
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 218c4685b7305a1442f85e9b10da7144c6189ea3
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784879"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235654"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - NFS - SQL Server sur Linux
 
@@ -36,7 +36,7 @@ Quand vous configurez le ou les dossiers à partager sur le serveur NFS, assurez
 
 Assurez-vous que vos normes de sécurité sont appliquées pour l’accès. Quand vous configurez le dossier, assurez-vous que seuls les serveurs participant à l’instance de cluster de basculement peuvent consulter le dossier NFS. Vous trouverez ci-dessous un exemple de /etc/exports modifié sur une solution NFS basée sur Linux dans laquelle le dossier est limité à FCIN1 et FCIN2.
 
-![05-nfsacl][1]
+![Vous trouverez ci-dessous une capture d’écran d’un exemple de /etc/exports modifié sur une solution NFS basée sur Linux dans laquelle le dossier est limité à FCIN1 et FCIN2.][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -132,7 +132,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour l’accès. Quan
     mount
     ```
 
-    ![10-mountnoswitches][2]
+    ![Capture d’écran de la commande mount et de la réponse à la commande montrant l’absence de commutateurs.][2]
 
    * Basculez vers l’utilisateur mssql. Vous ne recevrez pas d’accusé de réception en cas de réussite.
 
@@ -228,7 +228,7 @@ Assurez-vous que vos normes de sécurité sont appliquées pour l’accès. Quan
 
    * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, en changer le contexte, vérifier que les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
 
-    ![15-createtestdatabase][4]
+    ![Capture d’écran de la commande sqlcmd et de la réponse à la commande.][4]
  
    * Démonter le partage 
 

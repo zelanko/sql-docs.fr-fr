@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 51f971caef999424e002a49ab357e33fd1f0657a
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301894"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243569"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Actions et groupes d’actions SQL Server Audit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "86301894"
 |BATCH_STARTED_GROUP|Cet événement se déclenche chaque fois qu’une opération de gestion de transaction, de texte de lot ou de procédure stockée commence à s’exécuter. Il se déclenche avant l’exécution et audite l’ensemble du texte de lot ou de procédure stockée, tel qu’il est envoyé par le client. **Ajouté dans SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Cet événement est déclenché pour signaler des messages d'audit relatifs à la sécurité du transport Service Broker. Équivaut à la [classe d’événements Audit Broker Login](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Cet événement est déclenché lors de la création, de la modification ou de la suppression d'une base de données. Cet événement est déclenché chaque fois qu'une base de données est créée, modifiée ou supprimée. Équivaut à la [classe d’événements Audit Database Management](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données autonome se déconnecte d'une base de données.|  
+|DATABASE_LOGOUT_GROUP|Cet événement est déclenché quand un utilisateur de base de données autonome se déconnecte d’une base de données. Équivaut à la [classe d’événements Audit Logout](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Cet événement est déclenché pour signaler des messages d'audit relatifs à la sécurité du transport de la mise en miroir de bases de données. Équivaut à la [classe d’événements Audit Database Mirroring Login](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|Cet événement est déclenché à chaque accès à des objets de base de données tels qu'un type de message, un assembly ou un contrat. Cet événement est déclenché pour tout accès à toute base de données. Remarque : Cela peut générer des enregistrements d’audit volumineux.<br /><br /> Équivaut à la [classe d’événements Audit Database Object Access](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction CREATE, ALTER ou DROP est exécutée sur des objets de base de données, tels que des schémas. Cet événement est déclenché chaque fois qu'un objet de base de données est créé, modifié ou supprimé. Remarque : Cela peut générer une très grande quantité d’enregistrements d’audit.<br /><br /> Équivaut à la [classe d’événements Audit Database Object Management](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
@@ -141,7 +141,7 @@ ms.locfileid: "86301894"
 |BATCH_COMPLETED_GROUP|Cet événement se déclenche chaque fois que l’exécution d’une opération de gestion de transaction, de texte de lot ou de procédure stockée se termine. Il se déclenche à la fin du lot et audite l’ensemble du texte du lot ou de la procédure stockée, tel qu’il est envoyé par le client, y compris le résultat.|  
 |BATCH_STARTED_GROUP|Cet événement se déclenche chaque fois qu’une opération de gestion de transaction, de texte de lot ou de procédure stockée commence à s’exécuter. Il se déclenche avant l’exécution et audite l’ensemble du texte de lot ou de procédure stockée, tel qu’il est envoyé par le client.|  
 |DATABASE_CHANGE_GROUP|Cet événement est déclenché lors de la création, de la modification ou de la suppression d'une base de données. Équivaut à la [classe d’événements Audit Database Management](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données autonome se déconnecte d'une base de données. Équivaut à la [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données autonome se déconnecte d'une base de données.|  
 |DATABASE_OBJECT_ACCESS_GROUP|Cet événement est déclenché en cas d'accès à des objets de base de données tels que des certificats et des clés asymétriques. Équivaut à la [classe d’événements Audit Database Object Access](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction CREATE, ALTER ou DROP est exécutée sur des objets de base de données, tels que des schémas. Équivaut à la [classe d’événements Audit Database Object Management](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Cet événement est déclenché lorsqu'une modification de propriétaire pour des objets dans la portée de la base de données a lieu. Équivaut à la [classe d’événements Audit Database Object Take Ownership](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  

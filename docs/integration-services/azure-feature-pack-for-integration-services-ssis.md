@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1a3bcdf7a5ade98e659b376e7ad3845e64875c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 63e40e66003737798c444f220058feceab69411a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727595"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678922"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Le Feature Pack SQL Server Integration Services (SSIS) pour Azure
 
@@ -112,17 +112,17 @@ Les builds Java suivantes ont été testées.
 
 1. Téléchargez et extrayez le package compressé d’installation.
 2. À partir de l’invite de commandes, exécutez `sysdm.cpl`.
-3. Sous l’onglet **Avancé**, sélectionnez **Variables d’environnement**.
-4. Sous la section **Variables système**, sélectionnez **Nouveau**.
+3. Sous l’onglet **Avancé** , sélectionnez **Variables d’environnement**.
+4. Sous la section **Variables système** , sélectionnez **Nouveau**.
 5. Entrez `JAVA_HOME` pour le **Nom de la variable**.
-6. Sélectionnez **Parcourir les répertoires**, accédez au dossier extrait et sélectionnez le sous-dossier `jre`.
+6. Sélectionnez **Parcourir les répertoires** , accédez au dossier extrait et sélectionnez le sous-dossier `jre`.
    Sélectionnez ensuite **OK** et la **valeur de la variable** est automatiquement renseignée.
 7. Sélectionnez **OK** pour fermer la boîte de dialogue **Nouvelle Variable système**.
 8. Sélectionnez **OK** pour fermer la boîte de dialogue **Variables d’environnement**.
 9. Sélectionnez **OK** pour fermer la boîte de dialogue **Propriétés du système**.
 
 > [!TIP]
-> Si, en utilisant le format Parquet, vous obtenez une erreur indiquant « An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space** », vous pouvez ajouter une variable d'environnement *`_JAVA_OPTIONS`* afin d’ajuster la taille de segment de mémoire minimale/maximale nécessaire pour la machine virtuelle Java.
+> Si, en utilisant le format Parquet, vous obtenez une erreur indiquant « An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**  », vous pouvez ajouter une variable d'environnement *`_JAVA_OPTIONS`* afin d’ajuster la taille de segment de mémoire minimale/maximale nécessaire pour la machine virtuelle Java.
 >
 >![jvm heap](media/azure-feature-pack-jvm-heap-size.png)
 >
@@ -149,7 +149,7 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> Si, en utilisant le format Parquet, vous obtenez une erreur indiquant « An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space** », vous pouvez ajouter une commande *`main.cmd`* afin d’ajuster la taille de segment de mémoire minimale/maximale nécessaire pour la machine virtuelle Java. Exemple :
+> Si, en utilisant le format Parquet, vous obtenez une erreur indiquant « An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**  », vous pouvez ajouter une commande *`main.cmd`* afin d’ajuster la taille de segment de mémoire minimale/maximale nécessaire pour la machine virtuelle Java. Exemple :
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~
@@ -180,18 +180,18 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 5.  Utilisez la tâche de téléchargement d'objet blob Azure HDInsight pour télécharger les données de sortie des travaux Pig/Hive à partir du stockage d'objets blob Azure.
 
-![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
+![Capture d’écran montrant le scénario de Big Data du connecteur SSIS Azure](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## <a name="scenario-managing-data-in-the-cloud"></a>Scénario : gestion des données dans le cloud
  Utilisez la destination d’objets blob Azure dans un package SSIS pour écrire des données de sortie dans un Azure Blob Storage, ou la source d’objets blob Azure pour lire des données à partir d’un stockage Azure Blob Storage.
 
-![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
+![Capture d’écran montrant le flux de données depuis la source OLE DB vers la destination d’objets blob Azure](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  
- ![SSIS-AzureConnector-CloudArchive-2](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
+ ![Capture d’écran montrant le flux de données depuis la source d’objets blob Azure vers la destination OLE DB](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
 
  Utilisez le conteneur de boucles Foreach avec l’énumérateur d’objet blob Azure pour traiter des données dans plusieurs fichiers blob.
 
-![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
+![Capture d’écran montrant le conteneur de boucles Foreach dans le flux de contrôle.](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>Notes de publication
 
