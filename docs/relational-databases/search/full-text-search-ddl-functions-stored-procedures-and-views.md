@@ -25,7 +25,7 @@ ms.locfileid: "88498595"
   
  Cette liste n'inclut pas les objets déconseillés.  
   
- Pour obtenir la liste des objets de base de données qui prennent en charge la recherche sémantique, consultez [Semantic Search DDL, Functions, Stored Procedures, and Views](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
+ Pour obtenir la liste des objets de base de données qui prennent en charge la recherche sémantique, consultez [DDL, fonctions, procédures stockées et vues de recherche sémantique](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
   
 ##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instructions DDL (Data Definition Language, langage de définition de données) Transact-SQL  
   
