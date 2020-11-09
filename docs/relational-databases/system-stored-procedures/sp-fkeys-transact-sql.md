@@ -19,19 +19,19 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3349a8ca26003ed5949a4df22c8404532c5b039c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d3cdb3abec9d762f06016c9f620840e99d339c7c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543481"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384698"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne des informations sur les clés étrangères logiques pour l'environnement actuel. Cette procédure montre les relations de clés étrangères comprenant des clés étrangères désactivées.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,27 +45,27 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @pktable_name =] '*pktable_name*'  
- Nom de la table, avec la clé primaire, utilisée pour retourner les informations de catalogue. *pktable_name* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Ce paramètre ou le paramètre *fktable_name* , ou les deux, doivent être fournis.  
+ [ @pktable_name =] ' *pktable_name* '  
+ Nom de la table, avec la clé primaire, utilisée pour retourner les informations de catalogue. *pktable_name* est de **type sysname** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Ce paramètre ou le paramètre *fktable_name* , ou les deux, doivent être fournis.  
   
- [ @pktable_owner =] '*pktable_owner*'  
- Nom du propriétaire de la table (avec la clé primaire) utilisé pour retourner les informations de catalogue. *pktable_owner* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *pktable_owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
+ [ @pktable_owner =] ' *pktable_owner* '  
+ Nom du propriétaire de la table (avec la clé primaire) utilisé pour retourner les informations de catalogue. *pktable_owner* est de **type sysname** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *pktable_owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *pktable_owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table avec la *pktable_name*spécifiée, la procédure recherche une table avec le *pktable_name* spécifié détenu par le propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *pktable_owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table avec la *pktable_name* spécifiée, la procédure recherche une table avec le *pktable_name* spécifié détenu par le propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
   
- [ @pktable_qualifier =] '*pktable_qualifier*'  
- Nom du qualificateur de la table (avec la clé primaire). *pktable_qualifier* est de type sysname, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de table en trois parties (*qualifier.Owner.Name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+ [ @pktable_qualifier =] ' *pktable_qualifier* '  
+ Nom du qualificateur de la table (avec la clé primaire). *pktable_qualifier* est de type sysname, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de table en trois parties ( *qualifier.Owner.Name* ). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [ @fktable_name =] '*fktable_name*'  
+ [ @fktable_name =] ' *fktable_name* '  
  Nom de la table (contenant une clé étrangère) utilisée pour retourner les informations de catalogue. *fktable_name* est de type sysname, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Ce paramètre ou le paramètre *pktable_name* , ou les deux, doivent être fournis.  
   
- [ @fktable_owner =] '*fktable_owner*'  
- Nom du propriétaire de la table (contenant une clé étrangère) utilisée pour retourner les informations de catalogue. *fktable_owner* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *fktable_owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
+ [ @fktable_owner =] ' *fktable_owner* '  
+ Nom du propriétaire de la table (contenant une clé étrangère) utilisée pour retourner les informations de catalogue. *fktable_owner* est de **type sysname** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *fktable_owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *fktable_owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table avec la *fktable_name*spécifiée, la procédure recherche une table avec le *fktable_name* spécifié détenu par le propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *fktable_owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table avec la *fktable_name* spécifiée, la procédure recherche une table avec le *fktable_name* spécifié détenu par le propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
   
- [ @fktable_qualifier =] '*FKTABLE_QUALIFIER*'  
- Nom du qualificateur de la table (avec clé étrangère). *FKTABLE_QUALIFIER* est de **type sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+ [ @fktable_qualifier =] ' *FKTABLE_QUALIFIER* '  
+ Nom du qualificateur de la table (avec clé étrangère). *FKTABLE_QUALIFIER* est de **type sysname** , avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  Aucun  
@@ -90,7 +90,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  Les résultats obtenus sont triés par FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME et KEY_SEQ.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si le code de votre application fait référence à des tables avec des clés étrangères désactivées, vous pouvez l'implémenter en utilisant l'une des méthodes suivantes :  
   
 -   Désactiver temporairement la vérification des contraintes (ALTER TABLE NOCHECK ou CREATE TABLE NOT FOR REPLICATION) pendant que vous travaillez sur les tables, et la réactiver par la suite.  
@@ -118,7 +118,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
  L'exemple suivant extrait une liste de clés étrangères pour la table `DimDate` dans la base de données `AdventureWorksPDW2012`. Aucune ligne n’est retournée, car [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ne prend pas en charge les clés étrangères.  
   
 ```sql  
-EXEC sp_fkeys @pktable_name = N'DimDate;  
+EXEC sp_fkeys @pktable_name = N'DimDate';  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
