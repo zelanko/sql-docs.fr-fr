@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f4802ee3beb72e34ed2b85e8857ac69c61557018
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245646"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043713"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutoriel : Ajouter un indicateur de performance clé à un rapport (Générateur de rapports)
 Dans ce tutoriel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
@@ -23,7 +23,7 @@ Les indicateurs de performance clés sont des valeurs mesurables qui revêtent u
   
 L’illustration suivante est similaire au rapport que vous allez créer.  
   
-![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
+![Capture d’écran d’un rapport KPI du générateur de rapports.](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -42,7 +42,7 @@ Dans cette section, vous choisissez une source de données partagée, créez un 
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -125,7 +125,7 @@ L’Assistant Tableau ou matrice propose une conception initiale pour l’affich
   
     Lorsque vous exécutez le rapport, le tableau affiche chaque date, toutes les commandes pour chaque date et tous les produits, quantités et totaux de ventes pour chaque commande.  
   
-7.  Dans la page Choisir la disposition, sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
+7.  Dans la page Choisir la disposition, sous **Options** , vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
 8.  Vérifiez que **Bloqué, sous-total ci-dessous** est sélectionné.  
   
@@ -139,13 +139,13 @@ L’Assistant Tableau ou matrice propose une conception initiale pour l’affich
   
       Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet Groupes de lignes affiche trois groupes de lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset. Le volet Groupes de colonnes est vide.  
       
-      ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
+      ![Capture d’écran montrant des groupes de lignes.](../reporting-services/media/report-builder-kpi-row-groups.png)
   
 12. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du produit, la quantité vendue et le total des ventes. Les données sont organisées par date de vente, puis par sous-catégorie. 
 
-![report-builder-kpi-basic-table](../reporting-services/media/report-builder-kpi-basic-table.png)
+![Capture d’écran montrant une table KPI de base du générateur de rapports.](../reporting-services/media/report-builder-kpi-basic-table.png)
     
 ### <a name="format-dates-and-currency"></a>Mettre en forme les dates et des devises
 Élargissons les colonnes et définissons le format des dates et des devises.
@@ -160,7 +160,7 @@ Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du 
 
    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [$12,345.00]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Capture d’écran montrant l’option Exemples de valeurs du générateur de rapports sélectionnée.](../reporting-services/media/report-builder-placeholder-value-button.png)
 
 5. (Facultatif) Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher les valeurs en dollars sans indication de centimes.
 
@@ -172,7 +172,7 @@ Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du 
 
 12. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
  
-![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
+![Capture d’écran du rapport KPI du générateur de rapports avec des nombres mis en forme.](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
 ## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3. Utiliser les couleurs d'arrière-plan pour afficher un indicateur de performance clé  
 Les couleurs d'arrière-plan peuvent avoir la valeur d'une expression qui est évaluée lorsque vous exécutez le rapport.  
@@ -183,7 +183,7 @@ Les couleurs d'arrière-plan peuvent avoir la valeur d'une expression qui est é
 
     Vous devez sélectionner la cellule, pas le texte qu’elle contient, pour afficher **Propriétés de la zone de texte**. 
     
-    ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
+    ![Capture d’écran de l’option Propriétés de la zone de texte du générateur de rapports.](../reporting-services/media/report-builder-text-box-properties.png)
   
 2.  Sous l’onglet **Remplissage** , cliquez sur le bouton **fx** en regard de **Couleur de remplissage** , puis entrez l’expression suivante dans le champ **Définir l’expression pour : BackgroundColor** :  
   
@@ -197,7 +197,7 @@ Les couleurs d'arrière-plan peuvent avoir la valeur d'une expression qui est é
   
 Dans la ligne de sous-total qui affiche les ventes d'une sous-catégorie, la couleur d'arrière-plan de la cellule est le rouge, le jaune ou le vert, selon la valeur de la somme des ventes.  
 
-![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
+![Capture d’écran du rapport KPI du générateur de rapports avec des couleurs dans certaines cellules.](../reporting-services/media/report-builder-kpi-colors.png)
   
 ## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4. Afficher un indicateur de performance clé à l'aide d'une jauge  
 Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise une jauge linéaire horizontale, car sa forme et sa simplicité la rendent facile à lire, même quand elle est petite et qu’elle se trouve utilisée dans une cellule de tableau. Pour plus d’informations, consultez [Jauges &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
@@ -208,11 +208,11 @@ Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise 
   
 2.  Dans le tableau, cliquez avec le bouton droit sur la poignée de la colonne Sales > **Insérer une colonne** > **Droite**. Une nouvelle colonne est ajoutée au tableau.  
 
-    ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
+    ![Capture d’écran montrant comment insérer une colonne dans le rapport KPI du générateur de rapports.](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  Tapez **Linear KPI** dans l’en-tête de colonne.  
   
-4.  Sous l’onglet **Insérer** > **Visualisations des données** > **Jauge**, puis cliquez sur l’aire de conception située en dehors du tableau.   
+4.  Sous l’onglet **Insérer** > **Visualisations des données** > **Jauge** , puis cliquez sur l’aire de conception située en dehors du tableau.   
   
 5.  Dans la boîte de dialogue **Sélectionner le type de jauge** , sélectionnez le premier type de jauge linéaire, **Horizontal**.  
   
@@ -224,17 +224,17 @@ Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise 
   
     Une fois le champ `Sales` déposé sur la jauge, il rejoint la liste **Valeurs** et ses valeurs sont agrégées à l’aide de la fonction intégrée Sum.  
    
-    ![report-builder-kpi-drag-sales-field](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
+    ![Capture d’écran montrant comment faire glisser le champ Sales dans un rapport KPI du générateur de rapports.](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
 9. Dans le volet **Données de la jauge** , cliquez sur la flèche en regard **LinearPointer1** > **Propriétés du pointeur**.  
   
-10. Dans la boîte de dialogue **Propriétés du pointeur linéaire** > onglet **Options du pointeur** > **Type de pointeur**, vérifiez que **Barre** est sélectionné. 
+10. Dans la boîte de dialogue **Propriétés du pointeur linéaire** > onglet **Options du pointeur** > **Type de pointeur** , vérifiez que **Barre** est sélectionné. 
  
 11. Cliquez sur **OK**.  
   
 12. Cliquez avec le bouton droit sur l’échelle de la jauge, puis cliquez sur **Propriétés de l’échelle**.  
   
-13. Dans la boîte de dialogue **Propriétés de l’échelle linéaire** > onglet **Général**, définissez **Maximum** sur 25000.  
+13. Dans la boîte de dialogue **Propriétés de l’échelle linéaire** > onglet **Général** , définissez **Maximum** sur 25000.  
 
     > [!NOTE]  
     > Au lieu d’une constante comme 25000, vous pouvez utiliser une expression pour calculer dynamiquement la valeur de l’option **Maximum** . L'expression utilise alors la fonctionnalité d'agrégation et est semblable à l'expression `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
@@ -252,7 +252,7 @@ Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise 
   
     La longueur horizontale de la barre verte de la jauge varie en fonction de la valeur du KPI.  
   
-![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
+![Capture d’écran montrant une colonne Linear KPI ajoutée au rapport KPI du générateur de rapports.](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5. Afficher un indicateur de performance clé à l'aide d'un indicateur  
 Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un coup d'œil des valeurs de données. En raison de leur taille et de leur simplicité, les indicateurs sont souvent utilisés dans les tableaux et les matrices. Pour plus d’informations, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
@@ -269,7 +269,7 @@ Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un co
   
 5.  Sous l’onglet **Insérer** > **Visualisations des données** > double-cliquez sur **Indicateur**.  
   
-6.  Dans la boîte de dialogue **Sélectionner un type d’indicateur** , sous **Formes**, sélectionnez le premier type de forme, **3 Indicateurs (sans bordure)** .  
+6.  Dans la boîte de dialogue **Sélectionner un type d’indicateur** , sous **Formes** , sélectionnez le premier type de forme, **3 Indicateurs (sans bordure)** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -279,7 +279,7 @@ Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un co
   
 9. Sous l’onglet **Valeur et états** , dans la zone **Valeur** , sélectionnez **[SUM (Sales)]** . Ne modifiez pas les autres options.  
   
-    Par défaut, la synchronisation des données se produit au niveau de la région de données et vous voyez s’afficher la valeur **Tablix1**, le nom de la région de données de table dans le rapport, dans la zone **Étendue de synchronisation** .  
+    Par défaut, la synchronisation des données se produit au niveau de la région de données et vous voyez s’afficher la valeur **Tablix1** , le nom de la région de données de table dans le rapport, dans la zone **Étendue de synchronisation** .  
   
     Dans ce rapport, vous pouvez également modifier l'étendue d'un indicateur placé dans la cellule du sous-total de la sous-catégorie pour synchroniser le champ SalesDate.  
   
@@ -287,7 +287,7 @@ Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un co
 
 11. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
 
-![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
+![Capture d’écran montrant une colonne Stoplight KPI ajoutée au rapport KPI du générateur de rapports.](../reporting-services/media/report-builder-kpi-stoplight.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Ajouter un titre de rapport  
 Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans cette section, vous utilisez la zone de texte placée automatiquement en haut du corps du rapport.  
@@ -298,9 +298,9 @@ Vous pouvez améliorer le texte en appliquant différents types de styles de pol
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Tapez **Product Sales KPIs**, puis cliquez à l’extérieur de la zone de texte.  
+2.  Tapez **Product Sales KPIs** , puis cliquez à l’extérieur de la zone de texte.  
   
-3.  Si vous le souhaitez, cliquez avec le bouton droit sur la zone de texte qui contient **Product Sales KPI**, cliquez sur **Propriétés de la zone de texte**, puis sous l’onglet Police, sélectionnez différents types de styles de police, tailles et couleurs.  
+3.  Si vous le souhaitez, cliquez avec le bouton droit sur la zone de texte qui contient **Product Sales KPI** , cliquez sur **Propriétés de la zone de texte** , puis sous l’onglet Police, sélectionnez différents types de styles de police, tailles et couleurs.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -317,7 +317,7 @@ Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vo
   
     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
-4.  Dans **Nom**, remplacez le nom par défaut par **Product Sales KPI**.  
+4.  Dans **Nom** , remplacez le nom par défaut par **Product Sales KPI**.  
   
 5.  Cliquez sur **Enregistrer**.  
   
@@ -327,12 +327,12 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
-2.  Cliquez sur **Bureau**, **Mes documents**ou **Poste de travail**, puis naviguez jusqu’au dossier où vous souhaitez enregistrer le rapport.  
+2.  Cliquez sur **Bureau** , **Mes documents** ou **Poste de travail** , puis naviguez jusqu’au dossier où vous souhaitez enregistrer le rapport.  
   
 > [!NOTE]  
-> Si vous n’avez pas accès à un serveur de rapports, cliquez sur **Bureau**, **Mes documents**ou **Poste de travail** et enregistrez le rapport sur votre ordinateur.  
+> Si vous n’avez pas accès à un serveur de rapports, cliquez sur **Bureau** , **Mes documents** ou **Poste de travail** et enregistrez le rapport sur votre ordinateur.  
   
-1.  Dans **Nom**, remplacez le nom par défaut par **Product Sales KPI**.  
+1.  Dans **Nom** , remplacez le nom par défaut par **Product Sales KPI**.  
   
 2.  Cliquez sur **Enregistrer**.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e5d34588bef3022f340d6a52dded1b03aad30d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238392"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364641"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutoriel : Création d’un rapport principal et d’un rapport d’extraction (Générateur de rapports)
 Ce didacticiel vous apprend comment créer deux types de rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un rapport d’extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. 
@@ -45,7 +45,7 @@ Dans la boîte de dialogue Prise en main, créez un rapport de matrice à l’ai
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -56,19 +56,19 @@ Une connexion de données contient les informations nécessaires pour se connect
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
   
-1.  Dans la page **Choisir un dataset** , sélectionnez **Créer un dataset**, puis cliquez sur **Suivant**. La page **Choisir une connexion à une source de données** s’ouvre.  
+1.  Dans la page **Choisir un dataset** , sélectionnez **Créer un dataset** , puis cliquez sur **Suivant**. La page **Choisir une connexion à une source de données** s’ouvre.  
   
 2.  Cliquez sur **Nouveau**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
   
-3.  Dans **Nom**, tapez **Online and Reseller Sales Detail** comme nom de la source de données.  
+3.  Dans **Nom** , tapez **Online and Reseller Sales Detail** comme nom de la source de données.  
   
-4.  Dans **Sélectionner un type de connexion**, sélectionnez **Microsoft SQL Server Analysis Services**, puis cliquez sur **Générer**.  
+4.  Dans **Sélectionner un type de connexion** , sélectionnez **Microsoft SQL Server Analysis Services** , puis cliquez sur **Générer**.  
   
-5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  Dans **Source de données** , vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
-6.  Dans **Nom du serveur**, tapez le nom d’un serveur où est installée une instance d’Analysis Services.  
+6.  Dans **Nom du serveur** , tapez le nom d’un serveur où est installée une instance d’Analysis Services.  
   
-7.  Dans **Sélectionner ou entrer un nom de base de données**, sélectionnez le cube Contoso.  
+7.  Dans **Sélectionner ou entrer un nom de base de données** , sélectionnez le cube Contoso.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -102,7 +102,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête**, dans le volet Métadonnées, cliquez sur le bouton **(...)** .  
+1.  Dans la page **Créer une requête** , dans le volet Métadonnées, cliquez sur le bouton **(...)** .  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
@@ -119,13 +119,13 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 4.  Pour ouvrir la liste **Expression de filtre** , cliquez sur la flèche vers le bas dans la colonne **Expression de filtre** .  
   
-5.  Dans la liste d’expression de filtre, développez **All Channel**, cliquez sur **Online**, sur **Reseller**, puis sur **OK**.  
+5.  Dans la liste d’expression de filtre, développez **All Channel** , cliquez sur **Online** , sur **Reseller** , puis sur **OK**.  
   
     La requête comporte maintenant un filtre permettant de n’inclure que les canaux suivants : Online et Reseller.  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
-7.  Ouvrez la liste **Expression de filtre** , développez **All Sales Territory**, cliquez sur **North America**, puis sur **OK**.  
+7.  Ouvrez la liste **Expression de filtre** , développez **All Sales Territory** , cliquez sur **North America** , puis sur **OK**.  
   
     La requête comporte désormais un filtre permettant de n'inclure que les ventes réalisées en Amérique du Nord.  
   
@@ -135,7 +135,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 9. Pour ouvrir la liste **Expression de filtre** , cliquez sur la flèche vers le bas dans la colonne **Expression de filtre** .  
   
-10. Dans la liste Expression de filtre, développez **All Date**, cliquez sur **Year 2009**, puis sur **OK**.  
+10. Dans la liste Expression de filtre, développez **All Date** , cliquez sur **Year 2009** , puis sur **OK**.  
   
     La requête comporte maintenant un filtre permettant de n'inclure que l'année civile 2009.  
   
@@ -143,7 +143,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 1.  Développez la dimension Product, puis faites glisser le membre Product Category Name vers la colonne **Hierarchy** sous **Calendar Year**.  
   
-2.  Ouvrez la liste **Expression de filtre** , cliquez sur **All Products**, puis sur **OK**.  
+2.  Ouvrez la liste **Expression de filtre** , cliquez sur **All Products** , puis sur **OK**.  
   
 3.  Cliquez sur la case à cocher **Paramètre** . La requête contient à présent le paramètre ProductProductCategoryName.  
   
@@ -158,7 +158,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 3.  À partir de la dimension Product, faites glisser Product Subcategory Name vers le volet de données, puis placez-le à droite de Product Category Name.  
   
-4.  Dans le volet Métadonnées, développez **Mesure**, puis Sales.  
+4.  Dans le volet Métadonnées, développez **Mesure** , puis Sales.  
   
 5.  Faites glisser la mesure Sales Amount vers le volet de données, puis placez-la à droite de Product Subcategory Name.  
   
@@ -166,7 +166,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 7.  Cliquez sur **Suivant**.  
   
-## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. Organiser les données dans des groupes  
+## <a name="1c-organize-drillthrough-report-data-into-groups"></a><a name="DLayout"></a>1c. Organiser les données de rapport d’extraction dans des groupes  
 Lorsque vous sélectionnez les champs dans lesquels regrouper les données, vous concevez une matrice dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
   
 #### <a name="to-organize-data-into-groups"></a>Pour organiser les données en groupes  
@@ -186,18 +186,18 @@ Lorsque vous sélectionnez les champs dans lesquels regrouper les données, vous
   
     Pour consulter les autres fonctions d'agrégation disponibles, ouvrez la liste déroulante (ne modifiez pas la fonction d'agrégation).  
   
-5.  Faites glisser Sales_Return_Amount vers **Valeurs**et placez-le sous `[Sum(Sales_Amount)]`.  
+5.  Faites glisser Sales_Return_Amount vers **Valeurs** et placez-le sous `[Sum(Sales_Amount)]`.  
   
     Les étapes 4 et 5 spécifient les données à afficher dans la matrice.  
   
 6.  Cliquez sur **Suivant**.  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. Ajouter des sous-totaux et des totaux  
+## <a name="1d-add-drillthrough-report-subtotals-and-totals"></a><a name="DTotals"></a>1d. Ajouter des sous-totaux et des totaux au rapport d’extraction  
 Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lignes dans lesquelles afficher les valeurs d'agrégat des champs. Vous pouvez également afficher toutes les données ou laisser l'utilisateur développer/réduire les données regroupées de manière interactive.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Pour ajouter des sous-totaux et des totaux  
   
-1.  Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
+1.  Dans la page **Choisir la disposition** , sous **Options** , vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
     Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  
   
@@ -227,11 +227,11 @@ Au lieu d'afficher les ventes et les retours de ventes sous forme de valeurs mon
   
 1.  Cliquez sur Conception pour basculer en mode **Conception**.  
   
-2.  Dans le groupe Total de la matrice, cliquez avec le bouton droit sur la colonne **Sales Amount** , sélectionnez **Insérer une colonne**, puis **À droite**.  
+2.  Dans le groupe Total de la matrice, cliquez avec le bouton droit sur la colonne **Sales Amount** , sélectionnez **Insérer une colonne** , puis **À droite**.  
   
     Une colonne vide est ajoutée à la droite de **Sales Amount**.  
   
-3.  Sur le ruban, cliquez sur **Rectangle**, puis cliquez sur la cellule vide à la droite de la cellule `[Sum(Sales_Amount)]` dans le groupe de lignes [Product_Subcategory].  
+3.  Sur le ruban, cliquez sur **Rectangle** , puis cliquez sur la cellule vide à la droite de la cellule `[Sum(Sales_Amount)]` dans le groupe de lignes [Product_Subcategory].  
   
 4.  Sur le ruban, cliquez sur l’icône **Graphique sparkline** , puis cliquez sur la cellule dans laquelle le rectangle a été ajouté.  
   
@@ -268,7 +268,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
 5.  Cliquez sur le bouton **(fx)** à la droite de la liste **Valeur** .  
   
-6.  Dans la boîte de dialogue **Expression** , dans le volet Catégorie, cliquez sur **Dataset**, puis dans la liste **Valeurs** , double-cliquez sur `First(Product_Category_Name)`.  
+6.  Dans la boîte de dialogue **Expression** , dans le volet Catégorie, cliquez sur **Dataset** , puis dans la liste **Valeurs** , double-cliquez sur `First(Product_Category_Name)`.  
   
     La zone **Expression** contient l’expression suivante :  
   
@@ -280,7 +280,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
 Le titre du rapport inclut le nom de la première catégorie de produit. Par la suite, après avoir exécuté ce rapport en tant que rapport d'extraction, le nom de la catégorie de produit changera de manière dynamique afin de refléter le nom de la catégorie de produit sur lequel l'utilisateur a cliqué dans le rapport principal.  
   
-## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5. Mettre à jour des propriétés de paramètre  
+## <a name="5-set-hidden-parameter-property"></a><a name="DParameter"></a>5. Définir la propriété de paramètre Masqué  
 Par défaut, les paramètres sont visibles, ce qui n'est pas approprié pour ce rapport. Vous allez mettre à jour les propriétés de paramètre pour le rapport d'extraction.  
   
 #### <a name="to-hide-a-parameter"></a>Pour masquer un paramètre  
@@ -325,7 +325,7 @@ Vous pouvez enregistrer le rapport dans une bibliothèque SharePoint, sur un ser
   
 4.  Cliquez sur **Enregistrer**.  
   
-    La liste**Sites et serveurs récents** répertorie les bibliothèques sur le site SharePoint.  
+    La liste **Sites et serveurs récents** répertorie les bibliothèques sur le site SharePoint.  
   
 5.  Accédez à la bibliothèque où vous souhaitez enregistrer le rapport.  
   
@@ -345,28 +345,28 @@ Dans la boîte de dialogue **Prise en main** , créez un rapport de matrice à l
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
  
 2.  Dans la boîte de dialogue **Prise en main** , vérifiez que **Nouveau rapport** est sélectionné, puis cliquez sur **Assistant Tableau ou matrice**.  
   
-## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. Spécifier une connexion de données  
+## <a name="1a-add-embedded-data-source"></a><a name="MConnection"></a>1a. Ajouter une source de données incorporée  
 Vous allez ajouter une source de données incorporée au rapport principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
   
-1.  Dans la page **Choisir un dataset** , sélectionnez **Créer un dataset**, puis cliquez sur **Suivant**.  
+1.  Dans la page **Choisir un dataset** , sélectionnez **Créer un dataset** , puis cliquez sur **Suivant**.  
   
 2.  Cliquez sur **Nouveau**.  
   
-3.  Dans la zone **Nom**, tapez **Online and Reseller Sales Main** comme nom de la source de données.  
+3.  Dans la zone **Nom** , tapez **Online and Reseller Sales Main** comme nom de la source de données.  
   
-4.  Dans **Sélectionner un type de connexion**, sélectionnez **Microsoft SQL Server Analysis Services**, puis cliquez sur **Générer**.  
+4.  Dans **Sélectionner un type de connexion** , sélectionnez **Microsoft SQL Server Analysis Services** , puis cliquez sur **Générer**.  
   
-5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  Dans **Source de données** , vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
-6.  Dans **Nom du serveur**, tapez le nom d’un serveur où est installée une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+6.  Dans **Nom du serveur** , tapez le nom d’un serveur où est installée une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-7.  Dans **Sélectionner ou entrer un nom de base de données**, sélectionnez le cube Contoso.  
+7.  Dans **Sélectionner ou entrer un nom de base de données** , sélectionnez le cube Contoso.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -388,12 +388,12 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 14. Cliquez sur **Suivant**.  
   
-## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. Créer une requête MDX  
+## <a name="1b-create-embedded-dataset"></a><a name="MMDXQuery"></a>1b. Créer un jeu de données incorporé  
 À présent, créez un dataset incorporé. Pour ce faire, vous allez utiliser le concepteur de requêtes afin de créer des filtres, des paramètres et des membres calculés, ainsi que le dataset lui-même.  
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête**, dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)** .  
+1.  Dans la page **Créer une requête** , dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)** .  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
@@ -410,13 +410,13 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 4.  Pour ouvrir la liste **Expression de filtre** , cliquez sur la flèche vers le bas dans la colonne **Expression de filtre** .  
   
-5.  Dans la liste Expression de filtre, développez **All Channel**, cliquez sur **Online** et **Reseller**, puis sur **OK**.  
+5.  Dans la liste Expression de filtre, développez **All Channel** , cliquez sur **Online** et **Reseller** , puis sur **OK**.  
   
     La requête comporte maintenant un filtre permettant de n’inclure que les canaux suivants : Online et Reseller.  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
-7.  Ouvrez la liste **Expression de filtre** , développez **All Sales Territory**, cliquez sur **North America**, puis sur **OK**.  
+7.  Ouvrez la liste **Expression de filtre** , développez **All Sales Territory** , cliquez sur **North America** , puis sur **OK**.  
   
     La requête comporte désormais un filtre permettant de n'inclure que les ventes réalisées en Amérique du Nord.  
   
@@ -426,7 +426,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 9. Pour ouvrir la liste **Expression de filtre** , cliquez sur la flèche vers le bas dans la colonne **Expression de filtre** .  
   
-10. Dans la liste Expression de filtre, développez **All Date**, cliquez sur **Year 2009**, puis sur **OK**.  
+10. Dans la liste Expression de filtre, développez **All Date** , cliquez sur **Year 2009** , puis sur **OK**.  
   
     La requête comporte maintenant un filtre permettant de n'inclure que l'année civile 2009.  
   
@@ -434,7 +434,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 1.  Développez la dimension Product, faites glisser le membre Product Category Name vers la colonne **Hierarchy** sous **Sales Territory Group**.  
   
-2.  Ouvrez la liste **Expression de filtre** , cliquez sur **All Products**, puis sur **OK**.  
+2.  Ouvrez la liste **Expression de filtre** , cliquez sur **All Products** , puis sur **OK**.  
   
 3.  Cliquez sur la case à cocher **Paramètre** . La requête contient à présent le paramètre ProductProductCategoryName.  
   
@@ -452,13 +452,13 @@ Vous allez ajouter une source de données incorporée au rapport principal.
     [Measures].[Sales Quantity] - [Measures].[Sales Return Quantity]  
     ```  
   
-4.  Dans la zone Nom, tapez **Net QTY**, puis cliquez sur **OK**.  
+4.  Dans la zone Nom, tapez **Net QTY** , puis cliquez sur **OK**.  
   
     Le volet Membres calculés contient le membre calculé **Net QTY** .  
   
-5.  Cliquez avec le bouton droit sur **Membres calculés**, puis sélectionnez **Nouveau membre calculé**.  
+5.  Cliquez avec le bouton droit sur **Membres calculés** , puis sélectionnez **Nouveau membre calculé**.  
   
-6.  Dans le volet Métadonnées, développez **Mesures**, puis Sales.  
+6.  Dans le volet Métadonnées, développez **Mesures** , puis Sales.  
   
 7.  Faites glisser la mesure Sales Amount vers la zone **Expression** , tapez le caractère de soustraction (-), puis faites glisser la mesure Sales Return Amount vers la zone **Expression** ; placez-la après le caractère de soustraction.  
   
@@ -468,7 +468,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  Dans la zone **Nom** , tapez  **Net Sales**, puis cliquez sur **OK**. Le volet Membres calculés contient le membre calculé **Net Sales** .  
+8.  Dans la zone **Nom** , tapez  **Net Sales** , puis cliquez sur **OK**. Le volet Membres calculés contient le membre calculé **Net Sales** .  
   
 ### <a name="to-create-the-dataset"></a><a name="MSkip"></a>Pour créer le dataset  
   
@@ -476,7 +476,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 2.  À partir de la dimension Product, faites glisser Product Category Name vers le volet de données, et placez-le à droite de Channel Name.  
   
-3.  À partir de **Membres calculés**, faites glisser `Net QTY` vers le volet de données, puis placez-le à droite de Product Category Name.  
+3.  À partir de **Membres calculés** , faites glisser `Net QTY` vers le volet de données, puis placez-le à droite de Product Category Name.  
   
 4.  À partir de Membres calculés, faites glisser Net Sales vers le volet de données, puis placez-le à droite de `Net QTY`.  
   
@@ -486,7 +486,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 6.  Cliquez sur **Suivant**.  
   
-## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. Organiser les données dans des groupes  
+## <a name="1c-organize-main-report-data-into-groups"></a><a name="MLayout"></a>1c. Organiser les données principales du rapport dans des groupes  
 Lorsque vous sélectionnez les champs dans lesquels regrouper des données, vous concevez une matrice dont les lignes et les colonnes affichent des données de détail et des données agrégées.  
   
 #### <a name="to-organize-data-into-groups"></a>Pour organiser les données en groupes  
@@ -505,12 +505,12 @@ Lorsque vous sélectionnez les champs dans lesquels regrouper des données, vous
   
     Les étapes 3 et 4 spécifient les données à afficher dans la matrice.  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. Ajouter des sous-totaux et des totaux  
+## <a name="1d-add-main-report-subtotals-and-totals"></a><a name="MTotals"></a>1d. Ajouter des sous-totaux et des totaux au rapport principal  
 Vous pouvez afficher des sous-totaux et des totaux généraux dans les rapports. Les données dans le rapport principal s'affichent sous la forme d'un indicateur ; vous allez supprimer le total général après avoir exécuté l'assistant.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Pour ajouter des sous-totaux et des totaux généraux  
   
-1.  Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
+1.  Dans la page **Choisir la disposition** , sous **Options** , vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
     Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  Lorsque vous exécutez le rapport, chaque ligne s'affiche de la manière suivante : la première ligne correspond au groupe de colonnes, la seconde ligne aux titres de colonnes, la troisième ligne contient les données de catégories de produits (`[Sum(Net_ QTY)]` et `[Sum(Net_Sales)]`, tandis que la quatrième ligne indique les totaux.  
   
@@ -544,13 +544,13 @@ Pour activer l'extraction, spécifiez une action sur une zone de texte dans le r
   
 4.  Sélectionnez **Atteindre le rapport**.  
   
-5.  Dans **Spécifier un rapport**, cliquez sur **Parcourir**, puis recherchez le rapport d’extraction nommé ResellerVSOnlineDrillthrough.  
+5.  Dans **Spécifier un rapport** , cliquez sur **Parcourir** , puis recherchez le rapport d’extraction nommé ResellerVSOnlineDrillthrough.  
   
 6.  Pour ajouter un paramètre pour exécuter le rapport d’extraction, cliquez sur **Ajouter**.  
   
 7.  Dans la liste **Nom** , sélectionnez ProductProductCategoryName.  
   
-8.  Dans **Valeur**, tapez `[Product_Category_Name.UniqueName]`.  
+8.  Dans **Valeur** , tapez `[Product_Category_Name.UniqueName]`.  
   
     Product_Category_Name est un champ du dataset.  
   
@@ -571,7 +571,7 @@ Pour activer l'extraction, spécifiez une action sur une zone de texte dans le r
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Cliquez sur **Exécuter**pour afficher un aperçu du rapport.  
+6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 Les noms des catégories de produits présentent le format de lien courant (bleu et souligné).  
   
@@ -604,9 +604,9 @@ Utilisez des indicateurs pour afficher l'état de quantités et de ventes pour l
   
 5.  Répétez les étapes 1 à 4 pour la cellule `[Sum(Net_Sales)]` dans le groupe de lignes `[Product_Category_Name]` dans **Total**.  
   
-6.  Cliquez sur **Exécuter**pour afficher un aperçu du rapport.  
+6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
-## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5. Mettre à jour des propriétés de paramètre  
+## <a name="5-set-internal-parameter-property"></a><a name="MParameter"></a>5. Définir la propriété de paramètre Interne  
 Par défaut, les paramètres sont visibles, ce qui n'est pas approprié pour ce rapport. Vous allez mettre à jour les propriétés de paramètre afin de rendre ce dernier interne au rapport.  
   
 #### <a name="to-make-the-parameter-internal"></a>Pour rendre le paramètre interne  
@@ -634,7 +634,7 @@ Ajoutez un titre au rapport principal.
   
 4.  Sous l’onglet **Accueil** du ruban, dans le groupe Police, sélectionnez la police **Times New Roman** , la taille **16pt** et les styles **Gras** et **Italique** .  
   
-5.  Cliquez sur **Exécuter**pour afficher un aperçu du rapport.  
+5.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 ## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7. Enregistrer le rapport principal dans une bibliothèque SharePoint  
 Enregistrez le rapport principal dans une bibliothèque SharePoint.  
@@ -645,7 +645,7 @@ Enregistrez le rapport principal dans une bibliothèque SharePoint.
   
 2.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**.  
   
-3.  Cliquez éventuellement sur **Sites et serveurs récents**pour afficher une liste de serveurs de rapports et de sites SharePoint récemment utilisés.  
+3.  Cliquez éventuellement sur **Sites et serveurs récents** pour afficher une liste de serveurs de rapports et de sites SharePoint récemment utilisés.  
   
 4.  Sélectionnez ou tapez le nom du site SharePoint sur lequel vous êtes autorisé à enregistrer des rapports. L'URL de la bibliothèque SharePoint présente la syntaxe suivante :  
   
@@ -655,7 +655,7 @@ Enregistrez le rapport principal dans une bibliothèque SharePoint.
   
 5.  Naviguez jusqu'à la bibliothèque où vous souhaitez enregistrer le rapport.  
   
-6.  Dans la zone **Nom**, remplacez le nom par défaut par **ResellerVSOnlineMain**.  
+6.  Dans la zone **Nom** , remplacez le nom par défaut par **ResellerVSOnlineMain**.  
   
     > [!IMPORTANT]  
     > Enregistrez le rapport principal au même emplacement que celui où vous avez enregistré le rapport d'extraction. Pour enregistrer les rapports principal et d’extraction dans des bibliothèques ou des sites différents, confirmez que l’action **Atteindre le rapport** du rapport principal pointe vers l’emplacement correct du rapport d’extraction.  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60dfa5cf08b11789fde744f41a2c139f922d286
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245656"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043801"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports)
 
@@ -22,7 +22,7 @@ Dans ce didacticiel du [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)
   
 Les graphiques sparkline et les barres de données sont des graphiques simples de petite taille qui communiquent beaucoup d’informations dans un petit espace, souvent dans des tableaux et matrices de rapports [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . L’illustration suivante montre un rapport similaire à celui que vous allez créer.  
   
-![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
+![Capture d’écran montrant le graphique sparkline du générateur de rapports.](../reporting-services/media/report-builder-sparkline-final.png)  
      
 Durée estimée pour effectuer ce tutoriel : 30 minutes.  
   
@@ -35,7 +35,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -44,15 +44,15 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 4.  Dans la page **Choisir un dataset** , sélectionnez **Créer un dataset** > **Suivant**. La page **Choisir une connexion à une source de données** s’ouvre.  
   
     > [!NOTE]  
-    > Ce didacticiel n’a pas besoin de données spécifiques. Il a juste besoin d’une connexion à une base de données SQL Server. Si une connexion est répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à l’étape 10. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Ce didacticiel n’a pas besoin de données spécifiques. Il a juste besoin d’une connexion à une base de données SQL Server. Si une connexion est répertoriée sous **Connexions à la source de données** , vous pouvez la sélectionner et passer à l’étape 10. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Cliquez sur **Nouveau**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
   
-6.  Dans **Nom**, tapez **Ventes de produits**comme nom de la source de données.  
+6.  Dans **Nom** , tapez **Ventes de produits** comme nom de la source de données.  
   
-7.  Dans **Sélectionner un type de connexion**, assurez-vous que **Microsoft SQL Server** est sélectionné.  
+7.  Dans **Sélectionner un type de connexion** , assurez-vous que **Microsoft SQL Server** est sélectionné.  
   
-8.  Dans **Chaîne de connexion**, tapez le texte suivant :  
+8.  Dans **Chaîne de connexion** , tapez le texte suivant :  
   
     `Data Source\=<servername>`  
   
@@ -121,7 +121,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur Exécuter ( **!** ).  
   
-    La requête s’exécute et affiche le jeu de résultats pour les champs **SalesDate**, **Subcategory**, **Product**, **Sales**et **Quantity**.  
+    La requête s’exécute et affiche le jeu de résultats pour les champs **SalesDate** , **Subcategory** , **Product** , **Sales** et **Quantity**.  
   
 5.  Cliquez sur **Suivant**.  
   
@@ -133,11 +133,11 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 8.  Faites glisser **SalesDate** vers **Groupes de colonnes**.  
 
-    ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![Capture d’écran montrant comment organiser les champs.](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. Cliquez sur **Suivant**.  
   
-10. Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
+10. Dans la page **Choisir la disposition** , sous **Options** , vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
     Le volet Aperçu de l'Assistant affiche un tableau avec trois lignes. Lorsque vous exécutez le rapport, chaque ligne est affichée de la manière suivante :  
   
@@ -147,7 +147,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
     *  La troisième ligne apparaît une fois pour le tableau afin d'afficher les totaux généraux.  
     
-    ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![Capture d’écran montrant comment choisir une disposition.](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
 11. Cliquez sur **Suivant**.  
   
@@ -157,7 +157,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
     Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Product**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
     
-    ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![Capture d’écran montrant le volet de regroupement du générateur de rapports.](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
 
@@ -168,22 +168,22 @@ Par défaut, les données de synthèse du champ **Sales** affichent un nombre g�
   
 2.  Cliquez sur la cellule de la deuxième ligne (sous la ligne des en-têtes de colonnes) de la colonne **SalesDate** . Maintenez la touche Ctrl enfoncée et sélectionnez toutes les cellules qui contiennent `[Sum(Sales)]`. 
 
-    ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![Capture d’écran montrant comment sélectionner Sum Sales.](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  Sous l’onglet **Accueil** > groupe **Nombre**, cliquez sur **Devise**. Les cellules changent pour afficher le format de devise.  
+3.  Sous l’onglet **Accueil**  > groupe **Nombre** , cliquez sur **Devise**. Les cellules changent pour afficher le format de devise.  
 
-    ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![Capture d’écran montrant les ventes Sum remplacées par des valeurs monétaires (espaces réservés).](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [ **$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [ **$12,345.00** ]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Capture d’écran montrant l’option Exemples de valeurs sélectionnée.](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (Facultatif) Mettre en forme les données en tant que dates  
 Par défaut, le champ **SalesDate** affiche les informations de date et d’heure. Vous pouvez le mettre en forme de sorte qu'il n'affiche que la date.  
   
 1.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
-3.  Sous l’onglet **Accueil** > groupe **Nombre**, cliquez sur **Date**.  
+3.  Sous l’onglet **Accueil**  > groupe **Nombre** , cliquez sur **Date**.  
   
     La cellule affiche la date d’exemple **[1/31/2000]** .
      
@@ -197,13 +197,13 @@ Les valeurs **SalesDate** s’affichent dans le format de date par défaut, tand
   
 2.  Sélectionnez la colonne Total de votre tableau.  
   
-3.  Cliquez avec le bouton droit, pointez sur **Insérer une colonne**, puis cliquez sur **Gauche**.  
+3.  Cliquez avec le bouton droit, pointez sur **Insérer une colonne** , puis cliquez sur **Gauche**.  
 
-    ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
+    ![Capture d’écran montrant comment insérer une colonne à gauche d’une colonne.](../reporting-services/media/report-builder-add-column-left.png)
   
 4.  Dans la nouvelle colonne, cliquez avec le bouton droit sur la cellule dans la ligne `[Product]`, puis choisissez **Insérer** > **Graphique Sparkline**.  
 
-    ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![Capture d’écran montrant comment insérer un graphique sparkline.](../reporting-services/media/report-builder-insert-sparkline.png)
   
 5.  Dans la boîte de dialogue **Sélectionner un type de graphique sparkline** , vérifiez que le premier graphique sparkline de la ligne **Colonne** est sélectionné, puis cliquez sur **OK**.  
   
@@ -211,7 +211,7 @@ Les valeurs **SalesDate** s’affichent dans le format de date par défaut, tand
   
 7.  Cliquez sur le signe plus (+) dans la zone Valeurs, puis cliquez sur **Sales**. 
 
-    ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![Capture d’écran montrant comment ajouter des valeurs au graphique sparkline du générateur de rapports. ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     Les valeurs du champ **Sales** sont maintenant les valeurs du graphique sparkline.  
   
@@ -223,7 +223,7 @@ Les valeurs **SalesDate** s’affichent dans le format de date par défaut, tand
   
     En outre, pour chaque ligne, la barre la plus grande correspond à la hauteur de la ligne. Ceci est également trompeur, car les valeurs les plus élevées de chaque ligne ne sont pas égales : la valeur la plus élevée pour Budget Movie-Maker est 10 400 $, contre 26 576 $ pour Slim Digital (plus du double). Or les barres les plus grandes pour ces deux lignes ont pratiquement la même hauteur. Tous les graphiques sparkline doivent utiliser la même échelle.  
   
-     ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![Capture d’écran montrant un graphique sparkline du générateur de rapports mal aligné.](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. Aligner les graphiques sparkline verticalement et horizontalement  
 Les graphiques sparkline sont difficiles à lire quand ils n’utilisent pas tous les mêmes mesures. Les axes horizontal et vertical doivent chacun correspondre au reste.  
@@ -250,7 +250,7 @@ Les graphiques sparkline sont difficiles à lire quand ils n’utilisent pas tou
   
 À présent, toutes les barres de chaque graphique sparkline sont alignées sur les barres des autres graphiques sparkline et les hauteurs sont relatives.  
   
-![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
+![Capture d’écran montrant un graphique sparkline du générateur de rapports aligné.](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (Facultatif) Modifier la largeur des colonnes  
 Par défaut, chaque cellule d'un tableau contient une zone de texte. Une zone de texte s'étend verticalement pour accueillir le texte lors du rendu de la page. Dans le rapport rendu, chaque ligne s'étend en fonction de la hauteur de la plus grande zone de texte rendue dans la ligne. La hauteur de la ligne dans l'aire de conception n'a aucun impact sur la hauteur de la ligne dans le rapport rendu.  
@@ -276,11 +276,11 @@ Vous pouvez améliorer le texte en appliquant différents types de styles de pol
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Tapez **Sales by Date**et cliquez à l’extérieur de la zone de texte.  
+2.  Tapez **Sales by Date** et cliquez à l’extérieur de la zone de texte.  
   
 3.  Sélectionnez la zone de texte qui contient **Product Sales**.  
   
-4.  Sous l’onglet Accueil, dans le groupe **Police**, pour **Couleur**, sélectionnez **Bleu-vert**.  
+4.  Sous l’onglet Accueil, dans le groupe **Police** , pour **Couleur** , sélectionnez **Bleu-vert**.  
   
 7.  Sélectionnez **Gras**.  
   
@@ -299,7 +299,7 @@ Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vo
   
     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
-4.  Dans **Nom**, remplacez le nom par défaut par **Ventes de produits**.  
+4.  Dans **Nom** , remplacez le nom par défaut par **Ventes de produits**.  
   
 5.  Cliquez sur **Enregistrer**.  
   
@@ -309,9 +309,9 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
-2.  Cliquez sur **Bureau**, **Mes documents**ou **Poste de travail**, puis naviguez jusqu’au dossier où vous souhaitez enregistrer le rapport.  
+2.  Cliquez sur **Bureau** , **Mes documents** ou **Poste de travail** , puis naviguez jusqu’au dossier où vous souhaitez enregistrer le rapport.  
   
-3.  Dans **Nom**, remplacez le nom par défaut par **Ventes de produits**.  
+3.  Dans **Nom** , remplacez le nom par défaut par **Ventes de produits**.  
   
 4.  Cliquez sur **Enregistrer**.  
   

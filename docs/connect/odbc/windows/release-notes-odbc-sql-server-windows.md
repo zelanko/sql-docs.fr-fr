@@ -2,7 +2,7 @@
 title: Notes de publication pour ODBC Driver for SQL Server sur Windows
 description: Cet article de notes de publication décrit les changements de chaque version du pilote Microsoft ODBC pour SQL Server sur Windows.
 ms.custom: ''
-ms.date: 07/29/2020
+ms.date: 10/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898811"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043810"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notes de publication pour Microsoft ODBC Driver for SQL Server sur Windows
 
@@ -169,6 +169,7 @@ Pour le pilote x86 : [Chinois (simplifié)](https://go.microsoft.com/fwlink/?li
 | Mode d’authentification Azure Active Directory Managed Identity (avec attribution par le système et l’utilisateur). | Consultez [Utilisation d’Azure Active Directory avec ODBC Driver](../using-azure-active-directory.md). |
 | Possibilité d’envoyer des paramètres d’entrée sur les colonnes Always Encrypted. | Consultez [Limitations du pilote ODBC lors de l’utilisation d’Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Transactions distribuées XA. | [Utilisation de transactions XA](../use-xa-with-dtc.md). |
+| Visual C++ Redistributable mis à jour | Mise à niveau de la dépendance du runtime avec Visual C++ 2017 Redistributable ([téléchargement x64](https://aka.ms/vs/15/release/vc_redist.x64.exe), [téléchargement x86](https://aka.ms/vs/15/release/vc_redist.x86.exe)) |
 | Résolution des bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

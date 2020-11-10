@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 97502e9f1e8c5784afb2d8ad05f8fb2a05dab57a
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 36e9563d26030181c943ace428ca4eb3176bdd43
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935560"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043840"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Ajouter des types de contenu Reporting Services dans une bibliothèque SharePoint
 
@@ -23,7 +23,7 @@ ms.locfileid: "91935560"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des types de contenu prédéfinis SharePoint qui sont utilisés pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définitions de rapports (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des types de contenu prédéfinis SharePoint qui sont utilisés pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définitions de rapports (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports** , **Modèle de rapport** et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type.
 
 > [!NOTE]
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
@@ -63,17 +63,17 @@ ms.locfileid: "91935560"
   
     -   Dans SharePoint 2013, cliquez sur l'icône **Paramètres** . ![Paramètres SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint")  
   
-    -   Dans SharePoint 2010, cliquez sur **Actions du site**, puis sur **Paramètre du site**.  
+    -   Dans SharePoint 2010, cliquez sur **Actions du site** , puis sur **Paramètre du site**.  
   
 3.  Cliquez sur **Fonctionnalités de la collection de sites**.  
   
 4.  Recherchez **Fonctionnalité d'intégration Report Server** dans la liste et cliquez sur **Désactiver**.  
   
-     ![rs_reportserver_integration_active](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
+     ![Capture d’écran de la fonctionnalité d’intégration Report Server montrant les options Désactiver et Activer.](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif "rs_reportserver_integration_active")  
   
 5.  Actualisez le navigateur, puis cliquez sur **Activer** pour la **Fonctionnalité d'intégration Report Server**.  
   
-     ![rs-reportserver-integration-deactivate](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
+     ![Capture d’écran de la fonctionnalité d’intégration Report Server montrant l’option Activer.](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> Pour activer la gestion des types de contenu pour une bibliothèque de documents (SharePoint 2013)  
   
@@ -103,11 +103,11 @@ ms.locfileid: "91935560"
   
 3.  Cliquez sur **Paramètres de la bibliothèque**.  
   
-4.  Sous **Types de contenu**, cliquez sur **Ajouter à partir de types de contenu de site existants**.  
+4.  Sous **Types de contenu** , cliquez sur **Ajouter à partir de types de contenu de site existants**.  
   
-5.  Dans **Sélectionner des types de contenu dans**, sélectionnez **Types de contenu SQL Server Reporting Services**.  
+5.  Dans **Sélectionner des types de contenu dans** , sélectionnez **Types de contenu SQL Server Reporting Services**.  
   
-6.  Dans la liste **Types de contenu de site disponibles** , cliquez sur **Générateur de rapports**, puis sur **Ajouter** pour déplacer le type de contenu sélectionné dans la liste **Type de contenu à ajouter** .  
+6.  Dans la liste **Types de contenu de site disponibles** , cliquez sur **Générateur de rapports** , puis sur **Ajouter** pour déplacer le type de contenu sélectionné dans la liste **Type de contenu à ajouter** .  
   
 7.  Pour ajouter les types de contenu **Modèle de rapport** et **Source de données du rapport** , répétez l'étape précédente.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "91935560"
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a> Pour activer la gestion des types de contenu pour une bibliothèque de documents (SharePoint 2010)  
   
-1.  Ouvrez la bibliothèque pour laquelle activer plusieurs types de contenu. Dans la barre de menus de la bibliothèque, vous devez voir les menus suivants : **Nouveau**, **Télécharger**, **Actions** et **Paramètres**. Si le menu **Paramètres**n'est pas visible, vous n'êtes pas autorisé à ajouter un type de contenu.  
+1.  Ouvrez la bibliothèque pour laquelle activer plusieurs types de contenu. Dans la barre de menus de la bibliothèque, vous devez voir les menus suivants : **Nouveau** , **Télécharger** , **Actions** et **Paramètres**. Si le menu **Paramètres** n'est pas visible, vous n'êtes pas autorisé à ajouter un type de contenu.  
   
 2.  Dans le ruban **Outils de bibliothèque** , cliquez sur **Bibliothèque**.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "91935560"
   
 3.  Dans le groupe du ruban **Paramètres** , cliquez sur **Paramètres de la bibliothèque**.  
   
-4.  Sous **Paramètres généraux**, cliquez sur **Paramètres avancés**.  
+4.  Sous **Paramètres généraux** , cliquez sur **Paramètres avancés**.  
   
 5.  Dans la section **Types de contenu** , sélectionnez **Oui** pour autoriser la gestion des types de contenu.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "91935560"
   
 3.  Dans le groupe du ruban **Paramètres** , cliquez sur **Paramètres de la bibliothèque**.  
   
-4.  Sous **Types de contenu**, cliquez sur **Ajouter à partir de types de contenu de site existants**.  
+4.  Sous **Types de contenu** , cliquez sur **Ajouter à partir de types de contenu de site existants**.  
   
-5.  Dans la section **Sélectionner des types de contenu** , dans **Sélectionner des types de contenu dans**, cliquez sur la flèche pour sélectionner **Types de contenu SQL Server Reporting Services**.  
+5.  Dans la section **Sélectionner des types de contenu** , dans **Sélectionner des types de contenu dans** , cliquez sur la flèche pour sélectionner **Types de contenu SQL Server Reporting Services**.  
   
-6.  Dans la liste **Types de contenu de site disponibles** , cliquez sur **Générateur de rapports**, puis sur **Ajouter** pour déplacer le type de contenu sélectionné dans la liste **Type de contenu à ajouter** .  
+6.  Dans la liste **Types de contenu de site disponibles** , cliquez sur **Générateur de rapports** , puis sur **Ajouter** pour déplacer le type de contenu sélectionné dans la liste **Type de contenu à ajouter** .  
   
 7.  Pour ajouter les types de contenu **Modèle de rapport** et **Source de données du rapport** , répétez l'étape précédente.  
   

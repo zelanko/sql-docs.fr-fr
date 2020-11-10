@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 301d77a972da39f4e3e046e5e983206e9a1ba5c9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987376"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243756"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Portail web d’un serveur de rapports (Mode natif SSRS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "91987376"
 
 Le portail web d’un serveur de rapports Reporting Services est une expérience web. Dans le portail, vous pouvez afficher des rapports, des rapports mobiles et des indicateurs de performance clés, et naviguer parmi les éléments de votre instance de serveur de rapports. Vous pouvez également utiliser le portail web pour administrer une instance unique du serveur de rapports.
 
-![Portail SSRS](../reporting-services/media/ssrsportal.png)
+![Capture d’écran montrant le portail SQL Server Reporting Services.](../reporting-services/media/ssrsportal.png)
 
 ## <a name="what-is-the-web-portal"></a>Qu’est-ce que le portail web ?
 
@@ -86,15 +86,15 @@ Le portail web regroupe les éléments en différentes catégories. Les catégor
 
 Vous pouvez contrôler ce qui est affiché en sélectionnant **Affichage** dans le coin supérieur droit. Si vous sélectionnez Afficher les éléments masqués, ces éléments s’afficheront dans une couleur plus claire.
 
-![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
+![Capture d’écran de la liste déroulante Affichage avec l’option Afficher les éléments masqués sélectionnée.](../reporting-services/media/ssrswebportal-view.png)
 
-![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
+![Capture d’écran montrant l’option Rapports paginés indisponible.](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### <a name="power-bi-desktop-reports-and-excel-workbooks"></a>Rapports Power BI Desktop et classeurs Excel
 
 Vous pouvez charger, organiser et gérer des autorisations pour les rapports Power BI Desktop et les classeurs Excel. Ils sont regroupés au sein du portail web.
 
-![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![Capture d’écran montrant la section des rapports Power BI Desktop et la section des classeurs Excel.](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 Les fichiers sont stockés dans Reporting Services, de la même façon que les autres fichiers de ressources. Sélectionner un de ces éléments permet de le télécharger localement sur votre bureau. Vous pouvez enregistrer les modifications que vous avez apportées en les rechargeant sur le serveur de rapports.
 
@@ -102,7 +102,7 @@ Les fichiers sont stockés dans Reporting Services, de la même façon que les a
 
 Entrez un terme de recherche pour voir tout ce à quoi vous pouvez accéder. Les résultats sont classés ainsi : indicateurs de performance clés, rapports, jeux de données et autres éléments. Vous pouvez ensuite interagir avec les résultats et les ajouter à vos favoris.
 
-![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
+![Capture d’écran montrant le portail SQL Server Reporting Services avec la zone de texte de recherche mise en évidence.](../reporting-services/media/ssrswebportal-search.png)
 
 ## <a name="web-portal-tasks"></a>Tâches du portail web
 

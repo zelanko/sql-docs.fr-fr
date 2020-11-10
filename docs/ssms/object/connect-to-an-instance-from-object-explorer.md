@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd161a78bb0b5249d0ce6f802760acd2048014f6
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: de873f30e435a1513e8e642cf5e3a97641e147d6
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523967"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243728"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Se connecter à SQL Server ou Azure SQL Database
 
@@ -27,7 +27,7 @@ Pour travailler avec des serveurs et des bases de données, vous devez d’abord
   
 ## <a name="connecting-to-a-server"></a>Connexion à un serveur  
 
-1. Dans l’ **Explorateur d’objets** , cliquez sur **Connexion > Moteur de base de données...** .
+1. Dans l’ **Explorateur d’objets** , cliquez sur **Connexion > Moteur de base de données...**.
 
    ![se connecter](../media/connect-to-server/connect-db-engine.png)
 
@@ -43,11 +43,11 @@ Pour travailler avec des serveurs et des bases de données, vous devez d’abord
 
    ![Capture d’écran de la boîte de dialogue Nouvelle règle de pare-feu, avec l’option Ajouter mon adresse IP cliente sélectionnée et l’option OK mise en évidence.](../media/connect-to-server/new-firewall-rule.png)
 
-1. Pour créer la règle de pare-feu et vous connecter au serveur, cliquez sur **OK** .
+1. Pour créer la règle de pare-feu et vous connecter au serveur, cliquez sur **OK**.
 
 1. Le serveur s’affiche dans l’ **Explorateur d’objets** après vous être connecté :
 
-   ![connected](../media/connect-to-server/connected.png)
+   ![Capture d’écran de l’Explorateur d’objets montrant que le serveur est correctement connecté.](../media/connect-to-server/connected.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1ebe16bd9b9474b892346ec2a8dd6f25254c6d0b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935412"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243759"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilisation des rapports paginés (portail web)
 
@@ -30,7 +30,7 @@ Procédez comme suit pour créer un dataset partagé.
   
 2.  Sélectionnez **Rapport paginé**.  
   
-    ![ssRSWebPortal-new-report](../reporting-services/media/ssrswebportal-new-report.png)  
+    ![Capture d’écran montrant la liste déroulante Nouveau avec l’option Rapport paginé mise en évidence.](../reporting-services/media/ssrswebportal-new-report.png)  
   
 3.  L’opération lance alors le Générateur de rapports, ou vous êtes invité à le télécharger.  
   
@@ -45,28 +45,28 @@ Procédez comme suit pour gérer un rapport paginé existant.
   
 1.  Sélectionnez les **points de suspension (...)** correspondant au dataset que vous souhaitez gérer.  
       
-    ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
+    ![Capture d’écran montrant l’utilisateur sélectionnant l’option des points de suspension pour le jeu de données.](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
 2.  Sélectionnez **Gérer** . L’écran de modification s’affiche alors.  
     
-    ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
+    ![Capture d’écran montrant l’option des points de suspension sélectionnée et l’option Gérer mise en évidence.](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
 ## <a name="properties"></a>Propriétés  
   
-Dans la fenêtre des propriétés, vous pouvez modifier le **nom** et la **description** du rapport paginé. Vous pouvez également utiliser **Supprimer**, **Déplacer**, **Créer un rapport lié**, **Modifier dans le Générateur de rapports**, **Télécharger** ou **Remplacer**.  
+Dans la fenêtre des propriétés, vous pouvez modifier le **nom** et la **description** du rapport paginé. Vous pouvez également utiliser **Supprimer** , **Déplacer** , **Créer un rapport lié** , **Modifier dans le Générateur de rapports** , **Télécharger** ou **Remplacer**.  
     
-![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
+![Capture d’écran montrant l’écran Propriétés de la boîte de dialogue Modifier Company Sales.](../reporting-services/media/ssrswebportal-report-properties.png)  
    
 ## <a name="parameters"></a>Paramètres  
   
 Vous pouvez modifier les paramètres existants d’un rapport paginé. Pour ajouter un nouveau paramètre, vous devez modifier le rapport dans le Générateur de rapports ou dans SQL Server Data Tools.  
   
-![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
+![Capture d’écran montrant l’écran Paramètres de la boîte de dialogue Modifier Company Sales.](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
 ## <a name="data-source"></a>source de données  
 Vous pouvez pointer sur une source de données partagée, ou entrer les informations de connexion pour une source de données personnalisée.  
   
-![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
+![Capture d’écran montrant l’écran Sources de données de la boîte de dialogue Modifier Company Sales.](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 Les options suivantes sont utilisées pour spécifier une connexion à une source de données personnalisée.  
   
@@ -122,7 +122,7 @@ Pour utiliser cette option, vous devez avoir précédemment configuré le compte
 ## <a name="subscriptions"></a>Abonnements  
 Un abonnement Reporting Services est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous spécifiez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique. Pour plus d’informations, consultez [Utilisation des abonnements](working-with-subscriptions-web-portal.md).
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
+![Capture d’écran montrant l’écran Abonnements de la boîte de dialogue Modifier Company Sales.](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Éléments dépendants  
 Utilisez la page Éléments dépendants pour afficher une liste d’éléments qui font référence à ce rapport. L’icône de chaque type d’élément indique ce qu’il est. Vous pouvez ensuite sélectionner les **points de suspension (...)** sur chaque élément pour gérer plus avant ces éléments.  
@@ -136,11 +136,11 @@ Vous disposez de différentes options de mise en cache des données pour un rapp
   
 3.  **Toujours exécuter ce rapport sur les instantanés prégénérés** met en cache la présentation du rapport et les données pendant une période de temps donnée. Vous pouvez exécuter un rapport en tant qu'instantané de rapport afin d'éviter qu'il soit exécuté à des moments inopportuns (par exemple, pendant une sauvegarde programmée). L’instantané peut être actualisé selon une planification. [En savoir plus]  
   
-![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
+![Capture d’écran montrant l’écran Mise en cache de la boîte de dialogue Modifier Company Sales avec l’option Toujours exécuter ce rapport avec les données les plus récentes sélectionnée.](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
 Vous disposerez d’options supplémentaires en sélectionnant **Mettre en cache des copies de ce rapport et les utiliser en cas de disponibilité** .  
   
-![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+![Capture d’écran montrant l’écran Mise en cache de la boîte de dialogue Modifier Company Sales avec l’option Mettre en cache des copies de ce rapport et les utiliser en cas de disponibilité sélectionnée.](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
 Pour plus d’informations, consultez [Utilisation des instantanés](working-with-snapshots-web-portal.md).
   
@@ -163,7 +163,7 @@ Pour créer un plan d’actualisation du cache, cliquez sur **Nouveau plan d'act
   
 Une fois que vous avez terminé, vous pouvez sélectionner **Créer un plan d’actualisation du Cache**.  
   
-![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
+![Capture d’écran de la boîte de dialogue Modifier Company Sales montrant l’option Créer un plan d’actualisation du cache.](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
 > [!NOTE]
 > L’agent SQL Server doit être en cours d’exécution pour créer un plan d’actualisation du cache.  

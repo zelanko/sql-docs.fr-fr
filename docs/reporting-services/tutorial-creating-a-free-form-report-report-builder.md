@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3a4bada590dc9bea822aadffd102b49e75d10cf
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247458"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043826"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutoriel : Création d’un rapport au format libre (Générateur de rapports)
 Dans ce didacticiel, vous créez un rapport paginé qui fait office de newsletter. Chaque page affiche du texte statique, des éléments visuels de synthèse et des exemples de données de ventes détaillées.
 
-![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
+![Capture d’écran d’un rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-report-complete.png)
 
 Le rapport regroupe les informations par secteur de vente et affiche le nom du directeur des ventes pour le secteur, ainsi que des informations détaillées et de synthèse sur les ventes. Vous commencez avec une région de données de liste comme base du rapport de forme libre, puis vous ajoutez un panneau décoratif avec une image, du texte statique avec des données insérées, un tableau pour afficher les informations détaillées, et éventuellement un graphique à secteurs et un histogramme pour afficher les informations de synthèse.  
   
@@ -39,7 +39,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, vérifiez que **Nouveau rapport** est sélectionné. 
  
@@ -49,7 +49,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 1.  Dans le volet Données du rapport, cliquez sur **Nouveau** > **Source de données**.  
   
-2.  Dans la zone **Nom**, tapez : **ListDataSource**  
+2.  Dans la zone **Nom** , tapez : **ListDataSource**  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
@@ -57,7 +57,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
     **\<servername>** , par exemple Rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d’une base de données SQL Server, vous n’avez pas besoin d’inclure le nom d’une base de données. La base de données par défaut sur le serveur spécifié est utilisée seulement pour analyser la requête.  
   
-5.  Cliquez sur **Informations d'identification**, puis entrez les informations d'identification requises pour se connecter à l'instance du moteur de base de données SQL Server.  
+5.  Cliquez sur **Informations d'identification** , puis entrez les informations d'identification requises pour se connecter à l'instance du moteur de base de données SQL Server.  
   
 6.  Cliquez sur **OK**.  
   
@@ -65,9 +65,9 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 1.  Dans le volet Données du rapport, cliquez sur **Nouveau** > **Dataset**.  
   
-2.  Dans la zone **Nom**, tapez : **ListDataset**.  
+2.  Dans la zone **Nom** , tapez : **ListDataset**.  
   
-3.  Cliquez sur **Utiliser un dataset incorporé dans mon rapport**, puis vérifiez que la source de données est **ListDataSource**.  
+3.  Cliquez sur **Utiliser un dataset incorporé dans mon rapport** , puis vérifiez que la source de données est **ListDataSource**.  
   
 4.  Vérifiez que le type de requête **Texte** est sélectionné, puis cliquez sur **Concepteur de requêtes**.  
   
@@ -112,7 +112,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
     Les résultats de la requête sont les données qui peuvent être affichées dans votre rapport.  
   
-    ![report-builder-free-form-tutorial-data](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
+    ![Capture d’écran du concepteur de requêtes montrant les données pouvant être affichées dans le rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -125,14 +125,14 @@ Vous allez utiliser une liste pour afficher les informations des ventes des sect
   
 1.  Sous l’onglet **Insérer** > **Régions de données** > **Liste**. 
 
-2. Cliquez dans le corps du rapport (entre les zones de titre et de pied de page) et faites glisser pour créer la zone de liste. Définissez la taille de la zone de liste sur 7 pouces de haut et 6,25 pouces de large. Pour obtenir la taille exacte, dans le volet **Propriétés** sous **Position**, entrez des valeurs pour les propriétés **Largeur** et **Hauteur** .
+2. Cliquez dans le corps du rapport (entre les zones de titre et de pied de page) et faites glisser pour créer la zone de liste. Définissez la taille de la zone de liste sur 7 pouces de haut et 6,25 pouces de large. Pour obtenir la taille exacte, dans le volet **Propriétés** sous **Position** , entrez des valeurs pour les propriétés **Largeur** et **Hauteur** .
   
     > [!NOTE]  
     > Ce rapport utilise le format de papier Letter (8,5 X 11) et des marges de 1 pouce. Une page de rapport de plus de 9 pouces de haut ou de plus de 6,5 pouces de large peut générer des pages vierges.  
   
 2.  Cliquez dans la zone de liste, cliquez avec le bouton droit sur la barre en haut de la liste, puis cliquez sur **Propriétés du tableau matriciel**.  
   
-    ![report-builder-free-form-tablix-properties](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
+    ![Capture d’écran montrant l’option Propriétés du tableau matriciel pour le rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
 3.  Dans la liste déroulante **Nom du dataset** , sélectionnez **ListDataset**.  
   
@@ -146,9 +146,9 @@ Vous allez utiliser une liste pour afficher les informations des ventes des sect
   
 ### <a name="to-add-a-new-row-group-and-to-delete-the-details-group"></a>Pour ajouter un nouveau groupe de lignes et supprimer le groupe Détails  
   
-1.  Dans le volet Groupes de lignes, cliquez avec le bouton droit sur le groupe Détails, pointez sur **Ajouter un groupe**, puis cliquez sur **Groupe parent**.  
+1.  Dans le volet Groupes de lignes, cliquez avec le bouton droit sur le groupe Détails, pointez sur **Ajouter un groupe** , puis cliquez sur **Groupe parent**.  
   
-    ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
+    ![Capture d’écran montrant comment ajouter un groupe parent à un rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
 2.  Dans la liste **Regrouper par** , sélectionnez `[Territory].`  
   
@@ -158,7 +158,7 @@ Vous allez utiliser une liste pour afficher les informations des ventes des sect
   
 4.  Cliquez avec le bouton droit sur la colonne Territory dans la liste, puis cliquez sur **Supprimer les colonnes**.  
   
-    ![report-builder-free-form-delete-columns](../reporting-services/media/report-builder-free-form-delete-columns.png)
+    ![Capture d’écran montrant comment supprimer une colonne du rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-delete-columns.png)
   
 5.  Sélectionnez **Supprimer les colonnes uniquement**.  
   
@@ -175,13 +175,13 @@ Un des avantages des régions de données de liste est que vous pouvez ajouter d
   
 1.  Sous l’onglet **Insérer** , sélectionnez **Rectangle**. 
 
-2. Cliquez en haut à gauche de la liste et faites glisser pour créer le rectangle de 7 pouces de haut et 3,5 pouces de large. À nouveau, pour obtenir la taille exacte, dans le volet **Propriétés** sous **Position**, entrez des valeurs pour **Largeur** et pour **Hauteur**.
+2. Cliquez en haut à gauche de la liste et faites glisser pour créer le rectangle de 7 pouces de haut et 3,5 pouces de large. À nouveau, pour obtenir la taille exacte, dans le volet **Propriétés** sous **Position** , entrez des valeurs pour **Largeur** et pour **Hauteur**.
   
 2.  Cliquez avec le bouton droit sur le rectangle > **Propriétés du rectangle**.  
   
 3.  Cliquez sur l'onglet **Remplissage** .  
   
-4.  Dans **Couleur de remplissage**, sélectionnez **Gris clair**.  
+4.  Dans **Couleur de remplissage** , sélectionnez **Gris clair**.  
    
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -189,7 +189,7 @@ Un des avantages des régions de données de liste est que vous pouvez ajouter d
   
 La partie gauche du rapport comprend maintenant un graphique vertical constitué d’un rectangle de couleur gris clair, comme le montre l’image suivante.  
   
-![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
+![Capture d’écran du générateur de rapports montrant un graphique vertical constitué d’un rectangle gris clair.](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
 ## <a name="4-add-free-form-text"></a><a name="Text"></a>4. Ajouter du texte de forme libre  
 Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est répété sur chaque page du rapport, ainsi que des champs de données.  
@@ -206,11 +206,11 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
 4.  Faites glisser le champ `[Territory]` de ListDataSet dans le volet Données du rapport vers la zone de texte et placez-le après « Newsletter for ».  
   
-    ![report-builder-free-form-territory-field](../reporting-services/media/report-builder-free-form-territory-field.png)
+    ![Capture d’écran montrant comment faire glisser un champ Territory dans le rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-territory-field.png)
   
 5.  Sélectionnez le texte et le champ `[Territory]` .  
   
-6.  Sous l’onglet **Accueil** > **Police**, sélectionnez : 
+6.  Sous l’onglet **Accueil** > **Police** , sélectionnez : 
   
     *  **Segoe Semibold**.
     *  **20 pt**.
@@ -222,7 +222,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
    
 11. Sélectionnez le texte que vous avez ajouté aux étapes précédentes.
   
-12. Sous l’onglet **Accueil** > **Police**, sélectionnez : 
+12. Sous l’onglet **Accueil** > **Police** , sélectionnez : 
   
     *  **Segoe Semibold**.
     *  **16 pt**.
@@ -239,19 +239,19 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
 16. Sélectionnez le texte que vous venez d’ajouter.  
   
-17.  Sous l’onglet **Accueil** > **Police**, sélectionnez : 
+17.  Sous l’onglet **Accueil** > **Police** , sélectionnez : 
   
       *  **Segoe UI**.
       *  **10 pt**.
       *  **Noir**.  
  
-20. Placez le curseur à l’intérieur de la zone de texte sous le texte sans signification et tapez : **Congratulations on your total sales of**, avec un espace après le mot pour séparer le texte et le champ que vous ajouterez à l’étape suivante. 
+20. Placez le curseur à l’intérieur de la zone de texte sous le texte sans signification et tapez : **Congratulations on your total sales of** , avec un espace après le mot pour séparer le texte et le champ que vous ajouterez à l’étape suivante. 
   
 21. Faites glisser le champ Ventes dans la zone de texte, placez-le après le texte que vous avez tapé à l’étape précédente, puis tapez un point d’exclamation (!).  
 
 25. Sélectionnez le texte et le champ que vous venez d’ajouter.  
   
-17.  Sous l’onglet **Accueil** > **Police**, sélectionnez : 
+17.  Sous l’onglet **Accueil** > **Police** , sélectionnez : 
   
       *  **Segoe Semibold**.
       *  **16 pt**.
@@ -267,7 +267,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
+    ![Capture d’écran montrant une zone de texte dans le rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-text-box.png)
  
 29. Avec `[Sum(Sales)]` toujours sélectionné, sous l’onglet **Accueil** > groupe **Nombre** > **Devise**.  
   
@@ -275,13 +275,13 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
 31. Sélectionnez la zone de liste. Sélectionnez les deux flèches à deux pointes et déplacez-la en haut de la page.  
 
-    ![report-builder-drag-list](../reporting-services/media/report-builder-drag-list.png)
+    ![Capture d’écran montrant comment faire glisser une liste dans le rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-drag-list.png)
   
 32. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 Le rapport affiche le texte statique et chaque page du rapport inclut des données relatives à un secteur de vente. Les ventes sont mises en forme en tant que valeurs monétaires.  
   
-![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
+![Capture d’écran montrant l’aperçu de la page du bulletin d’informations dans le rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
 ## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5. Ajouter un tableau pour afficher les détails des ventes  
 Utilisez l'Assistant Nouveau tableau ou nouvelle matrice pour ajouter un tableau au rapport de forme libre. Après avoir terminé l'Assistant, vous ajouterez manuellement une ligne pour les totaux.  
@@ -313,21 +313,21 @@ Utilisez l'Assistant Nouveau tableau ou nouvelle matrice pour ajouter un tableau
   
 12. Avec la table sélectionnée, dans le volet **Groupe de lignes** , cliquez avec le bouton droit sur **Détails** > **Ajouter un total** > **Après**.  
   
-    ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
+    ![Capture d’écran montrant comment ajouter des totaux au rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-table-totals.png)
   
 13. Sélectionnez la cellule dans la colonne Product et le type **Total**.
 
-    ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
+    ![Capture d’écran d’une cellule de la colonne Product avec Total entré.](../reporting-services/media/report-builder-free-form-type-total.png)
 
-12. Sélectionnez le champ [SalesDate]. Sous l’onglet **Accueil** > **Nombre**, remplacez **Par défaut** par **Date**.
+12. Sélectionnez le champ [SalesDate]. Sous l’onglet **Accueil** > **Nombre** , remplacez **Par défaut** par **Date**.
 
-13. Sélectionnez les champs [Sum(Sales)]. Sous l’onglet **Accueil** > **Nombre**, remplacez **Par défaut** par **Devise**.
+13. Sélectionnez les champs [Sum(Sales)]. Sous l’onglet **Accueil** > **Nombre** , remplacez **Par défaut** par **Devise**.
 
 Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 Le rapport affiche un tableau avec les détails des ventes et les totaux.  
   
-![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
+![Capture d’écran montrant l’aperçu de la table dans le rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-with-table.png)
    
 ## <a name="6-save-the-report"></a><a name="Save"></a>6. Enregistrer le rapport  
 Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une bibliothèque SharePoint ou sur l'ordinateur.  
@@ -344,7 +344,7 @@ Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous 
   
     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
-4.  Dans **Nom**, remplacez le nom par défaut par **SalesInformationByTerritory**.  
+4.  Dans **Nom** , remplacez le nom par défaut par **SalesInformationByTerritory**.  
   
 5.  Cliquez sur **Enregistrer**.  
   
@@ -354,9 +354,9 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
-2.  Cliquez sur **Bureau**, **Mes documents**ou **Poste de travail**, puis naviguez jusqu'au dossier où vous souhaitez enregistrer le rapport.  
+2.  Cliquez sur **Bureau** , **Mes documents** ou **Poste de travail** , puis naviguez jusqu'au dossier où vous souhaitez enregistrer le rapport.  
   
-3.  Dans **Nom**, remplacez le nom par défaut par **SalesInformationByTerritory**.  
+3.  Dans **Nom** , remplacez le nom par défaut par **SalesInformationByTerritory**.  
   
 4.  Cliquez sur **Enregistrer**.  
   
@@ -371,7 +371,7 @@ Ajoutez une ligne pour séparer la zone éditoriale de la zone de détails dans 
   
 3.  Dessinez une ligne sous la zone de texte que vous avez ajoutée dans la leçon 4.  
   
-4.  Cliquez sur la ligne, puis, sous l’onglet **Accueil** > **Bordure**, sélectionnez :
+4.  Cliquez sur la ligne, puis, sous l’onglet **Accueil** > **Bordure** , sélectionnez :
      * **Largeur** : sélectionnez **3** pt.
      * **Couleur** : sélectionnez **Tomate**.  
   
@@ -384,7 +384,7 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
   
 2.  Sous l’onglet **Insérer** > **Éléments de rapport** >  **Rectangle**. Faites glisser le rectangle à l’intérieur de la zone de liste à droite du tableau pour créer un rectangle d’environ 2,25 pouces de large et 7,9 pouces de haut.  
   
-3.  Avec le nouveau rectangle sélectionné, dans le volet Propriétés, choisissez **BorderColor LightGrey**, **BorderStyle Solide**et **BorderWidth 2 pt**. 
+3.  Avec le nouveau rectangle sélectionné, dans le volet Propriétés, choisissez **BorderColor LightGrey** , **BorderStyle Solide** et **BorderWidth 2 pt**. 
 
 4. Alignez le haut du rectangle et le haut du tableau.  
   
@@ -398,7 +398,7 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
   
 4.  Sur la page Organiser les champs du graphique, faites glisser Product vers **Catégories**.  
   
-5.  Faites glisser Quantity vers **Valeurs**, puis cliquez sur **Suivant**.  
+5.  Faites glisser Quantity vers **Valeurs** , puis cliquez sur **Suivant**.  
   
 6.  Cliquez sur **Terminer**.  
   
@@ -408,28 +408,28 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
    
 10. Sélectionnez le titre du graphique et tapez : **Product Quantities Sold**.  
   
-12. Sous l’onglet **Accueil** > **Police**, choisissez pour le titre :
+12. Sous l’onglet **Accueil** > **Police** , choisissez pour le titre :
     * **Police** **Segoe UI Semibold**.
     * **Taille** **12 pt**.
     * **Couleur** **Noir**.  
 
 13. Cliquez avec le bouton droit sur la légende > **Propriétés de la légende**.
 
-14. Sous l’onglet **Général** sous **Position de la légende**, sélectionnez le point central en bas. 
+14. Sous l’onglet **Général** sous **Position de la légende** , sélectionnez le point central en bas. 
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
 16. Faites glisser si nécessaire pour rendre la région graphique plus haute.
 
-     ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
+     ![Capture d’écran montrant le graphique à secteurs à ajouter au rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-pie.png)
   
 ## <a name="to-add-a-column-chart"></a>Pour ajouter un histogramme  
   
 1.  Sous l’onglet **Insérer** > **Visualisations de données** > **Graphique** > **Assistant graphique**.  
   
-2.  Dans la page **Choisir un dataset** , cliquez sur **ListDataset**, puis sur **Suivant**.  
+2.  Dans la page **Choisir un dataset** , cliquez sur **ListDataset** , puis sur **Suivant**.  
   
-3.  Cliquez sur **Colonne**, puis sur **Suivant**.  
+3.  Cliquez sur **Colonne** , puis sur **Suivant**.  
   
 4.  Dans la page **Organiser les champs du graphique** , faites glisser le champ Product vers **Catégories**.  
   
@@ -447,7 +447,7 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
    
 10. Sélectionnez le titre du graphique et tapez : **Product Sales**.  
   
-12. Sous l’onglet **Accueil** > **Police**, choisissez pour le titre :
+12. Sous l’onglet **Accueil** > **Police** , choisissez pour le titre :
     * **Police** **Segoe UI Semibold**.
     * **Taille** **12 pt**.
     * **Couleur** **Noir**.  
@@ -457,9 +457,9 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
     > [!NOTE]  
     > La suppression de la légende rend le graphique plus lisible quand le graphique est petit.  
   
-    ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
+    ![Capture d’écran montrant l’histogramme à ajouter au rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-column.png)
 
-12. Sélectionnez l’axe du graphique, puis sous l’onglet **Accueil** > **Nombre** > **Devise**.
+12. Sélectionnez l’axe du graphique, puis sous l’onglet **Accueil**  > **Nombre** > **Devise**.
 
 13. Sélectionnez deux fois **Réduire les décimales** pour que le nombre montre simplement des dollars, sans cents.      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>Pour vérifier que les graphiques sont à l'intérieur du rectangle  
@@ -470,13 +470,13 @@ Vous pouvez utiliser des rectangles comme conteneurs pour d’autres éléments 
   
     Dans le volet Propriétés, la propriété **Name** affiche le nom du rectangle.  
   
-    ![report-builder-free-form-rectangle-name](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
+    ![Capture d’écran montrant comment afficher la propriété Name dans le rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
   
 2.  Cliquez sur le graphique à secteurs.  
   
 3.  Dans le volet **Propriétés** , vérifiez que la propriété **Parent** contient le nom du rectangle.  
   
-     ![report-builder-free-form-pie-parent](../reporting-services/media/report-builder-free-form-pie-parent.png) 
+     ![Capture d’écran montrant comment afficher la propriété Parent dans le rapport au format libre du générateur de rapports.](../reporting-services/media/report-builder-free-form-pie-parent.png) 
   
 4.  Cliquez sur l’histogramme et répétez l’étape 3.  
   

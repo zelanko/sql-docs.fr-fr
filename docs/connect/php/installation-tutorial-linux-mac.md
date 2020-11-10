@@ -1,7 +1,7 @@
 ---
 title: Installation sur Linux et macOS pour les pilotes pour PHP
 description: Dans ces instructions, découvrez comment installer les pilotes Microsoft pour PHP pour SQL Server sur Linux ou macOS.
-ms.date: 09/22/2020
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 8d256e7cabf26b280988afe08d8e795466141688
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 66c505f588d6f250c0e18dc88a79b21ed658f2b5
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115542"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243732"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutoriel : Installation sur Linux et macOS des pilotes Microsoft pour PHP pour SQL Server
 Les instructions suivantes partent du principe que votre environnement est propre. Elles montrent comment installer PHP 7.x, le pilote ODBC Microsoft, le serveur web Apache et les Pilotes Microsoft pour PHP pour SQL Server sur Ubuntu 16.04, 18.04 et 20.04, RedHat 7 et 8, Debian 8, 9 et 10, Suse 12 et 15, Alpine 3.11 ainsi que macOS 10.13, 10.14 et 10.15. Ces instructions conseillent d’installer les pilotes à l’aide de PECL, mais vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la page de projet GitHub des [pilotes Microsoft pour PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases) et les installer en suivant les instructions fournies dans [Chargement des pilotes Microsoft SQL Server pour PHP](../../connect/php/loading-the-php-sql-driver.md). Pour obtenir une explication concernant le chargement d’extension et savoir pourquoi nous n’ajoutons pas les extensions à php.ini, consultez la section sur le [chargement des pilotes](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-Ces instructions installent PHP 7.4 par défaut avec `pecl install`. Vous devrez peut-être d’abord exécuter `pecl channel-update pecl.php.net`. Notez que certaines distributions de Linux prises en charge utilisent par défaut PHP 7.1 ou une version antérieure, qui ne sont pas prises en charge pour la dernière version des pilotes PHP pour SQL Server. Consultez les notes au début de chaque section pour installer PHP 7.2 ou 7.3 à la place.
+Ces instructions installent PHP 7.4 par défaut avec `pecl install`. Vous devrez peut-être d’abord exécuter `pecl channel-update pecl.php.net`. Certaines distributions de Linux prises en charge utilisent par défaut PHP 7.1 ou antérieur, qui n’est pas pris en charge pour la dernière version des pilotes PHP pour SQL Server. Consultez les remarques au début de chaque section pour installer PHP 7.2 ou 7.3 à la place.
 
 Vous trouverez également des instructions pour l’installation du gestionnaire de processus PHP FastCGI, PHP-FPM, sur Ubuntu. C’est nécessaire si vous utilisez le serveur Web nginx au lieu d’Apache.
 
@@ -316,7 +316,7 @@ Pour tester votre installation, consultez [Test de votre installation](#testing-
 > La version par défaut de PHP est 7.3. D’autres versions de PHP peuvent être disponibles à partir d’autres référentiels pour Alpine 3.11. À la place, vous pouvez compiler PHP à partir de la source.
 
 ### <a name="step-1-install-php"></a>Étape 1. Installer PHP
-Les packages PHP pour Alpine se trouvent dans le référentiel `edge/community`. Cochez [Activer le référentiel de la communauté](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) sur sa page WIKI. Ajoutez la ligne suivante à `/etc/apt/repositories` en remplaçant `<mirror>` par l’URL d’un miroir de référentiel Alpine :
+Les packages PHP pour Alpine se trouvent dans le référentiel `edge/community`. Consultez [Activer le référentiel de la communauté](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) sur sa page Wiki. Ajoutez la ligne suivante à `/etc/apt/repositories` en remplaçant `<mirror>` par l’URL d’un miroir de référentiel Alpine :
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -367,7 +367,7 @@ brew tap
 brew tap homebrew/core
 brew install php@7.4
 ```
-PHP doit maintenant être présent dans votre chemin. Exécutez `php -v` pour vérifier que vous exécutez la version correcte de PHP. Si PHP n’est pas dans votre chemin, ou s’il ne s’agit pas de la version correcte, exécutez la commande suivante :
+PHP doit maintenant être présent dans votre chemin. Exécutez `php -v` pour vérifier que vous exécutez la bonne version de PHP. Si PHP n’est pas dans votre chemin, ou s’il ne s’agit pas de la version correcte, exécutez la commande suivante :
 ```bash
 brew link --force --overwrite php@7.4
 ```
@@ -407,7 +407,7 @@ Pour tester votre installation, consultez [Test de votre installation](#testing-
 ## <a name="testing-your-installation"></a>Test de votre installation
 
 Pour tester cet exemple de script, créez un fichier nommé testsql.php à la racine de document de votre système. Il s’agit de `/var/www/html/` sur Ubuntu, Debian et Red Hat, de `/srv/www/htdocs` sur SUSE, de `/var/www/localhost/htdocs` sur Alpine ou de `/usr/local/var/www` sur macOS. Copiez-y le script suivant, en remplaçant le serveur de base de données, le nom d’utilisateur et le mot de passe comme il convient.
-```
+```php
 <?php
 $serverName = "yourServername";
 $connectionOptions = array(
@@ -415,6 +415,15 @@ $connectionOptions = array(
     "uid" => "yourUsername",
     "pwd" => "yourPassword"
 );
+
+function exception_handler($exception) {
+    echo "<h1>Failure</h1>";
+    echo "Uncaught exception: " , $exception->getMessage();
+    echo "<h1>PHP Info for troubleshooting</h1>";
+    phpinfo();
+}
+
+set_exception_handler('exception_handler');
 
 // Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
@@ -434,7 +443,7 @@ if ($stmt === false) {
 }
 ?>
 
-<h1> Results : </h1>
+<h1> Success Results : </h1>
 
 <?php
 while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
@@ -447,6 +456,7 @@ sqlsrv_close($conn);
 function formatErrors($errors)
 {
     // Display errors
+    echo "<h1>SQL Error:</h1>";
     echo "Error information: <br/>";
     foreach ($errors as $error) {
         echo "SQLSTATE: ". $error['SQLSTATE'] . "<br/>";
@@ -456,7 +466,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-Dirigez votre navigateur vers https://localhost/testsql.php (https://localhost:8080/testsql.php sur macOS). Vous devriez maintenant pouvoir vous connecter à votre base de données SQL Server/SQL Azure.
+Dirigez votre navigateur vers https://localhost/testsql.php (https://localhost:8080/testsql.php sur macOS). Vous devriez maintenant pouvoir vous connecter à votre base de données SQL Server/SQL Azure. Si vous ne voyez pas de message de réussite indiquant des informations sur la version de SQL, consultez [Ressources de support](support-resources-for-the-php-sql-driver.md) pour obtenir de l’aide.
 
 ## <a name="see-also"></a>Voir aussi  
 [Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

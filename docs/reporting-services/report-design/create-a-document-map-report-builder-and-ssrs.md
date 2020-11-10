@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: cd6c70f92cb409ee6742590709743897bb3e77f7
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85061048"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364441"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
 
@@ -40,8 +40,7 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
   
  Pour plus d’informations, consultez [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md).  
   
-##  <a name="AddRptItemToMap"></a>   
-#### <a name="to-add-a-report-item-to-a-document-map"></a>Pour ajouter un élément de rapport à un explorateur de documents  
+##  <a name="to-add-a-report-item-to-a-document-map"></a><a name="AddRptItemToMap"></a> Pour ajouter un élément de rapport à un explorateur de documents  
   
 1.  En mode Conception, sélectionnez l'élément de rapport (par exemple une table, une matrice ou une jauge) que vous souhaitez ajouter à l'explorateur de documents. Les propriétés de l'élément de rapport s'affichent dans le volet Propriétés.  
   
@@ -58,8 +57,7 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
 4.  Cliquez sur **Exécuter**. Le rapport est exécuté et l'explorateur de documents affiche les étiquettes que vous avez créées. Cliquez sur un lien quelconque pour accéder à la page du rapport contenant l'élément en question.  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### <a name="to-add-unique-group-values-to-a-document-map"></a>Pour ajouter des valeurs de groupe uniques à un explorateur de documents  
+##  <a name="to-add-unique-group-values-to-a-document-map"></a><a name="AddUniqueValuesToMap"></a> Pour ajouter des valeurs de groupe uniques à un explorateur de documents  
   
 1.  En mode Conception, sélectionnez la table, la matrice ou la liste qui contient le groupe que vous souhaitez afficher dans l'explorateur de documents. Le volet Regroupement affiche les groupes de lignes et de colonnes.  
   
@@ -75,8 +73,7 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
   
 7.  Cliquez sur **Exécuter**. Le rapport est exécuté et l'explorateur de documents affiche les valeurs de groupe. Cliquez sur un lien quelconque pour accéder à la page du rapport contenant l'élément en question.  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### <a name="to-hide-the-document-map-when-you-view-a-report"></a>Pour masquer l'explorateur de documents lors de l'affichage d'un rapport  
+##  <a name="to-hide-the-document-map-when-you-view-a-report"></a><a name="HideMapWhenViewRpt"></a> Pour masquer l’explorateur de documents lors de l’affichage d’un rapport  
   
 1.  Dans le portail web, accédez au rapport contenant l’explorateur de documents.  
   

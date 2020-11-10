@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 22d4a311d38d32fad4910960007223edbe2f9b70
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255582"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364461"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Fonctions du Générateur de rapports - LookupSet
   Retourne le jeu de valeurs correspondantes pour le nom spécifié d'un dataset contenant des paires nom/valeur.  
@@ -31,24 +31,24 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Paramètres  
  *source_expression*  
- (**Variant**) Expression évaluée dans l’étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple : `=Fields!ID.Value`.  
+ ( **Variant** ) Expression évaluée dans l’étendue actuelle et qui spécifie le nom ou la clé à rechercher. Par exemple : `=Fields!ID.Value`.  
   
  *destination_expression*  
- (**Variant**) Expression évaluée pour chaque ligne d’un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple : `=Fields!CustomerID.Value`.  
+ ( **Variant** ) Expression évaluée pour chaque ligne d’un dataset et qui spécifie le nom ou la clé de correspondance. Par exemple : `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (**Variant**) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple : `=Fields!PhoneNumber.Value`.  
+ ( **Variant** ) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression* , et qui spécifie la valeur à récupérer. Par exemple : `=Fields!PhoneNumber.Value`.  
   
  *dataset*  
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « ContactInformation ».  
   
 ## <a name="return"></a>Renvoie  
- Retourne une valeur **VariantArray**, ou **Nothing** si aucune correspondance n'est trouvée.  
+ Retourne une valeur **VariantArray** , ou **Nothing** si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
  Utilisez **LookupSet** pour récupérer un jeu de valeurs du dataset spécifié pour une paire nom-valeur quand il existe une relation un-à-plusieurs. Par exemple, pour un identificateur de client dans une table, vous pouvez utiliser **LookupSet** pour récupérer tous les numéros de téléphone associés à ce client à partir d'un dataset qui n'est pas lié à la région de données.  
   
- La fonction**LookupSet** effectue les actions suivantes :  
+ La fonction **LookupSet** effectue les actions suivantes :  
   
 -   Évalue l'expression source dans l'étendue actuelle.  
   
@@ -86,16 +86,18 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Pour plus d’informations, consultez [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="example"></a>Exemple  
- Dans l'exemple suivant, supposons que la table est liée à un dataset qui inclut un identificateur de secteur de vente TerritoryGroupID. Un dataset séparé appelé « Magasins » contient la liste de tous les magasins dans un secteur et inclut l'identificateur du secteur ID et le nom du magasin NomMagasin.  
+## <a name="examples"></a>Exemples
+
+ Dans les exemples suivants, supposons que la table est liée à un jeu de données qui inclut un identificateur de secteur de vente TerritoryGroupID. Un dataset séparé appelé « Magasins » contient la liste de tous les magasins dans un secteur et inclut l'identificateur du secteur ID et le nom du magasin NomMagasin.  
   
+### <a name="a-use-lookupset"></a>R. Utiliser LookupSet  
  Dans l’expression suivante, **LookupSet** compare la valeur TerritoryGroupID à la valeur ID pour chaque ligne du dataset appelé « Stores ». Pour chaque correspondance, la valeur du champ StoreName pour cette ligne est ajoutée au jeu de résultats.  
   
 ```  
 =LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores")  
 ```  
   
-## <a name="example"></a>Exemple  
+### <a name="b-use-join-to-create-a-result-list"></a>B. Utiliser Join pour créer une liste de résultats 
  Étant donné que **LookupSet** retourne une collection d'objets, vous ne pouvez pas afficher directement l'expression de résultat dans une zone de texte. Vous pouvez concaténer la valeur de chaque objet dans la collection en tant que chaîne.  
   
  Utilisez la fonction [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]**Join** pour créer une chaîne délimitée à partir d’un jeu d’objets. Utilisez une virgule comme séparateur pour combiner les objets en une ligne unique. Dans certains convertisseurs, vous pouvez utiliser un saut de ligne [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) comme séparateur pour répertorier chaque valeur sur une nouvelle ligne.  
@@ -106,7 +108,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
 ```  
   
-## <a name="example"></a>Exemple  
+### <a name="c-add-code-to-generate-html"></a>C. Ajouter du code pour générer un code HTML
  Pour les zones de texte qui seront uniquement restituées quelques fois, vous pouvez choisir d'ajouter un code personnalisé pour générer un code HTML permettant d'afficher des valeurs dans une zone de texte. Le code HTML dans une zone de texte requiert un traitement supplémentaire et ne serait donc pas un bon choix pour une zone de texte restituée des milliers de fois.  
   
  Copiez les fonctions [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] suivantes dans un bloc Code de définition de rapport. **MakeList** utilise le tableau d’objets retourné dans *result_expression* pour générer une liste non ordonnée à l’aide de balises HTML. **Length** retourne le nombre d'éléments dans le tableau d'objets.  
@@ -138,7 +140,7 @@ Function Length(ByVal items as Object()) as Integer
 End Function  
 ```  
   
-## <a name="example"></a>Exemple  
+### <a name="d-call-the-function"></a>D. Appeler la fonction
  Pour générer le code HTML, vous devez appeler la fonction. Collez l’expression suivante dans la propriété Value de la zone de texte et définissez le type de balise de texte sur HTML. Pour plus d’informations, consultez [Ajouter du code HTML à un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md).  
   
 ```  

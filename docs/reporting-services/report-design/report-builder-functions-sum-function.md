@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22db409b3c5e485db27cb828f1769ecdb001b5c8
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: fe8a7c4948b811a97c2f6973a04227543a496991
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681428"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364421"
 ---
 # <a name="report-builder-functions---sum-function"></a>Fonctions du Générateur de rapports - Sum
   Retourne la somme de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans l'étendue donnée.  
@@ -31,29 +31,29 @@ Sum(expression, scope, recursive)
   
 #### <a name="parameters"></a>Paramètres  
  *expression*  
- (**Entier** ou **Flottant**) Expression sur laquelle effectuer l’agrégation.  
+ ( **Entier** ou **Flottant** ) Expression sur laquelle effectuer l’agrégation.  
   
  *scope*  
- (**Chaîne**) Facultatif. Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
+ ( **Chaîne** ) Facultatif. Nom d'un dataset, d'un groupe ou d'une région de données qui contient les éléments de rapport auxquels appliquer la fonction d'agrégation. Si le paramètre *scope* n'est pas spécifié, l'étendue actuelle est utilisée.  
   
  *recursive*  
- (**Type énuméré**) Facultatif. **Simple** (par défaut) ou **RdlRecursive**. Indique s'il faut effectuer l'agrégation de manière récursive.  
+ ( **Type énuméré** ) Facultatif. **Simple** (par défaut) ou **RdlRecursive**. Indique s'il faut effectuer l'agrégation de manière récursive.  
   
 ## <a name="return-type"></a>Type de retour  
  Retourne une valeur **Decimal** pour les expressions décimales et une valeur **Double** pour toutes les autres expressions.  
   
 ## <a name="remarks"></a>Notes  
- Le jeu de données spécifié dans l'expression doit avoir le même type de données. Pour convertir des données qui ont plusieurs types de données numériques en un même type de données, utilisez des fonctions de conversion telles que **CInt**, **CDbl** ou **CDec**. Pour plus d'informations, consultez [Fonctions de conversion de types de données](https://go.microsoft.com/fwlink/?LinkId=96142).  
+ Le jeu de données spécifié dans l'expression doit avoir le même type de données. Pour convertir des données qui ont plusieurs types de données numériques en un même type de données, utilisez des fonctions de conversion telles que **CInt** , **CDbl** ou **CDec**. Pour plus d'informations, consultez [Fonctions de conversion de types de données](https://go.microsoft.com/fwlink/?LinkId=96142).  
   
  La valeur du paramètre *scope* doit être une constante de chaîne et ne peut pas être une expression. Pour les agrégats externes ou les agrégats qui ne spécifient pas d'autres agrégats, le paramètre *scope* doit faire référence à l'étendue actuelle ou à une étendue contenante. Pour les agrégats d'agrégats, les agrégats imbriqués peuvent spécifier une étendue enfant.  
   
  *Expression* peut contenir des appels aux fonctions d'agrégation imbriquées avec les exceptions et conditions suivantes :  
   
--   Le paramètre*Scope* des agrégats imbriqués doit être identique à l'étendue de l'agrégat externe ou contenu par celle-ci. Pour toutes les étendues distinctes de l'expression, une étendue doit figurer dans une relation enfant avec toutes les autres étendues.  
+-   Le paramètre *Scope* des agrégats imbriqués doit être identique à l'étendue de l'agrégat externe ou contenu par celle-ci. Pour toutes les étendues distinctes de l'expression, une étendue doit figurer dans une relation enfant avec toutes les autres étendues.  
   
--   Le paramètre*Scope* des agrégats imbriqués ne peut pas être le nom d'un dataset.  
+-   Le paramètre *Scope* des agrégats imbriqués ne peut pas être le nom d'un dataset.  
   
--   *Expression* ne doit pas contenir les fonctions **First**, **Last**, **Previous**ou **RunningValue** .  
+-   *Expression* ne doit pas contenir les fonctions **First** , **Last** , **Previous** ou **RunningValue** .  
   
 -   *Expression* ne doit pas contenir les agrégats imbriqués qui spécifient *recursive*.  
   
@@ -61,8 +61,10 @@ Sum(expression, scope, recursive)
   
  Pour plus d’informations sur les agrégats récursifs, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## <a name="example"></a>Exemple  
- Les deux exemples de code ci-dessous fournissent une somme des totaux d'articles dans le groupe ou la région de données `Order` .  
+## <a name="examples"></a>Exemples  
+
+### <a name="a-sum-of-line-item-totals"></a>R. Somme des totaux d’articles 
+ Les deux exemples de code ci-dessous fournissent une somme des totaux d’articles dans la région de données ou le groupe `Order`.  
   
 ```  
 =Sum(Fields!LineTotal.Value, "Order")  
@@ -70,7 +72,7 @@ Sum(expression, scope, recursive)
 =Sum(CDbl(Fields!LineTotal.Value), "Order")  
 ```  
   
-## <a name="example"></a>Exemple  
+### <a name="b-maximum-value-from-all-nested-regions"></a>B. Valeur maximale de toutes les régions imbriquées 
  Dans une région de données de matrice avec les groupes de lignes imbriqués Catégorie et Sous-catégorie et les groupes de colonnes imbriqués Année et Trimestre, dans une cellule qui appartient aux groupes de lignes et de colonnes les plus profonds, l'expression suivante correspond à la valeur maximale de tous les trimestres pour toutes les sous-catégories.  
   
 ```  

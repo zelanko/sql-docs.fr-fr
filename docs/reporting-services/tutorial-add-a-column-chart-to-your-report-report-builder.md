@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 23796da12c2b987dfad6f023d40e9975cb301e28
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245686"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043766"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un histogramme à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous allez créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec un histogramme affichant une série sous la forme d’un ensemble de barres verticales regroupées par catégorie. 
@@ -27,7 +27,7 @@ Les histogrammes sont utiles pour :
   
 L'illustration suivante montre l'histogramme que vous allez créer, avec une moyenne mobile.  
   
-![didacticiel-histogramme-générateur-de-rapports](../reporting-services/media/report-builder-column-chart-tutorial.png)    
+![Capture d’écran montrant un histogramme du générateur de rapports.](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
 > Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
@@ -48,13 +48,13 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
 3.  Dans le volet droit, cliquez sur **Assistant Graphique**.  
   
-4.  Dans la page **Choisir un dataset**, cliquez sur **Créer un dataset**, puis sur **Suivant**.  
+4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset** , puis sur **Suivant**.  
   
 5.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, sélectionnez une source de données, puis cliquez sur **Suivant**. Vous devrez peut-être entrer un nom d'utilisateur et un mot de passe.  
   
@@ -105,13 +105,13 @@ Vous pouvez choisir parmi plusieurs types de graphiques prédéfinis, puis modif
   
     Le graphique est ajouté à l'aire de conception. Notez que le nouvel histogramme ne fait que représenter les données. La légende indique Sales Date A, Sales Date B, et ainsi de suite, simplement pour donner une idée de l’apparence du rapport. 
     
-    ![report-builder-column-chart-1-design-view](../reporting-services/media/report-builder-column-chart-1-design-view.png)
+    ![Capture d’écran d’une colonne du générateur de rapports en mode Création.](../reporting-services/media/report-builder-column-chart-1-design-view.png)
   
 7.  Cliquez sur le graphique pour afficher ses poignées. Faites glisser l'angle inférieur droit du graphique pour augmenter sa taille. Notez que la taille de l'aire de conception du rapport augmente pour s'adapter à la taille du graphique.  
   
 8.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
 
-    ![report-builder-column-chart-1-preview](../reporting-services/media/report-builder-column-chart-1-preview.png)
+    ![Capture d’écran montrant un aperçu de l’histogramme du générateur de rapports.](../reporting-services/media/report-builder-column-chart-1-preview.png)
 
 Notez que le graphique n’étiquette pas chaque catégorie sur l’axe horizontal. Par défaut, seules sont incluses les étiquettes qui n'empiètent pas sur l'axe. 
   
@@ -122,7 +122,7 @@ Par défaut, l'axe horizontal affiche les valeurs dans un format général qui e
   
 2.  Cliquez avec le bouton droit sur l’axe horizontal > **Propriétés de l’axe horizontal**.  
   
-3.  Sous l’onglet **Nombre** , dans **Catégorie**, sélectionnez **Date**.  
+3.  Sous l’onglet **Nombre** , dans **Catégorie** , sélectionnez **Date**.  
   
 5.  Dans la zone **Type** , sélectionnez **31 Jan 2000**.  
   
@@ -132,7 +132,7 @@ Par défaut, l'axe horizontal affiche les valeurs dans un format général qui e
   
 La date s'affiche dans le format de date que vous avez sélectionné. Le graphique n’étiquette toujours pas chaque catégorie sur l’axe horizontal. 
 
-![report-builder-column-chart-2-preview](../reporting-services/media/report-builder-column-chart-2-preview.png)
+![Capture d’écran de l’histogramme du générateur de rapports montrant le format de date.](../reporting-services/media/report-builder-column-chart-2-preview.png)
   
 Vous pouvez personnaliser l'affichage des étiquettes en les faisant pivoter et en spécifiant l'intervalle.  
   
@@ -144,21 +144,21 @@ Vous pouvez personnaliser l'affichage des étiquettes en les faisant pivoter et 
   
 3.  Cliquez avec le bouton droit sur l’axe horizontal > **Propriétés de l’axe horizontal**.  
   
-5.  Sous l’onglet **Étiquettes** , sous **Modifier les options d’ajustement automatique des étiquettes d’axe**, sélectionnez **Désactiver l’ajustement automatique**.  
+5.  Sous l’onglet **Étiquettes** , sous **Modifier les options d’ajustement automatique des étiquettes d’axe** , sélectionnez **Désactiver l’ajustement automatique**.  
   
-7.  Dans **Angle de rotation des étiquettes**, sélectionnez **-90**.  
+7.  Dans **Angle de rotation des étiquettes** , sélectionnez **-90**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
     L'exemple de texte de l'axe horizontal pivote de 90 degrés.  
     
-    ![report-builder-column-chart-rotate-x-axis](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
+    ![Capture d’écran de l’histogramme du générateur de rapports avec le texte de l’axe X pivoté en mode Création.](../reporting-services/media/report-builder-column-chart-rotate-x-axis.png)
   
 9. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
 Sur le graphique, les étiquettes pivotent.  
 
-![report-builder-column-chart-rotate-x-axis-preview](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
+![Capture d’écran montrant un aperçu de l’histogramme du générateur de rapports avec le texte de l’axe X pivoté.](../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png)
   
 ## <a name="5-move-the-legend"></a><a name="Legend"></a>5. Déplacer la légende  
 La légende est créée automatiquement à partir des données de catégories et de séries. Vous pouvez déplacer la légende sous la zone de graphique d’un histogramme.  
@@ -167,7 +167,7 @@ La légende est créée automatiquement à partir des données de catégories et
   
 2.  Cliquez avec le bouton droit sur la légende du graphique > **Propriétés de la légende**.  
   
-3.  Sous **Mise en page et position**, sélectionnez une autre position. Par exemple, sélectionnez l’option en bas au milieu.  
+3.  Sous **Mise en page et position** , sélectionnez une autre position. Par exemple, sélectionnez l’option en bas au milieu.  
   
     Lorsque la légende est placée en haut ou en bas d'un graphique, la disposition de la légende change de vertical à horizontal. Vous pouvez sélectionner une disposition différente dans la zone **Disposition** .  
   
@@ -192,7 +192,7 @@ Par défaut, l'axe vertical affiche les valeurs dans un format général qui est
   
 2. Cliquez sur les étiquettes figurant sur l’axe vertical, sur le côté gauche du graphique, pour les sélectionner.  
   
-3.  Sous l’onglet **Accueil** > groupe **Nombre**, cliquez sur le bouton **Devise**. Les étiquettes de l'axe changent pour afficher le format monétaire.  
+3.  Sous l’onglet **Accueil** > groupe **Nombre** , cliquez sur le bouton **Devise**. Les étiquettes de l'axe changent pour afficher le format monétaire.  
   
 4.  Cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher le nombre arrondi au dollar le plus proche.  
   
@@ -214,7 +214,7 @@ Par défaut, l'axe vertical affiche les valeurs dans un format général qui est
   
 12. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
 
-    ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
+    ![Capture d’écran montrant un aperçu du format de l’histogramme du générateur de rapports avec l’axe Y correctement étiqueté.](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
 ## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Afficher toutes les étiquettes sur l’axe horizontal (x)
 
@@ -226,13 +226,13 @@ Vous remarquerez que seuls certaines des étiquettes sur l’axe x sont affiché
 
 3. Dans le volet Propriétés, affectez la valeur 1 à LabelInterval.
 
-    ![report-builder-column-chart-set-label-interval](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Capture d’écran montrant comment définir l’intervalle des étiquettes de l’histogramme du générateur de rapports.](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     Le graphique a la même apparence en mode Conception. 
     
 5.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.
 
-    ![report-builder-column-chart-label-interval-one-preview](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Capture d’écran montrant un aperçu de l’histogramme du générateur de rapports avec l’intervalle des étiquettes ayant pour valeur 1.](../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Le graphique affiche maintenant toutes ses étiquettes.
   
@@ -246,13 +246,13 @@ Une moyenne mobile est une moyenne des données de votre série, calculée au fi
   
 3.  Cliquez avec le bouton droit sur le champ **[Sum(Sales)]** dans la zone **Valeurs** , puis cliquez sur **Ajouter une série calculée**.  
 
-     ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
+     ![Capture d’écran montrant comment ajouter une série calculée à l’histogramme du générateur de rapports.](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
-4.  Dans **Formule**, vérifiez que **Moyenne mobile** est sélectionné.  
+4.  Dans **Formule** , vérifiez que **Moyenne mobile** est sélectionné.  
   
-5.  Dans **Définir les paramètres de la formule**, pour **Période**, sélectionnez **4**.  
+5.  Dans **Définir les paramètres de la formule** , pour **Période** , sélectionnez **4**.  
   
-6.  Sous l’onglet **Bordure** , dans **Largeur de ligne**, sélectionnez **3pt**.  
+6.  Sous l’onglet **Bordure** , dans **Largeur de ligne** , sélectionnez **3pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -260,7 +260,7 @@ Une moyenne mobile est une moyenne des données de votre série, calculée au fi
   
 Le graphique présente une ligne qui indique la moyenne mobile pour le total des ventes par date. La moyenne est ici calculée toutes les quatre dates. En savoir plus sur [l’ajout d’une moyenne mobile à un graphique](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md). 
 
-![report-builder-column-chart-moving-average](../reporting-services/media/report-builder-column-chart-moving-average.png)
+![Capture d’écran d’un histogramme du générateur de rapports représentant une moyenne mobile.](../reporting-services/media/report-builder-column-chart-moving-average.png)
   
 ## <a name="10-add-a-report-title"></a><a name="Title"></a>10. Ajouter un titre de rapport  
   
@@ -268,7 +268,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
   
 2.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-3.  Tapez **Graphique sur les ventes**, appuyez sur Entrée, puis tapez **Janvier à décembre 2015**pour obtenir ce qui suit :  
+3.  Tapez **Graphique sur les ventes** , appuyez sur Entrée, puis tapez **Janvier à décembre 2015** pour obtenir ce qui suit :  
   
     **Graphique sur les ventes**  
   
@@ -294,7 +294,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
 
     Vous pouvez l’enregistrer sur votre ordinateur ou sur le serveur de rapports.
   
-3.  Dans **Nom**, tapez **Histogramme des commandes client**.  
+3.  Dans **Nom** , tapez **Histogramme des commandes client**.  
   
 4.  Cliquez sur **Enregistrer**.  
   

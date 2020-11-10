@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c17541ff08f136b3c8c26418117df63c71b9195b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247418"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243808"
 ---
 # <a name="working-with-snapshots-web-portal"></a>Utilisation des instantanés (portail web)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Vous pouvez déterminer si les instantanés sont créés pour un rapport en sélectionnant successivement les **points de suspension (...)** d’un rapport, **Gérer**, puis **Mise en cache** ou **Instantanés d’historique**.  
+Vous pouvez déterminer si les instantanés sont créés pour un rapport en sélectionnant successivement les **points de suspension (...)** d’un rapport, **Gérer** , puis **Mise en cache** ou **Instantanés d’historique**.  
   
 > [!NOTE]
 > Le service SQL Server Agent doit être démarré.  
@@ -31,7 +31,7 @@ Vous pouvez créer un instantané du cache, afin d’accélérer le chargement d
   
 Vous pouvez créer un instantané de la manière suivante.  
   
-![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
+![Capture d’écran montrant l’écran Mise en cache de la boîte de dialogue Modifier Company Sales avec trois cercles magenta contenant les chiffres 1, 2 et 3 correspondant aux trois étapes sous la capture d’écran.](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
 1.  Dans la page **Mise en cache** , sélectionnez **Toujours exécuter ce rapport sur les instantanés prégénérés** pour activer les options de création d’un instantané.  
   
@@ -49,7 +49,7 @@ Un historique de rapport est toujours affiché dans le contexte du rapport dont 
   
 Pour générer un instantané d’historique, le rapport doit pouvoir s’exécuter sans assistance (c’est-à-dire qu’il doit utiliser les informations d’identification stockées ; les rapports paramétrables doivent contenir des valeurs de paramètres par défaut pour tous les paramètres). Un historique de rapport peut être généré manuellement ou sous forme d'opération planifiée. Les propriétés d'historique du rapport déterminent les modes de création de l'historique de rapport.  
   
-![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
+![Capture d’écran montrant l’écran Instantanés d’historique de la boîte de dialogue Modifier Company Sales avec trois cercles magenta contenant les chiffres 1, 2 et 3 correspondant aux trois étapes sous la capture d’écran.](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
 1.  Pour créer un instantané d’historique, sélectionnez **+ Nouvel instantané d’historique**. Cette opération traite le rapport et ajoute une entrée à la liste.  
   
@@ -61,7 +61,7 @@ Pour générer un instantané d’historique, le rapport doit pouvoir s’exécu
   
 Sélectionnez **Planification et paramètres** pour afficher des options supplémentaires pour la planification et le contrôle de la rétention des instantanés créés.  
   
-![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
+![Capture d’écran montrant les sections Planification et Avancé.](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
 Vous pouvez créer les instantanés selon une planification définie par vos soins. Vous pouvez également empêcher la création d’instantanés par d’autres personnes. Décocher la case **Autoriser les utilisateurs à créer manuellement des instantanés** désactive le bouton **+ Nouvel instantané d’historique**.  
   

@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: e80892bfef7ee2c8cf22aef1b491ab5ea0c0addd
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987995"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235563"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Connecter votre SQL Server à Azure Arc
 
@@ -24,6 +24,10 @@ Vous pouvez connecter votre instance SQL Server à Azure Arc sur site en procéd
 * Au moins une instance SQL Server doit être installée sur votre machine.
 * Pour les machines Windows, Azure PowerShell doit être installé. Pour [installer Azure Powershell](/powershell/azure/install-az-ps), suivez ces instructions.
 * Pour les machines Linux, Azure CLI doit être installé et vous devez être connecté à votre compte Azure. Pour [installer Azure CLI](/cli/azure/install-azure-cli-apt), suivez ces instructions.
+* Le fournisseur de ressources **Microsoft.AzureData** a été inscrit. Pour plus d’informations sur les fournisseurs de ressources, consultez la page sur les fournisseurs et types de ressources Azure.
+    * Dans PowerShell, exécutez `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`.
+    * Sur Linux, exécutez `az provider register --namespace 'Microsoft.AzureData`.
+
 
 
 ## <a name="generate-a-registration-script-for-sql-server"></a>Générer un script d’inscription pour SQL Server
@@ -90,7 +94,7 @@ Accédez au [portail Azure](https://ms.portal.azure.com/#home) et ouvrez la nouv
 
 ## <a name="un-register-the-sql-server---azure-arc-resources"></a>Annuler l’inscription de la ressource SQL Server - Azure Arc
 
-Pour supprimer une ressource __SQL Server - Azure Arc__, accédez au groupe de ressources qui la contient et supprimez-la de la liste des ressources du groupe.
+Pour supprimer une ressource __SQL Server - Azure Arc__ , accédez au groupe de ressources qui la contient et supprimez-la de la liste des ressources du groupe.
 
 ![Annuler l’inscription de SQL Server](media/join/delete-sql-server-azure-arc.png)
 

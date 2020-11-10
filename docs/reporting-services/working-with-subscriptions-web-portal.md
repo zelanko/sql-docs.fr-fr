@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243551"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243743"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Utilisation des abonnements (portail web)
 
@@ -28,7 +28,7 @@ Avant de créer un abonnement, vous devez vérifier que la source de données du
 > Le service SQL Server Agent doit être démarré.   
   
 ![Gérer les abonnements](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
-Pour accéder à la page Abonnements, sélectionnez successivement les **points de suspension (...)** d’un rapport, **Gérer**, puis **Abonnements**.  
+Pour accéder à la page Abonnements, sélectionnez successivement les **points de suspension (...)** d’un rapport, **Gérer** , puis **Abonnements**.  
   
 À partir de la page Abonnements, vous pouvez créer des abonnements en sélectionnant **Nouvel abonnement**. Vous pouvez également modifier des abonnements existants, ou supprimer des abonnements que vous avez sélectionnés.  
   
@@ -44,7 +44,7 @@ Les abonnements sont pris en charge pour les rapports qui peuvent s'exécuter sa
 ## <a name="type-of-subscription"></a>Type d’abonnement  
 Vous avez le choix entre un **abonnement standard** et un **abonnement piloté par les données**.  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![Capture d’écran montrant la section Type d’abonnement.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 Un abonnement piloté par les données est un abonnement qui interroge une base de données d’abonnés pour obtenir des informations sur l’abonnement chaque fois que l’abonnement est exécuté. Les abonnements pilotés par les données utilisent les résultats de la requête pour identifier les destinataires de l'abonnement, paramètres de remise et valeurs des paramètres de rapport. Lors de l'exécution, le serveur de rapports exécute une requête pour obtenir les valeurs utilisées pour les paramètres de l'abonnement.   
   
@@ -57,7 +57,7 @@ Sélectionnez l'extension de remise à utiliser pour distribuer le rapport.
   
 La disponibilité d'une extension de remise varie selon qu'elle est installée et configurée sur le serveur de rapports. La messagerie Report Server est l’extension de remise par défaut, mais elle doit être configurée avant de pouvoir être utilisée. La remise de partage de fichiers ne requiert aucune configuration, mais vous devez définir un dossier partagé pour pouvoir l'utiliser.  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![Capture d’écran montrant les sections de destination et de remise (partage de fichiers Windows).](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 Selon l'extension de remise choisie, les paramètres suivants s'affichent :  
   
@@ -68,7 +68,7 @@ Selon l'extension de remise choisie, les paramètres suivants s'affichent :
 ## <a name="data-driven-subscription-dataset"></a>Dataset d’abonnement piloté par les données  
 Pour un abonnement piloté par les données, vous devez définir le dataset utilisé pour l’abonnement. Sélectionnez **Modifier le dataset** pour fournir ces informations.  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![Capture d’écran montrant la section du jeu de données.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 Vous devez d’abord fournir une **source de données** à utiliser pour la requête. Cela peut être une source de données partagée, ou vous pouvez fournir une source de données personnalisée.  
   
@@ -80,7 +80,7 @@ Pour un résultat optimal, exécutez d'abord la requête dans SQL Server Managem
   
 -   Les lignes dans le jeu de résultats déterminent le nombre de remises de rapports générées. Si vous avez 10 000 lignes, le serveur de rapports générera 10 000 notifications et remises.  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![Capture d’écran montrant la section de la requête.](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
 Vous pouvez ensuite valider la requête. Vous pouvez également définir un **délai de requête**.  
   

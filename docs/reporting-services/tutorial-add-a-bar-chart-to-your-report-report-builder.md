@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 57dd6f4472c64ee37190d5149ef354d5829e1266
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245696"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043731"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)
 Dans ce tutoriel, vous allez utiliser un Assistant dans [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] pour créer un graphique à barres dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Ensuite, vous ajouterez un filtre et améliorerez le graphique. 
@@ -27,7 +27,7 @@ Un graphique à barres représente les données de catégorie horizontalement. C
   
 L’illustration suivante montre le graphique à barres que vous allez créer, avec les ventes de 2014 et 2015 pour les cinq meilleurs commerciaux, par ordre décroissant de montant des ventes en 2015.  
   
-![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
+![Capture d’écran d’un graphique à barres du générateur de rapports.](../reporting-services/media/report-builder-bar-chart.png) 
   
  
 > [!NOTE]  
@@ -56,7 +56,7 @@ Vous allez créer un dataset incorporé, choisir une source de données partagé
   
 3.  Dans le volet droit, cliquez sur **Assistant Graphique**.  
   
-4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset**, puis sur **Suivant**.  
+4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset** , puis sur **Suivant**.  
   
 5.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, sélectionnez une source de données, puis cliquez sur **Suivant**. Vous devrez peut-être entrer un nom d'utilisateur et un mot de passe.  
   
@@ -92,9 +92,9 @@ Vous allez créer un dataset incorporé, choisir une source de données partagé
  
 1.  Dans la page **Choisir un type de graphique** , l’histogramme est le type de graphique par défaut.  
   
-2.  Cliquez sur **Barre**, puis sur **Suivant**.  
+2.  Cliquez sur **Barre** , puis sur **Suivant**.  
   
-    Dans la page **Organiser les champs du graphique**, quatre champs se trouvent dans le volet **Champs disponibles** : FirstName, LastName, SalesYear2015 et SalesYear2014.  
+    Dans la page **Organiser les champs du graphique** , quatre champs se trouvent dans le volet **Champs disponibles**  : FirstName, LastName, SalesYear2015 et SalesYear2014.  
   
 3.  Faites glisser LastName vers le volet Catégories.  
   
@@ -121,7 +121,7 @@ Par défaut, seules quelques-unes des valeurs de l'axe vertical s'affichent. Vou
   
 2.  Cliquez avec le bouton droit sur l’axe vertical, puis cliquez sur **Propriétés de l’axe vertical**.  
   
-3.  Sous **Plage et intervalle de l’axe**, dans la zone **Intervalle** , tapez **1**.  
+3.  Sous **Plage et intervalle de l’axe** , dans la zone **Intervalle** , tapez **1**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -167,7 +167,7 @@ Lorsque vous triez les données d'un graphique, vous modifiez l'ordre des valeur
   
 4.  Cliquez sur **Tri**. La page **Modifiez les options de tri** affiche une liste d’expressions de tri. Par défaut, cette liste a une expression de tri identique à l'expression de groupe de la catégorie d'origine.  
   
-5.  Dans **Trier par**, cliquez sur **[SalesYear2015]** .  
+5.  Dans **Trier par** , cliquez sur **[SalesYear2015]** .  
   
 6.  Dans la liste **Tri** , sélectionnez **A-Z** pour que les noms apparaissent dans l’ordre décroissant du montant des ventes 2015.
   
@@ -188,7 +188,7 @@ Pour améliorer la lisibilité des valeurs du graphique, vous pouvez déplacer l
   
 3.  Sélectionnez **Propriétés de la légende**.  
   
-4.  Pour **Position de la légende**, sélectionnez une position différente. Par exemple, choisissez de positionner le graphique en bas au centre.  
+4.  Pour **Position de la légende** , sélectionnez une position différente. Par exemple, choisissez de positionner le graphique en bas au centre.  
   
     Lorsque la légende est placée en haut ou en bas d'un graphique, la disposition de la légende change de vertical à horizontal. Vous pouvez sélectionner une autre disposition dans la liste déroulante **Disposition** .  
   
@@ -246,13 +246,13 @@ Vous pouvez ajouter un filtre au graphique pour spécifier les données du datas
   
 5.  Cliquez sur **Add**. Un nouveau filtre vide apparaît.  
   
-6.  Dans **Expression**, tapez **[Sum(SalesYear2015)]** . Cela crée l’expression sous-jacente `=Sum(Fields!SalesYear2015.Value)`, que vous pouvez afficher en cliquant sur le bouton **fx** .  
+6.  Dans **Expression** , tapez **[Sum(SalesYear2015)]** . Cela crée l’expression sous-jacente `=Sum(Fields!SalesYear2015.Value)`, que vous pouvez afficher en cliquant sur le bouton **fx** .  
   
 7.  Vérifiez que le type de données est **Text**.  
   
-8.  Dans **Opérateur**, sélectionnez **N supérieurs** dans la liste déroulante.  
+8.  Dans **Opérateur** , sélectionnez **N supérieurs** dans la liste déroulante.  
   
-9. Dans **Valeur**, tapez l’expression suivante : **=5**  
+9. Dans **Valeur** , tapez l’expression suivante : **=5**  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -266,15 +266,15 @@ Le graphique affiche les noms des cinq meilleurs commerciaux issus des données 
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Tapez **Graphique à barres des ventes**, appuyez sur Entrée, puis tapez **Cinq meilleurs vendeurs pour 2015**, afin d’obtenir ce qui suit :  
+2.  Tapez **Graphique à barres des ventes** , appuyez sur Entrée, puis tapez **Cinq meilleurs vendeurs pour 2015** , afin d’obtenir ce qui suit :  
   
     **Graphique à barres des ventes**  
   
     **Cinq meilleurs vendeurs pour 2015**  
   
-3.  Sélectionnez **Graphique à barres des ventes**, puis cliquez sur le bouton **Gras** .  
+3.  Sélectionnez **Graphique à barres des ventes** , puis cliquez sur le bouton **Gras** .  
   
-4.  Sélectionnez **Cinq meilleurs vendeurs pour 2015**puis, dans la section **Police** de l’onglet **Accueil** , affectez la valeur **10**à la taille de la police.  
+4.  Sélectionnez **Cinq meilleurs vendeurs pour 2015** puis, dans la section **Police** de l’onglet **Accueil** , affectez la valeur **10** à la taille de la police.  
   
 5.  (Facultatif) Vous devrez peut-être agrandir la zone de texte Titre et descendre le haut du graphique à barres pour que les deux lignes de texte soient visibles.  
   
@@ -288,7 +288,7 @@ Le graphique affiche les noms des cinq meilleurs commerciaux issus des données 
   
 2.  Cliquez sur **Fichier** > **Enregistrer sous**.  
   
-3.  Dans **Nom**, tapez **Graphique à barres des ventes**.  
+3.  Dans **Nom** , tapez **Graphique à barres des ventes**.  
 
     Vous pouvez l’enregistrer sur votre ordinateur ou sur le serveur de rapports.
   

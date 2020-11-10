@@ -1,22 +1,22 @@
 ---
-title: Configurer SQL Assessment à la demande pour l’instance SQL avec Azure Arc
-description: Configurer SQL Assessment à la demande pour l’instance SQL avec Azure Arc
+title: Configurer SQL Assessment à la demande sur une instance Azure Arc enabled SQL Server
+description: Configurer SQL Assessment à la demande sur une instance Azure Arc enabled SQL Server
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: c6f2a0989cb13253ef4a6a26e013a6b8c7a84ded
+ms.sourcegitcommit: f888ac94c7b5f6b6f138ab75719dadca04e8284a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257999"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93294386"
 ---
-# <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Configurer SQL Assessment sur l’instance SQL avec Azure Arc
+# <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Configurer SQL Assessment sur une instance Azure Arc enabled SQL Server
 
-SQL Assessment fournit un mécanisme permettant d’évaluer la configuration de SQL Server. Cet article fournit des instructions sur l’utilisation de SQL Assessment sur une instance SQL avec Azure Arc.
+SQL Assessment fournit un mécanisme permettant d’évaluer la configuration de SQL Server. Cet article fournit des instructions sur l’utilisation de SQL Assessment sur une instance Azure Arc enabled SQL Server
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -37,11 +37,22 @@ SQL Assessment fournit un mécanisme permettant d’évaluer la configuration de
    > [!div class="mx-imgBorder"]
    > [ ![Capture d’écran affichant l’écran Intégrité de l’environnement d’une ressource SQL Server - Azure Arc.](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. Spécifiez un répertoire de travail sur la machine de collecte de données. Par défaut, `C:\sql_assessment\work_dir` est utilisé. Pendant la collecte et l’analyse, les données sont stockées temporairement dans ce dossier. Si le dossier n’existe pas, il est créé automatiquement.
+> [!IMPORTANT]
+> Si l’extension MMA n’est pas installée, vous ne pourrez pas lancer SQL Assessment à la demande.
 
-1. Sélectionnez **Télécharger le script de configuration** . Copiez le script téléchargé sur l’ordinateur cible.
+2. Sélectionnez le type de compte. Si vous disposez d’un compte de service administré, vous pouvez lancer SQL Assessment directement à partir du portail. Spécifiez le nom du compte.
 
-1. Ouvre une instance d’administration de **powershell.exe** et exécutez l’un des blocs de code suivants :
+> [!NOTE]
+> La spécification d’un *compte de service administré* active le bouton **Configurer SQL Assessment** pour vous permettre de lancer l’évaluation à partir du portail en déployant un *CustomScriptExtension*. Étant donné qu’un seul *CustomScriptExtension* peut être déployé à la fois, l’extension de script pour SQL Assessment est automatiquement supprimée après l’exécution. Si un autre *CustomScriptExtension* est déjà déployé sur l’ordinateur d’hébergement, le bouton **Configurer SQL Assessment** n’est pas activé.
+
+3. Spécifiez un répertoire de travail sur la machine de collecte de données si vous souhaitez changer la valeur par défaut. Par défaut, `C:\sql_assessment\work_dir` est utilisé. Pendant la collecte et l’analyse, les données sont stockées temporairement dans ce dossier. Si le dossier n’existe pas, il est créé automatiquement.
+
+4. Si vous lancez SQL Assessment à partir du portail en cliquant sur **Configurer SQL Assessment** , une bulle de déploiement standard s’affiche.
+
+> [!div class="mx-imgBorder"]
+   > [ ![Capture d’écran montrant le déploiement de CustomScriptExtension.](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
+
+5. Si vous préférez lancer SQL Assessment à partir de l’ordinateur cible, cliquez sur **Télécharger le script de configuration** , copiez le script téléchargé sur l’ordinateur cible, puis exécutez l’un des blocs de code suivants dans une instance d’administration de **powershell.exe**  :
 
    * _Compte de domaine_ :  Vous êtes invité à entrer le compte d’utilisateur et le mot de passe.
 
@@ -61,11 +72,11 @@ SQL Assessment fournit un mécanisme permettant d’évaluer la configuration de
 > Le script planifie une tâche nommée *SQLAssessment* , qui déclenche la collecte des données. Cette tâche s’exécute dans l’heure qui suit l’exécution du script. Il se répète ensuite tous les sept jours.
 
 > [!TIP]
-> Vous pouvez modifier la tâche pour qu’elle s’exécute à une date et une heure différentes, voire la forcer à s’exécuter immédiatement. Dans la bibliothèque du planificateur de tâches, recherchez **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Évaluations** > **SQLAssessment** .
+> Vous pouvez modifier la tâche pour qu’elle s’exécute à une date et une heure différentes, voire la forcer à s’exécuter immédiatement. Dans la bibliothèque du planificateur de tâches, recherchez **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Évaluations** > **SQLAssessment**.
 
 ## <a name="view-sql-assessment-results"></a>Afficher les résultats SQL Assessment
 
-* Dans le volet _Intégrité de l’environnement_ , sélectionnez le bouton **Afficher les résultats de SQL Assessment** .
+* Dans le volet _Intégrité de l’environnement_ , sélectionnez le bouton **Afficher les résultats de SQL Assessment**.
 
    > [!NOTE]
    > Le bouton **Afficher les résultats de SQL Assessment** reste désactivé jusqu’à ce que les résultats soient prêts dans Log Analytics. Ce processus peut prendre jusqu’à deux heures après le traitement des fichiers de données sur l’ordinateur cible.

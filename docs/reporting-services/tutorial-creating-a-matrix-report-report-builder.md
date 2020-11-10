@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a0b49b2cf9ac1e131e74ba39c1430492823e39e5
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247448"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043793"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutoriel : Création d'un rapport de matrice (Générateur de rapports)
 Ce didacticiel vous montre comment créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec une matrice d’exemples de données de ventes dans des groupes de lignes et de colonnes imbriqués. 
 
 Vous créez également un groupe de colonnes adjacentes, vous mettez en forme les colonnes et vous faites pivoter du texte. L'illustration suivante montre un rapport similaire à celui que vous allez créer.  
   
-![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
+![Capture d’écran d’un rapport de matrice du générateur de rapports.](../reporting-services/media/report-builder-matrix-tutorial.png)
    
 Durée estimée pour effectuer ce tutoriel : 20 minutes.  
   
@@ -40,7 +40,7 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -120,11 +120,11 @@ Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher
   
     Les étapes 5 et 6 spécifient les données à afficher dans les cellules de données de la matrice.
     
-    ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
+    ![Capture d’écran montrant l’Assistant Organiser les champs dans le générateur de rapports.](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
 7.  Cliquez sur **Suivant**.  
   
-8.  Dans la page Choisir la disposition, sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
+8.  Dans la page Choisir la disposition, sous **Options** , vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
 9. Vérifiez que **Bloqué, sous-total ci-dessous** est sélectionné.  
   
@@ -136,7 +136,7 @@ Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher
   
     La matrice est ajoutée à l'aire de conception. Le volet Groupes de lignes affiche deux groupes de lignes : Territory et SalesDate. Le volet Groupes de colonnes affiche deux groupes de colonnes : Subcategory et Product. Les données de détail sont toutes les données récupérées par la requête de dataset.  
     
-    ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
+    ![Capture d’écran montrant les groupes de lignes et les groupes de colonnes du générateur de rapports.](../reporting-services/media/report-builder-row-and-column-groups.png)
   
 14. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -144,7 +144,7 @@ Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher
 
 14. Développez une sous-catégorie. Vous pouvez voir que le rapport devient rapidement assez long.
 
-![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
+![Capture d’écran montrant un rapport de matrice du générateur de rapports développé.](../reporting-services/media/report-builder-expand-matrix.png)
   
 ## <a name="3-format-data"></a><a name="FormatData"></a>3. Mettre en forme les données  
 Par défaut, les données de synthèse du champ Sales affichent un nombre général et le champ SalesDate affiche des informations de date et d'heure. Dans cette section, vous mettez en forme le champ Sales de façon à afficher le nombre sous forme de devise et le champ SalesDate afin qu’il n’affiche que la date. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé en tant qu’exemples de valeurs.  
@@ -157,9 +157,9 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 3.  Sous l’onglet **Accueil** > **Nombre** > **Devise**. Les cellules changent pour afficher le format de devise.  
   
-    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [ **$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [ **$12,345.00** ]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
     
-    ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
+    ![Capture d’écran de l’option Exemples de valeurs du générateur de rapports.](../reporting-services/media/report-builder-placeholder-value.png)
   
 4.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
@@ -180,7 +180,7 @@ Dans cette section, vous ajoutez un groupe de colonnes adjacent au groupe de col
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-2.  Cliquez avec le bouton droit sur la cellule qui contient `[Subcategory]`, pointez sur **Ajouter un groupe**, puis cliquez sur **Adjacent à droite**.  
+2.  Cliquez avec le bouton droit sur la cellule qui contient `[Subcategory]`, pointez sur **Ajouter un groupe** , puis cliquez sur **Adjacent à droite**.  
   
     La boîte de dialogue **Groupe de tableaux matriciels** s'affiche.  
   
@@ -212,10 +212,10 @@ Dans cette section, vous ajoutez un groupe de colonnes adjacent au groupe de col
   
 Le rapport inclut des colonnes nommées Monday et Tuesday. Le dataset contient uniquement des données pour ces deux jours.  
 
-![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
+![Capture d’écran montrant les jours de la semaine affichés dans le rapport de matrice du générateur de rapports.](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> Si les données avaient inclus d'autres jours, le rapport aurait également inclus des colonnes pour ces jours. Chaque colonne a l’en-tête de colonne **Sales**et les totaux des ventes par secteur.  
+> Si les données avaient inclus d'autres jours, le rapport aurait également inclus des colonnes pour ces jours. Chaque colonne a l’en-tête de colonne **Sales** et les totaux des ventes par secteur.  
   
 ## <a name="5-change-column-widths"></a><a name="Width"></a>5. Modifier la largeur des colonnes  
 Un rapport qui inclut une matrice s'étend généralement horizontalement et verticalement lorsqu'il s'exécute. Le contrôle de l'expansion horizontale est particulièrement important si vous projetez d'exporter le rapport vers des formats tels que Microsoft Word ou Adobe PDF qui sont utilisés pour imprimer les rapports. Si le rapport s'étend horizontalement sur plusieurs pages, le rapport imprimé est difficile à comprendre. Pour réduire l'expansion horizontale, vous pouvez redimensionner les colonnes afin qu'elles ne soient pas plus larges que nécessaire pour afficher les données sans renvoi à la ligne. Vous pouvez également renommer les colonnes afin que leur titre soit ajusté à la largeur nécessaire pour afficher les données.  
@@ -234,7 +234,7 @@ Un rapport qui inclut une matrice s'étend généralement horizontalement et ver
   
     Les barres grises le long du haut et du côté de la table sont les poignées de colonne et de ligne.  
     
-    ![report-builder-column-handles](../reporting-services/media/report-builder-column-handles.png)
+    ![Capture d’écran des poignées de colonne et de ligne dans le rapport de matrice du générateur de rapports.](../reporting-services/media/report-builder-column-handles.png)
   
 5.  Pour redimensionner la colonne QTY la plus à gauche, pointez sur la ligne entre les poignées de colonne afin que le curseur se transforme en flèche à deux pointes. Faites glisser la colonne vers la gauche jusqu'à ce qu'elle fasse 0,5 pouce de large.  
   
@@ -276,13 +276,13 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-2.  Sélectionnez la zone de texte en haut du corps du rapport qui contient **Cliquez pour ajouter un titre**, puis appuyez sur la touche Suppr.  
+2.  Sélectionnez la zone de texte en haut du corps du rapport qui contient **Cliquez pour ajouter un titre** , puis appuyez sur la touche Suppr.  
   
 3.  Sous l’onglet **Insérer** > **En-tête** > **Ajouter un en-tête**.  
   
     Un en-tête est ajouté en haut du corps du rapport.  
   
-4.  Sous l’onglet **Insérer** , cliquez sur **Zone de texte**, puis faites glisser une zone de texte à l’intérieur de l’en-tête du rapport. Définissez sa taille sur environ 6 pouces de long et 0,75 pouce de haut et placez-la sur le côté gauche de l'en-tête de rapport.  
+4.  Sous l’onglet **Insérer** , cliquez sur **Zone de texte** , puis faites glisser une zone de texte à l’intérieur de l’en-tête du rapport. Définissez sa taille sur environ 6 pouces de long et 0,75 pouce de haut et placez-la sur le côté gauche de l'en-tête de rapport.  
   
 5.  Dans la zone de texte, tapez **Sales by Territory, Subcategory, and Day**.  
   
@@ -309,7 +309,7 @@ Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous 
   
     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l’administrateur du serveur de rapports s’affiche comme emplacement par défaut des rapports.  
   
-4.  Dans **Nom**, remplacez le nom par défaut par **SalesByTerritorySubcategory**.  
+4.  Dans **Nom** , remplacez le nom par défaut par **SalesByTerritorySubcategory**.  
   
 5.  Cliquez sur **Enregistrer**.  
   
@@ -319,9 +319,9 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
-2.  Cliquez sur **Bureau**, **Mes documents**ou **Poste de travail**, puis naviguez jusqu'au dossier où vous souhaitez enregistrer le rapport.  
+2.  Cliquez sur **Bureau** , **Mes documents** ou **Poste de travail** , puis naviguez jusqu'au dossier où vous souhaitez enregistrer le rapport.  
   
-3.  Dans **Nom**, remplacez le nom par défaut par **SalesByTerritorySubcategory**.  
+3.  Dans **Nom** , remplacez le nom par défaut par **SalesByTerritorySubcategory**.  
   
 4.  Cliquez sur **Enregistrer**.  
   
@@ -336,9 +336,9 @@ Une zone de texte peut également afficher du texte horizontal dans le sens vert
   
 2.  Sélectionnez la cellule qui contient `[Territory].` 
 
-    >**Remarque** : Sélectionnez la cellule, et non pas le texte. La propriété WritingMode est disponible seulement pour la cellule.
+    >**Remarque**  : Sélectionnez la cellule, et non pas le texte. La propriété WritingMode est disponible seulement pour la cellule.
     
-     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+     ![Capture d’écran montrant la cellule Territory dans le rapport de matrice du générateur de rapports.](../reporting-services/media/report-builder-select-territory-cell.png)
   
 3.  Dans le volet Propriétés, recherchez la propriété WritingMode, et changez-la de **Par défaut** en **Rotate270**.  
   
@@ -346,7 +346,7 @@ Une zone de texte peut également afficher du texte horizontal dans le sens vert
   
 4.  Vérifiez que la propriété CanGrow est définie sur **Vrai**.  
   
-5.  Sous l’onglet **Accueil** > section **Paragraphe**, sélectionnez **Milieu** et **Centre** pour centrer verticalement et horizontalement le texte dans la cellule.  
+5.  Sous l’onglet **Accueil**  > section **Paragraphe** , sélectionnez **Milieu** et **Centre** pour centrer verticalement et horizontalement le texte dans la cellule.  
  
 6. Redimensionnez la colonne Territory afin qu'elle fasse à 0,5 pouce de large et supprimez le titre de la colonne.  
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  

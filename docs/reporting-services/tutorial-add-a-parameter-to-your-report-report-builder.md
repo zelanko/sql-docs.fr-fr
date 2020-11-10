@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8e4d7569f8624843f0cf05b4c873f0be7b26df3c
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245676"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043779"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutoriel : Ajouter un paramètre à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] pour que les lecteurs de ce dernier puissent filtrer ses données en fonction d’une ou de plusieurs valeurs. 
   
-![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
+![Capture d’écran montrant que vous pouvez ajouter un paramètre à un rapport paginé.](../reporting-services/media/report-builder-parameter-tutorial.png)
 
 Les paramètres de rapport sont créés automatiquement pour chaque paramètre de requête que vous incluez dans une requête de dataset. Le type de données du paramètre détermine son apparence dans la barre d'outils de l'affichage du rapport. 
    
@@ -43,7 +43,7 @@ Créez un rapport de matrice, une source de données et un dataset.
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, vérifiez que **Nouveau rapport** est sélectionné.  
   
@@ -104,7 +104,7 @@ L’Assistant fournit une conception initiale pour l’affichage des données. L
   
 4.  Cliquez sur **Suivant**.  
   
-5.  Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
+5.  Dans la page **Choisir la disposition** , sous **Options** , vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
     Lorsque vous exécuterez le rapport, la dernière colonne affichera la quantité totale de chaque sous-catégorie pour tous les magasins, et la dernière ligne affichera la quantité totale pour toutes les sous-catégories pour chaque magasin.  
   
@@ -135,7 +135,7 @@ Lorsque vous ajoutez un paramètre de requête à une requête, le Générateur 
   
 1.  Cliquez sur **Conception** pour rebasculer en mode Conception.  
   
-2.  Dans le volet des données de rapport, développez le dossier **Datasets** , cliquez avec le bouton droit sur **DataSet1**, puis cliquez sur **Requête**.  
+2.  Dans le volet des données de rapport, développez le dossier **Datasets** , cliquez avec le bouton droit sur **DataSet1** , puis cliquez sur **Requête**.  
   
 3.  Ajoutez la clause [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** suivante comme dernière ligne de la requête :  
   
@@ -147,7 +147,7 @@ Lorsque vous ajoutez un paramètre de requête à une requête, le Générateur 
   
 4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). La boîte de dialogue **Définir les paramètres de la requête** s’ouvre et vous êtes invité à définir une valeur pour le paramètre de requête *\@StoreID*.  
   
-5.  Dans **Valeur du paramètre**, tapez **200**.  
+5.  Dans **Valeur du paramètre** , tapez **200**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -170,11 +170,11 @@ Après avoir créé un paramètre de rapport, vous pouvez ajuster les valeurs pa
   
 Par défaut, le paramètre que vous avez créé a pour type de données **Texte**. Dans la mesure où l’identificateur de magasin est un entier, vous pouvez remplacer le type de données par le type Entier.  
   
-1.  Dans le volet des données de rapport sous le nœud **Paramètres** , cliquez avec le bouton droit sur *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+1.  Dans le volet des données de rapport sous le nœud **Paramètres** , cliquez avec le bouton droit sur *\@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
-2.  Dans **Invite**, tapez **Identificateur du magasin ?** . Ce texte s'affiche sur la barre d'outils de la visionneuse de rapports lorsque vous exécutez le rapport.  
+2.  Dans **Invite** , tapez **Identificateur du magasin ?** . Ce texte s'affiche sur la barre d'outils de la visionneuse de rapports lorsque vous exécutez le rapport.  
   
-3.  Dans **Type de données**, dans la liste déroulante, sélectionnez **Entier**.  
+3.  Dans **Type de données** , dans la liste déroulante, sélectionnez **Entier**.  
   
 4.  Acceptez les valeurs par défaut restantes dans la boîte de dialogue.  
   
@@ -182,7 +182,7 @@ Par défaut, le paramètre que vous avez créé a pour type de données **Texte*
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport. La visionneuse de rapports affiche l’invite **Identificateur du magasin ?** pour *\@StoreID*.  
   
-7.  Dans la barre d’outils de la visionneuse de rapports, en regard de StoreID, tapez **200**, puis cliquez sur **Afficher le rapport**.  
+7.  Dans la barre d’outils de la visionneuse de rapports, en regard de StoreID, tapez **200** , puis cliquez sur **Afficher le rapport**.  
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
@@ -195,15 +195,15 @@ Pour que les lecteurs de votre rapport ne puissent taper que des valeurs valides
   
 2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le dossier **Datasets** , puis cliquez sur **Ajouter un dataset**.  
   
-3.  Dans **Nom**, tapez **Stores**.  
+3.  Dans **Nom** , tapez **Stores**.  
   
 4.  Cliquez sur **Utiliser un dataset incorporé dans mon rapport**.  
   
-5.  Dans **Source de données**, dans la liste déroulante, choisissez la source de données que vous avez utilisée au cours de la première procédure.  
+5.  Dans **Source de données** , dans la liste déroulante, choisissez la source de données que vous avez utilisée au cours de la première procédure.  
   
-6.  Dans **Type de requête**, assurez-vous que **Texte** est sélectionné.  
+6.  Dans **Type de requête** , assurez-vous que **Texte** est sélectionné.  
   
-7.  Dans **Requête**, collez le texte suivant :  
+7.  Dans **Requête** , collez le texte suivant :  
   
     ```  
     SELECT 200 AS StoreID, 'Contoso Catalog Store' as StoreName  
@@ -221,19 +221,19 @@ Après avoir créé un dataset pour fournir des valeurs disponibles, vous modifi
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Pour fournir des valeurs disponibles pour un paramètre à partir d'un dataset  
   
-1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le paramètre *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le paramètre *\@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
-2.  Cliquez sur **Valeurs disponibles**, puis sur **Obtenir les valeurs à partir d’une requête**.  
+2.  Cliquez sur **Valeurs disponibles** , puis sur **Obtenir les valeurs à partir d’une requête**.  
   
-3.  Dans la liste déroulante **Dataset**, cliquez sur **Stores**.  
+3.  Dans la liste déroulante **Dataset** , cliquez sur **Stores**.  
   
-4.  Dans la liste déroulante **Champ de valeur**, cliquez sur StoreID.  
+4.  Dans la liste déroulante **Champ de valeur** , cliquez sur StoreID.  
   
-5.  Dans la liste déroulante **Champ d’étiquette**, cliquez sur StoreName. Le champ d'étiquette spécifie le nom d'affichage de la valeur.  
+5.  Dans la liste déroulante **Champ d’étiquette** , cliquez sur StoreName. Le champ d'étiquette spécifie le nom d'affichage de la valeur.  
   
 6.  Cliquez sur **Général**.  
   
-7.  Dans **Invite**, remplacez **Identificateur du magasin ?** par **Sparre name?** .  
+7.  Dans **Invite** , remplacez **Identificateur du magasin ?** par **Sparre name?** .  
   
     Les lecteurs du rapport sélectionneront désormais un nom dans une liste de noms de magasins au lieu d’identificateurs de magasin. Notez que le type de données du paramètre reste **Entier** , car le paramètre est basé sur l’identificateur de magasin au lieu du nom de magasin.  
   
@@ -254,35 +254,35 @@ Vous pouvez spécifier une valeur par défaut pour chaque paramètre afin que le
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *\@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
-3.  Cliquez sur **Valeurs par défaut**, puis sur **Obtenir les valeurs à partir d’une requête**.  
+3.  Cliquez sur **Valeurs par défaut** , puis sur **Obtenir les valeurs à partir d’une requête**.  
   
-4.  Dans la liste déroulante **Dataset**, cliquez sur **Stores**.  
+4.  Dans la liste déroulante **Dataset** , cliquez sur **Stores**.  
   
-5.  Dans la liste déroulante **Champ de valeur**, cliquez sur StoreID.  
+5.  Dans la liste déroulante **Champ de valeur** , cliquez sur StoreID.  
   
 6.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)]  
   
 7.  Affichez l'aperçu du rapport.  
   
-Pour *\@StoreID*, la visionneuse de rapports affiche la valeur « Contoso North America Online Store », car il s’agit de la première valeur du jeu de résultats pour le dataset **Stores**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
+Pour *\@StoreID* , la visionneuse de rapports affiche la valeur « Contoso North America Online Store », car il s’agit de la première valeur du jeu de résultats pour le dataset **Stores**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Pour spécifier une valeur par défaut personnalisée  
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *\@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Cliquez sur **Valeurs par défaut** > **Spécifier les valeurs** > **Ajouter**. Une nouvelle ligne de valeurs est ajoutée.  
   
-4.  Dans **Valeur**, tapez **200**.  
+4.  Dans **Valeur** , tapez **200**.  
   
 5.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)] 
   
 6.  Affichez l'aperçu du rapport.  
   
-Pour *\@StoreID*, la visionneuse de rapports affiche « Contoso Catalog Store », car il s’agir du nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
+Pour *\@StoreID* , la visionneuse de rapports affiche « Contoso Catalog Store », car il s’agir du nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
   
 ## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. Rechercher une paire nom/valeur  
 Un dataset peut contenir à la fois l'identificateur et le champ Nom correspondant. Lorsque vous avez seulement un identificateur, vous pouvez rechercher le nom correspondant dans un dataset que vous avez créé et qui inclut des paires nom/valeur.  
@@ -295,7 +295,7 @@ Un dataset peut contenir à la fois l'identificateur et le champ Nom corresponda
   
 3.  Dans le volet Expression, supprimez tout le texte sauf le **signe égal** (=) de début.  
   
-4.  Dans **Catégorie**, développez **Fonctions communes**, puis cliquez sur **Divers**. Le volet Élément affiche un ensemble de fonctions.  
+4.  Dans **Catégorie** , développez **Fonctions communes** , puis cliquez sur **Divers**. Le volet Élément affiche un ensemble de fonctions.  
   
 5.  Dans Élément, double-cliquez sur **Recherche**. Le volet Expression affiche `=Lookup(`. Le volet d'exemple affiche un exemple de syntaxe de recherche.  
   
@@ -345,13 +345,13 @@ Les filtres permettent de contrôler les données à utiliser dans un rapport un
   
 2.  Cliquez avec le bouton droit sur une ligne ou un descripteur d’en-tête de colonne dans la matrice, puis cliquez sur **Propriétés du tableau matriciel**.  
   
-3.  Cliquez sur **Filtres**, puis sur **Ajouter**. Une nouvelle ligne de filtres apparaît.  
+3.  Cliquez sur **Filtres** , puis sur **Ajouter**. Une nouvelle ligne de filtres apparaît.  
   
-4.  Dans la liste déroulante **Expression**,, sélectionnez le champ de dataset StoreID. Le type de données affiche **Entier**. Lorsque la valeur d'expression est un champ de dataset, le type de données est défini automatiquement.  
+4.  Dans la liste déroulante **Expression** ,, sélectionnez le champ de dataset StoreID. Le type de données affiche **Entier**. Lorsque la valeur d'expression est un champ de dataset, le type de données est défini automatiquement.  
   
-5.  Dans **Opérateur**, vérifiez que le **signe égal** (=) est sélectionné.  
+5.  Dans **Opérateur** , vérifiez que le **signe égal** (=) est sélectionné.  
   
-6.  Dans **Valeur**, tapez `[@StoreID]`. 
+6.  Dans **Valeur** , tapez `[@StoreID]`. 
 
     `[@StoreID]` est la syntaxe d’expression simple qui représente `=Parameters!StoreID.Value`.  
   
@@ -361,7 +361,7 @@ Les filtres permettent de contrôler les données à utiliser dans un rapport un
   
     La matrice affiche des données uniquement pour « Contoso Catalog Store ».  
   
-9. Dans la barre d’outils de la visionneuse de rapports, pour **Nom du magasin ?** , sélectionnez **Contoso Asia Online Store**, puis cliquez sur **Afficher le rapport**.  
+9. Dans la barre d’outils de la visionneuse de rapports, pour **Nom du magasin ?** , sélectionnez **Contoso Asia Online Store** , puis cliquez sur **Afficher le rapport**.  
   
 La matrice affiche les données qui correspondent au magasin que vous avez sélectionné.  
   
@@ -372,13 +372,13 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *\@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *\@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Sélectionnez **Autoriser les valeurs multiples**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Dans le volet des données de rapport, développez le dossier **Datasets** , cliquez avec le bouton droit sur **DataSet1**, puis cliquez sur **Requête**.  
+5.  Dans le volet des données de rapport, développez le dossier **Datasets** , cliquez avec le bouton droit sur **DataSet1** , puis cliquez sur **Requête**.  
   
 6.  Remplacez le **signe égal** (=) par **IN** dans la clause [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** dans la dernière ligne de la demande :  
   
@@ -394,7 +394,7 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
 9. Cliquez sur **Filtres**.  
   
-10. Dans **Opérateur**, sélectionnez **In**.  
+10. Dans **Opérateur** , sélectionnez **In**.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -416,32 +416,32 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
     Chaque valeur valide s'affiche en regard d'une case à cocher.  
   
-18. Cliquez sur **Sélectionner tout**, puis sur **Afficher le rapport**.  
+18. Cliquez sur **Sélectionner tout** , puis sur **Afficher le rapport**.  
   
     Le rapport affiche les quantités vendues pour toutes les sous-catégories de tous les magasins.  
   
 19. Dans la liste déroulante, cliquez sur **Sélectionner tout** afin d’effacer la liste, cliquez sur « Contoso Catalog Store » et sur « Contoso Asia Online Store », puis cliquez sur **Afficher le rapport**.  
 
-    ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
+    ![Capture d’écran montrant que vous pouvez sélectionner plusieurs paramètres à ajouter à un rapport.](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
 ## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. Ajouter un paramètre booléen pour la visibilité conditionnelle  
   
 ### <a name="to-add-a-boolean-parameter"></a>Pour ajouter un paramètre booléen  
   
-1.  Dans l’aire de conception, dans le volet des données de rapport, cliquez avec le bouton droit sur **Paramètres**, puis cliquez sur **Add Ajouter un paramètre**.  
+1.  Dans l’aire de conception, dans le volet des données de rapport, cliquez avec le bouton droit sur **Paramètres** , puis cliquez sur **Add Ajouter un paramètre**.  
   
-2.  Dans la zone **Nom**, tapez ShowSelections.  
+2.  Dans la zone **Nom** , tapez ShowSelections.  
   
-3.  Dans **Invite**, tapez Afficher les sélections ?  
+3.  Dans **Invite** , tapez Afficher les sélections ?  
   
-4.  Dans **Type de données**, cliquez sur **Booléen**.  
+4.  Dans **Type de données** , cliquez sur **Booléen**.  
   
 5.  Cliquez sur **Valeurs par défaut**.  
   
-6.  Cliquez sur **Spécifier les valeurs**, puis sur **Ajouter**.  
+6.  Cliquez sur **Spécifier les valeurs** , puis sur **Ajouter**.  
   
-7.  Dans la zone **Valeur**, tapez **False**.  
+7.  Dans la zone **Valeur** , tapez **False**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -451,7 +451,7 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
 2.  Cliquez sur **Visibilité**.  
   
-3.  Sélectionnez l’option **Afficher ou masquer en fonction d’une expression**, puis cliquez sur le bouton Expression **Fx**.  
+3.  Sélectionnez l’option **Afficher ou masquer en fonction d’une expression** , puis cliquez sur le bouton Expression **Fx**.  
   
 4.  Tapez l’expression suivante : `=Not Parameters!ShowSelections.Value`  
   
@@ -465,7 +465,7 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
     La zone de texte qui affiche les choix de paramètre dans le pied de page ne s’affiche pas.  
   
-8.  Dans la barre d’outils de la visionneuse de rapports, en regard de **Afficher les sélections**, cliquez sur **Vrai** > **Afficher le rapport**.  
+8.  Dans la barre d’outils de la visionneuse de rapports, en regard de **Afficher les sélections** , cliquez sur **Vrai** > **Afficher le rapport**.  
   
     La zone de texte située dans le pied de page apparaît, montrant tous les noms de magasins que vous avez sélectionnés.  
   
@@ -489,9 +489,9 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-    Le message **Connexion au serveur de rapports**s’affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+    Le message **Connexion au serveur de rapports** s’affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
-4.  Dans la zone **Nom**, remplacez le nom par défaut par État des ventes paramétrable.  
+4.  Dans la zone **Nom** , remplacez le nom par défaut par État des ventes paramétrable.  
   
 5.  Cliquez sur **Enregistrer**.  
   

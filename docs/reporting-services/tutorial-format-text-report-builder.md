@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 833efefc3cf79e6a4939a46e15fd80acb493f541
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248118"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243800"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutoriel : Mettre en forme du texte (Générateur de rapports)
 
@@ -22,7 +22,7 @@ Dans ce didacticiel, vous allez vous entraîner à mettre en forme le texte de p
 
 Après avoir configuré le rapport vierge avec la source de données et le dataset, vous pouvez choisir les formats que vous souhaitez explorer. L'illustration suivante montre un rapport similaire à celui que vous allez créer.  
   
-![report-build-format-report](../reporting-services/media/report-build-format-report.png) 
+![Capture d’écran d’un rapport du générateur de rapports mis en forme.](../reporting-services/media/report-build-format-report.png) 
   
 Dans une étape, vous allez sciemment générer une erreur afin de voir pourquoi il s'agit d'une erreur. Vous corrigerez ensuite l'erreur pour obtenir l'effet souhaité.  
     
@@ -39,7 +39,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
  
 2.  Dans le volet gauche de la boîte de dialogue **Mise en route** , assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -51,14 +51,14 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 
     Si le volet **Données du rapport** n’est pas visible, cochez **Données du rapport** sous l’onglet **Affichage**.
   
-2.  Dans la zone **Nom**, tapez : **TextDataSource**  
+2.  Dans la zone **Nom** , tapez : **TextDataSource**  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
 4.  Vérifiez que le type de connexion est bien Microsoft SQL Server puis, dans la zone **Chaîne de connexion** , tapez : `Data Source = <servername>`  
   
     > [!NOTE]  
-    > L’expression `<servername>`, par exemple Rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Ce didacticiel n’a pas besoin de données spécifiques. Il a juste besoin d’une connexion à une base de données SQL Server. Si une connexion à une source de données est déjà répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à la procédure suivante, « Pour créer un dataset ». Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > L’expression `<servername>`, par exemple Rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Ce didacticiel n’a pas besoin de données spécifiques. Il a juste besoin d’une connexion à une base de données SQL Server. Si une connexion à une source de données est déjà répertoriée sous **Connexions à la source de données** , vous pouvez la sélectionner et passer à la procédure suivante, « Pour créer un dataset ». Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -68,7 +68,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 2.  Vérifiez que la source de données est **TextDataSource**.  
   
-3.  Dans la zone **Nom**, tapez : **TextDataset.**  
+3.  Dans la zone **Nom** , tapez : **TextDataset.**  
   
 4.  Vérifiez que le type de requête **Texte** est sélectionné, puis cliquez sur **Concepteur de requêtes**.  
   
@@ -131,13 +131,13 @@ Si vous souhaitez qu'un champ de votre dataset apparaisse dans un rapport, votre
   
 2.  Cliquez sur **Exécuter**.  
   
-    Un seul enregistrement, **Fernando Ross**, est visible. Il correspond au premier enregistrement de la requête dans l’ordre alphabétique. Le champ ne se répète pas pour afficher les autres enregistrements.  
+    Un seul enregistrement, **Fernando Ross** , est visible. Il correspond au premier enregistrement de la requête dans l’ordre alphabétique. Le champ ne se répète pas pour afficher les autres enregistrements.  
   
 3.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
 4.  Sélectionnez l’expression `<Expr>` dans la zone de texte.  
   
-5.  Dans le volet Propriétés, les éléments suivants sont affichés pour la propriété **Valeur** (si le volet Propriétés n’est pas affiché, sous l’onglet **Affichage** , cochez **Propriétés**) :  
+5.  Dans le volet Propriétés, les éléments suivants sont affichés pour la propriété **Valeur** (si le volet Propriétés n’est pas affiché, sous l’onglet **Affichage** , cochez **Propriétés** ) :  
   
     ```  
     =First(Fields!FullName.Value, "TextDataSet")  
@@ -178,13 +178,13 @@ Si vous souhaitez qu'un champ de votre dataset apparaisse dans un rapport, votre
 ## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Ajouter un tableau à l'aire de conception du rapport  
 Créez ce tableau dans lequel vous pourrez placer les liens hypertexte et le texte pivoté.   
   
-1.  Sous l’onglet **Insertion** > **Table** > **Assistant Tableau**.  
+1.  Sous l’onglet **Insertion**  > **Table** > **Assistant Tableau**.  
   
 2.  Dans la page **Choisir un dataset** de l’Assistant Nouveau tableau ou nouvelle matrice, cliquez sur **Choisir un dataset existant dans ce rapport ou un dataset partagé** > **TextDataset (dans ce rapport)** > **Suivant**.  
   
-3.  Dans la page **Organiser les champs** , faites glisser les champs **Territory**, **LinkText**et **Product** vers **Groupes de lignes**, faites glisser le champ **Sales** vers **Valeurs**, puis cliquez sur **Suivant**.  
+3.  Dans la page **Organiser les champs** , faites glisser les champs **Territory** , **LinkText** et **Product** vers **Groupes de lignes** , faites glisser le champ **Sales** vers **Valeurs** , puis cliquez sur **Suivant**.  
 
-    ![report-builder-text-arrange-fields](../reporting-services/media/report-builder-text-arrange-fields.png)
+    ![Capture d’écran montrant comment organiser les champs de texte dans le générateur de rapports.](../reporting-services/media/report-builder-text-arrange-fields.png)
   
 4.  Dans la page **Choisir la disposition** , décochez la case **Développer/réduire les groupes** pour voir le tableau entier, puis cliquez sur **Suivant**. 
   
@@ -194,7 +194,7 @@ Créez ce tableau dans lequel vous pourrez placer les liens hypertexte et le tex
   
     Le tableau semble parfait, mais il contient deux lignes de total. La colonne **LinkText** n’a pas besoin de ligne Total.  
     
-    ![report-builder-format-2-totals](../reporting-services/media/report-builder-format-2-totals.png)
+    ![Capture d’écran montrant deux totaux dans le rapport du générateur de rapports.](../reporting-services/media/report-builder-format-2-totals.png)
   
 8.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
@@ -202,13 +202,13 @@ Créez ce tableau dans lequel vous pourrez placer les liens hypertexte et le tex
   
 11. Ces trois cellules étant sélectionnées, cliquez avec le bouton droit sur l’une d’elles et cliquez sur **Supprimer la ligne**.  
 
-    ![report-builder-format-delete-rows](../reporting-services/media/report-builder-format-delete-rows.png)
+    ![Capture d’écran montrant comment supprimer des lignes d’un rapport du générateur de rapports.](../reporting-services/media/report-builder-format-delete-rows.png)
   
 12. Cliquez sur **Exécuter**.  
 
     Il n’y a maintenant qu’une seule ligne Total.
     
-    ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
+    ![Capture d’écran montrant un total dans le rapport du générateur de rapports.](../reporting-services/media/report-builder-format-one-total.png)
   
 ## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Ajouter un lien hypertexte au rapport  
 Dans cette section, vous allez ajouter un lien hypertexte au texte du tableau de la section précédente.  
@@ -225,13 +225,13 @@ Dans cette section, vous allez ajouter un lien hypertexte au texte du tableau de
   
 7.  Sélectionnez `[LinkText]`.  
   
-8.  Sous l’onglet **Accueil** > **Police**, sélectionnez **Souligné**, puis affectez la valeur **Bleu** à **Couleur**.  
+8.  Sous l’onglet **Accueil**  > **Police** , sélectionnez **Souligné** , puis affectez la valeur **Bleu** à **Couleur**.  
   
 9. Cliquez sur **Exécuter**.  
   
     Le texte a maintenant l'apparence d'un lien.  
     
-    ![report-builder-format-hyperlink](../reporting-services/media/report-builder-format-hyperlink.png)
+    ![Capture d’écran montrant le texte d’un lien hypertexte dans le rapport du générateur de rapports.](../reporting-services/media/report-builder-format-hyperlink.png)
   
 10. Cliquez sur un lien. Si l'ordinateur est connecté à Internet, un navigateur s'ouvre sur une rubrique d'aide du Générateur de rapports.  
   
@@ -251,15 +251,15 @@ Dans cette section, vous allez faire pivoter une partie du texte du tableau des 
     > [!NOTE]  
     > Quand les propriétés du volet Propriétés sont organisées en catégories, WritingMode figure dans la catégorie **Localisation** . Assurez-vous que vous avez sélectionné la cellule et non le texte. WritingMode est une propriété de la zone de texte, pas du texte.  
 
-    ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+    ![Capture d’écran du champ Territory dans le rapport du générateur de rapports.](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  Sous l’onglet **Accueil** > section **Paragraphe**, sélectionnez **Milieu** et **Centre** pour centrer verticalement et horizontalement le texte dans la cellule.  
+6.  Sous l’onglet **Accueil**  > section **Paragraphe** , sélectionnez **Milieu** et **Centre** pour centrer verticalement et horizontalement le texte dans la cellule.  
   
 8.  Cliquez sur Exécuter ( **!** ).  
   
 Le texte de la cellule `[Territory]` s'exécute maintenant verticalement de bas en haut des cellules.  
 
-![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
+![Capture d’écran montrant les valeurs de Territory pivotées de 270 degrés.](../reporting-services/media/report-builder-format-rotate-270.png)
 
 ## <a name="format-currency"></a><a name="FormatCurrency"></a>Mettre en forme la devise  
   
@@ -267,11 +267,11 @@ Le texte de la cellule `[Territory]` s'exécute maintenant verticalement de bas 
   
 2.  Cliquez sur la cellule supérieure du tableau contenant `[Sum(Sales)]`, maintenez la touche Maj enfoncée et cliquez sur la cellule inférieure du tableau contenant `[Sum(Sales)]`.  
   
-3.  Sous l’onglet **Accueil** > groupe **Nombre** > bouton **Devise**.  
+3.  Sous l’onglet **Accueil**  > groupe **Nombre**  > bouton **Devise**.  
   
-4.  (Facultatif)     Si votre paramètre régional est Anglais (États-Unis), l’exemple de texte par défaut est [ **$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+4.  (Facultatif)     Si votre paramètre régional est Anglais (États-Unis), l’exemple de texte par défaut est [ **$12,345.00** ]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
 
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![Capture d’écran de l’option Exemples de valeurs dans le générateur de rapports.](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (Facultatif) Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher les valeurs en dollars sans indication de centimes.  
   
@@ -279,13 +279,13 @@ Le texte de la cellule `[Territory]` s'exécute maintenant verticalement de bas 
   
 Le rapport affiche maintenant les données mises en forme et est plus facile à lire.  
 
-![report-build-format-report](../reporting-services/media/report-build-format-report.png)
+![Capture d’écran montrant le rapport du générateur de rapports remis en forme.](../reporting-services/media/report-build-format-report.png)
     
 ## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Afficher le texte avec la mise en forme HTML  
   
 1.  Cliquez sur **Conception** pour basculer en mode Conception.  
   
-2.  Sous l’onglet **Insertion** , cliquez sur **Zone de texte**, puis sur l’aire de conception, cliquez et faites glisser la souris pour créer une zone de texte sous le tableau d’environ 10 cm de large sur 8 cm de haut.  
+2.  Sous l’onglet **Insertion** , cliquez sur **Zone de texte** , puis sur l’aire de conception, cliquez et faites glisser la souris pour créer une zone de texte sous le tableau d’environ 10 cm de large sur 8 cm de haut.  
   
 3.  Copiez le texte suivant et collez-le dans la zone de texte :  
   
@@ -313,7 +313,7 @@ Le rapport affiche maintenant les données mises en forme et est plus facile à 
   
     Il s'agit d'une propriété du texte, pas de la zone de texte. Ainsi, une zone de texte peut contenir à la fois du texte brut et du texte qui utilise des balises HTML comme styles.  
   
-6.  Sous l’onglet **Général** , sous **Type de balise**, cliquez sur **HTML - Interpréter les balises HTML comme des styles**.  
+6.  Sous l’onglet **Général** , sous **Type de balise** , cliquez sur **HTML - Interpréter les balises HTML comme des styles**.  
   
 7.  Cliquez sur **OK**.  
   
@@ -321,7 +321,7 @@ Le rapport affiche maintenant les données mises en forme et est plus facile à 
   
 Le texte de la zone de texte est affiché sous forme de titre, paragraphe et liste à puce.  
   
-![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
+![Capture d’écran montrant le texte mis en forme dans un rapport du générateur de rapports.](../reporting-services/media/report-builder-format-html.png)
 
 ## <a name="save-the-report"></a><a name="Save"></a>Enregistrer le rapport  
 Vous pouvez enregistrer les rapports sur un serveur de rapports, dans une bibliothèque SharePoint ou sur l'ordinateur.  
@@ -338,7 +338,7 @@ Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous 
   
     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
-4.  Dans **Nom**, remplacez le nom par défaut par un nom de votre choix.
+4.  Dans **Nom** , remplacez le nom par défaut par un nom de votre choix.
 
 5.  Cliquez sur **Enregistrer**.  
   
@@ -348,9 +348,9 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
-2.  Cliquez sur **Bureau**, **Mes documents**ou **Poste de travail**, puis naviguez jusqu'au dossier où vous souhaitez enregistrer le rapport.  
+2.  Cliquez sur **Bureau** , **Mes documents** ou **Poste de travail** , puis naviguez jusqu'au dossier où vous souhaitez enregistrer le rapport.  
   
-3.  Dans **Nom**, remplacez le nom par défaut par un nom de votre choix. 
+3.  Dans **Nom** , remplacez le nom par défaut par un nom de votre choix. 
   
 4.  Cliquez sur **Enregistrer**.  
 

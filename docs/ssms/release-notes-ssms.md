@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/27/2020
-ms.openlocfilehash: ce232d98e441d6ce217a2f97f6b8b1b5e130b7f3
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: fbfe0f98d5a61033bdc17e7c974e3859814ce4cc
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734645"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364781"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notes de publication de SQL Server Management Studio (SSMS)
 
@@ -123,7 +123,7 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 | Analysis Services | Correction d’un problème qui a pu générer une erreur lors de la tentative de connexion à SSAS via msmdpump.dll. Consultez [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). |
 | Sauvegarde/restauration | Correction d’un problème où la sélection de l’option « Afficher les propriétés de connexion » générait une erreur SMO sur l’accessoire HostDistribution manquant pour SQL 2016 et versions antérieures. |
 | Concepteur de bases de données | Correction d’un problème qui provoquait un incident SSMS lors du traitement des nombres décimaux. |
-| Diagrammes de base de données | Correction d’un problème qui pouvait provoquer un incident ou la suspension du SSMS lors de l’utilisation de schémas de bases de données où la boîte de dialogue « Ajouter une table » n’a pas été correctement affichée. |
+| Diagrammes de base de données | Correction d’un problème dans lequel SSMS se plantait ou cessait de répondre lors de l’utilisation de diagrammes de base de données où la boîte de dialogue « Ajouter une table » n’était pas été correctement affichée. |
 | Mise en miroir de bases de données | Correction d’un problème qui provoquait l’échec de la configuration du miroir. Consultez [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281). |
 | SSMS général | Correction d’un problème lié à la tentative de connexion à une base de données SQL Azure, qui peut prendre plusieurs secondes (connexion SQL dans une base de données utilisateur). |
 | SSMS général | Correction d’un problème où SSMS ne gère/n’affiche pas les blocages capturés (fichiers .xdl). |
@@ -164,7 +164,7 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 
 ### <a name="186"></a>18.6
 
-![télécharger](media/download-icon.png) [Télécharger SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2146265)
+![télécharger](media/download-icon.png) [Télécharger SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Numéro de version : 18.6
 - Numéro de build : 15.0.18338.0
@@ -276,7 +276,7 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 | SMO/Création de scripts | Nouvelle propriété DwMaterializedViewDistribution ajoutée à l’objet Affichage. |
 | SMO/Création de scripts | Suppression de la prise en charge des *restriction des fonctionnalités* (cette fonctionnalité en préversion a été supprimée dans SQL Azure et SQL local). |
 | SMO/Création de scripts | Ajout de *Notebook* en tant que destination de l’Assistant Générer des scripts. |
-| SMO/Création de scripts | Ajout de la prise en charge de *SQL à la demande* . |
+| SMO/Création de scripts | Ajout de la prise en charge de *SQL à la demande*. |
 | SMO/Création de scripts | [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Les champs Plateforme, Nom et engineEdition peuvent désormais contenir des listes séparées par des virgules ( *Plateforme* ) habituelles : \[*Windows* , *Linux*\]), pas seulement les expressions régulières ( *Plateforme* : *\/Windows\|Linux\/* )
 | SMO/Création de scripts | [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md) : ajout de 13 règles d’évaluation. Pour plus d’informations, accédez à [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api)). |
 
@@ -284,7 +284,7 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 
 | Nouvel élément | Détails |
 |----------|---------|
-| Accessibilité | SSIS ADF/nouvelle planification : résolution d’un problème où l’ordre du focus n’est pas logique dans le mode d’analyse du narrateur sous l’Assistant *Nouvelle planification* . |
+| Accessibilité | SSIS ADF/nouvelle planification : résolution d’un problème où l’ordre du focus n’est pas logique dans le mode d’analyse du narrateur sous l’Assistant *Nouvelle planification*. |
 | Accessibilité | Assistant Stretch Database : correction d’un problème où le lecteur d’écran n’indique pas le nom de la table de requête lors de la fourniture d’informations sur la table. |
 | Analysis Services | Correction de la connexion mise en cache lors de l’écriture de scripts dans AS avec la connexion Azure AD. |
 | Always On | Correction d’un problème où la première base de données ajoutée à Always On AG ne se joint pas correctement.
@@ -303,12 +303,12 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 | SSMS général | Correction des modèles *Nouvelle table externe...* et *Nouvelle source de données externe...* pour SQL On Demand. |
 | SSMS général | Corrections des propriétés de base de données, propriétés de connexion, masquage de rapports et changement de nom pour SQL On Demand. |
 | SSMS général | Always Encrypted : Correction d’un problème où la liste déroulante du nom de clé devient en lecture seule lors de la sélection d’une nouvelle clé d’enclave. |
-| SSMS général | Nettoyage de la grille *Options de propriété de base de données* , qui affichait deux *catégories diverses* . |
+| SSMS général | Nettoyage de la grille *Options de propriété de base de données* , qui affichait deux *catégories diverses*. |
 | SSMS général | Correction d’un problème où la barre de défilement démarrait du milieu dans la grille « Options de propriétés de base de données ». |
 | SSMS général | Correction d’un problème qui provoquait le blocage de SSMS lors de l’ouverture d’un fichier .sql lors de la connexion au serveur Analysis Services. |
 | SSMS général | Boîte de dialogue de connexion : correction d’un problème où le fait de décocher l’option « Se souvenir du mot de passe » ne fonctionne pas. |
 | SSMS général | Correction d’un problème où les informations d’identification associées au serveur/aux utilisateurs sont toujours mémorisées. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37875172). |
-| SSMS général | Correction du problème où les fenêtres de l’éditeur n’étaient parfois pas correctement actualisées. Pour ce faire, il suffit de désactiver l’accélération matérielle dans *Outils > Options > Environnement* . Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37474042). |
+| SSMS général | Correction du problème où les fenêtres de l’éditeur n’étaient parfois pas correctement actualisées. Pour ce faire, il suffit de désactiver l’accélération matérielle dans *Outils > Options > Environnement*. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37474042). |
 | SSMS général | Correction d’un problème où l’authentification Azure Active Directory ne fonctionnait pas via un proxy. |
 | Résolutions élevées/mise à l’échelle | Correction d’un problème où les contrôles sur les *propriétés d’index* pouvaient être restitués de manière incorrecte (boutons chevauchant la grille). Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/36030424). |
 | Résolutions élevées/mise à l’échelle | Correction de plusieurs problèmes dans la boîte de dialogue *Propriétés de la base de données* , qui peut afficher des contrôles tronqués sur des écrans 4K. |
@@ -323,7 +323,7 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 | Interface utilisateur du magasin de requêtes | Correction du calcul du nombre d’exécutions dans un rapport TRC (pour la métrique *temps d’attente* ) comme la somme du nombre d’exécutions pour chaque catégorie d’attente individuelle, ce qui est incorrect. Toutefois, pour une seule exécution de requête, cela sera enregistré pour chacune des catégories d’attente attendues par la requête. Par conséquent, si TRC effectue simplement une somme sur la catégorie d’attente, le nombre d’exécutions augmente. En fait, il doit s’agir de la valeur maximale de wait_category. |
 | Interface utilisateur du magasin de requêtes | Correction de la vue détaillée de TRC qui retourne des données incorrectes lorsque le jeu de résultats est filtré sur le x supérieur. Cela se produit parce que la requête utilise plusieurs expressions de table communes, qui sont ensuite jointes pour créer le jeu de résultats final. Si le x supérieur fait l’objet d’un envoi push dans CTE, il peut parfois filtrer les lignes requises. Cela peut parfois rendre le jeu de résultats non déterministe. Le correctif consiste à ne pas envoyer la clause x supérieur aux CTE. |
 | Interface utilisateur du magasin de requêtes | Correction du résumé du plan dans la vue grille ou dans la vue graphique qui a besoin du temps d’attente d’exécution de la dernière requête. L’absence de cette colonne rompt la requête. Cet ensemble de modifications ajoutera cette colonne à la CTE des statistiques d’attente. |
-| ShowPlan | Amélioration de la façon dont SSMS affiche le nombre de lignes estimé pour les opérateurs avec plusieurs exécutions : (1) Remplacement de *Nombre de lignes estimé* dans SSMS par « Nombre de lignes estimé par exécution » ; (2) Ajout d’une nouvelle propriété *Nombre de lignes estimé pour toutes les éxecutions*  ; (3) Remplacement de la propriété *Nombre réel de lignes* par *Nombre réel de lignes pour toutes les exécutions* . |
+| ShowPlan | Amélioration de la façon dont SSMS affiche le nombre de lignes estimé pour les opérateurs avec plusieurs exécutions : (1) Remplacement de *Nombre de lignes estimé* dans SSMS par « Nombre de lignes estimé par exécution » ; (2) Ajout d’une nouvelle propriété *Nombre de lignes estimé pour toutes les éxecutions*  ; (3) Remplacement de la propriété *Nombre réel de lignes* par *Nombre réel de lignes pour toutes les exécutions*. |
 | SQL Agent | Correction d’un problème où la tentative de modification d’une étape de travail SQL Agent pouvant entraîner le gel de l’interface utilisateur de SSMS. SSMS autorise désormais l’affichage (bouton *Afficher* ) d’un output_file dont le nom est sous forme de jeton (au moins pour les macros/jetons simples pris en charge par SQL Agent qui ne sont pas déterminés au moment de l’exécution). En outre, SSMS ne désactive pas le bouton « Afficher » lorsque l’utilisateur n’a pas accès au fichier (en ce qui concerne les autorisations SQL). Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/39063124). |
 | SQL Agent | Correction de l’ordre des onglets sur la page Étape du travail. |
 | SQL Agent | Inversion de la position des boutons « Suivant » et « Précédent » sur la page Étape du travail pour les placer dans un ordre logique. |
@@ -343,7 +343,7 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 
 - Le diagramme de base de données créé à partir de SSMS s’exécutant sur une machine A ne peut pas être modifié sur la machine B (SSMS se plante). Voir [Commentaires des utilisateurs sur SQL Server 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649) pour plus de détails.
 
-- Lorsque vous importez ou exportez des packages dans Integration Services ou exportez des packages dans Azure-SSIS Integration Runtime, des scripts sont perdus pour les packages contenant des tâches/composants de script. Une solution de contournement consiste à supprimer le dossier *C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild* .
+- Lorsque vous importez ou exportez des packages dans Integration Services ou exportez des packages dans Azure-SSIS Integration Runtime, des scripts sont perdus pour les packages contenant des tâches/composants de script. Une solution de contournement consiste à supprimer le dossier *C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild*.
 
 - La boîte de dialogue Nouvelle spécification de l’audit du serveur peut provoquer le blocage de SSMS avec une erreur de violation d’accès.
 
@@ -366,9 +366,9 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 | Classification des données | Ajout de la prise en charge d’une stratégie de protection des informations personnalisée pour la classification des données. |
 | Magasin des requêtes | Ajout de la valeur *Plan max par requête* dans les propriétés de la boîte de dialogue. |
 | Magasin des requêtes | Ajout de la prise en charge des nouvelles stratégies de capture personnalisées. |
-| Magasin des requêtes | Ajout du **Mode de capture des statistiques d’attente** aux options **Propriétés de base de données** du **Magasin des requêtes** . |
+| Magasin des requêtes | Ajout du **Mode de capture des statistiques d’attente** aux options **Propriétés de base de données** du **Magasin des requêtes**. |
 | SMO/Création de scripts | Prise en charge du script de vue matérialisée dans SQL DW. |
-| SMO/Création de scripts | Ajout de la prise en charge de *SQL à la demande* . |
+| SMO/Création de scripts | Ajout de la prise en charge de *SQL à la demande*. |
 | SMO/Création de scripts | [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md) : ajout de 50 règles d’évaluation (détails sur GitHub). |
 | SMO/Création de scripts | [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md) : ajout d’expressions mathématiques de base et de comparaisons aux conditions des règles. |
 | SMO/Création de scripts | [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md) : ajout de la prise en charge de l’objet RegisteredServer. |
@@ -384,7 +384,7 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 |----------|---------|
 | Analysis Services | Résolution d’un problème où l’éditeur de script DAX pour les bases de données multidimensionnelles n’affichait pas les tables dans IntelliSense. |
 | Analysis Services | Utilisez l’analyseur DAX pour effectuer la conversion en chaîne de moteur. Ceci concerne les séparateurs internationaux, les décimales et les espaces blancs. |
-| Always Encrypted | Résolution d’un problème où la *validation des revendications* n’était pas *insensible à la casse* . |
+| Always Encrypted | Résolution d’un problème où la *validation des revendications* n’était pas *insensible à la casse*. |
 | Always Encrypted | Résolution d’un problème où le rapport d’erreurs/d’avertissements ne fonctionnait pas correctement. |
 | Assistant Copie de base de données | Correction des erreurs de troncation et de disposition assorties dans le rendu de cette boîte de dialogue. |
 | SSMS général | Résolution d’un problème en suspens depuis longtemps où SSMS n’honorait pas les informations de connexion passées à la ligne de commande quand des fichiers SQL étaient également spécifiés. |
@@ -402,7 +402,7 @@ SSMS 18.7 est la dernière version en disponibilité générale de SSMS. Si vou
 
 - Le diagramme de base de données créé à partir de SSMS s’exécutant sur une machine A ne peut pas être modifié sur la machine B (SSMS se plante). Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37992649) pour plus de détails.
 
-- Il y a des problèmes de regénération du dessin lors du basculement d’une fenêtre de requête vers une autre. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37474042) pour plus de détails. Pour contourner ce problème, vous pouvez désactiver l’accélération matérielle sous *Outils > Options* .
+- Il y a des problèmes de regénération du dessin lors du basculement d’une fenêtre de requête vers une autre. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37474042) pour plus de détails. Pour contourner ce problème, vous pouvez désactiver l’accélération matérielle sous *Outils > Options*.
 
 Pour connaître les autres problèmes connus et pour envoyer vos commentaires à l’équipe produit, accédez à [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server).
 
@@ -442,14 +442,14 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | SSMS général | Correction d’un problème où la langue par défaut pour toutes les connexions était affichée en arabe. </br></br> Voir l’article Commentaires des utilisateurs sur SQL Server pour plus de détails : [SSMS 18.2 default language display bug](https://feedback.azure.com/forums/908035/suggestions/38236363). |
 | SSMS général | Correction du problème d’affichage difficile de la boîte de dialogue *Options de requête* (quand l’utilisateur clique avec le bouton droit sur la fenêtre de l’éditeur T-SQL) en la rendant redimensionnable.|
 | SSMS général | Le message *Heure de fin* visible dans la grille ou le fichier de résultats (introduit dans SSMS 18.2) peut désormais être configuré sous Outils > Options > Exécution de la requête > SQL Server > Avancé > Afficher l’heure de complétion. |
-| SSMS général | Dans la boîte de dialogue de connexion, *Active Directory - Mot de passe* and *Active Directory - Intégré* ont été respectivement remplacés par *Azure Active Directory - Mot de passe*  and *Azure Active Directory - Intégré* . |
+| SSMS général | Dans la boîte de dialogue de connexion, *Active Directory - Mot de passe* and *Active Directory - Intégré* ont été respectivement remplacés par *Azure Active Directory - Mot de passe*  and *Azure Active Directory - Intégré*. |
 | SSMS général | Correction d’un problème qui empêche les utilisateurs de pouvoir utiliser SSMS pour configurer l’audit sur Azure SQL - Instances managées quand elles se trouvent dans un fuseau horaire avec un décalage UTC négatif. |
 | SSMS général | Résolution d’un problème dans l’interface utilisateur XEvent où le pointage sur la grille entraînait la sélection de lignes. </br></br> Voir l’article Commentaires des utilisateurs sur SQL Server pour plus de détails : [SSMS Extended Events UI Selects Actions on Hover](https://feedback.azure.com/forums/908035/suggestions/38262124). |
 | Importer un fichier plat | Correction du problème où Importer un fichier plat n’importait pas toutes les données en permettant à l’utilisateur de choisir entre une détection du type de données simple ou riche.</br></br> Voir l’article Commentaires des utilisateurs sur SQL Server pour plus de détails : [SSMS Import Flat File fails to import all data](https://feedback.azure.com/forums/908035/suggestions/38096989). |
 | Integration Services | Ajout d’un nouveau type d’opération *StartNonCatalogExecution* pour le rapport des opérations de SSIS.|
 | Integration Services | Correction d’un problème dans les pipelines Azure Data Factory générés par l’utilitaire `DTExec` compatible Azure pour utiliser le type de paramètre correct. (explicite pour 18.3.1) |
 | SMO/Création de scripts | Correction d’un problème, provoquant la levée d’erreurs par SMO lors de l’extraction des propriétés quand **SMO.Server.SetDefaultInitFields(true)** était utilisé.|
-| Interface utilisateur du magasin de requêtes | Résolution d’un problème où l’axe des Y ne se mettait pas à l’échelle quand la métrique *Nombre d’exécutions* était sélectionnée dans la vue *Requête suivie* . |
+| Interface utilisateur du magasin de requêtes | Résolution d’un problème où l’axe des Y ne se mettait pas à l’échelle quand la métrique *Nombre d’exécutions* était sélectionnée dans la vue *Requête suivie*. |
 | Évaluation des vulnérabilités | Désactivation de l’effacement et de l’approbation de la base de référence pour les bases de données Azure SQL Database.|
 
 #### <a name="known-issues-1831"></a>Problèmes connus (18.3.1)
@@ -481,7 +481,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | Exécution ou résultats des requêtes | Ajout d’un *délai d’achèvement* dans les messages à suivre lorsque l’exécution d’une requête donnée est terminée. |
 | Exécution ou résultats des requêtes | Permet d’afficher plus de données (Résultats dans du texte) et d’en stocker davantage dans des cellules (Résultats dans des grilles). SSMS autorise désormais jusqu’à 2 millions de caractères pour ces deux options (auparavant, les limites étaient fixées à 256 000 caractères pour l’affichage et à 64 000 caractères pour le stockage dans des grilles). Cela règle également le problème des utilisateurs qui ne parvenaient pas à extraire plus de 43 680 caractères des cellules d’une grille. |
 | ShowPlan | Ajout d’un nouvel attribut dans QueryPlan quand la [fonctionnalité UDF scalaire Inline](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) est activée (ContainsInlineScalarTsqludfs). |
-| SMO | Ajout de la prise en charge de l’ *API SQL Assessment* . Pour plus d’informations, consultez [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
+| SMO | Ajout de la prise en charge de l’ *API SQL Assessment*. Pour plus d’informations, consultez [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
 |  |  |
 
 #### <a name="bug-fixes-in-182"></a>Correctifs de bogues dans la version 18.2
@@ -524,13 +524,13 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 
 - Un diagramme de base de données créé à partir d’une instance SSMS exécutée sur une machine A ne peut pas être modifié sur la machine B (car cela entraînerait le plantage de SSMS). Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37992649) pour plus de détails.
 
-- Il y a des problèmes de regénération du dessin lors du basculement d’une fenêtre de requête vers une autre. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37474042). Pour contourner ce problème, vous pouvez désactiver l’accélération matérielle sous **Outils** > **Options** .
+- Il y a des problèmes de regénération du dessin lors du basculement d’une fenêtre de requête vers une autre. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37474042). Pour contourner ce problème, vous pouvez désactiver l’accélération matérielle sous **Outils** > **Options**.
 
 - La taille des données affichées dans les résultats de SSMS au format grille, texte ou fichier est limitée.
 
 - Il y a un problème lié à la réception d’une erreur lors de la suppression d’une base de données SQL Azure dans l’Explorateur d’objets, alors que cette opération s’effectue correctement.
 
-- La boîte de dialogue Propriétés de la connexion peut indiquer que la langue par défaut pour les connexions SQL est l’arabe, quelle que soit la langue par défaut réelle définie pour la connexion. Pour afficher la langue par défaut réelle pour une connexion donnée, utilisez T-SQL afin de sélectionner la valeur **default_language_name** de la connexion dans **master.sys.server_principles** .
+- La boîte de dialogue Propriétés de la connexion peut indiquer que la langue par défaut pour les connexions SQL est l’arabe, quelle que soit la langue par défaut réelle définie pour la connexion. Pour afficher la langue par défaut réelle pour une connexion donnée, utilisez T-SQL afin de sélectionner la valeur **default_language_name** de la connexion dans **master.sys.server_principles**.
 
 ### <a name="181"></a>18.1
 
@@ -568,7 +568,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | SSMS général | Correction d’un problème lié au fait que SSMS ne respectait pas les paramètres d’aide (en ligne/hors connexion). |
 | Haute résolution | Correction de la disposition des contrôles dans les boîtes de dialogue d’erreur pour les options de requête non prises en charge. |
 | Haute résolution | Correction de la disposition des contrôles dans la page *Nouveau groupe de disponibilité* sur certaines versions localisées de SSMS. |
-| Haute résolution | Correction de la disposition de la page *Nouvelle planification du travail* . Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37632094) pour plus de détails. |
+| Haute résolution | Correction de la disposition de la page *Nouvelle planification du travail*. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37632094) pour plus de détails. |
 | Importer un fichier plat | Correction d’un problème pouvant entraîner la perte silencieuse de lignes durant l’importation.|
 | IntelliSense/éditeur | Réduction du trafic de requêtes basées sur SMO vers Azure SQL Database pour IntelliSense. |
 | IntelliSense/éditeur | Correction d’une erreur grammaticale dans l’info-bulle affichée lors de la saisie de T-SQL pour créer un utilisateur. Correction également du message d’erreur pour lever l’ambiguïté entre les utilisateurs et les connexions. |
@@ -583,7 +583,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | ShowPlan | Ajout d’un nouvel élément du plan d’exécution de requêtes *SpillOccurred* au schéma du plan d’exécution de requêtes. |
 | ShowPlan | Ajout de lectures à distance ( *ActualPageServerReads* , *ActualPageServerReadAheads* , *ActualLobPageServerReads* , *ActualLobPageServerReadAheads* ) au schéma du plan d’exécution. |
 | SMO/création de scripts | Évitez d’interroger les contraintes d’arête durant la création de scripts pour les tables non graphiques. |
-| SMO/création de scripts | Suppression de la contrainte sur la classification de sensibilité lors de la création de scripts de colonnes avec la *classification des données* . |
+| SMO/création de scripts | Suppression de la contrainte sur la classification de sensibilité lors de la création de scripts de colonnes avec la *classification des données*. |
 | SMO/création de scripts | Correction d’un problème entraînant l’échec de « Générer un script » sur une table de graphe durant la génération de données. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898466) pour plus de détails. |
 | SMO/création de scripts | Correction d’un problème empêchant à la méthode EnumObjects() de récupérer le nom de schéma d’un synonyme. |
 | SMO/création de scripts | Correction d’un problème dans UIConnectionInfo.LoadFromStream() empêchant la lecture de la section *AdvancedOptions* (quand un mot de passe n’est pas spécifié). |
@@ -637,7 +637,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Les ID de package ne sont plus nécessaires pour développer des extensions SSMS| Avant, SSMS chargeait de façon sélective uniquement les packages connus, ce qui contraignait les développeurs à inscrire leur propre package. Cela n’est plus le cas.|
 |SSMS général|Exposition de l’option de configuration AUTOGROW_ALL_FILES pour les groupes de fichiers dans SSMS.|
 |SSMS général|Suppression des options risquées « regroupement léger » et « renforcement de priorité » de l’interface graphique utilisateur de SSMS. Pour plus d’informations, consultez l’article [Priority boost details – and why it’s not recommended](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/) (Détails sur le renforcement de priorité – et pourquoi ce n’est pas recommandé. Texte en anglais).
-|SSMS général|Nouveau menu et nouvelles combinaisons de touches pour la création de fichiers : **CTRL+ALT+N** . **Ctrl+N** permet toujours de créer une requête.|
+|SSMS général|Nouveau menu et nouvelles combinaisons de touches pour la création de fichiers : **CTRL+ALT+N**. **Ctrl+N** permet toujours de créer une requête.|
 |SSMS général|La boîte de dialogue **Nouvelle règle de pare-feu** permet désormais à l’utilisateur de spécifier un nom de règle, au lieu d’en générer un automatiquement pour le compte de l’utilisateur.|
 |SSMS général|Amélioration d’IntelliSense dans l’éditeur, en particulier pour T-SQL v140 et ultérieur.|
 |SSMS général|Ajout de la prise en charge d’UTF-8 dans boîte de dialogue de classement de l’interface utilisateur de SSMS.|
@@ -666,7 +666,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Assistant Importation d’un fichier plat|Ajout d’une logique pour notifier l’utilisateur que l’importation peut avoir abouti à un renommage des colonnes.|
 |Integration Services (SSIS)|Les clients peuvent désormais planifier des packages SSIS sur les runtimes d’intégration Azure-SSIS qui se trouvent dans le cloud Azure Government.|
 |Integration Services (SSIS)|Quand vous utilisez SQL Agent d’Azure SQL Managed Instance par SSMS, vous pouvez configurer les paramètres et le Gestionnaire des connexions à l’étape de travail de l’agent SSIS.|
-|Integration Services (SSIS)|Quand vous vous connectez à Azure SQL Database/Azure SQL Managed Instance, vous pouvez le faire avec la base de données initiale *par défaut* .|
+|Integration Services (SSIS)|Quand vous vous connectez à Azure SQL Database/Azure SQL Managed Instance, vous pouvez le faire avec la base de données initiale *par défaut*.|
 |Integration Services (SSIS)|Ajout d’un nouvel élément d’entrée **Essayer SSIS dans Azure Data Factory** sous le nœud « Catalogues Integration Services », utilisable pour lancer l’« Assistant Création d’Integration Runtime » et créer rapidement « Azure-SSIS Integration Runtime ».
 |Integration Services (SSIS)|Ajout du bouton **Créer SSIS IR** dans l’Assistant Création de catalogue, utilisable pour lancer l’Assistant Création d’Integration Runtime et créer rapidement Azure-SSIS Integration Runtime.|
 |Integration Services (SSIS)|ISDeploymentWizard prend désormais en charge l’authentification SQL, l’authentification intégrée à Azure Active Directory et l’authentification par mot de passe Azure Active Directory en mode ligne de commande.|
@@ -761,7 +761,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Assistant Importation d’un fichier plat|Correction d’un problème empêchant l’Assistant Importation de fichier plat de gérer correctement les guillemets doubles (échappement). Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035/suggestions/32897998](https://feedback.azure.com/forums/908035/suggestions/32897998). |
 |Assistant Importation d’un fichier plat|Correction d’un problème lié à la gestion incorrecte des types virgule flottante (dans les paramètres régionaux qui utilisent un séparateur différent pour les virgules flottantes).|
 |Assistant Importation d’un fichier plat|Correction d’un problème lié à l’importation de bits quand les valeurs sont 0 ou 1. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535). |
-|Assistant Importation d’un fichier plat|Résolution d’un problème lié aux données de type *float* qui étaient entrées comme *valeurs Null* .|
+|Assistant Importation d’un fichier plat|Résolution d’un problème lié aux données de type *float* qui étaient entrées comme *valeurs Null*.|
 |Assistant Importation d’un fichier plat|Correction d’un problème empêchant l’Assistant Importation de traiter des valeurs décimales négatives.|
 |Assistant Importation d’un fichier plat|Correction d’un problème empêchant l’Assistant d’effectuer l’importation à partir de fichiers CSV à colonne unique.|
 |Assistant Importation d’un fichier plat|Correction du problème où l’Assistant Importation d’un fichier plat n’autorisait pas le changement de table de destination quand une table existait déjà. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). |
@@ -823,7 +823,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |SMO|Correction du problème où les bases de données Azure dans SMO adoptaient par défaut le classement non sensible à la casse pour toutes les comparaisons de chaînes au lieu d’utiliser le classement spécifié pour la base de données.|
 |Éditeur SSMS|Correction d’un problème lié à « Table système SQL » où la restauration des couleurs par défaut sélectionnait la couleur tilleul foncé, et non la couleur verte par défaut, ce qui rendait la lecture sur un arrière-plan blanc difficile. Pour plus d’informations, consultez [Restoring wrong default color for SQL System Table](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906) (Restauration d’une couleur par défaut incorrecte pour la Table système SQL). Le problème persiste sur les versions non anglaises de SSMS.|
 |Éditeur SSMS|Résolution d’un problème empêchant IntelliSense de fonctionner en cas de connexion à Azure SQL DW avec l’authentification Azure Active Directory (Azure AD).|
-|Éditeur SSMS|Résolution du problème lié à IntelliSense dans Azure quand l’utilisateur n’a pas d’accès à la base de données **MASTER** .|
+|Éditeur SSMS|Résolution du problème lié à IntelliSense dans Azure quand l’utilisateur n’a pas d’accès à la base de données **MASTER**.|
 |Éditeur SSMS|Correction d’extraits de code pour créer des « tables temporaires », qui étaient rompues quand le classement de la base de données cible était sensible à la casse.|
 |Éditeur SSMS|Nouvelle fonction TRANSLATE maintenant reconnue par IntelliSense. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430). |
 |Éditeur SSMS|Amélioration d’IntelliSense sur une fonction intégrée FORMAT. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676). |
@@ -831,8 +831,8 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Éditeur SSMS|Correction d’un problème où IntelliSense donnait un avertissement lors de l’utilisation de « ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON) ».|
 |Éditeur SSMS|Correction d’un problème selon lequel plusieurs vues système et fonctions table n’étaient pas de la bonne couleur.|
 |Éditeur SSMS|Correction d’un problème où l’onglet de l’éditeur était susceptible de se fermer au lieu d’être sélectionné au moment de cliquer dessus. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035/suggestions/37291114](https://feedback.azure.com/forums/908035/suggestions/37291114). |
-|Options de SSMS|Correction d’un problème empêchant le bon redimensionnement de la page **Outils** > **Options** > **Explorateur d’objets SQL Server** > **Commandes** .|
-|Options de SSMS|Maintenant, SSMS désactive par défaut le téléchargement automatique de la DTD dans l’éditeur XMLA : l’éditeur de script XMLA (qui utilise le service de langage XML) empêche par défaut le téléchargement automatiquement de la DTD pour les fichiers XMLA potentiellement malveillants. Vous pouvez le contrôler en désactivant le paramètre « Télécharger automatiquement les DTD et les schémas » dans **Outils** > **Options** > **Environnement** > **Éditeur de texte** > **XML** > **Divers** .|
+|Options de SSMS|Correction d’un problème empêchant le bon redimensionnement de la page **Outils** > **Options** > **Explorateur d’objets SQL Server** > **Commandes**.|
+|Options de SSMS|Maintenant, SSMS désactive par défaut le téléchargement automatique de la DTD dans l’éditeur XMLA : l’éditeur de script XMLA (qui utilise le service de langage XML) empêche par défaut le téléchargement automatiquement de la DTD pour les fichiers XMLA potentiellement malveillants. Vous pouvez le contrôler en désactivant le paramètre « Télécharger automatiquement les DTD et les schémas » dans **Outils** > **Options** > **Environnement** > **Éditeur de texte** > **XML** > **Divers**.|
 |Options de SSMS|Restauration du raccourci **Ctrl+D** tel qu’il existait dans l’ancienne version de SSMS. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035/suggestions/35544754](https://feedback.azure.com/forums/908035/suggestions/35544754). |
 |Concepteur de tables|Correction d’un incident dans « Modifier 200 lignes ».|
 |Concepteur de tables|Correction d’un problème lié au concepteur qui autorisait l’ajout d’une table en étant connecté à une base de données Azure SQL Database.|

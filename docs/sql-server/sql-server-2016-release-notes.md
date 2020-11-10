@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 19f906960bc31346f21e4afed436ff10517adebf
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 318dfd44b3c931b124372ce5ea60681b8c1e7e99
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985745"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235488"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -59,7 +59,7 @@ Améliorations relatives à la prise en charge et aux diagnostics incluses dans 
 |---|---|---|
 |Prise en charge complète de DTC pour les bases de données dans un groupe de disponibilité   |   Les transactions entre bases de données faisant partie d’un groupe de disponibilité ne sont actuellement pas prises en charge pour SQL Server 2016. Avec SQL Server 2016 SP2, nous présentons la prise en charge complète des transactions distribuées avec des bases de données de groupes de disponibilité.   |      |
 |Mise à jour de la colonne is_encrypted de sys.databases pour refléter de manière correcte l’état du chiffrement pour TempDB   |   La valeur de la colonne is_encryptedcolumn dans sys.databases est égale à 1 pour TempDB, même après la désactivation du chiffrement pour toutes les bases de données utilisateur et le redémarrage de SQL Server. Le comportement attendu est une valeur de 0, car TempDB n’est plus chiffré dans ce cas. À partir de SQL Server 2016 SP2, sys.databases.is_encrypted reflète maintenant de manière correcte l’état du chiffrement pour TempDB.   |      |
-|Nouvelles options DBCC CLONEDATABASE pour générer un clone et une sauvegarde vérifiés   |   Avec SQL Server 2016 SP2, DBCC CLONEDATABASE offre deux nouvelles options : produire un clone vérifié ou un clone de sauvegarde. Lorsqu’une base de données clone est créée avec l’option WITH VERIFY_CLONEDB, un clone de base de données cohérent est créé et vérifié. Celui-ci est pris en charge par Microsoft pour une utilisation en production. Une nouvelle propriété est ajoutée pour valider que le clone est vérifié SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone'). Lorsqu’un clone est créé avec l’option BACKUP_CLONEDB, une sauvegarde est générée dans le même dossier que le fichier de données afin de faciliter, pour les utilisateurs, le déplacement du clone vers un autre serveur ou son envoi au Support technique Microsoft à des fins de résolution des problèmes.   |      |
+|Nouvelles options DBCC CLONEDATABASE pour générer un clone et une sauvegarde vérifiés   |   Avec SQL Server 2016 SP2, DBCC CLONEDATABASE offre deux nouvelles options : créer un clone vérifié ou créer une sauvegarde vérifiée. Lorsqu’une base de données clone est créée avec l’option WITH VERIFY_CLONEDB, un clone de base de données cohérent est créé et vérifié. Celui-ci est pris en charge par Microsoft pour une utilisation en production. Une nouvelle propriété est ajoutée pour valider que le clone est vérifié SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone'). Lorsqu’un clone est créé avec l’option BACKUP_CLONEDB, une sauvegarde est générée dans le même dossier que le fichier de données afin de faciliter, pour les utilisateurs, le déplacement du clone vers un autre serveur ou son envoi au Support technique Microsoft à des fins de résolution des problèmes.   |      |
 |Prise en charge de Service Broker (SSB) pour DBCC CLONEDATABASE   |   Commande DBCC CLONEDATABASE améliorée pour autoriser le script d’objets SSB.   |   [KB4092075](https://support.microsoft.com/help/4092075)   |
 |Nouvelle vue de gestion dynamique (DMV) pour surveiller l’utilisation de l’espace du magasin de versions TempDB   |   Une nouvelle DMV sys.dm_tran_version_store_space_usage est présentée dans SQL Server 2016 SP2 pour permettre le monitoring de l’utilisation du magasin de versions par TempDB. Les Administrateurs de base de données peuvent désormais planifier de manière proactive le dimensionnement de TempDB en fonction des exigences d’utilisation du magasin de versions par base de données, sans surcharge des performances en cas d’exécution sur des serveurs de production.   |      |
 |Prise en charge complète des vidages (dumps) pour les agents de réplication | Actuellement, si les agents de réplication rencontrent une exception non gérée, le comportement par défaut est de créer un vidage minimal des symptômes de l’exception. Cela rend la résolution des problèmes d’une exception non gérée très difficile. Via cette modification, nous introduisons une nouvelle clé de registre, qui permet de créer un vidage complet pour les Agents de réplication.   |      |
@@ -86,7 +86,7 @@ Améliorations relatives à la prise en charge et aux diagnostics incluses dans 
 | |Le graphe de blocage XML est amélioré pour les blocages impliquant des opérateurs en mode lot, avec davantage d’attributs ajoutés à la ressource SyncPoint.| |
 |Rechargement dynamique de certains paramètres de profil d’agent de réplication   |   Dans la mise en œuvre actuelle des agents de réplication, toute modification dans le paramètre de profil d’agent requiert l’arrêt et le redémarrage de l’agent. Ces améliorations permettent le rechargement dynamique des paramètres sans avoir à redémarrer l’agent de réplication.   |      |
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![Capture d’écran d’une barre horizontale.](media/horizontal-bar.png)
 
 ## <a name="sql-server-2016-service-pack-1-sp1"></a><a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 inclut toutes les mises à jour cumulatives jusqu’à SQL Server 2016 RTM CU3, notamment la mise à jour de sécurité MS16-136. Elle contient un récapitulatif des solutions fournies dans les mises à jour cumulatives de SQL Server 2016 jusqu’à la dernière mise à jour cumulative - CU3 (incluse) et la mise à jour de sécurité MS16-136 publiée le 8 novembre 2016.
@@ -134,7 +134,7 @@ Il peut s’avérer nécessaire de redémarrer le système après l’installati
 - [Informations de version de SQL Server 2016 Service Pack 1](https://support.microsoft.com/kb/3182545)
 - ![info_tip](../sql-server/media/info-tip.png) [Centre de mise à jour SQL Server](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) pour obtenir des liens et des informations sur toutes les versions prises en charge, notamment les Service Packs de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![Autre capture d’écran d’une barre horizontale.](media/horizontal-bar.png)
 
 ##  <a name="sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Moteur de base de données (DG)](#bkmk_ga_instalpatch)
@@ -159,7 +159,7 @@ Il peut s’avérer nécessaire de redémarrer le système après l’installati
 
  - Installez  [KB 3164398 – Mise à jour critique pour les composants requis MSVCRT de SQL Server 2016](https://support.microsoft.com/kb/3164398).
 
-    Si vous utilisez **KB 3164398**, vous pouvez l’installer en même temps que SQL Server, via Microsoft Update ou à partir du Centre de téléchargement Microsoft.
+    Si vous utilisez **KB 3164398** , vous pouvez l’installer en même temps que SQL Server, via Microsoft Update ou à partir du Centre de téléchargement Microsoft.
 
     - **Pendant l’installation de SQL Server 2016 :** si l’ordinateur exécutant le programme d’installation de SQL Server a accès à Internet, le programme d’installation de SQL Server recherche la mise à jour pendant l’installation générale de SQL Server. Si vous acceptez la mise à jour, le programme d’installation télécharge et met à jour les fichiers binaires pendant l’installation.
 
@@ -207,7 +207,7 @@ De même, exécutez les procédures stockées ci-dessous du magasin de requêtes
 
 
 ###  <a name="product-documentation-ga"></a><a name="bkmk_ga_docs"></a> Documentation du produit (DG)
- **Problème et impact sur le client :** la version téléchargeable de la documentation de SQL Server 2016 n’est pas encore disponible. Quand vous utilisez le Gestionnaire de bibliothèque d’aide pour **installer du contenu à partir d’une source en ligne**, vous voyez la documentation de SQL Server 2012 et SQL Server 2014, mais il n’existe aucune option pour la documentation de SQL Server 2016.
+ **Problème et impact sur le client :** la version téléchargeable de la documentation de SQL Server 2016 n’est pas encore disponible. Quand vous utilisez le Gestionnaire de bibliothèque d’aide pour **installer du contenu à partir d’une source en ligne** , vous voyez la documentation de SQL Server 2012 et SQL Server 2014, mais il n’existe aucune option pour la documentation de SQL Server 2016.
 
  **Solution de contournement :** utilisez l’une des solutions de contournement suivantes :
 

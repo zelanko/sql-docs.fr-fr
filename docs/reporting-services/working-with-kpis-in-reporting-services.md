@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e661fee4e9b5afe5f78cae444ff8d6574a536bb9
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247438"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243778"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Utilisation des indicateurs de performance clés dans Reporting Services
 
@@ -36,7 +36,7 @@ En utilisant les indicateurs de performance clés dans SQL Server Reporting Serv
 
 Un indicateur de performance clé utilise uniquement la première ligne de données issue d’un dataset partagé. Assurez-vous que les données que vous souhaitez utiliser se trouvent sur cette première ligne. Pour créer un dataset partagé, vous pouvez utiliser le Générateur de rapports ou SQL Server Data Tools.  
   
-> **Remarque** : Le dataset ne doit pas nécessairement être dans le même dossier que l’indicateur de performance clé.  
+> **Remarque**  : Le dataset ne doit pas nécessairement être dans le même dossier que l’indicateur de performance clé.  
   
 ## <a name="placement-of-kpis"></a>Positionnement des indicateurs de performance clés  
   
@@ -45,11 +45,11 @@ Les indicateurs de performance clés peuvent être créés dans n’importe quel
   
 Après avoir déterminé l’emplacement de votre indicateur de performance clé, accédez à ce dossier et sélectionnez **Nouveau** > **Indicateur de performance clé** dans le menu supérieur.  
   
-![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
+![Capture d’écran montrant la liste déroulante Nouveau avec l’option Indicateur de performance clé mise en évidence.](../reporting-services/media/rscreatekpi1.png)  
   
 L’écran **Nouvel indicateur de performance clé** s’affiche.  
   
-![rsCreateKPI2](../reporting-services/media/rscreatekpi2.png)  
+![Capture d’écran montrant l’écran Nouvel indicateur de performance clé.](../reporting-services/media/rscreatekpi2.png)  
   
 Vous pouvez assigner des valeurs statiques ou utiliser les données issues d’un dataset partagé. Lorsque vous créez un indicateur de performance clé, il est rempli avec une série aléatoire de données manuelles.  
   
@@ -62,45 +62,45 @@ Vous pouvez assigner des valeurs statiques ou utiliser les données issues d’u
 | Ensemble de tendances | Valeurs numériques séparées par des virgules utilisées pour la visualisation de graphique. Ceci peut également être défini sur une colonne d’un dataset avec des valeurs qui représentent la tendance. |
 | Contenu connexe | Possibilité de définir un lien d’extraction. Ce lien peut être un rapport mobile publié sur le portail ou une URL personnalisée. |
   
-> **Avertissement**: bien que vous pouvez utiliser la valeur texte pour le champ **État** au moment de la conception, vous devez utiliser la valeur numérique en cas d’actualisation d’un dataset. Si vous actualisez un dataset avec la valeur texte, au lieu de la valeur numérique, cela peut endommager les indicateurs de performance clés sur votre serveur.  
+> **Avertissement** : bien que vous pouvez utiliser la valeur texte pour le champ **État** au moment de la conception, vous devez utiliser la valeur numérique en cas d’actualisation d’un dataset. Si vous actualisez un dataset avec la valeur texte, au lieu de la valeur numérique, cela peut endommager les indicateurs de performance clés sur votre serveur.  
 >
-> **Remarque** : La valeur des champs **Valeur**, **Objectif** et **État** peut être choisie seulement dans la première ligne du résultat d’un dataset. Toutefois, le champ **Ensemble de tendances** peut choisir la colonne qui reflète la tendance.  
+> **Remarque**  : La valeur des champs **Valeur** , **Objectif** et **État** peut être choisie seulement dans la première ligne du résultat d’un dataset. Toutefois, le champ **Ensemble de tendances** peut choisir la colonne qui reflète la tendance.  
   
 Vous pouvez procéder comme suit pour utiliser les données d’un jeu de données partagé.
   
-1. Modifiez la liste déroulante des champs de **Manuellement**ou **Ne pas définir**à **Champ de dataset**.  
+1. Modifiez la liste déroulante des champs de **Manuellement** ou **Ne pas définir** à **Champ de dataset**.  
   
-    ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
+    ![Capture d’écran montrant l’option Valeur définie sur Champ de jeu de données et l’option Sélectionner un champ de jeu de données définie sur Non défini.](../reporting-services/media/rscreatekpi3.png)  
   
 2. Sélectionnez les **points de suspension (...)** dans la zone de données. L’écran **Choisir un dataset** s’affiche.  
   
-    ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
+    ![Capture d’écran de la section Choisir un jeu de données avec l’option Finance_KPI sélectionnée.](../reporting-services/media/rscreatekpi4.png)  
   
 3. Sélectionnez le dataset qui contient les données que vous souhaitez afficher.  
   
 4. Choisissez le champ que vous souhaitez utiliser. Sélectionnez **OK**.  
   
-    ![rsCreateKPI5](../reporting-services/media/rscreatekpi5.png)  
+    ![Capture d’écran montrant la section Choisir un champ dans la section Finance_KPI avec l’option Sum_Amount sélectionnée.](../reporting-services/media/rscreatekpi5.png)  
   
 5. Modifiez **Format de la valeur** pour correspondre au format de la valeur. Dans cet exemple, la valeur est une devise.  
   
-    ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
+    ![Capture d’écran de l’aperçu de l’indicateur de performance clé montrant l’option Format de la valeur définie sur Devise.](../reporting-services/media/rscreatekpi6.png)  
   
 6. Sélectionnez **Appliquer**.  
   
-    ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
+    ![Capture d’écran des indicateurs de performance clés montrant que les jeux de données ont deux éléments.](../reporting-services/media/rscreatekpi7.png)
 
 ## <a name="configuring-related-content"></a>Configuration du contenu associé
 
-Lorsque vous choisissez **Rapport mobile**, vous pouvez choisir la destination dans une boîte de dialogue.
+Lorsque vous choisissez **Rapport mobile** , vous pouvez choisir la destination dans une boîte de dialogue.
 
-   ![Rapport mobile](media/rscreatekpi-related-content-mobile-report.png)
+   ![Capture d’écran montrant l’option Contenu associé définie sur Rapport mobile et l’option Choisir un rapport mobile définie sur Non défini.](media/rscreatekpi-related-content-mobile-report.png)
 
 Quand vous cliquez maintenant sur l’indicateur de performance clé dans le portail, une miniature du rapport mobile s’affiche sous la liste déroulante du contenu associé. Cliquez sur cette miniature pour accéder directement à ce rapport.
 
 Vous pouvez également spécifier une URL personnalisée. Cette tâche peut être : un site web, un site SharePoint, une URL vers un rapport SSRS (ce qui vous permet de transmettre des paramètres codés en dur).
 
-![URL personnalisée](media/rscreatekpi-related-content-custom-url.png)
+![Capture d’écran montrant l’option Contenu associé définie sur URL personnalisée et l’option Entrer une URL définie sur http://.](media/rscreatekpi-related-content-custom-url.png)
 
 Lorsque vous cliquez à présent sur l’indicateur de performance clé, l’URL s’affiche sous le contenu associé.
 
@@ -112,11 +112,11 @@ Pour supprimer un indicateur de performance clé, vous pouvez suivre les étapes
   
 1. Sélectionnez les **points de suspension (...)** de l’indicateur de performance clé à supprimer. Sélectionnez **Gérer**.  
   
-    ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
+    ![Capture d’écran de l’option des points de suspension pour un indicateur de performance clé sélectionnée et l’option Gérer mise en évidence.](../reporting-services/media/rsremovekpi1.png)  
   
 2. Sélectionnez **Supprimer**. Sélectionnez **Supprimer** à nouveau dans la boîte de dialogue de confirmation.  
   
-    ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
+    ![Capture d’écran de l’option Supprimer.](../reporting-services/media/rsremovekpi2.png)  
   
 ## <a name="refreshing-a-kpi"></a>Actualisation d’un indicateur de performance clé  
   

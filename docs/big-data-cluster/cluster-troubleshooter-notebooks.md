@@ -10,18 +10,18 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 073776c042c0a0da136347c8e1658603b755208f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 51286acc7f963b8d680bd81121cc22bab1c1a0a6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378370"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364381"
 ---
 # <a name="troubleshooting-big-data-clusters-bdc-with-notebooks"></a>Résolution des problèmes liés aux Clusters Big Data (BDC) avec des notebooks
 
 Cette page est un index des notebooks pour les Clusters Big Data SQL Server. Ces notebooks exécutables (.ipynb) sont conçus pour SQL Server 2019 afin de faciliter la résolution des problèmes liés aux clusters Big Data.
 
-Chaque notebook est conçu pour vérifier ses propres dépendances. Une commande **Exécuter toutes les cellules** s’effectue correctement ou produit une exception avec un conseil en lien hypertexte vers un autre notebook qui va résoudre la dépendance manquante. Suivez le lien hypertexte vers le notebook suivant, appuyez sur **Exécuter toutes les cellules** puis, après une exécution réussie, revenez au notebook d’origine, et appuyez à nouveau sur **Exécuter toutes les cellules** .
+Chaque notebook est conçu pour vérifier ses propres dépendances. Une commande **Exécuter toutes les cellules** s’effectue correctement ou produit une exception avec un conseil en lien hypertexte vers un autre notebook qui va résoudre la dépendance manquante. Suivez le lien hypertexte vers le notebook suivant, appuyez sur **Exécuter toutes les cellules** puis, après une exécution réussie, revenez au notebook d’origine, et appuyez à nouveau sur **Exécuter toutes les cellules**.
 
 Une fois toutes les dépendances installées, mais après l’échec de la commande **Exécuter toutes les cellules** , chaque notebook analyse les résultats et, dans la mesure du possible, produit un conseil de lien hypertexte vers un autre notebook pour faciliter la résolution du problème.
 
@@ -62,7 +62,7 @@ Un ensemble de notebooks permettant de diagnostiquer des situations et des état
 |TSG079 - Générer une copie de sauvegarde de base du contrôleur|Utilisez ce notebook pour générer une copie de sauvegarde de base du contrôleur.|
 |TSG086 - Exécuter le niveau supérieur de tous les conteneurs|Utilisez ce notebook pour exécuter le niveau supérieur de tous les conteneurs.|
 |TSG087 - Utiliser l’interface CLI hadoop fs sur le pod namenode|Utilisez ce notebook pour utiliser l’interface CLI hadoop fs sur le pod namenode.|
-|TSG108 - Afficher le ConfigMap de mise à niveau du contrôleur|Utilisez ce notebook pour résoudre la défaillance survenue lors de l’exécution d’une mise à niveau du Cluster Big Data à l’aide de la **mise à niveau azdata BDC** .|
+|TSG108 - Afficher le ConfigMap de mise à niveau du contrôleur|Utilisez ce notebook pour résoudre la défaillance survenue lors de l’exécution d’une mise à niveau du Cluster Big Data à l’aide de la **mise à niveau azdata BDC**.|
 |TSG112 - Vérification de pré-déploiement Active Directory|Utilisez ce notebook pour valider une configuration de Cluster Big Data (BDC) valide pour un déploiement Active Directory (AD).|
 |TSG115 - Translator de journaux de sécurité SQL Server sur Linux|Utilisez ce Notebook pour analyser les journaux générés par les enregistreurs d'événements secuirty.ldap et security.kerberos pour SQL Server sur Linux. Pour activer ces enregistreurs d'événements, placez les lignes ci-dessous dans /var/opt/mssql/logger.ini sur l’ordinateur exécutant SQL Server sur Linux. Remarque : ce fichier respecte la casse.|
 |TSG116 - Translator de journaux de support de sécurité BDC SQL|Utilisez ce notebook pour analyser les journaux générés par le service de support de sécurité dans le BDC SQL. Pour récupérer les journaux, nous allons copier les journaux de débogage à partir du cluster et les extraire. Suivez les étapes ci-dessous : exécutez « azdata bdc debug copy-logs -n <namespace>  *». Cela créera plusieurs fichiers .tar.gz : extrayez le contenu de debuglogs-* <namespace>-<date>-<time>.tar.gz ; recherchez le journal de support de sécurité stocké à l’emplacement ./<namespace>/control-<... >/security-support/supervisol/log/secsupp-stderr---<... >.log.|
@@ -80,7 +80,7 @@ Un ensemble de notebooks destiné à la réparation de situations et d’états 
 |Nom |Description |
 |---|---|---|---|
 |TSG005 - Boucle de transfert détectée|Utilisez ce notebook pour gérer la boucle de transfert détectée, étant donné que l’utilitaire dnsmasq peut placer un bouclage local dans resolv.conf, ce qui peut conduire les pods de contrôleur à entrer dans un CrashLoopBackOff durant le déploiement initial du cluster : https://askubuntu.com/questions/627899/nameserver-127-0-1-1-in-resolv-conf-wont-go-away|
-|TSG011 - Redémarrer le serveur sparkhistory|Utilisez ce notebook pour redémarrer le serveur sparkhistory, car le processus Java sparkhistory peut se bloquer pendant le démarrage. Redémarrez le serveur sparkhistory (supervisorctl restart sparkhistory) pour tenter de résoudre ce problème.|
+|TSG011 - Redémarrer le serveur sparkhistory|Utilisez ce notebook pour redémarrer le serveur sparkhistory, car le processus Java sparkhistory peut arrêter de répondre pendant le démarrage. Redémarrez le serveur sparkhistory (supervisorctl restart sparkhistory) pour tenter de résoudre ce problème.|
 |TSG018 - Tuer le processus sqlservr sur le pool maître| Utilisez ce notebook lorsque l’ARRÊT de T-SQL ne parvient pas à recycler le processus ./sqlservr. Utilisez ce notebook pour tuer le processus sqlservr principal, lequel sera automatiquement redémarré par le processus frontal ./sqlservr.|
 |TSG024 - Namenode est en mode sans échec| Utilisez ce notebook quand HDFS s’obtient lui-même en mode sans échec. Par exemple, si trop de pods sont recyclés trop rapidement dans le pool de stockage, le mode sans échec peut être automatiquement activé.|
 |TSG028 - Redémarrer le gestionnaire de nœuds sur tous les nœuds du pool de stockage| Utilisez ce notebook lorsqu’il faut redémarrer le Gestionnaire de nœuds sur tous les nœuds du pool de stockage.|
@@ -104,4 +104,3 @@ Un ensemble de notebooks destiné à la réparation de situations et d’états 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur les clusters Big Data, consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ?](big-data-cluster-overview.md).
-

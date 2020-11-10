@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3335665e1e7e7212c6521e6c6c654a1eb5ee04ba
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: fba193af6ef9f76c50f33ffa45a7bc668a0edead
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85035036"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364661"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS)
   Les paramètres en cascade permettent de gérer d'importantes quantités de données de rapport. Vous pouvez définir un ensemble de paramètres associés, de telle sorte que la liste des valeurs d'un paramètre dépende de la valeur choisie dans un autre paramètre. Par exemple, le premier paramètre est indépendant et peut présenter une liste de catégories de produits. Lorsque l'utilisateur sélectionne une catégorie, le deuxième paramètre dépend de la valeur du premier paramètre. Ses valeurs sont mises à jour avec une liste de sous-catégories au sein de la catégorie choisie. Lorsque l'utilisateur affiche le rapport, les valeurs des paramètres de catégorie et de sous-catégorie permettent de filtrer les données du rapport.  
@@ -32,13 +32,13 @@ ms.locfileid: "85035036"
   
 1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur une source de données, puis cliquez sur **Ajouter un dataset**.  
   
-2.  Dans **Nom**, tapez le nom du dataset.  
+2.  Dans **Nom** , tapez le nom du dataset.  
   
-3.  Dans **Source de données**, sélectionnez le nom de la source de données ou cliquez sur **Nouvelle** pour en créer une.  
+3.  Dans **Source de données** , sélectionnez le nom de la source de données ou cliquez sur **Nouvelle** pour en créer une.  
   
-4.  Dans **Type de requête**, choisissez le type de requête de la source de données sélectionnée. Cette rubrique part du principe que le type de requête **Texte** est utilisé.  
+4.  Dans **Type de requête** , choisissez le type de requête de la source de données sélectionnée. Cette rubrique part du principe que le type de requête **Texte** est utilisé.  
   
-5.  Dans **Requête**, tapez la requête à utiliser pour récupérer des données pour ce rapport. La requête doit être constituée des éléments suivants :  
+5.  Dans **Requête** , tapez la requête à utiliser pour récupérer des données pour ce rapport. La requête doit être constituée des éléments suivants :  
   
     1.  La liste des champs de sources de données. Par exemple, dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] , l'instruction SELECT spécifie la liste des noms de colonnes de bases de données à partir d'une table ou d'une vue donnée.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "85035036"
   
 1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur une source de données, puis cliquez sur **Ajouter un dataset**.  
   
-2.  Dans **Nom**, tapez le nom du dataset.  
+2.  Dans **Nom** , tapez le nom du dataset.  
   
-3.  Dans **Source de données**, vérifiez que le nom correspond au nom de la source de données que vous avez choisie au cours de l'étape 1.  
+3.  Dans **Source de données** , vérifiez que le nom correspond au nom de la source de données que vous avez choisie au cours de l'étape 1.  
   
-4.  Dans **Type de requête**, choisissez le type de requête de la source de données sélectionnée. Cette rubrique part du principe que le type de requête **Texte** est utilisé.  
+4.  Dans **Type de requête** , choisissez le type de requête de la source de données sélectionnée. Cette rubrique part du principe que le type de requête **Texte** est utilisé.  
   
-5.  Dans **Requête**, tapez la requête à utiliser pour récupérer des valeurs pour ce paramètre. En règle générale, les requêtes des paramètres indépendants ne contiennent pas de paramètres de requête. Par exemple, pour créer une requête pour un paramètre qui fournit toutes les valeurs de catégorie, vous pouvez utiliser une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] semblable à celle-ci :  
+5.  Dans **Requête** , tapez la requête à utiliser pour récupérer des valeurs pour ce paramètre. En règle générale, les requêtes des paramètres indépendants ne contiennent pas de paramètres de requête. Par exemple, pour créer une requête pour un paramètre qui fournit toutes les valeurs de catégorie, vous pouvez utiliser une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] semblable à celle-ci :  
   
     ```  
     SELECT DISTINCT <column name> FROM <table>  
@@ -81,13 +81,13 @@ ms.locfileid: "85035036"
   
 1.  Dans le dossier Paramètres du volet Données du rapport, cliquez avec le bouton droit sur le premier paramètre, puis cliquez sur **Propriétés du paramètre**.  
   
-2.  Dans **Nom**, vérifiez que le nom du paramètre est correct.  
+2.  Dans **Nom** , vérifiez que le nom du paramètre est correct.  
   
 3.  Cliquez sur **Valeurs disponibles**.  
   
 4.  Cliquez sur **Obtenir les valeurs à partir d'une requête**. Trois champs apparaissent.  
   
-5.  Dans **Dataset**, dans la liste déroulante, cliquez sur le nom du dataset que vous avez créé lors de la procédure précédente.  
+5.  Dans **Dataset** , dans la liste déroulante, cliquez sur le nom du dataset que vous avez créé lors de la procédure précédente.  
   
 6.  Dans le champ **Valeur** , cliquez sur le nom du champ qui fournit la valeur de paramètre.  
   
@@ -101,13 +101,13 @@ ms.locfileid: "85035036"
   
 1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur une source de données, puis cliquez sur **Ajouter un dataset**.  
   
-2.  Dans **Nom**, tapez le nom du dataset.  
+2.  Dans **Nom** , tapez le nom du dataset.  
   
-3.  Dans **Source de données**, vérifiez que le nom correspond au nom de la source de données que vous avez choisie au cours de l'étape 1.  
+3.  Dans **Source de données** , vérifiez que le nom correspond au nom de la source de données que vous avez choisie au cours de l'étape 1.  
   
-4.  Dans **Type de requête**, choisissez le type de requête de la source de données sélectionnée. Cette rubrique part du principe que le type de requête **Texte** est utilisé.  
+4.  Dans **Type de requête** , choisissez le type de requête de la source de données sélectionnée. Cette rubrique part du principe que le type de requête **Texte** est utilisé.  
   
-5.  Dans **Requête**, tapez la requête à utiliser pour récupérer des valeurs pour ce paramètre. En règle générale, les requêtes pour les paramètres dépendants comportent des paramètres de requête pour chaque paramètre dont ce paramètre dépend. Par exemple, pour créer une requête pour un paramètre qui fournit toutes les valeurs de sous-catégorie (paramètre dépendant) d’une catégorie (paramètre indépendant), vous pouvez utiliser une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] semblable à celle-ci :  
+5.  Dans **Requête** , tapez la requête à utiliser pour récupérer des valeurs pour ce paramètre. En règle générale, les requêtes pour les paramètres dépendants comportent des paramètres de requête pour chaque paramètre dont ce paramètre dépend. Par exemple, pour créer une requête pour un paramètre qui fournit toutes les valeurs de sous-catégorie (paramètre dépendant) d’une catégorie (paramètre indépendant), vous pouvez utiliser une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] semblable à celle-ci :  
   
     ```  
     SELECT DISTINCT Subcategory FROM <table>   
@@ -120,17 +120,17 @@ ms.locfileid: "85035036"
   
  Vous allez ensuite définir les propriétés du deuxième paramètre en vue d'utiliser ce dataset pour remplir ses valeurs disponibles au moment de l'exécution.  
   
-## <a name="to-set-available-values-for-a-report-parameter"></a>Pour définir les valeurs disponibles d'un paramètre de rapport  
+## <a name="to-set-available-values-for-the-second-parameter"></a>Pour définir les valeurs disponibles pour le deuxième paramètre  
   
 1.  Dans le dossier Paramètres du volet Données du rapport, cliquez avec le bouton droit sur le premier paramètre, puis cliquez sur **Propriétés du paramètre**.  
   
-2.  Dans **Nom**, vérifiez que le nom du paramètre est correct.  
+2.  Dans **Nom** , vérifiez que le nom du paramètre est correct.  
   
 3.  Cliquez sur **Valeurs disponibles**.  
   
 4.  Cliquez sur **Obtenir les valeurs à partir d'une requête**.  
   
-5.  Dans **Dataset**, dans la liste déroulante, cliquez sur le nom du dataset que vous avez créé lors de la procédure précédente.  
+5.  Dans **Dataset** , dans la liste déroulante, cliquez sur le nom du dataset que vous avez créé lors de la procédure précédente.  
   
 6.  Dans le champ **Valeur** , cliquez sur le nom du champ qui fournit la valeur de paramètre.  
   

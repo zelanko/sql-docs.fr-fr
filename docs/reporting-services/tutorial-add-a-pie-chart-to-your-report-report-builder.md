@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a924e8e6ed7a19904ddc9c8cded38683b849edeb
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245666"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043737"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique en secteurs à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous créez un graphique à secteurs dans un rapport paginé Reporting Services. Vous ajoutez des pourcentages et combinez de petits secteurs en un seul secteur.
@@ -23,7 +23,7 @@ Les graphiques à secteurs et en anneau affichent des données sous la forme d�
 
 Cette illustration montre le graphique à secteurs que vous allez créer. 
  
-![report-builder-pie-chart-final](../reporting-services/media/report-builder-pie-chart-final.png)
+![Capture d’écran du graphique à secteurs du générateur de rapports.](../reporting-services/media/report-builder-pie-chart-final.png)
   
 Lorsqu'un graphique à secteurs comporte trop de points de données, vos étiquettes de points de données peuvent devenir illisibles. Dans ce cas, envisagez de combiner plusieurs petits secteurs en un secteur plus grand. Les graphiques à secteurs gagnent en lisibilité quand vos données sont agrégées en quelques points de données.  
  
@@ -43,13 +43,13 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset** , dans le menu **Fichier** , choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
 3.  Dans le volet droit, cliquez sur **Assistant Graphique**.  
   
-4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset**, puis sur **Suivant**.  
+4.  Dans la page **Choisir un dataset** , cliquez sur **Créer un dataset** , puis sur **Suivant**.  
   
 5.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, sélectionnez une source de données, puis cliquez sur **Suivant**. Vous devrez peut-être entrer un nom d'utilisateur et un mot de passe.  
   
@@ -82,7 +82,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
 Vous avez le choix entre plusieurs types de graphiques prédéfinis.  
 
   
-1.  Dans la page **Choisir un type de graphique** , cliquez sur **Secteurs**, puis sur **Suivant**. La page **Organiser les champs du graphique** s’affiche.  
+1.  Dans la page **Choisir un type de graphique** , cliquez sur **Secteurs** , puis sur **Suivant**. La page **Organiser les champs du graphique** s’affiche.  
   
     Dans la page **Organiser les champs du graphique** , faites glisser le champ Product vers le volet **Catégories** . Les catégories définissent le nombre de secteurs du graphique à secteurs. Dans cet exemple, il y a huit secteurs, un pour chaque produit.  
   
@@ -94,7 +94,7 @@ Vous avez le choix entre plusieurs types de graphiques prédéfinis.
   
     Le graphique est ajouté à l'aire de conception. Pour que vous ayez une idée de l’aspect du graphique à secteurs, vous simplement Product 1, Product 2, etc., à la place des valeurs réelles.  
     
-    ![report-builder-pie-chart-first-design](../reporting-services/media/report-builder-pie-chart-first-design.png)
+    ![Capture d’écran du graphique à secteurs du générateur de rapports en mode Création.](../reporting-services/media/report-builder-pie-chart-first-design.png)
   
 6.  Cliquez sur le graphique pour afficher ses poignées. Faites glisser le coin inférieur droit du graphique pour l’agrandir. Notez que l’aire de conception du rapport augmente également pour s’adapter à la taille du graphique.  
   
@@ -102,7 +102,7 @@ Vous avez le choix entre plusieurs types de graphiques prédéfinis.
   
 Le rapport affiche le graphique à secteurs avec huit secteurs, un pour chaque produit. À présent, vous voyez les produits réels, et la taille de chaque secteur représente les ventes du produit concerné. Trois des secteurs sont assez fins.  
 
-![report-builder-pie-chart-first-preview](../reporting-services/media/report-builder-pie-chart-first-preview.png)
+![Capture d’écran montrant un aperçu du graphique à secteurs du générateur de rapports.](../reporting-services/media/report-builder-pie-chart-first-preview.png)
   
 ## <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Afficher des pourcentages dans chaque secteur  
 Sur chaque secteur du graphique, vous pouvez afficher le pourcentage de ce secteur par rapport à l'ensemble.  
@@ -116,12 +116,12 @@ Sur chaque secteur du graphique, vous pouvez afficher le pourcentage de ce secte
   
 4.  Dans la zone **Données de l’étiquette** , sélectionnez **#PERCENT**.  
     
-5.  (Facultatif) Pour indiquer le nombre de décimales affichées sur l’étiquette, dans la zone **Données de l’étiquette** après **#PERCENT**, tapez **{Pn}** , où *n* correspond au nombre de décimales à afficher. Par exemple, pour ne pas afficher de décimale, tapez **#PERCENT{P0}** .  
+5.  (Facultatif) Pour indiquer le nombre de décimales affichées sur l’étiquette, dans la zone **Données de l’étiquette** après **#PERCENT** , tapez **{Pn}** , où *n* correspond au nombre de décimales à afficher. Par exemple, pour ne pas afficher de décimale, tapez **#PERCENT{P0}** .  
 
 6.  Pour afficher les valeurs sous forme de pourcentages, la propriété UseValueAsLabel doit avoir la valeur false. Si vous êtes invité à définir cette valeur dans la boîte de dialogue **Confirmer l’action** , cliquez sur **Oui**.  
   
     > [!NOTE]  
-    > L’option**Format de nombre** de la boîte de dialogue **Propriétés de l’étiquette de la série** n’a aucun effet quand vous mettez en forme des pourcentages. Elle met uniquement en forme les étiquettes sous forme de pourcentages, mais ne calcule pas le pourcentage représenté par chaque secteur du graphique à secteurs.  
+    > L’option **Format de nombre** de la boîte de dialogue **Propriétés de l’étiquette de la série** n’a aucun effet quand vous mettez en forme des pourcentages. Elle met uniquement en forme les étiquettes sous forme de pourcentages, mais ne calcule pas le pourcentage représenté par chaque secteur du graphique à secteurs.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -129,7 +129,7 @@ Sur chaque secteur du graphique, vous pouvez afficher le pourcentage de ce secte
   
 Le rapport affiche le pourcentage de chaque secteur par rapport à l'ensemble.  
 
-![report-builder-pie-chart-preview-percents](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![Capture d’écran montrant un aperçu du graphique à secteurs du générateur de rapports avec des pourcentages dans chaque secteur.](../reporting-services/media/report-builder-pie-chart-preview-percents.png)
   
 ## <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Combiner de petits secteurs en un secteur  
 Trois des secteurs du graphique à secteurs sont assez petits. Vous pouvez combiner plusieurs petits secteurs en un secteur « Autre » plus grand qui représente l’ensemble des trois secteurs.  
@@ -144,7 +144,7 @@ Trois des secteurs du graphique à secteurs sont assez petits. Vous pouvez combi
   
 5.  Définissez la propriété **CollectedStyle** sur **SingleSlice**.  
 
-    ![report-builder-pie-chart-single-slice-property](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![Capture d’écran montrant comment définir une propriété d’un seul secteur dans le graphique à secteurs du générateur de rapports.](../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
  
 6.  Vérifiez que la propriété **CollectedThreshold** a la valeur 5.  
   
@@ -154,7 +154,7 @@ Trois des secteurs du graphique à secteurs sont assez petits. Vous pouvez combi
   
 Dans la légende, vous pouvez désormais voir la catégorie « Autre ». Le nouveau secteur regroupe tous les secteurs de moins de 5 % dans un seul secteur qui représente 6 % de l'ensemble.  
 
-![report-builder-pie-chart-start-at-90](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
+![Capture d’écran montrant comment le graphique à secteurs du générateur de rapports commence à 90 degrés à partir du haut du graphique.](../reporting-services/media/report-builder-pie-chart-start-at-90.png)
  
 ## <a name="5-start-pie-chart-values-at-the-top"></a><a name="DrawingEffect"></a>5. Faire démarrer les valeurs de graphique à secteurs à partir du haut 
 
@@ -166,13 +166,13 @@ Dans cette section, nous allons faire démarrer la première valeur à partir du
 
 2. Sélectionnez le graphique à secteurs lui-même.
 
-3. Dans le volet Propriétés, sous **Attributs personnalisés**, remplacez la valeur de PieStartAngle définie sur **0** par **270**.
+3. Dans le volet Propriétés, sous **Attributs personnalisés** , remplacez la valeur de PieStartAngle définie sur **0** par **270**.
 
 4. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.
 
 À présent, les secteurs du graphique apparaissent dans l’ordre alphabétique à partir du haut et se terminent par le secteur « Autre ».
 
-![report-builder-pie-chart-start-at-top](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
+![Capture d’écran montrant comment le graphique à secteurs du générateur de rapports commence en haut.](../reporting-services/media/report-builder-pie-chart-start-at-top.png)
   
 ## <a name="6-add-a-report-title"></a><a name="Title"></a>6. Ajouter un titre de rapport  
   
@@ -182,15 +182,15 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
 
 2. Dans l’aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Tapez **Ventes d’appareils photo et de caméscopes**, appuyez sur Entrée, puis tapez **En pourcentage du total des ventes**, afin d’obtenir ce qui suit :  
+2.  Tapez **Ventes d’appareils photo et de caméscopes** , appuyez sur Entrée, puis tapez **En pourcentage du total des ventes** , afin d’obtenir ce qui suit :  
   
     **Ventes d’appareils photo et de caméscopes**  
   
     **En pourcentage du total des ventes**  
   
-3.  Sélectionnez **Ventes d’appareils photo et de caméscopes** puis, sous l’onglet **Accueil**, dans la section **Police**, cliquez sur **Gras**.  
+3.  Sélectionnez **Ventes d’appareils photo et de caméscopes** puis, sous l’onglet **Accueil** , dans la section **Police** , cliquez sur **Gras**.  
   
-4.  Sélectionnez **En pourcentage du total des ventes**, puis, sous l’onglet **Accueil** > section **Police** > affectez la valeur **10** à la taille de la police.  
+4.  Sélectionnez **En pourcentage du total des ventes** , puis, sous l’onglet **Accueil** > section **Police** > affectez la valeur **10** à la taille de la police.  
   
 5.  (Facultatif) Vous devrez peut-être agrandir la zone de texte Titre pour contenir les deux lignes de texte.  
   
@@ -206,7 +206,7 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
   
 2.  Dans le menu **Fichier** , cliquez sur **Enregistrer**.  
   
-3.  Dans **Nom**, tapez **Graphique à secteurs des ventes**.  
+3.  Dans **Nom** , tapez **Graphique à secteurs des ventes**.  
   
 4.  Cliquez sur **Enregistrer**.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 695b6d02494430b134ce46ac14d802443b41046b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243600"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243788"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Utilisation de datasets partagés (portail web)
 
@@ -32,7 +32,7 @@ Procédez comme suit pour créer un dataset partagé.
   
 2.  Sélectionnez **Dataset**.  
   
-    ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
+    ![Capture d’écran montrant la liste déroulante Nouveau avec l’option Dataset mise en évidence.](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  L’opération lance alors le Générateur de rapports, ou vous êtes invité à le télécharger.  
   
@@ -51,17 +51,17 @@ Procédez comme suit pour gérer un dataset existant.
   
 1.  Sélectionnez les **points de suspension (...)** correspondant au dataset que vous souhaitez gérer.  
   
-    ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
+    ![Capture d’écran montrant l’utilisateur sélectionnant l’option des points de suspension pour le jeu de données.](../reporting-services/media/ssrsdataset-ellipse.png)  
   
 2.  Sélectionnez **Gérer** . L’écran de modification s’affiche alors.  
   
-    ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
+    ![Capture d’écran montrant l’option des points de suspension sélectionnée et l’option Gérer mise en évidence.](../reporting-services/media/ssrsdataset-manage.png)  
   
 ## <a name="properties"></a>Propriétés
   
-Dans la fenêtre des propriétés, vous pouvez modifier le **nom** et la **description** du dataset. Vous pouvez également utiliser les fonctions **Supprimer**, **Déplacer**, **Modifier dans le Générateur de rapports**, **Télécharger** ou **Remplacer**.  
+Dans la fenêtre des propriétés, vous pouvez modifier le **nom** et la **description** du dataset. Vous pouvez également utiliser les fonctions **Supprimer** , **Déplacer** , **Modifier dans le Générateur de rapports** , **Télécharger** ou **Remplacer**.  
   
-![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
+![Capture d’écran montrant l’écran Propriétés de la boîte de dialogue Modifier Company Sales.](../reporting-services/media/ssrsdataset-properties.png)  
   
 ## <a name="caching"></a>Mise en cache
   
@@ -71,17 +71,17 @@ Vous disposez de différentes options de mise en cache des données d’un datas
   
 2.  **Mettre en cache des copies de ce rapport et les utiliser en cas de disponibilité** place une copie temporaire des données dans un cache pour une utilisation avec les éléments qui utilisent ce dataset. La mise en cache améliore habituellement les performances, car les données sont retournées à partir du cache ; la requête de dataset n'est pas réexécutée.  
   
-![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
+![Capture d’écran montrant l’écran Mise en cache de la boîte de dialogue Modifier Company Sales avec l’option Toujours exécuter ce rapport avec les données les plus récentes sélectionnée.](../reporting-services/media/ssrsdataset-caching1.png)  
   
 Vous disposerez d’options supplémentaires en sélectionnant **Mettre en cache des copies de ce rapport et les utiliser en cas de disponibilité** .  
   
-![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
+![Capture d’écran montrant l’écran Mise en cache de la boîte de dialogue Modifier Company Sales avec l’option Mettre en cache des copies de ce rapport et les utiliser en cas de disponibilité sélectionnée.](../reporting-services/media/ssrsdataset-caching2.png)  
   
 ### <a name="cache-expiration"></a>Expiration du cache  
   
 Vous pouvez déterminer si vous voulez faire expirer le cache pour le dataset partagé après un certain intervalle, ou si vous préférez définir une planification. Vous pouvez utiliser une planification partagée.  
   
-![ssRSDataset-Caching3](../reporting-services/media/ssrsdataset-caching3.png)  
+![Capture d’écran montrant l’option Le cache expire selon une planification sélectionnée.](../reporting-services/media/ssrsdataset-caching3.png)  
   
 > [!NOTE]
 > La définition d’un délai d’expiration n’actualise pas le cache. Sans un plan d’actualisation du cache, les données sont actualisées à l’exécution suivante du dataset.  
@@ -98,7 +98,7 @@ Pour créer un plan d’actualisation du cache, cliquez sur **Nouveau plan d'act
   
 Une fois que vous avez terminé, vous pouvez sélectionner **Créer un plan d’actualisation du Cache**.  
   
-![ssRSDataset-Caching4](../reporting-services/media/ssrsdataset-caching4.png)  
+![Capture d’écran de la boîte de dialogue Modifier Company Sales montrant l’option Créer un plan d’actualisation du cache.](../reporting-services/media/ssrsdataset-caching4.png)  
   
 > [!NOTE]
 > L’agent SQL Server doit être en cours d’exécution pour créer un plan d’actualisation du cache.  

@@ -10,16 +10,16 @@ ms.topic: how-to
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 811b996732dac0f8c6bc0c71e9c8976dc3244085
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06148ae5d10db159745a7eb55be06735efa49531
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114620"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364710"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Afficher et lire le journal de diagnostic de l'instance de cluster de basculement
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Toutes les erreurs et tous les événements d'avertissements critiques pour la DLL de ressource SQL Server sont écrits dans le journal des événements Windows. Un journal en cours des informations de diagnostic spécifiques de SQL Server est capturé par la procédure stockée système [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) ; il est écrit dans les fichiers journaux de diagnostics du cluster de basculement de SQL Server (également appelés journaux *SQLDIAG*).  
+  Toutes les erreurs et tous les événements d'avertissements critiques pour la DLL de ressource SQL Server sont écrits dans le journal des événements Windows. Un journal en cours des informations de diagnostic spécifiques de SQL Server est capturé par la procédure stockée système [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) ; il est écrit dans les fichiers journaux de diagnostics du cluster de basculement de SQL Server (également appelés journaux *SQLDIAG* ).  
   
 -   **Avant de commencer :**  [Recommandations](#Recommendations), [Sécurité](#Security)  
   
@@ -44,9 +44,9 @@ ms.locfileid: "91114620"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour afficher les fichiers journaux de diagnostics :**  
   
-1.  Dans le menu de **Fichier** , sélectionnez **Ouvrir**, puis **Fichier**et choisissez le fichier journal de diagnostics à afficher.  
+1.  Dans le menu de **Fichier** , sélectionnez **Ouvrir** , puis **Fichier** et choisissez le fichier journal de diagnostics à afficher.  
   
-2.  Les événements sont affichés sous forme de lignes dans le volet droit. Par défaut, seules les colonnes **name**et **timestamp** sont affichées.  
+2.  Les événements sont affichés sous forme de lignes dans le volet droit. Par défaut, seules les colonnes **name** et **timestamp** sont affichées.  
   
      Cela permet également d'activer le menu **ExtendedEvents** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "91114620"
   
 4.  Vous pouvez filtrer et trier les données d'événement à l'aide du menu **ExtendedEvents** , en sélectionnant l'option **Filtre** .  
   
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
+##  <a name="view-diagnostic-log-files-with-transact-sql"></a><a name="TsqlProcedure"></a> Afficher les fichiers journaux de diagnostic avec Transact-SQL  
  **Pour afficher les fichiers journaux de diagnostics :**  
   
  Pour consulter tous les éléments de journal du fichier journal SQLDIAG, utilisez la requête suivante :  
@@ -88,13 +88,13 @@ ORDER BY Time;
 > [!NOTE]  
 >  Vous pouvez filtrer les résultats pour des composants spécifiques ou exécuter une déclaration à l'aide de la clause WHERE.  
   
-##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Utilisation de Transact-SQL  
- **Pour configurer les propriétés du journal de diagnostics**  
+##  <a name="configure-diagnostic-log-properties-with-transact-sql"></a><a name="TsqlConfigure"></a> Configurer les propriétés du journal de diagnostic avec Transact-SQL  
+ **Pour configurer les propriétés du journal de diagnostics :**  
   
 > [!NOTE]  
 >  Pour obtenir un exemple de cette procédure, consultez [Exemple (Transact-SQL)](#TsqlExample)plus loin dans cette section.  
   
- En utilisant l’instruction DDL (Data Definition Language), **ALTER SERVER CONFIGURATION**, vous pouvez démarrer ou arrêter la journalisation des données de diagnostics capturées par la procédure [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) et définir les paramètres de configuration du journal SQLDIAG, tels que le nombre de substitutions du fichier journal, sa taille et son emplacement. Pour plus d'informations sur la syntaxe, consultez [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
+ En utilisant l’instruction DDL (Data Definition Language), **ALTER SERVER CONFIGURATION** , vous pouvez démarrer ou arrêter la journalisation des données de diagnostics capturées par la procédure [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) et définir les paramètres de configuration du journal SQLDIAG, tels que le nombre de substitutions du fichier journal, sa taille et son emplacement. Pour plus d'informations sur la syntaxe, consultez [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic).  
   
 ###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Exemples (Transact-SQL)  
   
