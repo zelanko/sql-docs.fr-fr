@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b101ac6ab904543ab3e5a558ce2d50030df5adf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aac745594f2dcd23974cc91cb0f9c57ebff91f29
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720730"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384900"
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
 
@@ -74,7 +74,7 @@ ms.locfileid: "91720730"
 ### <a name="package-level-and-project-level-connection-managers"></a>Gestionnaires de connexions au niveau du package et au niveau du projet
 Un gestionnaire de connexions peut être créé au niveau du package ou au niveau du projet. Le gestionnaire de connexions créé au niveau du projet est disponible pour tous les packages du projet. Le gestionnaire de connexions créé au niveau du package n'est, quant à lui, disponible que pour ce seul package.  
   
- Pour partager des connexions aux sources, vous utilisez les gestionnaires de connexions créés au niveau du projet au lieu des sources de données. Pour ajouter un gestionnaire de connexions au niveau du projet, le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit utiliser le modèle de déploiement de projet. Quand un projet est configuré pour utiliser ce modèle, le dossier **Gestionnaires de connexions** apparaît dans **l’Explorateur de solutions**et le dossier **Sources de données** est supprimé de **l’Explorateur de solutions**.  
+ Pour partager des connexions aux sources, vous utilisez les gestionnaires de connexions créés au niveau du projet au lieu des sources de données. Pour ajouter un gestionnaire de connexions au niveau du projet, le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit utiliser le modèle de déploiement de projet. Quand un projet est configuré pour utiliser ce modèle, le dossier **Gestionnaires de connexions** apparaît dans **l’Explorateur de solutions** et le dossier **Sources de données** est supprimé de **l’Explorateur de solutions**.  
   
 > [!NOTE]  
 >  Si vous souhaitez utiliser des sources de données dans votre package, vous devez convertir le projet en modèle de déploiement de package.  
@@ -115,7 +115,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
 |Type|Description|Rubrique|  
 |----------|-----------------|-----------|  
 |ORACLE|Établit une connexion à un serveur Oracle \<version info\>.|Le gestionnaire de connexions Oracle est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)(en anglais).|  
-|SAPBI|Établit une connexion à un système SAP NetWeaver BI version 7.|Le gestionnaire de connexions SAP BI est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440).|  
+|SAPBI|Établit une connexion à un système SAP NetWeaver BI version 7.|Le gestionnaire de connexions SAP BI est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44277).|  
 |TERADATA|Établit une connexion à un serveur Teradata \<version info\>.|Le gestionnaire de connexions Teradata est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)(en anglais).|  
   
 ### <a name="custom-connection-managers"></a>Gestionnaires de connexions personnalisés  
@@ -126,12 +126,12 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
  Pour créer et configurer automatiquement des gestionnaires de connexions quand vous créez un package, vous pouvez utiliser l’Assistant Importation et exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cet Assistant vous aide aussi à créer et configurer les sources et destinations qui utilisent les gestionnaires de connexions. Pour plus d'informations, consultez [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
- Pour créer manuellement un nouveau gestionnaire de connexions et l'ajouter à un package existant, utilisez la zone **Gestionnaires de connexions** sous les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Dans la zone **Gestionnaire de connexions** , vous devez choisir le type de gestionnaire de connexions à créer, puis définir ses propriétés dans la boîte de dialogue fournie à cet effet dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Pour plus d'informations, consultez la section « Utilisation de la zone Gestionnaire de connexions », plus loin dans cette rubrique.  
+ Pour créer manuellement un nouveau gestionnaire de connexions et l'ajouter à un package existant, utilisez la zone **Gestionnaires de connexions** sous les onglets **Flux de contrôle** , **Flux de données** et **Gestionnaires d'événements** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Dans la zone **Gestionnaire de connexions** , vous devez choisir le type de gestionnaire de connexions à créer, puis définir ses propriétés dans la boîte de dialogue fournie à cet effet dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Pour plus d'informations, consultez la section « Utilisation de la zone Gestionnaire de connexions », plus loin dans cette rubrique.  
   
  Une fois le gestionnaire de connexions ajouté à un package, vous pouvez l'utiliser dans des tâches, des conteneurs de boucles Foreach, des sources, des transformations et des destinations. Pour plus d’informations, consultez [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md), [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) et [Flux de données](../../integration-services/data-flow/data-flow.md).  
   
 ### <a name="using-the-connection-managers-area"></a>Utilisation de la zone Gestionnaires de connexions  
- Vous pouvez créer des gestionnaires de connexions lorsque l'onglet **Flux de contrôle**, **Flux de données**ou **Gestionnaires d'événements** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] est actif.  
+ Vous pouvez créer des gestionnaires de connexions lorsque l'onglet **Flux de contrôle** , **Flux de données** ou **Gestionnaires d'événements** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] est actif.  
   
  Le diagramme qui suit montre la zone **Gestionnaires de connexions** de l'onglet **Flux de contrôle** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
@@ -142,7 +142,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
  Au moment de l'exécution, la version appropriée est employée même si vous avez spécifié la version 32 bits du fournisseur lors de la conception. La version 64 bits du fournisseur peut être exécutée même si le package est utilisé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-  Les deux versions du fournisseur ont le même ID. Pour spécifier si l’exécution de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise une version 64 bits disponible du fournisseur, vous devez définir la propriété Run64BitRuntime du projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si la propriété Run64BitRuntime a la valeur **true**, l’exécution trouve le fournisseur 64 bits et l’utilise ; si Run64BitRuntime a la valeur **false**, l’exécution trouve et utilise le fournisseur 32 bits. Pour plus d’informations sur les propriétés que vous pouvez définir sur les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Integration Services (SSIS) et environnements de Studio](../integration-services-ssis-development-and-management-tools.md).   
+  Les deux versions du fournisseur ont le même ID. Pour spécifier si l’exécution de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise une version 64 bits disponible du fournisseur, vous devez définir la propriété Run64BitRuntime du projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si la propriété Run64BitRuntime a la valeur **true** , l’exécution trouve le fournisseur 64 bits et l’utilise ; si Run64BitRuntime a la valeur **false** , l’exécution trouve et utilise le fournisseur 32 bits. Pour plus d’informations sur les propriétés que vous pouvez définir sur les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Integration Services (SSIS) et environnements de Studio](../integration-services-ssis-development-and-management-tools.md).   
 
 ## <a name="add-a-connection-manager"></a>Ajouter un gestionnaire de connexions
 ###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Ajouter un gestionnaire de connexions lors de la création d’un package  
@@ -191,7 +191,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
      La zone **Gestionnaires de connexions** répertorie le gestionnaire de connexions ajouté.  
   
-5.  Vous pouvez aussi cliquer avec le bouton droit sur le gestionnaire de connexions, cliquer sur **Renommer**, puis modifier le nom par défaut du gestionnaire de connexions.  
+5.  Vous pouvez aussi cliquer avec le bouton droit sur le gestionnaire de connexions, cliquer sur **Renommer** , puis modifier le nom par défaut du gestionnaire de connexions.  
   
 6.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer l’élément sélectionné** dans le menu **Fichier** .  
   
@@ -199,7 +199,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur **Gestionnaires de connexions**, puis cliquez sur **Nouveau gestionnaire de connexions**.  
+2.  Dans **l’Explorateur de solutions** , cliquez avec le bouton droit sur **Gestionnaires de connexions** , puis cliquez sur **Nouveau gestionnaire de connexions**.  
   
 3.  Dans la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS** , sélectionnez le type de gestionnaire de connexions, puis cliquez sur **Ajouter**.  
   
@@ -227,10 +227,10 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
      Le gestionnaire de connexions que vous avez ajouté apparaîtra sous le nœud **Gestionnaires de connexions** dans **l’Explorateur de solutions**. Il figurera aussi sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS** pour tous les packages du projet. Le nom du gestionnaire de connexions de cet onglet aura un préfixe **(project)** afin de distinguer ce gestionnaire de connexions de niveau projet des gestionnaires de connexions de niveau package.  
   
-4.  Le cas échéant, cliquez avec le bouton droit sur le gestionnaire de connexions dans la fenêtre **Explorateur de solutions** sous le nœud **Gestionnaires de connexions** (ou) sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS** , cliquez **Renommer**, puis modifiez le nom par défaut du gestionnaire de connexions.  
+4.  Le cas échéant, cliquez avec le bouton droit sur le gestionnaire de connexions dans la fenêtre **Explorateur de solutions** sous le nœud **Gestionnaires de connexions** (ou) sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS** , cliquez **Renommer** , puis modifiez le nom par défaut du gestionnaire de connexions.  
   
     > [!NOTE]  
-    >  Sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS**, vous ne pouvez pas remplacer le préfixe **(project)** dans le nom du gestionnaire de connexions. C'est la procédure normale.  
+    >  Sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS** , vous ne pouvez pas remplacer le préfixe **(project)** dans le nom du gestionnaire de connexions. C'est la procédure normale.  
 
 ### <a name="add-ssis-connection-manager-dialog-box"></a>Boîte de dialogue Ajout d’un gestionnaire de connexions SSIS
 La boîte de dialogue **Ajout d'un gestionnaire de connexions SSIS** vous permet de sélectionner le type de connexion à ajouter à un package.  
@@ -239,7 +239,7 @@ La boîte de dialogue **Ajout d'un gestionnaire de connexions SSIS** vous permet
   
 #### <a name="options"></a>Options  
  **Type du gestionnaire de connexions**  
- Sélectionnez un type de connexion et cliquez sur **Ajouter**ou double-cliquez sur un type de connexion, pour spécifier les propriétés de connexion à l’aide de l’éditeur pour chaque type de connexion.  
+ Sélectionnez un type de connexion et cliquez sur **Ajouter** ou double-cliquez sur un type de connexion, pour spécifier les propriétés de connexion à l’aide de l’éditeur pour chaque type de connexion.  
   
  **Ajouter**  
  Spécifiez les propriétés de connexion à l'aide de l'éditeur pour chaque type de connexion.  

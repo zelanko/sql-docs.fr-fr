@@ -85,20 +85,20 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/26/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 380a3b3f08d0e9f974ceee5356401461a33925fb
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: de4026f7fdf2dbde32998657e84a7b9b0c54b1f5
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639012"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418036"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installer SQL Server à partir de l'invite de commandes
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
-  
-  Avant d’exécuter le programme d’installation de SQL Server, consultez [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
-  
- L’installation d’une nouvelle instance de SQL Server à partir de l’invite de commandes vous permet de spécifier les composants à installer et la façon dont ils doivent être configurés. Vous pouvez également spécifier une interaction en mode silencieux, de base ou complète avec l'interface utilisateur du programme d'installation.  
+
+Avant d’exécuter le programme d’installation de SQL Server, consultez [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
+
+L’installation d’une nouvelle instance de SQL Server à partir de l’invite de commandes vous permet de spécifier les composants à installer et la façon dont ils doivent être configurés. Vous pouvez également spécifier une interaction en mode silencieux, de base ou complète avec l'interface utilisateur du programme d'installation.  
 
 Pour effectuer l’installation à partir de l’invite de commandes, ouvrez une invite de commandes d’administration et accédez à l’emplacement où se trouve setup.exe dans le [support d’installation de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads). Exécutez la commande `setup.exe`, avec les paramètres obligatoires et facultatifs qui correspondent à ce que vous voulez faire :
 
@@ -174,7 +174,7 @@ Les paramètres répertoriés pour un composant [!INCLUDE[ssDEnoversion](../../i
   
 |Composant [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Paramètre|Description|  
 |-----------------------------------------|---------------|-----------------|  
-|Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Obligatoire**|Obligatoire pour indiquer le flux de travail d'installation.<br /><br /> Valeurs prises en charge : **Install** .|  
+|Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Obligatoire**|Obligatoire pour indiquer le flux de travail d'installation.<br /><br /> Valeurs prises en charge : **Install**.|  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **Obligatoire uniquement quand le paramètre /Q ou /QS est spécifié pour les installations sans assistance.**|Supprime l’avis de confidentialité. En utilisant cet indicateur, vous acceptez l’[avis de confidentialité](../../sql-server/sql-server-privacy.md).  |  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Obligatoire uniquement quand le paramètre /Q ou /QS est spécifié pour les installations sans assistance.**|Obligatoire pour l'acceptation des termes du contrat de licence.|  
 |Contrôle d’installation de Python [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Obligatoire uniquement quand le paramètre /Q ou /QS est spécifié pour les installations sans assistance qui incluent le package Anaconda Python.**|Obligatoire pour l'acceptation des termes du contrat de licence.| 
@@ -192,7 +192,7 @@ Les paramètres répertoriés pour un composant [!INCLUDE[ssDEnoversion](../../i
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ INSTANCEDIR<br /><br /> **Facultatif**|Spécifie un répertoire d'installation différent du répertoire par défaut pour les composants spécifiques à l'instance.|  
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/INSTANCEID<br /><br /> **Facultatif**|Spécifie une valeur différente de la valeur par défaut pour [InstanceID](#InstanceID).|  
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/INSTANCENAME<br /><br /> **Obligatoire**|Spécifie un nom d'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Pour plus d'informations, consultez [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE** .|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facultatif**|Spécifie le mot de passe du compte du service de moteur. Ce paramètre peut être omis si vous utilisez un compte de service managé, un compte virtuel ou un compte intégré.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facultatif**|Spécifie le mode de démarrage du service de moteur PolyBase : Automatic (Automatique) (par défaut), Disabled (Désactivé) et Manual (Manuel).|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facultatif**|Spécifie une plage de ports avec au moins 6 ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
@@ -295,7 +295,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/INSTALLSHAREDDIR<br /><br /> **Facultatif**|Spécifie un répertoire d'installation différent du répertoire par défaut pour les composants partagés 64 bits.<br /><br /> La valeur par défaut est `%Program Files%\Microsoft SQL Server`<br /><br /> Ne peut pas être défini sur `%Program Files(x86)%\Microsoft SQL Server`|  
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ INSTANCEDIR<br /><br /> **Facultatif**|Spécifie un répertoire d'installation différent du répertoire par défaut pour les composants spécifiques à l'instance.|  
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/INSTANCEID<br /><br /> Avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (janvier 2013) **obligatoire**<br /><br /> À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 **obligatoire** pour les fonctionnalités d’instance.|Spécifie un InstanceID pour l'instance en cours de préparation.|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE** .|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facultatif**|Spécifie le mot de passe du compte du service de moteur. Ce paramètre peut être omis si vous utilisez un compte de service managé, un compte virtuel ou un compte intégré.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facultatif**|Spécifie le mode de démarrage du service de moteur PolyBase : Automatic (Automatique) (par défaut), Disabled (Désactivé) et Manual (Manuel).|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facultatif**|Spécifie une plage de ports avec au moins 6 ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
@@ -324,7 +324,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/INDICATEPROGRESS<br /><br /> **Facultatif**|Spécifie que le fichier journal d'installation en mode détaillé est redirigé vers la console.|  
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/INSTANCEID<br /><br /> Avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (janvier 2013) **obligatoire**<br /><br /> À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 **facultatif**|Utilisez l'ID d'instance spécifié pendant l'étape de préparation d'image.<br /><br /> Valeurs prises en charge : InstanceID d'une instance préparée.|  
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/INSTANCENAME<br /><br /> Avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (janvier 2013) **obligatoire**<br /><br /> À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 **facultatif**|Spécifie le nom d’une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l’instance en cours de finalisation.<br /><br /> Pour plus d'informations, consultez [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE** .|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facultatif**|Spécifie le mot de passe du compte du service de moteur. Ce paramètre peut être omis si vous utilisez un compte de service managé, un compte virtuel ou un compte intégré.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facultatif**|Spécifie le mode de démarrage du service de moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facultatif**|Spécifie une plage de ports avec au moins 6 ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
@@ -422,7 +422,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENU<br /><br /> **Facultatif**|Utilisez ce paramètre pour installer la version anglaise de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sur un système d’exploitation localisé quand le support d’installation inclut des modules linguistiques pour l’anglais et pour la langue qui correspond au système d’exploitation.|  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/FEATURES<br /><br /> **Obligatoire**|Spécifie les [composants](#Feature) à réparer.|  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTANCENAME<br /><br /> **Obligatoire**|Spécifie un nom d'instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br /> Pour plus d'informations, consultez [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE** .|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facultatif**|Spécifie le mot de passe du compte du service de moteur. Ce paramètre peut être omis si vous utilisez un compte de service managé, un compte virtuel ou un compte intégré.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facultatif**|Spécifie le mode de démarrage du service de moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facultatif**|Spécifie une plage de ports avec au moins 6 ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
@@ -509,7 +509,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Obligatoire uniquement quand le paramètre /Q ou /QS est spécifié pour les installations sans assistance.**|Obligatoire pour l'acceptation des termes du contrat de licence.|  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ENU<br /><br /> **Facultatif**|Utilisez ce paramètre pour installer la version anglaise de SQL Server sur un système d’exploitation localisé quand le support d’installation inclut des modules linguistiques pour l’anglais et la langue qui correspond au système d’exploitation.|  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/FAILOVERCLUSTERGROUP<br /><br /> **Facultatif**|Spécifie le nom du groupe de ressources à utiliser pour le cluster de basculement [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il peut s'agir du nom d'un groupe de clusters existant ou du nom d'un nouveau groupe de ressources.<br /><br /> Valeur par défaut :<br /><br /> SQL Server (\<InstanceName>)|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE** .|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facultatif**|Spécifie le mot de passe du compte du service de moteur. Ce paramètre peut être omis si vous utilisez un compte de service managé, un compte virtuel ou un compte intégré. |  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facultatif**|Spécifie le mode de démarrage du service de moteur PolyBase : Automatic (Automatique) (par défaut), Disabled (Désactivé) et Manual (Manuel).|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facultatif**|Spécifie une plage de ports avec au moins 6 ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
@@ -552,7 +552,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Facultatif**|Spécifie les paramètres de classement pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> La valeur par défaut est basée sur les paramètres régionaux de votre système d'exploitation Windows. Pour plus d'informations, consultez [Paramètres de classement du programme d'installation](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Obligatoire**|Spécifie le compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Obligatoire](#Accounts)|Spécifie le mot de passe pour SQLSVCACCOUNT. Ce paramètre peut être omis si vous utilisez un compte de service managé, un compte virtuel ou un compte intégré.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Obligatoire**|Utilisez ce paramètre pour provisionner des connexions comme membres du rôle **sysadmin** .|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Obligatoire**|Utilisez ce paramètre pour provisionner des connexions comme membres du rôle **sysadmin**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Facultatif**|Spécifie le répertoire des fichiers de données pour les bases de données utilisateur.<br /><br /> Valeur par défaut : `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Facultatif**|Spécifie les répertoires des fichiers de données tempdb. Lorsque vous spécifiez plusieurs répertoires, utilisez l’espace comme séparateur. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).<br /><br /> Valeur par défaut : `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (répertoire des données système)<br /><br /> REMARQUE :  Ce paramètre est également ajouté au scénario RebuildDatabase.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Facultatif**|Spécifie le répertoire du fichier journal tempdb.<br /><br /> Valeur par défaut : `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (répertoire des données système)<br /><br /> Remarque : Ce paramètre est également ajouté au scénario RebuildDatabase.|  
@@ -606,7 +606,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ INSTANCEDIR<br /><br /> **Facultatif**|Spécifie un répertoire d'installation différent du répertoire par défaut pour les composants spécifiques à l'instance.|  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTANCEID<br /><br /> **Facultatif**|Spécifie une valeur différente de la valeur par défaut pour [InstanceID](#InstanceID).|  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTANCENAME<br /><br /> **Obligatoire**|Spécifie un nom d'instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br /> Pour plus d'informations, consultez [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE** .|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facultatif**|Spécifie le mot de passe du compte du service de moteur. Ce paramètre peut être omis si vous utilisez un compte de service managé, un compte virtuel ou un compte intégré.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facultatif**|Spécifie le mode de démarrage du service de moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facultatif**|Spécifie une plage de ports avec au moins 6 ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
@@ -758,7 +758,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/HELP, ?<br /><br /> **Facultatif**|Affiche les options d'utilisation pour les paramètres.|  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INDICATEPROGRESS<br /><br /> **Facultatif**|Spécifie que le fichier journal d'installation en mode détaillé sera redirigé vers la console.|  
 |Contrôle d’installation [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTANCENAME<br /><br /> **Obligatoire**|Spécifie un nom d'instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br /> Pour plus d'informations, consultez [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE** .|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Facultatif**|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facultatif**|Spécifie le mot de passe du compte du service de moteur. Ce paramètre peut être omis si vous utilisez un compte de service managé, un compte virtuel ou un compte intégré.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facultatif**|Spécifie le mode de démarrage du service de moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facultatif**|Spécifie une plage de ports avec au moins 6 ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
@@ -858,7 +858,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Worker|Inclut Scale Out Worker pour Integration Services Scale Out.| 
 |MDS||Installe [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |SQL_SHARED_MPY||Installe des packages Python pour [SQL Server 2017 Machine Learning Server (autonome)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) |  
-|SQL_SHARED_MR||Installe des packages R pour [SQL Server 2016 R Server (autonome)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016) ou [SQL Server Machine Learning Server (autonome)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) |  
+|SQL_SHARED_MR||Installe des packages R pour [SQL Server 2016 R Server (autonome)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) ou [SQL Server Machine Learning Server (autonome)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) |  
 |Tools*||Installe les outils clients et les composants de la documentation en ligne de SQL Server.|  
 ||BC|Installe les composants de compatibilité descendante.|  
 ||Conn|Installe les composants de connectivité.|
@@ -870,9 +870,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 *[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) figure désormais dans un programme d’installation autonome distinct du programme d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Installer SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 
-**LocalDB est une option dans l’installation d’une référence de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Pour plus d’informations, consultez [SQL Server 2016 Express LocalDB](../configure-windows/sql-server-express-localdb.md). 
-  
-### <a name="feature-parameter-examples"></a>Exemples de paramètres de fonctionnalités :  
+### <a name="feature-parameter-examples"></a>Exemples de paramètres de fonctionnalités :
   
 |Paramètre et valeurs|Description| 
 |---------------|-----------------|  
@@ -882,49 +880,51 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|Installe les composants de la documentation en ligne de SQL Server pour afficher et gérer le contenu d’aide.|  
 |/FEATURES=SQLEngine,PolyBase|Installe le moteur PolyBase.|  
   
-##  <a name="role-parameters"></a><a name="RoleParameters"></a> Paramètres de rôle  
- Le paramètre de rôle d'installation ou /Role est utilisé pour installer une sélection de fonctionnalités préconfigurées. Les rôles SSAS installent une instance SSAS dans une batterie de serveurs SharePoint existante ou dans une nouvelle batterie non configurée. Deux rôles d'installation sont fournis pour prendre en charge chaque scénario. Vous ne pouvez choisir d'utiliser qu'un seul rôle d'installation à la fois. Selon le rôle d'installation que vous choisissez, le programme d'installation installe les fonctionnalités et composants qui appartiennent à ce rôle. Vous ne pouvez pas modifier les fonctionnalités et composants désignés pour ce rôle. Pour plus d’informations sur l’utilisation du paramètre de rôle de fonctionnalité, consultez [Installer Power Pivot à partir de l’invite de commandes](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode). 
-  
- Le rôle AllFeatures_WithDefaults correspond au comportement par défaut des éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] et réduit le nombre de boîtes de dialogue présentées à l'utilisateur. Il peut être spécifié à partir de la ligne de commande pendant l’installation d’une édition de SQL Server qui n’est pas [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
-  
+##  <a name="role-parameters"></a><a name="RoleParameters"></a> Paramètres de rôle
+
+Le paramètre de rôle d'installation ou /Role est utilisé pour installer une sélection de fonctionnalités préconfigurées. Les rôles SSAS installent une instance SSAS dans une batterie de serveurs SharePoint existante ou dans une nouvelle batterie non configurée. Deux rôles d'installation sont fournis pour prendre en charge chaque scénario. Vous ne pouvez choisir d'utiliser qu'un seul rôle d'installation à la fois. Selon le rôle d'installation que vous choisissez, le programme d'installation installe les fonctionnalités et composants qui appartiennent à ce rôle. Vous ne pouvez pas modifier les fonctionnalités et composants désignés pour ce rôle. Pour plus d’informations sur l’utilisation du paramètre de rôle de fonctionnalité, consultez [Installer Power Pivot à partir de l’invite de commandes](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).
+
+Le rôle AllFeatures_WithDefaults correspond au comportement par défaut des éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] et réduit le nombre de boîtes de dialogue présentées à l'utilisateur. Il peut être spécifié à partir de la ligne de commande pendant l’installation d’une édition de SQL Server qui n’est pas [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].
+
 |Role|Description|Installe…|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Installe [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme une instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur une batterie [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] existante ou un serveur autonome.|Moteur de calcul[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , préconfiguré pour le stockage des données en mémoire et le traitement.<br /><br /> Packages de solution[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Programme d’installation pour le [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> documentation en ligne de SQL Server|  
 |SPI_AS_NewFarm|Installe [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et le [!INCLUDE[ssDE](../../includes/ssde-md.md)] en tant qu’instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur une batterie de serveurs Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] nouvelle ou non configurée, ou sur un serveur autonome. Le programme d’installation de SQL Server configure la batterie de serveurs pendant l’installation du rôle de fonctionnalité.|Moteur de calcul[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , préconfiguré pour le stockage des données en mémoire et le traitement.<br /><br /> Packages de solution[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> documentation en ligne de SQL Server<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Outils de configuration<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
-|AllFeatures_WithDefaults|Installe toutes les fonctionnalités disponibles dans l'édition actuelle.<br /><br /> Ajoute l’utilisateur actuel au rôle serveur fixe **sysadmin** de SQL Server.<br /><br /> Sur [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou version ultérieure, lorsque le système d'exploitation n'est pas un contrôleur de domaine, le [!INCLUDE[ssDE](../../includes/ssde-md.md)]et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisent par défaut le compte NTAUTHORITY\NETWORK SERVICE, et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise par défaut le compte NTAUTHORITY\NETWORK SERVICE.<br /><br /> Ce rôle est activé par défaut dans les éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Pour toutes les autres éditions, ce rôle n’est pas activé, mais il peut être spécifié via l’interface utilisateur ou à l’aide de paramètres de ligne de commande.|Pour les éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], installe uniquement les fonctionnalités disponibles dans l'édition. Pour les autres éditions, installe toutes les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Le paramètre **AllFeatures_WithDefaults** peut être combiné avec d’autres paramètres qui remplacent les valeurs du paramètre **AllFeatures_WithDefaults** . Par exemple, si les paramètres **AllFeatures_WithDefaults** et **/Features=RS** sont utilisés, la commande d'installation de l'ensemble des fonctionnalités est remplacée par l'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]uniquement ; toutefois, le paramètre **AllFeatures_WithDefaults** est respecté pour l'utilisation du compte de service par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Quand vous utilisez le paramètre **AllFeatures_WithDefaults** avec **/ADDCURRENTUSERASSQLADMIN=FALSE** , la boîte de dialogue d’approvisionnement n’est pas remplie automatiquement pour l’utilisateur actuel. Ajoutez **/AGTSVCACCOUNT** et **/AGTSVCPASSWORD** pour spécifier un compte de service et un mot de passe pour SQL Server Agent.|  
-  
-##  <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> Contrôle du comportement du basculement à l’aide du paramètre /FAILOVERCLUSTERROLLOWNERSHIP  
-Pour mettre à niveau un cluster de basculement [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez exécuter le programme d’installation sur un nœud de cluster de basculement à la fois, en commençant par les nœuds passifs. Le programme d'installation détermine le moment du basculement vers le nœud mis à niveau, selon le nombre total de nœuds dans l'instance de cluster de basculement, et le nombre de nœuds déjà mis à niveau. Lorsqu'au moins la moitié des nœuds a déjà été mise à niveau, le programme d'installation provoque par défaut un basculement vers un nœud mis à niveau. 
- 
-Pour contrôler le comportement du basculement des nœuds de cluster pendant le processus de mise à niveau, exécutez l'opération de mise à niveau à partir de l'invite de commandes et utilisez le paramètre /FAILOVERCLUSTERROLLOWNERSHIP pour contrôler le comportement du basculement avant que l'opération de mise à niveau ne place le nœud hors connexion. L'utilisation de ce paramètre est la suivante :  
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=0 ne transfère pas la propriété du cluster (déplacer le groupe) vers les nœuds mis à niveau et n’ajoute pas ce nœud à la liste des propriétaires possibles du cluster SQL Server à la fin de la mise à niveau. 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=1 transfère la propriété du cluster (déplacer le groupe) vers les nœuds mis à niveau et ajoute ce nœud à la liste des propriétaires possibles du cluster SQL Server à la fin de la mise à niveau. 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=2 est le paramètre par défaut. Il sera utilisé si ce paramètre n'est pas spécifié. Ce paramètre indique que le programme d’installation de SQL Server gère la propriété du cluster (déplacer le groupe) si nécessaire. 
-  
-##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> Configuration de l’ID d’instance ou d’InstanceID  
- L'ID d'instance ou le paramètre /InstanceID est utilisé pour spécifier où vous pouvez installer les composants d'instance et le chemin d'accès du Registre de l'instance. La valeur de INSTANCEID est une chaîne qui doit être unique. 
-  
--   ID d’instance SQL : `MSSQLxx.<INSTANCEID>`  
-  
--   ID d’instance d’administrateur système (SA) : `MSASxx.<INSTANCEID>`  
-  
--   ID d’instance RS : `MSRSxx.<INSTANCEID>`  
-  
+|AllFeatures_WithDefaults|Installe toutes les fonctionnalités disponibles dans l'édition actuelle.<br /><br /> Ajoute l’utilisateur actuel au rôle serveur fixe **sysadmin** de SQL Server.<br /><br /> Sur [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ou version ultérieure, lorsque le système d'exploitation n'est pas un contrôleur de domaine, le [!INCLUDE[ssDE](../../includes/ssde-md.md)]et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisent par défaut le compte NTAUTHORITY\NETWORK SERVICE, et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise par défaut le compte NTAUTHORITY\NETWORK SERVICE.<br /><br /> Ce rôle est activé par défaut dans les éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Pour toutes les autres éditions, ce rôle n’est pas activé, mais il peut être spécifié via l’interface utilisateur ou à l’aide de paramètres de ligne de commande.|Pour les éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], installe uniquement les fonctionnalités disponibles dans l'édition. Pour les autres éditions, installe toutes les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Le paramètre **AllFeatures_WithDefaults** peut être combiné avec d’autres paramètres qui remplacent les valeurs du paramètre **AllFeatures_WithDefaults**. Par exemple, si les paramètres **AllFeatures_WithDefaults** et **/Features=RS** sont utilisés, la commande d'installation de l'ensemble des fonctionnalités est remplacée par l'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]uniquement ; toutefois, le paramètre **AllFeatures_WithDefaults** est respecté pour l'utilisation du compte de service par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Quand vous utilisez le paramètre **AllFeatures_WithDefaults** avec **/ADDCURRENTUSERASSQLADMIN=FALSE** , la boîte de dialogue d’approvisionnement n’est pas remplie automatiquement pour l’utilisateur actuel. Ajoutez **/AGTSVCACCOUNT** et **/AGTSVCPASSWORD** pour spécifier un compte de service et un mot de passe pour SQL Server Agent.|
+
+## <a name="controlling-failover-behavior-using-the-failoverclusterrollownership-parameter"></a><a name="RollOwnership"></a> Contrôle du comportement du basculement à l’aide du paramètre /FAILOVERCLUSTERROLLOWNERSHIP  
+Pour mettre à niveau un cluster de basculement [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez exécuter le programme d’installation sur un nœud de cluster de basculement à la fois, en commençant par les nœuds passifs. Le programme d'installation détermine le moment du basculement vers le nœud mis à niveau, selon le nombre total de nœuds dans l'instance de cluster de basculement, et le nombre de nœuds déjà mis à niveau. Lorsqu'au moins la moitié des nœuds a déjà été mise à niveau, le programme d'installation provoque par défaut un basculement vers un nœud mis à niveau.
+
+Pour contrôler le comportement du basculement des nœuds de cluster pendant le processus de mise à niveau, exécutez l'opération de mise à niveau à partir de l'invite de commandes et utilisez le paramètre /FAILOVERCLUSTERROLLOWNERSHIP pour contrôler le comportement du basculement avant que l'opération de mise à niveau ne place le nœud hors connexion. L'utilisation de ce paramètre est la suivante :
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=0 ne transfère pas la propriété du cluster (déplacer le groupe) vers les nœuds mis à niveau et n’ajoute pas ce nœud à la liste des propriétaires possibles du cluster SQL Server à la fin de la mise à niveau. 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=1 transfère la propriété du cluster (déplacer le groupe) vers les nœuds mis à niveau et ajoute ce nœud à la liste des propriétaires possibles du cluster SQL Server à la fin de la mise à niveau. 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=2 est le paramètre par défaut. Il sera utilisé si ce paramètre n'est pas spécifié. Ce paramètre indique que le programme d’installation de SQL Server gère la propriété du cluster (déplacer le groupe) si nécessaire. 
+
+##  <a name="instance-id-or-instanceid-configuration"></a><a name="InstanceID"></a> Configuration de l’ID d’instance ou d’InstanceID
+
+L'ID d'instance ou le paramètre /InstanceID est utilisé pour spécifier où vous pouvez installer les composants d'instance et le chemin d'accès du Registre de l'instance. La valeur de INSTANCEID est une chaîne qui doit être unique. 
+
+- ID d’instance SQL : `MSSQLxx.<INSTANCEID>`
+
+- ID d’instance d’administrateur système (SA) : `MSASxx.<INSTANCEID>`
+
+- ID d’instance RS : `MSRSxx.<INSTANCEID>`
+
 Les composants qui prennent en charge les instances sont installés aux emplacements suivants :  
-  
-`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<ASInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<RSInstanceID>`  
-  
+
+`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<ASInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<RSInstanceID>`
+
 > [!NOTE]
 > Si INSTANCEID n’est pas spécifié sur la ligne de commande, le programme d’installation remplace par défaut \<INSTANCEID> par \<INSTANCENAME>. 
-  
-## <a name="see-also"></a>Voir aussi  
- [Installer SQL Server 2016 avec l’Assistant Installation](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [Installer les fonctionnalités Business Intelligence de SQL Server 2016](../../sql-server/install/install-sql-server-business-intelligence-features.md)     
+
+## <a name="see-also"></a>Voir aussi
+- [Installer SQL Server 2016 avec l’Assistant Installation](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+- [Installation d'un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
+- [Installer les fonctionnalités Business Intelligence de SQL Server 2016](../../sql-server/install/install-sql-server-business-intelligence-features.md)

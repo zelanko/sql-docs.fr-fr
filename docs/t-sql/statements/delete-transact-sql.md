@@ -26,12 +26,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0de7a61b92599b82aabc0f0197c02098c7758384
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300517"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384805"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -122,7 +122,7 @@ DELETE
  Spécifie le nombre ou le pourcentage de lignes aléatoires qui seront supprimées. L'argument *expression* peut être un nombre ou un pourcentage de lignes. Les lignes référencées dans l'expression TOP utilisée dans les instructions INSERT, UPDATE ou DELETE ne sont pas triées dans un ordre précis. Pour plus d’informations, consultez [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
- Mot clé facultatif qui peut être inséré entre le mot clé DELETE et le *table_or_view_name* cible *rowset_function_limited* .  
+ Mot clé facultatif qui peut être inséré entre le mot clé DELETE et le *table_or_view_name* cible *rowset_function_limited*.  
   
  *table_alias*  
  Alias spécifié dans la clause FROM *table_source* représentant la table ou la vue de laquelle les lignes doivent être supprimées.  
@@ -168,7 +168,7 @@ DELETE
   
  Il existe deux types d'opérations de suppression, en fonction des conditions définies dans la clause WHERE :  
   
--   Une suppression par recherche spécifie une condition de recherche permettant de désigner les lignes à supprimer. Par exemple, WHERE *column_name* = *value* .  
+-   Une suppression par recherche spécifie une condition de recherche permettant de désigner les lignes à supprimer. Par exemple, WHERE *column_name* = *value*.  
   
 -   Une suppression positionnée utilise la clause CURRENT OF pour spécifier un curseur. La suppression a lieu à la position actuelle du curseur. Cette opération peut être plus précise qu’une instruction DELETE élaborée qui utilise une clause WHERE *search_condition* pour spécifier les lignes à supprimer. Une instruction DELETE par recherche supprime plusieurs lignes si la condition de recherche n'identifie pas de façon univoque une ligne unique.  
   
@@ -364,7 +364,7 @@ GO
 **S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Suppression de données dans une table distante en utilisant un serveur lié  
- L'exemple ci-dessous supprime des lignes dans une table distante. L’exemple commence par créer un lien vers la source de données distante en utilisant [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Le nom du serveur lié, `MyLinkServer`, est ensuite spécifié comme partie du nom d’objet en quatre parties qui se présente sous la forme *serveur.catalogue.schéma.objet* .  
+ L'exemple ci-dessous supprime des lignes dans une table distante. L’exemple commence par créer un lien vers la source de données distante en utilisant [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Le nom du serveur lié, `MyLinkServer`, est ensuite spécifié comme partie du nom d’objet en quatre parties qui se présente sous la forme *serveur.catalogue.schéma.objet*.  
   
 ```sql
 USE master;  
@@ -400,13 +400,13 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. Suppression de données dans une table distante en utilisant la fonction OPENDATASOURCE  
- L’exemple suivant supprime des lignes d’une table distante en spécifiant la fonction d’ensemble de lignes [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Spécifiez un nom de serveur valide pour la source de données en utilisant le format *server_name* ou *server_name\instance_name* .  
+ L’exemple suivant supprime des lignes d’une table distante en spécifiant la fonction d’ensemble de lignes [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Spécifiez un nom de serveur valide pour la source de données en utilisant le format *server_name* ou *server_name\instance_name*.  
   
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
-WHERE DepartmentID = 17;'  
+WHERE DepartmentID = 17;
 ```  
   
 ###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> Capture des résultats de l’instruction DELETE  

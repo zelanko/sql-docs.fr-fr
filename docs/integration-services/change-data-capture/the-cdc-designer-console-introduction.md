@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b956269df3d887800587d80fbcd0e5a1699dcca3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8e1fd0c8e43000573d030a80ce52145bd0c8669
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457591"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384878"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Présentation de la console du concepteur de capture de données modifiées
 
@@ -28,7 +28,7 @@ ms.locfileid: "88457591"
 ## <a name="installation"></a>Installation  
  Cette section décrit les procédures d'installation du concepteur de capture de données modifiées pour Oracle par Attunity.  
   
- Le service et le concepteur de capture des changements de données Microsoft® pour Oracle par Attunity pour Microsoft SQL Server® 2016 font partie du Feature Pack de SQL Server 2016. Téléchargez les composants du Feature Pack à partir de la [page web SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ Le service et le concepteur de capture des changements de données Microsoft® pour Oracle par Attunity pour Microsoft SQL Server® 2016 font partie du Feature Pack de SQL Server 2016. Téléchargez les composants du Feature Pack à partir de la [page web SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ## <a name="supported-windows-environments"></a>Environnements Windows pris en charge  
  La console du concepteur de capture de données modifiées s'exécute dans les environnements Windows suivants :  

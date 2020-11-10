@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 899a00273fbccb1e68e6690556e81bb3f0bde05c
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523904"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384727"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Erreurs connues et résolutions avec Change Data Capture pour Oracle d’Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -74,9 +74,9 @@ La **version 1.1.0.102** contient les correctifs suivants :
 - L’instance CDC pour Oracle se bloque quand vous la démarrez et ne capture pas les modifications. La mémoire occupée par le serveur Oracle peut augmenter jusqu’à ce qu’il manque de mémoire ou se plante.
 - [2672759](https://support.microsoft.com/kb/2672759) : Message d’erreur quand vous utilisez le service Microsoft CDC pour Oracle d’Attunity : « ORA-00600 : code d’erreur interne ». Ajoutez le suivi de niveau SOURCE et vérifiez si vous recevez la même erreur ORA-00600. Résolu via le téléchargement d’un correctif Oracle.
 - Partitions multiples
-    - Quand vous utilisez plus de 10 partitions sur une table Oracle, l’instance CDC ne peut pas capturer toutes les modifications pour la table. Quand la table Oracle est définie avec plus de 10 partitions, les modifications sont capturées seulement pour les 10 dernières partitions. Correction dans la version _Service Pack 1 pour SQL Server 2012_ . Consultez la [page de téléchargement du Feature Pack SP1](https://www.microsoft.com/download/details.aspx?id=35580). 
+    - Quand vous utilisez plus de 10 partitions sur une table Oracle, l’instance CDC ne peut pas capturer toutes les modifications pour la table. Quand la table Oracle est définie avec plus de 10 partitions, les modifications sont capturées seulement pour les 10 dernières partitions. Correction dans la version _Service Pack 1 pour SQL Server 2012_. Consultez la [page de téléchargement du Feature Pack SP1](https://www.microsoft.com/download/details.aspx?id=35575). 
 - Les modifications sont perdues
-    - La capture d’événements peut entrer dans une boucle infinie et arrêter la capture des nouvelles modifications des données (liées au bogue Oracle 5623813). Quand il est activé, l’environnement RAC effectue un arrêt ou une reprise de l’instance CDC, les modifications peuvent être ignorées/perdues. Cela signifie que des lignes importantes vont manquer dans la capture des changements de données de SQL Server, ce qui représente une perte de données dans l’entrepôt de données ou le système abonné. Correction dans la version _Service Pack 1 pour SQL Server 2012_ . Consultez la [page de téléchargement du Feature Pack SP1](https://www.microsoft.com/download/details.aspx?id=35580).
+    - La capture d’événements peut entrer dans une boucle infinie et arrêter la capture des nouvelles modifications des données (liées au bogue Oracle 5623813). Quand il est activé, l’environnement RAC effectue un arrêt ou une reprise de l’instance CDC, les modifications peuvent être ignorées/perdues. Cela signifie que des lignes importantes vont manquer dans la capture des changements de données de SQL Server, ce qui représente une perte de données dans l’entrepôt de données ou le système abonné. Correction dans la version _Service Pack 1 pour SQL Server 2012_. Consultez la [page de téléchargement du Feature Pack SP1](https://www.microsoft.com/download/details.aspx?id=35575).
 - Doublement des largeurs sur des colonnes dans SQL
     - Lors de la création d’une instance CDC pour Oracle, dans les scripts à exécuter sur SQL Server, la longueur d’une colonne de type de données de largeur variable est doublée dans les tables SQL Server créées dans le script. Par exemple, si vous essayez d’effectuer le suivi des modifications sur une colonne VARCHAR2(10) dans une table Oracle, la colonne correspondante dans la table SQL Server est NVARCHAR(20) dans le script de déploiement. Correction dans _Mise à jour cumulative 2 pour SQL Server 2012 SP1_ ou _Mise à jour cumulative 5 pour SQL Server 2012 RTM_ comme décrit dans KB [2769673](https://support.microsoft.com/kb/2769673). 
 - Les données des instructions DDL sont tronquées
@@ -151,7 +151,7 @@ Pour résoudre cette erreur, accordez les autorisations appropriées à l’util
 
 La liste de toutes les autorisations nécessaires est détaillée dans le fichier d’aide inclus dans le dossier des fichiers du programme d’installation `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm`.  Consultez la page intitulée « Se connecter à une base de données source Oracle » dans le fichier .chm pour obtenir la liste complète.
 
-Vous pouvez définir le compte d’utilisateur en sélectionnant l’instance CDC dans le volet gauche, puis en sélectionnant le bouton Properties (Propriétés) dans le volet Actions le plus à droite de la fenêtre **CDC Designer** . Vous pouvez changer le compte d’authentification de l’exploration des journaux Oracle dans la page Properties (Propriétés).
+Vous pouvez définir le compte d’utilisateur en sélectionnant l’instance CDC dans le volet gauche, puis en sélectionnant le bouton Properties (Propriétés) dans le volet Actions le plus à droite de la fenêtre **CDC Designer**. Vous pouvez changer le compte d’authentification de l’exploration des journaux Oracle dans la page Properties (Propriétés).
 
 ![Capture d’écran montrant l’onglet Oracle de la boîte de dialogue testTA Properties (Propriétés de testTA).](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-connection.png)
 

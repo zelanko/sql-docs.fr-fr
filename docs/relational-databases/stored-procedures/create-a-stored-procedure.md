@@ -15,12 +15,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dde2beed868314f315bf51e9fa8174ba01b09e3e
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332658"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364761"
 ---
 # <a name="create-a-stored-procedure"></a>Créer une procédure stockée
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,6 @@ ms.locfileid: "87332658"
 
 Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   
-##  <a name="Top"></a>   
 -   **Avant de commencer :**  [Autorisations](#Permissions)  
   
 -   **Pour créer une procédure avec :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
@@ -46,11 +45,11 @@ Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](.
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour créer une procédure dans l'Explorateur d'objets**  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
+1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
-2.  Développez **Bases de données**, la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , puis **Programmabilité**.  
+2.  Développez **Bases de données** , la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , puis **Programmabilité**.  
   
-3.  Cliquez avec le bouton droit sur **Procédures stockées**, puis cliquez sur **Nouvelle procédure stockée**.  
+3.  Cliquez avec le bouton droit sur **Procédures stockées** , puis cliquez sur **Nouvelle procédure stockée**.  
   
 4.  Dans le menu **Requête** , cliquez sur **Spécifier les valeurs des paramètres du modèle**.  
   
@@ -63,15 +62,15 @@ Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](.
     |Description|Retourne des données sur les employés.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar**(50)|  
+    |@Datatype_For_Param1|**nvarchar** (50)|  
     |Default_Value_For_Param1|NULL|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar**(50)|  
+    |@Datatype_For_Param2|**nvarchar** (50)|  
     |Default_Value_For_Param2|NULL|  
   
 6.  Cliquez sur **OK**.  
   
-7.  Dans l' **Éditeur de requête**, remplacez l'instruction SELECT par l'instruction suivante :  
+7.  Dans l' **Éditeur de requête** , remplacez l'instruction SELECT par l'instruction suivante :  
   
     ```sql  
     SELECT FirstName, LastName, Department  
@@ -96,7 +95,7 @@ Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](.
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour créer une procédure dans l'Éditeur de requête**  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans le menu **Fichier** , cliquez sur **Nouvelle requête**.  
   
@@ -132,7 +131,6 @@ Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](.
   
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
