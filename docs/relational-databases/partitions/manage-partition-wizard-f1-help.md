@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45cfba1078dbe72e09f760f24fc0c9f47c0c0b1f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 756dd29442fe224f5e0518066cbbfdcbf2ba5ea6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891019"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364671"
 ---
 # <a name="manage-partition-wizard"></a>Assistant Gestion de partition 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91891019"
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Pour démarrer l'Assistant Gestion de partition  
   
--   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], sélectionnez la base de données, cliquez avec le bouton droit sur la table sur laquelle vous souhaitez créer des partitions, pointez sur **Stockage**, puis cliquez sur **Gérer la partition**.  
+-   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], sélectionnez la base de données, cliquez avec le bouton droit sur la table sur laquelle vous souhaitez créer des partitions, pointez sur **Stockage** , puis cliquez sur **Gérer la partition**.  
   
      **Remarque** Si **Gérer la partition** n’est pas disponible, vous avez peut-être sélectionné une table qui ne contient pas de partitions. Cliquez sur **Créer la partition** dans le sous-menu **Stockage** et utilisez l’ **Assistant Création de partition** pour créer des partitions dans votre table.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "91891019"
 ### <a name="sliding-window-scenario"></a>Scénario de fenêtre glissante  
  Pour gérer vos partitions dans un scénario de fenêtre défilante, sélectionnez **Gérer les données partitionnées dans un scénario de fenêtre glissante**.  
   
-## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
+### <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
  **Créer une table intermédiaire pour le basculement de partition**  
  Crée une table intermédiaire pour les données que vous insérez ou extrayez dans la table partitionnée existante.  
   
@@ -95,24 +95,24 @@ ms.locfileid: "91891019"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Page Sélectionner les options d'insertion de partition  
  Utilisez la page **Sélectionner les options d’insertion de partition** pour sélectionner la table de mise en lots que vous insérez dans la table partitionnée.  
   
-## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
+### <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
  **Afficher toutes les partitions**  
  Sélectionnez cette option pour afficher toutes les partitions, notamment les partitions figurant actuellement dans la table partitionnée.  
   
  **Grille de partition**  
- Affiche le nom des partitions, ainsi que les informations **Limite gauche**, **Limite droite**, **Groupe de fichiers**et **Nombre de lignes** des partitions que vous avez sélectionnées.  
+ Affiche le nom des partitions, ainsi que les informations **Limite gauche** , **Limite droite** , **Groupe de fichiers** et **Nombre de lignes** des partitions que vous avez sélectionnées.  
   
  **Table d'insertion**  
- Sélectionnez la table intermédiaire qui contient la partition que vous souhaitez ajouter à votre table partitionnée. Vous devez créer cette table de mise en lots avec l’ **Assistant Gestion de partition**avant d’insérer des partitions.  
+ Sélectionnez la table intermédiaire qui contient la partition que vous souhaitez ajouter à votre table partitionnée. Vous devez créer cette table de mise en lots avec l’ **Assistant Gestion de partition** avant d’insérer des partitions.  
   
  ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Dans cette section](#Top)  
   
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Page Sélectionner les options d'extraction de partition  
  Utilisez la page **Sélectionner les options d’extraction de partition** pour sélectionner la partition et la table de mise en lots destinées à maintenir les données partitionnées que vous extrayez de la table partitionnée.  
   
-## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
+### <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
  **Grille de partition**  
- Affiche le nom des partitions, ainsi que les informations **Limite gauche**, **Limite droite**, **Groupe de fichiers**et **Nombre de lignes** des partitions que vous avez sélectionnées.  
+ Affiche le nom des partitions, ainsi que les informations **Limite gauche** , **Limite droite** , **Groupe de fichiers** et **Nombre de lignes** des partitions que vous avez sélectionnées.  
   
  **Table d'extraction**  
  Choisissez une nouvelle table ou une table existante vers laquelle extraire vos données.  
@@ -132,7 +132,7 @@ ms.locfileid: "91891019"
   
  Vous pouvez également créer les mêmes index dans la table intermédiaire que dans la partition source. La table intermédiaire contient automatiquement une contrainte basée sur les éléments de la partition source. Cette contrainte est généralement générée à partir de la valeur limite de la partition source.  
   
-## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
+### <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
  **Nom de la table intermédiaire**  
  Créez un nom pour la table intermédiaire ou acceptez le nom par défaut affiché dans la zone d'édition.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "91891019"
 ##  <a name="summary-page"></a><a name="Summary"></a> Page Résumé  
  Utilisez la page **Résumé** pour examiner les options que vous avez sélectionnées sur les pages précédentes.  
   
-## <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
+### <a name="ui-element-list"></a>Liste d’éléments d’interface utilisateur  
  **Vérifier vos sélections**  
  Affiche les choix que vous avez effectués pour chaque page de l'Assistant. Cliquez sur un nœud pour développer et afficher les options que vous avez sélectionnées précédemment.  
   
