@@ -51,11 +51,11 @@ ms.locfileid: "91869049"
   
 -   Extrêmement compact  
   
-     Le nombre moyen de bits nécessaires pour représenter un nœud dans une arborescence avec *n* nœuds dépend de la sortance moyenne (nombre moyen d’enfants d’un nœud). Pour les petites sortances (de 0 à 7), la taille est d’environ 6\*logA*n* bits, où A est la sortance moyenne. Un nœud dans une hiérarchie d'organisation de 100 000 personnes avec une sortance moyenne de 6 niveaux prend approximativement 38 bits. Ce chiffre est arrondi à 40 bits, ou 5 octets, pour le stockage.  
+     Le nombre moyen de bits nécessaires pour représenter un nœud dans une arborescence avec *n* nœuds dépend de la sortance moyenne (nombre moyen d’enfants d’un nœud). Pour les petites sortances (de 0 à 7), la taille est d’environ 6\*logA *n* bits, où A est la sortance moyenne. Un nœud dans une hiérarchie d'organisation de 100 000 personnes avec une sortance moyenne de 6 niveaux prend approximativement 38 bits. Ce chiffre est arrondi à 40 bits, ou 5 octets, pour le stockage.  
   
 -   La comparaison est effectuée dans l'ordre à profondeur prioritaire  
   
-     Étant donné deux valeurs **hierarchyid****a** et **b**, **a<b** signifie que a se situe avant b dans un parcours à profondeur prioritaire de l’arborescence. Les index sur les types de données **hierarchyid** sont dans l’ordre à profondeur prioritaire, et les nœuds proches les uns des autres dans un parcours à profondeur prioritaire sont stockés les uns à côté des autres. Par exemple, les enfants d'un enregistrement sont stockés à côté de cet enregistrement.  
+     Étant donné deux valeurs **hierarchyid****a** et **b** , **a<b** signifie que a se situe avant b dans un parcours à profondeur prioritaire de l’arborescence. Les index sur les types de données **hierarchyid** sont dans l’ordre à profondeur prioritaire, et les nœuds proches les uns des autres dans un parcours à profondeur prioritaire sont stockés les uns à côté des autres. Par exemple, les enfants d'un enregistrement sont stockés à côté de cet enregistrement.  
   
 -   Prise en charge des insertions et suppressions arbitraires  
   
@@ -109,7 +109,7 @@ GO
   
  Il se peut que la relation parent/enfant soit supérieure si les conditions suivantes sont réunies :  
   
--   La taille de la clé est essentielle. Pour le même nombre de nœuds, une valeur **hierarchyid** est égale ou supérieure à une valeur de famille d’entiers (**smallint**, **int**, **bigint**). Cela ne constitue une raison d’utiliser la relation parent/enfant que dans de rares cas, car la localité d’E/S et la complexité de l’UC de **hierarchyid** sont meilleures que celles des expressions de table communes requises quand vous utilisez une structure parent/enfant.  
+-   La taille de la clé est essentielle. Pour le même nombre de nœuds, une valeur **hierarchyid** est égale ou supérieure à une valeur de famille d’entiers ( **smallint** , **int** , **bigint** ). Cela ne constitue une raison d’utiliser la relation parent/enfant que dans de rares cas, car la localité d’E/S et la complexité de l’UC de **hierarchyid** sont meilleures que celles des expressions de table communes requises quand vous utilisez une structure parent/enfant.  
   
 -   Les requêtes portent rarement sur plusieurs sections de la hiérarchie. En d'autres termes, les requêtes portent habituellement sur un seul point de la hiérarchie. Dans ces cas, la co-location n'est pas importante. Par exemple, parent/enfant est supérieur lorsque la table d'organisation est utilisée uniquement pour le traitement des salaires d'employés individuels.  
   
@@ -513,7 +513,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Déplacement de sous-arborescences  
- Une autre opération courante concerne le déplacement de sous-arborescences. La procédure suivante prend la sous-arborescence de **\@oldMgr** pour en faire une sous-arborescence de **\@newMgr** (en y incluant **\@oldMgr**).  
+ Une autre opération courante concerne le déplacement de sous-arborescences. La procédure suivante prend la sous-arborescence de **\@oldMgr** pour en faire une sous-arborescence de **\@newMgr** (en y incluant **\@oldMgr** ).  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
