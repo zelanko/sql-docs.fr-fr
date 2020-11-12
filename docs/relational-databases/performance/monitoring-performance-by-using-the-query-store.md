@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 5b3a9151d07599661445eb3dfa20c9ef432e0719
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243430"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418021"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 
@@ -241,11 +241,13 @@ Les procédures stockées configurent le magasin de requêtes.
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::
+
+<sup>1</sup> dans les scénarios extrêmes Magasin des requêtes pouvez entrer un état ERREUR en raison d’erreurs internes. Depuis SQL Server 2017 (14.x), le cas échéant, le Magasin des requêtes peut être récupéré via l’exécution de la procédure stockée sp_query_store_consistency_check dans la base de données affectée. Pour plus d’informations sur la description de la colonne actual_state_desc, consultez [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
 ## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Principaux scénarios d’utilisation
 
