@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1cbf760c16d6de88906d03f511315ae6caec335
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 9b438bd466023844f7396a5ef71e9c8e0f916005
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811786"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384308"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnostiquer et résoudre la contention de latchs sur SQL Server
 
@@ -56,16 +56,16 @@ Une certaine contention de latchs doit être attendue comme faisant normalement 
 
 Les latchs sont acquis selon un parmi cinq modes différents, qui sont liés au niveau d’accès. Les modes de latch de SQL Server peuvent être résumés comme suit :
 
-* **KP** : Keep Latch (Latch de conservation), garantit que la structure référencée ne peut pas être détruite. Utilisé quand un thread veut examiner une structure de mémoire tampon. Comme le latch KP est compatible avec tous les latchs à l’exception du latch de destruction (DT), le latch KP est considéré comme « léger », ce qui signifie que son utilisation a un impact minimal sur les performances. Comme le latch KP n’est pas compatible avec le latch DT, il va empêcher tout autre thread de détruire la structure référencée. Par exemple, un latch KP va empêcher la structure qu’il référence d’être détruite par le processus d’écriture différée (lazywriter). Pour plus d’informations sur l’utilisation du processus d’écriture différée avec la gestion des pages de mémoire tampon de SQL Server, consultez [Écriture de pages](./writing-pages.md).
+* **KP**  : Keep Latch (Latch de conservation), garantit que la structure référencée ne peut pas être détruite. Utilisé quand un thread veut examiner une structure de mémoire tampon. Comme le latch KP est compatible avec tous les latchs à l’exception du latch de destruction (DT), le latch KP est considéré comme « léger », ce qui signifie que son utilisation a un impact minimal sur les performances. Comme le latch KP n’est pas compatible avec le latch DT, il va empêcher tout autre thread de détruire la structure référencée. Par exemple, un latch KP va empêcher la structure qu’il référence d’être détruite par le processus d’écriture différée (lazywriter). Pour plus d’informations sur l’utilisation du processus d’écriture différée avec la gestion des pages de mémoire tampon de SQL Server, consultez [Écriture de pages](./writing-pages.md).
 
-* **SH** : Shared Latch (Latch partagé), nécessaire pour lire une structure de page. 
+* **SH**  : Shared Latch (Latch partagé), nécessaire pour lire une structure de page. 
 * **UP** --Update Latch (Latch de mise à jour), est compatible avec SH (Latch partagé) et KP, mais pas avec les autres : il ne permet donc pas à un latch EX d’écrire dans la structure référencée. 
-* **EX** : Exclusive Latch (Latch exclusif), empêche les autres threads d’écrire ou de lire dans la structure référencée. Un exemple d’utilisation serait de modifier le contenu d’une page pour la protection de page endommagée. 
-* **DT** : Destroy Latch (Latch de destruction), doit être acquis avant de détruire le contenu de la structure référencée. Par exemple, un latch DT doit être acquis par le processus d’écriture différée pour libérer une page nettoyée avant de l’ajouter à la liste des mémoires tampons libres disponibles pour être utilisées par d’autres threads.
+* **EX**  : Exclusive Latch (Latch exclusif), empêche les autres threads d’écrire ou de lire dans la structure référencée. Un exemple d’utilisation serait de modifier le contenu d’une page pour la protection de page endommagée. 
+* **DT**  : Destroy Latch (Latch de destruction), doit être acquis avant de détruire le contenu de la structure référencée. Par exemple, un latch DT doit être acquis par le processus d’écriture différée pour libérer une page nettoyée avant de l’ajouter à la liste des mémoires tampons libres disponibles pour être utilisées par d’autres threads.
 
 Les modes de latch ont différents niveaux de compatibilité : par exemple, un latch partagé (SH) est compatible avec un latch de mise à jour (UP) ou de conservation (KP), mais il est incompatible avec un latch de destruction (DT). Plusieurs latchs peuvent être acquis simultanément sur la même structure tant que les latchs sont compatibles. Quand un thread tente d’acquérir un latch défini dans un mode qui n’est pas compatible, il est placé dans une file d’attente où il attend un signal indiquant que la ressource est disponible. Un verrou tournant de type SOS_Task est utilisé pour protéger la file d’attente en imposant un accès sérialisé à la file d’attente. Ce verrou tournant doit être acquis pour ajouter des éléments à la file d’attente. Le verrou tournant SOS_Task signale également aux threads dans la file d’attente quand des latchs incompatibles sont libérés, ce qui permet aux threads en attente d’acquérir un latch compatible et de continuer à travailler. La file d’attente est traitée sur une base FIFO (premier entré, premier sorti), au fil de la libération des demandes de latch. Les latchs utilisent ce système FIFO pour garantir l’équité et éviter la stagnation indéfinie des threads.
 
-La compatibilité des modes de latch est indiquée dans le tableau suivant (**O** indique la compatibilité et **N** indique l’incompatibilité) :
+La compatibilité des modes de latch est indiquée dans le tableau suivant ( **O** indique la compatibilité et **N** indique l’incompatibilité) :
 
 |Mode de latch |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
@@ -87,18 +87,18 @@ Utilisez l’objet **SQL Server:Latches** et les compteurs associés de l’Anal
 
 ## <a name="latch-wait-types"></a>Types d’attente des latchs
 
-Les informations sur les attentes cumulées sont suivies par SQL Server et sont accessibles via la vue de gestion dynamique *sys.dm_os_wait_stats*. SQL Server utilise trois types d’attente de latch tels que définis par le « wait_type » correspondant dans la vue de gestion dynamique *sys.dm_os_wait_stats* :
+Les informations sur les attentes cumulées sont suivies par SQL Server et sont accessibles via la vue de gestion dynamique *sys.dm_os_wait_stats*. SQL Server utilise trois types d’attente de latch tels que définis par le « wait_type » correspondant dans la vue de gestion dynamique *sys.dm_os_wait_stats*  :
 
-* **Latch de mémoire tampon (BUF) :**  : utilisé pour garantir la cohérence des pages d’index et de données pour les objets utilisateur. Ils sont également utilisés pour protéger l’accès aux pages de données que SQL Server utilise pour les objets système. Par exemple, les pages qui gèrent les allocations sont protégées par des latchs de mémoire tampon. Il s’agit des pages PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) et IAM (Index Allocation Map). Les latchs de mémoire tampon sont signalés dans *sys.dm_os_wait_stats* par le *wait_type* **PAGELATCH\_\*** .
+* **Latch de mémoire tampon (BUF) :**  : utilisé pour garantir la cohérence des pages d’index et de données pour les objets utilisateur. Ils sont également utilisés pour protéger l’accès aux pages de données que SQL Server utilise pour les objets système. Par exemple, les pages qui gèrent les allocations sont protégées par des latchs de mémoire tampon. Il s’agit des pages PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) et IAM (Index Allocation Map). Les latchs de mémoire tampon sont signalés dans *sys.dm_os_wait_stats* par le *wait_type* * *PAGELATCH\_\** _.
 
-* **Latch non-mémoire tampon (non-BUF) :**  : utilisé pour garantir la cohérence des structures en mémoire autres que les pages du pool de mémoires tampons. Les attentes pour les latchs non-mémoire tampon sont signalées par le *wait_type* **LATCH\_\*** .
+_ **Latch non-mémoire tampon (non-BUF) :**  : utilisé pour garantir la cohérence des structures en mémoire autres que les pages du pool de mémoires tampons. Les attentes pour les latchs non-mémoire tampon sont signalées par le *wait_type* * *LATCH\_\** _.
 
-* **Latch d’E/S :** un sous-ensemble de latchs de mémoire tampon qui garantissent la cohérence des mêmes structures protégées par des latchs de mémoire tampon quand ces structures nécessitent un chargement dans le pool de mémoires tampons avec une opération d’E/S. Les latchs d’E/S empêchent un autre thread de charger la même page dans le pool de mémoires tampons avec un latch incompatible. Associé à un *wait_type* **PAGEIOLATCH\_\*** .
+_ **Latch d’E/S :** un sous-ensemble de latchs de mémoire tampon qui garantissent la cohérence des mêmes structures protégées par des latchs de mémoire tampon quand ces structures nécessitent un chargement dans le pool de mémoires tampons avec une opération d’E/S. Les latchs d’E/S empêchent un autre thread de charger la même page dans le pool de mémoires tampons avec un latch incompatible. Associé à un *wait_type* * *PAGEIOLATCH\_\** _.
 
    > [!NOTE]
    > Si vous voyez une quantité significative d’attentes PAGEIOLATCH, cela signifie que SQL Server est en attente sur le sous-système d’E/S. Alors qu’une certaine quantité d’attentes PAGEIOLATCH est attendue ainsi qu’un comportement normal, si les temps d’attente PAGEIOLATCH moyens sont régulièrement au-dessus de 10 millisecondes (ms), vous devez rechercher la raison pour laquelle le sous-système d’E/S est sous pression.
 
-Si, en regardant la vue de gestion dynamique *sys.dm_os_wait_stats*, vous voyez des latchs non-mémoire tampon, vous devez examiner *sys.dm_os_latch_waits* pour obtenir une répartition détaillée des informations sur les attentes cumulées pour les latchs non-mémoire tampon. Toutes les attentes de latchs de mémoire tampon sont classifiées sous la classe de latch BUFFER, les autres étant utilisées pour classifier les verrous non-mémoire tampon.
+Si, en regardant la vue de gestion dynamique _sys.dm_os_wait_stats*, vous voyez des latchs non-mémoire tampon, vous devez examiner *sys.dm_os_latch_waits* pour obtenir une répartition détaillée des informations sur les attentes cumulées pour les latchs non-mémoire tampon. Toutes les attentes de latchs de mémoire tampon sont classifiées sous la classe de latch BUFFER, les autres étant utilisées pour classifier les verrous non-mémoire tampon.
 
 ## <a name="symptoms-and-causes-of-sql-server-latch-contention"></a>Symptômes et causes de la contention de latchs SQL Server
 
@@ -112,7 +112,7 @@ Dans le diagramme suivant, la ligne bleue représente le débit dans SQL Server,
 
 ### <a name="performance-when-latch-contention-is-resolved"></a>Performances quand la contention de latchs est résolue
 
-Comme le montre le diagramme suivant, SQL Server n’a plus de goulots d’étranglement sur les attentes de latchs de page et le débit est augmenté de 300 %, comme c’est mesuré par les transactions par seconde. Ceci a été accompli avec la technique consistant à **utiliser un partitionnement de hachage avec une colonne calculée**, qui est décrite plus loin dans cet article. Cette amélioration des performances est destinée aux systèmes avec un grand nombre de cœurs et un niveau élevé d’accès concurrentiels.
+Comme le montre le diagramme suivant, SQL Server n’a plus de goulots d’étranglement sur les attentes de latchs de page et le débit est augmenté de 300 %, comme c’est mesuré par les transactions par seconde. Ceci a été accompli avec la technique consistant à **utiliser un partitionnement de hachage avec une colonne calculée** , qui est décrite plus loin dans cet article. Cette amélioration des performances est destinée aux systèmes avec un grand nombre de cœurs et un niveau élevé d’accès concurrentiels.
 
 ![Améliorations du débit réalisées avec le partitionnement de hachage](./media/diagnose-resolve-latch-contention/image6.png)
 
@@ -163,54 +163,54 @@ Comme indiqué précédemment, la contention des latchs ne pose problème que si
 
 3. Déterminez la proportion de ceux qui sont liés aux latchs.
 
-Les informations d’attente cumulées sont disponibles dans la vue de gestion dynamique *sys.dm_os_wait_stats*. Le type le plus courant de contention de latchs est la contention de latchs de mémoire tampon, observée sous la forme d’une augmentation des temps d’attente pour les latchs avec un *wait_type* **PAGELATCH\_\*** . Les latchs non-mémoire tampon ont le type d’attente **LATCH\*** . Comme le montre le diagramme suivant, vous devez tout d’abord regarder le cumul des attentes au niveau du système en utilisant la vue de gestion dynamique *sys.dm_os_wait_stats* pour déterminer le pourcentage du temps d’attente global qui est dû aux latchs de mémoire tampon ou non-mémoire tampon. Si vous rencontrez des latchs non-mémoire tampon, la vue de gestion dynamique *sys.dm_os_latch_stats* doit également être examinée.
+Les informations d’attente cumulées sont disponibles dans la vue de gestion dynamique *sys.dm_os_wait_stats*. Le type le plus courant de contention de latchs est la contention de latchs de mémoire tampon, observée sous la forme d’une augmentation des temps d’attente pour les latchs avec un *wait_type* * *PAGELATCH\_\** _. Les latchs non-mémoire tampon ont le type d’attente _*LATCH\**_. Comme le montre le diagramme suivant, vous devez tout d’abord regarder le cumul des attentes au niveau du système en utilisant la vue de gestion dynamique _sys.dm_os_wait_stats* pour déterminer le pourcentage du temps d’attente global qui est dû aux latchs de mémoire tampon ou non-mémoire tampon. Si vous rencontrez des latchs non-mémoire tampon, la vue de gestion dynamique *sys.dm_os_latch_stats* doit également être examinée.
 
 Le diagramme suivant décrit la relation entre les informations retournées par les vues de gestion dynamiques *sys.dm_os_wait_stats* et *sys.dm_os_latch_stats*.
 
 ![Attentes de verrou interne](./media/diagnose-resolve-latch-contention/image7.png)
 
-Pour plus d’informations sur la vue de gestion dynamique *sys.dm_os_wait_stats*, consultez [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) dans l’aide de SQL Server.
+Pour plus d’informations sur la vue de gestion dynamique *sys.dm_os_wait_stats* , consultez [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) dans l’aide de SQL Server.
 
-Pour plus d’informations sur la vue de gestion dynamique *sys.dm_os_latch_stats*, consultez [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) dans l’aide de SQL Server.
+Pour plus d’informations sur la vue de gestion dynamique *sys.dm_os_latch_stats* , consultez [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) dans l’aide de SQL Server.
 
 Les mesures suivantes de temps d’attente de latchs sont des indicateurs d’une contention excessive des latchs affectant les performances de l’application :
 
-* **Le temps d’attente moyen des latchs de page augmente uniformément avec le débit** : Si les temps d’attente moyens des latchs de page augmentent uniformément avec le débit et si les temps d’attente moyens des latchs de mémoire tampon augmentent également au-delà des temps de réponse de disque attendus, vous devez examiner les tâches en attente actives en utilisant la vue de gestion dynamique *sys.dm_os_waiting_tasks*. Les moyennes peuvent être trompeuses si elles sont analysées isolément : il est donc important d’examiner le système en activité quand c’est possible pour comprendre les caractéristiques de la charge de travail. En particulier, vérifiez s’il y a des temps d’attente élevés sur les demandes PAGELATCH_EX et/ou PAGELATCH_SH sur des pages. Suivez ces étapes pour diagnostiquer une augmentation des temps d’attente moyens des latchs de page avec le débit :
+* **Le temps d’attente moyen des latchs de page augmente uniformément avec le débit**  : Si les temps d’attente moyens des latchs de page augmentent uniformément avec le débit et si les temps d’attente moyens des latchs de mémoire tampon augmentent également au-delà des temps de réponse de disque attendus, vous devez examiner les tâches en attente actives en utilisant la vue de gestion dynamique *sys.dm_os_waiting_tasks*. Les moyennes peuvent être trompeuses si elles sont analysées isolément : il est donc important d’examiner le système en activité quand c’est possible pour comprendre les caractéristiques de la charge de travail. En particulier, vérifiez s’il y a des temps d’attente élevés sur les demandes PAGELATCH_EX et/ou PAGELATCH_SH sur des pages. Suivez ces étapes pour diagnostiquer une augmentation des temps d’attente moyens des latchs de page avec le débit :
 
    * Utilisez les exemples de scripts [Interroger sys.dm_os_waiting_tasks triés par ID de session](#waiting-tasks-script1) ou [Calculer les temps d’attente sur une période de temps](#calculate-waits-over-a-time-period) pour examiner les tâches actives en attente et mesurer le temps d’attente moyen des latchs. 
    * Utilisez l’exemple de script [Interroger les descripteurs de mémoire tampon pour déterminer les objets à l’origine de la contention de latchs](#query-buffer-descriptors) pour déterminer l’index et la table sous-jacente sur laquelle la contention se produit. 
    * Mesurez le temps d’attente moyen des latchs de page avec le compteur **MSSQL%nom_instance%\\Statistiques d’attente\\Attente de latchs de pages\\Temps d’attente moyen** de l’Analyseur de performances ou en exécutant la vue de gestion dynamique *sys.dm_os_wait_stats*.
 
    > [!NOTE]
-   > Pour calculer le temps d’attente moyen pour un type d’attente particulier (retourné par *sys.dm_os_wait_stats* en tant que *wt_:type*), divisez le temps d’attente total (retourné en tant que *wait_time_ms*) par le nombre de tâches en attente (retournées en tant que *waiting_tasks_count*).
+   > Pour calculer le temps d’attente moyen pour un type d’attente particulier (retourné par *sys.dm_os_wait_stats* en tant que *wt_:type* ), divisez le temps d’attente total (retourné en tant que *wait_time_ms* ) par le nombre de tâches en attente (retournées en tant que *waiting_tasks_count* ).
 
-* **Pourcentage du temps d’attente total passé sur des types d’attente de latch pendant les pics de charge**: Si le temps d’attente moyen des latchs exprimé sous forme de pourcentage du temps d’attente global augmente de façon linéaire avec la charge de l’application, cela signifie que la contention de latchs peut affecter les performances et qu’il faut l’examiner.
+* **Pourcentage du temps d’attente total passé sur des types d’attente de latch pendant les pics de charge** : Si le temps d’attente moyen des latchs exprimé sous forme de pourcentage du temps d’attente global augmente de façon linéaire avec la charge de l’application, cela signifie que la contention de latchs peut affecter les performances et qu’il faut l’examiner.
 
    Mesurez les temps d’attente des latchs de page et les temps d’attente des latchs de non-page avec les compteurs de performances de [SQLServer - Objet Statistiques d’attente](./performance-monitor/sql-server-wait-statistics-object.md). Ensuite, comparez les valeurs de ces compteurs de performances aux compteurs de performance associés au processeur, aux E/S, à la mémoire et au débit réseau. Par exemple, Transactions/s et Nombre de requêtes de lots/s sont deux bonnes mesures d’utilisation des ressources.
 
    > [!NOTE]
-   > Le temps d’attente relatif pour chaque type d’attente n’est pas inclus dans la vue de gestion dynamique *sys.dm_os_wait_stats*, car celle-ci mesure les temps d’attente depuis le dernier démarrage de l’instance SQL Server ou les statistiques des temps d’attente cumulés ont été réinitialisées avec DBCC SQLPERF. Pour calculer le temps d’attente relatif pour chaque type d’attente, prenez un instantané de *sys.dm_os_wait_stats* avant le pic de charge et après le pic de charge, puis calculez la différence. L’exemple de script [Calculer les temps d’attente sur une période de temps](#calculate-waits-over-a-time-period) peut être utilisé à cette fin.
+   > Le temps d’attente relatif pour chaque type d’attente n’est pas inclus dans la vue de gestion dynamique *sys.dm_os_wait_stats* , car celle-ci mesure les temps d’attente depuis le dernier démarrage de l’instance SQL Server ou les statistiques des temps d’attente cumulés ont été réinitialisées avec DBCC SQLPERF. Pour calculer le temps d’attente relatif pour chaque type d’attente, prenez un instantané de *sys.dm_os_wait_stats* avant le pic de charge et après le pic de charge, puis calculez la différence. L’exemple de script [Calculer les temps d’attente sur une période de temps](#calculate-waits-over-a-time-period) peut être utilisé à cette fin.
 
    Pour un **environnement de non-production** uniquement, effacez la vue de gestion dynamique *sys.dm_os_wait_stats* avec la commande suivante :
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_wait_stats', 'CLEAR')
    ```
-   Une commande similaire peut être exécutée pour effacer la vue de gestion dynamique *sys.dm_os_latch_stats* :
+   Une commande similaire peut être exécutée pour effacer la vue de gestion dynamique *sys.dm_os_latch_stats*  :
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_latch_stats', 'CLEAR')
    ```
 
-* **Le débit n’augmente pas et dans certains cas, il diminue, à mesure que la charge de l’application augmente et que le nombre de processeurs disponibles pour SQL Server augmente** : Ceci a été illustré dans l’[Exemple de contention de latchs](#example-of-latch-contention).
+* **Le débit n’augmente pas et dans certains cas, il diminue, à mesure que la charge de l’application augmente et que le nombre de processeurs disponibles pour SQL Server augmente**  : Ceci a été illustré dans l’ [Exemple de contention de latchs](#example-of-latch-contention).
 
-* **L’utilisation du processeur n’augmente pas à mesure que la charge de travail de l’application augmente** : Si l’utilisation du processeur sur le système n’augmente pas à mesure que les accès concurrentiels induits par le débit de l’application augmentent, cela indique que SQL Server est en attente de quelque chose et que c’est symptomatique d’une contention de latchs.
+* **L’utilisation du processeur n’augmente pas à mesure que la charge de travail de l’application augmente**  : Si l’utilisation du processeur sur le système n’augmente pas à mesure que les accès concurrentiels induits par le débit de l’application augmentent, cela indique que SQL Server est en attente de quelque chose et que c’est symptomatique d’une contention de latchs.
 
 Cause racine possible. Même si chacune des conditions précédentes est vraie, il est toujours possible que la cause racine des problèmes de performances se trouve ailleurs. En fait, dans la majorité des cas, une utilisation non optimale du processeur est causée par d’autres types d’attentes, comme le blocage sur des verrous, des attentes liées aux E/S ou des problèmes liés au réseau. En règle générale, il est toujours préférable de résoudre le problème de l’attente de ressources, qui représente la plus grande part du temps d’attente global avant de procéder à une analyse plus approfondie.
 
 ## <a name="analyzing-current-wait-buffer-latches"></a>Analyse des latchs de mémoire tampon d’attente actuels
 
-La contention de latchs de mémoire tampon se manifeste sous la forme d’une augmentation des temps d’attente pour les latchs avec un *wait_type* **PAGELATCH\_\*** ou **PAGEIOLATCH\_\*** , comme indiqué dans la vue de gestion dynamique *sys.dm_os_wait_stats*. Pour examiner le système en temps réel, exécutez la requête suivante sur un système pour joindre les vues de gestion dynamiques *sys.dm_os_wait_stats*, *sys.dm_exec_sessions* et *sys.dm_exec_requests*. Les résultats peuvent être utilisés pour déterminer le type d’attente actuel pour les sessions qui s’exécutent sur le serveur.
+La contention de latchs de mémoire tampon se manifeste sous la forme d’une augmentation des temps d’attente pour les latchs avec un *wait_type* * *PAGELATCH\_\** _ ou _*PAGEIOLATCH\_\**_ , comme indiqué dans la vue de gestion dynamique _sys.dm_os_wait_stats*. Pour examiner le système en temps réel, exécutez la requête suivante sur un système pour joindre les vues de gestion dynamiques *sys.dm_os_wait_stats* , *sys.dm_exec_sessions* et *sys.dm_exec_requests*. Les résultats peuvent être utilisés pour déterminer le type d’attente actuel pour les sessions qui s’exécutent sur le serveur.
 
 ```sql
 SELECT wt.session_id, wt.wait_type
@@ -482,7 +482,7 @@ Le partitionnement de table dans SQL Server peut être utilisé pour limiter une
    > [!NOTE]
    > Un alignement 1:1 du nombre de partitions sur le nombre de cœurs de processeur n’est pas toujours nécessaire. Dans de nombreux cas, il peut s’agir d’une valeur inférieure au nombre de cœurs de processeur. Le fait de disposer d’un plus grand nombre de partitions peut entraîner une charge plus importante pour les requêtes, qui doivent effectuer une recherche dans toutes les partitions : dans ce cas, un nombre moins élevé de partitions va aider. Dans les tests de SQLCAT sur les systèmes de 64 et 128 processeurs logiques avec des charges de travail de clients réelles, un nombre de 32 partitions a été suffisant pour résoudre la contention excessive de latchs et pour atteindre les objectifs de mise à l’échelle. Au final, le nombre idéal de partitions doit être déterminé via des tests. 
 
-4. Utilisez la commande **CREATE PARTITION SCHEME** :
+4. Utilisez la commande **CREATE PARTITION SCHEME**  :
 
    * Liez la fonction de partition aux groupes de fichiers. 
    * Ajoutez une colonne de hachage de type tinyint ou smallint à la table. 
