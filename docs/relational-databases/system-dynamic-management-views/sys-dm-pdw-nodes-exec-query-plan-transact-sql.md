@@ -13,17 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ec94a367ca0cc9bb354fd35cbc214d8e83ede584
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 06c5acb9480f52d0cadf84c54aa39bbc9bae12d9
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059530"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584933"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.pdw_nodes_dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Retourne le plan d'exécution de requêtes au format XML pour le traitement spécifié par le descripteur de plan. Le plan spécifié par le descripteur de plan peut être en cache ou en cours d'exécution.  
+
+> [!note] 
+> Dans Synapse SQL, l’ajout d’espaces blancs dans une requête constitue une modification de requête qui permet de recalculer le hachage de la requête et de ne pas réutiliser le plan d’exécution mis en cache précédent.
+
 
 ## <a name="table-returned"></a>Table retournée  
   
@@ -42,7 +46,7 @@ Les mêmes remarques dans [sys.dm_exec_query_plan](./sys-dm-exec-query-plan-tran
 ## <a name="permissions"></a>Autorisations  
  Exiger un rôle de serveur **sysadmin** ou une `VIEW SERVER STATE` autorisation sur le serveur.  
   
-## <a name="see-also"></a>Voir également  
+## <a name="see-also"></a>Voir aussi  
  [Azure Synapse Analytics et les vues de gestion dynamique Parallel Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
  ## <a name="next-steps"></a>Étapes suivantes

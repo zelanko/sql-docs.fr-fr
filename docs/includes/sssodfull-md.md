@@ -1,1 +1,1 @@
-Bonnes pratiques concernant SQL à la demande (préversion) dans Azure Synapse Analytics
+Pool SQL serverless (préversion) dans Azure Synapse Analytics

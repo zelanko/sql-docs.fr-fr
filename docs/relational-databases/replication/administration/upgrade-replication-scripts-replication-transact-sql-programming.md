@@ -21,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b08199f3cbc0d0ae87b5902600188908dac6615d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923438"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364686"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Mettre à niveau les scripts de réplication (programmation Transact-SQL de la réplication)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "86923438"
   
  Ces améliorations de sécurité, qui offrent un contrôle accru sur les autorisations en vous permettant de spécifier explicitement les comptes Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sous lesquels les travaux de l'Agent de réplication sont exécutés, affectent les procédures stockées suivantes dans les scripts existants :  
   
--   **sp_addpublication_snapshot**:  
+-   **sp_addpublication_snapshot** :  
   
      Vous devez maintenant fournir les informations d’identification Windows comme `@job_login` et `@job_password` lors de l’exécution de [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) pour créer le travail sous lequel l’Agent d’instantané s’exécute sur le serveur de distribution.  
   
--   **sp_addpushsubscription_agent**:  
+-   **sp_addpushsubscription_agent** :  
   
      Vous devez maintenant exécuter [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) pour ajouter un travail explicitement et fournir les informations d’identification Windows (`@job_login` et `@job_password`) sous lesquelles le travail de l’Agent de distribution s’exécute sur le serveur de distribution. Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ces actions étaient exécutées automatiquement lors de la création d'un abonnement par émission de données.  
   
--   **sp_addmergepushsubscription_agent**:  
+-   **sp_addmergepushsubscription_agent** :  
   
      Vous devez maintenant exécuter [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) pour ajouter un travail explicitement et fournir les informations d’identification Windows (`@job_login` et `@job_password`) sous lesquelles le travail de l’Agent de fusion s’exécute sur le serveur de distribution. Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ces actions étaient exécutées automatiquement lors de la création d'un abonnement par émission de données.  
   
--   **sp_addpullsubscription_agent**:  
+-   **sp_addpullsubscription_agent** :  
   
      Vous devez maintenant fournir les informations d’identification Windows comme `@job_login` et `@job_password` lors de l’exécution de [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) pour créer le travail sous lequel l’Agent de distribution s’exécute sur l’Abonné.  
   
--   **sp_addmergepullsubscription_agent**:  
+-   **sp_addmergepullsubscription_agent** :  
   
      Vous devez maintenant fournir les informations d’identification Windows comme `@job_login` et `@job_password` lors de l’exécution de [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) pour créer le travail sous lequel l’Agent de fusion s’exécute sur l’abonné.  
   
--   **sp_addlogreader_agent**:  
+-   **sp_addlogreader_agent** :  
   
      Vous devez maintenant exécuter [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) pour ajouter manuellement le travail et fournir les informations d’identification Windows sous lesquelles l’Agent de lecture du journal s’exécute sur le serveur de distribution. Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ces actions étaient exécutées automatiquement lors de la création d'une publication transactionnelle.  
   
--   **sp_addqreader_agent**:  
+-   **sp_addqreader_agent** :  
   
      Vous devez maintenant exécuter [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) pour ajouter manuellement le travail et fournir les informations d’identification Windows sous lesquelles l’Agent de lecture de la file d’attente s’exécute sur le serveur de distribution. Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ces actions étaient exécutées automatiquement lors de la création d'une publication transactionnelle prenant en charge la mise à jour en file d'attente.  
   
@@ -112,12 +112,15 @@ ms.locfileid: "86923438"
   
     -   Pour un abonnement par émission de données, exécutez [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) sur le serveur de publication. Spécifiez `@subscriber`, `@subscriber_db`, `@publication` et les informations d’identification Windows sous lesquelles l’Agent de fusion s’exécute sur le serveur de distribution pour `@job_name` et `@job_password`, ainsi que la planification du travail de l’agent. Pour plus d’informations, consultez [Spécifier des planifications de synchronisation](../../../relational-databases/replication/specify-synchronization-schedules.md). Cette opération s'effectue après l'exécution de [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../../relational-databases/replication/create-a-push-subscription.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="examples"></a>Exemples  
+
+### <a name="a-sql-server-2000-script-to-create-a-transactional-publication"></a>R. Script SQL Server 2000 pour créer une publication transactionnelle
+
  Ce qui suit est un exemple de script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] créant une publication transactionnelle pour la table Product. Cette publication prend en charge la mise à jour immédiate avec la mise à jour en file d'attente comme basculement. Les paramètres par défaut ont été supprimés pour des raisons de lisibilité.  
   
  [!code-sql[HowTo#sp_createtranpub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_1.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="b-sql-server-2005-and-later-script-to-create-a-transactional-publication"></a>B. Script SQL Server 2005 et ultérieur pour créer une publication transactionnelle
  Ce qui suit est un exemple de mise à niveau du précédent script, lequel crée une publication transactionnelle, pour qu'il s'exécute avec succès sous [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures. Cette publication prend en charge la mise à jour immédiate avec la mise à jour en file d'attente comme basculement. Les valeurs par défaut des nouveaux paramètres ont été déclarées explicitement.  
   
 > [!NOTE]  
@@ -125,12 +128,12 @@ ms.locfileid: "86923438"
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_2.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="c-sql-server-2000-script-to-create-a-merge-publication"></a>C. Script SQL Server 2000 pour créer une publication de fusion
  Ce qui suit est un exemple de script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] qui crée une publication de fusion pour la table Customers. Les paramètres par défaut ont été supprimés pour des raisons de lisibilité.  
   
  [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_3.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="d-sql-server-2005-and-later-script-to-create-a-merge-publication"></a>D. Script SQL Server 2005 et ultérieur pour créer une publication de fusion
  Ce qui suit est un exemple de mise à niveau du précédent script, lequel crée une publication de fusion, pour qu'il s'exécute avec succès sous [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures. Les valeurs par défaut des nouveaux paramètres ont été déclarées explicitement.  
   
 > [!NOTE]  
@@ -138,12 +141,12 @@ ms.locfileid: "86923438"
   
  [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_4.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="e-sql-server-2000-script-to-create-a-push-subscription-to-a-transactional-publication"></a>E. Script SQL Server 2000 pour créer un abonnement par émission de données à une publication transactionnelle
  Ce qui suit est un exemple de script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] qui crée un abonnement par émission de données à une publication transactionnelle. Les paramètres par défaut ont été supprimés pour des raisons de lisibilité.  
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_5.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="f-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-transactional-publication"></a>F. Script SQL Server 2005 et ultérieur pour créer un abonnement par émission de données à une publication transactionnelle
  Ce qui suit est un exemple de mise à niveau du précédent script, lequel crée un abonnement par émission de données à une publication transactionnelle, pour qu'il s'exécute avec succès sous [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures. Les valeurs par défaut des nouveaux paramètres ont été déclarées explicitement.  
   
 > [!NOTE]  
@@ -151,12 +154,12 @@ ms.locfileid: "86923438"
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_6.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="g-sql-server-2000-script-to-create-a-push-subscription-to-a-merge-publication"></a>G. Script SQL Server 2000 pour créer un abonnement par émission de données à une publication de fusion
  Ce qui suit est un exemple de script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] qui crée un abonnement par émission de données à une publication de fusion. Les paramètres par défaut ont été supprimés pour des raisons de lisibilité.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="h-sql-server-2005-and-later-script-to-create-a-push-subscription-to-a-merge-publication"></a>H. Script SQL Server 2005 et ultérieur pour créer un abonnement par émission de données à une publication de fusion
  Ce qui suit est un exemple de mise à niveau du précédent script, lequel crée un abonnement par émission de données à une publication de fusion, pour qu'il s'exécute avec succès sous [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures. Les valeurs par défaut des nouveaux paramètres ont été déclarées explicitement.  
   
 > [!NOTE]  
@@ -164,12 +167,12 @@ ms.locfileid: "86923438"
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_8.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="i-sql-server-2000-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>I. Script SQL Server 2000 pour créer un abonnement par extraction à une publication transactionnelle
  Ce qui suit est un exemple de script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] qui crée un abonnement par extraction à une publication transactionnelle. Les paramètres par défaut ont été supprimés pour des raisons de lisibilité.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="j-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-transactional-publication"></a>J. Script SQL Server 2005 et ultérieur pour créer un abonnement par extraction à une publication transactionnelle
  Ce qui suit est un exemple de mise à niveau du précédent script, lequel crée un abonnement par extraction à une publication transactionnelle, pour qu'il s'exécute avec succès sous [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures. Les valeurs par défaut des nouveaux paramètres ont été déclarées explicitement.  
   
 > [!NOTE]  
@@ -177,12 +180,12 @@ ms.locfileid: "86923438"
   
  [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_9.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="k-sql-server-2000-script-to-create-a-pull-subscription-to-a-merge-publication"></a>K. Script SQL Server 2000 pour créer un abonnement par extraction à une publication de fusion
  Ce qui suit est un exemple de script [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] qui crée un abonnement par extraction à une publication de fusion. Les paramètres par défaut ont été supprimés pour des raisons de lisibilité.  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_10.sql)]  
   
-## <a name="example"></a>Exemple  
+### <a name="l-sql-server-2005-and-later-script-to-create-a-pull-subscription-to-a-merge-publication"></a>L. Script SQL Server 2005 et ultérieur pour créer un abonnement par extraction à une publication de fusion
  Ce qui suit est un exemple de mise à niveau du précédent script, lequel crée un abonnement par extraction à une publication de fusion, pour qu'il s'exécute avec succès sous [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures. Les valeurs par défaut des nouveaux paramètres ont été déclarées explicitement.  
   
 > [!NOTE]  

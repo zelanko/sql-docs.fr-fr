@@ -6,7 +6,7 @@
   href: sql-server/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: What's New
+    - name: Nouveautés
       items:
         - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -2731,10 +2731,10 @@
           items:
             - name: "Que sont les extensions de langage\_?"
               href: language-extensions/language-extensions-overview.md
+            - name: "Qu’est-ce que l’Extension de langage Java\_?"
+              href: language-extensions/java-overview.md
             - name: Nouveautés
               href: language-extensions/language-extensions-whats-new.md
-            - name: Vue d’ensemble de l’extension du langage Java
-              href: language-extensions/java-overview.md
         - name: Installer
           items:
             - name: Installer les extensions de langage sur Windows

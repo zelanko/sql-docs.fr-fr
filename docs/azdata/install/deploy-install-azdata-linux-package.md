@@ -8,12 +8,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f248978e09be4670d702805873a5ae6f4f7c9de
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 4508db56c0246f181f9244fe0a3b853a3e91eb24
+ms.sourcegitcommit: 4b7ecc080795c5f90322d60df5c0550884f48140
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257462"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334448"
 ---
 # <a name="install-azure-data-cli-azdata-with-apt"></a>Installer [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] avec apt
 
@@ -28,7 +28,7 @@ Pour les distributions Linux avec `apt` il existe un package pour le `azdata-cli
 ## <a name="install-with-apt"></a>Installer avec apt
 
 >[!IMPORTANT]
-> Le package RPM de `azdata-cli` dépend du package python3. Sur votre système, il doit s’agir d’une version Python antérieure à l’exigence de *Python 3.6.x* . Si cela vous pose un problème, recherchez un remplacement au package python3 ou suivez les instructions d’installation manuelle qui utilisent [`pip`](../install/deploy-install-azdata-pip.md).
+> Le package RPM de `azdata-cli` dépend du package python3. Sur votre système, il doit s’agir d’une version Python antérieure à l’exigence de *Python 3.6.x*. Si cela vous pose un problème, recherchez un remplacement au package python3 ou suivez les instructions d’installation manuelle qui utilisent [`pip`](../install/deploy-install-azdata-pip.md).
 
 1. Installez les dépendances nécessaires pour installer `azdata-cli`.
 
@@ -62,7 +62,7 @@ Pour les distributions Linux avec `apt` il existe un package pour le `azdata-cli
    Pour le client Ubuntu 20.04, exécutez :
 
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)"
     ```
 
 4. Installez `azdata-cli`.

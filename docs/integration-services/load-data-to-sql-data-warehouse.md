@@ -1,6 +1,6 @@
 ---
-title: Chargement de données dans Azure Synapse Analytics avec SQL Server Integration Services (SSIS) | Microsoft Docs
-description: Montre comment créer un package SQL Server Integration Services (SSIS) pour déplacer des données dans Azure Synapse Analytics à partir d’un large éventail de sources de données.
+title: Chargement de données dans Azure Synapse Analytics avec SQL Server Integration Services (SSIS)
+description: Montre comment créer un package SQL Server Integration Services (SSIS) pour déplacer des données dans un pool SQL dédié dans Azure Synapse Analytics à partir d’un large éventail de sources de données.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,20 +10,18 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 3cd591bd087170e6f5a6329c4411b2674d19b4f3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7b582e5722b19db3569aaa0f154f5b78864a2838
+ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192499"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93328498"
 ---
-# <a name="load-data-into-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>Chargement de données dans Azure Synapse Analytics avec SQL Server Integration Services (SSIS)
+# <a name="load-data-into-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>Charger des données dans un pool SQL dédié dans Azure Synapse Analytics avec SQL Server Integration Services (SSIS)
 
-[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[asa](../includes/applies-to-version/asa.md)]
 
-
-
-Créez un package SQL Server Integration Services (SSIS) pour charger des données dans [Azure Synapse Analytics](/azure/sql-data-warehouse/index). Vous pouvez éventuellement restructurer, transformer et nettoyer les données qui traversent le flux de données SSIS.
+Créez un package SSIS (SQL Server Integration Services) pour charger des données dans un pool SQL dédié dans Azure Synapse Analytics](/azure/sql-data-warehouse/index). Vous pouvez éventuellement restructurer, transformer et nettoyer les données qui traversent le flux de données SSIS.
 
 Cet article vous montre comment effectuer les opérations suivantes :
 
@@ -41,8 +39,8 @@ La présentation détaillée de SSIS dépasse le cadre de cet article. Pour en s
 
 - [SSIS : comment créer un package ETL](ssis-how-to-create-an-etl-package.md)
 
-## <a name="options-for-loading-data-into-sql-data-warehouse-with-ssis"></a>Options de chargement des données dans SQL Data Warehouse avec SSIS
-SQL Server Integration Services (SSIS) est un ensemble d’outils flexible qui fournit diverses options pour la connexion et le chargement de données dans SQL Data Warehouse.
+## <a name="options-for-loading-data-into-azure-synapse-analytics-with-ssis"></a>Options de chargement de données dans Azure Synapse Analytics avec SSIS
+SQL Server Integration Services (SSIS) est un ensemble d’outils flexible qui fournit diverses options pour se connecter à Azure Synapse Analytics et y charger des données.
 
 1. La méthode recommandée, qui offre des performances optimales, consiste à créer un package qui utilise la [tâche de chargement Azure SQL DW](control-flow/azure-sql-dw-upload-task.md) pour charger les données. Cette tâche encapsule à la fois les informations sur la source et la destination. Elle suppose que vos données sources sont stockées localement dans des fichiers texte délimité.
 
@@ -54,19 +52,19 @@ Pour exécuter pas à pas ce tutoriel, vous avez besoin des éléments suivants 
 1. **SQL Server Integration Services (SSIS)** . SSIS est un composant de SQL Server et requiert une version sous licence, ou la version de développeur ou d’évaluation, de SQL Server. Pour obtenir une version d’évaluation de SQL Server, consultez [Évaluer SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (facultatif). Pour obtenir l’édition Visual Studio Community gratuite, consultez [Visual Studio Community][Visual Studio Community]. Si vous ne souhaitez pas installer Visual Studio, vous pouvez installer uniquement SSDT (SQL Server Data Tools). SSDT installe une version de Visual Studio avec des fonctionnalités limitées.
 3. **SQL Server Data Tools pour Visual Studio (SSDT)** . Pour obtenir SQL Server Data Tools pour Visual Studio, consultez [Télécharger SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **Une base de données Azure Synapse Analytics et des autorisations** . Dans ce didacticiel, vous vous connectez à une instance SQL Data Warehouse et y chargez des données. Vous devez disposer des autorisations pour vous connecter, créer une table et charger des données.
+4. **Une base de données Azure Synapse Analytics et des autorisations**. Ce tutoriel se connecte à un pool SQL dédié dans l’instance Azure Synapse Analytics et y charge des données. Vous devez disposer des autorisations pour vous connecter, créer une table et charger des données.
 
 ## <a name="create-a-new-integration-services-project"></a>Créer un projet Integration Services
 1. Lancez Visual Studio.
-2. Dans le menu **Fichier** , sélectionnez **Nouveau | Projet** .
-3. Accédez aux types de projet **Installé | Modèles | Business Intelligence | Integration Services** .
-4. Sélectionnez **Projet Integration Services** . Fournissez des valeurs pour **Nom** et **Emplacement** , puis sélectionnez **OK** .
+2. Dans le menu **Fichier** , sélectionnez **Nouveau | Projet**.
+3. Accédez aux types de projet **Installé | Modèles | Business Intelligence | Integration Services**.
+4. Sélectionnez **Projet Integration Services**. Fournissez des valeurs pour **Nom** et **Emplacement** , puis sélectionnez **OK**.
 
 Visual Studio s’ouvre et crée un nouveau projet Integration Services (SSIS). Ensuite, Visual Studio ouvre le concepteur pour le nouveau package SSIS individuel (Package.dtsx) dans le projet. Vous voyez les zones d’écran suivantes :
 
 * À gauche, la **boîte à outils** des composants SSIS.
-* Au milieu, l’aire de conception avec plusieurs onglets. Vous utilisez généralement au moins les onglets **Flux de contrôle** et **Flux de données** .
-* À droite, les volets **Explorateur de solutions** et **Propriétés** .
+* Au milieu, l’aire de conception avec plusieurs onglets. Vous utilisez généralement au moins les onglets **Flux de contrôle** et **Flux de données**.
+* À droite, les volets **Explorateur de solutions** et **Propriétés**.
   
     ![Capture d’écran de Visual Studio montrant le volet Boîte à outils, le volet de conception, le volet Explorateur de solutions et le volet Propriétés.][01]
 
@@ -80,13 +78,13 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
 
 - [Microsoft SQL Server Integration Services Feature Pack pour Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. La tâche de chargement SQL DW est un composant de Feature Pack.
 
-- Compte de [stockage Blob Azure](/azure/storage/). La tâche de chargement SQL DW charge des données du Stockage Blob Azure dans Azure Synapse Analytics. Vous pouvez charger des fichiers qui se trouvent déjà dans Stockage Blob ou vous pouvez charger des fichiers à partir de votre ordinateur. Si vous sélectionnez des fichiers sur votre ordinateur, la tâche de chargement SQL DW les charge d’abord sur Stockage Blob pour la mise en lots, puis les charge sur SQL Data Warehouse.
+- Compte de [stockage Blob Azure](https://docs.microsoft.com/azure/storage/). La tâche de chargement SQL DW charge des données du Stockage Blob Azure dans Azure Synapse Analytics. Vous pouvez charger des fichiers qui se trouvent déjà dans Stockage Blob ou vous pouvez charger des fichiers à partir de votre ordinateur. Si vous sélectionnez des fichiers sur votre ordinateur, la tâche de chargement SQL DW les charge d’abord sur Stockage Blob pour la mise en lots, puis les charge dans votre pool SQL dédié.
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>Ajouter et configurer la tâche de chargement SQL DW
 
 1. Faites glisser une tâche de chargement SQL DW de la boîte à outils jusqu’au centre de l’aire de conception (sous l’onglet **Flux de contrôle** ).
 
-2. Double-cliquez sur la tâche pour ouvrir **l’éditeur de tâche de chargement SQL DW** .
+2. Double-cliquez sur la tâche pour ouvrir **l’éditeur de tâche de chargement SQL DW**.
 
     ![Page Général de l’éditeur de tâche de chargement SQL DW](media/load-data-to-sql-data-warehouse/azure-sql-dw-upload-task-editor.png)
 
@@ -98,7 +96,7 @@ Pour plus de contrôle, vous pouvez créer manuellement un package qui émule le
 
 1. Utilisez la tâche de chargement d'objet blob Azure pour effectuer une copie intermédiaire des données dans Stockage Blob Azure. Pour obtenir la tâche de chargement d’objets blob Azure, téléchargez [Microsoft SQL Server Integration Services Feature Pack pour Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. Ensuite, utilisez la tâche SSIS d’exécution de requêtes SQL pour lancer un script PolyBase qui charge les données dans SQL Data Warehouse. Pour obtenir un exemple qui charge des données de Stockage Blob Azure vers SQL Data Warehouse (mais pas avec SSIS), consultez [Tutoriel : Chargement de données dans Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
+2. Ensuite, utilisez la tâche SSIS d’exécution de requêtes SQL pour lancer un script PolyBase qui charge les données dans votre pool SQL dédié. Pour obtenir un exemple qui charge des données de Stockage Blob Azure dans un pool SQL dédié (mais pas avec SSIS), consultez [Tutoriel : Chargement de données dans Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
 
 ## <a name="option-2---use-a-source-and-destination"></a>Option 2 : Utiliser une source et une destination
 
@@ -106,7 +104,7 @@ La deuxième approche est un package classique qui utilise une tâche de flux de
 
 Ce didacticiel utilise SQL Server comme source de données. SQL Server est exécuté localement ou sur une machine virtuelle Azure.
 
-Pour vous connecter à SQL Server et SQL Data Warehouse, vous pouvez utiliser un gestionnaire de connexions ADO.NET ainsi que la source et la destination, ou un gestionnaire de connexions OLE DB ainsi que la source et la destination. Ce tutoriel utilise ADO.NET, car il présente le moins d’options de configuration. OLE DB peut fournir des performances légèrement meilleures qu’ADO.NET.
+Pour vous connecter à SQL Server et à un pool SQL dédié, vous pouvez utiliser un gestionnaire de connexions ADO.NET ainsi que la source et la destination, ou un gestionnaire de connexions OLE DB ainsi que la source et la destination. Ce tutoriel utilise ADO.NET, car il présente le moins d’options de configuration. OLE DB peut fournir des performances légèrement meilleures qu’ADO.NET.
 
 Pour aller plus vite, vous pouvez utiliser l’Assistant Importation et Exportation SQL Server pour créer le package de base. Ensuite, enregistrez le package et ouvrez-le dans Visual Studio ou SSDT pour l’afficher et le personnaliser. Pour plus d’informations, consultez [Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
@@ -114,22 +112,22 @@ Pour aller plus vite, vous pouvez utiliser l’Assistant Importation et Exportat
 
 Pour continuer le tutoriel avec cette option, vous avez besoin des éléments suivants :
 
-1. **Exemples de données** . Ce didacticiel utilise des exemples de données stockées dans SQL Server, dans la base de données AdventureWorks, en tant que données sources à charger dans SQL Data Warehouse. Pour obtenir l’exemple de base de données AdventureWorks, consultez [Exemples de bases de données AdventureWorks][AdventureWorks 2014 Sample Databases].
+1. **Exemples de données**. Ce tutoriel utilise des exemples de données stockées dans SQL Server, dans la base de données AdventureWorks, en tant que données sources à charger dans un pool SQL dédié. Pour obtenir l’exemple de base de données AdventureWorks, consultez [Exemples de bases de données AdventureWorks][AdventureWorks 2014 Sample Databases].
 
-2. **Règle de pare-feu** . Vous devez créer une règle de pare-feu sur SQL Data Warehouse avec l’adresse IP de votre ordinateur local afin de pouvoir charger des données dans SQL Data Warehouse.
+2. **Règle de pare-feu**. Vous devez créer une règle de pare-feu sur votre pool SQL dédié avec l’adresse IP de votre ordinateur local pour pouvoir charger des données dans le pool SQL dédié.
 
 ### <a name="create-the-basic-data-flow"></a>Créer le flux de données de base
 1. Faites glisser une tâche de flux de données de la boîte à outils jusqu’au centre de l’aire de conception (dans l’onglet **Flux de contrôle** ).
    
     ![Capture d’écran de Visual Studio montrant une tâche de flux de données déplacée sous l’onglet Flux de contrôle du volet de conception.][02]
 2. Double-cliquez sur la tâche de flux de données pour basculer vers l'onglet Flux de données.
-3. Dans la liste Autres sources, dans la boîte à outils, faites glisser une source ADO.NET jusqu’à l’aire de conception. Lorsque l’adaptateur de source est encore sélectionné, remplacez son nom par **Source SQL Server** dans le volet **Propriétés** .
-4. Dans la liste Autres destinations, dans la boîte à outils, faites glisser une destination ADO.NET jusqu’à l’aire de conception sous la source ADO.NET. Lorsque l’adaptateur de destination est encore sélectionné, remplacez son nom par **Destination SQL DW** dans le volet **Propriétés** .
+3. Dans la liste Autres sources, dans la boîte à outils, faites glisser une source ADO.NET jusqu’à l’aire de conception. Lorsque l’adaptateur de source est encore sélectionné, remplacez son nom par **Source SQL Server** dans le volet **Propriétés**.
+4. Dans la liste Autres destinations, dans la boîte à outils, faites glisser une destination ADO.NET jusqu’à l’aire de conception sous la source ADO.NET. Lorsque l’adaptateur de destination est encore sélectionné, remplacez son nom par **Destination SQL DW** dans le volet **Propriétés**.
    
     ![Capture d’écran d’un adaptateur de destination déplacé vers un emplacement situé juste sous l’adaptateur source.][09]
 
 ### <a name="configure-the-source-adapter"></a>Configurer l’adaptateur de source
-1. Double-cliquez sur l’adaptateur de source pour ouvrir l’ **Éditeur de source ADO.NET** .
+1. Double-cliquez sur l’adaptateur de source pour ouvrir l’ **Éditeur de source ADO.NET**.
    
     ![Capture d’écran de l’Éditeur de source ADO.NET. L’onglet Gestionnaire de connexions est visible, et des contrôles sont disponibles pour la configuration des propriétés du flux de données.][03]
 2. Dans l’onglet **Gestionnaire de connexions** de l’ **Éditeur de source ADO.NET** , cliquez sur le bouton **Nouveau** situé en regard de la liste **Gestionnaire de connexions ADO.NET** pour afficher la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** et créer des paramètres de connexion pour la base de données SQL Server à partir de laquelle ce didacticiel charge les données.
@@ -144,19 +142,19 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
    2. Pour **Nom du serveur** , entrez le nom du serveur SQL Server.
    3. Dans la section **Connexion au serveur** , sélectionnez ou entrez les informations d’authentification.
    4. Dans la section **Se connecter à une base de données** , sélectionnez l’exemple de base de données AdventureWorks.
-   5. Cliquez sur **Tester la connexion** .
+   5. Cliquez sur **Tester la connexion**.
       
        ![Capture d’écran d’une boîte de dialogue affichant un bouton OK et un texte indiquant que le test de la connexion a réussi.][06]
-   6. Dans la boîte de dialogue indiquant les résultats du test de connexion, cliquez sur **OK** pour revenir à la boîte de dialogue **Gestionnaire de connexions** .
-   7. Dans la boîte de dialogue **Gestionnaire de connexions** , cliquez sur **OK** pour revenir à la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** .
-5. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** , cliquez sur **OK** pour revenir à l’ **Éditeur de source ADO.NET** .
-6. Dans l’ **Éditeur de source ADO.NET** , dans la liste **Nom de la table ou de la vue** , sélectionnez la table **Sales.SalesOrderDetail** .
+   6. Dans la boîte de dialogue indiquant les résultats du test de connexion, cliquez sur **OK** pour revenir à la boîte de dialogue **Gestionnaire de connexions**.
+   7. Dans la boîte de dialogue **Gestionnaire de connexions** , cliquez sur **OK** pour revenir à la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET**.
+5. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** , cliquez sur **OK** pour revenir à l’ **Éditeur de source ADO.NET**.
+6. Dans l’ **Éditeur de source ADO.NET** , dans la liste **Nom de la table ou de la vue** , sélectionnez la table **Sales.SalesOrderDetail**.
    
     ![Capture d’écran de l’Éditeur de source ADO.NET. Dans la liste Nom de la table ou de la vue, la table Sales.SalesOrderDetail est sélectionnée.][07]
-7. Cliquez sur **Aperçu** pour afficher les 200 premières lignes de données dans la table source de la boîte de dialogue **Visualiser les résultats de la requête** .
+7. Cliquez sur **Aperçu** pour afficher les 200 premières lignes de données dans la table source de la boîte de dialogue **Visualiser les résultats de la requête**.
    
     ![Capture d’écran de la boîte de dialogue Visualiser les résultats de la requête. Plusieurs lignes de données de ventes de la table source sont visibles.][08]
-8. Dans la boîte de dialogue **Visualiser les résultats de la requête** , cliquez sur **Fermer** pour revenir à l’ **Éditeur de source ADO.NET** .
+8. Dans la boîte de dialogue **Visualiser les résultats de la requête** , cliquez sur **Fermer** pour revenir à l’ **Éditeur de source ADO.NET**.
 9. Dans l’ **Éditeur de source ADO.NET** , cliquez sur **OK** pour terminer la configuration de la source de données.
 
 ### <a name="connect-the-source-adapter-to-the-destination-adapter"></a>Connecter l’adaptateur de source à l’adaptateur de destination
@@ -168,38 +166,38 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
     Dans un package SSIS standard, vous utilisez plusieurs autres composants de la boîte à outils SSIS entre la source et la destination pour restructurer, transformer et nettoyer vos données lorsqu’elles traversent le flux de données SSIS. Pour que cet exemple reste aussi simple que possible, nous connectons directement la source à la destination.
 
 ### <a name="configure-the-destination-adapter"></a>Configurer l’adaptateur de destination
-1. Double-cliquez sur l’adaptateur de destination pour ouvrir l’ **Éditeur de destination ADO.NET** .
+1. Double-cliquez sur l’adaptateur de destination pour ouvrir l’ **Éditeur de destination ADO.NET**.
    
     ![Capture d’écran de l’Éditeur de destination ADO.NET. L’onglet Gestionnaire de connexions est visible et contient des contrôles pour la configuration des propriétés du flux de données.][11]
 2. Dans l’onglet **Gestionnaire de connexions** de **l’Éditeur de destination ADO.NET** , cliquez sur le bouton **Nouveau** situé à côté de la liste **Gestionnaire de connexions** afin d’ouvrir la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** et de créer des paramètres de connexion pour la base de données Azure Synapse Analytics dans laquelle des données sont chargées dans le cadre de ce tutoriel.
 3. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** , cliquez sur le bouton **Nouveau** pour ouvrir la boîte de dialogue **Gestionnaire de connexions** et créer une nouvelle connexion de données.
 4. Dans la boîte de dialogue **Gestionnaire de connexions** , effectuez les actions suivantes.
    1. Pour **Fournisseur** , sélectionnez le fournisseur de données SqlClient.
-   2. Pour **Nom du serveur** , entrez le nom de l’entrepôt de données SQL Data Warehouse.
+   2. Pour **Nom du serveur** , entrez le nom du pool SQL dédié.
    3. Dans la section **Connexion au serveur** , sélectionnez **Utiliser l'authentification SQL Server** et entrez les informations d’authentification.
-   4. Dans la section **Se connecter à une base de données** , sélectionnez une base de données SQL Data Warehouse existante.
-   5. Cliquez sur **Tester la connexion** .
-   6. Dans la boîte de dialogue indiquant les résultats du test de connexion, cliquez sur **OK** pour revenir à la boîte de dialogue **Gestionnaire de connexions** .
-   7. Dans la boîte de dialogue **Gestionnaire de connexions** , cliquez sur **OK** pour revenir à la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** .
-5. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** , cliquez sur **OK** pour revenir à l’ **Éditeur de destination ADO.NET** .
+   4. Dans la section **Se connecter à une base de données** , sélectionnez une base de données existante dans le pool SQL dédié.
+   5. Cliquez sur **Tester la connexion**.
+   6. Dans la boîte de dialogue indiquant les résultats du test de connexion, cliquez sur **OK** pour revenir à la boîte de dialogue **Gestionnaire de connexions**.
+   7. Dans la boîte de dialogue **Gestionnaire de connexions** , cliquez sur **OK** pour revenir à la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET**.
+5. Dans la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** , cliquez sur **OK** pour revenir à l’ **Éditeur de destination ADO.NET**.
 6. Dans l’ **Éditeur de destination ADO.NET** , cliquez sur **Nouveau** en regard de la liste **Utiliser une table ou une vue** pour ouvrir la boîte de dialogue **Créer une table** afin de créer une nouvelle table de destination avec une liste de colonnes qui correspond à la table source.
    
     ![Capture d’écran de la boîte de dialogue Créer une table. Le code SQL pour la création d’une table de destination est visible.][12a]
 7. Dans la boîte de dialogue **Créer une table** , effectuez les actions suivantes.
    
-   1. Remplacez le nom de la table de destination par **SalesOrderDetail** .
-   2. Supprimez la colonne **rowguid** . Le type de données **uniqueidentifier** n’est pas pris en charge dans SQL Data Warehouse.
-   3. Changez le type de données de la colonne **LineTotal** en spécifiant **money** . Le type de données **decimal** n’est pas pris en charge dans SQL Data Warehouse. Pour plus d’informations sur les types de données pris en charge, consultez [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
+   1. Remplacez le nom de la table de destination par **SalesOrderDetail**.
+   2. Supprimez la colonne **rowguid**. Le type de données **uniqueidentifier** n’est pas pris en charge dans un pool SQL dédié.
+   3. Changez le type de données de la colonne **LineTotal** en spécifiant **money**. Le type de données **decimal** n’est pas pris en charge dans un pool SQL dédié. Pour plus d’informations sur les types de données pris en charge, consultez [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
       
        ![Capture d’écran de la boîte de dialogue Créer une table, avec le code permettant de créer une table nommée SalesOrderDetail avec LineTotal en tant que colonne de montant et aucune colonne rowguid.][12b]
-   4. Cliquez sur **OK** pour créer la table et revenir à l’ **Éditeur de destination ADO.NET** .
+   4. Cliquez sur **OK** pour créer la table et revenir à l’ **Éditeur de destination ADO.NET**.
 8. Dans l’ **Éditeur de destination ADO.NET** , sélectionnez l’onglet **Mappages** pour voir comment les colonnes de la source sont mappées aux colonnes de la destination.
    
     ![Capture d’écran de l’onglet Mappages de l’Éditeur de destination ADO.NET. Les lignes connectent les colonnes dont le nom est identique dans les tables source et de destination.][13]
 9. Cliquez sur **OK** pour terminer la configuration de la destination.
 
 ## <a name="run-the-package-to-load-the-data"></a>Exécuter le package pour charger les données
-Exécutez le package en cliquant sur le bouton **Démarrer** dans la barre d’outils ou en sélectionnant l’une des options **Exécuter** dans le menu **Débogage** .
+Exécutez le package en cliquant sur le bouton **Démarrer** dans la barre d’outils ou en sélectionnant l’une des options **Exécuter** dans le menu **Débogage**.
 
 Les paragraphes suivants décrivent ce que vous voyez si vous avez créé le package avec la deuxième option décrite dans cet article, autrement dit avec un flux de données qui contient une source et une destination.
 
