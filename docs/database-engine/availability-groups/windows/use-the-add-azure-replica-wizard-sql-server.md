@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 590c559b283a91a7b6c4ecde7b455287d2f3b3bb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9ff107b2f3e132015e294ef7ba8174ade5a0c575
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005793"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583684"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Configurer une machine virtuelle Azure comme réplica secondaire dans un groupe de disponibilité
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "92005793"
   
 2.  Connectez-vous à Microsoft Azure avec votre compte Microsoft ou votre compte professionnel ou scolaire. Votre compte Microsoft ou votre compte d’organisation  a le format d’une adresse e-mail, comme HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Pour en savoir plus sur les informations d’identification Azure, consultez les rubriques suivantes : [Microsoft Account for Organizations FAQ (FAQ sur les comptes Microsoft pour les organisations)](/previous-versions/jj592903(v=msdn.10)) et [Résolution des problèmes de connexion avec votre compte d’organisation](https://support.microsoft.com/kb/2756852).  
   
-3.  Connectez-vous ensuite à votre abonnement en cliquant sur **Connexion** . Une fois que vous êtes connecté, les listes déroulantes sont remplies avec vos paramètres Azure, tels que **Réseau virtuel** et **Sous-réseau de réseau virtuel** .  
+3.  Connectez-vous ensuite à votre abonnement en cliquant sur **Connexion**. Une fois que vous êtes connecté, les listes déroulantes sont remplies avec vos paramètres Azure, tels que **Réseau virtuel** et **Sous-réseau de réseau virtuel**.  
   
 4.  Spécifiez les paramètres de la machine virtuelle Azure qui hébergera le nouveau réplica secondaire :  
   

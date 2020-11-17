@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Service Broker, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8b9b95e53ad920c712fe9d5da02f0f9a0b4f1095
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332248"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583865"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "87332248"
 4.  **Vérifiez que msdb contient un itinéraire AutoCreatedLocal ou un itinéraire vers le service spécifique.**  
   
     > [!NOTE]  
-    >  Chaque base de données utilisateur qui englobe **msdb**contient par défaut l'itinéraire **AutoCreatedLocal**. Cet itinéraire, qui correspond à tous les noms de services et instances de broker, spécifie que le message doit être remis dans l'instance active. **AutoCreatedLocal** a une priorité plus faible que les itinéraires qui spécifient explicitement un service spécifique qui communique avec une instance distante.  
+    >  Chaque base de données utilisateur qui englobe **msdb** contient par défaut l'itinéraire **AutoCreatedLocal**. Cet itinéraire, qui correspond à tous les noms de services et instances de broker, spécifie que le message doit être remis dans l'instance active. **AutoCreatedLocal** a une priorité plus faible que les itinéraires qui spécifient explicitement un service spécifique qui communique avec une instance distante.  
   
      Pour plus d’informations sur la création des itinéraires, consultez [Exemples de routage Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (dans la version [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] de la documentation en ligne) et [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
   

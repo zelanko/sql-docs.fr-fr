@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 545b3ef714c36712b7b7973294a14e56eb78dad4
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 96ef99a120c050f098d6d690055479e5711c11bb
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670802"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583446"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Groupe de disponibilité (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ Dans la plupart des cas, vous pouvez utiliser l'Assistant Nouveau groupe de disp
 
 6. Ensuite, spécifiez le type de cluster. Les types de cluster possibles dépendent de la version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et du système d’exploitation. Choisissez **WSFC**, **EXTERNAL** ou **NONE**. Pour plus d’informations, consultez la page [Spécifier les options du groupe de disponibilité](specify-availability-group-name-page.md).
  
-6.  Sur la page **Sélectionner des bases de données** , la grille répertorie les bases de données utilisateur sur l'instance de serveur connectée qui peuvent devenir des *bases de données de disponibilité*. Sélectionnez une ou plusieurs des bases de données répertoriées pour participer au nouveau groupe de disponibilité. Ces bases de données seront initialement les *bases de données primaires*initiales.  
+6.  Sur la page **Sélectionner des bases de données** , la grille répertorie les bases de données utilisateur sur l'instance de serveur connectée qui peuvent devenir des *bases de données de disponibilité*. Sélectionnez une ou plusieurs des bases de données répertoriées pour participer au nouveau groupe de disponibilité. Ces bases de données seront initialement les *bases de données primaires* initiales.  
   
      Pour chaque base de données répertoriée, la colonne **Taille** affiche la taille de la base de données, si elle est connue. La colonne **État** indique si une base de données particulière satisfait aux [conditions préalables requises](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)pour les bases de données de disponibilité. Si les conditions préalables requises ne sont pas remplies, une courte description de l'état indique la raison pour laquelle la base de données est inéligible ; par exemple, si elle n'utilise pas le mode de récupération complet. Pour plus d'informations, cliquez sur la description de l'état.  
   

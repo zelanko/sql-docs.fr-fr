@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 575eabef6524af9d4d5dd67f016791a5f34d589d
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fc49e558305a7cd4f86f517a05653093b798846c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670815"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583821"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Spécifier l’URL de point de terminaison - Ajout ou modification d’un réplica de disponibilité
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91670815"
 ##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> Syntaxe pour une URL de point de terminaison  
  La syntaxe d'une URL de point de terminaison est la suivante :  
   
- TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
+ TCP <strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  where  
   
@@ -49,7 +49,7 @@ ms.locfileid: "91670815"
   
          _nom_ordinateur_ **.** _segment_domaine_[... **.** _segment_domaine_]  
   
-         où *nom_ordinateur*correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[... **.** _segment_domaine_] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
+         où *nom_ordinateur* correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[... **.** _segment_domaine_] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
   
          Le contenu et le nombre de segments de domaine sont déterminés au sein de la société ou de l'organisation. Pour plus d'informations, consultez [Recherche du nom de domaine complet](#Finding_FQDN), plus loin dans cette rubrique.  
   

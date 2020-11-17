@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 260af6fa8615969a895425aa3d2145071b78eb72
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670056"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583951"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91670056"
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> Sources de données de rapport et groupes de disponibilité  
  Le comportement de sources de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] basées sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] peut varier selon la manière dont votre administrateur a configuré l'environnement de groupes de disponibilité.  
   
- Pour utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les sources de données de rapport que vous devez configurer, la chaîne de connexion de la source de données de rapport doit faire référence au *Nom DNS de l'écouteur*du groupe de disponibilité. Les sources de données prises en charge sont les suivantes :  
+ Pour utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les sources de données de rapport que vous devez configurer, la chaîne de connexion de la source de données de rapport doit faire référence au *Nom DNS de l'écouteur* du groupe de disponibilité. Les sources de données prises en charge sont les suivantes :  
   
 -   Source de données ODBC utilisant SQL Native Client.  
   

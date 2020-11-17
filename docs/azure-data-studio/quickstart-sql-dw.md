@@ -6,15 +6,15 @@ ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu, jrasnick
+ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 526349f9e6ca186b8555d52f76f3663c0862503c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 1b0fe9ee55f9e0e1243ea72e8160b39a95876a55
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793696"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570924"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Démarrage rapide : Connexion et interrogation de données avec Azure Data Studio à l’aide d’un pool SQL dédié dans Azure Synapse Analytics
 
@@ -38,11 +38,11 @@ Utilisez Azure Data Studio pour établir une connexion à votre serveur Azure Sy
    
    ![Capture d’écran de la page Connexion avec l’icône Nouvelle connexion mise en évidence.](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. Cet article utilise la *connexion SQL* , mais *l'authentification Windows* est aussi prise en charge. Renseignez les champs comme suit en utilisant le nom du serveur, le nom d’utilisateur et le mot de passe de *votre* serveur Azure SQL :
+2. Cet article utilise la *connexion SQL*, mais *l'authentification Windows* est aussi prise en charge. Renseignez les champs comme suit en utilisant le nom du serveur, le nom d’utilisateur et le mot de passe de *votre* serveur Azure SQL :
 
    |   Paramètre    | Valeur suggérée | Description |
    |--------------|-----------------|-------------| 
-   | **Nom du serveur** | Nom complet du serveur | Par exemple, le nom se présente ainsi : **sqlpoolservername.database.windows.net** . |
+   | **Nom du serveur** | Nom complet du serveur | Par exemple, le nom se présente ainsi : **sqlpoolservername.database.windows.net**. |
    | **Authentification** | Connexion SQL| L’authentification SQL est utilisée dans ce didacticiel. |
    | **Nom d'utilisateur** | Compte d’administrateur de serveur | Il s’agit du compte que vous avez spécifié lorsque vous avez créé le serveur. |
    | **Mot de passe (connexion SQL)** | Mot de passe de votre compte d’administrateur de serveur | Il s’agit du mot de passe que vous avez spécifié lorsque vous avez créé le serveur. |
@@ -52,11 +52,11 @@ Utilisez Azure Data Studio pour établir une connexion à votre serveur Azure Sy
 
 3. Si votre serveur ne dispose pas d’une règle de pare-feu autorisant Azure Data Studio à se connecter, le formulaire **Créer une règle de pare-feu** s’ouvre. Remplissez le formulaire pour créer une nouvelle règle de pare-feu. Pour plus d’informations, consultez [Règles de pare-feu](/azure/sql-database/sql-database-firewall-configure).
 
-4. Une fois la connexion établie, votre serveur s'ouvre dans la barre latérale *Serveurs* .
+4. Une fois la connexion établie, votre serveur s'ouvre dans la barre latérale *Serveurs*.
 
 ## <a name="create-a-database-in-your-dedicated-sql-pool"></a>Création d’une base de données dans un pool SQL dédié
 
-1. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur votre serveur et sélectionnez **Nouvelle requête** .
+1. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur votre serveur et sélectionnez **Nouvelle requête**.
 
 2. Collez l’extrait suivant dans l’éditeur de requête, puis sélectionnez **Exécuter** :
 
@@ -75,7 +75,7 @@ Utilisez Azure Data Studio pour établir une connexion à votre serveur Azure Sy
 
 ## <a name="create-a-table"></a>Créer une table
 
-L’éditeur de requête est toujours connecté à la base de données *MASTER* , mais nous souhaitons créer une table dans la base de données *TutorialDB* . 
+L’éditeur de requête est toujours connecté à la base de données *MASTER*, mais nous souhaitons créer une table dans la base de données *TutorialDB*. 
 
 1. Remplacez le contexte de connexion par **TutorialDB** :
 
@@ -118,7 +118,7 @@ L’éditeur de requête est toujours connecté à la base de données *MASTER* 
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Création d’une table dans la base de données TutorialDB":::
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Création de lignes dans la table":::
 
 ## <a name="view-the-result"></a>Afficher le résultat
 
@@ -131,7 +131,7 @@ L’éditeur de requête est toujours connecté à la base de données *MASTER* 
 
 2. Les résultats de la requête sont affichés :
 
-    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="Création d’une table dans la base de données TutorialDB":::
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="Affichage des résultats":::
 
 
 ## <a name="clean-up-resources"></a>Nettoyer les ressources

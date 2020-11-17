@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ea049ce576949df930aabafafb67adf56fe96c5c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 404d2afc78765adebb191c49fb58f6d390516a6c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671093"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583875"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "91671093"
   
 -   Si chaque instance de serveur s'exécute sous un compte de service de domaine, c'est-à-dire, si la colonne **Compte de service SQL Server** affiche un compte de service de domaine pour chaque instance de serveur, cliquez sur **Suivant**.  
   
--   Si une instance de serveur s'exécute sous un compte de service qui n'appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l'Assistant. Dans ce cas, si vous cliquez sur **Suivant** , une boîte de dialogue d'avertissement s'affiche ; vous devez cliquer sur **Non**, ce qui vous renvoie à l'onglet**Points de terminaison** . En laissant l'Assistant sur la page **Spécifier les réplicas** , apportez l'une des modifications suivantes à chaque instance de serveur pour laquelle la colonne **Compte de service SQL Server** affiche un compte de service qui n'appartient pas au domaine :  
+-   Si une instance de serveur s'exécute sous un compte de service qui n'appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l'Assistant. Dans ce cas, si vous cliquez sur **Suivant** , une boîte de dialogue d'avertissement s'affiche ; vous devez cliquer sur **Non**, ce qui vous renvoie à l'onglet **Points de terminaison** . En laissant l'Assistant sur la page **Spécifier les réplicas** , apportez l'une des modifications suivantes à chaque instance de serveur pour laquelle la colonne **Compte de service SQL Server** affiche un compte de service qui n'appartient pas au domaine :  
   
     -   Utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour changer le compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en compte de domaine. Pour plus d’informations, consultez [Modifier le compte de démarrage du service pour SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md).  
   
@@ -166,10 +166,10 @@ ms.locfileid: "91671093"
   
  Si l’option **Adresse IP statique** est sélectionnée comme mode réseau (il s’agit de la sélection par défaut), une grille affiche les colonnes **Sous-réseau** et **Adresse IP** , et les boutons associés **Ajouter** et **Supprimer** sont affichés. La grille est vide tant que vous n’avez pas ajouté le premier sous-réseau.  
   
- Colonne**Sous-réseau**  
+ Colonne **Sous-réseau**  
  Affiche l'adresse de sous-réseau que vous avez sélectionnée pour chaque sous-réseau ajouté pour l'écouteur.  
   
- Colonne**Adresse IP**  
+ Colonne **Adresse IP**  
  Affiche l'adresse IPv4 ou IPv6 que vous avez spécifiée pour un sous-réseau donné.  
   
  **Ajouter**  

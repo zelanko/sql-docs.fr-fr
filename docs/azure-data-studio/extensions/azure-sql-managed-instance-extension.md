@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: eee9b2874fe879a544725bf2243075703149e34d
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725200"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570916"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Tableau de bord Azure SQL Managed Instance pour Azure Data Studio (préversion)
 
@@ -50,7 +50,7 @@ Le volet supérieur affiche les détails suivants :
 
 Quand vous sélectionnez le deuxième volet sous l’onglet **Instance managée**, vous recevez des recommandations et des alertes pour vous aider à optimiser votre instance managée.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Propriétés de l’instance managée":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Recommandations relatives aux instances managées":::
 
 Parmi les recommandations affichées, vous pouvez voir les suivantes :
 
@@ -67,7 +67,7 @@ Examinez régulièrement ces recommandations, étudiez les causes racines et pre
 
 Le troisième volet de l’onglet **Instance managée** affiche l’état des réplicas de base de données dans votre instance managée.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Propriétés de l’instance managée":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Réplicas d’instance managée":::
 
 Au niveau de service universel, chaque base de données a un seul réplica (principal). Sur une instance au niveau vital pour l’entreprise, chaque base de données a un réplica principal et trois réplicas secondaires, dont un est utilisé pour les charges de travail en lecture seule. Dans le volet **Réplicas**, vous pouvez superviser le processus de synchronisation et vérifier que tous les réplicas secondaires sont bien synchronisés avec le réplica principal.
 
@@ -75,7 +75,7 @@ Au niveau de service universel, chaque base de données a un seul réplica (prin
 
 Le quatrième volet de l’onglet **Instance managée** affiche les entrées du journal des erreurs SQL les plus récentes et les plus pertinentes.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Propriétés de l’instance managée":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Entrées du journal de l’instance managée":::
 
 Bien que votre instance managée génère un grand nombre d’entrées de journal, la plupart d’entre elles sont des informations internes/système. Par ailleurs, certaines entrées du journal montrent des noms de bases de données physiques (valeurs `GUID`) au lieu de noms de bases de données logiques réelles.
 
@@ -87,9 +87,9 @@ Si vous rencontrez des problèmes avec l’extension SQL Managed Instance, accé
 
 ## <a name="code-of-conduct"></a>Code de conduite
 
-Ce projet a adopté le [Code de conduite Open Source de Microsoft][https://opensource.microsoft.com/codeofconduct/ ].
+Ce projet a adopté le [Code de conduite Open Source de Microsoft](https://opensource.microsoft.com/codeofconduct/).
 
-Pour plus d'informations, consultez la [FAQ sur le Code de conduite][https://opensource.microsoft.com/codeofconduct/faq/ ] ou contactez [opencode@microsoft.com ][mailto:opencode@microsoft.com- ] pour toute question ou tout commentaire supplémentaire.
+Pour plus d'informations, voir la [FAQ sur le Code de conduite ](https://opensource.microsoft.com/codeofconduct/faq/) ou contacter [opencode@microsoft.com](mailto:opencode@microsoft.com) pour toute question ou commentaire supplémentaire.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -187,7 +187,7 @@ object_id   TableName                   index_id    IndexName                   
 3. Développez la table sur laquelle vous souhaitez vérifier une fragmentation d’index.
 4. Développez le dossier **Index** .
 5. Cliquez avec le bouton droit sur l’index dont vous voulez vérifier la fragmentation, puis sélectionnez **Propriétés**.
-6. Sous **Sélectionner une page** , sélectionnez **Fragmentation**.
+6. Sous **Sélectionner une page**, sélectionnez **Fragmentation**.
 
 Les informations suivantes sont disponibles dans la page **Fragmentation** :
 
@@ -199,7 +199,7 @@ Les informations suivantes sont disponibles dans la page **Fragmentation** :
 |**Profondeur**|Nombre de niveaux dans l’index, notamment le niveau feuille.|
 |**Enregistrements transférés**|Nombre d'enregistrements d'un segment qui contiennent des pointeurs avant vers un autre emplacement de données. (Cet état se produit pendant une mise à jour, lorsque l'espace disponible est insuffisant pour stocker la nouvelle ligne à l'emplacement d'origine.)|
 |**Lignes fantômes**|Nombre de lignes marquées pour la suppression qui ne sont pas encore supprimées. Ces lignes seront supprimées par un thread de nettoyage, lorsque le serveur n'est pas occupé. Cette valeur ne comprend pas les lignes qui sont conservées à cause d'une transaction d'isolement d'instantané en suspens.|
-|**Type d'index**|Type de l'index. Les valeurs possibles sont **Index cluster** , **Index non-cluster** et **XML primaire**. Les tables peuvent également être stockées en tant que segment (sans index), mais dans ce cas la page Propriétés de l'index est impossible à ouvrir.|
+|**Type d'index**|Type de l'index. Les valeurs possibles sont **Index cluster**, **Index non-cluster** et **XML primaire**. Les tables peuvent également être stockées en tant que segment (sans index), mais dans ce cas la page Propriétés de l'index est impossible à ouvrir.|
 |**Lignes de niveau feuille**|Nombre de lignes de niveau feuille.|
 |**Taille maximale de ligne**|Taille maximale des lignes de niveau feuille.|
 |**Taille minimale de ligne**|Taille minimale des lignes de niveau feuille.|
@@ -405,9 +405,9 @@ Un index ne peut pas être réorganisé ou régénéré si le groupe de fichiers
 
 Statistiques :
 
-- Quand un index est **créé** ou **regénéré** , les statistiques sont créées ou mises à jour par l’analyse de toutes les lignes de la table. En revanche, à partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les statistiques ne sont pas créées ou mises à jour par l’analyse de toutes les lignes de la table au moment où un index partitionné est créé ou reconstruit. Au lieu de cela, l’optimiseur de requête se sert de l’algorithme d’échantillonnage par défaut pour générer ces statistiques. Pour obtenir des statistiques sur les index partitionnés en analysant toutes les lignes de la table, utilisez [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ou [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) avec la clause `FULLSCAN`.
+- Quand un index est **créé** ou **regénéré**, les statistiques sont créées ou mises à jour par l’analyse de toutes les lignes de la table. En revanche, à partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les statistiques ne sont pas créées ou mises à jour par l’analyse de toutes les lignes de la table au moment où un index partitionné est créé ou reconstruit. Au lieu de cela, l’optimiseur de requête se sert de l’algorithme d’échantillonnage par défaut pour générer ces statistiques. Pour obtenir des statistiques sur les index partitionnés en analysant toutes les lignes de la table, utilisez [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ou [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) avec la clause `FULLSCAN`.
 
-- Quand un index est **réorganisé** , les statistiques ne sont pas mises à jour.
+- Quand un index est **réorganisé**, les statistiques ne sont pas mises à jour.
 
 Un index ne peut pas être réorganisé lorsque `ALLOW_PAGE_LOCKS` est désactivé (OFF).
 
