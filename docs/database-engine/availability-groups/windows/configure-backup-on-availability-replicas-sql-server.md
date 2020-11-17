@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: ebe23aa1fb252ce19f887b225527c3ec7a3339c6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1d9a6dc56f0c61e454d368215cb37f4a2f5602c2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726459"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584492"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configurer des sauvegardes sur des réplicas secondaires d’un groupe de disponibilité Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "91726459"
      **Exclure le réplica**  
      Sélectionnez cette option si vous ne souhaitez jamais que ce réplica de disponibilité soit choisi pour effectuer des sauvegardes. Cela est utile, par exemple, pour un réplica de disponibilité distant sur lequel vous ne souhaitez jamais basculer de sauvegardes.  
   
-7.  Cliquez sur **OK**pour valider vos modifications.  
+7.  Cliquez sur **OK** pour valider vos modifications.  
   
  **Autres manières d'accéder à la page des préférences de sauvegarde**  
   

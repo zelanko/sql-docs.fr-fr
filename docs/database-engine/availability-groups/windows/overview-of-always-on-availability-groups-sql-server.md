@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 634dcdb3f3682b133e19d25b041819e22300a932
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727825"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584141"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Qu’est-ce qu’un groupe de disponibilité Always On ?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "91727825"
 > [!TIP]  
 >  Vous pouvez créer n'importe quel type de sauvegarde d'une base de données primaire. Vous pouvez également créer des sauvegardes de journaux et des sauvegardes complètes de copie uniquement des bases de données secondaires. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).   
 
- Chaque ensemble de bases de données de disponibilité est hébergé par un *réplica de disponibilité*. Deux types de réplicas de disponibilité existent mais il ne peut y avoir qu'un seul *réplica principal* qui héberge les bases de données primaires et un à huit *réplicas secondaires*qui hébergent un ensemble de bases de données secondaires et servent de cibles potentielles d'un basculement du groupe de disponibilité. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Un réplica de disponibilité apporte la redondance uniquement au niveau de la base de données, pour l’ensemble des bases de données d’un groupe de disponibilité. Les basculements ne sont pas dus à des problèmes de base de données, tels qu'une base de données devenant suspecte en raison de la perte d'un fichier de données ou de l'altération d'un journal des transactions.  
+ Chaque ensemble de bases de données de disponibilité est hébergé par un *réplica de disponibilité*. Deux types de réplicas de disponibilité existent mais il ne peut y avoir qu'un seul *réplica principal* qui héberge les bases de données primaires et un à huit *réplicas secondaires* qui hébergent un ensemble de bases de données secondaires et servent de cibles potentielles d'un basculement du groupe de disponibilité. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Un réplica de disponibilité apporte la redondance uniquement au niveau de la base de données, pour l’ensemble des bases de données d’un groupe de disponibilité. Les basculements ne sont pas dus à des problèmes de base de données, tels qu'une base de données devenant suspecte en raison de la perte d'un fichier de données ou de l'altération d'un journal des transactions.  
   
  Le réplica principal rend les bases de données primaires disponibles pour les connexions en lecture-écriture à partir des clients. Le réplica principal envoie les enregistrements du journal des transactions de chaque base de données primaire à chaque base de données secondaire. Ce processus (appelé *synchronisation des données*) se produit au niveau de la base de données. Chaque réplica secondaire met en cache les enregistrements du journal des transactions (*renforce* le journal) puis les applique à sa base de données secondaire correspondante. La synchronisation des données se produit entre la base de données primaire et chaque base de données secondaire connectée, indépendamment des autres bases de données. Par conséquent, une base de données secondaire peut être interrompue ou échouer sans affecter d'autres bases de données secondaires, et une base de données primaire peut être annulée ou échouer sans affecter d'autres bases de données primaires.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "91727825"
 ## <a name="availability-databases"></a><a name="AvDbs"></a> Bases de données de disponibilité  
  Pour ajouter une base de données à un groupe de disponibilité, la base de données doit être une base de données en ligne en lecture-écriture qui existe sur l'instance de serveur qui héberge le réplica principal. Lorsque vous ajoutez une base de données, elle joint le groupe de disponibilité comme base de données primaire, tout en restant disponible aux clients. Il n'existe aucune base de données secondaire correspondante jusqu'à ce que les sauvegardes de la nouvelle base de données primaire soient restaurées dans l'instance de serveur qui héberge le réplica secondaire (avec RESTORE WITH NORECOVERY). La nouvelle base de données secondaire se trouve dans l'état RESTORING jusqu'à ce qu'elle soit jointe au groupe de disponibilité. Pour plus d’informations, consultez [Démarrer un mouvement de données sur une base de données secondaire Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
- Une jointure place la base de données secondaire dans l'état ONLINE et démarre la synchronisation des données avec la base de données primaire correspondante. La*synchronisation des données* correspond au processus selon lequel les modifications apportées à une base de données primaire sont reproduites sur une base de données secondaire. La synchronisation des données implique l'envoi par la base de données primaire d'enregistrements de journal des transactions à la base de données secondaire.  
+ Une jointure place la base de données secondaire dans l'état ONLINE et démarre la synchronisation des données avec la base de données primaire correspondante. La *synchronisation des données* correspond au processus selon lequel les modifications apportées à une base de données primaire sont reproduites sur une base de données secondaire. La synchronisation des données implique l'envoi par la base de données primaire d'enregistrements de journal des transactions à la base de données secondaire.  
   
 > [!IMPORTANT]  
 >  Une base de données de disponibilité est parfois désignée sous le terme de *réplica de base de données* dans [!INCLUDE[tsql](../../../includes/tsql-md.md)], PowerShell et les noms SMO (SQL Server Management Objects). Par exemple, le terme « réplica de base de données » est utilisé dans les noms des vues de gestion dynamique Always On qui retournent des informations sur les bases de données de disponibilité :  **sys.dm_hadr_database_replica_states** et **sys.dm_hadr_database_replica_cluster_states**. Toutefois, dans la documentation en ligne de SQL Server, le terme « réplica » fait généralement référence aux réplicas de disponibilité. Par exemple, les termes « réplica principal » et « réplica secondaire » font toujours référence aux réplicas de disponibilité.  
   
 ## <a name="availability-replicas"></a><a name="AGsARsADBs"></a> Réplicas de disponibilité  
- Chaque groupe de disponibilité définit un ensemble de deux partenaires de basculement ou plus, appelés réplicas de disponibilité. Les*réplicas de disponibilité* sont des composants du groupe de disponibilité. Chaque réplica de disponibilité héberge une copie des bases de données de disponibilité dans le groupe de disponibilité. Pour un groupe de disponibilité donné, les réplicas de disponibilité doivent être hébergés par des instances distinctes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui résident sur différents nœuds d'un cluster WSFC. Chacune de ces instances de serveur doit être activée pour Always On.  
+ Chaque groupe de disponibilité définit un ensemble de deux partenaires de basculement ou plus, appelés réplicas de disponibilité. Les *réplicas de disponibilité* sont des composants du groupe de disponibilité. Chaque réplica de disponibilité héberge une copie des bases de données de disponibilité dans le groupe de disponibilité. Pour un groupe de disponibilité donné, les réplicas de disponibilité doivent être hébergés par des instances distinctes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui résident sur différents nœuds d'un cluster WSFC. Chacune de ces instances de serveur doit être activée pour Always On.  
   
  Un instance donnée ne peut héberger qu'un seul réplica de disponibilité par groupe de disponibilité. Toutefois, chaque instance peut être utilisée pour de nombreux groupes de disponibilité. Une instance donnée peut être une instance autonome ou une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI). Si vous avez besoin d'une redondance au niveau serveur, utilisez des instances de cluster de basculement.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91727825"
   
 ## <a name="availability-modes"></a><a name="AvailabilityModes"></a> Modes de disponibilité
 
-Le mode de disponibilité est une propriété de chaque réplica de disponibilité. Le mode de disponibilité détermine si le réplica principal attend, pour valider des transactions sur une base de données, qu'un réplica secondaire donné ait écrit les enregistrements du journal des transactions sur le disque (journal renforcé). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge deux modes de disponibilité : le*mode avec validation asynchrone* et le *mode avec validation synchrone*.  
+Le mode de disponibilité est une propriété de chaque réplica de disponibilité. Le mode de disponibilité détermine si le réplica principal attend, pour valider des transactions sur une base de données, qu'un réplica secondaire donné ait écrit les enregistrements du journal des transactions sur le disque (journal renforcé). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge deux modes de disponibilité : le *mode avec validation asynchrone* et le *mode avec validation synchrone*.  
   
 -   **Asynchronous-commit mode**  
   

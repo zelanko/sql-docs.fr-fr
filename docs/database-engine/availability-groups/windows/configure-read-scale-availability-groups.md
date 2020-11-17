@@ -2,19 +2,19 @@
 title: Configurer une échelle lecture pour un groupe de disponibilité
 description: Découvrez comment configurer votre groupe de disponibilité SQL Server Always On pour les charges de travail avec échelle lecture sur Windows.
 ms.custom: seodec18
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.reviewer: ''
 ms.date: 05/24/2018
 ms.topic: how-to
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 25ef257560a04c6e9df341fce8470ea1e7a992fb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c5029f8f6e2200751d193172322d7d84934271ab
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726421"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584485"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Configurer une échelle lecture pour un groupe de disponibilité Always On
 

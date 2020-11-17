@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b26671e24cb0419f6737d1f41a5eb2a168dcfe7b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727857"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584224"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Se connecter à un écouteur de groupe de disponibilité Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ Vous pouvez toujours vous connecter directement à l’instance de SQL Server en
 
 ##  <a name="connect-to-a-read-only-replica"></a><a name="ConnectToSecondary"></a> Se connecter à un réplica en lecture seule 
 
-Le_routage en lecture seule_ fait référence à la capacité de router automatiquement les connexions entrantes de l’écouteur vers un réplica secondaire accessible en lecture qui est configuré pour autoriser des charges de travail en lecture seule. 
+Le _routage en lecture seule_ fait référence à la capacité de router automatiquement les connexions entrantes de l’écouteur vers un réplica secondaire accessible en lecture qui est configuré pour autoriser des charges de travail en lecture seule. 
 
 Les connexions sont automatiquement routées vers le réplica en lecture seule si les conditions suivantes sont remplies : 
  

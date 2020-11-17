@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 99155a11cfa3b8837dfec41a9163db6b9c56a925
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7cd148979886048bad16bc706d19b020d114377f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727900"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584249"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité Always On)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  Dans le contexte d'un groupe de disponibilité, le rôle principal et le rôle secondaire des réplicas de disponibilité sont généralement interchangeables au moyen d'un processus appelé *basculement*. Trois formes de basculement existent : basculement automatique (sans perte de données), basculement manuel planifié (sans perte de données) et basculement manuel forcé (avec perte de données possible), ce dernier étant généralement appelé *basculement forcé*. Les basculements automatiques et planifiés manuels préservent vos données. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Autrement dit, un groupe de disponibilité bascule vers l’un de ses réplicas secondaires ( *cible de basculement*actuelle).  
+  Dans le contexte d'un groupe de disponibilité, le rôle principal et le rôle secondaire des réplicas de disponibilité sont généralement interchangeables au moyen d'un processus appelé *basculement*. Trois formes de basculement existent : basculement automatique (sans perte de données), basculement manuel planifié (sans perte de données) et basculement manuel forcé (avec perte de données possible), ce dernier étant généralement appelé *basculement forcé*. Les basculements automatiques et planifiés manuels préservent vos données. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Autrement dit, un groupe de disponibilité bascule vers l’un de ses réplicas secondaires ( *cible de basculement* actuelle).  
   
 > [!NOTE]  
 >   Sauf si la [détection de l’état d’intégrité au niveau de base de données](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) est configurée, les problèmes qui surviennent au niveau de la base de données, comme une base de données devenant suspecte en raison de la perte d’un fichier de données, la suppression d’une base de données ou l’altération d’un journal des transactions, ne provoquent pas le basculement d’un groupe de disponibilité.  
@@ -36,7 +36,7 @@ ms.locfileid: "91727900"
   
 -   Les **réplicas avec validation synchrone** prennent en charge deux paramètres : automatique ou manuel. Le paramètre « automatic » prend en charge le basculement automatique et le basculement de manuel. Pour empêcher la perte de données, le basculement automatique et le basculement planifié requièrent que la cible de basculement soit un réplica secondaire avec validation synchrone et présente un état de synchronisation intègre (cela indique que chaque base de données secondaire sur la cible de basculement est synchronisée avec sa base de données primaire correspondante). Si un réplica secondaire ne remplit pas ces deux conditions, il prend en charge seulement le basculement forcé. Notez que le basculement forcé est également pris en charge sur les réplicas dont le rôle est dans l'état RESOLVING.  
   
--   Les**réplicas avec validation asynchrone** prennent en charge uniquement le mode de basculement manuel. De plus, étant donné qu'ils ne sont jamais synchronisés, ils prennent en charge uniquement le basculement forcé.  
+-   Les **réplicas avec validation asynchrone** prennent en charge uniquement le mode de basculement manuel. De plus, étant donné qu'ils ne sont jamais synchronisés, ils prennent en charge uniquement le basculement forcé.  
   
 > [!NOTE]  
 >  Suite à un basculement, les applications clientes qui doivent accéder aux bases de données primaires doivent se connecter au nouveau réplica principal. En outre, si le nouveau réplica secondaire est configuré pour autoriser l'accès en lecture seule, les applications clientes en lecture seule peuvent s'y connecter. Pour plus d’informations sur la connexion de clients à un groupe de disponibilité, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
