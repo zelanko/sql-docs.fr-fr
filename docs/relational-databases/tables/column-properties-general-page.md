@@ -14,12 +14,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f70e0d563760cf0e511b673ea7f838f6aabdde4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75a8df34472bd8e29b7d4422612ccc6977a70dda
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488654"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674237"
 ---
 # <a name="column-properties-general-page"></a>Propriétés de la colonne (page Général)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88488654"
  Type de données susceptibles d'être contenues dans la colonne. S'il s'agit d'un type de données système, il est affiché. S'il s'agit d'un type de données défini par l'utilisateur, le type de données système qui le constitue est affiché.  
   
  **Clé primaire**  
- Indique si la colonne est une clé primaire. Les valeurs possibles sont **True**et **False**.  
+ Indique si la colonne est une clé primaire. Les valeurs possibles sont **True** et **False**.  
   
  **Null autorisé**  
  Indique si la colonne autorise les valeurs NULL. Les valeurs possibles sont **True** et **False**.  

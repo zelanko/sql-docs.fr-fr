@@ -15,14 +15,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724600"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584861"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Décharger une charge de travail en lecture seule vers un réplica secondaire d’un groupe de disponibilité Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "91724600"
   
 -   **Routage en lecture seule**  
   
-     Le*routage en lecture seule* fait référence à la capacité de SQL Server d’acheminer les demandes de connexions de tentative de lecture entrantes, qui sont dirigées vers un écouteur de groupe de disponibilité, vers un réplica secondaire accessible en lecture disponible. Les conditions préalables requises pour le routage en lecture seule sont les suivantes :  
+     Le *routage en lecture seule* fait référence à la capacité de SQL Server d’acheminer les demandes de connexions de tentative de lecture entrantes, qui sont dirigées vers un écouteur de groupe de disponibilité, vers un réplica secondaire accessible en lecture disponible. Les conditions préalables requises pour le routage en lecture seule sont les suivantes :  
   
     -   Pour prendre en charge le routage en lecture seule, un réplica secondaire accessible en lecture requiert une URL de routage en lecture seule. Cette URL est effective uniquement lorsque le réplica local s'exécute sous le rôle secondaire. L'URL de routage en lecture seule doit être spécifiée par réplica, si nécessaire. Chaque URL de routage en lecture seule est utilisée pour acheminer les demandes de connexion d'intention de lecture vers un réplica secondaire lisible spécifique. En général, à chaque réplica secondaire lisible est affecté une URL de routage en lecture seule.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "91724600"
 ###  <a name="indexing"></a><a name="bkmk_Indexing"></a> Indexation  
  Pour optimiser les charges de travail en lecture seule sur les réplicas secondaires accessibles en lecture, vous pouvez créer des index sur les tables des bases de données secondaires. Étant donné que vous ne pouvez pas modifier le schéma ou les données des bases de données secondaires, créez des index dans les bases de données primaires et autorisez le transfert des modifications sur la base de données secondaire par le biais du processus de restauration par progression.  
   
- Pour surveiller l’utilisation des index sur un réplica secondaire, interrogez les colonnes **user_seeks**, **user_scans**et **user_lookups** de la vue de gestion dynamique [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) .  
+ Pour surveiller l’utilisation des index sur un réplica secondaire, interrogez les colonnes **user_seeks**, **user_scans** et **user_lookups** de la vue de gestion dynamique [sys.dm_db_index_usage_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) .  
   
 ###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> Statistiques des bases de données d’accès en lecture seule  
  Les statistiques sur les colonnes des tables et des vues indexées permettent d'optimiser les plans de requête. Pour les groupes de disponibilité, des statistiques créées et conservées sur les bases de données primaires sont automatiquement rendues persistantes sur les bases de données secondaires dans le cadre de l'application des enregistrements du journal des transactions. Toutefois, la charge de travail en lecture seule sur les bases de données secondaires peut avoir besoin de statistiques différentes de celles créées sur les bases de données primaires. En outre, étant donné que les bases de données secondaires sont limitées à l'accès en lecture seule, les statistiques ne peuvent pas être créées sur les bases de données secondaires.  
@@ -164,7 +164,7 @@ ms.locfileid: "91724600"
   
 -   Supprimez les statistiques temporaires à l'aide de l'instruction [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
--   Analysez les statistiques à l’aide des affichages catalogue **sys.stats** et **sys.stats_columns** . L’affichage**sys_stats** inclut la colonne **is_temporary**pour distinguer les statistiques permanentes des statistiques temporaires.  
+-   Analysez les statistiques à l’aide des affichages catalogue **sys.stats** et **sys.stats_columns** . L’affichage **sys_stats** inclut la colonne **is_temporary** pour distinguer les statistiques permanentes des statistiques temporaires.  
   
  Il n'existe aucune prise en charge de la mise à jour automatique des statistiques pour les tables optimisées en mémoire sur le réplica principal ou secondaire. Vous devez surveiller les performances des requêtes et les plans sur le réplica secondaire et mettre manuellement à jour les statistiques sur le réplica principal quand cela est nécessaire. Toutefois, les statistiques manquantes sont créées automatiquement sur le réplica principal et le réplica secondaire.  
   
