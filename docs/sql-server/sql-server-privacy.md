@@ -1,28 +1,28 @@
 ---
 description: Avenant à la déclaration de confidentialité de SQL Server
 title: Avenant à la déclaration de confidentialité de SQL Server | Microsoft Docs
-ms.date: 09/30/2020
+ms.date: 11/11/2020
 ms.prod: sql
 ms.technology: release-landing
-ms.reviewer: mikeray
+ms.reviewer: wopeter
 ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: jaszymas
-ms.author: jaszymas
-ms.openlocfilehash: f8356b5c07e6d85d9359276740fdd30adc200493
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 87cd9ec5266002f91fea682591e82dfecd403ab5
+ms.sourcegitcommit: 4545b502e3cae7136411fd9a7c15450315665f38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793806"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94550001"
 ---
 # <a name="sql-server-privacy-supplement"></a>Avenant à la déclaration de confidentialité de SQL Server
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-Cet article résume les fonctionnalités Internet qui peuvent collecter et envoyer à Microsoft des données anonymes de diagnostic et d’utilisation des fonctionnalités. SQL Server peut collecter des informations informatiques standard, et les données sur l’utilisation et les performances peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité du produit.
+Cet article résume les fonctionnalités Internet qui peuvent collecter et envoyer à Microsoft des données anonymes de diagnostic et d’utilisation des fonctionnalités. SQL Server peut collecter des informations informatiques standard, et les données sur l’utilisation et les performances peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité du produit. Si vous installez SQL Server sur une machine virtuelle dans le service Microsoft Azure, des informations sur l’environnement peuvent être envoyées à Microsoft afin que Microsoft puisse installer l’extension de l’agent IaaS SQL Server sur votre machine virtuelle et inscrire votre ressource de machine virtuelle SQL auprès du fournisseur de ressources de machines virtuelles SQL (cf. [description](/azure/azure-sql/virtual-machines/windows/sql-vm-resource-provider-register)).
 
 Cet article fait office d’addendum à la [déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) générale. La classification des données dans cet article s’applique uniquement aux versions du produit SQL Server local. Elle ne s'applique pas aux éléments suivants :
 
@@ -34,7 +34,7 @@ Cet article fait office d’addendum à la [déclaration de confidentialité Mic
 - Assistant Migration SQL Server
 - Extension MS-SQL
 
-Définition des *scénarios d’usages autorisés* . Dans le contexte de cet article, Microsoft définit les « Scénarios d’usages autorisés » comme des actions ou activités démarrées par Microsoft.
+Définition des *scénarios d’usages autorisés*. Dans le contexte de cet article, Microsoft définit les « Scénarios d’usages autorisés » comme des actions ou activités démarrées par Microsoft.
 
 ## <a name="access-control"></a>Contrôle d’accès
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bffaef60422d47484968ad30b5bc8d625549a74e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bc7e78fb2b4101df84c2d54162d62ec8b95f6aab
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247468"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418006"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutoriel : Création d'un rapport de tableau de base (Générateur de rapports)
 Ce didacticiel vous apprend à créer un rapport de tableau de base à partir des exemples de données de ventes. L’illustration suivante montre le rapport que vous allez créer.  
@@ -175,7 +175,7 @@ Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lign
   
     2.  La deuxième ligne est répétée une fois pour chaque élément de ligne dans la commande client et affiche le nom du produit, la quantité commandée et le total de ligne.  
   
-    3.  La troisième ligne est répétée une fois pour chaque commande client afin d'afficher les sous-totaux par commande.  
+    3.  La troisième ligne est répétée une fois par catégorie de commande client afin d’afficher les sous-totaux par catégorie.  
   
     4.  La quatrième ligne est répétée une fois pour chaque date de commande afin d'afficher les sous-totaux par jour.  
   
@@ -306,7 +306,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 1.  Cliquez sur **Fichier** > **Enregistrer sous**.  
   
-2.  Cliquez sur **Bureau**, **Mes documents**ou **Poste de travail**, puis naviguez jusqu’au dossier où vous souhaitez enregistrer le rapport.  
+2.  Cliquez sur **Bureau**, **Mes documents** ou **Poste de travail**, puis naviguez jusqu’au dossier où vous souhaitez enregistrer le rapport.  
   
 3.  Dans **Nom**, remplacez **Sans titre** par **Product Sales**.  
   

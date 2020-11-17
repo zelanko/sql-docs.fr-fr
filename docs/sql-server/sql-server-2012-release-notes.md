@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: caca5016c6d461af5cd665ae0ada144cd5fd1c2e
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111143"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384663"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notes de publication de SQL Server 2012
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -630,7 +630,7 @@ La connectivité de SQL Server 2012 Reporting Services vers Microsoft SQL Server
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="90-streaminsight"></a><a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 inclut StreamInsight 2.0. StreamInsight 2.0 nécessite une licence Microsoft SQL Server 2012 et .NET Framework 4.0. Il inclut un certain nombre de résolutions de bogues et d'amélioration des performances. Pour plus d'informations, consultez les [Notes de publication de Microsoft StreamInsight 2.0](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Pour télécharger StreamInsight 2.0 séparément, consultez la [page de téléchargement de Microsoft StreamInsight 2.0](https://go.microsoft.com/fwlink/?LinkId=241593) sur le Centre de téléchargement Microsoft.  
+StreamInsight 2.1 est inclus dans SQL Server 2012. Une licence Microsoft SQL Server 2012 et .NET Framework 4.0 sont requis par StreamInsight 2.1. Il inclut un certain nombre de résolutions de bogues et d'amélioration des performances. Pour plus d’informations, consultez [Notes de publication de Microsoft StreamInsight 2.1](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Pour télécharger StreamInsight 2.1 séparément, consultez la [page de téléchargement de Microsoft StreamInsight 2.1](https://www.microsoft.com/download/details.aspx?id=30149) sur le Centre de téléchargement Microsoft.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

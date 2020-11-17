@@ -1,7 +1,7 @@
 ---
 title: Installation sur Linux et macOS pour les pilotes pour PHP
 description: Dans ces instructions, découvrez comment installer les pilotes Microsoft pour PHP pour SQL Server sur Linux ou macOS.
-ms.date: 10/30/2020
+ms.date: 11/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 66c505f588d6f250c0e18dc88a79b21ed658f2b5
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 41b5eaec44c61e03db609bcd81b3e732a2119e7f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243732"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384218"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutoriel : Installation sur Linux et macOS des pilotes Microsoft pour PHP pour SQL Server
 Les instructions suivantes partent du principe que votre environnement est propre. Elles montrent comment installer PHP 7.x, le pilote ODBC Microsoft, le serveur web Apache et les Pilotes Microsoft pour PHP pour SQL Server sur Ubuntu 16.04, 18.04 et 20.04, RedHat 7 et 8, Debian 8, 9 et 10, Suse 12 et 15, Alpine 3.11 ainsi que macOS 10.13, 10.14 et 10.15. Ces instructions conseillent d’installer les pilotes à l’aide de PECL, mais vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la page de projet GitHub des [pilotes Microsoft pour PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases) et les installer en suivant les instructions fournies dans [Chargement des pilotes Microsoft SQL Server pour PHP](../../connect/php/loading-the-php-sql-driver.md). Pour obtenir une explication concernant le chargement d’extension et savoir pourquoi nous n’ajoutons pas les extensions à php.ini, consultez la section sur le [chargement des pilotes](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
@@ -407,6 +407,7 @@ Pour tester votre installation, consultez [Test de votre installation](#testing-
 ## <a name="testing-your-installation"></a>Test de votre installation
 
 Pour tester cet exemple de script, créez un fichier nommé testsql.php à la racine de document de votre système. Il s’agit de `/var/www/html/` sur Ubuntu, Debian et Red Hat, de `/srv/www/htdocs` sur SUSE, de `/var/www/localhost/htdocs` sur Alpine ou de `/usr/local/var/www` sur macOS. Copiez-y le script suivant, en remplaçant le serveur de base de données, le nom d’utilisateur et le mot de passe comme il convient.
+
 ```php
 <?php
 $serverName = "yourServername";
@@ -466,7 +467,14 @@ function formatErrors($errors)
 }
 ?>
 ```
-Dirigez votre navigateur vers https://localhost/testsql.php (https://localhost:8080/testsql.php sur macOS). Vous devriez maintenant pouvoir vous connecter à votre base de données SQL Server/SQL Azure. Si vous ne voyez pas de message de réussite indiquant des informations sur la version de SQL, consultez [Ressources de support](support-resources-for-the-php-sql-driver.md) pour obtenir de l’aide.
+
+Dirigez votre navigateur vers https://localhost/testsql.php (https://localhost:8080/testsql.php sur macOS). Vous devriez maintenant pouvoir vous connecter à votre base de données SQL Server/SQL Azure. Si le message de réussite indiquant la version de SQL n’apparaît pas, vous pouvez effectuer un dépannage de base en exécutant le script en ligne de commande :
+
+```bash
+php testsql.php
+```
+
+Si l’exécution en ligne de commande réussit, mais que rien ne s’affiche dans votre navigateur, consultez les [fichiers journaux Apache](https://linuxize.com/post/apache-log-files/#location-of-the-log-files). Pour savoir où trouver de l’aide, consultez [Ressources de support](support-resources-for-the-php-sql-driver.md).
 
 ## <a name="see-also"></a>Voir aussi  
 [Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

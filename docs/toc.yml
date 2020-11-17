@@ -6,7 +6,7 @@
   href: sql-server/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: Nouveautés
+    - name: What's New
       items:
         - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -135,7 +135,13 @@
             - name: Prérequis
               href: big-data-cluster/active-directory-prerequisites.md
             - name: Déployer
-              href: big-data-cluster/active-directory-deploy.md
+              items:
+                - name: Déploiement AD simple
+                  href: big-data-cluster/active-directory-deploy.md
+                - name: Planifier AD sur AKS
+                  href: big-data-cluster/active-directory-deployment-aks.md
+                - name: Tutoriel - AD sur AKS
+                  href: big-data-cluster/active-directory-deployment-aks-tutorial.md
             - name: Se connecter
               href: big-data-cluster/active-directory-connect.md
             - name: Plusieurs BDC dans le même domaine AD
@@ -488,7 +494,7 @@
       items:
         - name: Vue d’ensemble
           items:
-            - name: Vue d’ensemble
+            - name: Vue d'ensemble
               href: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
             - name: Stockage Blob Azure
               href: relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
@@ -9992,11 +9998,11 @@
               href: linux/sql-server-linux-setup-full-text-search.md
             - name: Installer SQL Server Integration Services
               href: linux/sql-server-linux-setup-ssis.md
-            - name: Installer SQL Server Machine Learning Services
+            - name: Installer SQL Server Machine Learning Services (Python et R)
               href: linux/sql-server-linux-setup-machine-learning.md
-            - name: Installer SQL Server Machine Learning Services sur Docker
+            - name: Installer SQL Server Machine Learning Services (Python et R) sur Docker
               href: linux/sql-server-linux-setup-machine-learning-docker.md
-            - name: Installer les extensions de langage SQL Server
+            - name: Installer l’extension de langage Java de SQL Server
               href: linux/sql-server-linux-setup-language-extensions-java.md
             - name: Configurer les référentiels
               href: linux/sql-server-linux-change-repo.md

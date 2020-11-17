@@ -1,7 +1,7 @@
 ---
 title: Monter ADLS Gen2 pour la hiérarchisation HDFS
 titleSuffix: How to mount ADLS Gen2
-description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers Azure Data Lake Storage externe dans HDFS sur un cluster Big Data SQL Server 2019.
+description: Cet article donne un exemple de configuration de la hiérarchisation HDFS avec une source de données Azure Data Lake Storage Gen2.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4bfb894112f071cc7a628146265ede17b3f0a14
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730648"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521036"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment monter ADLS Gen2 pour la hiérarchisation HDFS dans un cluster Big Data
 
@@ -43,7 +43,7 @@ La section suivante décrit comment configurer Azure Data Lake Storage Gen2 pour
 
 Pour pouvoir utiliser les informations d’identification OAuth pour le montage, vous devez suivre les étapes ci-dessous :
 
-1. Allez au [Portail Azure](https://portal.azure.com)
+1. Accédez au [Portail Azure](https://portal.azure.com).
 1. Accédez à « Azure Active Directory ». Ce service doit figurer dans la barre de navigation de gauche.
 1. Dans la barre de navigation de droite, sélectionnez « Inscriptions d’applications » et créez une nouvelle inscription.
 1. Créez une application web et suivez l’Assistant. **N’oubliez pas le nom de l’application que vous créez ici**. Vous devrez ajouter ce nom à votre compte ADLS en tant qu’utilisateur autorisé. Notez également l’ID du client d’application dans la vue d’ensemble lorsque vous sélectionnez l’application.

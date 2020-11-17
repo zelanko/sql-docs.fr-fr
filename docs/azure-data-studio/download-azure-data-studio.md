@@ -8,30 +8,29 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/20/2020
-ms.openlocfilehash: b3363e9b5b8872d3a78d7c5c0fa7f70a80c8d6f9
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.date: 11/12/2020
+ms.openlocfilehash: 23e7ee0063ad8e5a3e8dd8653cfd5aab8a1753bc
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257363"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570936"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Télécharger et installer Azure Data Studio
 
-Azure Data Studio s’exécute sur Windows, macOS et Linux.
+Azure Data Studio est un outil de base de données multiplateforme pour les professionnels des données qui utilisent des plateformes de données locales et cloud sur Windows, macOS et Linux.
 
-Téléchargez et installez la dernière version :
+Azure Data Studio offre une expérience d’éditeur moderne avec des fonctionnalités IntelliSense, des extraits de code, l’intégration du contrôle de code source et un terminal intégré. Il est conçu en tenant compte de l’utilisateur de la plateforme de données, avec l’intégration de la représentation graphique des jeux de résultats de requête et des tableaux de bord personnalisables. Pour plus d’informations sur Azure Data Studio, consultez [Qu’est-ce qu’Azure Data Studio](what-is-azure-data-studio.md).
 
-> [!NOTE]
-> Si vous effectuez une mise à jour à partir de SQL Operations Studio et que vous souhaitez conserver vos paramètres, raccourcis clavier ou extraits de code, consultez [Déplacer les paramètres utilisateur](#move-user-settings).
+## <a name="download-the-latest-release"></a>Télécharger la dernière version
 
-|Plateforme|Téléchargement|Date de publication| Version |
-|--------|--------|------------|---------|
-| Windows | [Programme d’installation utilisateur (recommandé)](https://go.microsoft.com/fwlink/?linkid=2145989)<br>[Programme d’installation système](https://go.microsoft.com/fwlink/?linkid=2145990)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2145864) | 14 octobre 2020 | 1.23.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2145865) | 14 octobre 2020 | 1.23.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2146016)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2146015)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2145866) | 14 octobre 2020 | 1.23.0 |
+| Plateforme | Téléchargement | Date de publication | Version |
+|----------|----------|--------------|---------|
+| Windows | [Programme d’installation utilisateur (recommandé)](https://go.microsoft.com/fwlink/?linkid=2148607)<br>[Programme d’installation système](https://go.microsoft.com/fwlink/?linkid=2148907)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2148908) | 12 novembre 2020 | 1.24.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2148710) | 12 novembre 2020 | 1.24.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2148806)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2148709)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2148708) | 12 novembre 2020 | 1.24.0 |
 
-Pour plus d’informations sur la dernière version, consultez les [notes de publication](./release-notes-azure-data-studio.md).
+**Pour plus d’informations sur la dernière version, consultez les [notes de publication](./release-notes-azure-data-studio.md).**
 
 ## <a name="get-azure-data-studio-for-windows"></a>Obtenir Azure Data Studio pour Windows
 
@@ -43,32 +42,32 @@ Nous recommandons le *programme d’installation utilisateur*, car il ne demande
 
 **Programme d' installation utilisateur** (recommandé)
 
-1. Téléchargez et exécutez le programme d’installation [Azure Data Studio *utilisateur* pour Windows](https://go.microsoft.com/fwlink/?linkid=2145989).
+1. Téléchargez et exécutez le programme d’installation [Azure Data Studio *utilisateur* pour Windows](https://go.microsoft.com/fwlink/?linkid=2148607).
 2. Démarrez l’application Azure Data Studio.
 
 **Programme d’installation système**
 
-1. Téléchargez et exécutez le programme d’installation [Azure Data Studio *système* pour Windows](https://go.microsoft.com/fwlink/?linkid=2145990).
+1. Téléchargez et exécutez le programme d’installation [Azure Data Studio *système* pour Windows](https://go.microsoft.com/fwlink/?linkid=2148907).
 2. Démarrez l’application Azure Data Studio.
 
 **Fichier zip**
 
-1. Téléchargez le [fichier .zip Azure Data Studio pour Windows](https://go.microsoft.com/fwlink/?linkid=2145864).
+1. Téléchargez le [fichier .zip Azure Data Studio pour Windows](https://go.microsoft.com/fwlink/?linkid=2148908).
 2. Accédez au fichier téléchargé et extrayez-le.
 3. Exécutez `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## <a name="get-azure-data-studio-for-macos"></a>Obtenir Azure Data Studio pour macOS
 
-1. Téléchargez [Azure Data Studio pour macOS](https://go.microsoft.com/fwlink/?linkid=2145865).
+1. Téléchargez [Azure Data Studio pour macOS](https://go.microsoft.com/fwlink/?linkid=2148710).
 2. Pour développer le contenu du fichier zip, double-cliquez dessus.
 3. Pour rendre Azure Data Studio disponible dans le *Launchpad*, faites glisser *Azure Data Studio.app* vers le dossier *Applications*.
 
 ## <a name="get-azure-data-studio-for-linux"></a>Obtenir Azure Data Studio pour Linux
 
 1. Téléchargez Azure Data Studio pour Linux en utilisant l’un des programmes d’installation ou l’archive tar.gz :
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2146016)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2146015)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2145866)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2148806)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2148709)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2148708)
 1. Pour extraire le fichier et lancer Azure Data Studio, ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
    **Installation Debian :**
@@ -131,7 +130,7 @@ En général, les utilisateurs doivent télécharger la version stable de Azure 
 
 ## <a name="supported-operating-systems"></a>Systèmes d’exploitation pris en charge
 
-Azure Data Studio s’exécute sur Windows, macOS et Linux et est pris en charge sur les plateformes suivantes :
+Azure Data Studio s’exécute sur Windows, macOS et Linux, et est pris en charge sur les plateformes suivantes :
 
 ### <a name="windows"></a>Windows
 
@@ -163,8 +162,8 @@ Azure Data Studio s’exécute sur Windows, macOS et Linux et est pris en charge
 
 | Recommandé/Minimum | Cœurs de processeur | Mémoire/RAM |
 |---------------------|-----------|------------|
-| Recommandé         |     4     |   8 Go     |
-|   Minimum           |     2     |   4 Go     |
+|     Recommandé     |     4     |   8 Go     |
+|     Minimum         |     2     |   4 Go     |
 
 ## <a name="check-for-updates"></a>Rechercher les mises à jour
 
@@ -174,11 +173,11 @@ Les mises à jour d’environnement hors connexion peuvent être appliquées en 
 
 ## <a name="supported-sql-offerings"></a>Produits SQL pris en charge
 
-- Cette version d’Azure Data Studio fonctionne avec toutes les [versions prises en charge de SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et offre la prise en charge d’une utilisation des dernières fonctionnalités cloud d’Azure SQL Database et d’Azure Synapse Analytics. Azure Data Studio fournit également l’aperçu en préversion pour Azure SQL Managed Instance.
+- Cette version d’Azure Data Studio fonctionne avec toutes les [versions prises en charge de SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-MD.md)]](https://support.microsoft.com/lifecycle?C2=1044) et offre la prise en charge d’une utilisation des dernières fonctionnalités cloud d’Azure SQL Database et d’Azure Synapse Analytics. Azure Data Studio fournit également l’aperçu en préversion pour Azure SQL Managed Instance.
 
 ## <a name="move-user-settings"></a>Déplacer les paramètres utilisateur
 
-Si vous souhaitez déplacer vos paramètres personnalisés, raccourcis clavier ou extraits de code, suivez les étapes ci-dessous. Il est important de le faire si vous effectuez une mise à niveau de SQL Operations Studio vers Azure Data Studio.
+Si vous effectuez une mise à jour de SQL Operations Studio vers Azure Data Studio et que vous souhaitez conserver vos paramètres, raccourcis clavier ou extraits de code, suivez les étapes ci-dessous.
 
 *Si vous avez déjà Azure Data Studio ou si vous n’avez jamais installé ou personnalisé SQL Operations Studio, vous pouvez ignorer cette section.*
 
@@ -188,13 +187,13 @@ Si vous souhaitez déplacer vos paramètres personnalisés, raccourcis clavier o
 
 2. Cliquez avec le bouton droit sur l’onglet **Paramètres utilisateur** en haut, puis sélectionnez **Afficher dans l’explorateur**
 
-   ![lancez l’explorateur qui vous permet d’accéder à votre système de fichiers local](./media/download/reveal-in-explorer.png)
+   ![lancer l’explorateur qui vous permet d’accéder à votre système de fichiers local](./media/download/reveal-in-explorer.png)
 
 3. Copiez tous les fichiers de ce dossier et enregistrez-les dans un emplacement facile à trouver sur votre lecteur local, comme votre dossier Documents.
 
    ![utilisez les fichiers et copiez-les sur votre emplacement](./media/download/copy-settings.png)
 
-4. Dans votre nouvelle version d’Azure Data Studio, suivez les étapes 1-2, puis, pour l’étape 3, collez le contenu que vous avez enregistré dans le dossier. Vous pouvez également copier manuellement les paramètres, les combinaisons de touches ou les extraits de code dans leurs emplacements respectifs.
+4. Dans votre nouvelle version d’Azure Data Studio, suivez les étapes 1-2, puis, pour l’étape 3, collez le contenu que vous avez enregistré dans le dossier. Vous pouvez également copier manuellement les paramètres, les combinaisons de touches ou les extraits de code dans leurs emplacements respectifs.
 
 5. Si vous remplacez une installation existante, supprimez l’ancien répertoire d’installation avant l’installation afin d’éviter les erreurs de connexion à votre compte Azure pour l’explorateur de ressources.
 
@@ -202,7 +201,7 @@ Si vous souhaitez déplacer vos paramètres personnalisés, raccourcis clavier o
 
 Vous pouvez également installer Azure Data Studio en utilisant un script d’invite de commandes.
 
-Si vous souhaitez installer Azure Data Studio en arrière-plan sans aucune invite de l’interface graphique utilisateur et que vous êtes sur la plateforme Windows, suivez les étapes ci-dessous.
+Si vous souhaitez installer Azure Data Studio en arrière-plan sans aucune invite de l’interface GUI et que vous êtes sur la plateforme Windows, suivez les étapes ci-dessous.
 
 1. Lancez l’invite de commandes avec des privilèges élevés.
 
@@ -215,7 +214,7 @@ Si vous souhaitez installer Azure Data Studio en arrière-plan sans aucune invit
     Exemple :
 
     ```console
-    %systemdrive%\azuredatastudio-windows-user-setup-1.23.0.exe /VERYSILENT /MERGETASKS=!runcode
+    %systemdrive%\azuredatastudio-windows-user-setup-1.24.0.exe /VERYSILENT /MERGETASKS=!runcode
     ```
 
     > [!Note]
@@ -239,6 +238,8 @@ Si vous avez installé Azure Data Studio avec un fichier .zip ou une autre archi
 
 Pour commencer, consultez l’un des guides de démarrage rapide suivants :
 
+- [Qu’est-ce qu’Azure Data Studio](what-is-azure-data-studio.md)
+- [Notes de publication d’Azure Data Studio](release-notes-azure-data-studio.md)
 - [Connexion & interrogation de SQL Server](quickstart-sql-server.md)
 - [Connexion & interrogation d’Azure SQL Database](quickstart-sql-database.md)
 - [Se connecter à et interroger Azure Data Warehouse](quickstart-sql-dw.md)

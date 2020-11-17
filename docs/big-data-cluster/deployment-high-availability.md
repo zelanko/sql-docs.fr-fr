@@ -9,12 +9,12 @@ ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 08645672c1aa8b7b980b4ffe86b4029a691fa1cf
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990015"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447105"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Déployer un cluster Big Data SQL Server avec une haute disponibilité
 
@@ -211,6 +211,8 @@ Voici les limitations et problèmes connus avec les groupes de disponibilité au
 - Pour restaurer correctement une base de données compatible TDE à partir d’une sauvegarde créée sur un autre serveur, vous devez vérifier que les [certificats nécessaires](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) sont restaurés sur l’instance maître SQL Server et le maître AG contenu. Vous trouverez [ici](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) un exemple de sauvegarde et de restauration de certificats.
 - Certaines opérations comme l’exécution de paramètres de configuration de serveur avec `sp_configure` nécessitent une connexion à la base de données `master` de l’instance SQL Server, et non pas au groupe de disponibilité `master`. Vous ne pouvez pas utiliser le point de terminaison principal correspondant. Suivez [ces instructions](#instance-connect) pour exposer un point de terminaison et vous connecter à l’instance SQL Server, et exécutez `sp_configure`. Vous pouvez uniquement utiliser l’authentification SQL lors de l’exposition manuelle du point de terminaison pour vous connecter à la base de données `master` de l’instance SQL Server.
 - Alors que la base de données msdb autonome est incluse dans le groupe de disponibilité et que les tâches SQL Agent sont répliquées, les tâches ne s’exécutent qu’en fonction de la planification du réplica principal.
+- La fonctionnalité de réplication n’est pas prise en charge pour les groupes de disponibilité autonomes. Les instances SQL Server membres d’un groupe de disponibilité autonome ne peuvent pas fonctionner comme bases de données du serveur de distribution ou de publication, que ce soit au niveau de l’instance ou au niveau du groupe.
+- Il n’est pas possible d’ajouter des groupes de fichiers lors de la création de la base de données. Pour contourner ce problème, vous pouvez commencer par créer la base de données, puis émettre une instruction ALTER DATABASE pour ajouter des groupes de fichiers.
 - Avant SQL Server 2019 CU2, les bases de données créées par des workflows autres que `CREATE DATABASE` et `RESTORE DATABASE`, comme `CREATE DATABASE FROM SNAPSHOT`, ne sont pas automatiquement ajoutées au groupe de disponibilité. [Connectez-vous à l’instance](#instance-connect) et ajoutez manuellement la base de données au groupe de disponibilité.
 
 ## <a name="next-steps"></a>Étapes suivantes
