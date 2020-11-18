@@ -2,7 +2,7 @@
 description: SQL dynamique
 title: SQL dynamique | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/16/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de711543748a91015a9aa0d4cb8aadb011744306
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86164b1bc5d98475d4e2f0980ce433d33e5d858f
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494580"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704174"
 ---
 # <a name="dynamic-sql"></a>SQL dynamique
 Bien que SQL statique fonctionne bien dans de nombreux cas, il existe une classe d’applications dans laquelle l’accès aux données ne peut pas être déterminé à l’avance. Par exemple, supposons qu’une feuille de calcul permette à un utilisateur d’entrer une requête, que la feuille de calcul envoie ensuite au SGBD pour récupérer des données. Le contenu de cette requête ne peut évidemment pas être connu du programmeur lors de l’écriture du programme de feuille de calcul.  
@@ -32,7 +32,7 @@ Bien que SQL statique fonctionne bien dans de nombreux cas, il existe une classe
   
  La façon la plus simple d’exécuter une instruction SQL dynamique est d’utiliser une instruction EXECUTe immediate. Cette instruction passe l’instruction SQL au SGBD pour la compilation et l’exécution.  
   
- L’un des inconvénients de l’instruction EXECUTe Immediate est que le SGBD doit passer par chacune des cinq étapes de traitement d’une instruction SQL chaque fois que l’instruction est exécutée. La surcharge impliquée dans ce processus peut être significative si de nombreuses instructions sont exécutées de manière dynamique, et c’est un gaspillage si ces instructions sont similaires. Pour résoudre ce problème, SQL dynamique offre une forme d’exécution optimisée appelée exécution préparée, qui utilise les étapes suivantes :  
+ L’un des inconvénients de l’instruction EXECUTe Immediate est que le SGBD doit passer par chacune des [cinq étapes de traitement d’une instruction SQL](processing-a-sql-statement.md) chaque fois que l’instruction est exécutée. La surcharge impliquée dans ce processus peut être significative si de nombreuses instructions sont exécutées de manière dynamique, et c’est un gaspillage si ces instructions sont similaires. Pour résoudre ce problème, SQL dynamique offre une forme d’exécution optimisée appelée exécution préparée, qui utilise les étapes suivantes :  
   
 1.  Le programme construit une instruction SQL dans une mémoire tampon, comme c’est le cas pour l’instruction EXECUTe immediate. Au lieu de variables hôtes, un point d’interrogation ( ?) peut se substituer à une constante n’importe où dans le texte de l’instruction pour indiquer qu’une valeur pour la constante sera fournie ultérieurement. Le point d’interrogation est appelé comme marqueur de paramètre.  
   
