@@ -128,7 +128,7 @@ Les opérations de chiffrement et de déchiffrement sont planifiées sur des thr
 Pour que les instructions suivantes acceptent les certificats TDE, utilisez une clé principale de base de données pour les chiffrer. Si vous les chiffrez par mot de passe uniquement, les instructions les rejettent en tant que chiffreurs.
 
 > [!IMPORTANT]
-> Si vous protégez les certificats par mot de passe après avoir été utilisés par TDE, la base de données devient inaccessible après un redémarrage.
+> Si vous protégez les certificats par mot de passe après que TDE les a utilisés, la base de données devient inaccessible après un redémarrage.
 
 Le tableau suivant fournit des liens et des explications pour les commandes et les fonctions TDE :
 
@@ -173,7 +173,7 @@ Si vous utilisez une base de données dans la mise en miroir de bases de donnée
 
 ## <a name="restrictions"></a>Restrictions
 
-Les opérations suivantes ne sont pas autorisées pendant le chiffrement initial de la base de données, un changement de clé ou le chiffrement de la base de données :
+Les opérations suivantes ne sont pas autorisées pendant le chiffrement initial de la base de données, un changement de clé ou le déchiffrement de la base de données :
 
 - Suppression d’un fichier dans un groupe de fichiers de base de données
 

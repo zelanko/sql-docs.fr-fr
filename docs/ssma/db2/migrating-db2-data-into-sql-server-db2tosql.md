@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5b833a97fceeaf09b5eb6ffb86ac3abeb06e6bb0
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2f3ca5b9f222e52b7913d5688b6e8c6adfbd526d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987915"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869677"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Migration de données DB2 vers SQL Server (DB2ToSQL)
 Une fois que vous avez correctement synchronisé les objets convertis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez migrer des données de DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -91,7 +91,7 @@ Pour afficher les messages de migration, assurez-vous que le volet de sortie est
   
 5.  Dans la boîte de dialogue **connexion à DB2** , entrez les informations d’identification de connexion, puis cliquez sur **se connecter**. Pour plus d’informations sur la connexion à DB2, consultez [connexion à la base de données db2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    Pour vous connecter à la base de données cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez les informations d’identification de connexion dans la boîte de dialogue **se connecter à SQL Server** , puis cliquez sur **se connecter**. Pour plus d’informations sur la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [connexion à SQL Server](./connecting-to-sql-server-db2etosql.md)  
+    Pour vous connecter à la base de données cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entrez les informations d’identification de connexion dans la boîte de dialogue **se connecter à SQL Server** , puis cliquez sur **se connecter**. Pour plus d’informations sur la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [connexion à SQL Server](./connecting-to-sql-server-db2tosql.md)  
   
     Les messages s’affichent dans le volet de **sortie** . Une fois la migration terminée, le **rapport de migration des données** s’affiche. Si des données n’ont pas été migrées, cliquez sur la ligne qui contient les erreurs, puis cliquez sur **Détails**. Lorsque vous avez terminé avec le rapport, cliquez sur **Fermer**. Pour plus d’informations sur le rapport de migration de données, consultez [rapport de migration des données (SSMA commun)](../sybase/data-migration-report-sybasetosql.md)  
   

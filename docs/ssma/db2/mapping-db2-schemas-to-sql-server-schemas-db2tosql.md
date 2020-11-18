@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9942d2ee78932c3bb8bed2baac0885b68e40049d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987445"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869561"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Mappage de schémas DB2 à des schémas de SQL Server (DB2ToSQL)
 Dans DB2, chaque base de données contient un ou plusieurs schémas. Par défaut, SSMA migre tous les objets d’un schéma DB2 vers une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données nommée pour le schéma. Toutefois, vous pouvez personnaliser le mappage entre les schémas DB2 et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données.  
@@ -23,7 +23,7 @@ Dans DB2, chaque base de données contient un ou plusieurs schémas. Par défaut
 ## <a name="db2-and-sql-server-schemas"></a>Schémas DB2 et SQL Server  
 Une base de données DB2 contient des schémas. Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient plusieurs bases de données, chacune pouvant avoir plusieurs schémas.  
   
-Le concept DB2 d’un schéma est mappé au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concept d’une base de données et à l’un de ses schémas. Par exemple, DB2 peut avoir un schéma nommé **HR**. Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut avoir une base de données nommée **HR**et au sein de cette base de données sont des schémas. Un schéma est le schéma **dbo** (ou propriétaire de la base de données). Par défaut, le schéma DB2 **HR** est mappé à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données et au schéma **hr. dbo**. SSMA fait référence à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinaison base de données et schéma en tant que schéma.  
+Le concept DB2 d’un schéma est mappé au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concept d’une base de données et à l’un de ses schémas. Par exemple, DB2 peut avoir un schéma nommé **HR**. Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut avoir une base de données nommée **HR** et au sein de cette base de données sont des schémas. Un schéma est le schéma **dbo** (ou propriétaire de la base de données). Par défaut, le schéma DB2 **HR** est mappé à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données et au schéma **hr. dbo**. SSMA fait référence à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinaison base de données et schéma en tant que schéma.  
   
 Vous pouvez modifier le mappage entre DB2 et les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas.  
   
@@ -63,5 +63,5 @@ Si vous personnalisez le mappage entre un schéma DB2 et un [!INCLUDE[ssNoVersio
 Si vous souhaitez analyser la conversion d’objets DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous pouvez effectuer un [rapport de migration des données (SSMA commun)](../sybase/data-migration-report-sybasetosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Connexion à SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[Connexion à SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
 [Migration de bases de données DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

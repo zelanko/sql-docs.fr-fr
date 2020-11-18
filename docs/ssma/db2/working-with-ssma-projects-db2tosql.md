@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2dbcef29550276241cb638b6224914e43e2e88ec
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f56387f8081ce14c68d355327c2829bf6e33c8cc
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988458"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869477"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Utilisation de projets SSMA (DB2ToSQL)
 Pour migrer des bases de données DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez d’abord créer un projet SSMA. Le projet est un fichier qui contient les informations suivantes :  
@@ -28,7 +28,7 @@ Pour migrer des bases de données DB2 vers [!INCLUDE[ssNoVersion](../../includes
   
 -   Paramètres du projet.  
   
-Lorsque vous ouvrez un projet, il est déconnecté de DB2 et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela vous permet de travailler hors connexion. Pour plus d’informations sur la reconnexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [connexion à SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+Lorsque vous ouvrez un projet, il est déconnecté de DB2 et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela vous permet de travailler hors connexion. Pour plus d’informations sur la reconnexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [connexion à SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md).  
   
 ## <a name="reviewing-default-project-settings"></a>Vérification des paramètres de projet par défaut  
 SSMA contient plusieurs paramètres permettant de convertir et de charger des objets de base de données, de migrer des données et de synchroniser SSMA avec DB2 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les paramètres par défaut conviennent à de nombreux utilisateurs. Toutefois, avant de créer un nouveau projet SSMA, vous devez passer en revue les paramètres. Si vous le souhaitez, vous pouvez modifier les paramètres par défaut qui seront utilisés pour tous vos nouveaux projets.  
@@ -121,4 +121,4 @@ L’étape suivante du processus de migration consiste à [se connecter à la ba
 ## <a name="see-also"></a>Voir aussi  
 [Migration de bases de données DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [Connexion à la base de données DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
-[Connexion à SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
+[Connexion à SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md)  
