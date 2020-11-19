@@ -37,7 +37,7 @@
 - name: Se connecter à SQL Server
   href: connect-to-sql-server-db2tosql.md
 - name: Connexion à SQL Server
-  href: connecting-to-sql-server-db2etosql.md
+  href: connecting-to-sql-server-db2tosql.md
 - name: Rapport d’évaluation
   href: assessment-report-db2tosql.md
 - name: Se connecter à DB2

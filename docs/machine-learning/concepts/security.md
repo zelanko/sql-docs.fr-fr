@@ -7,15 +7,14 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956511"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870002"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Architecture de sécurité de l’infrastructure d’extensibilité dans SQL Server Machine Learning Services
 
@@ -77,7 +76,7 @@ Par conséquent, tous les scripts externes qui sont lancés à partir d’un cli
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Services utilisés dans le traitement externe (launchpad)
 
-L’infrastructure d’extensibilité ajoute un nouveau service NT à la [liste des services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) dans une installation SQL Server : [**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+L’infrastructure d’extensibilité ajoute un nouveau service NT à la [liste des services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) dans une installation SQL Server : [**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Le moteur de base de données utilise le service SQL Server **launchpad** pour instancier une session de script externe en tant que processus distinct. 
 Le processus s’exécute sous un compte à faibles privilèges. Ce compte est distinct de SQL Server launchpad lui-même et de l’identité de l’utilisateur sous laquelle la procédure stockée ou la requête de l’hôte a été exécutée. L’exécution de scripts dans un processus distinct, sous un compte à faibles privilèges, est la base du modèle de sécurité et d’isolation pour les scripts externes dans SQL Server.
@@ -85,7 +84,7 @@ Le processus s’exécute sous un compte à faibles privilèges. Ce compte est d
 SQL Server gère également un mappage de l’identité de l’utilisateur appelant au compte de travail à faibles privilèges utilisé pour démarrer le processus satellite. Dans certains scénarios, où le script ou le code rappelle SQL Server pour des données et des opérations, SQL Server est en mesure de gérer le transfert d’identité de manière fluide. Le script contenant des instructions SELECT ou appelant des fonctions et d’autres objets de programme fonctionnera généralement si l’utilisateur à l’origine de l’appel dispose des autorisations nécessaires.
 
 > [!NOTE]
-> Par défaut, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] est configuré pour s’exécuter sous**NT Service\MSSQLLaunchpad**, qui dispose de toutes les autorisations nécessaires pour exécuter des scripts externes. Pour plus d’informations sur les options configurables, consultez [Configuration du service SQL Server launchpad](../security/sql-server-launchpad-service-account.md).
+> Par défaut, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] est configuré pour s’exécuter sous **NT Service\MSSQLLaunchpad**, qui dispose de toutes les autorisations nécessaires pour exécuter des scripts externes. Pour plus d’informations sur les options configurables, consultez [Configuration du service SQL Server launchpad](../security/sql-server-launchpad-service-account.md).
 
 ::: moniker-end
 
@@ -93,7 +92,7 @@ SQL Server gère également un mappage de l’identité de l’utilisateur appel
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Services utilisés dans le traitement externe (launchpad)
 
-L’infrastructure d’extensibilité ajoute un nouveau service NT à la [liste des services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) dans une installation SQL Server : [**SQL Server launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+L’infrastructure d’extensibilité ajoute un nouveau service NT à la [liste des services](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) dans une installation SQL Server : [**SQL Server launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
 
 Le moteur de base de données utilise le service SQL Server **launchpad** pour instancier une session de script externe en tant que processus distinct. 
 Le processus s’exécute sous l’identité de l’utilisateur launchpad, mais avec la restriction supplémentaire d’être contenu dans un AppContainer. L’exécution de scripts dans un processus distinct, sous AppContainer, est la base du modèle de sécurité et d’isolation pour les scripts externes dans SQL Server.
@@ -101,7 +100,7 @@ Le processus s’exécute sous l’identité de l’utilisateur launchpad, mais 
 SQL Server gère également un mappage de l’identité de l’utilisateur appelant au compte de travail à faibles privilèges utilisé pour démarrer le processus satellite. Dans certains scénarios, où le script ou le code rappelle SQL Server pour des données et des opérations, SQL Server est en mesure de gérer le transfert d’identité de manière fluide. Le script contenant des instructions SELECT ou appelant des fonctions et d’autres objets de programme fonctionnera généralement si l’utilisateur à l’origine de l’appel dispose des autorisations nécessaires.
 
 > [!NOTE]
-> Par défaut, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] est configuré pour s’exécuter sous**NT Service\MSSQLLaunchpad**, qui dispose de toutes les autorisations nécessaires pour exécuter des scripts externes. Pour plus d’informations sur les options configurables, consultez [Configuration du service SQL Server launchpad](../security/sql-server-launchpad-service-account.md).
+> Par défaut, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] est configuré pour s’exécuter sous **NT Service\MSSQLLaunchpad**, qui dispose de toutes les autorisations nécessaires pour exécuter des scripts externes. Pour plus d’informations sur les options configurables, consultez [Configuration du service SQL Server launchpad](../security/sql-server-launchpad-service-account.md).
 
 ::: moniker-end
 
@@ -129,7 +128,7 @@ Pour plus d’informations, consultez [Architecture d’extensibilité dans SQL 
 
 + La taille du pool de comptes d’utilisateur est statique et sa valeur par défaut est 20 et prend en charge 20 sessions simultanées. Le nombre de sessions du runtime externe qui peuvent s’exécuter simultanément est limité par la taille du pool de ce compte d’utilisateur. 
 
-+ Les noms de comptes professionnels dans le pool sont au format SQLInstanceName*nn*. Par exemple, sur une instance par défaut, **SQLRUserGroup** contient des comptes nommés MSSQLSERVER01, MSSQLSERVER02, et ainsi de suite, jusqu’à MSSQLSERVER20.
++ Les noms de comptes professionnels dans le pool sont au format SQLInstanceName *nn*. Par exemple, sur une instance par défaut, **SQLRUserGroup** contient des comptes nommés MSSQLSERVER01, MSSQLSERVER02, et ainsi de suite, jusqu’à MSSQLSERVER20.
 
 Les tâches en parallèle ne consomment pas de comptes supplémentaires. Par exemple, si un utilisateur exécute une tâche de scoring qui utilise le traitement parallèle, le même compte professionnel est réutilisé pour tous les threads. Si vous envisagez d’utiliser intensivement l’apprentissage automatique, vous pouvez augmenter le nombre de comptes utilisés pour exécuter des scripts externes. Pour plus d’informations, consultez [Mise à l’échelle de l’exécution simultanée de scripts externes dans SQL Server Machine Learning Services](../../machine-learning/administration/scale-concurrent-execution-external-scripts.md).
 

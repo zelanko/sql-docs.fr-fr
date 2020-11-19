@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 10/22/2020
-ms.openlocfilehash: bd361913ac7f094e217b6b75163a0dd96d97d7e2
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: e4030cac39eca0d57af3bf2bcefad293e83971c2
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496740"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704164"
 ---
 # <a name="sql-database-projects-extension-preview"></a>Extension des projets SQL Database (préversion)
 
@@ -39,14 +39,14 @@ Regardez cette courte vidéo (10 minutes) qui présente l’extension SQL Datab
 
 ## <a name="install-the-sql-database-projects-extension"></a>Installer l’extension des projets SQL Database
 
-1. Ouvrez le gestionnaire d’extensions pour accéder aux extensions disponibles.  Pour cela, sélectionnez l’icône des extensions ou l’option **Extensions** dans le menu **Affichage** .
+1. Ouvrez le gestionnaire d’extensions pour accéder aux extensions disponibles.  Pour cela, sélectionnez l’icône des extensions ou l’option **Extensions** dans le menu **Affichage**.
 2. Identifiez l’extension *des projets SQL Database* en tapant tout ou partie du nom dans la zone de recherche de l’extension. Sélectionnez une extension disponible pour afficher ses détails.
 
    ![Installer l’extension](media/sql-database-projects-extension/install-database-projects.png)
 
-3. Sélectionnez l’extension de votre choix et **installez-la** .
+3. Sélectionnez l’extension de votre choix et **installez-la**.
 4. Sélectionnez **Recharger** pour activer l’extension (nécessaire uniquement la première fois que vous installez une extension).
-5. Sélectionnez l’icône fichiers à partir de la barre d’activité ou sélectionnez **Explorer** dans le menu **Affichage** . Une nouvelle icône pour les **Projets**  est désormais disponible.
+5. Sélectionnez l’icône fichiers à partir de la barre d’activité ou sélectionnez **Explorer** dans le menu **Affichage**. Une nouvelle icône pour les **Projets**  est désormais disponible.
 
    > [!NOTE]
    > Le kit SDK .NET Core est requis pour la fonctionnalité de génération de projet, et vous serez invité à l’installer s’il ne peut pas être détecté par l’extension.  Le kit SDK .NET Core (3.1 ou version ultérieure) peut être téléchargé et installé à partir de [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).
@@ -56,14 +56,11 @@ Regardez cette courte vidéo (10 minutes) qui présente l’extension SQL Datab
 
 ## <a name="known-limitations"></a>Limitations connues
 
-1. L’ajout de références de projet et le chargement de références de projet existantes dans la section Azure Data Studio ne sont pas pris en charge actuellement.
-2. Le chargement de fichiers en tant que lien n’est pas pris en charge dans la section Azure Data Studio. Toutefois, les fichiers sont chargés au niveau supérieur dans l’arborescence et la build incorpore ces fichiers comme prévu.
-3. L’ajout et le chargement du script de déploiement avant publication dans la section n’est pas pris en charge. Toutefois, si vous ajoutez manuellement ces fichiers au projet, ils sont honorés au moment de la génération.
-4. Les objets SQLCLR dans le projet ne sont pas pris en charge dans la version .NET Core de DacFx.
-5. Les tâches (génération/publication) ne sont pas définies par l’utilisateur.
-6. Publier les cibles définies par DacFx.
-7. L’intégration du contrôle de code source et la création d’un nouveau projet ne créent pas automatiquement le fichier .gitignore.
-8. La prise en charge de l’environnement WSL est limitée.
+- Le chargement de fichiers en tant que lien n’est pas pris en charge dans la section Azure Data Studio. Toutefois, les fichiers sont chargés au niveau supérieur dans l’arborescence et la build incorpore ces fichiers comme prévu.
+- Les objets SQLCLR dans le projet ne sont pas pris en charge dans la version .NET Core de DacFx.
+- Les tâches (génération/publication) ne sont pas définies par l’utilisateur.
+- Publier les cibles définies par DacFx.
+- La prise en charge de l’environnement WSL est limitée.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

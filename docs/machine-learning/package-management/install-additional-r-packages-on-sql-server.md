@@ -7,15 +7,14 @@ ms.date: 06/04/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1019497f8f6b2c87843cf443a83f1a8683da1800
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: d3f7c61420dc1b85f7f40854dce9931d25aef895
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956700"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870491"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installer de nouveaux packages R avec sqlmlutils
 
@@ -154,7 +153,7 @@ Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a a
 
 1. Sur l’ordinateur client, ouvrez RStudio et créez un fichier de **script R**.
 
-1. Utilisez le script R suivant pour installer le package**glue** à l’aide de **sqlmlutils**. Remplacez les valeurs existantes par vos propres informations de connexion à la base de données SQL Server.
+1. Utilisez le script R suivant pour installer le package **glue** à l’aide de **sqlmlutils**. Remplacez les valeurs existantes par vos propres informations de connexion à la base de données SQL Server.
 
    ```R
    library(sqlmlutils)
@@ -172,7 +171,7 @@ Si l’ordinateur client que vous utilisez pour vous connecter à SQL Server a a
 
 ### <a name="add-the-package-offline"></a>Ajouter le package hors connexion
 
-Si l’ordinateur client n’a pas de connexion Internet, vous pouvez utiliser **miniCRAN** pour télécharger le package**glue** à l’aide d’un ordinateur qui a accès à Internet. Vous copiez ensuite le package sur l’ordinateur client sur lequel vous pouvez installer le package hors connexion.
+Si l’ordinateur client n’a pas de connexion Internet, vous pouvez utiliser **miniCRAN** pour télécharger le package **glue** à l’aide d’un ordinateur qui a accès à Internet. Vous copiez ensuite le package sur l’ordinateur client sur lequel vous pouvez installer le package hors connexion.
 Consultez [Installer miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) pour plus d’informations sur l’installation de **miniCRAN**.
 
 Sur un ordinateur connecté à Internet :
@@ -214,7 +213,7 @@ Sur l’ordinateur client :
 
 1. Ouvrez RStudio et créez un fichier de **script R**.
 
-1. Utilisez le script R suivant pour installer le package**glue** à l’aide de **sqlmlutils**. Remplacez vos propres informations de connexion de base de données SQL Server (si vous n’utilisez pas l’authentification Windows, ajoutez les paramètres `uid` et `pwd`).
+1. Utilisez le script R suivant pour installer le package **glue** à l’aide de **sqlmlutils**. Remplacez vos propres informations de connexion de base de données SQL Server (si vous n’utilisez pas l’authentification Windows, ajoutez les paramètres `uid` et `pwd`).
 
    ```R
    library(sqlmlutils)
