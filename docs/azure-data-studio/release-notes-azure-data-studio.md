@@ -8,17 +8,40 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 11/12/2020
+ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059187"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584802"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](./download-azure-data-studio.md)**
+
+## <a name="november-2020"></a>Novembre 2020
+
+12 novembre 2020 &nbsp; / &nbsp; version : 1.24.0
+
+&nbsp;
+
+| Modifier | Détails |
+| ------ | ------- |
+| Correctifs de bogues | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Boîte de dialogue Connexion | Ajout d’un nouvel onglet Parcourir à la boîte de dialogue de connexion. |
+| Mise à jour d’extension(s) | Publication de la mise à jour de l’extension Postgres. |
+| Nouvelles fonctionnalités des notebooks | Ajout de nouvelles fonctionnalités à la prise en charge de SQL dans les notebooks. <br/> Ajout de nouvelles fonctionnalités à la prise en charge du paramétrage dans les notebooks. <br/>  Ajout de nouvelles fonctionnalités à la diffusion en continu des résultats pour les notebooks SQL. |
+| Installation de Python | Le package PROSE a été supprimé de l’installation par défaut de Python. |
+
+### <a name="known-issues-1240"></a>Problèmes connus (1.24.0)
+
+| Nouvel élément | Détails | Solution de contournement |
+|----------|---------|------------|
+| Extension Azure Arc | [Problème connu :](https://github.com/microsoft/azuredatastudio/issues/13319) Le bouton « Exécuter un script sur un notebook » pour les déploiements Arc MIAA & PG n’effectue aucune validation de champ avant de créer les scripts du notebook. Cela signifie que si les utilisateurs entrent un mot de passe erroné dans les champs de confirmation du mot de passe, ils risquent de se retrouver avec un notebook affichant une valeur de mot de passe incorrecte.| Le bouton « Déployer » fonctionne comme prévu, ce qui signifie que les utilisateurs doivent l’utiliser à la place. |
+| Explorateur d’objets | Les versions d’ADS antérieures à 1.24.0 ont un changement cassant dans l’Explorateur d’objets en raison des modifications du moteur relatives à [Azure Synapse Analytics SQL à la demande](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Pour continuer à utiliser l’Explorateur d’objets dans Azure Data Studio avec Azure Synapse Analytics SQL à la demande, vous avez besoin d’Azure Data Studio 1.24.0 ou version ultérieure. |
+
+Pour connaître les autres problèmes connus et pour envoyer vos commentaires à l’équipe produit, accédez à [Commentaires sur Azure Data Studio](https://github.com/microsoft/azuredatastudio).
 
 ## <a name="october-2020"></a>Octobre 2020
 

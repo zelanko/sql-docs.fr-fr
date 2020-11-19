@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 07c59ceb0ec51d4d9fd357fcc154892091c3caaf
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868196"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631765"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -550,7 +550,7 @@ GO
   
 -   L'étendue représente le mode de verrouillage protégeant l'étendue entre deux entrées d'index successives.  
 -   La ligne représente le mode de verrouillage protégeant l'entrée de l'index.  
--   Le mode représente la combinaison de modes de verrouillage utilisée. Les modes de verrouillage d'étendues de clés comportent deux parties. La première représente le type de verrou utilisé pour verrouiller l’étendue d’index (Range*T*) et la deuxième représente le type de verrou utilisé pour verrouiller une clé spécifique (*K*). Les deux parties sont reliées par un tiret (-), par exemple Range*T*-*K*.  
+-   Le mode représente la combinaison de modes de verrouillage utilisée. Les modes de verrouillage d'étendues de clés comportent deux parties. La première représente le type de verrou utilisé pour verrouiller l’étendue d’index (Range *T*) et la deuxième représente le type de verrou utilisé pour verrouiller une clé spécifique (*K*). Les deux parties sont reliées par un tiret (-), par exemple Range *T*-*K*.  
   
     |Plage|Ligne|Mode|Description|  
     |-----------|---------|----------|-----------------|  
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Événement étendu de blocage
 À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], l’événement étendu `xml_deadlock_report` (xEvent) doit être utilisé à la place de la classe d’événements Deadlock Graph dans SQL Trace ou SQL Profiler.
 
-De plus, à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], en cas d’interblocage, la session ***system\_health*** capture déjà tous les événements étendus `xml_deadlock_report` qui contiennent le graphique d’interblocage. Étant donné que la session *system\_health* est activée par défaut, il n’est pas nécessaire qu’une session xEvent distincte soit configurée pour capturer les informations d’interblocage. 
+De plus, à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], en cas d’interblocage, la session **_system\_health_* _ capture déjà tous les événements étendus `xml_deadlock_report` qui contiennent le graphique d’interblocage. Étant donné que la session _system\_health* est activée par défaut, il n’est pas nécessaire qu’une session xEvent distincte soit configurée pour capturer les informations d’interblocage. 
 
 L’événement Deadlock Graph capturé a généralement trois nœuds distincts :
 -   **victim-list**. Identificateur du processus victime de l’interblocage.
