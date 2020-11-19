@@ -2,7 +2,7 @@
 title: Tableau de bord Performances | Microsoft Docs
 description: Découvrez le tableau de bord Performances de SQL Server Management Studio, qui fournit un insight rapide de SQL Server et d’Azure SQL Managed Instance.
 ms.custom: ''
-ms.date: 12/14/2019
+ms.date: 11/13/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45b657be3cef9267431892eeced327e966b97b7d
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863369"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674179"
 ---
 # <a name="performance-dashboard"></a>Tableau de bord Performances
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,8 +78,9 @@ Le rapport **Attentes** filtre toutes les attentes d’inactivité et de mise en
 
 Les rapports **Requêtes coûteuses** sont réinitialisés quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre, car les données dans les DMV sous-jacentes sont effacées. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous trouverez des informations détaillées sur les requêtes coûteuses dans le Magasin des requêtes. 
 
+
 > [!NOTE]
-> Le tableau de bord Performances a d’abord été publié sous forme de téléchargement autonome pour [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), puis mis à jour pour [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
+> Le tableau de bord Performances a d’abord été publié sous forme de téléchargement autonome pour [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), puis mis à jour pour [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063). Le convertisseur de rapport SQL Server Management Studio ne prend pas en charge l’accès du Presse-papiers au texte contenu dans les rapports. Cependant, ce texte est accessible dans les rapports autonomes.  Téléchargez les rapports autonomes si vous devez copier le texte des requêtes à partir des rapports.
 
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requiert les autorisations `VIEW SERVER STATE` et `ALTER TRACE`. Sur [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.

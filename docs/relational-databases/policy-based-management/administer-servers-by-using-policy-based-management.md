@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bca6797111b59257e96e447fc3d9e4ba9ba8bb80
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e60a5d8bdb987e3be2016b8b0395f05e83f9f7a9
+ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890879"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631755"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-   La Gestion basée sur des stratégies est un système de stratégies permettant de gérer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez la Gestion basée sur des stratégies pour créer des conditions qui contiennent des expressions de condition. Ensuite, créez des stratégies qui appliquent les conditions à des objets cibles de base de données.  
+   La Gestion basée sur des stratégies est un système de stratégies permettant de gérer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez-la pour créer des conditions contenant des expressions conditionnelles. Ensuite, créez des stratégies qui appliquent les conditions à des objets cibles de base de données.  
 
 Par exemple, en tant qu’administrateur de la base de données, vous souhaiterez peut-être vous assurer que la messagerie de base de données n’est pas activée sur certains serveurs afin de créer une condition et une stratégie qui définit cette option de serveur. 
    
@@ -74,7 +74,7 @@ Par exemple, en tant qu’administrateur de la base de données, vous souhaitere
 ## <a name="terms"></a>Termes  
  **Cible gérée de la Gestion basée sur des stratégies** Entités gérées par la Gestion basée sur des stratégies, telles qu’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], une base de données, une table ou un index. Toutes les cibles dans une instance de serveur forment une hiérarchie cible. Un jeu de cibles est l'ensemble des cibles qui résulte de l'application d'un jeu de filtres cibles à la hiérarchie cible, par exemple toutes les tables de la base de données détenues par le schéma HumanResources.  
   
- **Facette de la Gestion basée sur des stratégies**Ensemble de propriétés logiques qui modèlent le comportement ou les caractéristiques de certains types de cibles gérées. Le nombre et les caractéristiques des propriétés sont intégrés à la facette et peuvent être ajoutés ou supprimés uniquement par le créateur de la facette. Un type de cible peut implémenter une ou plusieurs facettes de gestion et une facette de gestion peut être implémentée par un ou plusieurs types de cibles. Certaines propriétés d'une facette peuvent s'appliquer uniquement à une version spécifique.  
+ **Facette de la Gestion basée sur des stratégies** Ensemble de propriétés logiques qui modèlent le comportement ou les caractéristiques de certains types de cibles gérées. Le nombre et les caractéristiques des propriétés sont intégrés à la facette et peuvent être ajoutés ou supprimés uniquement par le créateur de la facette. Un type de cible peut implémenter une ou plusieurs facettes de gestion et une facette de gestion peut être implémentée par un ou plusieurs types de cibles. Certaines propriétés d'une facette peuvent s'appliquer uniquement à une version spécifique.  
   
  **Condition de la Gestion basée sur des stratégies**  
  Expression booléenne qui spécifie un ensemble d'états autorisés pour une cible gérée par la Gestion basée sur des stratégies en ce qui concerne une facette de gestion. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’observer les classements au moment de l’évaluation d’une condition. Si les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne correspondent pas exactement aux classements Windows, testez votre condition afin de déterminer la façon dont l'algorithme résout les conflits.  

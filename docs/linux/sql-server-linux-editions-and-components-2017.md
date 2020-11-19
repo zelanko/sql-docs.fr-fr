@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 6d3a6d83b14c401ca6fc7ff6c773ef9565662a0f
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 11ac66182122cba239634cdf07f4b6683d2479cb
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115442"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674168"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017 sur Linux
 
@@ -210,6 +210,7 @@ Pour plus d’informations sur les fonctionnalités Integration Services (SSIS) 
 |Types de données planaires et géodésiques|Oui|Oui|Oui|Oui| 
 |Bibliothèques spatiales avancées|Oui|Oui|Oui|Oui|   
 |Importation/exportation de formats de données spatiales standard|Oui|Oui|Oui|Oui|   
+
 ## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Fonctionnalités et services non pris en charge
 
 Les fonctionnalités et services suivants ne sont pas disponibles dans SQL Server 2017 sur Linux. Le support de ces fonctionnalités sera de plus en plus activé dans le temps.
@@ -225,6 +226,7 @@ Les fonctionnalités et services suivants ne sont pas disponibles dans SQL Serve
 | &nbsp; | FileTable, FILESTREAM |
 | &nbsp; | Assemblys CLR avec l’ensemble d’autorisations EXTERNAL_ACCESS ou UNSAFE |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Sauvegarde sur URL – Objet blob de pages<sup>1</sup>|
 | **SQL Server Agent** |  Sous-systèmes : CmdExec, PowerShell, lecture de la file d’attente, SSIS, SSAS, SSRS |
 | &nbsp; | Alertes |
 | &nbsp; | l'Agent de lecture du journal ; |
@@ -241,6 +243,8 @@ Les fonctionnalités et services suivants ne sont pas disponibles dans SQL Serve
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
   
+<sup>1</sup> La sauvegarde sur URL est prise en charge pour les objets blob de blocs, à l’aide de la [Signature d’accès partagé](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## <a name="next-steps"></a>Étapes suivantes
  [Fonctionnalités prises en charge par les éditions de SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2017 – Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  

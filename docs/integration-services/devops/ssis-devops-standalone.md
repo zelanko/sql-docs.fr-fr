@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1d0e6b5fe9303269f5941ba11d231e1ca18def11
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098806"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521093"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps Tools standalone (préversion)
 
@@ -95,7 +95,7 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 |Paramètre|Description|
 |---------|---------|
 |-source\|-s:\<source path>|Chemin de fichier local des artefacts à déployer. ISPAC, DTSX, le chemin de dossier de DTSX et SSISDeploymentManfiest sont autorisés.|
-|-destination\|-d:\<type>;\<path>[;server]|Le type de destination, le chemin du dossier de destination et le nom du serveur du catalogue SSIS sur lequel le fichier source sera déployé. Sont actuellement pris en charge les deux types de destination suivants : <li> *CATALOGUE*  : déployer un ou plusieurs fichiers ISPAC dans le catalogue SSIS spécifié. Le chemin de la destination CATALOGUE doit être au format suivant : <br> /SSISDB/\<folder name>[/\<project name>] <br> Le <project name> facultatif n’est valide que lorsque la source spécifie un seul chemin de fichier ISPAC. Le nom du serveur doit être spécifié pour la destination CATALOGUE. <li> *FICHIER*  : déployer des packages ou des fichiers SSIS spécifiés dans un seul ou plusieurs fichiers SSISDeploymentManifest dans le chemin du système de fichiers spécifié. Le chemin de la destination FICHIER peut être un chemin de dossier local ou réseau au format suivant : <br>\\\\\<machine name>\\\<folder name>[\\\<sub folder name>\...]|
+|-destination\|-d:\<type>;\<path>[;server]|Le type de destination, le chemin du dossier de destination et le nom du serveur du catalogue SSIS sur lequel le fichier source sera déployé. Sont actuellement pris en charge les deux types de destination suivants : <li> *CATALOGUE* : déployer un ou plusieurs fichiers ISPAC dans le catalogue SSIS spécifié. Le chemin de la destination CATALOGUE doit être au format suivant : <br> /SSISDB/\<folder name>[/\<project name>] <br> Le <project name> facultatif n’est valide que lorsque la source spécifie un seul chemin de fichier ISPAC. Le nom du serveur doit être spécifié pour la destination CATALOGUE. <li> *FICHIER* : déployer des packages ou des fichiers SSIS spécifiés dans un seul ou plusieurs fichiers SSISDeploymentManifest dans le chemin du système de fichiers spécifié. Le chemin de la destination FICHIER peut être un chemin de dossier local ou réseau au format suivant : <br>\\\\\<machine name>\\\<folder name>[\\\<sub folder name>\...]|
 |-authType\|-at:\<auth type name>|Type d’authentification pour accéder à SQL Server. Obligatoire pour la destination CATALOGUE. Les types suivants sont pris en charge : <li> WIN :  Authentification Windows <li> SQL :  l’authentification SQL Server <li> ADPWD :  Active Directory - Authentification par mot de passe <li> ADINT :  Active Directory - Authentification intégrée|
 |-connectionStringSuffix\|-css:\<connection string suffix> |Suffixe de la chaîne de connexion utilisée pour se connecter au catalogue SSIS.|
 |-projectPassword\|-pp:\<project password> |Mot de passe servant à déchiffrer les fichiers ISPAC ou DTSX.|
@@ -128,6 +128,12 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>Notes de publication
+
+### <a name="version-011-preview"></a>Version 0.1.1 - préversion
+
+Date de publication : 11 novembre 2020
+
+- Correction du problème selon lequel SSISDeploy.exe ne parvenait pas à charger un assembly lors du déploiement d’ispac dans le catalogue SSIS.
 
 ### <a name="version-010-preview"></a>Version 0.1.0 - préversion
 

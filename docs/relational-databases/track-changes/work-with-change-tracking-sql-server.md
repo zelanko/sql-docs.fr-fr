@@ -23,12 +23,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69e648dddc84de1c136fbf1830e7eeb639bcb5e7
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 28719dc4bc770e2fbb58bc7f6e70b68a84895127
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512305"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447122"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utiliser le suivi des modifications (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "88512305"
  Permet d'obtenir la version actuelle qui sera utilisée la prochaine fois lorsque l'interrogation change. Cette version représente la version de la dernière transaction validée.  
   
  Fonction CHANGE_TRACKING_MIN_VALID_VERSION()  
- Permet d'obtenir la version valide minimale qu'un client doit avoir pour obtenir des résultats valides à partir de CHANGETABLE(). Le client doit vérifier la dernière version de synchronisation par rapport à la valeur renvoyée par cette fonction. Si la dernière version de synchronisation est inférieure à la version retournée par cette fonction, le client ne pourra pas obtenir de résultats valides de CHANGETABLE() et devra effectuer une réinitialisation.  
+ Permet d'obtenir la version valide minimale qu'un client doit avoir pour obtenir des résultats valides à partir de CHANGETABLE(). Le client doit confronter la dernière version de synchronisation à la valeur retournée par cette fonction. Si la dernière version de synchronisation est inférieure à la version retournée par cette fonction, le client ne pourra pas obtenir de résultats valides de CHANGETABLE() et devra effectuer une réinitialisation.  
   
 ### <a name="obtaining-initial-data"></a>Obtention des données initiales  
  Pour pouvoir obtenir des modifications pour la première fois, une application doit envoyer une requête afin d'obtenir les données initiales et la version de synchronisation. L'application doit obtenir les données appropriées directement à partir de la table, puis utiliser CHANGE_TRACKING_CURRENT_VERSION() pour obtenir la version initiale. Cette version sera passée à CHANGETABLE (CHANGES ...) la première fois que des modifications seront obtenues.  

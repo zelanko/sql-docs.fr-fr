@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 1c196ea3219f4bdbad2e4001240f754b106e3917
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115420"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674194"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2019 sur Linux
 
@@ -225,6 +225,7 @@ Les fonctionnalités et services suivants ne sont pas disponibles pour SQL Serve
 | &nbsp; | FileTable, FILESTREAM |
 | &nbsp; | Assemblys CLR avec l’ensemble d’autorisations EXTERNAL_ACCESS ou UNSAFE |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Sauvegarde sur URL – Objet blob de pages<sup>2</sup> |
 | **SQL Server Agent** |  Sous-systèmes : CmdExec, PowerShell, lecture de la file d’attente, SSIS, SSAS, SSRS |
 | &nbsp; | Alertes |
 | &nbsp; | Sauvegarde managée |
@@ -241,7 +242,9 @@ Les fonctionnalités et services suivants ne sont pas disponibles pour SQL Serve
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server R est pris en charge dans SQL Server, mais SQL Server R services en tant que package distinct n’est pas pris en charge.
-  
+
+<sup>2</sup> La sauvegarde sur URL est prise en charge pour les objets blob de blocs, à l’aide de la [Signature d’accès partagé](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## <a name="next-steps"></a>Étapes suivantes
  [Fonctionnalités prises en charge par les éditions de SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  

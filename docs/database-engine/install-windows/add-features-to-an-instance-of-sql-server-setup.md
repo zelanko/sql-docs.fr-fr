@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/07/2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 599f0edf2a62413aaa44ccaff191bfac034aa3d9
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: eb38c37dcb5a570364675fece213c8c6868173ec
+ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418018"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94570946"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Ajouter des fonctionnalités à une instance de SQL Server (programme d’installation)
 
@@ -52,7 +52,7 @@ Avant de continuer, consultez les articles dans [Planification d’une installat
 
 4. Dans la page Mises à jour du produit, les dernières mises à jour du produit SQL Server disponibles s'affichent. Si vous ne souhaitez pas inclure les mises à jour, décochez la case **Inclure les mises à jour du produit SQL Server**. Si aucune mise à jour du produit n'est découverte, le programme d'installation SQL Server n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation**.
 
-5. Sur la page Installer les fichiers d'installation, le programme d'installation fournit la progression du téléchargement, de l'extraction et de l'installation des fichiers d'installation. Si une mise à jour de l'installation SQL Server est trouvée et est spécifiée pour être incluse, cette mise à jour est également installée. sélectionnez **Installer** pour installer les fichiers de support de l’installation.  
+5. Sur la page Installer les fichiers d'installation, le programme d'installation fournit la progression du téléchargement, de l'extraction et de l'installation des fichiers d'installation. Si une mise à jour de l'installation SQL Server est trouvée et est spécifiée pour être incluse, cette mise à jour est également installée. Sélectionnez **Installer** pour installer les fichiers de support du programme d’installation.  
 
 6. L'outil d'analyse de configuration système vérifiera l'état système de votre ordinateur avant que le programme d'installation ne se poursuive.  
 
@@ -62,7 +62,7 @@ Avant de continuer, consultez les articles dans [Planification d’une installat
 
     Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. Le programme d'installation de SQL Server installera les composants requis qui ne sont pas déjà installés pendant l'étape d'installation décrite ultérieurement dans cette procédure.
 
-    L'outil d'analyse de configuration système vérifiera l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. sélectionnez **Suivant** pour continuer.
+    L'outil d'analyse de configuration système vérifiera l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Sélectionnez **Suivant** pour continuer.
 
 9. La page Espace disque nécessaire calcule l'espace disque requis pour les fonctionnalités que vous spécifiez et compare cet espace à l'espace disque disponible sur l'ordinateur où le programme d'installation s'exécute.
 
@@ -86,7 +86,7 @@ Avant de continuer, consultez les articles dans [Planification d’une installat
 
         Lorsque la connexion d'un périphérique à SQL Server est établie, le mécanisme de sécurité est le même pour l'Authentification Windows et le Mode mixte. Pour plus d’informations, consultez [Configuration du moteur de base de données - Configuration du serveur](./install-sql-server.md).  
 
-    - Administrateurs SQL Server : vous devez spécifier au moins un administrateur système pour l'instance de SQL Server. Pour ajouter le compte sous lequel l'installation de SQL Server s'exécute, sélectionnez **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, sélectionnez **Ajouter** ou **Supprimer** , puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposent des privilèges d'administrateur pour l'instance de SQL Server. Pour plus d’informations, consultez [Configuration du moteur de base de données - Configuration du serveur](./install-sql-server.md).
+    - Administrateurs SQL Server : vous devez spécifier au moins un administrateur système pour l'instance de SQL Server. Pour ajouter le compte sous lequel l'installation de SQL Server s'exécute, sélectionnez **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, sélectionnez **Ajouter** ou **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposent des privilèges d'administrateur pour l'instance de SQL Server. Pour plus d’informations, consultez [Configuration du moteur de base de données - Configuration du serveur](./install-sql-server.md).
 
     Lorsque vous avez fini de modifier la liste, sélectionnez **OK**. Vérifiez la liste d'administrateurs dans la boîte de dialogue de configuration. Si la liste est complète, sélectionnez **Suivant**.
 
@@ -99,7 +99,7 @@ Avant de continuer, consultez les articles dans [Planification d’une installat
 
 15. Utilisez la page Configuration du moteur de base de données - FILESTREAM pour activer FILESTREAM pour votre instance de SQL Server. Pour plus d’informations sur FILESTREAM, consultez [Configuration du moteur de base de données - Filestream](./install-sql-server.md). Pour continuer, sélectionnez suivant.
 
-16. Utilisez la page Configuration de Analysis Services - Approvisionnement du compte pour spécifier le mode serveur et les utilisateurs ou comptes qui ont les autorisations d’administrateur pour Analysis Services. Le mode serveur détermine quel sous-systèmes de mémoire et de stockage sont utilisés sur le serveur. Différents types de solution s'exécutent dans différents modes serveur. Si vous envisagez d'exécuter les bases de données multidimensionnelles de cube sur le serveur, choisissez l'option par défaut, le mode serveur multidimensionnel et d'exploration de données. En ce qui concerne les autorisations d'administrateur, vous devez spécifier au moins un administrateur système pour Analysis Services. Pour ajouter le compte sous lequel l'installation de SQL Server s'exécute, sélectionnez **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, sélectionnez **Ajouter** ou **Supprimer** , puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposent des privilèges d'administrateur pour Analysis Services. Pour plus d’informations sur le mode serveur et les autorisations d’administrateur, consultez [Configuration Analysis Services – Mise en service de compte](./install-sql-server.md).
+16. Utilisez la page Configuration de Analysis Services - Approvisionnement du compte pour spécifier le mode serveur et les utilisateurs ou comptes qui ont les autorisations d’administrateur pour Analysis Services. Le mode serveur détermine quel sous-systèmes de mémoire et de stockage sont utilisés sur le serveur. Différents types de solution s'exécutent dans différents modes serveur. Si vous envisagez d'exécuter les bases de données multidimensionnelles de cube sur le serveur, choisissez l'option par défaut, le mode serveur multidimensionnel et d'exploration de données. En ce qui concerne les autorisations d'administrateur, vous devez spécifier au moins un administrateur système pour Analysis Services. Pour ajouter le compte sous lequel l'installation de SQL Server s'exécute, sélectionnez **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, sélectionnez **Ajouter** ou **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposent des privilèges d'administrateur pour Analysis Services. Pour plus d’informations sur le mode serveur et les autorisations d’administrateur, consultez [Configuration Analysis Services – Mise en service de compte](./install-sql-server.md).
 
     Lorsque vous avez fini de modifier la liste, sélectionnez **OK**. Vérifiez la liste d'administrateurs dans la boîte de dialogue de configuration. Si la liste est complète, sélectionnez **Suivant**.
 
@@ -114,7 +114,7 @@ Avant de continuer, consultez les articles dans [Planification d’une installat
 
 19. Utilisez la page Configuration de Distributed Replay Controller pour spécifier les utilisateurs auxquels vous voulez accorder des autorisations administratives sur le service Distributed Replay Controller. Les utilisateurs qui disposent d'autorisations administratives ont un accès illimité au service Distributed Replay Controller.
 
-    sélectionnez le bouton **Ajouter l'utilisateur actuel** pour ajouter les utilisateurs auxquels vous voulez accorder des autorisations d'accès au service du contrôleur Distributed Replay. sélectionnez le bouton **Ajouter** pour ajouter des autorisations d'accès au service du contrôleur Distributed Replay. sélectionnez le bouton **Supprimer** pour supprimer des autorisations d'accès du service du contrôleur Distributed Replay.
+    Sélectionnez le bouton **Ajouter l’utilisateur actuel** pour ajouter les utilisateurs auxquels vous voulez accorder des autorisations d’accès au service du contrôleur Distributed Replay. Sélectionnez le bouton **Ajouter** pour ajouter des autorisations d’accès au service du contrôleur Distributed Replay. Sélectionnez le bouton **Supprimer** pour supprimer des autorisations d’accès au service du contrôleur Distributed Replay.
 
     Pour continuer, sélectionnez **suivant**.
 

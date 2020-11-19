@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a5c182e7425e51a06b170178ee2716c42c58e115
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890760"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521216"
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91890760"
   
 -   Forcer l’application du plan précédent de l’historique, s’il a été identifié comme étant meilleur. Utilisez le bouton **Forcer le plan** dans **Requêtes régressées** pour forcer l’application du plan sélectionné pour la requête.  
   
- ![requête-magasin-utilisation-1](../../relational-databases/performance/media/query-store-usage-1.png "requête-magasin-utilisation-1")  
+ ![Capture d’écran du Magasin des requêtes montrant un résumé du plan](../../relational-databases/performance/media/query-store-usage-1.png "requête-magasin-utilisation-1")  
   
  Pour une description détaillée du scénario, reportez-vous au blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91890760"
   
  La façon la plus simple de commencer l’exploration consiste à ouvrir **Principales requêtes consommatrices de ressources** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. L’interface utilisateur est divisée en trois volets : un histogramme représentant les principales requêtes consommatrices de ressources (à gauche), un résumé du plan pour la requête sélectionnée (à droite) et un plan de requête visuel pour le plan sélectionné (en bas). Cliquez sur le bouton **Configurer** pour contrôler le nombre de requêtes que vous voulez analyser et l’intervalle de temps digne d’intérêt. Par ailleurs, vous pouvez choisir entre différentes dimensions de consommation de ressources (durée, processeur, mémoire, E/S, nombre d’exécutions) et la ligne de base (Moyenne, Min, Max, Total, Écart type).  
   
- ![requête-magasin-utilisation-2](../../relational-databases/performance/media/query-store-usage-2.png "requête-magasin-utilisation-2")  
+ ![Capture d’écran du Magasin des requêtes montrant comment identifier et paramétrer les requêtes les plus consommatrices de ressources](../../relational-databases/performance/media/query-store-usage-2.png "requête-magasin-utilisation-2")  
   
  Examinez le résumé du plan situé à droite pour analyser l’historique d’exécution et en savoir plus sur les différents plans et leurs statistiques d’exécution. Utilisez le volet inférieur pour examiner les différents plans ou les comparer visuellement, en les affichant côte à côte (à l’aide du bouton Comparer).  
   
@@ -99,11 +99,11 @@ Dans chacun de ces scénarios, appliquez le flux de travail suivant :
   
 L’illustration suivante montre l’analyse du magasin de requêtes (étape 4) en cas de création d’index absents. Ouvrez **Principales requêtes consommatrices de ressources** / Volet Résumé du plan pour obtenir l’affichage suivant pour la requête qui doit être affectée par la création d’index :  
   
-![requête-magasin-utilisation-3](../../relational-databases/performance/media/query-store-usage-3.png "requête-magasin-utilisation-3")  
+![Capture d’écran de l’analyse du Magasin des requêtes (étape 4) en cas de création d’index manquant](../../relational-databases/performance/media/query-store-usage-3.png "requête-magasin-utilisation-3")  
   
 De plus, vous pouvez comparer les plans avant et après la création d’index en les affichant côte à côte. (Utilisez l’option « Comparez les plans pour la requête sélectionnée dans une fenêtre distincte » de la barre d’outils, signalée par un carré rouge.)  
   
-![requête-magasin-utilisation-4](../../relational-databases/performance/media/query-store-usage-4.png "requête-magasin-utilisation-4")  
+![Capture d’écran du Magasin des requêtes et de l’option Comparer les plans pour la requête sélectionnée dans une fenêtre distincte de la barre d’outils](../../relational-databases/performance/media/query-store-usage-4.png "requête-magasin-utilisation-4")  
   
 Le plan avant la création d’index (plan_id = 1, au-dessus) a un indicateur d’index absents et vous pouvez vérifier que l’option Analyse d’index cluster était l’opérateur le plus coûteux dans la requête (rectangle rouge).  
   
@@ -116,7 +116,7 @@ Avant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les utilisateurs étaie
   
 À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], tous les changements de l’optimiseur de requête sont liés au [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, de sorte que les plans ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace le `COMPATIBILITY_LEVEL` par le plus récent. Cette fonctionnalité, en association avec le magasin de requêtes, vous offre un niveau de contrôle élevé sur les performances des requêtes dans le processus de mise à niveau. Le flux de travail de mise à niveau recommandé est illustré dans l’image suivante :  
   
-![requête-magasin-utilisation-5](../../relational-databases/performance/media/query-store-usage-5.png "requête-magasin-utilisation-5")  
+![Diagramme montrant le workflow de mise à niveau recommandé.](../../relational-databases/performance/media/query-store-usage-5.png "requête-magasin-utilisation-5")  
   
 1.  Mettez à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans changer le niveau de compatibilité de base de données. Cela n’expose pas les derniers changements de l’optimiseur de requête, mais fournit quand même les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les plus récentes, notamment le Magasin des requêtes.  
   
@@ -140,7 +140,7 @@ Certaines charges de travail n’ont pas de requêtes dominantes que vous pouvez
   
  L’affichage **Principales requêtes consommatrices de ressources** vous donne une première indication de la nature ad hoc de votre charge de travail :  
   
-![requête-magasin-utilisation-6](../../relational-databases/performance/media/query-store-usage-6.png "requête-magasin-utilisation-6")  
+![Capture d’écran de l’affichage Requêtes les plus consommatrices de ressources montrant que la majorité d’entre elles ne sont exécutées qu’une seule fois](../../relational-databases/performance/media/query-store-usage-6.png "requête-magasin-utilisation-6")  
   
 Utilisez la métrique **Nombre d’exécutions** pour analyser si vos requêtes principales sont ad hoc (vous devez, pour cela, exécuter le Magasin des requêtes avec `QUERY_CAPTURE_MODE = ALL`). Dans le diagramme ci-dessus, vous pouvez voir que 90 % de vos **principales requêtes consommatrices de ressources** sont exécutées une seule fois.  
   
@@ -157,7 +157,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 Voici un résultat potentiel que vous pouvez obtenir en cas de charge de travail avec des requêtes ad hoc :  
   
-![requête-magasin-utilisation-7](../../relational-databases/performance/media/query-store-usage-7.png "requête-magasin-utilisation-7")  
+![Capture d’écran du résultat potentiel en cas de charge de travail comportant des requêtes ad hoc](../../relational-databases/performance/media/query-store-usage-7.png "requête-magasin-utilisation-7")  
   
 Le résultat des requêtes montre que, malgré le grand nombre de requêtes et de plans dans le Magasin des requêtes, leurs valeurs query_hash et query_plan_hash ne sont, en fait, pas différentes. Un rapport entre les textes de requêtes uniques et les hachages de requêtes uniques nettement supérieur à 1 indique que la charge de travail est un candidat approprié pour le paramétrage, car la seule différence entre les requêtes est une constante littérale (paramètre) fournie en tant que partie du texte de la requête.  
   
@@ -199,7 +199,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 Après avoir appliqué l’une de ces étapes, l’option **Principales requêtes consommatrices de ressources** présente une image différente de votre charge de travail.  
   
-![requête-magasin-utilisation-8](../../relational-databases/performance/media/query-store-usage-8.png "requête-magasin-utilisation-8")  
+![Capture d’écran de l’affichage Requêtes les plus consommatrices de ressources montrant une image différente de la charge de travail](../../relational-databases/performance/media/query-store-usage-8.png "requête-magasin-utilisation-8")  
   
 Dans certains cas, votre application peut générer beaucoup de requêtes qui ne sont pas idéales pour un autoparamétrage. Un grand nombre de requêtes s’affichent alors dans le système, mais le rapport entre les requêtes uniques et les valeurs `query_hash` uniques est probablement proche de 1.  
   

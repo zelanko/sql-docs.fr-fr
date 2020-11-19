@@ -1,86 +1,46 @@
 ---
-title: Installer les extensions de langage Java de SQL Server sur Linux
-titleSuffix: ''
-description: Découvrez comment installer les extensions de langage Java de SQL Server sur Red Hat, Ubuntu et SUSE Linux.
-author: cawrites
-ms.author: chadam
+title: Installation de l’extension de langage Java sur Linux
+titleSuffix: SQL Server Language Extensions
+description: Découvrez comment installer l’extension de langage Java SQL Server sur Red Hat, Ubuntu et SUSE Linux.
+author: dphansen
+ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 02/03/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 100ef62ce2c87fa642a8c1ef9ef6307a6d9b9103
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: e859a445bf4283f7f3d56e04997525ac2823193a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155586"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585084"
 ---
-# <a name="install-sql-server-java-language-extensions-on-linux"></a>Installer les extensions de langage Java de SQL Server sur Linux 
+# <a name="install-sql-server-java-language-extension-on-linux"></a>Installation de l’extension de langage Java SQL Server sur Linux
 
 [!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-Les extensions de langage sont un module complémentaire du moteur de base de données. Bien que vous puissiez [installer le moteur de base de données et les extensions de langage simultanément](#install-all), il est recommandé d’installer et de configurer le moteur de base de données SQL Server en premier afin de pouvoir résoudre les problèmes avant d’ajouter d’autres composants. 
+Découvrez comment installer le composant [Extension de langage Java](../language-extensions/java-overview.md) pour SQL Server sur Linux. L’extension de langage Java fait partie des [Extensions de langage SQL Server](../language-extensions/language-extensions-overview.md). Il s’agit d’un module complémentaire du moteur de base de données. 
 
-Suivez les étapes décrites dans cet article pour installer l’extension de langage Java.
-
-L’emplacement des packages pour les extensions Java se trouve dans les référentiels source de SQL Server Linux. Si vous avez déjà configuré des référentiels source pour l’installation du moteur de base de données, vous pouvez exécuter les commandes d’installation du package **mssql-server-extensibility-java** à l’aide de la même inscription de référentiel.
-
-Les extensions de langage sont également prises en charge sur les conteneurs Linux. Nous ne fournissons pas de conteneurs prédéfinis avec les extensions de langage, mais vous pouvez en créer un à partir des conteneurs SQL Server à l’aide [d’un exemple de modèle disponible sur GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
-
-Les extensions de langage et [Machine Learning Services](../machine-learning/index.yml) sont installés par défaut sur Clusters Big Data SQL Server. Si vous utilisez Clusters Big Data, vous n’avez pas besoin de suivre les étapes décrites dans cet article. Pour plus d’informations, consultez [Utiliser Machine Learning Services (Python et R) sur Clusters Big Data](../big-data-cluster/machine-learning-services.md).
-
-## <a name="uninstall-preview-version"></a>Désinstaller la préversion
-
-Si vous avez installé une préversion comme CTP (Community Technology Preview) ou RC (Release Candidate), nous vous recommandons de la désinstaller pour supprimer tous les packages précédents avant d’installer SQL Server 2019. L’installation côte à côte de plusieurs versions n’est pas prise en charge et la liste des packages a changé au cours des dernières préversions (CTP/RC).
-
-### <a name="1-confirm-package-installation"></a>1. Confirmer l’installation du package
-
-Vous souhaiterez peut-être vérifier l’existence d’une installation précédente comme première étape. Les fichiers suivants indiquent une installation existante : checkinstallextensibility.sh, exthost, launchpad.
-
-```bash
-ls /opt/microsoft/mssql/bin
-```
-
-### <a name="2-uninstall-previous-ctprc-packages"></a>2. Désinstaller les packages CTP/RC précédents
-
-Désinstallez au niveau du package le plus bas. Tout package en amont dépendant d’un package de niveau inférieur est automatiquement désinstallé.
-
-  + Pour l’intégration Java, supprimez **mssql-server-extensibility-java**
-
-Les commandes de suppression des packages s’affichent dans le tableau suivant.
-
-| Plateforme  | Commande(s) de suppression de package | 
-|-----------|----------------------------|
-| RHEL  | `sudo yum remove mssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove mssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove mssql-server-extensibility-java`|
-
-### <a name="3-install-sql-server-2019"></a>3. Installer SQL Server 2019
-
-Installez au niveau de package le plus élevé en suivant les instructions de cet article pour votre système d’exploitation.
-
-Pour chaque ensemble d’instructions d’installation propres au système d’exploitation, le *niveau de package le plus élevé* est soit **Exemple 1 : Installation complète** pour l’ensemble complet de packages soit **Exemple 2 : Installation minimale**  pour le minimum de packages requis pour une installation viable.
-
-1. Exécutez les commandes d’installation à l’aide des gestionnaires de package et de la syntaxe pour votre distribution Linux : 
-
-   + [RedHat](#RHEL)
-   + [Ubuntu](#ubuntu)
-   + [SUSE](#suse)
+Bien que vous puissiez [installer le moteur de base de données et les extensions de langage simultanément](#install-all), il est recommandé d’installer et de configurer le moteur de base de données SQL Server en premier afin de pouvoir résoudre les problèmes avant d’ajouter d’autres composants.
 
 ## <a name="prerequisites"></a>Prérequis
 
 + La version de Linux doit être [prise en charge par SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), mais elle n’inclut pas le moteur Docker. Les versions prises en charge sont les suivantes :
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
-
    + [Serveur SUSE Enterprise Linux](quickstart-install-connect-suse.md)
-
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 + Vous devez disposer d’un outil pour l’exécution des commandes T-SQL. Un éditeur de requête est nécessaire pour la configuration et la validation postérieures à l’installation. Nous vous recommandons [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#get-azure-data-studio-for-linux), un outil en téléchargement gratuit qui s’exécute sur Linux.
+
++ L’emplacement des packages pour les extensions Java se trouve dans les référentiels source de SQL Server Linux. Si vous avez déjà configuré des référentiels source pour l’installation du moteur de base de données, vous pouvez exécuter les commandes d’installation du package **mssql-server-extensibility-java** à l’aide de la même inscription de référentiel.
+
++ Les extensions de langage sont également prises en charge sur les conteneurs Linux. Nous ne fournissons pas de conteneurs prédéfinis avec les extensions de langage, mais vous pouvez en créer un à partir des conteneurs SQL Server à l’aide [d’un exemple de modèle disponible sur GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
+
++ Les extensions de langage et [Machine Learning Services](../machine-learning/index.yml) sont installés par défaut sur Clusters Big Data SQL Server. Si vous utilisez Clusters Big Data, vous n’avez pas besoin de suivre les étapes décrites dans cet article. Pour plus d’informations, consultez [Utiliser Machine Learning Services (Python et R) sur Clusters Big Data](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="package-list"></a>Liste des packages
 
@@ -93,7 +53,7 @@ Sur un appareil connecté à Internet, les packages sont téléchargés et insta
 
 <a name="RHEL"></a>
 
-## <a name="install-language-extensions"></a>Installer les extensions de langage
+## <a name="install-java-language-extension"></a>Installation de l’extension de langage Java
 
 Vous pouvez installer les extensions de langage et Java sur Linux en installant **mssql-server-extensibility-java**. Lorsque vous installez **mssql-server-extensibility-java**, le package installe automatiquement JRE 11 s’il n’est pas déjà installé. Cela ajoute également le chemin d’accès JVM à une variable d’environnement appelée JRE_HOME.
 
@@ -218,38 +178,37 @@ Pour valider l’installation, exécutez un script T-SQL qui exécute une procé
 
 <a name="install-all"></a>
 
-## <a name="full-install-of-sql-server-and-language-extensions"></a>Installation complète de SQL Server et des extensions de langage
+## <a name="full-install-of-sql-server-and-java-language-extension"></a>Installation complète de SQL Server et de l’extension de langage Java
 
-Vous pouvez installer et configurer le moteur de base de données et les extensions de langage en une seule procédure en ajoutant des packages Java et des paramètres sur une commande qui installe le moteur de base de données.
+Il est possible d’installer et de configurer le moteur de base de données et l’extension de langage Java en une seule procédure. Il suffit pour cela d’ajouter des packages Java et des paramètres à une commande qui installe le moteur de base de données.
 
 1. Fournissez une ligne de commande qui comprend le moteur de base de données ainsi que des fonctionnalités d’extension de langage.
 
-  Vous pouvez ajouter l’extensibilité Java à une installation du moteur de base de données.
+    Vous pouvez ajouter l’extensibilité Java à une installation du moteur de base de données.
 
-  ```bash
-  sudo yum install -y mssql-server mssql-server-extensibility-java 
-  ```
+    ```bash
+    sudo yum install -y mssql-server mssql-server-extensibility-java 
+    ```
 
-3. Acceptez les contrats de licence et terminez la configuration consécutive à l’installation. Utilisez l'outil **mssql-conf** pour cette tâche.
+1. Acceptez les contrats de licence et terminez la configuration consécutive à l’installation. Utilisez l'outil **mssql-conf** pour cette tâche.
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf setup
+    ```
 
-  Vous serez invité à accepter le contrat de licence pour le moteur de base de données, à choisir une édition et à définir le mot de passe administrateur. 
+    Vous serez invité à accepter le contrat de licence pour le moteur de base de données, à choisir une édition et à définir le mot de passe administrateur. 
 
-4. Redémarrez le service si vous y êtes invité.
+1. Redémarrez le service si vous y êtes invité.
 
-  ```bash
-  sudo systemctl restart mssql-server.service
-  ```
+    ```bash
+    sudo systemctl restart mssql-server.service
+    ```
 
 ## <a name="unattended-installation"></a>Installation sans assistance
 
-À l'aide de [l’installation sans assistance](./sql-server-linux-setup.md#unattended) du moteur de base de données, ajoutez les packages pour mssql-server-extensibility-java.
+Utilisez [l’installation sans assistance](./sql-server-linux-setup.md#unattended) du moteur de base de données et ajoutez les packages pour **mssql-server-extensibility-java**.
 
 <a name="offline-install"></a>
-
 
 ## <a name="offline-installation"></a>Installation hors connexion
 
@@ -260,7 +219,7 @@ Suivez les instructions [d'installation hors connexion](sql-server-linux-setup.m
 
 #### <a name="download-site"></a>Site de téléchargement
 
-Vous pouvez télécharger des packages à partir de [https://packages.microsoft.com/](https://packages.microsoft.com/). Tous les packages pour Java sont colocalisés avec le package du moteur de base de données. 
+Vous pouvez télécharger les packages sur [https://packages.microsoft.com/](https://packages.microsoft.com/). Tous les packages conçus pour Java sont colocalisés avec le package du moteur de base de données.
 
 #### <a name="redhat7-paths"></a>Chemins RedHat/7
 
@@ -276,17 +235,15 @@ Vous pouvez télécharger des packages à partir de [https://packages.microsoft.
 
 #### <a name="suse12-paths"></a>Chemins SUSE/12
 
-
 |Package|Emplacement de téléchargement|
 |--|----|
 | Packages mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>Liste des packages
-
 Selon les extensions que vous souhaitez utiliser, téléchargez les packages nécessaires pour un langage spécifique. Les noms de fichiers exacts incluent des informations sur la plateforme dans le suffixe, mais les noms de fichier ci-dessous devraient être suffisamment proches pour vous permettre de déterminer les fichiers à obtenir.
 
 ```
-# Core packages 
+# Core packages
 mssql-server-15.0.1000
 mssql-server-extensibility-15.0.1000
 
@@ -296,20 +253,20 @@ mssql-server-extensibility-java-15.0.1000
 
 ## <a name="limitations"></a>Limites
 
-+ L’authentification implicite n’est actuellement pas disponible sur Linux, ce qui signifie que vous ne pouvez pas vous reconnecter au serveur à partir de Java en cours d’exécution pour accéder à des données ou à d’autres ressources.
+L’authentification implicite n’est actuellement pas disponible sur Linux, ce qui signifie que vous ne pouvez pas vous reconnecter au serveur à partir de Java en cours d’exécution pour accéder à des données ou à d’autres ressources.
 
 ### <a name="resource-governance"></a>Gouvernance des ressources
 
-Il existe une parité entre Linux et Windows pour la [gouvernance des ressources](../t-sql/statements/create-external-resource-pool-transact-sql.md) pour les pools de ressources externes, mais les statistiques pour [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) ont actuellement des unités différentes sur Linux. 
- 
-| Nom de la colonne   | Description | Valeur sur Linux | 
+Il existe une parité entre Linux et Windows pour la [gouvernance des ressources](../t-sql/statements/create-external-resource-pool-transact-sql.md) pour les pools de ressources externes, mais les statistiques pour [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) ont actuellement des unités différentes sur Linux.
+
+| Nom de la colonne   | Description | Valeur sur Linux |
 |---------------|--------------|---------------|
 |peak_memory_kb | Quantité maximale de mémoire utilisée pour le pool de ressources. | Sur Linux, cette statistique provient du sous-système de mémoire CGroups, où la valeur est memory.max_usage_in_bytes |
-|write_io_count | Total des entrées/sorties d'écriture émises depuis que les statistiques du gouverneur de ressources ont été réinitialisées. | Sur Linux, cette statistique provient du sous-système blkIo CGroups, où la valeur de la ligne d’écriture est blkio.throttle.io_serviced | 
-|read_io_count | Total des entrées/sorties de lecture émises depuis que les statistiques du gouverneur de ressources ont été réinitialisées. | Sur Linux, cette statistique provient du sous-système CGroups blkIo, où la valeur de la ligne de lecture est blkio.throttle.io_serviced | 
+|write_io_count | Total des entrées/sorties d'écriture émises depuis que les statistiques du gouverneur de ressources ont été réinitialisées. | Sur Linux, cette statistique provient du sous-système blkIo CGroups, où la valeur de la ligne d’écriture est blkio.throttle.io_serviced |
+|read_io_count | Total des entrées/sorties de lecture émises depuis que les statistiques du gouverneur de ressources ont été réinitialisées. | Sur Linux, cette statistique provient du sous-système CGroups blkIo, où la valeur de la ligne de lecture est blkio.throttle.io_serviced |
 |total_cpu_kernel_ms | Le temps du noyau utilisateur cumulatif de l'UC, en millisecondes, depuis que les statistiques du gouverneur de ressources ont été réinitialisées. | Sur Linux, cette statistique provient du sous-système cpuacct CGroups, où la valeur sur la ligne utilisateur est cpuacct.stat |  
-|total_cpu_user_ms | Le temps utilisateur cumulatif de l'UC, en millisecondes, depuis que les statistiques du gouverneur de ressources ont été réinitialisées.| Sur Linux, cette statistique provient du sous-système CGroups cpuacct, où la valeur sur la ligne système est cpuacct.stat | 
-|active_processes_count | Nombre de processus externes en cours d’exécution au moment de la requête.| Sur Linux, cette statistique provient du sous-système GGroups pids, où la valeur est pids.current | 
+|total_cpu_user_ms | Le temps utilisateur cumulatif de l'UC, en millisecondes, depuis que les statistiques du gouverneur de ressources ont été réinitialisées.| Sur Linux, cette statistique provient du sous-système CGroups cpuacct, où la valeur sur la ligne système est cpuacct.stat |
+|active_processes_count | Nombre de processus externes en cours d’exécution au moment de la requête.| Sur Linux, cette statistique provient du sous-système CGroups pids, où la valeur est pids.current |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

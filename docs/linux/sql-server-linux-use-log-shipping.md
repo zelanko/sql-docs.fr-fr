@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 80f1dedefc2808da0c32eaee2d559496defca051
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115794"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521100"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Prise en main de la copie des journaux de transaction sur Linux
 
@@ -20,8 +20,7 @@ ms.locfileid: "92115794"
 
 La copie des journaux de transaction SQL Server est une configuration à haute disponibilité où une base de données d’un serveur principal est répliquée sur un ou plusieurs serveurs secondaires. En résumé, une sauvegarde de la base de données source est restaurée sur le serveur secondaire. Ensuite, le serveur principal crée régulièrement des sauvegardes du journal des transactions et les serveurs secondaires les restaurent, en mettant à jour la copie secondaire de la base de données. 
 
-  ![Copie des journaux de transaction](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![Diagramme du workflow de copie des journaux de transaction](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 Comme décrit dans cette image, une session de copie des journaux de transaction implique les étapes suivantes :
 
