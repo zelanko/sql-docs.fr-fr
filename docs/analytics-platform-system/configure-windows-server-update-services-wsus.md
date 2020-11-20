@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 06ac0126bb12668654c04e6a82b20ca551dd925e
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947947"
+ms.locfileid: "94983056"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurer Windows Server Update Services (WSUS) dans Analytics Platform System
 Ces instructions vous guident tout au long des étapes d’utilisation de l’Assistant Configuration de Windows Server Update Services (WSUS) pour configurer WSUS pour Analytics Platform System. Vous devez configurer WSUS avant de pouvoir appliquer des mises à jour logicielles à l’appliance. WSUS est déjà installé sur la machine virtuelle VMM de l’appliance.  
@@ -156,7 +156,7 @@ Pour configurer WSUS, vous devez :
   
     Sélectionnez les mises à jour **critiques**, les mises à jour de **sécurité** et les **correctifs cumulatifs** pour les mises à jour qui seront synchronisées pour l’appliance Analytics Platform System, puis cliquez sur **suivant**.  
   
-    ![Choisir classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Choisir classifications](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "SQL-Server-PDW-WSUS-Choose-classifications")  
   
 10. Configurez le calendrier de synchronisation.  
   
