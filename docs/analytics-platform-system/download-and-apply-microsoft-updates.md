@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f336c3c2c475523d2081bcf01189e67b77fe19
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401193"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947914"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Télécharger et appliquer des mises à jour Microsoft pour Analytics Platform System
 Cette rubrique explique comment télécharger des mises à jour à partir du catalogue Microsoft Update vers Windows Server Update Services (WSUS) et appliquer ces mises à jour aux serveurs d’appliances système Analytics Platform. Microsoft Update installera toutes les mises à jour applicables pour Windows et SQL Server. WSUS est installé sur la machine virtuelle VMM de l’appliance.  
@@ -63,9 +63,11 @@ Avant d’effectuer ces étapes, vous devez :
   
 #### <a name="approve-microsoft-updates-in-wsus"></a>Approuver les mises à jour Microsoft dans WSUS  
   
-1.  Dans le volet gauche, dans la console WSUS, cliquez sur **toutes les mises à jour**.  
+1. Refusez tous les correctifs cumulatifs qui ne sont pas dans **System Center**.
+
+2. Dans le volet gauche, dans la console WSUS, cliquez sur **toutes les mises à jour**.  
   
-2.  Dans le volet **toutes les mises à jour** , cliquez sur le menu déroulant **approbation** , définissez **approbation** sur **tout sauf refusé**. Cliquez sur le menu déroulant **Status (État** ), puis définissez **Status** sur **Any (tout**). Cliquez sur **Actualiser**.  
+3.  Dans le volet **toutes les mises à jour** , cliquez sur le menu déroulant **approbation** , définissez **approbation** sur **tout sauf refusé**. Cliquez sur le menu déroulant **Status (État** ), puis définissez **Status** sur **Any (tout**). Cliquez sur **Actualiser**.  
   
     Cliquez avec le bouton droit sur la colonne **titre** et sélectionnez **État du fichier** pour vérifier l’état du fichier une fois le téléchargement terminé.  
   
@@ -73,19 +75,19 @@ Avant d’effectuer ces étapes, vous devez :
   
     ![Sélectionner toutes les mises à jour et modifier l'état en N'importe quel](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
   
-3.  Sélectionnez toutes les mises à jour, puis cliquez sur le lien **approuver** dans le volet droit.  
+4.  Sélectionnez toutes les mises à jour, puis cliquez sur le lien **approuver** dans le volet droit.  
   
     Vous pouvez également cliquer avec le bouton droit sur les mises à jour sélectionnées, puis cliquer sur **approuver**. Vous pouvez être invité à accepter les termes du contrat de licence logiciel Microsoft. Dans ce cas, cliquez sur **J’accepte** dans la fenêtre pour continuer.  
   
     ![Sélectionner toutes les mises à jour applicables et cliquer sur Approuver.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Sélectionnez le groupe de serveurs d’appliance que vous avez créé dans [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
+5.  Sélectionnez le groupe de serveurs d’appliance que vous avez créé dans [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
-5.  Cliquez sur **Approuvée pour l’installation**, puis sur **OK**.  
+6.  Cliquez sur **Approuvée pour l’installation**, puis sur **OK**.  
   
     ![Approuver les mises à jour pour le groupe d'ordinateurs.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
-6.  Dans la boîte de dialogue progression de l' **approbation** , lorsque le processus d’approbation est terminé, cliquez sur **Fermer**.  
+7.  Dans la boîte de dialogue progression de l' **approbation** , lorsque le processus d’approbation est terminé, cliquez sur **Fermer**.  
   
     ![Fermer la fenêtre quand des mises à jour sont approuvées.](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
   
@@ -123,7 +125,7 @@ Avant d’effectuer ces étapes, vous devez :
   
 5.  Dans le menu déroulant **État** , sélectionnez **n’importe laquelle** , puis cliquez sur **Actualiser**.  
   
-6.  Développez Services de *<appliance name>* **mise à jour**,-VMM, **mises à**jour, **toutes les mises à jour**, où *<appliance name>* est le nom de votre appliance.  
+6.  Développez **services de mise à jour**, *<appliance name>* -VMM, **mises à** jour, **toutes les mises à jour**, où *<appliance name>* est le nom de votre appliance.  
   
 7.  Dans la fenêtre **toutes les mises à jour** , définissez **approbation** sur **tout sauf refusée**.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: a5ebfaaf303a354124f3668b65716cd65bdb8043
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727770"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947929"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifier la référence SKU Azure SQL Database/Managed Instance appropriée pour votre base de données locale
 
@@ -42,6 +42,8 @@ Voici des instructions pour vous aider à déterminer les recommandations relati
 
 - Téléchargez et installez la dernière version de [DMA](https://aka.ms/get-dma). Si vous disposez déjà d’une version antérieure de l’outil, ouvrez-la et vous serez invité à mettre à niveau DMA.
 - Assurez-vous que votre ordinateur dispose de [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou ultérieure, ce qui est nécessaire pour exécuter tous les scripts. Pour plus d’informations sur la façon de déterminer quelle version de PowerShell est installée sur votre ordinateur, consultez l’article [Télécharger et installer Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+  > [!NOTE]
+  > Pour collecter des informations sur l’ordinateur, le script de collecte de données utilise l’applet de commande Get-WmiObject, qui était dépréciée dans PowerShell 6. Pour exécuter ce script dans PowerShell 6 ou 7, vous devez remplacer les applets de commande WMI par les applets de commande CIM plus récentes.
 - Assurez-vous que le module Azure PowerShell est installé sur votre ordinateur. Pour plus d’informations, consultez l’article [installer le module Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Vérifiez que le fichier PowerShell **SkuRecommendationDataCollectionScript.ps1**, qui est requis pour collecter les compteurs de performances, est installé dans le dossier DMA.
 - Assurez-vous que l’ordinateur sur lequel vous allez effectuer ce processus dispose des autorisations d’administrateur sur l’ordinateur qui héberge vos bases de données.
@@ -69,7 +71,7 @@ Vous n’avez pas besoin d’effectuer cette tâche pour chaque base de données
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
      -CollectionTimeInSeconds 2400
-     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
     ```
 
     Une fois la commande exécutée, le processus génère un fichier, y compris les compteurs de performance, à l’emplacement que vous avez spécifié. Vous pouvez utiliser ce fichier comme entrée pour la partie suivante du processus, qui fournira des recommandations SKU pour les options de base de données unique et d’instances gérées.

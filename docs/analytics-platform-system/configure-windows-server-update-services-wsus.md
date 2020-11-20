@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: e6242699ac8a4079ddd2811c016ba8a1969e448e
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379577"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947947"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurer Windows Server Update Services (WSUS) dans Analytics Platform System
 Ces instructions vous guident tout au long des étapes d’utilisation de l’Assistant Configuration de Windows Server Update Services (WSUS) pour configurer WSUS pour Analytics Platform System. Vous devez configurer WSUS avant de pouvoir appliquer des mises à jour logicielles à l’appliance. WSUS est déjà installé sur la machine virtuelle VMM de l’appliance.  
@@ -145,7 +145,7 @@ Pour configurer WSUS, vous devez :
   
     Désélectionnez toutes les mises à jour sélectionnées.  
   
-    Sélectionnez **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**et **System Center 2012 R2-Virtual Machine Manager**, puis cliquez sur **suivant**.  
+    Sélectionnez **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**, **System Center 2012 R2-Virtual Machine Manager**, **Windows Server 2016** et **System Center 2016-Virtual Machine Manager** , puis cliquez sur **suivant**.  
   
 9. Choisissez classifications.  
   
@@ -154,7 +154,7 @@ Pour configurer WSUS, vous devez :
   
     Désélectionnez toutes les mises à jour précédemment sélectionnées.  
   
-    Sélectionnez **mises** à jour critiques et **mises à jour de sécurité** pour les mises à jour qui seront synchronisées pour l’appliance Analytics Platform System, puis cliquez sur **suivant**.  
+    Sélectionnez les mises à jour **critiques**, les mises à jour de **sécurité** et les **correctifs cumulatifs** pour les mises à jour qui seront synchronisées pour l’appliance Analytics Platform System, puis cliquez sur **suivant**.  
   
     ![Choisir classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
