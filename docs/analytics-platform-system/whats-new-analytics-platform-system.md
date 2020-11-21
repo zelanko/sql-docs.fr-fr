@@ -9,17 +9,27 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5e0193fb7e749b7127d59743557e58cb049e734c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778468"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011815"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Nouveautés d’Analytics Platform System, un entrepôt de données MPP avec montée en puissance parallèle
 Découvrez les nouveautés des dernières mises à jour d’appliance pour Microsoft Analytics Platform System (APS). APS est un appareil local avec montée en puissance parallèle qui héberge les Data Warehouses MPP SQL Server parallèles. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.7"></a>
+## <a name="aps-cu77"></a>APS CU 7.7
+Date de publication-2020 novembre
+
+### <a name="scvmm2016"></a>SCVMM2016
+Le logiciel APS CU 7.7 met à niveau les machines virtuelles VMM vers Windows Server 2016 et installe SCVMM2016. SCVMM 2012 R2 en cours d’utilisation a une date de fin de vie du 2022 juillet. La version la plus récente de SCVMM est nécessaire pour prendre en charge la mise à niveau obligatoire de CU 7.7. Les clients sont invités à effectuer la mise à niveau vers CU 7.7 dès que possible.
+
+### <a name="ssis-destination-adapter-for-sql-server-2019-as-target"></a>Adaptateur de destination SSIS pour SQL Server 2019 en tant que cible
+La nouvelle carte de destination SSIS APS qui prend en charge SQL Server 2019 en tant que cible de déploiement peut être téléchargée à partir du [site de téléchargement](https://www.microsoft.com/download/details.aspx?id=57472).
+
 <a name="h2-aps-cu7.6"></a>
 ## <a name="aps-cu76"></a>APS CU7.6
 Date de publication-2020 avril
@@ -87,7 +97,7 @@ Pour plus d’informations, consultez [configuration de TLS 1.2 sur APS](configu
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>Prise en charge de la zone de chiffrement Hadoop pour Polybase
 Polybase peut désormais communiquer avec les zones de chiffrement Hadoop. Consultez modifications de configuration APS nécessaires à la [configuration de la sécurité Hadoop](polybase-configure-hadoop-security.md#encryptionzone).
 
-### <a name="insert-select-maxdop-options"></a>Insérer-sélectionner les options MAXDOP
+### <a name="insert-select-maxdop-options"></a>Insert-Select les options MAXDOP
 Nous avons ajouté un [commutateur de fonctionnalité](appliance-feature-switch.md) qui vous permet de choisir des paramètres MAXDOP supérieurs à 1 pour les opérations Insert-Select. Vous pouvez maintenant définir le paramètre MAXDOP sur 0, 1, 2 ou 4. La valeur par défaut est 1.
 
 > [!IMPORTANT]  
@@ -140,7 +150,7 @@ L’utilisation d’objets de catalogue pour les appels de métadonnées au lieu
 ### <a name="bug-fixes"></a>Résolution des bogues
 Nous avons effectué la mise à niveau vers SQL Server 2016 SP2 CU2 avec APS CU 7.1. La mise à niveau corrige certains problèmes décrits ci-dessous.
 
-| Intitulé | Description |
+| Titre | Description |
 |:---|:---|
 | **Blocage potentiel du moteur de Tuple** |La mise à niveau résout un long risque d’interblocage dans une transaction distribuée et un thread d’arrière-plan du moteur de Tuple. Après l’installation de CU 7.1, les clients qui ont utilisé TF634 pour arrêter le moteur de tuple comme SQL Server paramètre de démarrage ou l’indicateur de trace global peuvent le supprimer en toute sécurité. | 
 | **Échec de certaines requêtes de décalage/Lead** |Certaines requêtes sur les tables ICC avec des fonctions de décalage/Lead imbriquées qui génèrent des erreurs sont désormais résolues avec cette mise à niveau. | 
