@@ -6,7 +6,7 @@
   href: sql-server/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: What's New
+    - name: Nouveautés
       items:
         - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -494,7 +494,7 @@
       items:
         - name: Vue d’ensemble
           items:
-            - name: Vue d'ensemble
+            - name: Vue d’ensemble
               href: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
             - name: Stockage Blob Azure
               href: relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
@@ -1875,7 +1875,7 @@
           items:
             - name: Créer
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: Supprimer
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifier
               href: relational-databases/tables/modify-edge-constraint.md
@@ -13603,10 +13603,14 @@
               href: relational-databases/system-stored-procedures/sp-oastop-transact-sql.md
         - name: PolyBase
           items:
-            - name: polybase_join_group
+            - name: sp_polybase_join_group
               href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md
             - name: sp_polybase_leave_group
               href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md
+            - name: sp_data_source_table_columns
+              href: relational-databases/system-stored-procedures/sp-data-source-table-columns.md
+            - name: sp_data_source_objects
+              href: relational-databases/system-stored-procedures/sp-data-source-objects.md
         - name: Gestion basée sur des stratégies
           href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
           items:

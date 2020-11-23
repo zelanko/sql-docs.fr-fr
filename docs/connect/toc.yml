@@ -46,12 +46,14 @@
         - name: Sécurité de SQL Server
           href: ../connect/ado-net/sql/sql-server-security.md
           items:
-            - name: Authentification dans SQL Server
+            - name: Authentification
               href: ../connect/ado-net/sql/authentication-sql-server.md
-            - name: Scénarios de sécurité des applications dans SQL Server
+            - name: Authentification Azure Active Directory
+              href: ../connect/ado-net/sql/azure-active-directory-authentication.md
+            - name: Scénarios de sécurité des applications
               href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
               items:
-                - name: Écriture d’une instruction SQL dynamique sécurisée dans SQL Server
+                - name: Écriture de code Dynamic SQL dynamique sécurisé
                   href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
             - name: Sécurité de SQL Server Express
               href: ../connect/ado-net/sql/sql-server-express-security.md
