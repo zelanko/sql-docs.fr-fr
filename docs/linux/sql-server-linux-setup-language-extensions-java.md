@@ -4,19 +4,18 @@ titleSuffix: SQL Server Language Extensions
 description: Découvrez comment installer l’extension de langage Java SQL Server sur Red Hat, Ubuntu et SUSE Linux.
 author: dphansen
 ms.author: davidph
-ms.reviewer: vanto
 manager: cgronlun
 ms.date: 11/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e859a445bf4283f7f3d56e04997525ac2823193a
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: a460ccdd3adcebfb43e6039527cf983b14486757
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585084"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870054"
 ---
 # <a name="install-sql-server-java-language-extension-on-linux"></a>Installation de l’extension de langage Java SQL Server sur Linux
 

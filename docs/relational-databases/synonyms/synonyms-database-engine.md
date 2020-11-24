@@ -16,12 +16,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc5d297364c5f2967536f94fde15441e4e21524
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74f5c5dcf2f2e1891daca22d70ebb9d9f1d9119f
+ms.sourcegitcommit: a49a66dbda0cb16049e092b49c8318ac3865af3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551522"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983113"
 ---
 # <a name="synonyms-database-engine"></a>Synonymes (Moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89551522"
   
 Par exemple, supposons que la table **Employee** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]soit située sur un serveur nommé **Serveur1**. Pour faire référence à cette table à partir d’un autre serveur, **Server2**, une application cliente devrait utiliser le nom en quatre parties **Server1.AdventureWorks.Person.Employee**. En outre, si l'emplacement de la table devait changer, par exemple vers un autre serveur, l'application cliente devrait être modifiée de façon à refléter ce changement.  
   
-Pour faire face à ces deux situations, vous pouvez créer un synonyme, en l’occurrence **EmpTable**, sur le serveur **Server2** pour la table **Employee** située sur le serveur **Server1**. Maintenant, l’application cliente doit seulement utiliser le nom en une seule partie **EmpTable**pour référencer la table **Employee** . De même, si l’emplacement de la table **Employee** change, vous devez modifier le synonyme **EmpTable**de manière à ce qu’il pointe vers le nouvel emplacement de la table **Employee** . Étant donné qu’il n’existe pas d’instruction ALTER SYNONYM, vous devez d’abord supprimer le synonyme **EmpTable**, puis le recréer avec le même nom, mais en le faisant pointer vers le nouvel emplacement de la table **Employee**.  
+Pour faire face à ces deux situations, vous pouvez créer un synonyme, en l’occurrence **EmpTable**, sur le serveur **Server2** pour la table **Employee** située sur le serveur **Server1**. Maintenant, l’application cliente doit seulement utiliser le nom en une seule partie **EmpTable** pour référencer la table **Employee** . De même, si l’emplacement de la table **Employee** change, vous devez modifier le synonyme **EmpTable** de manière à ce qu’il pointe vers le nouvel emplacement de la table **Employee** . Étant donné qu’il n’existe pas d’instruction ALTER SYNONYM, vous devez d’abord supprimer le synonyme **EmpTable**, puis le recréer avec le même nom, mais en le faisant pointer vers le nouvel emplacement de la table **Employee**.  
   
 Un synonyme est un objet appartenant à un schéma et, à ce titre, son nom doit être unique. Vous pouvez créer des synonymes pour les objets de base de données suivants :  
 
@@ -53,8 +53,6 @@ Un synonyme est un objet appartenant à un schéma et, à ce titre, son nom doit
     :::column-end:::
     :::column:::
         Fonction table d'un assembly (CLR)
-
-        Fonctions d'agrégation d'un assembly (CLR)
 
         Fonctions d'agrégation d'un assembly (CLR)
 
@@ -81,7 +79,7 @@ Les références aux synonymes ne sont pas liées au schéma. Par conséquent, u
 Si vous disposez d'un schéma par défaut qui ne vous appartient pas et que vous souhaitez créer un synonyme, vous devez qualifier le nom du synonyme avec le nom d'un schéma dont vous êtes propriétaire. Par exemple, si vous êtes propriétaire d’un schéma **x**, mais que **y** est votre schéma par défaut et que vous utilisez l’instruction CREATE SYNONYM, vous devez faire précéder le nom du synonyme du schéma **x**, au lieu d’attribuer au synonyme un nom en une seule partie. Pour plus d’informations sur la création de synonymes, consultez [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md).  
   
 ## <a name="granting-permissions-on-a-synonym"></a>Octroi d'autorisations sur un synonyme  
-Seuls les propriétaires de synonymes, les membres de **db_owner**ou ceux de **db_ddladmin** peuvent accorder une autorisation sur un synonyme.  
+Seuls les propriétaires de synonymes, les membres de **db_owner** ou ceux de **db_ddladmin** peuvent accorder une autorisation sur un synonyme.  
   
 Vous pouvez appliquer les instructions `GRANT`, `DENY` et `REVOKE` à tout ou partie des autorisations suivantes pour un synonyme :  
 
