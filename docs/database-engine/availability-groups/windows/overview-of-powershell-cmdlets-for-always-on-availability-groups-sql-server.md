@@ -54,7 +54,7 @@ ms.locfileid: "94584131"
   
  Pour plus d’informations sur l’utilisation de ces applets de commande pour préparer une base de données secondaire, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a> Création et gestion d’un groupe de disponibilité  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "94584131"
 |[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|Définit les propriétés d'un groupe de disponibilité ; met un groupe de disponibilité en ligne/hors connexion|Instance de serveur qui héberge le réplica principal|  
 |[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|Démarre l'une des formes de basculement suivantes :<br /><br /> Basculement forcé d'un groupe de disponibilité (avec possible perte de données).<br /><br /> Basculement manuel d'un groupe de disponibilité.|Instance de serveur qui héberge le réplica secondaire cible.|  
   
-##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a> Création et gestion d’un écouteur de groupe de disponibilité  
   
 |Applet de commande|Description|Prise en charge sur|  
 |------------|-----------------|------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "94584131"
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|Modifie le paramètre de port sur un écouteur de groupe de disponibilité existant.|Instance de serveur qui héberge le réplica principal|  
 |[**Add-SqlAvailabilityGroupListenerStaticIp**](/powershell/module/sqlserver/add-sqlavailabilitygrouplistenerstaticip)|Ajoute une adresse IP statique à une configuration existante d'écouteur de groupe de disponibilité. L'adresse IP peut être une adresse IPv4 avec sous-réseau ou une adresse IPv6.|Instance de serveur qui héberge le réplica principal|  
   
-##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a> Création et gestion d’un réplica de disponibilité  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "94584131"
 |[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|Supprime un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
 |[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|Définit les propriétés d'un réplica de disponibilité.|Instance de serveur qui héberge le réplica principal|  
   
-##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a> Ajout et gestion d’une base de données de disponibilité  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|  
