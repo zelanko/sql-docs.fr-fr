@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f979bc7b5dd8a3a3e67c499480003c45a8c4ebd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 0c7d02931ab25c1400fbb256fc86d14464826114
+ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255776"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94947924"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ Les formats de fichier suivants sont pris en charge :
   
 - Texte délimité  
   
-- Hive RCFile  
+- Hive RCFile  - Ne s’applique pas à Azure Synapse Analytics.
   
 - Hive ORC
   
@@ -146,7 +146,7 @@ Spécifie le format des données externes.
 - ORC  
   Spécifie un format ORC. Cette option nécessite Hive version 0.11 ou version ultérieure dans le cluster Hadoop externe. Dans Hadoop, le format de fichier ORC offre une meilleure compression et de meilleures performances que le format de fichier RCFILE.
 
-- RCFILE (en association avec SERDE_METHOD = *SERDE_method* ) Spécifie un format de fichier RcFile. Cette option nécessite que vous spécifiiez un sérialiseur Hive et la méthode de désérialiseur (SerDe). Cette exigence est la même si vous utilisez Hive/HiveQL dans Hadoop pour interroger les fichiers RC. Notez que la méthode SerDe respecte la casse.
+- RCFILE (en association avec SERDE_METHOD = *SERDE_method*) Spécifie un format de fichier RcFile. Cette option nécessite que vous spécifiiez un sérialiseur Hive et la méthode de désérialiseur (SerDe). Cette exigence est la même si vous utilisez Hive/HiveQL dans Hadoop pour interroger les fichiers RC. Notez que la méthode SerDe respecte la casse.
 
   Exemples de spécification RCFile avec les deux méthodes SerDe prises en charge par PolyBase :
 
@@ -257,7 +257,7 @@ Des **exemples de formats de date** se trouvent dans le tableau suivant :
   
 Remarques sur ce tableau :  
   
--   Les années, les mois et les jours peuvent avoir de nombreux formats et ordres différents. Le tableau présente uniquement le format **ymd** . Les mois peuvent avoir un ou deux chiffres, ou trois caractères. Les jours peuvent avoir un ou deux chiffres. Les années peuvent comporter deux ou quatre chiffres.
+-   Les années, les mois et les jours peuvent avoir de nombreux formats et ordres différents. Le tableau présente uniquement le format **ymd**. Les mois peuvent avoir un ou deux chiffres, ou trois caractères. Les jours peuvent avoir un ou deux chiffres. Les années peuvent comporter deux ou quatre chiffres.
   
 -   Les millisecondes (fffffff) ne sont pas obligatoires.
   

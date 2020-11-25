@@ -1,5 +1,5 @@
 ---
-title: Fonctions table CLR | Microsoft Docs
+title: Fonctions de Table-Valued CLR | Microsoft Docs
 description: Une fonction table retourne une table. Dans SQL Server intégration du CLR, vous pouvez écrire des fonctions table dans du code managé.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca80594050e73bf20ecfd589f18a5eca43e4dbde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4295ca970e503ad1785846d63e5ed479923f4303
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727902"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125289"
 ---
 # <a name="clr-table-valued-functions"></a>Fonctions table CLR
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "85727902"
  Depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étend les fonctionnalités des fonctions table en vous permettant de définir une fonction table dans n'importe quel langage managé. Les données sont retournées à partir d’une fonction table par le biais d’un objet **IEnumerable** ou **IEnumerator** .  
   
 > [!NOTE]  
->  Pour les fonctions table, les colonnes du type de table de retour ne peuvent pas inclure de colonnes timestamp ou de colonnes de type de données de chaîne non-Unicode (telles que **char**, **varchar**et **Text**). La contrainte NOT NULL n'est pas prise en charge.  
+>  Pour les fonctions table, les colonnes du type de table de retour ne peuvent pas inclure de colonnes timestamp ou de colonnes de type de données de chaîne non-Unicode (telles que **char**, **varchar** et **Text**). La contrainte NOT NULL n'est pas prise en charge.  
   
- Pour plus d’informations sur les fonctions table CLR, consultez la [Présentation de MSSQLTips pour SQL Server fonctions table CLR !](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ Pour plus d’informations sur les fonctions de Table-Valued du CLR, consultez [Introduction à SQL Server fonctions table CLR !](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Différences entre les fonctions table Transact-SQL et CLR  
  Les fonctions table [!INCLUDE[tsql](../../includes/tsql-md.md)] matérialisent les résultats de l'appel de la fonction dans une table intermédiaire. Dans la mesure où elles utilisent une table intermédiaire, elles peuvent prendre en charge des contraintes et des index uniques sur les résultats. Ces fonctionnalités peuvent être extrêmement utiles lorsque des résultats sont retournés en grande quantité.  
@@ -99,7 +99,8 @@ public class TabularEventLog
     [SqlFunction(FillRowMethodName = "FillRow")]  
     public static IEnumerable InitMethod(String logname)  
     {  
-        return new EventLog(logname).Entries;    }  
+        return new EventLog(logname).Entries;
+    }  
   
     public static void FillRow(Object obj, out SqlDateTime timeWritten, out SqlChars message, out SqlChars category, out long instanceId)  
     {  

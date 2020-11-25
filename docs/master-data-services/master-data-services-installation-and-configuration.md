@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195803"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129421"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
@@ -183,7 +183,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
   
 11. Dans la section **Pool d’applications** , procédez de l’une des manières suivantes.  
   
-    -   Entrez le même nom d’utilisateur que celui utilisé à l’étape 5 pour le **Compte administrateur**de la base de données,entrez le mot de passe, puis cliquez sur **OK**.  
+    -   Entrez le même nom d’utilisateur que celui utilisé à l’étape 5 pour le **Compte administrateur** de la base de données,entrez le mot de passe, puis cliquez sur **OK**.  
   
          **Ni**  
   
@@ -194,6 +194,9 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      Pour plus d’informations sur la boîte de dialogue **Créer une application web**, consultez [Boîte de dialogue Créer une application web &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
+
+    > [!NOTE] 
+    >  Si votre domaine implémente la [liaison de canal ldap 2020 et les exigences de signature LDAP pour Windows](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). Vous verrez le problème « les informations d’identification n’ont pas pu être vérifiées dans Active Directory ». Lorsque vous utilisez un compte de domaine pour créer un pool d’applications. Pour une solution de contournement, au lieu d’un utilisateur de domaine, utilisez un utilisateur de l' **ordinateur local**. Cela peut contourner la vérification des informations d’identification avec Active Directory. Après avoir créé l’application Web, vous pouvez modifier l’identité en utilisateur de domaine dans le **Gestionnaire de Internet Information Services (IIS)**.
   
 12. Dans la page **Configuration web** , dans la zone **Application web** , cliquez sur l’application que vous avez créée, puis cliquez sur **Sélectionner** dans la section  **Associer l’application à la base de données** .  
   
