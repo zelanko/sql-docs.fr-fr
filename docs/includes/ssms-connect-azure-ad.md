@@ -13,6 +13,6 @@ ms.lasthandoff: 09/30/2020
 ms.locfileid: "91603307"
 ---
 > [!NOTE]
-> En décembre 2021, les versions de SSMS antérieures à 18.6 ne s’authentifieront plus via Azure Active Directory avec MFA.
+> En décembre 2021, les versions de SSMS antérieures à la version 18.6 ne s’authentifieront plus via Azure Active Directory avec l’authentification multifacteur.
 >
 > Pour continuer à utiliser l’authentification Azure Active Directory avec MFA, vous devez avoir [SSMS 18.6 ou ultérieur](../ssms/download-sql-server-management-studio-ssms.md).
