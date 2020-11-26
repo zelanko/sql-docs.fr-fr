@@ -15,14 +15,14 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f505d4559529661738efc8504931c7f96ad8933f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0f99d649dfda393c5371039976321c4bf54be684
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114672"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121236"
 ---
 # <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>Créer une nouvelle instance de cluster de basculement Always On (Installation)
 
@@ -91,13 +91,13 @@ ms.locfileid: "91114672"
   
 2.  L'Assistant d'installation démarre le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour créer une installation de cluster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cliquez sur **Installation d’un nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** dans la page d’installation.  
   
-3.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
+3.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
 4.  Pour continuer, cliquez sur **Suivant**.  
   
 5.  Sur la page Fichiers de support du programme d'installation, cliquez sur **Installer** pour installer les fichiers de support du programme d'installation.  
   
-6.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Lorsque la vérification est terminée, cliquez sur **Suivant** pour poursuivre. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
+6.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Lorsque la vérification est terminée, cliquez sur **Suivant** pour poursuivre. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
 7.  Dans la page Clé du produit, indiquez si vous installez une édition gratuite de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou si vous disposez d'une clé PID pour une version de production du produit. Pour plus d’informations, consultez [Éditions et composants de SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
@@ -240,11 +240,11 @@ ms.locfileid: "91114672"
   
 3.  Lorsque les composants requis sont installés, l'Assistant Installation démarre le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour préparer le nœud pour le clustering, passez à la page **Avancé** et cliquez sur **Préparation de cluster avancée**.  
   
-4.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
+4.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
 5.  Dans la page Fichiers de support du programme d’installation, cliquez sur **Installer** pour installer les fichiers de support du programme d’installation.  
   
-6.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Lorsque la vérification est terminée, cliquez sur **Suivant** pour poursuivre. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
+6.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Lorsque la vérification est terminée, cliquez sur **Suivant** pour poursuivre. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
 7.  Dans la page Sélection de la langue, vous pouvez spécifier la langue de votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si vous effectuez l'installation sur un système d'exploitation localisé et que le support d'installation inclut des modules linguistiques pour l'anglais et pour la langue qui correspond au système d'exploitation. Pour plus d’informations sur la prise en charge des langues multiples et sur les considérations relatives à l’installation, consultez [Versions linguistiques locales dans SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   
@@ -328,11 +328,11 @@ ms.locfileid: "91114672"
   
 1.  Une fois tous les nœuds préparés de la façon décrite dans [l’étape de préparation](#prepare), lancez le programme d’installation sur l’un des nœuds préparés, de préférence sur le nœud propriétaire du disque partagé. Dans la page **Avancé** du Centre d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Création de cluster avancée**.  
   
-2.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
+2.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
 3.  Sur la page Fichiers de support du programme d'installation, cliquez sur **Installer** pour installer les fichiers de support du programme d'installation.  
   
-4.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Lorsque la vérification est terminée, cliquez sur **Suivant** pour poursuivre. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
+4.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Lorsque la vérification est terminée, cliquez sur **Suivant** pour poursuivre. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**.  
   
 5.  Dans la page Sélection de la langue, vous pouvez spécifier la langue de votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si vous effectuez l'installation sur un système d'exploitation localisé et que le support d'installation inclut des modules linguistiques pour l'anglais et pour la langue qui correspond au système d'exploitation. Pour plus d’informations sur la prise en charge des langues multiples et sur les considérations relatives à l’installation, consultez [Versions linguistiques locales dans SQL Server](../../../sql-server/install/local-language-versions-in-sql-server.md).  
   

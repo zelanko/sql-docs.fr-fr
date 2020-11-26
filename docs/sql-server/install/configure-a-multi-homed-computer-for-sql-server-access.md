@@ -12,14 +12,14 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 336822b6ad2ff420c987e42c033e2efae20c2536
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894899"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127547"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "85894899"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration**.  
   
-2.  Dans **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, dans le volet de la console, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration réseau**, développez **Protocoles pour \<instance name>** puis, double-cliquez sur**TCP/IP**.  
+2.  Dans **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, dans le volet de la console, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration réseau**, développez **Protocoles pour \<instance name>** puis, double-cliquez sur **TCP/IP**.  
   
 3.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses IP apparaissent pour chaque adresse IP configurée sur l'ordinateur.  
   

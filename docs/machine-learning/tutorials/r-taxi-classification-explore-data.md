@@ -11,10 +11,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
 ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92412526"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>Didacticiel R : Explorer et visualiser des données
@@ -51,7 +51,7 @@ Dans la [cinquième partie](r-taxi-classification-deploy-model.md), vous apprend
 
 Le développement d’une solution de science des données comprend généralement l’exploration et la visualisation des données. Tout d’abord, prenez une minute pour examiner les exemples de données, si ce n’est déjà fait.
 
-Dans le jeu de données public d’origine, les identificateurs de taxis et les enregistrements de trajets ont été fournis dans des fichiers distincts. Toutefois, pour simplifier l’utilisation des exemples de données, les deux jeux de données d’origine ont été joints sur les colonnes _medallion_ , _hack\_license_ et _pickup\_datetime_ .  Les enregistrements ont aussi été échantillonnés pour obtenir seulement 1 % du nombre d’enregistrements d’origine. Le dataset échantillonné obtenu compte 1 703 957 lignes et 23 colonnes.
+Dans le jeu de données public d’origine, les identificateurs de taxis et les enregistrements de trajets ont été fournis dans des fichiers distincts. Toutefois, pour simplifier l’utilisation des exemples de données, les deux jeux de données d’origine ont été joints sur les colonnes _medallion_, _hack\_license_ et _pickup\_datetime_.  Les enregistrements ont aussi été échantillonnés pour obtenir seulement 1 % du nombre d’enregistrements d’origine. Le dataset échantillonné obtenu compte 1 703 957 lignes et 23 colonnes.
 
 **Identificateurs de taxis**
   
@@ -65,11 +65,11 @@ Dans le jeu de données public d’origine, les identificateurs de taxis et les 
   
 + Chaque enregistrement de prix inclut des informations telles que le type de paiement, le montant total du paiement et le montant du pourboire.
   
-+ Les trois dernières colonnes peuvent être utilisées pour différentes tâches d’apprentissage automatique. La colonne _tip\_amount_ contient des valeurs numériques continues et peut être utilisée comme colonne **label** pour l’analyse de régression. La colonne _tipped_ contient seulement des valeurs oui/non. Elle sert à la classification binaire. La colonne _tip\_class_ a plusieurs **étiquettes de classes** , et peut donc être utilisée comme étiquette pour les tâches de classification multiclasse.
++ Les trois dernières colonnes peuvent être utilisées pour différentes tâches d’apprentissage automatique. La colonne _tip\_amount_ contient des valeurs numériques continues et peut être utilisée comme colonne **label** pour l’analyse de régression. La colonne _tipped_ contient seulement des valeurs oui/non. Elle sert à la classification binaire. La colonne _tip\_class_ a plusieurs **étiquettes de classes**, et peut donc être utilisée comme étiquette pour les tâches de classification multiclasse.
   
   Cette procédure pas à pas ne montre que la tâche de classification binaire. Si vous le souhaitez, vous pouvez essayer de créer des modèles pour les autres deux tâches d’apprentissage automatique, la régression et la classification multiclasse.
   
-+ Les valeurs utilisées pour les colonnes d’étiquettes sont basées sur la colonne _tip\_amount_ , à l’aide de ces règles d’entreprise :
++ Les valeurs utilisées pour les colonnes d’étiquettes sont basées sur la colonne _tip\_amount_, à l’aide de ces règles d’entreprise :
   
   |Nom de la colonne dérivée|Règle|
   |-|-|
@@ -83,11 +83,11 @@ Dans le jeu de données public d’origine, les identificateurs de taxis et les 
 > À compter de SQL Server 2019, le mécanisme d’isolation vous oblige à accorder les autorisations appropriées au répertoire dans lequel le fichier de traçage est stocké. Pour savoir comment définir ces autorisations, consultez la [section Autorisations de fichiers dans SQL Server 2019 sur Windows : Modifications de l’isolation dans Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Pour créer le tracé, utilisez la fonction R `barplot`. Cette étape trace un histogramme basé sur les données d’une requête [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez wrapper cette fonction dans la procédure stockée **RPlotHistogram** .
+Pour créer le tracé, utilisez la fonction R `barplot`. Cette étape trace un histogramme basé sur les données d’une requête [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez wrapper cette fonction dans la procédure stockée **RPlotHistogram**.
 
-1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample** , et sélectionnez **Nouvelle requête** . Sinon, dans Azure Data Studio, vous pouvez également sélectionner **Nouveau notebook** dans le menu **Fichier** , puis vous connecter à la base de données.
+1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample**, et sélectionnez **Nouvelle requête**. Sinon, dans Azure Data Studio, vous pouvez également sélectionner **Nouveau notebook** dans le menu **Fichier**, puis vous connecter à la base de données.
 
-2. Collez le script suivant pour créer une procédure stockée qui trace l’histogramme. Cet exemple se nomme **RPlotHistogram** .
+2. Collez le script suivant pour créer une procédure stockée qui trace l’histogramme. Cet exemple se nomme **RPlotHistogram**.
 
    ```sql
    CREATE PROCEDURE [dbo].[RPlotHistogram]
@@ -137,7 +137,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
     
     *tracé* *0xFFD8FFE000104A4649...*
   
-2. Ouvrez une invite de commandes PowerShell et exécutez la commande suivante, en fournissant le nom d’instance, le nom de base de données, le nom d’utilisateur et les informations d’identification appropriés en tant qu’arguments. Pour ceux qui utilisent des identités Windows, vous pouvez remplacer **-U** et **-P** par **-T** .
+2. Ouvrez une invite de commandes PowerShell et exécutez la commande suivante, en fournissant le nom d’instance, le nom de base de données, le nom d’utilisateur et les informations d’identification appropriés en tant qu’arguments. Pour ceux qui utilisent des identités Windows, vous pouvez remplacer **-U** et **-P** par **-T**.
   
    ```powershell
    bcp "exec RPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
@@ -150,7 +150,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
 
    Appuyez sur Entrée à chaque invite pour accepter les valeurs par défaut, à l’exception de ces modifications :
 
-   + Pour **prefix-length of field plot** , tapez 0.
+   + Pour **prefix-length of field plot**, tapez 0.
   
    + Type **Y** si vous souhaitez enregistrer les paramètres de sortie pour une réutilisation ultérieure.
   
@@ -186,9 +186,9 @@ En général, les scientifiques des données génèrent plusieurs visualisations
 
 Cette procédure stockée utilise la fonction `hist` pour créer l’histogramme, en exportant les données binaires dans des formats populaires tels que .JPG, .PDF et .PNG.
 
-1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample** , et sélectionnez **Nouvelle requête** .
+1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample**, et sélectionnez **Nouvelle requête**.
 
-2. Collez le script suivant pour créer une procédure stockée qui trace l’histogramme. Cet exemple est nommé **RPlotHist** .
+2. Collez le script suivant pour créer une procédure stockée qui trace l’histogramme. Cet exemple est nommé **RPlotHist**.
   
    ```sql
    CREATE PROCEDURE [dbo].[RPlotHist]  

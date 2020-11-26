@@ -12,14 +12,14 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3144f53bed98c5f5ec92d26a1e72254b6adda25e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d900bbc6b8183e4a903886878cf61ce68ac39573
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895144"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127520"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Modes de quorum WSFC et configuration de vote (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85895144"
 ##  <a name="cluster-health-detection-by-quorum"></a><a name="ClusterHealthDetectionbyQuorum"></a> Détection de l'intégrité du cluster par quorum  
  Chaque nœud d'un cluster WSFC participe à la communication périodique de pulsation pour partager l'état d'intégrité du nœud avec les autres nœuds. Les nœuds qui ne répondent pas sont considérés comme étant en état d'échec.  
   
- Un ensemble de nœuds de *quorum* est une majorité des nœuds votants et des témoins dans le cluster WSFC. L'intégrité globale et le statut d'un cluster WSFC sont déterminés par un *vote de quorum*périodique.  La présence d'un quorum signifie que le cluster est intègre et en mesure d'assurer la tolérance aux pannes au niveau du nœud.  
+ Un ensemble de nœuds de *quorum* est une majorité des nœuds votants et des témoins dans le cluster WSFC. L'intégrité globale et le statut d'un cluster WSFC sont déterminés par un *vote de quorum* périodique.  La présence d'un quorum signifie que le cluster est intègre et en mesure d'assurer la tolérance aux pannes au niveau du nœud.  
   
  L'absence de quorum indique que le cluster n'est pas intègre.  L'intégrité globale du cluster WSFC doit être assurée pour garantir la disponibilité de nœuds secondaires intègres vers lesquels les nœuds principaux peuvent basculer.  Si le vote du quorum échoue, le cluster WSFC passe hors connexion par mesure de sécurité.  Cela entraîne également l'arrêt de toutes les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inscrites avec le cluster.  
   
