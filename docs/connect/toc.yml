@@ -40,6 +40,39 @@
           href: ../connect/ado-net/appcontext-switches.md
         - name: Recherche d’informations supplémentaires
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: "Mappages des types de données dans\_ADO.NET"
+      href: ../connect/ado-net/data-type-mappings-ado-net.md
+      items:
+        - name: Mappages de types de données SQL Server
+          href: ../connect/ado-net/sql-server-data-type-mappings.md
+        - name: Nombres à virgule flottante
+          href: ../connect/ado-net/floating-point-numbers.md
+    - name: Extraction et modification de données dans ADO.NET
+      href: ../connect/ado-net/retrieving-modifying-data.md
+      items:
+        - name: Connexion à une source de données
+          href: ../connect/ado-net/connecting-to-data-source.md
+          items:
+            - name: Établir une connexion
+              href: ../connect/ado-net/establishing-connection.md
+            - name: Événements de connexion
+              href: ../connect/ado-net/connection-events.md
+        - name: Chaînes de connexion
+          href: ../connect/ado-net/connection-strings.md
+          items:
+            - name: Builders de chaînes de connexion
+              href: ../connect/ado-net/connection-string-builders.md
+            - name: Chaînes de connexion et fichiers de configuration
+              href: ../connect/ado-net/connection-strings-and-configuration-files.md
+            - name: Syntaxe des chaînes de connexion
+              href: ../connect/ado-net/connection-string-syntax.md
+            - name: Protection des informations de connexion
+              href: ../connect/ado-net/protecting-connection-information.md
+        - name: Regroupement de connexions
+          href: ../connect/ado-net/connection-pooling.md
+          items:
+            - name: Regroupement de connexions SQL Server (ADO.NET)
+              href: ../connect/ado-net/sql-server-connection-pooling.md
     - name: SQL Server et ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
