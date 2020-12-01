@@ -13,12 +13,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1038b37cf97fed506d8503ceafb94a7bdabb0b2d
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038294"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419830"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "92038294"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID de la table sous-jacente. Il s’agit de la table physique sur le nœud de calcul, et non de la object_id de la table logique sur le nœud de contrôle. Par exemple, object_id ne correspond pas à la object_id dans sys. tables.<br /><br /> Pour effectuer une jointure avec sys. tables, utilisez sys.pdw_index_mappings.|  
 |**index_id**|**int**|ID de l’index ColumnStore cluster sur *object_id* table.|  
-|**partition_number**|**int**|ID de la partition de table qui contient les *row_group_id*de groupe de lignes. Vous pouvez utiliser *partition_number* pour joindre cette DMV à sys. partitions.|  
+|**partition_number**|**int**|ID de la partition de table qui contient les *row_group_id* de groupe de lignes. Vous pouvez utiliser *partition_number* pour joindre cette DMV à sys. partitions.|  
 |**row_group_id**|**int**|ID de ce groupe de lignes. Cet ID est unique dans la partition.|  
 |**dellta_store_hobt_id**|**bigint**|hobt_id des groupes de lignes delta, ou NULL si le type de groupe de lignes n'est pas delta. Un groupe de lignes delta est un groupe de lignes en lecture/écriture qui reçoit des enregistrements. Un groupe de lignes Delta a l’état **ouvert** . Un groupe de lignes delta est toujours au format rowstore et n'a pas été compressé au format columnstore.|  
 |**state**|**tinyint**|Numéro d'ID associé à state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
@@ -40,14 +40,14 @@ ms.locfileid: "92038294"
 |**pdw_node_id**|**int**|ID unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
 |**distribution_id**|**int**|ID unique de la distribution.|
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Retourne une ligne pour chaque groupe de lignes columnstore pour chaque table ayant un index columnstore cluster ou non cluster.  
   
  Utilisez **sys.pdw_nodes_column_store_row_groups** pour déterminer le nombre de lignes incluses dans le groupe de lignes et la taille du groupe de lignes.  
   
  Lorsque le nombre de lignes supprimées dans un groupe de lignes atteint un fort pourcentage du nombre total de lignes, la table est moins efficace. Reconstruisez l'index columnstore pour réduire la taille de la table, ce qui réduit les E/S disque nécessaires pour lire la table. Pour reconstruire l’index ColumnStore, utilisez l’option **Rebuild** de l’instruction **ALTER index** .  
   
- Le ColumnStore pouvant être mis à jour insère d’abord de nouvelles données dans un rowgroup **ouvert** , qui est au format rowstore, et est également parfois appelé table Delta.  Une fois qu’un rowgroup ouvert est plein, son état passe à **fermé**. Un rowgroup fermé est compressé au format ColumnStore par le moteur de tuple et l’état passe à **compressé**.  Le moteur de tuple est un processus en arrière-plan qui se réveille régulièrement et vérifie s'il existe des rowgroups fermés prêts à être compressés dans un rowgroup columnstore.  Le moteur de tuple libère également les rowgroups dans lesquels chaque ligne a été supprimée. Les RowGroups désalloués sont marqués comme étant mis **hors**service. Pour exécuter immédiatement le moteur de tuple, utilisez l’option **REorganize** de l’instruction **ALTER index** .  
+ Le ColumnStore pouvant être mis à jour insère d’abord de nouvelles données dans un rowgroup **ouvert** , qui est au format rowstore, et est également parfois appelé table Delta.  Une fois qu’un rowgroup ouvert est plein, son état passe à **fermé**. Un rowgroup fermé est compressé au format ColumnStore par le moteur de tuple et l’état passe à **compressé**.  Le moteur de tuple est un processus en arrière-plan qui se réveille régulièrement et vérifie s'il existe des rowgroups fermés prêts à être compressés dans un rowgroup columnstore.  Le moteur de tuple libère également les rowgroups dans lesquels chaque ligne a été supprimée. Les RowGroups désalloués sont marqués comme étant mis **hors** service. Pour exécuter immédiatement le moteur de tuple, utilisez l’option **REorganize** de l’instruction **ALTER index** .  
   
  Lorsqu'un groupe de lignes columnstore est rempli, il est compressé, et cesse de recevoir de nouvelles lignes. Lorsque vous supprimez des lignes d'un groupe compressé, elles sont conservées mais sont marquées comme étant supprimées. Les mises à jour dans un groupe compressé sont implémentées comme une suppression du groupe compressé, et une insertion dans un groupe ouvert.  
   
@@ -76,6 +76,7 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
+    AND CSRowGroups.distribution_id = NI.distribution_id
     AND CSRowGroups.index_id = NI.index_id      
 WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   

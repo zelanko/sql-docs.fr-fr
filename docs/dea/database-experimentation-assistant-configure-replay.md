@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636089"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419784"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurer Distributed Replay pour Assistant Expérimentation de base de données
 
@@ -99,7 +99,7 @@ Pour obtenir d’autres options de configuration, consultez [configurer Distribu
 
 Vous pouvez utiliser des outils d’administration Distributed Replay pour tester rapidement si Distributed Replay fonctionne correctement dans l’environnement. Le test de la configuration peut être particulièrement utile dans un environnement dans lequel plusieurs ordinateurs clients sont inscrits auprès d’un contrôleur. Vous devrez peut-être installer SQL Server Management Studio (SSMS) pour accéder aux outils d’administration.
 
-1. Accédez à l’emplacement d’installation de SSMS et recherchez l’outil d’administration Distributed Replay dreplay.exe et ses composants dépendants.
+1. Accédez à l’emplacement d’installation de SSMS et recherchez l’outil d’administration Distributed Replay dreplay.exe et ses composants dépendants. Actuellement, [SSMS 17](../ssms/release-notes-ssms.md#1791) est la dernière version de SSMS à inclure dreplay.exe.
 2. À l’invite de commandes, exécutez `dreplay.exe status -f 1` .
 
 Si les étapes précédentes ont réussi, la sortie de la console indique que le contrôleur peut voir ses clients dans un `READY` État.
