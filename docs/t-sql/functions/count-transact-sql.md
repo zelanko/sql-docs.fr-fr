@@ -25,11 +25,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 973583b5c5dd32273312f6282e91d501659887fb
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114893"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124856"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ COUNT(DISTINCT *expression*) évalue l’argument *expression* pour chaque ligne
   
 Pour les valeurs de retour supérieures à 2^31-1, `COUNT` renvoie une erreur. Dans ce cas, utilisez plutôt `COUNT_BIG`.
   
-`COUNT` est une fonction déterministe lorsqu'elle est utilisée ***sans*** les clauses OVER et ORDER BY. Elle n'est pas déterministe lorsqu’elle est utilisée ***avec*** les clauses OVER et ORDER BY. Consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) pour plus d’informations.
+`COUNT` est une fonction déterministe quand elle est utilisée ***sans** _ les clauses OVER et ORDER BY. Elle n’est pas déterministe quand elle est utilisée _*_avec_*_ les clauses OVER et ORDER BY. Consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) pour plus d’informations.
   
 ## <a name="examples"></a>Exemples  
   
@@ -101,7 +101,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>B. Utilisation de COUNT(\*)  
+### <a name="b-using-count_"></a>B. Utilisation de COUNT(\_)  
 Cet exemple retourne le nombre total d’employés [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
   
 ```sql

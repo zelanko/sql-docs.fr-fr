@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a866d7d1083435acffeb157edf9fe4a0bb725d3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425761"
 ---
 # <a name="microsoft-connector-for-teradata"></a>Connecteur Microsoft pour Teradata
@@ -86,15 +86,15 @@ Pour exécuter un package SSIS *ciblant SQL Server 2017 (et les versions anté
 
 Pour concevoir un package SSIS dans SSDT *ciblant SQL Server 2017 (et les versions antérieures)* , vous devez installer le **connecteur Microsoft pour Teradata** et le **connecteur Microsoft pour Teradata par Attunity** avec la version correspondante.
 
-## <a name="limitationsandknownissues"></a>Limitations et problèmes connus
+## <a name="limitations-and-known-issues"></a>Limitations et problèmes connus
 
-- Éditeur source/de destination Teradata, la propriété de la **base de données par défaut**  ne prend pas effet. Pour contourner le problème, tapez le nom de la base de données dans la zone déroulante pour filtrer la table ou la vue.
+- Éditeur de la source/destination Teradata, la propriété de la **base de données par défaut** ne prend pas effet.  Pour contourner le problème, tapez le nom de la base de données dans la zone déroulante pour filtrer la table ou la vue.
 
-- Éditeur source/de destination Teradata, l’étape de mappage ne fonctionne pas quand le type \<database>.<table/vue>. Pour contourner le problème, tapez \<database>.<table/vue>, puis cliquez sur le bouton déroulant.
+- Éditeur de la source/destination Teradata, l’étape de mappage ne fonctionne pas quand vous tapez \<database>.<table/vue>. Pour contourner le problème, tapez \<database>.<table/vue>, puis cliquez sur le bouton déroulant.
 
 - Éditeur de source Teradata, la vue ne peut pas être affichée lorsque le mode d’accès aux données est « Nom de la table – Exportation TPT ». Pour contourner le problème, utilisez l’Éditeur avancé de la source Teradata.
 
-- Destination Teradata, l’attribut ’PackMaximum’ ne peut pas être défini sur ’True'. Sinon, une erreur se produit.
+- Destination Teradata, l’attribut ’PackMaximum’ ne peut pas être défini sur ’True'.  Sinon, une erreur se produit.
 
 ## <a name="uninstallation"></a>Désinstallation
 

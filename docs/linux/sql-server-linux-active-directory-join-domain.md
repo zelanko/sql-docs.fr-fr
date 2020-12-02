@@ -2,19 +2,19 @@
 title: Joindre SQL Server sur Linux à Active Directory
 titleSuffix: SQL Server
 description: Cet article fournit des conseils pour joindre une machine hôte Linux SQL Server à un domaine AD. Vous pouvez utiliser un package SSSD intégré ou bien des fournisseurs AD tiers.
-author: Dylan-MSFT
-ms.author: dygray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 184744aeea40dd8d21c023806cc63d644311ffde
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896975"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419842"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Joindre SQL Server sur un hôte Linux à un domaine Active Directory
 
@@ -29,13 +29,21 @@ Avant de configurer l’authentification Active Directory, vous devez configurer
 > [!IMPORTANT]
 > Les exemples d’étapes décrits dans cet article sont fournis à titre d’information uniquement et font référence aux systèmes d’exploitation Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x et SUSE Enterprise Linux (SLES) 12. Les étapes réelles peuvent différer légèrement dans votre environnement en fonction de la configuration de votre environnement global et de la version de votre système d’exploitation. Par exemple, Ubuntu 18.04 utilise netplan, tandis que Red Hat Enterprise Linux (RHEL) 8.x utilise nmcli entre autres outils pour gérer et configurer le réseau. Il est recommandé de faire appel à vos administrateurs système et de domaine pour votre environnement en ce qui concerne les outils, la configuration, la personnalisation et la résolution des problèmes.
 
+### <a name="reverse-dns-rdns"></a>DNS inversé (RDNS)
+
+Quand vous configurez un ordinateur exécutant Windows Server en tant que contrôleur de domaine, vous ne disposez peut-être pas d’une zone RDNS par défaut. Assurez-vous qu’il existe une zone RDNS applicable pour le contrôleur de domaine et l’adresse IP de l’ordinateur Linux qui exécutera SQL Server.
+
+Assurez-vous également qu’il existe un enregistrement PTR pointant vers vos contrôleurs de domaine.
+
 ## <a name="check-the-connection-to-a-domain-controller"></a>Vérifier la connexion à un contrôleur de domaine
 
-Vérifiez que vous pouvez contacter le contrôleur de domaine avec les noms courts et complets du domaine :
+Vérifiez que vous pouvez contacter le contrôleur de domaine à l’aide des noms court et complet du domaine, et en utilisant le nom d’hôte du contrôleur de domaine. En outre, l’adresse IP du contrôleur de domaine doit être résolue en nom de domaine complet du contrôleur de domaine :
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
@@ -62,6 +70,39 @@ Si l’une de ces vérifications de nom échoue, mettez à jour votre liste de r
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
+   ```
+
+1. Ensuite, vérifiez que votre fichier **/etc/resolv.conf** contient une ligne comme dans l’exemple suivant :
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+1. Modifiez le fichier [sudo vi /etc/netplan/******.yaml] de façon à ce que votre domaine Active Directory se trouve dans la liste de recherche de domaine :
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > L’interface réseau `eth0` peut différer selon les machines. Pour déterminer celui que vous utilisez, exécutez **ifconfig**. Copiez ensuite l’interface qui a une adresse IP et les octets transmis et reçus.
+
+1. Après avoir modifié ce fichier, redémarrez le service réseau :
+
+   ```bash
+   sudo netplan apply
    ```
 
 1. Ensuite, vérifiez que votre fichier **/etc/resolv.conf** contient une ligne comme dans l’exemple suivant :
@@ -145,22 +186,41 @@ Procédez comme suit pour joindre un hôte SQL Server à un domaine Active Direc
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE :**
+   
+   **SLES 12 :**
+   
+   Notez que ces étapes sont propres à SLES 12, seule version officiellement prise en charge de SUSE pour Linux.
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu :**
+   **Ubuntu 16.04 :**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04 :**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. Si l’installation du package client Kerberos vous invite à entrer un nom de domaine, entrez votre nom de domaine en majuscules.
 
 1. Une fois que vous avez confirmé que votre DNS est correctement configuré, joignez le domaine en exécutant la commande suivante. Vous devez vous authentifier à l’aide d’un compte AD disposant de privilèges suffisants dans AD pour joindre une nouvelle machine au domaine. Cette commande crée un nouveau compte d’ordinateur dans AD, crée le fichier keytab de l’hôte **/etc/krb5.keytab**, configure le domaine dans **/etc/sssd/sssd.conf** et met à jour **/etc/krb5.conf**.
+
+   En raison d’un problème avec **realmd**, définissez d’abord le nom d’hôte de la machine sur le nom de domaine complet plutôt que sur le nom de la machine. Sinon, **realmd** peut ne pas créer tous les SPN requis pour la machine et les entrées DNS ne sont pas automatiquement mises à jour, même si votre contrôleur de domaine prend en charge les mises à jour DNS dynamiques.
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   Après l’exécution de la commande ci-dessus, votre fichier/etc/hostname doit contenir <old hostname>.contoso.com.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v

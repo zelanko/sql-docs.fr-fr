@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2e24711b7b67f19018b325da3c6b78dc954e6a31
+ms.sourcegitcommit: 4b98c54859a657023495dddb7595826662dcd9ab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869422"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130296"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Démarrage rapide : Événements étendus dans SQL Server
 
@@ -84,7 +84,7 @@ Le texte et les captures d’écran qui l’accompagnent peuvent perdre en préc
 
 2. Dans l’Explorateur d’objets, cliquez sur **Gestion** > **Événements étendus** > **Nouvelle session**. La boîte de dialogue **nouvelle Session** est préférable à l’ **Assistant Nouvelle Session**, bien que les deux soient similaires.
 
-3. Dans l’angle supérieur gauche, cliquez sur la page **Général** . Ensuite, tapez *YourSession*ou tout autre nom de votre choix, dans la zone de texte **Nom de session** . Ne cliquez *pas* encore sur le bouton **OK**, vous le ferez uniquement à la fin de la démonstration.
+3. Dans l’angle supérieur gauche, cliquez sur la page **Général** . Ensuite, tapez *YourSession* ou tout autre nom de votre choix, dans la zone de texte **Nom de session** . Ne cliquez *pas* encore sur le bouton **OK**, vous le ferez uniquement à la fin de la démonstration.
 
    ![Nouvelle Session > Général > Nom de session](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -110,13 +110,16 @@ Le texte et les captures d’écran qui l’accompagnent peuvent perdre en préc
    - Pour **Valeur** , tapez **%SELECT%HAVING%** .
 
    > [!NOTE]
-   > Dans ce nom en deux parties, *sqlserver* correspond au nom du package et *sql_text* au nom du champ. L’événement que nous avons choisi précédemment, *sql_statement_completed* doit être dans le même package que le champ que nous choisissons.
+   > Dans ce nom en deux parties, *sqlserver* correspond au nom du package et *sql_text* au nom du champ. L’événement que nous avons choisi précédemment, *sql_statement_completed*, doit être dans le même package que le champ que nous choisissons.
 
 9. Dans l’angle supérieur gauche, cliquez sur la page **Stockage de données** .
 
 10. Dans la zone **Cibles**, cliquez sur **Cliquer ici pour ajouter une cible**.
     - Dans la liste déroulante **Type** , choisissez **event_file**.
     - Cela signifie que les données d’événement seront stockées dans un fichier consultable.
+    
+    > [!NOTE]
+    > Vous ne pouvez pas utiliser le Stockage Blob Azure comme cible de stockage de données dans une instance locale de SQL Server.
 
     ![Nouvelle Session > Stockage de données > Cibles > Type > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
@@ -136,7 +139,7 @@ Le texte et les captures d’écran qui l’accompagnent peuvent perdre en préc
 
 #### <a name="edit-your-event-session"></a>Modifier votre session d’événements
 
-Dans l’ **Explorateur d’objets**de SSMS, vous pouvez modifier votre session d’événements en double-cliquant sur son nœud, puis en cliquant sur **Propriétés**. La même boîte de dialogue constituée de plusieurs pages s’affiche.
+Dans l’ **Explorateur d’objets** de SSMS, vous pouvez modifier votre session d’événements en double-cliquant sur son nœud, puis en cliquant sur **Propriétés**. La même boîte de dialogue constituée de plusieurs pages s’affiche.
 
 ### <a name="corresponding-t-sql-for-your-event-session"></a>T-SQL correspondant de votre session d’événements
 
@@ -209,7 +212,7 @@ Vous avez la possibilité d’indiquer à la session d’événements de démarr
 
 Testez votre session d’événements à l’aide de ces quelques étapes simples :
 
-1. Dans l’ **Explorateur d’objets**de SSMS, cliquez avec le bouton droit sur le nœud de votre session d’événements, puis cliquez sur **Démarrer la Session**.
+1. Dans l’ **Explorateur d’objets** de SSMS, cliquez avec le bouton droit sur le nœud de votre session d’événements, puis cliquez sur **Démarrer la Session**.
 2. Exécutez l’instruction `SELECT...HAVING` suivante à deux reprises.
     - Idéalement, vous pouvez modifier la valeur `HAVING Count` entre les deux exécutions, en la faisant passer de 2 à 3. Cela vous permet de voir les différences dans les résultats.
 3. Cliquez avec le bouton droit sur le nœud de votre session, puis cliquez sur **Arrêter la session**.
@@ -247,7 +250,7 @@ event_session_address  5
 event_session_id       5
 is_trigger_event       4
 trace_event_id         3
-***/
+**_/
 ```
 
 <a name="select-the-full-results-xml-37"/>
@@ -257,7 +260,7 @@ trace_event_id         3
 Dans SSMS, exécutez l’instruction T-SQL SELECT suivante pour retourner les résultats où chaque ligne fournit les données sur une seule occurrence d’événement. L’instruction CAST AS XML facilite l’affichage des résultats.
 
 > [!NOTE]
-> Le système d’événements ajoute toujours un long nombre au nom de fichier event_file *.xel* que vous avez spécifié. Avant d’exécuter l’instruction SELECT suivante à partir du fichier, vous devez copier le nom complet fourni par le système et le coller dans l’instruction SELECT.
+> Le système d’événements ajoute toujours un long nombre au nom de fichier event_file _.xel* que vous avez spécifié. Avant d’exécuter l’instruction SELECT suivante à partir du fichier, vous devez copier le nom complet fourni par le système et le coller dans l’instruction SELECT.
 
 ```sql
 SELECT
@@ -334,11 +337,11 @@ Il existe plusieurs fonctionnalités avancées dans l’interface utilisateur de
 
 - [Affichage avancé des données cibles d’événements étendus dans SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
 
-Pour commencer, deux options de menu contextuel intitulées **Afficher les données cibles** et **Surveiller les données actives**sont proposées.
+Pour commencer, deux options de menu contextuel intitulées **Afficher les données cibles** et **Surveiller les données actives** sont proposées.
 
 ### <a name="view-target-data"></a>Afficher les données cibles
 
-Dans l’ **Explorateur d’objets**de SSMS, vous pouvez cliquer avec le bouton droit sur le nœud cible qui se trouve sous le nœud de votre session d’événements. Dans le menu contextuel, cliquez sur **Afficher les données cibles**. SSMS affiche les données.
+Dans l’ **Explorateur d’objets** de SSMS, vous pouvez cliquer avec le bouton droit sur le nœud cible qui se trouve sous le nœud de votre session d’événements. Dans le menu contextuel, cliquez sur **Afficher les données cibles**. SSMS affiche les données.
 
 L’affichage n’est pas mis à jour si de nouvelles données sont signalées par l’événement. Mais vous pouvez cliquer de nouveau sur **Afficher les données cibles** .
 
@@ -346,7 +349,7 @@ L’affichage n’est pas mis à jour si de nouvelles données sont signalées p
 
 ### <a name="watch-live-data"></a>Surveiller les données actives
 
-Dans l’ **Explorateur d’objets**de SSMS, vous pouvez cliquer avec le bouton droit sur le nœud de votre session d’événements. Dans le menu contextuel, cliquez sur **Surveiller les données actives**. SSMS affiche les données entrantes au fur et à mesure qu’elles arrivent en temps réel.
+Dans l’ **Explorateur d’objets** de SSMS, vous pouvez cliquer avec le bouton droit sur le nœud de votre session d’événements. Dans le menu contextuel, cliquez sur **Surveiller les données actives**. SSMS affiche les données entrantes au fur et à mesure qu’elles arrivent en temps réel.
 
 ![Surveiller les données actives, dans SSMS, Gestion > Événements étendus > Sessions > YourSession, clic avec le bouton droit](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
 
@@ -369,7 +372,7 @@ Le tableau suivant répertorie les termes utilisés pour les événements étend
 | :--- | :---------- |
 | session d'événements | Construction centrée autour d’un ou plusieurs événements, associées à des éléments comme des actions et des cibles. L’instruction CREATE EVENT SESSION construit chaque session d’événements. Vous pouvez utiliser l’instruction ALTER sur une session d’événements pour la démarrer et l’arrêter à votre gré. <br/> <br/> Une session d’événements est parfois simplement appelée *session*. Quand le contexte le précise, il s’agit d’une *session d’événements*. <br/> <br/> Vous trouverez plus de détails sur les sessions d’événements dans : [Sessions d’événements étendus SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | événement | Occurrence spécifique dans le système qui est surveillée par une session d’événements active. <br/> <br/> Par exemple, l’événement *sql_statement_completed* représente le moment auquel une instruction T-SQL donnée se termine. L’événement peut signaler sa durée et d’autres données. |
-| target | Élément qui reçoit les données de sortie d’un événement capturé. La cible vous affiche les données. <br/> <br/> Exemples : *event_file*et la mémoire *ring_buffer*. La cible *histogram* traite vos données avant de les afficher. <br/> <br/> Toute cible peut être utilisée pendant une session d’événements. Pour plus d’informations, consultez [Cibles des Événements étendus SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
+| target | Élément qui reçoit les données de sortie d’un événement capturé. La cible vous affiche les données. <br/> <br/> Exemples : *event_file* et la mémoire *ring_buffer*. La cible *histogram* traite vos données avant de les afficher. <br/> <br/> Toute cible peut être utilisée pendant une session d’événements. Pour plus d’informations, consultez [Cibles des Événements étendus SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
 | action | Champ connu de l’événement. Les données issues du champ sont envoyées à la cible. Le champ d’action est étroitement lié au *filtre de prédicat*. |
 | filtre de prédicat | Test de données d’un champ d’événement, utilisé pour que seul un sous-ensemble intéressant d’occurrences d’événements soit envoyé à la cible. <br/> <br/> Par exemple, un filtre peut inclure uniquement les occurrences d’événements *sql_statement_completed* où l’instruction T-SQL contient la chaîne *HAVING*. |
 | package | Qualificateur de nom associé à chaque élément dans un ensemble d’éléments qui tournent autour d’un cœur d’événements. <br/> <br/> Par exemple, un package peut comporter des événements relatifs à du texte T-SQL. Un événement peut concerner toute l’instruction T-SQL dans un lot délimité par une commande GO. Dans le même temps, un autre événement plus précis concerne des instructions T-SQL individuelles. De plus, pour toute instruction T-SQL, il existe des événements de début et de fin. <br/> <br/> Les champs appropriés aux événements sont également inclus dans le package avec les événements. La plupart des cibles sont dans *package0* et sont utilisées avec les événements de nombreux autres packages. |

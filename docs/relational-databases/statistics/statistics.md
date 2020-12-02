@@ -2,7 +2,7 @@
 title: Statistiques
 description: L'optimiseur de requête utilise des statistiques dans l'optique de créer des plans de requête qui améliorent les performances des requêtes. Découvrez les concepts et les recommandations sur l’utilisation de l’optimisation des requêtes.
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/23/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 1374be401f379dceb73a41f7a4e2f38882a9a98c
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810525"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96130172"
 ---
 # <a name="statistics"></a>Statistiques
 
@@ -134,20 +134,23 @@ Vous pouvez utiliser le paramètre [sys.dm_db_stats_properties](../../relational
 
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
- L’option de mise à jour asynchrone des statistiques [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) détermine si l’optimiseur de requête utilise des mises à jour des statistiques synchrones ou asynchrones. Par défaut, l’option de mise à jour asynchrone des statistiques est désactivée, et l’optimiseur de requête met à jour les statistiques de façon synchrone. L’option AUTO_UPDATE_STATISTICS_ASYNC s’applique aux objets de statistiques créés pour les index, aux colonnes uniques contenues dans les prédicats de requête et aux statistiques créées à l’aide de l’instruction [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
+L’option de mise à jour asynchrone des statistiques [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) détermine si l’optimiseur de requête utilise des mises à jour des statistiques synchrones ou asynchrones. Par défaut, l’option de mise à jour asynchrone des statistiques est désactivée, et l’optimiseur de requête met à jour les statistiques de façon synchrone. L’option AUTO_UPDATE_STATISTICS_ASYNC s’applique aux objets de statistiques créés pour les index, aux colonnes uniques contenues dans les prédicats de requête et aux statistiques créées à l’aide de l’instruction [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
  
- > [!NOTE]
- > Pour définir une option de mise à jour des statistiques de manière asynchrone dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], sur la page *Options* de la fenêtre *Propriétés de la base de données*, les deux options *Mise à jour automatique des statistiques* et *Mise à jour automatique des statistiques de manière asynchrone* doivent être définies sur **True**.
+> [!NOTE]
+> Pour définir une option de mise à jour des statistiques de manière asynchrone dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], sur la page *Options* de la fenêtre *Propriétés de la base de données*, les deux options *Mise à jour automatique des statistiques* et *Mise à jour automatique des statistiques de manière asynchrone* doivent être définies sur **True**.
   
- La mise à jour des statistiques peut être synchrone (par défaut) ou asynchrone. Dans le cas de la mise à jour synchrone des statistiques, les requêtes sont systématiquement compilées et exécutées avec des statistiques à jour ; si les statistiques sont obsolètes, l'optimiseur de requête attend que les statistiques soient mises à jour avant de compiler et d'exécuter les requêtes. Dans le cas de la mise à jour asynchrone des statistiques, les requêtes sont compilées avec les statistiques existantes, même si celles-ci sont obsolètes ; l'optimiseur de requête peut très bien choisir un plan de requête non optimal si les statistiques sont obsolètes au moment où les requêtes sont compilées. Les requêtes compilées à l'issue d'une mise à jour asynchrone ont l'avantage d'utiliser des statistiques mises à jour.  
+La mise à jour des statistiques peut être synchrone (par défaut) ou asynchrone. Dans le cas de la mise à jour synchrone des statistiques, les requêtes sont systématiquement compilées et exécutées avec des statistiques à jour ; si les statistiques sont obsolètes, l'optimiseur de requête attend que les statistiques soient mises à jour avant de compiler et d'exécuter les requêtes. Dans le cas de la mise à jour asynchrone des statistiques, les requêtes sont compilées avec les statistiques existantes, même si celles-ci sont obsolètes ; l'optimiseur de requête peut très bien choisir un plan de requête non optimal si les statistiques sont obsolètes au moment où les requêtes sont compilées. Les requêtes compilées à l'issue d'une mise à jour asynchrone ont l'avantage d'utiliser des statistiques mises à jour.  
   
- Envisagez d'utiliser des statistiques synchrones lorsque vous effectuez des opérations qui modifient la distribution des données, telles que la troncation d'une table ou une mise à jour en bloc d'un fort pourcentage de lignes. Si vous ne mettez pas à jour les statistiques à l'issue de l'opération, l'utilisation de statistiques synchrones vous garantira que les statistiques sont à jour avant d'exécuter des requêtes sur les données modifiées.  
+Envisagez d'utiliser des statistiques synchrones lorsque vous effectuez des opérations qui modifient la distribution des données, telles que la troncation d'une table ou une mise à jour en bloc d'un fort pourcentage de lignes. Si vous ne mettez pas à jour les statistiques à l'issue de l'opération, l'utilisation de statistiques synchrones vous garantira que les statistiques sont à jour avant d'exécuter des requêtes sur les données modifiées.  
   
- Envisagez d'utiliser des statistiques asynchrones pour obtenir des temps de réponse des requêtes plus prévisibles pour les scénarios suivants :  
+Envisagez d'utiliser des statistiques asynchrones pour obtenir des temps de réponse des requêtes plus prévisibles pour les scénarios suivants :  
   
 * Votre application exécute régulièrement la même requête, des requêtes similaires ou des plans de requête mis en cache similaires. Il se peut que les temps de réponse de vos requêtes soient plus prévisibles avec des mises à jour de statistiques asynchrones qu'avec des mises à jour de statistiques synchrones, car l'optimiseur de requête peut exécuter les requêtes entrantes sans attendre la mise à jour des statistiques. Cela évite de retarder certaines requêtes et pas les autres.  
   
 * Votre application a connu des expirations de délai de demandes clientes causées par une ou plusieurs requêtes en attente de statistiques mises à jour. Dans certains cas, l'attente de statistiques synchrones peut entraîner l'échec des applications dont les délais d'expiration sont agressifs.  
+
+> [!NOTE]
+> Les statistiques sur les tables temporaires locales sont toujours mises à jour de façon synchrone, quelle que soit l’option AUTO_UPDATE_STATISTICS_ASYNC. Les statistiques sur les tables temporaires globales sont mises à jour de façon synchrone ou asynchrone en fonction de l’option AUTO_UPDATE_STATISTICS_ASYNC définie pour la base de données utilisateur.
 
 La mise à jour asynchrone des statistiques est effectuée par une requête en arrière-plan. Lorsque la requête est prête à écrire des statistiques mises à jour dans la base de données, elle tente d’acquérir un verrou de modification de schéma sur l’objet de métadonnées des statistiques. Si une autre session détient déjà un verrou sur le même objet, la mise à jour asynchrone des statistiques est bloquée jusqu’à ce que le verrou de modification de schéma puisse être acquis. De même, les sessions qui doivent acquérir un verrou de stabilité de schéma sur l’objet de métadonnées des statistiques pour compiler une requête peuvent être bloquées par la session d’arrière-plan de mise à jour asynchrone des statistiques, qui détient déjà ou attend l’acquisition du verrou de modification de schéma. Par conséquent, pour les charges de travail avec des compilations de requêtes très fréquentes et des mises à jour fréquentes de statistiques, l’utilisation de statistiques asynchrones peut augmenter la probabilité de problèmes d’accès concurrentiel dus à un blocage des verrous.
 

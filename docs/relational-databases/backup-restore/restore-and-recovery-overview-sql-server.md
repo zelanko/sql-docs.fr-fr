@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database restores [SQL Server], scenarios
 - accelerated database recovery
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810701"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125553"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Vue d'ensemble de la restauration et de la récupération (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "91810701"
 |scénario de restauration|En mode de récupération simple|En modes de restauration complète et de récupération utilisant les journaux de transactions|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |restauration de base de données complète|Il s'agit de la stratégie de restauration de base. Une restauration complète de base de données peut impliquer simplement la restauration et la récupération d'une sauvegarde complète de base de données. Une restauration complète de base de données peut également impliquer la restauration d'une sauvegarde complète de base de données suivie de la restauration et de la récupération d'une sauvegarde différentielle.<br /><br /> Pour plus d’informations, consultez [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md).|Il s'agit de la stratégie de restauration de base. Une restauration complète de base de données inclut la restauration d'une sauvegarde complète, et éventuellement d'une sauvegarde différentielle (le cas échéant), suivie par la restauration de toutes les sauvegardes de journal consécutives (en séquence). La restauration de base de données complète s'achève par la récupération de la dernière sauvegarde de journal ainsi que sa restauration (RESTORE WITH RECOVERY).<br /><br /> Pour plus d’informations, consultez [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|  
-|File restore **\***|Restaure un ou plusieurs fichiers endommagés en lecture seule, sans restaurer toute la base de données. La restauration de fichiers est uniquement disponible si la base de données comporte au moins un groupe de fichiers en lecture seule.|Restaure un ou plusieurs fichiers, sans restaurer la totalité de la base de données. La restauration de fichiers peut être effectuée lorsque la base de données est hors connexion ou, pour certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], alors que la base de données reste en ligne. Pendant une restauration de fichiers, les groupes de fichiers contenant les fichiers à restaurer restent toujours hors connexion.|  
+|Restauration de fichiers * *\** _|Restaure un ou plusieurs fichiers endommagés en lecture seule, sans restaurer toute la base de données. La restauration de fichiers est uniquement disponible si la base de données comporte au moins un groupe de fichiers en lecture seule.|Restaure un ou plusieurs fichiers, sans restaurer la totalité de la base de données. La restauration de fichiers peut être effectuée lorsque la base de données est hors connexion ou, pour certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], alors que la base de données reste en ligne. Pendant une restauration de fichiers, les groupes de fichiers contenant les fichiers à restaurer restent toujours hors connexion.|  
 |Restauration de pages|Non applicable|Restaure une ou plusieurs pages endommagées. La restauration de pages peut être effectuée lorsque la base de données est hors connexion ou, pour certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], alors que la base de données reste en ligne. Pendant une restauration de pages, les pages en cours de restauration restent toujours hors connexion.<br /><br /> Une chaîne ininterrompue de sauvegardes de journaux doit être disponible, jusqu'au fichier journal actuel, et elles doivent toutes être appliquées pour mettre la page à jour par rapport au fichier journal actuel.<br /><br /> Pour plus d’informations, consultez [Restaurer des pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).|  
-|Restauration fragmentaire **\***|Restaure et récupère la base de données par phases au niveau du groupe de fichiers, en commençant par les groupes de fichiers primaires et tous les groupes de fichiers secondaires en lecture-écriture.|Restaure et récupère la base de données par étapes au niveau du groupe de fichiers, en commençant par le groupe de fichiers primaire.<br /><br /> Pour plus d’informations, consultez [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)|  
+|Restauration fragmentaire _*\**_|Restaure et récupère la base de données par phases au niveau du groupe de fichiers, en commençant par les groupes de fichiers primaires et tous les groupes de fichiers secondaires en lecture-écriture.|Restaure et récupère la base de données par étapes au niveau du groupe de fichiers, en commençant par le groupe de fichiers primaire.<br /><br /> Pour plus d’informations, consultez [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)|  
   
- **\*** La restauration en ligne est prise en charge uniquement dans l'édition Enterprise.  
+ _*\**_ La restauration en ligne est prise en charge uniquement dans l’édition Enterprise.  
 
 ### <a name="steps-to-restore-a-database"></a>Étapes de restauration d’une base de données
 Pour effectuer une restauration de fichiers, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] exécute deux étapes : 
@@ -87,7 +87,7 @@ Pour effectuer une restauration de base de données, [!INCLUDE[ssde_md](../../in
 -   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la restauration des pages ou des fichiers peut permettre à d'autres données de la base de données de rester en ligne pendant l'opération de restauration.  
 
 ## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> Récupération et journal des transactions
-Pour la plupart des scénarios de restauration, il est nécessaire d’appliquer une sauvegarde du journal des transactions et de permettre à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d’exécuter le **processus de récupération** pour que la base de données soit mise en ligne. La récupération est le processus que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise pour chaque base de données pour démarrer dans un état cohérent (ou propre) en termes de transaction.
+Pour la plupart des scénarios de restauration, il est nécessaire d’appliquer une sauvegarde du journal des transactions et de permettre à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d’exécuter le _ *processus de récupération** pour que la base de données soit mise en ligne. La récupération est le processus que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise pour chaque base de données pour démarrer dans un état cohérent (ou propre) en termes de transaction.
 
 En cas de défaillance ou autre arrêt non sain, il peut arriver que certaines modifications effectuées dans les bases de données n’aient jamais pu être écrites de la mémoire tampon vers les fichiers de données ou proviennent de transactions incomplètes dans les fichiers de données. Lorsqu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarrée, elle exécute une récupération de chaque base de données, ce qui comporte trois phases, en fonction du dernier [point de contrôle de base de données](../../relational-databases/logs/database-checkpoints-sql-server.md) :
 
@@ -113,13 +113,13 @@ Les informations sur la progression de chaque phase de la récupération de la b
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Récupération de données|Récupération complète (si le journal est disponible).|Risque de perte de données.|Les données postérieures à la dernière sauvegarde différentielle ou complète sont perdues.|  
 |Restauration dans le temps|Toute heure couverte par les sauvegardes de fichiers journaux.|Non autorisé si la sauvegarde de fichier journal contient des modifications journalisées en bloc.|Non pris en charge.|  
-|File restore **\***|Prise en charge complète.|Parfois. **\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
-|Page restore **\***|Prise en charge complète.|Parfois. **\*\***|Aucun.|  
-|Restauration fragmentaire (niveau groupe de fichiers) **\***|Prise en charge complète.|Parfois. **\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
+|Restauration de fichiers * *\** _|Prise en charge complète.|Parfois._ *\*\** *|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
+|Restauration de pages * *\** _|Prise en charge complète.|Parfois._ *\*\** *|Aucun.|  
+|Restauration fragmentaire (niveau groupe de fichiers) * *\** _|Prise en charge complète.|Parfois._ *\*\** *|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
   
- **\*** Disponible uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ * *\** _ Disponible uniquement dans l’édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- **\*\*** Pour les conditions requises, consultez [Restrictions de restauration en mode de récupération simple](#RMsimpleScenarios), plus loin dans cette rubrique.  
+ _ *\*\** * Pour les conditions requises, consultez [Restrictions de restauration en mode de récupération simple](#RMsimpleScenarios), plus loin dans cette rubrique.  
   
 > [!IMPORTANT]  
 > Quel que soit le mode de récupération d'une base de données, une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être restaurée vers une version de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] antérieure à la version qui a créé la sauvegarde.  

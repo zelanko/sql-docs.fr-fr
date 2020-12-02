@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d1487a5c7a6c9343438c1a3f6d42fd49e425000b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4212c397c712351e951060032f6e7a2ece6a5c3f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809175"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129035"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL
 
@@ -70,11 +70,11 @@ ms.locfileid: "91809175"
     , SECRET = '<storage access key>' ;  
     ```  
   
--   Les informations d'identification existent, mais le compte de connexion utilisé pour exécuter la commande de sauvegarde ne dispose pas des autorisations appropriées pour accéder aux informations d'identification. Utilisez un compte de connexion dans le rôle **db_backupoperator** avec des autorisations ***Modifier des informations d’identification*** .  
+-   Les informations d'identification existent, mais le compte de connexion utilisé pour exécuter la commande de sauvegarde ne dispose pas des autorisations appropriées pour accéder aux informations d'identification. Utilisez un compte de connexion dans le rôle **db_backupoperator** avec des autorisations **_Modifier des informations d’identification_* _.  
   
 -   Vérifiez le nom du compte de stockage et la valeur des clés. Les informations stockées dans les informations d’identification doivent correspondre aux valeurs de propriétés du compte de stockage Azure utilisé lors des opérations de sauvegarde et de restauration.  
   
- **Erreurs/Échecs de sauvegarde :**  
+ _ *Erreurs/Échecs de sauvegarde :* *  
   
 -   Les sauvegardes parallèles dans un même objet blob provoquent l'échec d'une des sauvegardes avec l'erreur **Échec de l’initialisation** .  
   

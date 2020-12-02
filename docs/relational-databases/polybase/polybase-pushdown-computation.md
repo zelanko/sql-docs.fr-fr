@@ -2,7 +2,7 @@
 description: Calculs pushdown dans PolyBase
 title: Calculs pushdown dans PolyBase | Microsoft Docs
 dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
-ms.date: 04/23/2019
+ms.date: 11/17/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,26 +10,29 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0b028d0476b55d17a7eca9a8cace18d9ca206bc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59ff1e7807a8bdd8427e3b902bf53c111d52c7b7
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482504"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96127840"
 ---
 # <a name="pushdown-computations-in-polybase"></a>Calculs pushdown dans PolyBase
 
-## <a name="dmv"></a>Vue de gestion dynamique
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+Le calcul pushdown améliore les performances des requêtes sur les sources de données externes. À compter de SQL Server 2016, les calculs pushdown étaient disponibles pour les sources de données externes Hadoop. SQL Server 2019 introduit des calculs pushdown pour d’autres types de sources de données externes.
 
-Le calcul pushdown améliore les performances des requêtes sur votre cluster Hadoop.
+## <a name="enable-pushdown-computation"></a>Activer le calcul pushdown
 
-## <a name="enable-pushdown"></a>Activer le calcul pushdown
+Les articles suivants contiennent des informations sur la configuration du calcul pushdown pour des types spécifiques de sources de données externes :
 
-Les étapes d’activation du calcul pushdown sont décrites dans l’article suivant :
-
-[Activer le calcul pushdown dans Hadoop](polybase-configure-hadoop.md#pushdown)
+- [Activer le calcul pushdown dans Hadoop](polybase-configure-hadoop.md#pushdown)
+- [Configurer PolyBase pour accéder à des données externes dans Oracle](polybase-configure-oracle.md)
+- [Configurer PolyBase pour accéder à des données externes dans Teradata](polybase-configure-teradata.md)
+- [Configurer PolyBase pour accéder à des données externes dans MongoDB](polybase-configure-mongodb.md)
+- [Configurer PolyBase pour accéder à des données externes avec des types génériques ODBC](polybase-configure-odbc-generic.md)
+- [Configurer PolyBase pour accéder à des données externes dans SQL Server](polybase-configure-sql-server.md)
 
 ## <a name="select-a-subset-of-rows"></a>Sélectionner un sous-ensemble de lignes
 
@@ -46,35 +49,38 @@ SELECT * FROM SensorData WHERE Speed > 65;
 
 Utilisez une poussée vers le bas de prédicat pour améliorer les performances d’une requête qui sélectionne un sous-ensemble de colonnes d’une table externe.
 
-Dans cette requête, SQL Server lance une tâche Map/Reduce pour prétraiter le fichier texte délimité Hadoop afin que seules les données pour les deux colonnes, customer.name et customer.zip_code, soient copiées dans SQL Server PDW.
+Dans cette requête, SQL Server lance une tâche Map/Reduce pour prétraiter le fichier texte délimité Hadoop afin que seules les données pour les deux colonnes, customer.name et customer.zip_code, soient copiées dans SQL Server.
 
 ```sql
-SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_balance < 200000
+SELECT customer.name, customer.zip_code
+FROM customer
+WHERE customer.account_balance < 200000
 ```
 
 ### <a name="pushdown-for-basic-expressions-and-operators"></a>Poussée vers le bas pour les opérateurs et expressions de base
 
 SQL Server autorise les opérateurs et expressions de base suivants pour une poussée vers le bas de prédicat.
 
-+ Opérateurs de comparaison binaire (\<, >, =, !=, <>, >=, <=) pour les valeurs numériques, d’heure et de date.
+- Opérateurs de comparaison binaire (`<`, `>`, `=`, `!=`, `<>`, `>=`, `<=`) pour les valeurs numériques, d’heure et de date.
+- Opérateurs arithmétiques (`+`, `-`, `*`, `/`, `%`).
+- Opérateurs logiques (`AND`, `OR`).
+- Opérateurs unaires (`NOT`, `IS NULL`, `IS NOT NULL`).
 
-+ Opérateurs arithmétiques (+, -, *, /, %).
+Les opérateurs `BETWEEN`, `NOT`, `IN` et `LIKE` peuvent être refoulés. Le comportement réel dépend de la façon dont l’optimiseur de requête réécrit les expressions des opérateurs sous la forme d’une série d’instructions qui utilisent des opérateurs relationnels de base.
 
-+ Opérateurs logiques (AND, OR).
+La requête de cet exemple comporte plusieurs prédicats pouvant être refoulés vers Hadoop. SQL Server peut placer des travaux MapReduce dans Hadoop pour exécuter le prédicat `customer.account_balance <= 200000`. L’expression `BETWEEN 92656 AND 92677` est également constituée d’opérations binaires et logiques qui peuvent être empilées vers Hadoop. Le **AND** logique dans `customer.account_balance AND customer.zipcode` est une expression finale.
 
-+ Opérateurs unaires (NOT, IS NULL, IS NOT NULL).
-
-Les opérateurs BETWEEN, NOT, IN et LIKE peuvent être poussés vers le bas. Le comportement réel dépend de la façon dont l’optimiseur de requête réécrit les expressions des opérateurs sous la forme d’une série d’instructions qui utilisent des opérateurs relationnels de base.
-
-La requête de cet exemple comporte plusieurs prédicats pouvant être refoulés vers Hadoop. SQL Server peut placer des travaux MapReduce dans Hadoop pour exécuter le prédicat `customer.account_balance <= 200000`. L’expression `BETWEEN 92656 and 92677` est également constituée d’opérations binaires et logiques qui peuvent être empilées vers Hadoop. Le **AND** logique dans `customer.account_balance and customer.zipcode` est une expression finale.
-
-Étant donnée cette combinaison de prédicats, les travaux MapReduce peuvent exécuter l’ensemble de la clause WHERE. Seules les données qui répondent aux critères SELECT seront recopiées dans SQL Server PDW.
+Étant donnée cette combinaison de prédicats, les travaux MapReduce peuvent exécuter l’ensemble de la clause WHERE. Seules les données qui répondent aux critères `SELECT` seront recopiées dans SQL Server.
 
 ```sql
-SELECT * FROM customer WHERE customer.account_balance <= 200000 AND customer.zipcode BETWEEN 92656 AND 92677
+SELECT * FROM customer 
+WHERE customer.account_balance <= 200000 
+    AND customer.zipcode BETWEEN 92656 AND 92677
 ```
 
-## <a name="force-pushdown"></a>Forcer la poussée vers le bas
+## <a name="examples"></a>Exemples
+
+### <a name="force-pushdown"></a>Forcer la poussée vers le bas
 
 ```sql
 SELECT * FROM [dbo].[SensorData]
@@ -82,7 +88,7 @@ WHERE Speed > 65
 OPTION (FORCE EXTERNALPUSHDOWN);
 ```
 
-## <a name="disable-pushdown"></a>Désactiver la poussée vers le bas
+### <a name="disable-pushdown"></a>Désactiver la poussée vers le bas
 
 ```sql
 SELECT * FROM [dbo].[SensorData]

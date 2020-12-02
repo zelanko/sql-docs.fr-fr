@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 00cfd711ce130fa9c90c11000a6853082494e9bd
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300302"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124296"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,11 +45,11 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Spécifie le nom des informations d’identification délimitées à la base de données à modifier.  
   
- IDENTITY **=' ***identity_name*** '**  
+ IDENTITY **='** _identity_name_*_'_*  
  Spécifie le nom du compte à utiliser lors d'une connexion en dehors du serveur. Pour importer un fichier à partir du stockage Blob Azure, il faut que le nom de l’identité soit `SHARED ACCESS SIGNATURE`.  Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
- SECRET **=' ***secret*** '**  
+ SECRET **='** _secret_*_'_*  
  Spécifie le secret requis pour l'authentification sortante. *secret* est obligatoire pour importer un fichier à partir du stockage Blob Azure. *secret* peut être facultatif à d’autres fins.   
 > [!WARNING]
 >  La valeur de clé SAP peut commencer par un point d’interrogation (« ? »). Quand vous utilisez la clé SAP, vous devez supprimer le caractère « ? » initial. Sinon, vos efforts risquent d’être vains.    

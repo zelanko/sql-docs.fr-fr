@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3dcf1473fc92ba69d68f9aae9d871540e2604b52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 106773df7a5e9f88c123b614688ca19722613d7f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737830"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130534"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : interopérabilité et coexistence (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "85737830"
   
  Si un problème se produit lors du démarrage de la base de données, la récupération échoue et la base de données est affectée de l'attribut SUSPECT. Si le problème peut être isolé dans un ou des fichiers, l'administrateur de la base de données peut placer les fichiers hors connexion et tenter de la redémarrer. Pour placer un fichier hors connexion, vous pouvez utiliser l'instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) suivante :  
   
- ALTER DATABASE *nom_base_de_données* MODIFY FILE (NAME **='***nom_fichier***'** , OFFLINE)  
+ ALTER DATABASE *nom_base_de_données* MODIFY FILE (NAME **='** _nom_fichier_*_'_*, OFFLINE)  
   
  Si le démarrage aboutit, les groupes de fichiers qui contiennent un fichier hors connexion demeurent hors connexion.  
   

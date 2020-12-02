@@ -23,11 +23,11 @@ ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: a314867515ecbde34702761e7c9ee8904523d0a3
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688371"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128096"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,16 +67,16 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Format|Description|  
 |------------|-----------------|  
-|String|*language_term* correspond à la valeur de colonne **alias** dans la vue de compatibilité [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La chaîne doit être placée entre guillemets simples, comme dans **'***language_term***'** .|  
+|String|*language_term* correspond à la valeur de colonne **alias** dans la vue de compatibilité [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La chaîne doit être placée entre guillemets simples, comme dans **'** _language_term_*_'_*.|  
 |Integer|*language_term* est l’identificateur LCID de la langue.|  
 |Valeur hexadécimale|*language_term* est 0x suivi de la valeur hexadécimale de l’identificateur LCID. La valeur hexadécimale ne doit pas dépasser huit caractères, y compris les zéros non significatifs. Si la valeur est au format de jeu de caractères codés sur deux octets (DBCS), SQL Server la convertit au format Unicode.|  
   
- ADD **'***stopword***'** LANGUAGE *language_term*  
+ ADD **'** _stopword_*_'_* LANGUAGE *language_term*  
  Ajoute un mot vide à la liste de mots vides pour la langue spécifiée par LANGUAGE *language_term*.  
   
  Si la combinaison spécifiée du mot clé et de la valeur LCID de la langue n'est pas unique dans la liste de mots vides, une erreur est retournée.  Si la valeur LCID ne correspond pas à une langue répertoriée, une erreur est générée.  
   
- DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
+ DROP { **'** _stopword_*_'_* LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  Supprime un mot vide de la liste de mots vides.  
   
  **'** *stopword* **'** LANGUAGE *language_term*  

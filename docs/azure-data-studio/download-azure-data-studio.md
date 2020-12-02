@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 11/12/2020
-ms.openlocfilehash: 23e7ee0063ad8e5a3e8dd8653cfd5aab8a1753bc
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: 64cd6b3a60e07344dbe33287b23b2c3c77eaaa79
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570936"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442678"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Télécharger et installer Azure Data Studio
 
@@ -242,7 +242,7 @@ Pour commencer, consultez l’un des guides de démarrage rapide suivants :
 - [Notes de publication d’Azure Data Studio](release-notes-azure-data-studio.md)
 - [Connexion & interrogation de SQL Server](quickstart-sql-server.md)
 - [Connexion & interrogation d’Azure SQL Database](quickstart-sql-database.md)
-- [Se connecter à et interroger Azure Data Warehouse](quickstart-sql-dw.md)
+- [Connexion et interrogation d’Azure Synapse Analytics](quickstart-sql-dw.md)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

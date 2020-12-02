@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457251"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126611"
 ---
 # <a name="execution-plans"></a>Plans d’exécution
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ Un plan d'exécution de requête permet de définir :
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose trois options pour afficher les plans d’exécution :        
-> -  Le ***[Plan d’exécution estimé](../../relational-databases/performance/display-the-estimated-execution-plan.md)***, à savoir le plan compilé, produit par l’optimiseur de requête en fonction des estimations. Il s’agit du plan de requête qui est stocké dans le cache du plan.        
-> -  Le ***[Plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md)***, est le plan compilé avec son [contexte d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Il est disponible **une fois l’exécution de la requête terminée**. c’est-à-dire les informations sur l’exécution réelle, comme les avertissements d’exécution ou, dans les versions récentes du [!INCLUDE[ssde_md](../../includes/ssde_md.md)], le temps écoulé et le temps processeur utilisés pendant l’exécution.         
-> -  Les ***[Statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.md)*** sont identiques au plan compilé auquel s’ajoute son contexte d’exécution. Ce plan est disponible pour les **exécutions de requêtes à la volée** et est mis à jour toutes les secondes. Cela comprend des informations d’exécution telles que le nombre réel de lignes qui transitent par les [opérateurs](../../relational-databases/showplan-logical-and-physical-operators-reference.md), le temps écoulé et l’estimation de la progression des requêtes.
+> -  Le **_[Plan d’exécution estimé](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _, à savoir le plan compilé, produit par l’optimiseur de requête en fonction des estimations. Il s’agit du plan de requête qui est stocké dans le cache du plan.        
+> -  Le _*_ [Plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ , est le plan compilé avec son [contexte d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Il est disponible _*une fois l’exécution de la requête terminée**. c’est-à-dire les informations sur l’exécution réelle, comme les avertissements d’exécution ou, dans les versions récentes du [!INCLUDE[ssde_md](../../includes/ssde_md.md)], le temps écoulé et le temps processeur utilisés pendant l’exécution.         
+> -  Les **_[Statistiques des requêtes actives](../../relational-databases/performance/live-query-statistics.md)_ *_ sont identiques au plan compilé auquel s’ajoute son contexte d’exécution. Ce plan est disponible pour les _* exécutions de requêtes à la volée** et est mis à jour toutes les secondes. Cela comprend des informations d’exécution telles que le nombre réel de lignes qui transitent par les [opérateurs](../../relational-databases/showplan-logical-and-physical-operators-reference.md), le temps écoulé et l’estimation de la progression des requêtes.
 
 > [!TIP]
 > Pour plus d’informations sur les plans de traitement et d’exécution des requêtes, consultez les sections [Optimisation des instructions SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) et [Mise en cache et réutilisation des plans d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) du Guide de l’architecture de traitement des requêtes.

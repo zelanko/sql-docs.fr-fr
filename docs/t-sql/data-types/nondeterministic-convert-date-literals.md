@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88445867"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversion non déterministe de chaînes de date littérale en valeurs DATE
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-***/
+**_/
 ```
 
 
@@ -69,7 +69,7 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-Le format **dmy** (jma) précédent indique qu’un exemple de chaîne de date « 01-03-2018 » serait interprétée comme signifiant _le premier jour du mois de mars de l’année 2018_.
+Le format _ *dmy** (jma) précédent indique qu’un exemple de chaîne de date « 01-03-2018 » serait interprétée comme signifiant _le premier jour du mois de mars de l’année 2018_.
 
 Si au lieu de cela, le format **mdy** a été spécifié, la même chaîne « 01-03-2018 » signifierait _le troisième jour du mois de janvier 2018_.
 
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-***/
+**_/
 ```
 
-Dans l’exemple de code précédent, le dernier exemple montre une non-correspondance entre le format **ymd** (amj) et la chaîne d’entrée. Le troisième nœud de la chaîne d’entrée représente une valeur numérique qui est trop grande pour être un jour. Microsoft ne garantit pas la valeur de la sortie dans le cas de ces non-correspondances.
+Dans l’exemple de code précédent, le dernier exemple montre une non-correspondance entre le format _ *ymd** (amj) et la chaîne d’entrée. Le troisième nœud de la chaîne d’entrée représente une valeur numérique qui est trop grande pour être un jour. Microsoft ne garantit pas la valeur de la sortie dans le cas de ces non-correspondances.
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT offre des codes explicites pour le contrôle _déterministe_ des formats de date
 

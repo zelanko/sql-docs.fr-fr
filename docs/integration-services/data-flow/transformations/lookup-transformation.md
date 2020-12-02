@@ -25,10 +25,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193213"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
@@ -91,9 +91,9 @@ ms.locfileid: "92193213"
   
  La persistance du cache dans un fichier présente les autres avantages suivants :  
   
--   ***Partagez le fichier cache entre plusieurs packages. Pour plus d’informations, consultez***  [Implémenter une transformation de recherche en mode Cache complet à l’aide de la transformation du gestionnaire de connexions du cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
+-   ***Partagez le fichier cache entre plusieurs packages. Pour plus d’informations, consultez** _  [Implémenter une transformation de recherche en mode Cache complet à l’aide de la transformation du gestionnaire de connexions du cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  _*_ . _*_  
   
--   Déployez le fichier cache avec un package. ***Vous pouvez alors utiliser les données sur plusieurs ordinateurs.*** Pour plus d’informations, consultez [Créer et déployer un cache pour la transformation de recherche](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   Déployez le fichier cache avec un package. _*_Vous pouvez alors utiliser les données sur plusieurs ordinateurs._*_ Pour plus d’informations, consultez [Créer et déployer un cache pour la transformation de recherche](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Utilisez la source de fichier brut pour lire les données du fichier cache. Vous pouvez alors utiliser d'autres composants de flux de données pour transformer ou déplacer les données. Pour plus d’informations, consultez [Source de fichier brut](../../../integration-services/data-flow/raw-file-source.md).  
   
@@ -146,7 +146,7 @@ ms.locfileid: "92193213"
      Pour plus d’informations sur l’installation d’exemples de produits et de bases de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , consultez [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527)(Exemples de produits SQL Server Integration Services).  
   
 ## <a name="lookup-transformation-editor-general-page"></a>Éditeur de transformation de recherche (page Général)
-  Utilisez la page **Général** de la boîte de dialogue Éditeur de transformation de recherche pour sélectionner le mode de cache ainsi que le type de connexion et pour spécifier comment gérer les lignes sans entrées correspondantes.  
+  Utilisez la page _ *Général** de la boîte de dialogue Éditeur de transformation de recherche pour sélectionner le mode de cache ainsi que le type de connexion et pour spécifier comment gérer les lignes sans entrées correspondantes.  
   
 ### <a name="options"></a>Options  
  **Cache complet**  
@@ -186,7 +186,7 @@ ms.locfileid: "92193213"
  **Nouveau**  
  Créez une connexion à l’aide de la boîte de dialogue **Éditeur du gestionnaire de connexions du cache** .  
   
- Les options suivantes sont disponibles quand vous sélectionnez **Cache complet**, **Cache partiel**ou **Aucun cache**et **Gestionnaire de connexions OLE DB**dans la page Général de la boîte de dialogue **Éditeur de transformation de recherche** .  
+ Les options suivantes sont disponibles quand vous sélectionnez **Cache complet**, **Cache partiel** ou **Aucun cache** et **Gestionnaire de connexions OLE DB** dans la page Général de la boîte de dialogue **Éditeur de transformation de recherche** .  
   
  **Gestionnaire de connexions OLE DB**  
  Sélectionnez un gestionnaire de connexions OLE DB existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
