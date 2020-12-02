@@ -14,11 +14,11 @@ ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 76c60d4561eacda47648d2cac710e64c2ccc1f4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470336"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127913"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>Créer une condition de gestion basée sur des stratégies.
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16255027d2fa0617066fcff0d2a208e70c96a9f9
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718023"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126903"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "85718023"
   
      La table **suspect_pages** contient une ligne pour chaque page dans laquelle une erreur 824 (avec une limite de 1 000 lignes) s’est produite. Le tableau suivant présente les erreurs consignées dans la colonne **event_type** de la table **suspect_pages** .  
   
-    |Description de l'erreur|Valeur**event_type**|  
+    |Description de l'erreur|Valeur **event_type**|  
     |-----------------------|---------------------------|  
     |Erreur 823 provoquée par une erreur CRC du système d'exploitation ou erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, ID de page incorrect)|1|  
     |Somme de contrôle incorrecte|2|  
@@ -128,7 +128,7 @@ ms.locfileid: "85718023"
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], développez cette instance, puis développez **Bases de données**.  
   
-2.  Développez **Bases de données système**, puis **msdb**, **Tables**et **Tables système**.  
+2.  Développez **Bases de données système**, puis **msdb**, **Tables** et **Tables système**.  
   
 3.  Développez **dbo.suspect_pages** et cliquez avec le bouton droit sur **Modifier les 200 lignes du haut**.  
   

@@ -14,11 +14,11 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 253bd5f8accf3e2fd9fc28dcaa535bea6f736316
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197100"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127164"
 ---
 # <a name="flexible-file-destination"></a>Destination de fichier flexible
 
@@ -64,7 +64,7 @@ Après avoir spécifié les informations de connexion, basculez vers la page **C
 Pour que la **connexion de test** fonctionne (soit le stockage d’objets blob, soit Data Lake Storage Gen2), le principal de service doit disposer au moins du rôle **Lecteur des données Blob du stockage** pour le compte de stockage.
 Cette opération s’effectue à l’aide de [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
-Pour le stockage d’objets blob, l’autorisation d’écriture est accordée en affectant au moins le rôle **Contributeur aux données Blob du stockage **.
+Pour le stockage d’objets blob, l’autorisation d’écriture est accordée en affectant au moins le rôle **Contributeur aux données Blob du stockage**.
 
 Pour Data Lake Storage Gen2, l’autorisation est déterminée à la fois par RBAC et par des [listes des contrôles d’accès (ACL)](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
 Faites attention à ce que les listes de contrôle d’accès soient configurées à l’aide de l’ID d’objet (OID) du principal de service pour l’inscription d’application, comme indiqué [ici](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).

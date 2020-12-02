@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 44d5684243d7a0ebd3a3c1356b642497ec229297
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475958"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126651"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-   La classe d’événements** Data File Auto Grow** indique que le fichier de données a crû automatiquement. Cet événement n'est pas déclenché si le fichier de données a été augmenté de manière explicite par le biais de l'instruction ALTER DATABASE.  
+   La classe d’événements **Data File Auto Grow** indique que le fichier de données a crû automatiquement. Cet événement n'est pas déclenché si le fichier de données a été augmenté de manière explicite par le biais de l'instruction ALTER DATABASE.  
   
  Incluez la classe d’événements **Data File Auto Grow** dans les traces qui surveillent la croissance du fichier de données.  
   

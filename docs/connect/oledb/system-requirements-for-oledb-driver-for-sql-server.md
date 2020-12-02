@@ -16,11 +16,11 @@ helpviewer_keywords:
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861817"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127970"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Configuration requise pour OLE DB Driver pour SQL Server
 
@@ -42,7 +42,7 @@ Pour obtenir la liste des systèmes d’exploitation qui prennent en charge OLE 
 
 ## <a name="azure-active-directory-authentication-requirements"></a>Conditions d’authentification d’Azure Active Directory  
 
-Lorsque vous utilisez des méthodes d’authentification Azure Active Directory avec un pilote OLE DB pour SQL Server dont la version est ***antérieure*** à la version 18.3, vérifiez que la [bibliothèque d’authentification Active Directory pour SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) est installée (dans la version 18.3, la dépendance est comprise dans le package d’installation). ADAL n’est pas requis pour les autres méthodes d’authentification ou les opérations OLE DB. Pour plus d'informations, consultez les pages suivantes : [Utilisation d’Azure Active Directory](features/using-azure-active-directory.md).
+Lorsque vous utilisez des méthodes d’authentification Azure Active Directory avec les versions du pilote OLE DB pour SQL Server * **antérieures à** _18.3, vérifiez que la [Bibliothèque d’authentification Active Directory pour SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) est installée. (dans la version 18.3, la dépendance est comprise dans le package d’installation). ADAL n’est pas requis pour les autres méthodes d’authentification ou les opérations OLE DB. Pour plus d'informations, consultez les pages suivantes : [Utilisation d’Azure Active Directory](features/using-azure-active-directory.md).
 
 ## <a name="sql-server-requirements"></a>impératifs SQL Server  
 
@@ -56,7 +56,7 @@ La version anglaise d’OLE DB Driver pour SQL Server est prise en charge sur to
 
 Pour les mises à niveau :  
 
-* Les versions en anglais d’OLE DB Driver pour SQL Server peuvent être mises à niveau vers n’importe quelle version localisée d’OLE DB Driver pour SQL Server.  
+_Les versions en anglais d’OLE DB Driver pour SQL Server peuvent être mises à niveau vers n’importe quelle version localisée d’OLE DB Driver pour SQL Server.  
 * Les versions localisées d’OLE DB Driver pour SQL Server peuvent être mises à niveau vers n’importe quelle version localisée d’OLE DB Driver pour SQL Server dans la même langue.  
 * Les versions localisées d’OLE DB Driver pour SQL Server peuvent être mises à niveau vers la version en anglais d’OLE DB Driver pour SQL Server.  
 * Les versions localisées d’OLE DB Driver pour SQL Server ne peuvent pas être mises à niveau vers des versions localisées d’OLE DB Driver pour SQL Server dans une autre langue.  

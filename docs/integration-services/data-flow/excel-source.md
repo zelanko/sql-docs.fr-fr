@@ -20,11 +20,11 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e00a786dfb9d9ffe55274822b276a2d2497efd82
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192753"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127180"
 ---
 # <a name="excel-source"></a>Source Excel
 
@@ -100,7 +100,7 @@ ms.locfileid: "92192753"
   
 #### <a name="data-access-mode--sql-command"></a>Mode d'accès aux données = Commande SQL  
  **Texte de la commande SQL**  
- Entrez le texte d’une requête SQL, créez la requête en cliquant sur **Générer une requête**ou parcourez l’arborescence jusqu’au fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
+ Entrez le texte d’une requête SQL, créez la requête en cliquant sur **Générer une requête** ou parcourez l’arborescence jusqu’au fichier qui contient le texte de la requête en cliquant sur **Parcourir**.  
   
  **Paramètres**  
  Si vous avez entré une requête paramétrable en spécifiant ? comme espace réservé de paramètre dans le texte de la requête, utilisez la boîte de dialogue **Définition des paramètres de la requête** pour mapper des paramètres d’entrée de la requête à des variables du package.  

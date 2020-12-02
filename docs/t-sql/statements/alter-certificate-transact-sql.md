@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
 ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067471"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128145"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -89,20 +89,20 @@ ALTER CERTIFICATE certificate_name
   
  WITH PRIVATE KEY Spécifie que la clé privée du certificat est chargée dans SQL Server.
 
- FILE =' *path_to_private_key* '  
+ FILE ='*path_to_private_key*'  
  Spécifie le chemin d'accès complet, y compris le nom du fichier, à la clé privée. Ce paramètre peut être un chemin d'accès local ou un chemin d'accès UNC à un emplacement réseau. L'accès au fichier a lieu dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque vous utilisez cette option, vous devez vérifier que le compte de service a accès au fichier spécifié.
  
  Si seul le nom de fichier est spécifié, le fichier est enregistré dans le dossier de données utilisateur par défaut de l’instance. Ce dossier peut (ou pas) être le dossier DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour la base de données locale SQL Server Express, le dossier de données utilisateur par défaut de l’instance correspond au chemin d’accès spécifié par la variable d’environnement `%USERPROFILE%` pour le compte qui a créé l’instance.  
   
- BINARY =' *private_key_bits* '  
- **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
+ BINARY ='*private_key_bits*'  
+ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
  Bits de clé privée spécifiés comme constante binaire. Ces bits peuvent être sous forme chiffrée. Si chiffrés, l'utilisateur doit fournir un mot de passe de déchiffrement. Les contrôles de stratégie de mot de passe ne sont pas exécutés sur ce mot de passe. Les bits de clé privée doivent être dans un format de fichier PVK.  
   
- DECRYPTION BY PASSWORD =' *current_password* '  
+ DECRYPTION BY PASSWORD ='*current_password*'  
  Spécifie le mot de passe exigé pour déchiffrer la clé privée.  
   
- ENCRYPTION BY PASSWORD =' *new_password* '  
+ ENCRYPTION BY PASSWORD ='*new_password*'  
  Spécifie le mot de passe utilisé pour chiffrer la clé privée du certificat dans la base de données. *new_password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  

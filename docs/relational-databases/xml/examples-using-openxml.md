@@ -28,11 +28,11 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729973"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126317"
 ---
 # <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Spécification de ColPattern pour effectuer un mappage entre les colonnes d'un ensemble de lignes et les attributs/éléments XML  
  Cet exemple montre comment le modèle XPath est défini dans le paramètre facultatif *ColPattern* pour fournir un mappage entre les colonnes d’un ensemble de lignes et les attributs/éléments XML.  
   
- Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait des informations sur les clients et les commandes sous la forme d’un ensemble de lignes (**CustomerID**, **OrderDate**, **ProdID**et **Qty**) à partir du document XML.  
+ Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait des informations sur les clients et les commandes sous la forme d’un ensemble de lignes (**CustomerID**, **OrderDate**, **ProdID** et **Qty**) à partir du document XML.  
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
@@ -345,7 +345,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Spécification de TableName dans la clause WITH  
  Dans cet exemple, *TableName* est spécifié dans la clause WITH au lieu de *SchemaDeclaration*. Cela est utile si vous disposez d’une table dont la structure vous convient et qu’aucun modèle de colonne (paramètre *ColPattern* ) n’est requis.  
   
- Dans cet exemple, le document XML est constitué des éléments <`Customer`> et <`Order`>. L’instruction OPENXML extrait les informations sur les commandes dans un ensemble de lignes à trois colonnes (**oid**, **date**et **amount**) à partir du document XML.  
+ Dans cet exemple, le document XML est constitué des éléments <`Customer`> et <`Order`>. L’instruction OPENXML extrait les informations sur les commandes dans un ensemble de lignes à trois colonnes (**oid**, **date** et **amount**) à partir du document XML.  
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
@@ -464,7 +464,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Spécification du paramètre rowpattern, terminé par un attribut  
- Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait les informations sur le détail des commandes dans un ensemble de lignes à trois colonnes (**ProductID**, **Quantity**et **OrderID**) à partir du document XML.  
+ Dans cet exemple, le document XML est constitué des éléments <`Customer`>, <`Order`> et <`OrderDetail`>. L’instruction OPENXML extrait les informations sur le détail des commandes dans un ensemble de lignes à trois colonnes (**ProductID**, **Quantity** et **OrderID**) à partir du document XML.  
   
  Tout d’abord, la procédure stockée **sp_xml_preparedocument** est appelée pour obtenir un descripteur de document. Ce descripteur est transmis à OPENXML.  
   
@@ -612,11 +612,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     Attributs **id** (ID étudiant), **name**et **attends** . L’attribut **attends** est un attribut à plusieurs valeurs.  
+     Attributs **id** (ID étudiant), **name** et **attends** . L’attribut **attends** est un attribut à plusieurs valeurs.  
   
 -   \<Class>  
   
-     Attributs **id** (ID cours), **name**et **attendedBy** . L’attribut **attendedBy** est un attribut à plusieurs valeurs.  
+     Attributs **id** (ID cours), **name** et **attendedBy** . L’attribut **attendedBy** est un attribut à plusieurs valeurs.  
   
  L’attribut **attends** de \<Student> et l’attribut **attendedBy** de \<Class> représentent une relation **m:n** entre les tables Student et Class. Un étudiant peut faire partie de plusieurs cours et un cours peut avoir plusieurs étudiants.  
   

@@ -15,11 +15,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ddc0df0e6949ed429d415940fe9fda4263d3190a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006348"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127708"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Créer, construire et interroger des instances geometry
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -206,7 +206,7 @@ ms.locfileid: "92006348"
   
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimension  
- Une instance **geometry** non vide peut avoir 0, 1 ou 2 dimensions. Les instances **geometry**à zéro dimension, telles que **Point** et **MultiPoint**, n’ont aucune longueur ou surface. Les objets unidimensionnels, tels que **LineString, CircularString, CompoundCurve**et **MultiLineString**ont une longueur. Les instances à deux dimensions, telles que **Polygon**, **CurvePolygon**et **MultiPolygon**, ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une instance **GeometryCollection** indique une surface en fonction des types de son contenu.  
+ Une instance **geometry** non vide peut avoir 0, 1 ou 2 dimensions. Les instances **geometry** à zéro dimension, telles que **Point** et **MultiPoint**, n’ont aucune longueur ou surface. Les objets unidimensionnels, tels que **LineString, CircularString, CompoundCurve** et **MultiLineString** ont une longueur. Les instances à deux dimensions, telles que **Polygon**, **CurvePolygon** et **MultiPolygon**, ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une instance **GeometryCollection** indique une surface en fonction des types de son contenu.  
   
  **Pour retourner la dimension d'une instance**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -219,7 +219,7 @@ ms.locfileid: "92006348"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Vide  
- Une instance **geometry**_vide_ n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon**, **CurvePolygon**et **MultiPolygon** vides est 0.  
+ Une instance **geometry**_vide_ n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve** et **MultiLineString** vides est nulle. La surface des instances **Polygon**, **CurvePolygon** et **MultiPolygon** vides est 0.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -244,9 +244,9 @@ ms.locfileid: "92006348"
   
  Une limite (*Boudary* à est définie par l’OGC comme suit :  
   
--   Les instances**Point** et **MultiPoint** n'ont pas de limite.  
+-   Les instances **Point** et **MultiPoint** n'ont pas de limite.  
   
--   Les limites de**LineString** et **MultiLineString** boundaries are formed by the start points et end points, removing those that occur an even number of times.  
+-   Les limites de **LineString** et **MultiLineString** boundaries are formed by the start points et end points, removing those that occur an even number of times.  
   
 ```sql  
 DECLARE @g geometry;  
@@ -272,7 +272,7 @@ SELECT @g.STBoundary().ToString();
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Fermeture  
- Une instance **geometry**_fermée_ est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
+ Une instance **geometry**_fermée_ est un graphique dont les points de début et de fin sont identiques. Les instances **Polygon** sont considérées comme fermées. Les instances **Point** ne sont pas fermées.  
   
  Un anneau est une instance **LineString** simple et fermée.  
   

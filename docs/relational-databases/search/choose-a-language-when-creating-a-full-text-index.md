@@ -21,11 +21,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475532"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127774"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
 
@@ -72,7 +72,7 @@ ms.locfileid: "88475532"
  Lorsque vous créez un index de recherche en texte intégral, vous devez spécifier un nom de langue valide pour chaque colonne. Si un nom de langue est valide mais n’est pas retourné par l’affichage catalogue [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) , la recherche en texte intégral revient, le cas échéant, au nom de la langue disponible le plus proche de la même famille de langues. Sinon, la recherche en texte intégral revient à l'analyseur lexical neutre. Ce comportement de repli peut affecter l'exactitude de rappel. Par conséquent, nous vous recommandons vivement de spécifier un nom de langue valide et disponible pour chaque colonne lors de la création d'un index de recherche en texte intégral.  
   
 > [!NOTE]  
->  Le LCID est appliqué à tous les types de données pouvant faire l’objet d’une indexation de texte intégral (par exemple **char** ou **nchar**). Si l’ordre de tri d’une colonne de type **char**, **varchar**ou **text** est défini à l’aide d’une langue différente de la langue identifiée par le LCID, ce dernier est néanmoins utilisé durant l’indexation de recherche en texte intégral et l’interrogation de ces colonnes.  
+>  Le LCID est appliqué à tous les types de données pouvant faire l’objet d’une indexation de texte intégral (par exemple **char** ou **nchar**). Si l’ordre de tri d’une colonne de type **char**, **varchar** ou **text** est défini à l’aide d’une langue différente de la langue identifiée par le LCID, ce dernier est néanmoins utilisé durant l’indexation de recherche en texte intégral et l’interrogation de ces colonnes.  
   
   
 ##  <a name="word-breaking"></a><a name="breaking"></a> Analyse lexicale  
@@ -101,7 +101,7 @@ ms.locfileid: "88475532"
   
   
 ##  <a name="stemming"></a><a name="stemming"></a> Recherche de radical  
- La recherche de radical est un autre point à prendre en considération lors du choix de la langue de votre colonne. La*recherche de radical* dans les requêtes de texte intégral se définit comme la recherche de toutes les formes fléchies d’un mot dans une langue particulière. Lorsque vous utilisez un analyseur lexical générique pour traiter plusieurs langues, le processus de recherche de radical fonctionne uniquement pour la langue spécifiée pour la colonne, et non pour d'autres langues dans la colonne. Par exemple, les générateur de formes dérivées allemands ne fonctionnent pas pour l'anglais et l'espagnol (etc.). Cela peut affecter votre rappel, selon la langue que vous choisissez au moment de la requête.  
+ La recherche de radical est un autre point à prendre en considération lors du choix de la langue de votre colonne. La *recherche de radical* dans les requêtes de texte intégral se définit comme la recherche de toutes les formes fléchies d’un mot dans une langue particulière. Lorsque vous utilisez un analyseur lexical générique pour traiter plusieurs langues, le processus de recherche de radical fonctionne uniquement pour la langue spécifiée pour la colonne, et non pour d'autres langues dans la colonne. Par exemple, les générateur de formes dérivées allemands ne fonctionnent pas pour l'anglais et l'espagnol (etc.). Cela peut affecter votre rappel, selon la langue que vous choisissez au moment de la requête.  
   
   
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Effet du type de colonne sur la recherche en texte intégral  

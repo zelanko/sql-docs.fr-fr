@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194701"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127956"
 ---
 # <a name="connect-to-the-teradata-source"></a>Connexion à la source Teradata
 
@@ -49,7 +49,7 @@ Les propriétés personnalisées de la source Teradata sont répertoriées dans 
 |BufferMode|Booléen|La valeur par défaut est *True*. La valeur doit être *True* si la fonctionnalité PutBuffer est utilisée. Cette propriété apparaît dans le volet **Éditeur avancé**.|
 |DataEncryption|Booléen|La valeur par défaut est *False*. Un chiffrement de sécurité complet est utilisé si la valeur est *True*.|
 |DefaultCodePage|Integer|Page de codes à utiliser quand la source de données n’a pas d’informations de page de codes. Cette propriété apparaît dans le volet **Éditeur avancé**.|
-|DetailedTracingLevel|Integer (énumération)|Sélectionnez l’une des options suivantes pour le suivi avancé : <br> *Off* : Aucune journalisation avancée. <br> *Général* : Une journalisation du traçage général des activités spécifiques au pilote est effectuée. <br> *CLI* : Une journalisation du traçage des activités spécifiques à CLIv2 est effectuée. <br> *Méthode de notification* : Une journalisation du traçage des activités spécifiques à la fonctionnalité de notification est effectuée. <br> *Bibliothèque commune * : une journalisation du traçage des activités de la bibliothèque opcommon est effectuée. <br> *Tout* : Tout le traçage des activités précédentes est consigné. <br> Le fichier journal du traçage avancé est défini dans la propriété `DetailedTracingFile`. <br> La propriété `DetailedTracingFile` doit être définie si l'option n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
+|DetailedTracingLevel|Integer (énumération)|Sélectionnez l’une des options suivantes pour le suivi avancé : <br> *Off* : Aucune journalisation avancée. <br> *Général* : Une journalisation du traçage général des activités spécifiques au pilote est effectuée. <br> *CLI* : Une journalisation du traçage des activités spécifiques à CLIv2 est effectuée. <br> *Méthode de notification* : Une journalisation du traçage des activités spécifiques à la fonctionnalité de notification est effectuée. <br> *Bibliothèque commune* : une journalisation du traçage des activités de la bibliothèque opcommon est effectuée. <br> *Tout* : Tout le traçage des activités précédentes est consigné. <br> Le fichier journal du traçage avancé est défini dans la propriété `DetailedTracingFile`. <br> La propriété `DetailedTracingFile` doit être définie si l'option n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
 |DetailedTracingFile|Chaîne|Chemin du fichier journal généré automatiquement lorsque *DetailedTracingLevel* n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
 |DiscardLargeRow|Booléen|La valeur par défaut est *False*. Ignorer les grandes lignes (supérieures à 64 ko) si la valeur est *true*.|
 |ExtendedStringColumnsAllocation|Booléen|*Maximal Transfer Character Allocation Factor* est utilisé si la valeur est *True*. <br> Cette valeur doit être définie sur *True* si la propriété `Export Width Table ID` de la base de données Teradata est définie sur *Maximal Defaults*. <br> La valeur par défaut est *False*.|
@@ -87,7 +87,7 @@ Utilisez le volet **Gestionnaire de connexions** pour sélectionner l'instance d
 
 1. Dans SQL Server Data Tools, ouvrez le package SSIS contenant la source Teradata.
 
-1. Sous l’onglet **Flux de donnée**s, double-cliquez sur la source Teradata.
+1. Sous l’onglet **Flux de donnée** s, double-cliquez sur la source Teradata.
 
 1. Dans l’Éditeur de source Teradata, sélectionnez l’onglet **Gestionnaire de connexions**.
 
@@ -120,7 +120,7 @@ Utilisez le volet **Colonnes** pour mapper une colonne de sortie à chaque colon
 
 1. Dans SQL Server Data Tools, ouvrez le package SSIS contenant la source Teradata.
 
-1. Sous l’onglet **Flux de donnée**s, double-cliquez sur la source Teradata.
+1. Sous l’onglet **Flux de donnée** s, double-cliquez sur la source Teradata.
 
 1. Dans l’Éditeur de source Teradata, sélectionnez l’onglet **Colonnes**.
 
@@ -149,7 +149,7 @@ Utilisez le volet **Sortie d’erreur** pour sélectionner les options de traite
 
 1. Dans SQL Server Data Tools, ouvrez le package SSIS contenant la source Teradata.
 
-1. Sous l’onglet **Flux de donnée**s, double-cliquez sur la source Teradata.
+1. Sous l’onglet **Flux de donnée** s, double-cliquez sur la source Teradata.
 
 1. Dans l’Éditeur de source Teradata, sélectionnez l’onglet **Sortie d’erreur**.
 

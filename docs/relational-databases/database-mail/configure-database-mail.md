@@ -41,11 +41,11 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192590"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126918"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "92192590"
  Chaque fois que vous utilisez l'Assistant, utilisez la page **Sélectionner une tâche de configuration** pour indiquer quelle tâche vous allez réaliser. Si vous changez d'avis avant d'avoir terminé l'Assistant, utilisez le bouton **Précédent** pour retourner à cette page et sélectionner une autre tâche.  
   
 > [!NOTE]  
->  Si la messagerie de base de données n'a pas été activée, vous recevrez le message : **Le composant de messagerie de base de données n'est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui**équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  
+>  Si la messagerie de base de données n'a pas été activée, vous recevrez le message : **Le composant de messagerie de base de données n'est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui** équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  
   
  **Configurer la messagerie de base de données en effectuant les tâches suivantes**  
  Permet d'exécuter toutes les tâches nécessaires pour configurer la messagerie de base de données pour la première fois. Cette option inclut l'ensemble des trois autres options.  
@@ -455,7 +455,7 @@ ms.locfileid: "92192590"
   
 4.  Dans le menu **Requête** , sélectionnez **Spécifier les valeurs des paramètres du modèle**. La fenêtre **Remplacer les paramètres de modèle** s'ouvre.  
   
-5.  Tapez les valeurs des **profile_name**, **account_name**, **SMTP_servername**, **email_address**et **display_name**. SQL Server Management Studio renseigne le modèle avec les valeurs que vous fournissez.  
+5.  Tapez les valeurs des **profile_name**, **account_name**, **SMTP_servername**, **email_address** et **display_name**. SQL Server Management Studio renseigne le modèle avec les valeurs que vous fournissez.  
   
 6.  Exécutez le script pour créer la configuration.  
   

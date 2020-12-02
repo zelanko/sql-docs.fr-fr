@@ -23,11 +23,11 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300233"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126210"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,10 +64,10 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Nom de la fonction d'agrégation que vous voulez créer.  
   
  **@** _param_name_  
- Un ou plusieurs paramètres dans l'agrégat défini par l'utilisateur. L'utilisateur doit fournir la valeur d'un paramètre lors de l'exécution de la fonction d'agrégation. Spécifiez un nom de paramètre en plaçant le signe  **@** comme premier caractère. Le nom du paramètre doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Les paramètres sont locaux à la fonction.  
+ Un ou plusieurs paramètres dans l'agrégat défini par l'utilisateur. L'utilisateur doit fournir la valeur d'un paramètre lors de l'exécution de la fonction d'agrégation. Spécifiez un nom de paramètre en plaçant le signe **@** comme premier caractère. Le nom du paramètre doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Les paramètres sont locaux à la fonction.  
   
  *system_scalar_type*  
- Un des types de données scalaires système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contiennent la valeur du paramètre d'entrée ou la valeur de retour. Tous les types de données scalaires peuvent être utilisés comme paramètre d’une agrégation définie par l’utilisateur, à l’exception de **text** , de **ntext** et d’ **image** . Les types non scalaires, tels que **cursor** et **table** , ne peuvent pas être spécifiés.  
+ Un des types de données scalaires système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contiennent la valeur du paramètre d'entrée ou la valeur de retour. Tous les types de données scalaires peuvent être utilisés comme paramètre d’une agrégation définie par l’utilisateur, à l’exception de **text**, de **ntext** et d’**image**. Les types non scalaires, tels que **cursor** et **table**, ne peuvent pas être spécifiés.  
   
  *udt_schema_name*  
  Nom du schéma auquel appartient le type CLR défini par l'utilisateur. S’il n’est pas spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fait référence à *udt_type_name* dans l’ordre suivant :  
@@ -82,7 +82,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Nom d'un type CLR défini par l'utilisateur et déjà créé dans la base de données active. Si le paramètre *udt_schema_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose que le type appartient au schéma de l’utilisateur actuel.  
   
  *assembly_name* [ **.** _class_name_ ]  
- Spécifie l'assembly à lier à la fonction d'agrégation définie par l'utilisateur et, éventuellement, le nom du schéma auquel appartient l'assembly et le nom de la classe d'assembly qui met en œuvre l'agrégation définie par l'utilisateur. L'assembly doit avoir été déjà créé dans la base de données à l'aide de l'instruction CREATE ASSEMBLY. Le paramètre *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit correspondre au nom d’une classe qui existe dans l’assembly. *class_name* peut être un nom qualifié par l’espace de noms, si le langage de programmation utilisé pour écrire la classe utilise des espaces de noms, comme C#. Si le paramètre *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique à *aggregate_name* .  
+ Spécifie l'assembly à lier à la fonction d'agrégation définie par l'utilisateur et, éventuellement, le nom du schéma auquel appartient l'assembly et le nom de la classe d'assembly qui met en œuvre l'agrégation définie par l'utilisateur. L'assembly doit avoir été déjà créé dans la base de données à l'aide de l'instruction CREATE ASSEMBLY. Le paramètre *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit correspondre au nom d’une classe qui existe dans l’assembly. *class_name* peut être un nom qualifié par l’espace de noms, si le langage de programmation utilisé pour écrire la classe utilise des espaces de noms, comme C#. Si le paramètre *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique à *aggregate_name*.  
   
 ## <a name="remarks"></a>Remarques  
  Par défaut, la possibilité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter du code CLR est désactivée. Vous pouvez créer, modifier et supprimer des objets de base de données qui font référence à des modules de code managé. Cependant, le code de ces modules ne s’exécute pas dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sauf si l’[option clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) est activée à l’aide de l’argument [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
