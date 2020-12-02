@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 04c45acc426cdeb187fd673756da388f971fe24e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382615"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125177"
 ---
 # <a name="create-nonclustered-indexes"></a>Créer des index non cluster
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "88382615"
   
 6.  Sélectionnez le nouvel index dans la zone de texte **Clé ou index Primary/Unique sélectionné** .  
   
-7.  Dans la grille, sélectionnez **Créer comme Clustered**et choisissez **Non** dans la liste déroulante à droite de la propriété.  
+7.  Dans la grille, sélectionnez **Créer comme Clustered** et choisissez **Non** dans la liste déroulante à droite de la propriété.  
   
 8.  Cliquez sur **Fermer**.  
   

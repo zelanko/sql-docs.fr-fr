@@ -33,11 +33,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ec45204c6144ce51b809c84e5339af6cff9b292f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194965"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124469"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -389,7 +389,7 @@ AT DATA_SOURCE data_source_name **S’applique à** : [!INCLUDE[sssqlv15](../../
 |*\<result_sets_definition>*|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Offre une garantie selon laquelle le résultat reviendra comme spécifié dans result_sets_definition. Pour les instructions qui retournent plusieurs jeux de résultats, fournissez plusieurs sections *result_sets_definition*. Placez chaque *result_sets_definition* entre parenthèses, séparées par des virgules. Pour plus d'informations, voir \<result_sets_definition> plus loin dans cette rubrique.<br /><br /> Cette option génère toujours une erreur pour les fonctions scalaires définies par l’utilisateur et compilées en mode natif, car les fonctions ne retournent jamais un jeu de résultats.|
   
 \<result_sets_definition>
-**S’applique à **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Décrit les jeux de résultats retournés par les instructions exécutées. Les clauses de result_sets_definition ont la signification suivante  
   

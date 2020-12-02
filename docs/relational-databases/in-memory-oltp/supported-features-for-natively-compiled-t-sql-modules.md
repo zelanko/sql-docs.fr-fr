@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b1d4a5951b223e5772a59f3cb9c12fd4f04ae244
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867290"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125197"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ Clause HAVING :
 - Il n’existe aucune prise en charge de **DISTINCT** dans la clause **ORDER BY** .  
 
 
-- La clause**TOP** associée à **ORDER BY** ne prend pas en charge plus de 8 192 lignes lorsqu'une constante est utilisée dans la clause **TOP** .
+- La clause **TOP** associée à **ORDER BY** ne prend pas en charge plus de 8 192 lignes lorsqu'une constante est utilisée dans la clause **TOP** .
   - Cette limite peut être abaissée lorsque la requête contient des jointures ou des fonctions d'agrégation. Par exemple, avec une jointure (entre deux tables), la limite est de 4 096 lignes. Avec deux jointures (entre trois tables), la limite est de 2 730 lignes.  
   - Vous pouvez obtenir plus de 8 192 résultats en stockant le nombre de lignes dans une variable :  
 

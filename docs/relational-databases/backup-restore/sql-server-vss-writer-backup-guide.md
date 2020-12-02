@@ -8,14 +8,14 @@ ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 121155e824df7bde4e8420eacdb2a56784864d62
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3f098dc361d4e30a82dee198bb8203d19b412613
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243610"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125434"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>Applications de sauvegarde SQL Server - Service de cliché instantané des volumes (VSS) et SQL Writer
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ SQL Server prend en charge la création d’instantanés à partir de données S
 
 - **Virtual Device Interface (VDI)**  : SQL Server fournit une API appelée VDI (Virtual Device Interface) qui permet aux éditeurs de logiciels indépendants d’intégrer SQL Server dans leurs produits en fournissant une prise en charge des opérations de sauvegarde et de restauration. Conçues pour offrir une fiabilité et des performances optimales, ces API prennent en charge l’éventail complet des fonctions de sauvegarde et de restauration de SQL Server, notamment la gamme complète des fonctionnalités de sauvegarde à chaud et d’instantanés. Pour plus d’informations, consultez [SQL Server 2005 Virtual Backup Device Interface Specification](https://www.microsoft.com/download/details.aspx?id=17282). 
 
-- **Demandeur**  : Processus (automatisé ou avec une interface graphique utilisateur) qui demande qu’un ou plusieurs jeux d’instantanés soient pris sur un ou plusieurs volumes d’origine. Dans ce document, un demandeur est également utilisé pour impliquer une application de sauvegarde qui crée un instantané de bases de données SQL Server.
+- **Demandeur** : Processus (automatisé ou avec une interface graphique utilisateur) qui demande qu’un ou plusieurs jeux d’instantanés soient pris sur un ou plusieurs volumes d’origine. Dans ce document, un demandeur est également utilisé pour impliquer une application de sauvegarde qui crée un instantané de bases de données SQL Server.
 
 ## <a name="about-vss"></a>À propos de VSS
 
@@ -124,14 +124,14 @@ Le reste de cette rubrique part du principe que les sauvegardes basées sur les 
 ## <a name="features-supported-by-sql-writer"></a>Fonctionnalités prises en charge par SQL Writer
 
 
-- **Texte intégral**  : L’enregistreur SQL signale les conteneurs de catalogue de texte intégral avec des spécifications de fichiers récursifs sous les composants de base de données dans le document des métadonnées de l’enregistreur.  Ils sont automatiquement inclus dans la sauvegarde quand le composant de base de données est sélectionné.
-- **Sauvegarde/restauration différentielle**  : L’enregistreur SQL prend en charge la sauvegarde/restauration différentielle via deux mécanismes différentiels de VSS : Fichier partiel et fichier différencié par date/heure de dernière modification.
-- **Fichier partiel**  :   L’enregistreur SQL utilise le mécanisme Fichier partiel de VSS pour signaler les plages d’octets modifiées dans ses fichiers de base de données.  
-- **Fichier différencié par date/heure de dernière modification**  : L’enregistreur SQL utilise le mécanisme Fichier différencié par date/heure de dernière modification de VSS pour signaler les fichiers modifiés dans les catalogues de texte intégral.
-- **Restauration avec déplacement**  : L’enregistreur SQL prend en charge la spécification d’une nouvelle cible de VSS lors de la restauration.  La spécification d’une nouvelle cible de VSS permet de placer ailleurs un fichier de base de données/un fichier journal ou un conteneur de catalogues de texte intégral dans le cadre de l’opération de restauration.
-- **Renommage d’une base de données**  : Un demandeur peut avoir besoin de restaurer une base de données SQL avec un nouveau nom, en particulier si la base de données doit être restaurée côte à côte avec la base de données d’origine. L’enregistreur SQL prend en charge le renommage d’une base de données lors de l’opération de restauration, à condition que la base de données reste dans l’instance SQL d’origine.
-- **Sauvegarde de copie uniquement**  : Il est parfois nécessaire d’effectuer une sauvegarde destinée à un usage particulier, par exemple quand vous devez effectuer une copie d’une base de données à des fins de test.  Cette sauvegarde ne doit pas impacter les procédures globales de sauvegarde et de restauration de la base de données. L’utilisation de l’option COPY_ONLY spécifie que la sauvegarde est effectuée « hors circuit » et ne doit pas affecter la séquence normale des sauvegardes. L’enregistreur SQL prend en charge le type de sauvegarde « Copie uniquement » avec des instances SQL Server.
-- **Récupération automatique d’un instantané de base de données**  :   En général, un instantané d’une base de données SQL Server obtenu en utilisant le framework VSS est dans un état non récupéré. Les données de l’instantané ne sont pas accessibles de façon sécurisée avant de passer à la phase de récupération afin d’annuler les transactions en cours et de placer la base de données dans un état cohérent. Une application de sauvegarde VSS peut demander la récupération automatique des instantanés dans le cadre du processus de création des instantanés.
+- **Texte intégral** : L’enregistreur SQL signale les conteneurs de catalogue de texte intégral avec des spécifications de fichiers récursifs sous les composants de base de données dans le document des métadonnées de l’enregistreur.  Ils sont automatiquement inclus dans la sauvegarde quand le composant de base de données est sélectionné.
+- **Sauvegarde/restauration différentielle** : L’enregistreur SQL prend en charge la sauvegarde/restauration différentielle via deux mécanismes différentiels de VSS : Fichier partiel et fichier différencié par date/heure de dernière modification.
+- **Fichier partiel** :   L’enregistreur SQL utilise le mécanisme Fichier partiel de VSS pour signaler les plages d’octets modifiées dans ses fichiers de base de données.  
+- **Fichier différencié par date/heure de dernière modification** : L’enregistreur SQL utilise le mécanisme Fichier différencié par date/heure de dernière modification de VSS pour signaler les fichiers modifiés dans les catalogues de texte intégral.
+- **Restauration avec déplacement** : L’enregistreur SQL prend en charge la spécification d’une nouvelle cible de VSS lors de la restauration.  La spécification d’une nouvelle cible de VSS permet de placer ailleurs un fichier de base de données/un fichier journal ou un conteneur de catalogues de texte intégral dans le cadre de l’opération de restauration.
+- **Renommage d’une base de données** : Un demandeur peut avoir besoin de restaurer une base de données SQL avec un nouveau nom, en particulier si la base de données doit être restaurée côte à côte avec la base de données d’origine. L’enregistreur SQL prend en charge le renommage d’une base de données lors de l’opération de restauration, à condition que la base de données reste dans l’instance SQL d’origine.
+- **Sauvegarde de copie uniquement** : Il est parfois nécessaire d’effectuer une sauvegarde destinée à un usage particulier, par exemple quand vous devez effectuer une copie d’une base de données à des fins de test.  Cette sauvegarde ne doit pas impacter les procédures globales de sauvegarde et de restauration de la base de données. L’utilisation de l’option COPY_ONLY spécifie que la sauvegarde est effectuée « hors circuit » et ne doit pas affecter la séquence normale des sauvegardes. L’enregistreur SQL prend en charge le type de sauvegarde « Copie uniquement » avec des instances SQL Server.
+- **Récupération automatique d’un instantané de base de données** :   En général, un instantané d’une base de données SQL Server obtenu en utilisant le framework VSS est dans un état non récupéré. Les données de l’instantané ne sont pas accessibles de façon sécurisée avant de passer à la phase de récupération afin d’annuler les transactions en cours et de placer la base de données dans un état cohérent. Une application de sauvegarde VSS peut demander la récupération automatique des instantanés dans le cadre du processus de création des instantanés.
 
 Ces nouvelles fonctionnalités et leur utilisation sont décrites plus en détail dans la section Détails des options de sauvegarde et de restauration de cette rubrique.
 
@@ -204,7 +204,7 @@ Le document des métadonnées de l’enregistreur contient les informations pass
 
 ### <a name="sql-writer-metadata-document"></a>Document des métadonnées de l’enregistreur SQL
 
-Il s’agit d’un document XML créé par un enregistreur (dans le cas présent, l’enregistreur SQL) en utilisant l’interface **IVssCreateWriterMetadata** , et qui contient des informations sur l’état et les composants de l’enregistreur. Les détails de la structure d’un document des métadonnées de l’enregistreur sont décrits dans la documentation de l’API VSS. Voici quelques-unes des informations du document des métadonnées de l’enregistreur SQL.
+Il s’agit d’un document XML créé par un enregistreur (dans le cas présent, l’enregistreur SQL) en utilisant l’interface **IVssCreateWriterMetadata**, et qui contient des informations sur l’état et les composants de l’enregistreur. Les détails de la structure d’un document des métadonnées de l’enregistreur sont décrits dans la documentation de l’API VSS. Voici quelques-unes des informations du document des métadonnées de l’enregistreur SQL.
 
 - Informations d’identification de l’enregistreur
     - **Writer name** (Nom de l’enregistreur) - L"SqlServerWriter"
@@ -239,7 +239,7 @@ Un exemple de document des métadonnées de l’enregistreur est fourni à la fi
 Dans cette phase, un demandeur examine le document des métadonnées de l’enregistreur, puis crée et remplit un **Document des composants de la sauvegarde** avec chaque composant à sauvegarder. Il spécifie également les options et les paramètres de sauvegarde nécessaires dans le cadre de ce document. Pour l’enregistreur SQL, chaque instance de base de données qui doit être sauvegardée est un composant distinct.
 
 #### <a name="backup-components-document"></a>Document des composants de la sauvegarde
-Il s’agit d’un document XML créé par un demandeur (en utilisant l’interface **IVssBackupComponents** ) au cours de la configuration d’une opération de restauration ou de sauvegarde. Le document des composants de la sauvegarde contient une liste des composants explicitement inclus, provenant d’un ou de plusieurs enregistreurs, qui participent à une opération de sauvegarde ou de restauration. Il ne contient pas d’informations sur les composants inclus implicitement. En revanche, un document des métadonnées de l’enregistreur contient seulement des composants d’enregistreur qui peuvent participer à une sauvegarde. Les détails de la structure d’un document des composants de la sauvegarde sont décrits dans la documentation de l’API VSS.
+Il s’agit d’un document XML créé par un demandeur (en utilisant l’interface **IVssBackupComponents**) au cours de la configuration d’une opération de restauration ou de sauvegarde. Le document des composants de la sauvegarde contient une liste des composants explicitement inclus, provenant d’un ou de plusieurs enregistreurs, qui participent à une opération de sauvegarde ou de restauration. Il ne contient pas d’informations sur les composants inclus implicitement. En revanche, un document des métadonnées de l’enregistreur contient seulement des composants d’enregistreur qui peuvent participer à une sauvegarde. Les détails de la structure d’un document des composants de la sauvegarde sont décrits dans la documentation de l’API VSS.
 
 #### <a name="prebackup-tasks"></a>Tâches de présauvegarde
 Les tâches de présauvegarde sous VSS sont axées sur la création d’un cliché instantané des volumes contenant des données pour la sauvegarde. L’application de sauvegarde enregistre les données du cliché instantané, et non pas le volume réel.
@@ -247,13 +247,13 @@ Les tâches de présauvegarde sous VSS sont axées sur la création d’un clich
 Les demandeurs attendent généralement les enregistreurs pendant la préparation de la sauvegarde et pendant la création du cliché instantané. Si l’enregistreur SQL participe à l’opération de sauvegarde, il doit configurer ses fichiers, et être prêt pour la sauvegarde et pour le cliché instantané.
 
 #### <a name="prepare-for-backup"></a>Préparer la sauvegarde
-Le demandeur doit définir le type de l’opération de sauvegarde qui doit être effectuée ( **IVssBackupComponents::SetBackupState** ), puis indiquer aux enregistreurs via VSS de préparer une opération de sauvegarde en utilisant **IVssBackupComponents::PrepareForBackup**.
+Le demandeur doit définir le type de l’opération de sauvegarde qui doit être effectuée (**IVssBackupComponents::SetBackupState**), puis indiquer aux enregistreurs via VSS de préparer une opération de sauvegarde en utilisant **IVssBackupComponents::PrepareForBackup**.
 
 L’enregistreur SQL est autorisé à accéder au document des composants de la sauvegarde, qui détaille les bases de données qui doivent être sauvegardées. Tous les volumes de stockage doivent être inclus dans le jeu d’instantanés de volume. L’enregistreur SQL détecte les bases de données endommagées (avec des volumes de stockage en dehors du jeu d’instantanés) et fait échouer la sauvegarde lors de l’événement PostSnapshot.
 
-**Lancer un instantané**  : Le demandeur lance le processus de capture instantanée en appelant l’interface DoSnapshotSet du framework VSS.
+**Lancer un instantané** : Le demandeur lance le processus de capture instantanée en appelant l’interface DoSnapshotSet du framework VSS.
 
-**Créer un instantané**  : Cette phase implique une série d’interactions entre le framework VSS et l’enregistreur SQL.
+**Créer un instantané** : Cette phase implique une série d’interactions entre le framework VSS et l’enregistreur SQL.
 
 1. _Préparer la capture instantanée_. L’enregistreur SQL appelle SQL Server pour préparer la création de l’instantané.
 1. _Freeze_ (Figer) : L’enregistreur SQL appelle SQL Server pour figer toutes les E/S de base de données pour chacune des bases de données sauvegardées dans l’instantané. Une fois que l’événement freeze retourne à l’infrastructure VSS, VSS crée l’instantané.
@@ -262,7 +262,7 @@ L’enregistreur SQL est autorisé à accéder au document des composants de la 
 
 La phase de création de l’instantané est rapide (moins de 60 secondes), afin d’éviter le blocage de toutes les écritures dans la base de données.
 
-**Après l’instantané**  : Si la récupération automatique est nécessaire pour l’instantané, l’enregistreur SQL effectue la récupération automatique pour chaque base de données sélectionnée pour l’instantané. Pour obtenir une explication détaillée, consultez Instantanés récupérés automatiquement.
+**Après l’instantané** : Si la récupération automatique est nécessaire pour l’instantané, l’enregistreur SQL effectue la récupération automatique pour chaque base de données sélectionnée pour l’instantané. Pour obtenir une explication détaillée, consultez Instantanés récupérés automatiquement.
 
 #### <a name="actual-backup-of-files"></a>Sauvegarde réelle des fichiers
 
@@ -308,8 +308,8 @@ L’illustration suivante montre le diagramme des flux de données lors d’une 
 
 Dans tous les scénarios de restauration basée sur les composants VSS, la restauration de base de données est gérée par l’enregistreur SQL selon deux phases distinctes.
 
-- **Pré-restauration**  :  L’enregistreur SQL gère la validation, la fermeture des descripteurs de fichier, etc.
-- **Post-restauration**  :  L’enregistreur SQL attache la base de données et effectue si nécessaire une récupération après incident.
+- **Pré-restauration** :  L’enregistreur SQL gère la validation, la fermeture des descripteurs de fichier, etc.
+- **Post-restauration** :  L’enregistreur SQL attache la base de données et effectue si nécessaire une récupération après incident.
 
 Entre ces deux phases, l’application de sauvegarde est chargée de déplacer les données pertinentes sous SQL.
 
@@ -339,7 +339,7 @@ Il s’agit d’une action spécifique au demandeur. Il incombe au demandeur (l�
 
 #### <a name="cleanup-and-termination"></a>Nettoyage et fin
 
-Une fois que toutes les données sont restaurées aux bons endroits, un appel effectué depuis un demandeur pour signaler que l’opération de restauration est terminée ( **IvssBackupComponents::PostRestore** ) permet à l’enregistreur SQL de savoir que des actions de post-restauration peuvent être démarrées.  À ce stade, l’enregistreur SQL effectue la phase de restauration par progression de la récupération après incident. Si la récupération n’est pas demandée (c’est-à-dire si SetAdditionalRestores(true) n’est pas spécifié par le demandeur), la phase d’annulation de l’étape de récupération est également effectuée au cours de cette phase.
+Une fois que toutes les données sont restaurées aux bons endroits, un appel effectué depuis un demandeur pour signaler que l’opération de restauration est terminée (**IvssBackupComponents::PostRestore**) permet à l’enregistreur SQL de savoir que des actions de post-restauration peuvent être démarrées.  À ce stade, l’enregistreur SQL effectue la phase de restauration par progression de la récupération après incident. Si la récupération n’est pas demandée (c’est-à-dire si SetAdditionalRestores(true) n’est pas spécifié par le demandeur), la phase d’annulation de l’étape de récupération est également effectuée au cours de cette phase.
 
 ## <a name="backup-and-restore-option-details"></a>Détails des options de sauvegarde et de restauration
 
@@ -387,7 +387,7 @@ Si aucune métadonnée de l’enregistreur (métadonnées de sauvegarde basée s
 
 Le demandeur restaure la ou les bases de données qui ont été sauvegardées en mode basé sur les composants, mais aucune restauration par progression n’est demandée. Dans ce cas, SQL Server effectue une récupération sur incident sur la base de données dans le cadre de la restauration.
 
-**Restauration complète avec restaurations par progression supplémentaires**  : Le demandeur peut demander une restauration en spécifiant l’option SetAdditionalRestores(true).  Cette option indique que le demandeur va procéder ensuite à d’autres restaurations par progression (comme une restauration de journal, une restauration différentielle, etc.). Ceci indique à SQL Server de ne pas effectuer l’étape de récupération à la fin de l’opération de restauration.
+**Restauration complète avec restaurations par progression supplémentaires** : Le demandeur peut demander une restauration en spécifiant l’option SetAdditionalRestores(true).  Cette option indique que le demandeur va procéder ensuite à d’autres restaurations par progression (comme une restauration de journal, une restauration différentielle, etc.). Ceci indique à SQL Server de ne pas effectuer l’étape de récupération à la fin de l’opération de restauration.
 
 Ceci est possible seulement si les métadonnées de l’enregistreur ont été enregistrées lors de la sauvegarde et sont disponibles pour l’enregistreur SQL au moment de la restauration. Le service SQL Server doit être en cours d’exécution avant que le demandeur indique à VSS d’effectuer l’activité de restauration.
 
@@ -409,7 +409,7 @@ Une opération de sauvegarde différentielle sauvegarde seulement les données q
 
 ### <a name="backup"></a>Sauvegarde
 
-Le demandeur peut lancer une sauvegarde différentielle en définissant l’option DIFFERENTIAL ( **VSS_BT_DIFFERENTIAL** ) dans le document des composants de la sauvegarde ( **IVssBackupComponents::SetBackupState** ) lors du lancement d’une opération de sauvegarde avec VSS.  L’enregistreur SQL passe les informations sur les fichiers partiels (qui lui sont retournées par SQL Server) à VSS.  Le demandeur peut obtenir ces informations sur les fichiers en appelant des API VSS ( **IVssComponent::GetPartialFile** ). Ces informations sur les fichiers partiels permettent au demandeur de choisir seulement les plages d’octets modifiées à sauvegarder pour les fichiers de base de données.
+Le demandeur peut lancer une sauvegarde différentielle en définissant l’option DIFFERENTIAL (**VSS_BT_DIFFERENTIAL**) dans le document des composants de la sauvegarde (**IVssBackupComponents::SetBackupState**) lors du lancement d’une opération de sauvegarde avec VSS.  L’enregistreur SQL passe les informations sur les fichiers partiels (qui lui sont retournées par SQL Server) à VSS.  Le demandeur peut obtenir ces informations sur les fichiers en appelant des API VSS (**IVssComponent::GetPartialFile**). Ces informations sur les fichiers partiels permettent au demandeur de choisir seulement les plages d’octets modifiées à sauvegarder pour les fichiers de base de données.
 
 Pendant la phase des tâches de pré-sauvegarde, l’enregistreur SQL vérifie qu’il existe une seule base différentielle pour chaque base de données sélectionnée.
 
@@ -522,12 +522,12 @@ L’horodateur de base est défini lors d’une sauvegarde complète.  Dans **On
 
 L’application de sauvegarde récupère cet horodatage auprès de la sauvegarde complète de base et rend l’horodatage disponible pour l’enregistreur en appelant **IVssComponent::GetBackupStamp()** pour récupérer l’horodatage de base auprès de la sauvegarde de base précédente.  Ensuite, il le rend disponible pour l’enregistreur en appelant **IVssBackupComponent::SetPreviousBackupStamp()** .  L’enregistreur récupère ensuite le datage en appelant **IVssComponent::GetPreviousBackupStamp()** et le convertit en un horodatage utilisé pour **IVssComponent::AddDifferencedFilesByLastModifyTime()** .  
 
-**Responsabilité de l’application de sauvegarde lors d’une sauvegarde différentielle**  : Lors d’une sauvegarde différentielle, l’application de sauvegarde est chargée des opérations suivantes :
+**Responsabilité de l’application de sauvegarde lors d’une sauvegarde différentielle** : Lors d’une sauvegarde différentielle, l’application de sauvegarde est chargée des opérations suivantes :
 
 - Sauvegarde de tout fichier (le fichier entier) dont l’horodatage de la dernière modification est postérieur à l’horodatage spécifié par la « date/heure de la dernière modification » pour le fichier défini dans le composant.
 - Suivi et détection des fichiers supprimés.  
 
-**Responsabilités de l’application de sauvegarde lors d’une restauration différentielle**  : Lors d’une restauration différentielle, l’application de sauvegarde est chargée des opérations suivantes :
+**Responsabilités de l’application de sauvegarde lors d’une restauration différentielle** : Lors d’une restauration différentielle, l’application de sauvegarde est chargée des opérations suivantes :
 
 - Restauration de tous les fichiers qui ont été sauvegardés, soit en créant un nouveau fichier s’il n’existe pas déjà, soit en remplaçant un fichier existant s’il existe déjà.
 - Agrandissement du fichier avant d’étendre le contenu si le fichier restauré est plus grand que le fichier existant.

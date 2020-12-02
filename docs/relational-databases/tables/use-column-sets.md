@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564639"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125090"
 ---
 # <a name="use-column-sets"></a>Utiliser des jeux de colonnes
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -111,7 +111,7 @@ GO
  Dans cet exemple, aucune valeur n'a été spécifiée pour le `i`de colonne, mais la valeur `0` a été insérée.  
   
 ## <a name="using-the-sql_variant-data-type"></a>Utilisation du Type de données sql_variant  
- Le type de données **sql_variant** peut stocker plusieurs types de données différents, tels que **int**, **char**et **date**. Les jeux de colonnes retournent les informations de type de données telles que l’échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur **sql_variant** sous la forme d’attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
+ Le type de données **sql_variant** peut stocker plusieurs types de données différents, tels que **int**, **char** et **date**. Les jeux de colonnes retournent les informations de type de données telles que l’échelle, la précision et les informations relatives aux paramètres régionaux associées à une valeur **sql_variant** sous la forme d’attributs dans la colonne XML générée. Si vous essayez de fournir ces attributs dans une instruction XML générée de manière personnalisée en tant qu'entrée pour une opération d'insertion ou de mise à jour sur un jeu de colonnes, certains de ces attributs sont requis et une valeur par défaut est assignée à certains d'entre eux. Le tableau suivant répertorie les types de données et les valeurs par défaut générées par le serveur lorsque la valeur n'est pas fournie.  
   
 |Type de données|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longueur maximale|Précision|Scale|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  

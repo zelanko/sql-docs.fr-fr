@@ -17,14 +17,14 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery models
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4e3aa38d92dbd829ff4259ac384475781534b4a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6f4b1c8c2bcdc3a755a0311d83a08f7b083d4676
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85747601"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125319"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Afficher ou modifier le mode de récupération d'une base de données (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,15 +60,15 @@ ms.locfileid: "85747601"
   
 1.  Après vous être connecté à l'instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
-2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
+2.  Développez **Bases de données** puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
-3.  Cliquez avec le bouton droit de la souris sur la base de données, puis cliquez sur **Propriétés**pour ouvrir la boîte de dialogue **Propriétés de la base de données** .  
+3.  Cliquez avec le bouton droit de la souris sur la base de données, puis cliquez sur **Propriétés** pour ouvrir la boîte de dialogue **Propriétés de la base de données** .  
   
 4.  Dans le volet **Sélectionner une page** , cliquez sur **Options**.  
   
 5.  Le mode de récupération actuel s'affiche dans la zone de liste **Mode de récupération** .  
   
-6.  Au besoin, pour modifier le mode de récupération, sélectionnez un autre mode dans la liste. Les choix sont **Complet**, **Journalisé en bloc**ou **Simple**.  
+6.  Au besoin, pour modifier le mode de récupération, sélectionnez un autre mode dans la liste. Les choix sont **Complet**, **Journalisé en bloc** ou **Simple**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

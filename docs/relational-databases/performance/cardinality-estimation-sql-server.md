@@ -17,11 +17,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890999"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125112"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
 
@@ -100,11 +100,11 @@ GO
  
 Ou, à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, à l’aide de l’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
 WHERE OrderAddedDate >= '2016-05-01'
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
 **Magasin des requêtes** : si vous utilisez [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le magasin des requêtes est un outil pratique pour examiner les performances de vos requêtes. Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], dans l’**Explorateur d’objets** situé sous le nœud de votre base de données, le nœud **Magasin des requêtes** s’affiche quand le Magasin des requêtes est activé.  

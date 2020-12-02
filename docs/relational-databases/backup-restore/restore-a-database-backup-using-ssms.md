@@ -18,14 +18,14 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2e23cceab272e11eedb1fa99250dce5520ada073
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f93bb71a3f6dcbbd98e62cca67a877361c6766db
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718015"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125595"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restaurer une sauvegarde de base de données à l’aide de SSMS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ Pour restaurer une base de données chiffrée, vous devez avoir accès au certif
     
 Si vous restaurez une base de données de version antérieure vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], cette base de données est mise à niveau automatiquement vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ainsi, la base de données ne peut pas être utilisée avec une version antérieure du [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Toutefois, cela concerne la mise à niveau des métadonnées et n’affecte pas le [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-En général, la base de données est immédiatement disponible. Toutefois si une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, en fonction du paramètre de la propriété de serveur **Option de mise à niveau du catalogue de texte intégral** . Si vous affectez la valeur **Importer** ou **Reconstruire**à l’option de mise à niveau, les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. En fonction du volume de données indexé, l’importation peut prendre plusieurs heures et la reconstruction jusqu’à dix fois plus longtemps.     
+En général, la base de données est immédiatement disponible. Toutefois si une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, en fonction du paramètre de la propriété de serveur **Option de mise à niveau du catalogue de texte intégral** . Si vous affectez la valeur **Importer** ou **Reconstruire** à l’option de mise à niveau, les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. En fonction du volume de données indexé, l’importation peut prendre plusieurs heures et la reconstruction jusqu’à dix fois plus longtemps.     
     
-Quand vous affectez la valeur **Importer**à l’option de mise à niveau, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
+Quand vous affectez la valeur **Importer** à l’option de mise à niveau, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
 Pour plus d’informations sur la restauration SQL Server à partir du service de stockage d’objets blob Microsoft Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -68,7 +68,7 @@ Pour plus d’informations sur la restauration SQL Server à partir du service d
     
          Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . 
          
-        -   Boîte de dialogue**Sélectionner les unités de sauvegarde**  
+        -   Boîte de dialogue **Sélectionner les unités de sauvegarde**  
         
             **Type de support de sauvegarde**  
          Sélectionnez un type de support dans la liste déroulante **Type de support de sauvegarde** .  Remarque : L'option **Bande** s'affiche uniquement si un lecteur de bande est connecté à l'ordinateur et l'option **Unité de sauvegarde**, seulement si au moins une unité de sauvegarde est connectée.
@@ -109,7 +109,7 @@ Pour plus d’informations sur la restauration SQL Server à partir du service d
     
 8. Pour afficher ou sélectionner les options avancées, dans la page **Options**, dans le volet **Options de restauration**, vous pouvez choisir les options suivantes si elles s’appliquent à votre situation :    
 
-   1. Options**WITH** (non obligatoires) :    
+   1. Options **WITH** (non obligatoires) :    
     
      - **Remplacer la base de données existante (WITH REPLACE)**    
     
@@ -173,7 +173,7 @@ L’exemple suivant restaure une sauvegarde sur disque antérieure de `Sales` et
 5.  Cliquez sur **OK** pour revenir à la page **Général** .
 6.  Dans la section **Destination** , la zone **Base de données** est automatiquement renseignée avec le nom de la base de données à restaurer. Pour changer le nom de la base de données, entrez le nouveau nom dans la zone **Base de données** .
 7.  Dans le volet **Sélectionner une page** , cliquez sur **Options** .
-8.  Dans la section **Sauvegarde de la fin du journal** , décochez la case**Effectuer la sauvegarde de la fin du journal avant la restauration**.
+8.  Dans la section **Sauvegarde de la fin du journal** , décochez la case **Effectuer la sauvegarde de la fin du journal avant la restauration**.
 
     > [!IMPORTANT]
     > Si vous ne sélectionnez pas cette option, la base de données existante ( `Sales`) bascule à l’état de restauration.

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b562b03068ebee035f9b298c62ca49d5c1c0f396
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6c06cb6fe516625cb517fc315bac8f3bc91e4fd7
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671099"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125912"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installer SQL Server à l’aide de SysPrep
 
@@ -86,13 +86,13 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 2. L'Assistant Installation exécute le Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour préparer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cliquez sur **Préparation de l’image d’une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** dans la page **Avancé**. 
   
-3. L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+3. L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 4. Dans la page Mises à jour du produit, les dernières mises à jour disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent. Si vous ne souhaitez pas inclure les mises à jour, décochez la case **Inclure les mises à jour du produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Si aucune mise à jour du produit n'est découverte, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation** . 
   
 5. Sur la page Installer les fichiers d'installation, le programme d'installation fournit la progression du téléchargement, de l'extraction et de l'installation des fichiers d'installation. Si une mise à jour de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est trouvée, et est spécifiée pour être incluse, cette mise à jour est également installée. 
   
-6. L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+6. L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 7. Dans la page **Préparer le type d’image**, sélectionnez **Préparer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . 
   
@@ -110,7 +110,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure. 
   
-10. Dans la page **Règles de préparation d'image** , l'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+10. Dans la page **Règles de préparation d'image** , l'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 11. Dans la page Configuration de l'instance, spécifiez l'ID d'instance. Cliquez sur **Suivant** pour continuer. 
   
@@ -124,7 +124,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 12. La page **Espace disque nécessaire** calcule l'espace disque nécessaire pour les fonctionnalités que vous spécifiez. Elle compare ensuite cet espace à l'espace disque disponible. 
   
-13. L'Outil d'analyse de configuration système exécutera des règles de préparation d'image pour valider la configuration de votre ordinateur avec les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez spécifiées. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+13. L'Outil d'analyse de configuration système exécutera des règles de préparation d'image pour valider la configuration de votre ordinateur avec les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez spécifiées. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 14. La page **Prêt à préparer l'image** affiche une arborescence des options d'installation spécifiées durant l'exécution du programme d'installation. Dans cette page, le programme d'installation indique si la fonctionnalité de mise à jour du produit est activée ou désactivée et la version de la mise à jour finale. Pour continuer, cliquez sur **Préparer**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe d'abord les composants requis pour les fonctionnalités sélectionnées, puis installe les fonctionnalités. 
   
@@ -142,11 +142,11 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 1. Si vous avez une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluse dans l'image de votre ordinateur, un raccourci est affiché dans le menu Démarrer. Vous pouvez également lancer le Centre d’installation et cliquer sur **Finalisation d’image d’une instance autonome préparée** dans la page **Avancé** . 
   
-2. L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+2. L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 3. Dans la page **Fichiers de support du programme d'installation** , cliquez sur **Installer** pour installer les fichiers de support du programme d'installation. 
   
-4. L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Lorsque la vérification est terminée, cliquez sur **Suivant** pour poursuivre. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+4. L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Lorsque la vérification est terminée, cliquez sur **Suivant** pour poursuivre. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 5. Dans la page **Clé du produit** , sélectionnez une case d'option pour indiquer si vous installez une édition gratuite de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou une version de production du produit qui a une clé PID. Pour plus d’informations, consultez [Éditions et fonctionnalités prises en charge de SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md). Si vous installez l'édition Evaluation, la période d'essai de 180 jours démarre lorsque vous terminez cette étape. 
   
@@ -208,7 +208,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 17. Dans la page **Création de rapports d'erreurs** , spécifiez les informations que vous souhaitez envoyer à [!INCLUDE[msCoName](../../includes/msconame-md.md)] afin d'aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les options de création de rapports d'erreurs sont activées par défaut. 
   
-18. Dans la page **Règles de finalisation d'image** , l'outil d'analyse de configuration système exécutera les règles de finalisation d'image pour valider la configuration de votre ordinateur avec les configurations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez spécifiées. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+18. Dans la page **Règles de finalisation d'image** , l'outil d'analyse de configuration système exécutera les règles de finalisation d'image pour valider la configuration de votre ordinateur avec les configurations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez spécifiées. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 19. La page **Prêt à finaliser l'image** affiche une arborescence des options d'installation spécifiées durant l'exécution du programme d'installation. Pour continuer, cliquez sur **Installer**. 
   
@@ -228,7 +228,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 2. L'Assistant Installation exécute le Centre d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour ajouter des fonctionnalités à une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cliquez sur **Préparation de l’image d’une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** dans la page **Avancé**. 
   
-3. L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+3. L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 4. Sur la page Fichiers de support du programme d'installation, cliquez sur **Installer** pour installer les fichiers de support du programme d'installation. 
   
@@ -238,11 +238,11 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les composants requis qui n'ont pas déjà été installés lors de l'étape d'installation décrite plus loin dans cette procédure. 
   
-7. Dans la page **Règles de préparation d'image** , l'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+7. Dans la page **Règles de préparation d'image** , l'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 8. La page Espace disque nécessaire calcule l'espace disque nécessaire pour les fonctionnalités que vous spécifiez. Elle compare ensuite cet espace à l'espace disque disponible. 
   
-9. Dans la page **Règles de préparation d'image** , l'outil d'analyse de configuration système exécutera des règles de préparation d'image pour valider la configuration de votre ordinateur avec les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez spécifiées. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
+9. Dans la page **Règles de préparation d'image** , l'outil d'analyse de configuration système exécutera des règles de préparation d'image pour valider la configuration de votre ordinateur avec les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous avez spécifiées. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails** ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
 10. La page **Prêt à préparer l'image** affiche une arborescence des options d'installation spécifiées durant l'exécution du programme d'installation. Pour continuer, cliquez sur **Installer**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe d'abord les composants requis pour les fonctionnalités sélectionnées, puis installe les fonctionnalités. 
   

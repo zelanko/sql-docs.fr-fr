@@ -14,14 +14,14 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 984e57d309dbed6a2aeb29dcaa260ae8f07896c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 05f3dd9658ca51e1208476f8d11b387a79eb0234
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429101"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96125566"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "88429101"
   
 1.  Dans l'Explorateur d'objets, connectez-vous à l'instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez l'arborescence du serveur.  
   
-2.  Développez **Bases de données**. Selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système**et sélectionnez une base de données système.  
+2.  Développez **Bases de données**. Selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, sur **Restaurer**, puis cliquez sur **Base de données**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "88429101"
   
      Pour obtenir des descriptions des options, consultez [Restaurer la base de données &#40;page Options&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).  
   
-12. L’option**Effectuer la sauvegarde de la fin du journal avant la restauration** est sélectionnée si elle s’avère nécessaire pour le moment sélectionné. Vous n'avez pas besoin de modifier ce paramètre, mais vous pouvez choisir de sauvegarder la fin du journal même si ce n'est pas obligatoire.  
+12. L’option **Effectuer la sauvegarde de la fin du journal avant la restauration** est sélectionnée si elle s’avère nécessaire pour le moment sélectionné. Vous n'avez pas besoin de modifier ce paramètre, mais vous pouvez choisir de sauvegarder la fin du journal même si ce n'est pas obligatoire.  
   
 13. Les opérations de restauration peuvent échouer s'il existe des connexions actives à la base de données. Activez l'option **Fermer les connexions existantes** pour garantir que toutes les connexions actives entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et la base de données sont fermées. Cette case à cocher définit la base de données en mode mono-utilisateur avant d'effectuer les opérations de restauration, et définit la base de données en mode multi-utilisateur une fois l'opération terminée.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "88429101"
   
 3.  Restaurez la dernière sauvegarde différentielle de base de données, si elle existe, sans récupérer la base de données (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre de sa création, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY).  
+4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre de sa création, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=**_time_**,** RECOVERY).  
   
     > [!NOTE]  
     >  Options RECOVERY et STOPAT. Si la sauvegarde du journal des transactions ne contient pas l'heure demandée (par exemple, si l'heure spécifiée dépasse la dernière heure figurant dans le journal des transactions), un avertissement est émis et la base de données n'est pas récupérée.  

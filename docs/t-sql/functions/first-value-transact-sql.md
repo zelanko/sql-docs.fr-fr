@@ -21,11 +21,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cba74e40373a4b00a93d41ebc49e2a849df98572
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235508"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124737"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
  Valeur à renvoyer. *scalar_expression* peut être une colonne, une sous-requête ou une autre expression arbitraire qui aboutit à une valeur unique. Les autres fonctions analytiques ne sont pas autorisées.  
 
  [ IGNORER NULLS | RESPECTER NULLS ]     
- **S’applique à**  : Azure SQL Edge
+ **S’applique à** : Azure SQL Edge
 
  IGNORER NULLS : Ignore les valeurs Null dans le jeu de données lors du calcul de la première valeur sur une partition.     
  RESPECTER NULLS : Respecte les valeurs Null dans le jeu de données lors du calcul de la première valeur sur une partition.     

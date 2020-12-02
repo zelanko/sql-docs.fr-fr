@@ -23,11 +23,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d0169bc8dd5ed25e6f1689802e9a431df34fe457
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417495"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124937"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ASCII ( character_expression )
  **int**  
   
 ## <a name="remarks"></a>Notes
-ASCII est l’abréviation d’**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. Il s’agit d’une norme de codage de caractères pour les ordinateurs modernes. Consultez la section **Caractères imprimables** de la rubrique [ASCII](https://www.wikipedia.org/wiki/ASCII) pour obtenir la liste des caractères ASCII.
+ASCII est l’abréviation d’**A** merican **S** tandard **C** ode for **I** nformation **I** nterchange. Il s’agit d’une norme de codage de caractères pour les ordinateurs modernes. Consultez la section **Caractères imprimables** de la rubrique [ASCII](https://www.wikipedia.org/wiki/ASCII) pour obtenir la liste des caractères ASCII.
 
 Le code ASCII est un jeu de caractères 7 bits. Le code ASCII étendu est un jeu de caractères 8 bits qui n’est pas géré par la fonction `ASCII`. 
 

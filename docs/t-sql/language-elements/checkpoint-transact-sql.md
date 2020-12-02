@@ -28,11 +28,11 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 ms.openlocfilehash: 3f2d5761829c38aba06f36b4d473c8ea9dc36214
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196683"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124489"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
 ## <a name="factors-affecting-the-duration-of-checkpoint-operations"></a>Facteurs ayant une incidence sur la durée des opérations de point de contrôle  
  En règle générale, le temps nécessaire à la réalisation d'un point de contrôle augmente avec le nombre de pages incorrectes à écrire. Par défaut, pour réduire l'impact sur les performances sur d'autres applications, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajuste la fréquence des écritures qu'une opération de point de contrôle effectue. La diminution de la fréquence d'écriture augmente la durée de l'opération de point de contrôle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise cette stratégie pour un point de contrôle manuel, sauf si une valeur *checkpoint_duration* est spécifiée dans la commande CHECKPOINT.  
   
- L’incidence de l’utilisation de *checkpoint_duration* sur les performances dépend du nombre de pages incorrectes, de l’activité sur le système et de la durée réelle spécifiée. Par exemple, si le point de contrôle s’effectue normalement en 120 secondes, le fait de spécifier une valeur *checkpoint_duration* de 45 secondes oblige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à allouer plus de ressources au point de contrôle que ne le ferait la valeur par défaut. À l’inverse, une valeur de 180 secondes spécifiée pour *checkpoint_duration* fait en sorte que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue moins de ressources que ce qui serait attribué par défaut. En règle générale, une valeur faible pour ** checkpoint_duration** augmente les ressources attribuées au point de contrôle tandis qu’une valeur plus élevée les réduit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue toujours un point de contrôle lorsque cela est possible et l'instruction CHECKPOINT renvoie immédiatement les informations lorsqu'un point de contrôle se termine. Ainsi, dans certains cas, un point de contrôle peut se terminer avant ou après que la durée spécifiée soit écoulée.  
+ L’incidence de l’utilisation de *checkpoint_duration* sur les performances dépend du nombre de pages incorrectes, de l’activité sur le système et de la durée réelle spécifiée. Par exemple, si le point de contrôle s’effectue normalement en 120 secondes, le fait de spécifier une valeur *checkpoint_duration* de 45 secondes oblige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à allouer plus de ressources au point de contrôle que ne le ferait la valeur par défaut. À l’inverse, une valeur de 180 secondes spécifiée pour *checkpoint_duration* fait en sorte que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue moins de ressources que ce qui serait attribué par défaut. En règle générale, une valeur faible pour checkpoint_duration augmente les ressources attribuées au point de contrôle tandis qu’une valeur plus élevée les réduit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue toujours un point de contrôle lorsque cela est possible et l'instruction CHECKPOINT renvoie immédiatement les informations lorsqu'un point de contrôle se termine. Ainsi, dans certains cas, un point de contrôle peut se terminer avant ou après que la durée spécifiée soit écoulée.  
   
 ##  <a name="security"></a><a name="Security"></a> Sécurité  
   

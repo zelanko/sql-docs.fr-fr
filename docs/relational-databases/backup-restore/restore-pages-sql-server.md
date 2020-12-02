@@ -18,14 +18,14 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 902cb988e52eecedaa8ce95aeb3d922b6daef42c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759119"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125538"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurer des pages (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "85759119"
   
 1.  Connectez-vous à l'instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
-2.  Développez **Bases de données**. Selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système**et sélectionnez une base de données système.  
+2.  Développez **Bases de données**. Selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, pointez sur **Restaurer**, puis cliquez sur **Page**, pour ouvrir la boîte de dialogue **Restaurer la page** .  
   

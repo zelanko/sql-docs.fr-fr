@@ -23,11 +23,11 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80745e9ea57da0a2307c304c46aaa2ea831f84ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386705"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125264"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -103,7 +103,7 @@ Plus d’informations sur certaines pages de l’Assistant sont fournies ci-dess
   
  Si vous modifiez le nom de la base de données, les noms du fichier de données et des fichiers journaux changeront pour correspondre à la nouvelle valeur.  
   
- Le nom de la base de données est également utilisé comme nom de l'instance de la DAC. Le nom de l’instance est affiché sur le nœud de la DAC sous le nœud **Applications de la couche Données** dans l’ **Explorateur d’objets**ou sous le nœud **Applications de la couche Données déployées** dans l’ **Explorateur de l’utilitaire**.  
+ Le nom de la base de données est également utilisé comme nom de l'instance de la DAC. Le nom de l’instance est affiché sur le nœud de la DAC sous le nœud **Applications de la couche Données** dans l’ **Explorateur d’objets** ou sous le nœud **Applications de la couche Données déployées** dans l’ **Explorateur de l’utilitaire**.  
   
  Les options suivantes ne s'appliquent pas à [!INCLUDE[ssSDS](../../includes/sssds-md.md)]et ne sont pas affichées lors du déploiement vers [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

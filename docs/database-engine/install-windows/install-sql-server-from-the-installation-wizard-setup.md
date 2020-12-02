@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670434"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125969"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
@@ -326,14 +326,14 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
     > [!NOTE]  
     > Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop). 
+    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop). 
 
      Utilisez la page de **configuration du moteur de base de données - Mémoire** pour spécifier les valeurs **min server memory** and **max server memory** utilisées par cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après le démarrage. Vous pouvez utiliser les valeurs par défaut, les valeurs recommandées calculées ou spécifiez manuellement vos propres valeurs une fois que vous avez choisi l’option **Recommandé**.
      
     > [!NOTE]  
     > Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - Mémoire](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory). 
+    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - Mémoire](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory). 
 
      Utilisez la page **Configuration du moteur de base de données - FILESTREAM** pour activer FILESTREAM pour votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez la [page Configuration du moteur de base de données - FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
@@ -401,7 +401,7 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurez votre nouvelle[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017).  
+[Configurez votre nouvelle[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation](../../database-engine/configure-windows/database-engine-instances-sql-server.md).  
   
 Pour réduire la surface d'exposition d'un système, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et active de façon sélective les services et fonctionnalités clés. Pour plus d'informations, consultez [Configuration de la surface d'exposition](../../relational-databases/security/surface-area-configuration.md).  
   

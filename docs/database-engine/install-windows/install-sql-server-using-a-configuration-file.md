@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: c67682305f0ed48c1d96cf5ca41ad0e88e421e06
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670302"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125895"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installer SQL Server à l’aide d’un fichier de configuration
 
@@ -23,7 +23,7 @@ ms.locfileid: "91670302"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation permet de générer un fichier de configuration basé sur les entrées système par défaut et celles effectuées au moment de l’exécution. Vous pouvez utiliser le fichier de configuration pour déployer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la totalité de l'entreprise avec la même configuration. Vous pouvez également standardiser les installations manuelles dans l'ensemble de l'entreprise, en créant un fichier de commandes qui lance Setup.exe. 
  
-Cet article est conservé pour SQL Server 2016 et les versions ultérieures. Si vous utilisez une version antérieure de SQL Server, consultez [Installer SQL Server 2014 à l’aide d’un fichier de configuration](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
+Cet article est conservé pour SQL Server 2016 et les versions ultérieures. Si vous utilisez une version antérieure de SQL Server, consultez [Installer SQL Server 2014 à l’aide d’un fichier de configuration](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014&preserve-view=true).
  
 Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
   
