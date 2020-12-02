@@ -12,10 +12,10 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425671"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutoriel : Utiliser la source OData
@@ -83,7 +83,7 @@ ms.locfileid: "88425671"
   
 6.  Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**, entrez `c:\Employees.txt` dans **Nom de fichier**.  
   
-7.  Cliquez sur **Colonnes**dans le volet de navigation gauche. Vous pouvez définir les données de cette page.  
+7.  Cliquez sur **Colonnes** dans le volet de navigation gauche. Vous pouvez définir les données de cette page.  
   
 8.  Cliquez sur OK pour fermer la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
   

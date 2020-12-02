@@ -18,10 +18,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88327065"
 ---
 # <a name="ibm-db2-subscribers"></a>Abonnés IBM DB2
@@ -79,7 +79,7 @@ ms.locfileid: "88327065"
   
      **Pour créer un script d'article et le fournir en tant que script de création personnalisé**  
   
-    1.  Créez un script d'article en langage SQL DB2. Vérifiez que la première ligne du fichier contient **bypass_translation**et rien d'autre.  
+    1.  Créez un script d'article en langage SQL DB2. Vérifiez que la première ligne du fichier contient **bypass_translation** et rien d'autre.  
   
     2.  Exécutez sp_changearticle, en indiquant le chemin et le nom de fichier de la propriété *creation_script*.  
   

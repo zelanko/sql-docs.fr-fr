@@ -14,10 +14,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88425601"
 ---
 # <a name="use-a-recordset-destination"></a>Utiliser une destination de jeu d'enregistrements
@@ -73,19 +73,19 @@ ms.locfileid: "88425601"
   
 3.  Dans la fenêtre **Variables** , créez les variables qui contiendront l'ensemble d'enregistrements et les valeurs de colonne de la ligne actuelle :  
   
-    1.  Créez une variable nommée **BonusRecordset**et définissez son type sur **Object**.  
+    1.  Créez une variable nommée **BonusRecordset** et définissez son type sur **Object**.  
   
          La variable **BonusRecordset** contient le jeu d’enregistrements.  
   
-    2.  Créez une variable nommée **EmailAddress**et définissez son type sur **String**.  
+    2.  Créez une variable nommée **EmailAddress** et définissez son type sur **String**.  
   
          La variable **EmailAddress** contient l’adresse e-mail du vendeur.  
   
-    3.  Créez une variable nommée **FirstName**et définissez son type sur **String**.  
+    3.  Créez une variable nommée **FirstName** et définissez son type sur **String**.  
   
          La variable **FirstName** contient le prénom du vendeur.  
   
-    4.  Créez une variable nommée **Bonus**et définissez son type sur **Double**.  
+    4.  Créez une variable nommée **Bonus** et définissez son type sur **Double**.  
   
          La variable **Bonus** contient le montant de la prime du vendeur.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "88425601"
   
 4.  Sous l'onglet **Flux de données** , ajoutez une destination d'ensemble d'enregistrements et connectez-la à la source OLE DB.  
   
-5.  Ouvrez l' **Éditeur de destination d'ensemble d'enregistrements**et configurez la destination avec les paramètres suivants :  
+5.  Ouvrez l' **Éditeur de destination d'ensemble d'enregistrements** et configurez la destination avec les paramètres suivants :  
   
     1.  Dans l’onglet **Propriétés du composant** , pour la propriété **VariableName** , sélectionnez **User::BonusRecordset**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "88425601"
   
 1.  Sous l'onglet **Flux de contrôle** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ajoutez un conteneur de boucles Foreach et connectez-le à la tâche de flux de données.  
   
-2.  Ouvrez l' **Éditeur de boucle Foreach**et configurez le conteneur avec les paramètres suivants :  
+2.  Ouvrez l' **Éditeur de boucle Foreach** et configurez le conteneur avec les paramètres suivants :  
   
     1.  Sur la page **Collection** , pour **Énumérateur**, sélectionnez **Énumérateur ADO Foreach**, et pour **Variable source de l’objet ADO**, sélectionnez **User::BonusRecordset**.  
   

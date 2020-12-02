@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88408115"
 ---
 # <a name="indexes-on-computed-columns"></a>Index sur les colonnes calculées
@@ -95,9 +95,9 @@ La propriété **IsPrecise** de la fonction COLUMNPROPERTY indique si un paramè
 
 ## <a name="data-type-requirements"></a>Conditions requises liées aux types de données
   
--   Le paramètre *computed_column_expression* défini pour la colonne calculée ne peut pas correspondre aux types de données **text**, **ntext**ou **image** .  
+-   Le paramètre *computed_column_expression* défini pour la colonne calculée ne peut pas correspondre aux types de données **text**, **ntext** ou **image** .  
 -   Les colonnes calculées dérivées des types de données **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** peuvent être indexées tant que le type de données de lacolonne calculée est autorisé en tant que colonne clé d’index.  
--   Les colonnes calculées dérivées des types de données **image**, **ntext**et **text** peuvent être des colonnes (incluses) non-clés dans un index non-cluster tant que le type de données utilisé dans la colonne calculée lui permet d’être une colonne d’index non-clés.  
+-   Les colonnes calculées dérivées des types de données **image**, **ntext** et **text** peuvent être des colonnes (incluses) non-clés dans un index non-cluster tant que le type de données utilisé dans la colonne calculée lui permet d’être une colonne d’index non-clés.  
 
 
 ## <a name="set-option-requirements"></a>Conditions requises liées à l'option SET

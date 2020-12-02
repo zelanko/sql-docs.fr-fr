@@ -12,10 +12,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88457125"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Leçon 4-3 : Ajouter une redirection de flux d’erreurs

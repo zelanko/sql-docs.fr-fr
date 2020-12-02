@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88420493"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriétés de la publication, Options d'abonnement
@@ -66,7 +66,7 @@ ms.locfileid: "88420493"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine s'il est nécessaire d'autoriser l'utilisation de fichiers de sauvegarde pour initialiser les abonnements. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Autoriser les abonnés non-SQL Server**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine si la publication prend en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si cette option est définie sur **True**, les autres propriétés de publication prennent également en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option est en lecture seule si des abonnements existent. Elle ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement**, **Autoriser les abonnements mis à jour en attente**ou **Autoriser les abonnements d'égal à égal** a la valeur **True**. Pour plus d’informations, consultez [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Détermine si la publication prend en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si cette option est définie sur **True**, les autres propriétés de publication prennent également en charge les abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option est en lecture seule si des abonnements existent. Elle ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement**, **Autoriser les abonnements mis à jour en attente** ou **Autoriser les abonnements d'égal à égal** a la valeur **True**. Pour plus d’informations, consultez [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Transformation des données  
  **Autoriser les transformations de données**  
@@ -77,7 +77,7 @@ ms.locfileid: "88420493"
   
 ### <a name="peer-to-peer-replication"></a>Réplication d'égal à égal  
  **Autoriser les abonnements d'égal à égal**  
- S'applique uniquement à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures. Détermine si la publication prend en charge la réplication d'égal à égal. Si cette option est définie sur **True** , les autres propriétés de publication prennent également en charge la réplication d'égal à égal. Cette option est en lecture seule si des abonnements existent. Cette option ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement** , **Autoriser les abonnements mis à jour en attente**ou **Autoriser les Abonnés non-SQL Server** a la valeur **True**. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+ S'applique uniquement à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures. Détermine si la publication prend en charge la réplication d'égal à égal. Si cette option est définie sur **True** , les autres propriétés de publication prennent également en charge la réplication d'égal à égal. Cette option est en lecture seule si des abonnements existent. Cette option ne peut avoir la valeur **True** si l'option **Autoriser les abonnements mis à jour immédiatement** , **Autoriser les abonnements mis à jour en attente** ou **Autoriser les Abonnés non-SQL Server** a la valeur **True**. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Autoriser la détection de conflit d'égal à égal**  
  S'applique uniquement à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. Spécifie si la détection de conflit est activée pour cette publication. Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure, et la détection doit être activée pour tous les nœuds. Pour utiliser la détection de conflit, vous devez également spécifier une valeur pour **ID d'appelant de l'homologue**. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  

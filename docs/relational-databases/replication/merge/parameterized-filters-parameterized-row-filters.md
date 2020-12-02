@@ -22,10 +22,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 656f36cce2c1b458f2eb85c734709691b59a82bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88423543"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtres paramétrés - Filtres de lignes paramétrés
@@ -55,7 +55,7 @@ ms.locfileid: "88423543"
 >  Lors des comparaisons effectuées pour les filtres paramétrés, le classement de la base de données est toujours utilisé. Si, par exemple, le classement de la base de données ne respecte pas la casse mais que le classement de la table ou de la colonne le fait, la comparaison ne tiendra pas compte de la casse.  
   
 ### <a name="filtering-with-suser_sname"></a>Filtrage avec SUSER_SNAME()  
- Prenons l'exemple de la **table Employee** dans la base de données exemple [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] Cette table comprend la colonne **LoginID**qui contient le nom de connexion de chaque employé sous la forme «*domaine\connexion*». Pour filtrer la table afin que les employés reçoivent uniquement les données qui les concernent, spécifiez la clause de filtre suivante :  
+ Prenons l'exemple de la **table Employee** dans la base de données exemple [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] Cette table comprend la colonne **LoginID** qui contient le nom de connexion de chaque employé sous la forme «*domaine\connexion*». Pour filtrer la table afin que les employés reçoivent uniquement les données qui les concernent, spécifiez la clause de filtre suivante :  
   
 ```  
 LoginID = SUSER_SNAME()  
@@ -133,7 +133,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 |Les données des partitions ne se chevauchent pas et les données sont partagées entre les abonnements. L'Abonné ne peut pas mettre à jour les colonnes référencées dans un filtre paramétré.|N/A*|**Non-chevauchement ; partage entre les abonnements**|**2**|  
 |Les données des partitions ne se chevauchent pas et il n'existe qu'un seul abonnement par partition. L’Abonné ne peut pas mettre à jour les colonnes référencées dans un filtre paramétré.**|**Filtre paramétré créant des partitions qui ne se chevauchent pas, avec un seul abonnement par partition**|**Non-chevauchement ; abonnement unique**|**3**|  
   
- \*Si l’option de filtrage sous-jacente a la valeur **0**, **1** ou**2**, les boîtes de dialogue **Ajouter un filtre** et **Modifier le filtre** affichent le message suivant : **Une ligne de cette table ira à plusieurs abonnements**.  
+ \*Si l’option de filtrage sous-jacente a la valeur **0**, **1** ou **2**, les boîtes de dialogue **Ajouter un filtre** et **Modifier le filtre** affichent le message suivant : **Une ligne de cette table ira à plusieurs abonnements**.  
   
  ** Si vous spécifiez cette option, il ne peut y avoir qu’un seul abonnement pour chaque partition de données de cet article. Si un deuxième abonnement est créé dans lequel le critère de filtrage du nouvel abonnement produit la même partition que l'abonnement existant, ce dernier est supprimé.  
   
