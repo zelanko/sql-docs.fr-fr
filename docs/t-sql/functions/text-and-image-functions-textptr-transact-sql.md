@@ -22,10 +22,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 90365bd45edac8e3e5a131ab4786449352b70011
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92036463"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Fonctions texte et image - TEXTPTR (Transact-SQL)
@@ -64,10 +64,10 @@ TEXTPTR ( column )
   
 |Fonction ou instruction|Description|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Retourne la position d’un caractère dans la chaîne de caractères spécifiée dans les colonnes **text** et **ntext**.|  
-|DATALENGTH<b>(</b>_expression_ **)**|Retourne la longueur des données dans les colonnes de type **text**, **ntext** et **image**.|  
+|PATINDEX <b>('</b> _%pattern%_ **' ,** _expression_ **)**|Retourne la position d’un caractère dans la chaîne de caractères spécifiée dans les colonnes **text** et **ntext**.|  
+|DATALENGTH <b>(</b>_expression_ **)**|Retourne la longueur des données dans les colonnes de type **text**, **ntext** et **image**.|  
 |SET TEXTSIZE|Retourne la limite, en octets, des données **text**, **ntext** ou **image** à retourner avec une instruction SELECT.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|Retourne une chaîne **varchar** spécifiée par le décalage *start* et par la longueur *length*. La longueur doit être inférieure à 8 Ko.|  
+|SUBSTRING <b>(</b>_text_column_, _start_, _length_ **)**|Retourne une chaîne **varchar** spécifiée par le décalage *start* et par la longueur *length*. La longueur doit être inférieure à 8 Ko.|  
   
 ## <a name="examples"></a>Exemples  
   

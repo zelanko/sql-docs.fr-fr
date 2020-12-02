@@ -14,10 +14,10 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719795"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformation de recherche en mode Cache complet - Gestionnaire de connexions du cache
@@ -173,7 +173,7 @@ ms.locfileid: "91719795"
   
 9. Dans le package enfant, pour créer un gestionnaire de connexions du cache, cliquez avec le bouton droit dans la zone **Gestionnaires de connexions** , cliquez sur **Nouvelle connexion**, sélectionnez **CACHE** dans la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS** , puis cliquez sur **Ajouter**.  
   
-     La zone **Gestionnaires de connexions** apparaît au bas des onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d’événements** du concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+     La zone **Gestionnaires de connexions** apparaît au bas des onglets **Flux de contrôle**, **Flux de données** et **Gestionnaires d’événements** du concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 10. Dans **l’Éditeur du gestionnaire de connexions du cache**, sous l’onglet **Général** , configurez le gestionnaire de connexions du cache pour lire les données à partir du fichier cache que vous avez sélectionné en définissant les options suivantes :  
   
@@ -227,7 +227,7 @@ ms.locfileid: "91719795"
   
 2.  Cliquez avec le bouton droit dans la zone **Gestionnaires de connexions** , puis cliquez sur **Nouvelle connexion**.  
   
-     La zone **Gestionnaires de connexions** apparaît au bas des onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d’événements** du concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+     La zone **Gestionnaires de connexions** apparaît au bas des onglets **Flux de contrôle**, **Flux de données** et **Gestionnaires d’événements** du concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 3.  Dans la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS** , sélectionnez **CACHE**, puis cliquez sur **Ajouter** pour ajouter un gestionnaire de connexions du cache.  
   

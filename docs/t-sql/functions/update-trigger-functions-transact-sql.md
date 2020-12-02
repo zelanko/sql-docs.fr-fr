@@ -27,10 +27,10 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 05820d6b375329e3746cfb4ea64ba05d64dc3cf3
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379434"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - Fonctions de déclencheurs (Transact-SQL)
@@ -63,7 +63,7 @@ UPDATE ( column )
  IF UPDATE retourne la valeur TRUE dans les actions INSERT car des valeurs explicites ou implicites (NULL) sont insérées dans les colonnes.  
   
 > [!NOTE]  
->  La clause IF UPDATE(*colonne*n) fonctionne de la même manière qu’une clause IF, IF...ELSE ou WHILE, et elle peut utiliser le bloc BEGIN...END. Pour plus d’informations, consultez [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
+>  La clause IF UPDATE(*colonne* n) fonctionne de la même manière qu’une clause IF, IF...ELSE ou WHILE, et elle peut utiliser le bloc BEGIN...END. Pour plus d’informations, consultez [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) peut être utilisé dans n’importe quel endroit du corps d’un déclencheur [!INCLUDE[tsql](../../includes/tsql-md.md)].  
  

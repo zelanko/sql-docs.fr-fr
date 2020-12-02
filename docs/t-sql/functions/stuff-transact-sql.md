@@ -26,10 +26,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d798e00eccd5252c5142c0e6e19ac842b02d500d
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91379816"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -55,7 +55,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  Entier précisant la position de départ de la suppression et de l'insertion. Si *start* est négatif ou nul, une chaîne NULL est renvoyée. Si *start* est plus long que le premier argument *character_expression*, une chaîne NULL est renvoyée. *start* peut être de type **bigint**.  
   
  *length*  
- Entier spécifiant le nombre de caractères à supprimer. Si *length* est négatif, une chaîne NULL est renvoyée. Si *length* est plus long que le premier argument *character_expression*, la suppression s’effectue jusqu’au dernier caractère du dernier argument *character_expression*.  Si *length*est égal à zéro, l’insertion se produit à l’emplacement *start* et aucun caractère n’est supprimé. *length* peut être de type **bigint**.
+ Entier spécifiant le nombre de caractères à supprimer. Si *length* est négatif, une chaîne NULL est renvoyée. Si *length* est plus long que le premier argument *character_expression*, la suppression s’effectue jusqu’au dernier caractère du dernier argument *character_expression*.  Si *length* est égal à zéro, l’insertion se produit à l’emplacement *start* et aucun caractère n’est supprimé. *length* peut être de type **bigint**.
 
  *replaceWith_expression*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données caractères. *character_expression* peut être une constante, une variable ou une colonne de données binaires ou caractères. Cette expression remplace *length* caractères de *character_expression* en commençant à *start*. Le fait de fournir `NULL` comme argument *replaceWith_expression* supprime les caractères sans rien insérer.   

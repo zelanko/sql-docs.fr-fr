@@ -20,10 +20,10 @@ ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91867675"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d’index en ligne
@@ -32,7 +32,7 @@ ms.locfileid: "91867675"
 
 Lorsque vous effectuez des opérations en ligne sur les index, les directives suivantes s'appliquent :  
 
-- Les index cluster doivent être créés, reconstruits ou supprimés hors connexion quand la table sous-jacente contient les types de données LOB (Large OBject) suivants : **image**, **ntext**et **text**.  
+- Les index cluster doivent être créés, reconstruits ou supprimés hors connexion quand la table sous-jacente contient les types de données LOB (Large OBject) suivants : **image**, **ntext** et **text**.  
 - Les index non cluster non uniques peuvent être créés en ligne lorsque la table contient des types de données LOB, mais qu'aucune de ces colonnes n'est utilisée dans la définition de l'index en tant que colonne clé ou non-clé (incluse).  
 - Les index de tables temporaires locales ne peuvent pas être créés, reconstruits ou supprimés en ligne. Cette restriction ne s'applique pas aux index des tables temporaires globales.
 - L’exécution des index peut reprendre là où elle s’est arrêtée après une défaillance inattendue, un basculement de base de données ou une commande **PAUSE**. Consultez [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) et [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).

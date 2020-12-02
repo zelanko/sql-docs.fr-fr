@@ -23,10 +23,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91498183"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -159,7 +159,7 @@ ms.locfileid: "91498183"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**statut**|**tinyint**|État du message. Pour les messages retournés par la commande RECEIVE, l’état a toujours la valeur **0**. Dans la file d'attente, les messages peuvent contenir l'une des valeurs suivantes :<br /><br /> **0**= Prêt**1**= Message reçu**2**= Pas encore terminé**3**= Message envoyé conservé|  
+|**statut**|**tinyint**|État du message. Pour les messages retournés par la commande RECEIVE, l’état a toujours la valeur **0**. Dans la file d'attente, les messages peuvent contenir l'une des valeurs suivantes :<br /><br /> **0**= Prêt **1**= Message reçu **2**= Pas encore terminé **3**= Message envoyé conservé|  
 |**priority**|**tinyint**|Niveau de priorité de conversation appliqué au message.|  
 |**queuing_order**|**bigint**|Numéro d'ordre du message dans la file d'attente.|  
 |**conversation_group_id**|**uniqueidentifier**|Identificateur du groupe de conversations auquel ce message appartient.|  
@@ -171,7 +171,7 @@ ms.locfileid: "91498183"
 |**service_contract_id**|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du contrat suivi par la conversation.|  
 |**message_type_name**|**nvarchar (256)**|Nom du type de message qui décrit le format du message. Les messages peuvent être des types de messages d'application ou des messages système Service Broker.|  
 |**message_type_id**|**int**|Identificateur d'objet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du type de message décrivant le message.|  
-|**validation**|**nchar(2)**|Validation utilisée pour le message.<br /><br /> **E**=Empty**N**=None**X**=XML|  
+|**validation**|**nchar(2)**|Validation utilisée pour le message.<br /><br /> **E**=Empty **N**=None **X**=XML|  
 |**message_body**|**varbinary(MAX)**|Contenu du message.|  
   
 ## <a name="permissions"></a>Autorisations  

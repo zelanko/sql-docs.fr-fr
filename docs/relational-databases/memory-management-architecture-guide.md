@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91809815"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
@@ -142,7 +142,7 @@ Le comportement par défaut de la gestion de la mémoire du [!INCLUDE[ssDEnovers
 
 Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise dynamiquement la mémoire, il interroge régulièrement le système afin de déterminer la mémoire physique disponible. La conservation de cette mémoire libre empêche le système d'exploitation de paginer. S'il y a moins de mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en libère pour le système d'exploitation. S’il y a plus de mémoire disponible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer davantage de mémoire. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’ajoute de la mémoire que lorsque sa charge de travail en requiert davantage. Un serveur au repos n’augmente pas la taille de son espace d’adressage virtuel.  
   
-L’option **[Mémoire maximum du serveur](../database-engine/configure-windows/server-memory-server-configuration-options.md)** contrôle l’allocation de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la mémoire de compilation, tous les caches (notamment le pool de mémoires tampons), les [allocations de mémoire d’exécution des requêtes](#effects-of-min-memory-per-query), la [mémoire du gestionnaire de verrous](#memory-used-by-sql-server-objects-specifications) et la mémoire du CLR<sup>1</sup> (essentiellement les régisseurs de mémoire se trouvant dans **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** ). 
+L’option **[Mémoire maximum du serveur](../database-engine/configure-windows/server-memory-server-configuration-options.md)** contrôle l’allocation de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la mémoire de compilation, tous les caches (notamment le pool de mémoires tampons), les [allocations de mémoire d’exécution des requêtes](#effects-of-min-memory-per-query), la [mémoire du gestionnaire de verrous](#memory-used-by-sql-server-objects-specifications) et la mémoire du CLR <sup>1</sup> (essentiellement les régisseurs de mémoire se trouvant dans **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** ). 
 
 <sup>1</sup> La mémoire du CLR est gérée dans le cadre des allocations max_server_memory à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -163,7 +163,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
  
-<a name="stacksizes"></a> La mémoire pour les piles de threads<sup>1</sup>, le CLR<sup>2</sup>, les fichiers .dll de procédure étendue, les fournisseurs OLE DB référencés par les requêtes distribuées, les objets Automation référencés dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] et la mémoire allouée par une DLL non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**ne sont pas** contrôlées par max server memory.
+<a name="stacksizes"></a> La mémoire pour les piles de threads <sup>1</sup>, le CLR <sup>2</sup>, les fichiers .dll de procédure étendue, les fournisseurs OLE DB référencés par les requêtes distribuées, les objets Automation référencés dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] et la mémoire allouée par une DLL non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**ne sont pas** contrôlées par max server memory.
 
 <sup>1</sup> Pour plus d’informations sur les threads de worker par défaut calculés pour un nombre donné d’UC avec affinité dans l’hôte actif, consultez la page [Configurer l’option de configuration du serveur max worker threads](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) dans la documentation. Les tailles de pile [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont les suivantes :
 
@@ -343,7 +343,7 @@ Toutefois, l’utilisation de mutex peut entraîner une contention si de nombreu
 > [!NOTE]
 > Avant [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], l’indicateur de trace 8048 peut être utilisé pour forcer un PMO basé sur des nœuds à devenir un PMO basé sur le processeur. À compter de SP2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], ce comportement est dynamique et contrôlé par le moteur.
 
-À compter de SP2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], le [!INCLUDE[ssde_md](../includes/ssde_md.md)] peut détecter de manière dynamique la contention sur un objet CMemThread spécifique et promouvoir l’objet en une implémentation par nœud ou par processeur. Une fois promu, le PMO reste promu jusqu’au redémarrage du processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La contention de CMemThread peut être détectée par la présence des hautes attentes CMEMTHREAD dans la DMV [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) et en observant les colonnes de la DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) *contention_factor*, *partition_type*, *exclusive_allocations_count*et *waiting_tasks_count*.
+À compter de SP2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], le [!INCLUDE[ssde_md](../includes/ssde_md.md)] peut détecter de manière dynamique la contention sur un objet CMemThread spécifique et promouvoir l’objet en une implémentation par nœud ou par processeur.  Une fois promu, le PMO reste promu jusqu’au redémarrage du processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La contention de CMemThread peut être détectée par la présence des hautes attentes CMEMTHREAD dans la DMV [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) et en observant les colonnes de la DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) *contention_factor*, *partition_type*, *exclusive_allocations_count* et *waiting_tasks_count*.
 
 ## <a name="see-also"></a>Voir aussi
 [Mémoire du serveur (option de configuration de serveur)](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

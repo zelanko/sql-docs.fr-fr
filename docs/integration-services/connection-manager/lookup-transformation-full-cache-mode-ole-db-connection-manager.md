@@ -14,10 +14,10 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91719683"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformation de recherche en mode Cache complet - Gestionnaire de connexions OLE DB
@@ -35,7 +35,7 @@ ms.locfileid: "91719683"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui contient le package souhaité, puis double-cliquez sur le package dans l'Explorateur de solutions.  
   
-2.  Sous l’onglet **Flux de données** , faites glisser la transformation de recherche à partir de la **Boîte à outils**jusqu’à l’aire de conception.  
+2.  Sous l’onglet **Flux de données** , faites glisser la transformation de recherche à partir de la **Boîte à outils** jusqu’à l’aire de conception.  
   
 3.  Connectez la transformation de recherche au flux de données en faisant glisser un connecteur à partir d'une source ou d'une transformation précédente jusqu'à la transformation de recherche.  
   

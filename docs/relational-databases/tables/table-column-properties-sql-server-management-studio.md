@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ddf8c0360de470d5640ed650c4b8339061c41b4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91810482"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriétés des colonnes de table (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "91810482"
 >  Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au diagramme à l’aide du Concepteur de tables ou du Concepteur de diagrammes de base de données, celui-ci tente d’abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
   
  **Général**  
- Peut être développée pour afficher **Nom**, **Autoriser les valeurs NULL**, **Type de données**, **Valeur ou liaison par défaut**, **Longueur**, **Précision**et **Échelle**.  
+ Peut être développée pour afficher **Nom**, **Autoriser les valeurs NULL**, **Type de données**, **Valeur ou liaison par défaut**, **Longueur**, **Précision** et **Échelle**.  
   
  **Nom**  
  Affiche le nom de la colonne sélectionnée.  

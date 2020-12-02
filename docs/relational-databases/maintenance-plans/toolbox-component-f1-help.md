@@ -14,17 +14,17 @@ ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 295eaa677578effd375e5443fd20e1f5ca368669
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868641"
 ---
 # <a name="toolbox-component-f1-help"></a>Aide (F1) des composants de la boîte à outils
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La **boîte à outils** affiche divers éléments que vous pouvez utiliser dans les projets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez ouvrir la **boîte à outils** à partir du menu **Affichage** et ancrer cette fenêtre comme vous le souhaitez. Quand elle est ancrée, la **boîte à outils** peut rester affichée ou être masquée si elle est inutilisée à l’aide de l’option **Masquer automatiquement** .  
   
- Les icônes de la**boîte à outils** peuvent être glissées et déplacées ou copiées et collées dans des éditeurs de code ou sur des surfaces de mode de création au sein de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Les icônes de la **boîte à outils** peuvent être glissées et déplacées ou copiées et collées dans des éditeurs de code ou sur des surfaces de mode de création au sein de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="how-the-toolbox-works"></a>Fonctionnement de la boîte à outils  
  La boîte à outils est un contrôle d'arborescence qui se comporte comme l'Explorateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, mais sans quadrillages ou lignes de connexion. Plusieurs segments de la **boîte à outils** (appelés « onglets ») peuvent être développés simultanément, et l’intégralité de l’arborescence défile à l’intérieur de la fenêtre **Boîte à outils** . Pour développer un onglet de la **boîte à outils**, cliquez sur le signe plus (**+**) en regard de son nom. Pour réduire un onglet développé, cliquez sur le signe moins ( **-** ) en regard de son nom.  

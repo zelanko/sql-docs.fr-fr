@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91226879"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
@@ -59,7 +59,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 Modifiez le nom d’une table définie par l’utilisateur. Spécifiez la table à renommer avec un nom en une, deux ou trois parties. Spécifiez la nouvelle table *new_table_name* avec un nom en une partie.
 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
-**S’APPLIQUE À : ** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**S’APPLIQUE À :** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Modifiez le nom d’une base de données définie par l’utilisateur, de *database_name* à *new_database_name*. Vous ne pouvez pas renommer une base de données en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] les noms de base de données réservés suivants :
 

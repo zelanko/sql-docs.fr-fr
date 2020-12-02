@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91868939"
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
@@ -137,9 +137,9 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
  Pour plus d’informations sur la sauvegarde et la restauration de catalogues de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration de catalogues de texte intégral](./back-up-and-restore-full-text-catalogs-and-indexes.md) et [Restauration et sauvegarde de fichiers et catalogues de texte intégral](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))dans la documentation en ligne de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- Lorsque la base de données est restaurée sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nouveau fichier de base de données est crée pour le catalogue de texte intégral. Le nom par défaut de ce fichier est ftrow_*nom-catalogue*.ndf. Par exemple, si *nom-catalogue* est `cat1`, le nom par défaut du fichier de base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] serait `ftrow_cat1.ndf`. En revanche, si le nom par défaut est déjà utilisé dans le répertoire cible, le nouveau fichier de base de données serait nommé `ftrow_`*nom-catalogue*`{`*GUID*`}.ndf`, où *GUID* est l’identificateur global unique du nouveau fichier.  
+ Lorsque la base de données est restaurée sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nouveau fichier de base de données est crée pour le catalogue de texte intégral. Le nom par défaut de ce fichier est ftrow_ *nom-catalogue*.ndf. Par exemple, si *nom-catalogue* est `cat1`, le nom par défaut du fichier de base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] serait `ftrow_cat1.ndf`. En revanche, si le nom par défaut est déjà utilisé dans le répertoire cible, le nouveau fichier de base de données serait nommé `ftrow_`*nom-catalogue*`{`*GUID*`}.ndf`, où *GUID* est l’identificateur global unique du nouveau fichier.  
   
- Après avoir importé les catalogues, les fichiers **sys.database_files** et **sys.master_file**sont mis à jour pour supprimer les entrées de catalogue et la colonne de **chemin d’accès** dans **sys.fulltext_catalogs** a la valeur Null.  
+ Après avoir importé les catalogues, les fichiers **sys.database_files** et **sys.master_file** sont mis à jour pour supprimer les entrées de catalogue et la colonne de **chemin d’accès** dans **sys.fulltext_catalogs** a la valeur Null.  
   
  **Pour sauvegarder une base de données**  
   
