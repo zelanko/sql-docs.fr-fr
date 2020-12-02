@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88472916"
 ---
 # <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur
@@ -50,7 +50,7 @@ Pourquoi utiliser des fonctions définies par l’utilisateur (UDF) ?
   
 ##  <a name="types-of-functions"></a><a name="FunctionTypes"></a> Types de fonctions  
 **Fonction scalaire**  
- Les fonctions scalaires définies par l'utilisateur retournent une valeur de donnée unique dont le type est défini dans la clause RETURNS. Pour une fonction scalaire incluse, la valeur scalaire retournée est le résultat d'une instruction unique. Le corps d'une fonction scalaire à instructions multiples peut contenir une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retournent la valeur unique. Le type de retour peut être n’importe quel type de données, sauf **text**, **ntext**, **image**, **cursor**et **timestamp**. 
+ Les fonctions scalaires définies par l'utilisateur retournent une valeur de donnée unique dont le type est défini dans la clause RETURNS. Pour une fonction scalaire incluse, la valeur scalaire retournée est le résultat d'une instruction unique. Le corps d'une fonction scalaire à instructions multiples peut contenir une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retournent la valeur unique. Le type de retour peut être n’importe quel type de données, sauf **text**, **ntext**, **image**, **cursor** et **timestamp**. 
  **[Exemples.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Fonctions table**  

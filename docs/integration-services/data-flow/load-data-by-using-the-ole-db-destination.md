@@ -16,10 +16,10 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3165371fc1153636ae869b650468342e3614b024
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495827"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Charger des données à l'aide de la destination OLE DB
@@ -47,7 +47,7 @@ ms.locfileid: "88495827"
   
     -   **Table ou vue** : sélectionnez une table ou une vue dans la base de données qui contient les données.  
   
-    -   **Table ou vue - chargement rapide** : sélectionnez une table ou une vue dans la base de données qui contient les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Contrainte de validation**, **Lignes par lot**ou **Taille de validation d’insertion maximale**.  
+    -   **Table ou vue - chargement rapide** : sélectionnez une table ou une vue dans la base de données qui contient les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Contrainte de validation**, **Lignes par lot** ou **Taille de validation d’insertion maximale**.  
   
     -   **Variable de nom de table ou de vue** : sélectionnez la variable définie par l’utilisateur qui contient le nom d’une table ou d’une vue dans la base de données.  
   

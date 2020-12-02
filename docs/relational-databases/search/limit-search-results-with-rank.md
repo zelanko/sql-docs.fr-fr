@@ -20,10 +20,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f68204154f2bbbc3c78d3aeec7e9221a625f355d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470138"
 ---
 # <a name="limit-search-results-with-rank"></a>Limiter les résultats de la recherche avec RANK
@@ -145,7 +145,7 @@ GO
   
  Les statistiques telles que **IndexRowCount** peuvent fortement varier. Par exemple, si un catalogue a 2 milliards de lignes dans l'index principal, un nouveau document est indexé dans un index intermédiaire en mémoire ; par ailleurs, les rangs de ce document qui sont basés sur le nombre de documents dans l'index en mémoire peuvent être incorrects par rapport aux rangs des documents de l'index principal. Par conséquent, lorsqu'un remplissage entraîne l'indexation ou la réindexation d'un grand nombre de lignes, il est recommandé de fusionner les index dans un index principal via l'instruction ALTER FULLTEXT CATALOG ... Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Le Moteur d'indexation et de recherche en texte intégral fusionne automatiquement les index en fonction de paramètres tels que le nombre et la taille des index intermédiaires.  
   
- Les valeurs**MaxOccurrence** sont normalisées sous forme de 32 plages individuelles. Par exemple, un document de 50 mots est traité de la même façon qu'un document de 100 mots. Vous trouverez ci-dessous le tableau de normalisation utilisé. Les documents ayant une longueur comprise dans la plage située entre les valeurs adjacentes 32 et 128 du tableau, ils sont effectivement traités comme s’ils avaient le même nombre de mots, c’est-à-dire 128 (32 < **docLength** <= 128).  
+ Les valeurs **MaxOccurrence** sont normalisées sous forme de 32 plages individuelles. Par exemple, un document de 50 mots est traité de la même façon qu'un document de 100 mots. Vous trouverez ci-dessous le tableau de normalisation utilisé. Les documents ayant une longueur comprise dans la plage située entre les valeurs adjacentes 32 et 128 du tableau, ils sont effectivement traités comme s’ils avaient le même nombre de mots, c’est-à-dire 128 (32 < **docLength** <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

@@ -24,10 +24,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990398"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
@@ -311,7 +311,7 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 1.  Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Sélectionnez **Fichier**et **Connecter l’Explorateur d’objets** pour afficher la boîte de dialogue **Se connecter au serveur** .  
+2.  Sélectionnez **Fichier** et **Connecter l’Explorateur d’objets** pour afficher la boîte de dialogue **Se connecter au serveur** .  
   
 3.  Sélectionnez **Integration Services** dans la liste **Type de serveur** .  
   

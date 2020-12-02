@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88470182"
 ---
 # <a name="validate-replicated-data"></a>Valider des données répliquées
@@ -39,7 +39,7 @@ La réplication transactionnelle et de fusion vous permet de vérifier que les d
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>Fonctionnement de la validation des données  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide les données en calculant un nombre de lignes et/ou une somme de contrôle sur le serveur de publication, puis en comparant ces valeurs au nombre de lignes et/ou à la somme de contrôle calculé sur l'Abonné. Une valeur est calculée pour l'ensemble de la table de publication et une autre est calculée pour l'ensemble de la table d'abonnement, mais les données des colonnes **text**, **ntext**ou **image** ne sont pas prises en compte dans les calculs.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide les données en calculant un nombre de lignes et/ou une somme de contrôle sur le serveur de publication, puis en comparant ces valeurs au nombre de lignes et/ou à la somme de contrôle calculé sur l'Abonné. Une valeur est calculée pour l'ensemble de la table de publication et une autre est calculée pour l'ensemble de la table d'abonnement, mais les données des colonnes **text**, **ntext** ou **image** ne sont pas prises en compte dans les calculs.  
   
  Pendant l'exécution des calculs, des verrous partagés sont temporairement placés sur les tables pour lesquelles le nombre de lignes ou la somme de contrôle est calculé. Ces calculs sont cependant effectués rapidement et les verrous partagés sont généralement retirés au bout de quelques secondes.  
   

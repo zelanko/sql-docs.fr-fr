@@ -27,10 +27,10 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fdb28c8ef89b9c8b79b482b0887f9a0bf40cbb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88487062"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
@@ -103,7 +103,7 @@ L’Assistant Copie de base de données déplace ou copie des bases de données 
  Vous devez être membre du rôle de serveur fixe **sysadmin** sur le serveur source et sur le serveur de destination.  
   
 ##  <a name="the-copy-database-wizard-pages"></a><a name="Overview"></a> Pages de l’Assistant Copie de base de données 
-Lancez l’ **Assistant Copie de base de données** dans SQL Server Management Studio à partir de l’ **Explorateur d’objets** et développez **Bases de données**.  Ensuite, cliquez avec le bouton droit sur une base de données, pointez vers **Tâches**et cliquez sur **Copier la base de données**.  Si la page d’accueil **Bienvenue dans l’Assistant Copie de base de données** s’affiche, cliquez sur **Suivant**.
+Lancez l’ **Assistant Copie de base de données** dans SQL Server Management Studio à partir de l’ **Explorateur d’objets** et développez **Bases de données**.  Ensuite, cliquez avec le bouton droit sur une base de données, pointez vers **Tâches** et cliquez sur **Copier la base de données**.  Si la page d’accueil **Bienvenue dans l’Assistant Copie de base de données** s’affiche, cliquez sur **Suivant**.
 
 
 ### <a name="select-a-source-server"></a>Sélectionner un serveur source
@@ -306,9 +306,9 @@ Que vous choisissiez **Déplacer** ou **Copier**, **Détacher et attacher** ou *
 
 3.  Si la page d’accueil **Bienvenue dans l’Assistant Copie de base de données** s’affiche, cliquez sur **Suivant**.
 
-4.  Page**Sélectionner un serveur source** : spécifiez le serveur avec la base de données à déplacer ou copier.  Sélectionnez la méthode d'authentification.  Si vous choisissez **Utiliser l’authentification SQL Server** , vous devez entrer vos informations d’identification de connexion.  Cliquez sur **Suivant** pour établir la connexion au serveur source.  Cette connexion reste active tout au long de la session.
+4.  Page **Sélectionner un serveur source** : spécifiez le serveur avec la base de données à déplacer ou copier.  Sélectionnez la méthode d'authentification.  Si vous choisissez **Utiliser l’authentification SQL Server** , vous devez entrer vos informations d’identification de connexion.  Cliquez sur **Suivant** pour établir la connexion au serveur source.  Cette connexion reste active tout au long de la session.
 
-5.  Page**Sélectionner un serveur de destination** : spécifiez le serveur sur lequel la base de données sera déplacée ou copiée.  Sélectionnez la méthode d'authentification.  Si vous choisissez **Utiliser l’authentification SQL Server** , vous devez entrer vos informations d’identification de connexion.  Cliquez sur **Suivant** pour établir la connexion au serveur source.  Cette connexion reste active tout au long de la session.
+5.  Page **Sélectionner un serveur de destination** : spécifiez le serveur sur lequel la base de données sera déplacée ou copiée.  Sélectionnez la méthode d'authentification.  Si vous choisissez **Utiliser l’authentification SQL Server** , vous devez entrer vos informations d’identification de connexion.  Cliquez sur **Suivant** pour établir la connexion au serveur source.  Cette connexion reste active tout au long de la session.
 
      > **REMARQUE** Vous pouvez lancer l’Assistant Copie de base de données à partir d’une base de données.  Vous pouvez utiliser l’Assistant Copie de base de données à partir du serveur source ou de destination.
   
@@ -319,23 +319,23 @@ L’exemple suivant déplace la base de données `Sales` , une connexion Windows
 
 7.  De retour dans l’ **Assistant**, page **Sélectionner la méthode de transfert** : vérifiez et conservez les valeurs par défaut.  Cliquez sur **Suivant**.
   
-8.  Page**Sélectionner les bases de données** : cochez la case **Déplacer** pour la base de données souhaitée, `Sales`.  Cliquez sur **Suivant**.
+8.  Page **Sélectionner les bases de données** : cochez la case **Déplacer** pour la base de données souhaitée, `Sales`.  Cliquez sur **Suivant**.
   
-9.  Page**Configurer la base de données de Destination** : l’ **Assistant** a déterminé que `Sales` existe déjà sur le serveur de destination, tel qu’elle a été créée à l’ **étape 6** ci-dessus et a ajouté `_new` au nom de la **base de données de destination** .  Supprimez `_new` de la zone de texte **Base de données de destination** .  Si vous le souhaitez, modifiez le **nom de fichier**et le **dossier de destination**.  Sélectionnez **Supprimer les bases de données portant le même nom sur le serveur de destination, puis poursuivre le transfert de base de données en remplaçant les fichiers de base de données existants**.  Cliquez sur **Suivant**.
+9.  Page **Configurer la base de données de Destination** : l’ **Assistant** a déterminé que `Sales` existe déjà sur le serveur de destination, tel qu’elle a été créée à l’ **étape 6** ci-dessus et a ajouté `_new` au nom de la **base de données de destination** .  Supprimez `_new` de la zone de texte **Base de données de destination** .  Si vous le souhaitez, modifiez le **nom de fichier** et le **dossier de destination**.  Sélectionnez **Supprimer les bases de données portant le même nom sur le serveur de destination, puis poursuivre le transfert de base de données en remplaçant les fichiers de base de données existants**.  Cliquez sur **Suivant**.
   
-10. Page**Sélectionner des objets serveur** : dans le panneau **Objets connexes sélectionnés** , cliquez sur le bouton de sélection **Connexions des noms d’objets**.  Sous **Options de copie** , sélectionnez **Copier uniquement les connexions sélectionnées**.  Cochez la case **Afficher toutes les connexions serveur**.  Cochez la case **Connexion** pour `contoso\Jennie`.  Cliquez sur **OK**.  Dans le panneau **Objets connexes disponibles** , sélectionnez **Travaux SQL Server Agent** , puis cliquez sur le bouton **>** .  Dans le panneau **Objets connexes sélectionnés** , cliquez sur le bouton de sélection **Travaux SQL Server Agent**.  Sous **Options de copie** , sélectionnez **Copier uniquement les travaux sélectionnés**.  Cochez la case pour `Jennie's Report`.  Cliquez sur **OK**.  Cliquez sur **Suivant**.  
+10. Page **Sélectionner des objets serveur** : dans le panneau **Objets connexes sélectionnés** , cliquez sur le bouton de sélection **Connexions des noms d’objets**.  Sous **Options de copie** , sélectionnez **Copier uniquement les connexions sélectionnées**.  Cochez la case **Afficher toutes les connexions serveur**.  Cochez la case **Connexion** pour `contoso\Jennie`.  Cliquez sur **OK**.  Dans le panneau **Objets connexes disponibles** , sélectionnez **Travaux SQL Server Agent** , puis cliquez sur le bouton **>** .  Dans le panneau **Objets connexes sélectionnés** , cliquez sur le bouton de sélection **Travaux SQL Server Agent**.  Sous **Options de copie** , sélectionnez **Copier uniquement les travaux sélectionnés**.  Cochez la case pour `Jennie's Report`.  Cliquez sur **OK**.  Cliquez sur **Suivant**.  
   
-11. Page**Emplacement des fichiers de base de données source** : cliquez sur le bouton de sélection **Partage de fichiers sur le serveur source** et accédez à l’emplacement du dossier donné.  Par exemple, pour l’emplacement du dossier `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` , utilisez `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` pour **Partage de fichier sur le serveur source**.  Cliquez sur **Suivant**.
+11. Page **Emplacement des fichiers de base de données source** : cliquez sur le bouton de sélection **Partage de fichiers sur le serveur source** et accédez à l’emplacement du dossier donné.  Par exemple, pour l’emplacement du dossier `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` , utilisez `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` pour **Partage de fichier sur le serveur source**.  Cliquez sur **Suivant**.
   
-12. Page**Configurer le package** : dans la zone de texte **Nom du package** , entrez `SalesFromServer1toServer2_Move`.  Cochez la case **Enregistrer les journaux de transfert ?** .  Dans la liste déroulante **Options de journalisation** , sélectionnez **Fichier texte**.  Notez le **chemin du fichier journal des erreurs**; modifiez-le selon vos besoins.  Cliquez sur **Suivant**.  
+12. Page **Configurer le package** : dans la zone de texte **Nom du package** , entrez `SalesFromServer1toServer2_Move`.  Cochez la case **Enregistrer les journaux de transfert ?** .  Dans la liste déroulante **Options de journalisation** , sélectionnez **Fichier texte**.  Notez le **chemin du fichier journal des erreurs**; modifiez-le selon vos besoins.  Cliquez sur **Suivant**.  
   
      > **REMARQUE** Le **chemin du fichier journal des erreurs** est le chemin sur le serveur de destination.
   
-13. Page**Planifier le package** : sélectionnez le proxy approprié dans la liste déroulante **Compte proxy Integration Services** .  Cliquez sur **Suivant**.
+13. Page **Planifier le package** : sélectionnez le proxy approprié dans la liste déroulante **Compte proxy Integration Services** .  Cliquez sur **Suivant**.
 
-14. Page**Terminer l’Assistant** : passez en revue la synthèse des options sélectionnées.  Cliquez sur **Précédent** pour modifier une option.  Cliquez sur **Terminer** pour exécuter la tâche.  Au cours du transfert, la page **Exécution de l’opération** permet de surveiller les informations d’état relatives à l’exécution de l’ **Assistant**.
+14. Page **Terminer l’Assistant** : passez en revue la synthèse des options sélectionnées.  Cliquez sur **Précédent** pour modifier une option.  Cliquez sur **Terminer** pour exécuter la tâche.  Au cours du transfert, la page **Exécution de l’opération** permet de surveiller les informations d’état relatives à l’exécution de l’ **Assistant**.
 
-15. Page**Exécution de l’opération** : si l’opération a réussi, cliquez sur **Fermer**.  Si l’opération n’aboutit pas, passez en revue le journal des erreurs et cliquez éventuellement sur **Précédent** pour examiner les étapes antérieures.  Sinon, cliquez sur **Fermer**.
+15. Page **Exécution de l’opération** : si l’opération a réussi, cliquez sur **Fermer**.  Si l’opération n’aboutit pas, passez en revue le journal des erreurs et cliquez éventuellement sur **Précédent** pour examiner les étapes antérieures.  Sinon, cliquez sur **Fermer**.
   
 16. **Étapes postérieures au déplacement** Envisagez l’exécution des instructions T-SQL suivantes sur le nouvel hôte, `Server2`:
   
@@ -362,25 +362,25 @@ L’exemple suivant déplace la base de données `Sales` , une connexion Windows
 ### <a name="b-----copy-database-using-detach-and-attach-method-to-the-same-instance-and-set-recurring-schedule"></a>**B.     Copiez la base de données à l’aide de la méthode de détachement et d’attachement vers la même instance et définissez une planification périodique.**  
 Dans cet exemple, la base de données `Sales` est copiée et créée en tant que `SalesCopy` sur la même instance.  Par la suite, `SalesCopy`est recréée toutes les semaines.
 
-6.  Page**Sélectionner une méthode de transfert** : vérifiez et conservez les valeurs par défaut.  Cliquez sur **Suivant**.
+6.  Page **Sélectionner une méthode de transfert** : vérifiez et conservez les valeurs par défaut.  Cliquez sur **Suivant**.
 
-7.  Page**Sélectionner les bases de données** : cochez la case **Copier** pour la base de données `Sales` .  Cliquez sur **Suivant**.
+7.  Page **Sélectionner les bases de données** : cochez la case **Copier** pour la base de données `Sales` .  Cliquez sur **Suivant**.
 
-8.  Page**Configurer la base de données de Destination** : remplacez le nom de la **base de données de destination** par `SalesCopy`.  Si vous le souhaitez, modifiez le **nom de fichier**et le **dossier de destination**.  Sélectionnez **Supprimer les bases de données portant le même nom sur le serveur de destination, puis poursuivre le transfert de base de données en remplaçant les fichiers de base de données existants**.  Cliquez sur **Suivant**.
+8.  Page **Configurer la base de données de Destination** : remplacez le nom de la **base de données de destination** par `SalesCopy`.  Si vous le souhaitez, modifiez le **nom de fichier** et le **dossier de destination**.  Sélectionnez **Supprimer les bases de données portant le même nom sur le serveur de destination, puis poursuivre le transfert de base de données en remplaçant les fichiers de base de données existants**.  Cliquez sur **Suivant**.
 
-9.  Page**Configurer le package** : dans la zone de texte **Nom du package** , entrez `SalesCopy Weekly Refresh`.  Cochez la case **Enregistrer les journaux de transfert ?** .  Cliquez sur **Suivant**.
+9.  Page **Configurer le package** : dans la zone de texte **Nom du package** , entrez `SalesCopy Weekly Refresh`.  Cochez la case **Enregistrer les journaux de transfert ?** .  Cliquez sur **Suivant**.
 
-10. Page**Planifier le package** : cliquez sur la case d’option **Planification** , puis cliquez sur le bouton **Modifier la planification** . 
+10. Page **Planifier le package** : cliquez sur la case d’option **Planification** , puis cliquez sur le bouton **Modifier la planification** . 
  
-    1. Page**Nouvelle planification du travail** : dans la zone **Nom** , entrez `Weekly on Sunday`. 
+    1. Page **Nouvelle planification du travail** : dans la zone **Nom** , entrez `Weekly on Sunday`. 
           
     2. Cliquez sur **OK**.
 
 11. Sélectionnez le proxy approprié dans la liste déroulante **Compte proxy Integration Services** .  Cliquez sur **Suivant**.
 
-12. Page**Terminer l’Assistant** : passez en revue la synthèse des options sélectionnées.  Cliquez sur **Précédent** pour modifier une option.  Cliquez sur **Terminer** pour exécuter la tâche.  Pendant la création du package, la page **Exécution de l’opération** permet de surveiller les informations d’état relatives à l’exécution de l’ **Assistant**.
+12. Page **Terminer l’Assistant** : passez en revue la synthèse des options sélectionnées.  Cliquez sur **Précédent** pour modifier une option.  Cliquez sur **Terminer** pour exécuter la tâche.  Pendant la création du package, la page **Exécution de l’opération** permet de surveiller les informations d’état relatives à l’exécution de l’ **Assistant**.
 
-13. Page**Exécution de l’opération** : si l’opération a réussi, cliquez sur **Fermer**.  Si l’opération n’aboutit pas, passez en revue le journal des erreurs et cliquez éventuellement sur **Précédent** pour examiner les étapes antérieures.  Sinon, cliquez sur **Fermer**.
+13. Page **Exécution de l’opération** : si l’opération a réussi, cliquez sur **Fermer**.  Si l’opération n’aboutit pas, passez en revue le journal des erreurs et cliquez éventuellement sur **Précédent** pour examiner les étapes antérieures.  Sinon, cliquez sur **Fermer**.
 
 14. Démarrez manuellement le travail SQL Server Agent nouvellement créé `SalesCopy weekly refresh`.  Passez en revue l’historique des travaux et vérifiez que `SalesCopy` existe maintenant sur l’instance.
 

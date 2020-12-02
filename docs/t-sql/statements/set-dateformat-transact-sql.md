@@ -29,10 +29,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 13000e068c82ff3224eda50b7012bf06c7b83204
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89541236"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
@@ -59,7 +59,7 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="remarks"></a>Remarques  
  Le paramètre DATEFORMAT **ydm** n’est pas pris en charge pour les types de données **date**, **datetime2** et **datetimeoffset**.  
   
- Le paramètre DATEFORMAT peut interpréter des chaînes de caractères différemment pour les types de données de date, en fonction de leur format de chaîne. Par exemple, les interprétations **datetime** et **smalldatetime** peuvent ne pas correspondre à **date**, **datetime2** ou ** datetimeoffset**. Le paramètre DATEFORMAT affecte l’interprétation des chaînes de caractères quand elles sont converties en valeurs de date pour la base de données. Il n’affecte pas l’affichage des valeurs du type de données Date ni leur format de stockage dans la base de données.  
+ Le paramètre DATEFORMAT peut interpréter des chaînes de caractères différemment pour les types de données de date, en fonction de leur format de chaîne. Par exemple, les interprétations **datetime** et **smalldatetime** peuvent ne pas correspondre à **date**, **datetime2** ou **datetimeoffset**. Le paramètre DATEFORMAT affecte l’interprétation des chaînes de caractères quand elles sont converties en valeurs de date pour la base de données. Il n’affecte pas l’affichage des valeurs du type de données Date ni leur format de stockage dans la base de données.  
   
  Certains formats de chaînes de caractères, par exemple ISO 8601, sont interprétés indépendamment du paramètre DATEFORMAT.  
   

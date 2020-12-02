@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488557"
 ---
 # <a name="modify-check-constraints"></a>Modifier des contraintes de validation
@@ -56,7 +56,7 @@ ms.locfileid: "88488557"
   
 2.  Dans le menu **Concepteur de tables** , cliquez sur **Vérifier les contraintes...**.  
   
-3.  Sélectionnez dans la liste **Contrainte de validation sélectionnée** de la boîte de dialogue **Contraintes de validation**la la contrainte que vous souhaitez modifier.  
+3.  Sélectionnez dans la liste **Contrainte de validation sélectionnée** de la boîte de dialogue **Contraintes de validation** la la contrainte que vous souhaitez modifier.  
   
 4.  Effectuez l'une des actions décrites dans le tableau suivant :  
   

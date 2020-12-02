@@ -17,10 +17,10 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5cde3dc6eb7805f412ed7e820fb4946cf0c20c1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88477635"
 ---
 # <a name="ole-db-command-transformation"></a>transformation de commande OLE DB
@@ -38,7 +38,7 @@ ms.locfileid: "88477635"
   
 -   Spécifiez la page de codes par défaut.  
   
- En général, l'instruction SQL inclut des paramètres. Les valeurs des paramètres sont stockées dans des colonnes externes dans l'entrée de transformation et le mappage d'une colonne d'entrée à une colonne externe mappe une colonne d'entrée à un paramètre. Par exemple, pour rechercher des lignes dans la table **DimProduct** par la valeur de leur colonne **ProductKey** et pour les supprimer, vous pouvez mapper la colonne externe nommée **Param_0** à la colonne d’entrée nommée **ProductKey** , puis exécuter l’instruction SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. La transformation de commande OLE DB fournit les noms des paramètres, que vous ne pouvez pas modifier. Les noms des paramètres sont **Param_0**, **Param_1**et ainsi de suite.  
+ En général, l'instruction SQL inclut des paramètres. Les valeurs des paramètres sont stockées dans des colonnes externes dans l'entrée de transformation et le mappage d'une colonne d'entrée à une colonne externe mappe une colonne d'entrée à un paramètre. Par exemple, pour rechercher des lignes dans la table **DimProduct** par la valeur de leur colonne **ProductKey** et pour les supprimer, vous pouvez mapper la colonne externe nommée **Param_0** à la colonne d’entrée nommée **ProductKey** , puis exécuter l’instruction SQL `DELETE FROM DimProduct WHERE ProductKey = ?`. La transformation de commande OLE DB fournit les noms des paramètres, que vous ne pouvez pas modifier. Les noms des paramètres sont **Param_0**, **Param_1** et ainsi de suite.  
   
  Si vous configurez la transformation de commande OLE DB à l'aide de la boîte de dialogue **Éditeur avancé** , les paramètres de l'instruction SQL peuvent être mappés automatiquement à des colonnes externes dans l'entrée de transformation (et les caractéristiques de chaque paramètre définis) en cliquant sur le bouton **Actualiser** . Toutefois, si le fournisseur OLE DB utilisé par la transformation de commande OLE DB ne prend pas en charge la dérivation d'informations de paramètres à partir du paramètre, vous devez configurer les colonnes externes manuellement. Cela signifie que vous devez ajouter une colonne pour chaque paramètre à l’entrée externe de la transformation, mettre à jour les noms de colonnes de façon à utiliser des noms tels que **Param_0**, spécifier la valeur de la propriété DBParamInfoFlags, puis mapper les colonnes d’entrée qui contiennent des valeurs de paramètres aux colonnes externes.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "88477635"
   
 11. Développez **Entrée de commande OLE DB**, puis **Colonnes externes**.  
   
-12. Vérifiez que **Colonnes externes** contient une colonne pour chaque paramètre de l'instruction SQL. Les noms des colonnes sont **Param_0**, **Param_1**et ainsi de suite.  
+12. Vérifiez que **Colonnes externes** contient une colonne pour chaque paramètre de l'instruction SQL. Les noms des colonnes sont **Param_0**, **Param_1** et ainsi de suite.  
   
      Vous ne devez pas modifier les noms des colonnes. Si vous modifiez les noms des colonnes, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] génère une erreur de validation pour la transformation de commande OLE DB.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88477635"
   
     -   Cliquez une fois sur **Ajouter une colonne** pour chaque paramètre de l'instruction SQL.  
   
-    -   Mettez à jour les noms des colonnes comme suit : **Param_0**, **Param_1**et ainsi de suite.  
+    -   Mettez à jour les noms des colonnes comme suit : **Param_0**, **Param_1** et ainsi de suite.  
   
     -   Spécifiez une valeur dans la propriété DBParamInfoFlags. La valeur doit correspondre à une valeur de l'énumération OLE DB DBPARAMFLAGSENUM. Pour plus d'informations, consultez la documentation de référence OLE DB.  
   

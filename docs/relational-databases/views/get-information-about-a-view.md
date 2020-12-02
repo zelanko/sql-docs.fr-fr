@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1dd037349e2e8126a74fbd895598f3ef05e06583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88488601"
 ---
 # <a name="get-information-about-a-view"></a>Obtenir des informations au sujet d'une vue
@@ -143,7 +143,7 @@ ms.locfileid: "88488601"
      Affiche une description des instructions SQL. Pour afficher l’intégralité de la description ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(...)** situé à droite de la propriété. Vos commentaires peuvent contenir les noms des utilisateurs de la vue et le moment d'utilisation.  
   
      **Spécification Top**  
-     Se développe pour afficher les propriétés **Top**, **Expression**, **Pourcentage**et **With Ties** .  
+     Se développe pour afficher les propriétés **Top**, **Expression**, **Pourcentage** et **With Ties** .  
   
      **(Top)**  
      Indique que la vue doit contenir une clause TOP, qui ne retourne que les n premières lignes ou n premiers pour cent des lignes du jeu de résultats. Par défaut, la vue retourne les 10 premières lignes dans le jeu de résultats. Utilisez cette option pour modifier le nombre de lignes à retourner ou pour spécifier un autre pourcentage.  

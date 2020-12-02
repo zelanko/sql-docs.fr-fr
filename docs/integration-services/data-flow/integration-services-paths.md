@@ -22,10 +22,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88495855"
 ---
 # <a name="integration-services-paths"></a>Chemins d'accès d'Integration Services
@@ -42,7 +42,7 @@ ms.locfileid: "88495855"
   
  Le nom, la description et l'annotation du chemin d'accès sont des propriétés que vous pouvez configurer. Vous pouvez également configurer les chemins d'accès par programme. Pour plus d’informations, consultez [Connexion de composants de flux de données par programme](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
- Une annotation de chemin d’accès affiche le nom de la source du chemin d’accès ou le nom du chemin d’accès sur l’aire de conception de l’onglet **Flux de données** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Les annotations de chemins d'accès sont similaires aux annotations ajoutées aux flux de données, aux flux de contrôles et aux gestionnaires d'événements. La seule différence est qu’une annotation de chemin d’accès est attachée à un chemin d’accès, alors que les autres annotations apparaissent sous les onglets **Flux de données**, **Flux de contrôle**et **Gestionnaires d’événements**du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ Une annotation de chemin d’accès affiche le nom de la source du chemin d’accès ou le nom du chemin d’accès sur l’aire de conception de l’onglet **Flux de données** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Les annotations de chemins d'accès sont similaires aux annotations ajoutées aux flux de données, aux flux de contrôles et aux gestionnaires d'événements. La seule différence est qu’une annotation de chemin d’accès est attachée à un chemin d’accès, alors que les autres annotations apparaissent sous les onglets **Flux de données**, **Flux de contrôle** et **Gestionnaires d’événements** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Les métadonnées indiquent le nom, le type de données, la précision, l'échelle, la longueur, la page de codes et le composant source de chaque colonne dans la sortie du composant précédent. Le composant source est le composant du flux de données ayant créé la colonne. Il peut ou non s'agir du premier composant du flux de données. Par exemple, les transformations d'union totale et de tri créent leurs propres colonnes et sont les sources de leurs colonnes de sortie. À l'inverse, une transformation de copie de colonne peut transmettre des colonnes sans les modifier ou créer des colonnes en copiant les colonnes d'entrée. La transformation de copie de colonne est le composant source des nouvelles colonnes uniquement.  
 
@@ -159,6 +159,6 @@ Les objets de flux de données dans le modèle d’objet [!INCLUDE[msCoName](../
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Integer (énumération)|Valeur qui indique si une annotation doit être affichée avec le chemin d'accès sur l'aire du concepteur. Les valeurs possibles sont **AsNeeded**, **SourceName**, **PathName**et **Never**. La valeur par défaut est **AsNeeded**.|  
+|PathAnnotation|Integer (énumération)|Valeur qui indique si une annotation doit être affichée avec le chemin d'accès sur l'aire du concepteur. Les valeurs possibles sont **AsNeeded**, **SourceName**, **PathName** et **Never**. La valeur par défaut est **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|Entrée associée au chemin d'accès.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|Sortie associée au chemin d'accès.|  

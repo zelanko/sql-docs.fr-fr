@@ -12,10 +12,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88471996"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Leçon 3-3 : Test des packages déployés
@@ -40,7 +40,7 @@ Les dossiers de niveau supérieur dans le dossier Packages stockés représenten
   
 ### <a name="to-connect-to-integration-services-in-sql-server-management-studio"></a>Pour vous connecter à Integration Services dans SQL Server Management Studio  
   
-1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, puis sur **Microsoft SQL Server 2005**et cliquez sur **SQL Server Management Studio**.  
+1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, puis sur **Microsoft SQL Server 2005** et cliquez sur **SQL Server Management Studio**.  
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , dans la liste **Type de serveur** , sélectionnez **Integration Services** , entrez un nom de serveur dans la zone **Nom de serveur** , puis cliquez sur **Se connecter**.  
   

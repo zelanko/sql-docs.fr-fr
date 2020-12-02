@@ -12,10 +12,10 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "90990408"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Leçon 1-7 : Ajouter et configurer la destination OLE DB
@@ -52,7 +52,7 @@ Au cours de cette tâche, vous allez ajouter et configurer une destination OLE D
   
 11. Sélectionnez **Mappages**.  
   
-12. Vérifiez que les colonnes d’entrée **AverageRate**, **CurrencyKey**, **EndOfDayRate**et **DateKey** sont correctement mappées aux colonnes de destination. Si des colonnes aux noms identiques sont mappées, le mappage est correct.  
+12. Vérifiez que les colonnes d’entrée **AverageRate**, **CurrencyKey**, **EndOfDayRate** et **DateKey** sont correctement mappées aux colonnes de destination. Si des colonnes aux noms identiques sont mappées, le mappage est correct.  
   
 13. Sélectionnez **OK**.  
   
