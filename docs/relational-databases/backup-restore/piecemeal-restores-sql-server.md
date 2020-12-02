@@ -14,14 +14,14 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3681cad0b17f2241ae388c19ba34c18578bc258f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670238"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130342"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurations fragmentaires (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "85670238"
   
  Pour plus d’informations sur les restaurations fragmentaires et les tables optimisées en mémoire, consultez [Restauration fragmentaire de bases de données avec des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
- Une*restauration fragmentaire* autorise la restauration et la récupération par étapes des bases de données contenant plusieurs groupes de fichiers. La restauration fragmentaire implique une suite de séquences de restauration, en commençant par le groupe de fichiers primaire et, dans certains cas, un ou plusieurs groupes de fichiers secondaires. La restauration fragmentaire maintient des contrôles pour garantir la cohérence de la base de données au final. À l'issue de la séquence de restauration, les fichiers récupérés (s'ils sont valides et cohérents avec la base de données) peuvent être mis en ligne directement.  
+ Une *restauration fragmentaire* autorise la restauration et la récupération par étapes des bases de données contenant plusieurs groupes de fichiers. La restauration fragmentaire implique une suite de séquences de restauration, en commençant par le groupe de fichiers primaire et, dans certains cas, un ou plusieurs groupes de fichiers secondaires. La restauration fragmentaire maintient des contrôles pour garantir la cohérence de la base de données au final. À l'issue de la séquence de restauration, les fichiers récupérés (s'ils sont valides et cohérents avec la base de données) peuvent être mis en ligne directement.  
   
  La restauration fragmentaire fonctionne dans tous les modes de récupération, mais elle offre davantage de souplesse dans le mode de restauration complète et dans le mode de récupération utilisant les journaux de transactions que dans le mode de récupération simple.  
   

@@ -16,11 +16,11 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006337"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130195"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Créer, construire et interroger des instances geography
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "92006337"
  [STEndpoint &#40;type de données geography&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimension  
- Une instance **geography** non vide peut avoir 0, 1 ou 2 dimensions. Les instances **geography** à zéro dimension, telles que **Point** et **MultiPoint**, n’ont aucune longueur ou surface. Les objets unidimensionnels, tels que **LineString, CircularString**, **CompoundCurve**et **MultiLineString**ont une longueur. Les instances à deux dimensions, telles que **Polygon, CurvePolygon**et **MultiPolygon**, ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une instance **GeometryCollection** indique la dimension maximale de son contenu.  
+ Une instance **geography** non vide peut avoir 0, 1 ou 2 dimensions. Les instances **geography** à zéro dimension, telles que **Point** et **MultiPoint**, n’ont aucune longueur ou surface. Les objets unidimensionnels, tels que **LineString, CircularString**, **CompoundCurve** et **MultiLineString** ont une longueur. Les instances à deux dimensions, telles que **Polygon, CurvePolygon** et **MultiPolygon**, ont une surface et une longueur. Les instances vides indiquent une dimension de -1 et une instance **GeometryCollection** indique la dimension maximale de son contenu.  
   
  **Pour retourner la dimension d'une instance**  
  [STDimension &#40;type de données geography&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -175,13 +175,13 @@ ms.locfileid: "92006337"
  [STArea &#40;type de données geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> Vide  
- Une instance **geography**_vide_ n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
+ Une instance **geography**_vide_ n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve** et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty &#40;type de données geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Fermeture  
- Une instance **geography**_fermée_ est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
+ Une instance **geography**_fermée_ est un graphique dont les points de début et de fin sont identiques. Les instances **Polygon** sont considérées comme fermées. Les instances **Point** ne sont pas fermées.  
   
  Un anneau est une instance **LineString** simple et fermée.  
   

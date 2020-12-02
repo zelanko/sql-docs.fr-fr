@@ -12,11 +12,11 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/21/2018
 ms.openlocfilehash: fc86054be556dbb34d212b24172e50fbf52f8980
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344550"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129975"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Déployer un projet SSIS avec SQL Server Management Studio (SSMS)
 
@@ -50,8 +50,8 @@ Vous ne pouvez pas utiliser les informations de ce guide de démarrage rapide po
 Pour déployer le projet sur Azure SQL Database, obtenez les informations de connexion dont vous avez besoin pour vous connecter à la base de données du catalogue SSIS (SSISDB). Vous avez besoin des informations de connexion et du nom de serveur complet dans les procédures qui suivent.
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com/).
-2. Sélectionnez **Bases de données SQL** dans le menu de gauche, puis sélectionnez la base de données SSISDB dans la page **Bases de données SQL** . 
-3. Dans la page **Vue d’ensemble** de votre base de données, notez le nom complet du serveur. Pour voir l’option **Cliquer pour copier** , pointez sur le nom du serveur. 
+2. Sélectionnez **Bases de données SQL** dans le menu de gauche, puis sélectionnez la base de données SSISDB dans la page **Bases de données SQL**. 
+3. Dans la page **Vue d’ensemble** de votre base de données, notez le nom complet du serveur. Pour voir l’option **Cliquer pour copier**, pointez sur le nom du serveur. 
 4. Si vous avez oublié vos informations de connexion au serveur Azure SQL Database, accédez à la page du serveur SQL Database pour voir le nom de l’administrateur du serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
 
 ## <a name="authentication-methods-for-deployment"></a>Méthodes d’authentification pour le déploiement
@@ -66,7 +66,7 @@ Utilisez SQL Server Management Studio pour établir une connexion au catalogue S
 
 1. Ouvrez SQL Server Management Studio.
 
-2. Dans la fenêtre **Se connecter au serveur** , entrez les valeurs suivantes :
+2. Dans la fenêtre **Se connecter au serveur**, entrez les valeurs suivantes :
 
    | Paramètre       | Valeur suggérée | En savoir plus | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -76,32 +76,32 @@ Utilisez SQL Server Management Studio pour établir une connexion au catalogue S
    | **Connexion** | Compte d’administrateur de serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
    | **Mot de passe** | Mot de passe de votre compte d’administrateur de serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
 
-3. Cliquez sur **Connecter** . La fenêtre Explorateur d’objets s’ouvre dans SSMS. 
+3. Cliquez sur **Connecter**. La fenêtre Explorateur d’objets s’ouvre dans SSMS. 
 
-4. Dans l’Explorateur d’objets, développez **Catalogues Integration Services** , puis développez **SSISDB** pour afficher les objets de la base de données de catalogues SSIS.
+4. Dans l’Explorateur d’objets, développez **Catalogues Integration Services**, puis développez **SSISDB** pour afficher les objets de la base de données de catalogues SSIS.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Démarrer l’Assistant Déploiement d’Integration Services
-1. Dans l’Explorateur d’objets, après avoir développé les nœuds **Catalogues Integration Services** et **SSISDB** , développez un dossier.
+1. Dans l’Explorateur d’objets, après avoir développé les nœuds **Catalogues Integration Services** et **SSISDB**, développez un dossier.
 
-2.  Sélectionnez le nœud **Projets** .
+2.  Sélectionnez le nœud **Projets**.
 
-3.  Cliquez avec le bouton droit sur le nœud **Projets** , puis sélectionnez **Déployer le projet** . L’Assistant Déploiement d’Integration Services s’ouvre. Vous pouvez déployer un projet à partir du catalogue actif ou du système de fichiers.
+3.  Cliquez avec le bouton droit sur le nœud **Projets**, puis sélectionnez **Déployer le projet**. L’Assistant Déploiement d’Integration Services s’ouvre. Vous pouvez déployer un projet à partir du catalogue actif ou du système de fichiers.
 
 ## <a name="deploy-a-project-with-the-wizard"></a>Déployer un projet avec l’Assistant
-1. Dans la page **Introduction** de l’Assistant, examinez l’introduction. Cliquez sur **Suivant** pour ouvrir la page **Sélectionner la source** .
+1. Dans la page **Introduction** de l’Assistant, examinez l’introduction. Cliquez sur **Suivant** pour ouvrir la page **Sélectionner la source**.
 
-2. Dans la page **Sélectionner la source** , sélectionnez le projet SSIS existant à déployer.
+2. Dans la page **Sélectionner la source**, sélectionnez le projet SSIS existant à déployer.
     -   Pour déployer un fichier de déploiement de projet que vous avez créé en générant un projet dans l’environnement de développement, sélectionnez **Fichier de déploiement de projet** et entrez le chemin du fichier .ispac.
     -   Pour déployer un projet déjà déployé dans une base de données du catalogue SSIS, sélectionnez **Catalogue Integration Services** et entrez le nom du serveur et le chemin du projet dans le catalogue.
     Cliquez sur **Suivant** pour afficher la page **Sélectionner la destination** .
   
-3.  Dans la page **Sélectionner la destination** , sélectionnez la destination du projet.
+3.  Dans la page **Sélectionner la destination**, sélectionnez la destination du projet.
     -   Entrez le nom complet du serveur. Si le serveur cible est un serveur Azure SQL Database, le nom est au format suivant : `<server_name>.database.windows.net`.
-    -   Fournissez les informations d’authentification et sélectionnez **Se connecter** . Consultez [Méthodes d’authentification dans le déploiement](#authentication-methods-for-deployment) dans cet article.
+    -   Fournissez les informations d’authentification et sélectionnez **Se connecter**. Consultez [Méthodes d’authentification dans le déploiement](#authentication-methods-for-deployment) dans cet article.
     -   Sélectionnez ensuite **Parcourir** pour sélectionner le dossier cible dans SSISDB.
-    -   Ensuite, sélectionnez **Suivant** pour ouvrir la page **Vérifier** . (Le bouton **Suivant** est activé seulement si vous sélectionnez **Se connecter** .)
+    -   Ensuite, sélectionnez **Suivant** pour ouvrir la page **Vérifier**. (Le bouton **Suivant** est activé seulement si vous sélectionnez **Se connecter**.)
   
-4.  Dans la page **Vérifier** , vérifiez les paramètres que vous avez sélectionnés.
+4.  Dans la page **Vérifier**, vérifiez les paramètres que vous avez sélectionnés.
     -   Vous pouvez modifier vos sélections en cliquant sur **Précédent** ou en cliquant sur l'une des étapes dans le volet gauche.
     -   Cliquez sur **Déployer** pour démarrer le processus de déploiement.
 

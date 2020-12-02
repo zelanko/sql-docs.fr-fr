@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: e3b12ed6d4f28ce04c1ceac5960ae564368d9a9a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866607"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130210"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Configuration de la Gestion de clés extensible de SQL Server TDE avec Azure Key Vault
 
@@ -115,7 +115,7 @@ Vous pouvez utiliser le Portail Azure pour créer le coffre de clés et y ajoute
 
     ![Capture d’écran du volet « Créer un coffre de clés »](../../../relational-databases/security/encryption/media/ekm/ekm-part2-create-key-vault.png)  
 
-1. Sur le volet**Stratégies d’accès**, sélectionnez **Ajouter une stratégie d’accès**.
+1. Sur le volet **Stratégies d’accès**, sélectionnez **Ajouter une stratégie d’accès**.
 
     ![Capture d’écran du lien « Ajouter une stratégie d’accès » dans le volet « Stratégies d’accès »](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-access-policy.png)  
 
@@ -123,7 +123,7 @@ Vous pouvez utiliser le Portail Azure pour créer le coffre de clés et y ajoute
   
     a. Dans la liste déroulante **Configurer à partir du modèle (facultatif)** , sélectionnez **Gestion de clés**.
 
-    b. Dans le volet gauche, sélectionnez l’onglet **Autorisations de clés**, puis vérifiez que les cases à cocher **Get**, **Liste**, **Unwrap Key**et **Wrap Key** sont activées.
+    b. Dans le volet gauche, sélectionnez l’onglet **Autorisations de clés**, puis vérifiez que les cases à cocher **Get**, **Liste**, **Unwrap Key** et **Wrap Key** sont activées.
 
     c. Sélectionnez **Ajouter**.
 
@@ -147,7 +147,7 @@ Vous pouvez utiliser le Portail Azure pour créer le coffre de clés et y ajoute
 
    ![Capture d’écran du volet « Créer une clé »](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-key-vault-key.png)  
 
-1. Sur le volet**Stratégies d’accès**, sélectionnez **Enregistrer**.
+1. Sur le volet **Stratégies d’accès**, sélectionnez **Enregistrer**.
   
    ![Capture d’écran du bouton Enregistrer dans le volet « Ajouter une stratégie d’accès »](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-access-policy.png)  
 
@@ -245,7 +245,7 @@ Le coffre de clés et la clé créés ici seront utilisés par le moteur de base
     > [!IMPORTANT]
     > Le principal de service Azure AD doit avoir au moins les autorisations *get*, *list*, *wrapKey*, et *unwrapKey* pour le coffre de clés.  
   
-    Comme indiqué dans la commande suivante, vous utilisez **l’ID d’application (client)** à partir de [l’étape 1 : Configurer un principal de service Azure AD ](#step-1-set-up-an-azure-ad-service-principal)pour le`ServicePrincipalName` paramètre. La commande `Set-AzKeyVaultAccessPolicy` s’exécute en mode silencieux sans aucune sortie si son exécution réussit.  
+    Comme indiqué dans la commande suivante, vous utilisez **l’ID d’application (client)** à partir de [l’étape 1 : Configurer un principal de service Azure AD](#step-1-set-up-an-azure-ad-service-principal)pour le`ServicePrincipalName` paramètre. La commande `Set-AzKeyVaultAccessPolicy` s’exécute en mode silencieux sans aucune sortie si son exécution réussit.  
   
     ```powershell  
     Set-AzKeyVaultAccessPolicy -VaultName 'ContosoEKMKeyVault' `  
@@ -406,7 +406,7 @@ Reportez-vous à [B. Forum aux questions](../../../relational-databases/security
     Modifiez le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] comme suit :  
   
     - Modifiez l’argument `IDENTITY` (`ContosoEKMKeyVault`) de sorte qu’il pointe vers votre coffre de clés Azure.
-      - Si vous utilisez *Azure global*, remplacez l’argument `IDENTITY` par le nom de votre coffre de clés Azure de l’étape 2[ : Créer un coffre de clés](#step-2-create-a-key-vault).
+      - Si vous utilisez *Azure global*, remplacez l’argument `IDENTITY` par le nom de votre coffre de clés Azure de l’étape 2 [ : Créer un coffre de clés](#step-2-create-a-key-vault).
       - Si vous utilisez un *Cloud Azure privé* (par exemple, Azure Government, Azure China 21Vianet ou Azure Allemagne), remplacez l’argument `IDENTITY` par l’URI du coffre renvoyé à l’étape 3 de la section [Créer un coffre de clés et une clé à l’aide de PowerShell](#create-a-key-vault-and-key-by-using-powershell). N’incluez pas « https:/  » dans l’URI du coffre.
     - Remplacez la première partie de l’argument `SECRET` par l’ID client Azure Active Directory mentionné dans l’Étape 1[ : Paramétrer un principal de service Azure AD](#step-1-set-up-an-azure-ad-service-principal). Dans cet exemple, l’**ID client** est `9A57CBC54C4C40E2B517EA677E0EFA00`.  
   
@@ -466,7 +466,7 @@ Reportez-vous à [B. Forum aux questions](../../../relational-databases/security
 1. Modifiez la nouvelle connexion et mappez les informations d’identification EKM à la nouvelle connexion.
 
      ```sql  
-    --Now drop the credential mapping from the original association
+    --Now add the credential mapping to the new Login
     ALTER LOGIN TDE_Login
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```  

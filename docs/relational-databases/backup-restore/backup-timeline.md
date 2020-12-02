@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0918928c8180bffc67476bbbe8f475f9f51a06a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ea91958c9475e90e0ee71f700112b5cb42663ae4
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728506"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130503"
 ---
 # <a name="backup-timeline"></a>Chronologie de sauvegarde
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "85728506"
  L'Assistant Récupération de base de données garantit que seules les sauvegardes requises pour la restauration à cette limite dans le temps sont sélectionnées. Ces sauvegardes sélectionnées constituent le plan de restauration recommandé pour votre opération de restauration. Vous devez utiliser uniquement les sauvegardes sélectionnées. Pour plus d’informations sur l’Assistant de récupération de base de données, consultez [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 ## <a name="restore-to"></a>Restaurer sur  
- L'option**Dernière sauvegarde effectuée** est sélectionnée par défaut. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sélectionne les sauvegardes appropriées pour restaurer la base de données, et restaure la base de données jusqu'au point de la dernière sauvegarde. Cliquez sur **Date et heure spécifiques** pour définir les date et heure manuellement (sélection d’un point spécifique dans le temps).  
+ L'option **Dernière sauvegarde effectuée** est sélectionnée par défaut. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sélectionne les sauvegardes appropriées pour restaurer la base de données, et restaure la base de données jusqu'au point de la dernière sauvegarde. Cliquez sur **Date et heure spécifiques** pour définir les date et heure manuellement (sélection d’un point spécifique dans le temps).  
   
- L'option**Date et heure spécifiques** vous permet d'arrêter la restauration à une date et une heure que vous spécifiez. La chronologie indique une représentation des opérations de sauvegarde effectuées sur une période 24 heures autour de la date et de l'heure sélectionnées.  
+ L'option **Date et heure spécifiques** vous permet d'arrêter la restauration à une date et une heure que vous spécifiez. La chronologie indique une représentation des opérations de sauvegarde effectuées sur une période 24 heures autour de la date et de l'heure sélectionnées.  
   
  **Date**  
  Entrez une date ou sélectionnez-en une dans la zone de liste déroulante.  

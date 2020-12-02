@@ -15,20 +15,20 @@ helpviewer_keywords:
 - database backups [SQL Server], system databases
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 7444bd163ad453a2aac3c598ab0cc8575c09eb0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c37eb7eb796e4ce8caed41dcdc55cd147f5916ea
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754586"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130551"
 ---
-# <a name="backuprestoresystemdatabases-sql-server"></a>Sauvegarde et restauration : bases de données système (SQL Server)
+# <a name="backup--restore-system-databases-sql-server"></a>Sauvegarde et restauration : bases de données système (SQL Server)
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure la maintenance d’un jeu de bases de données au niveau système, les*bases de données système*, qui sont essentielles au fonctionnement d’une instance de serveur. Il est nécessaire de sauvegarder plusieurs bases de données système après chaque mise à jour importante. Les bases de données système qui doivent toujours êtres sauvegardées sont les suivantes : **msdb**, **master**, et **model**. Si une base de données utilise la réplication sur l'instance de serveur, vous devez également sauvegarder la base de données système **distribution** . La sauvegarde de ces bases de données système permet de restaurer et de récupérer le système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cas d'incident système, comme le dysfonctionnement du disque dur.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure la maintenance d’un jeu de bases de données au niveau système, les *bases de données système*, qui sont essentielles au fonctionnement d’une instance de serveur. Il est nécessaire de sauvegarder plusieurs bases de données système après chaque mise à jour importante. Les bases de données système qui doivent toujours êtres sauvegardées sont les suivantes : **msdb**, **master**, et **model**. Si une base de données utilise la réplication sur l'instance de serveur, vous devez également sauvegarder la base de données système **distribution** . La sauvegarde de ces bases de données système permet de restaurer et de récupérer le système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cas d'incident système, comme le dysfonctionnement du disque dur.  
   
  Le tableau suivant récapitule l'ensemble des bases de données système :  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85754586"
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
 |[master](../../relational-databases/databases/master-database.md)|Base de données qui contient l'intégralité des informations système relatives à un système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Oui|Simple|Sauvegardez la base de données **master** aussi souvent que nécessaire pour protéger suffisamment les données en fonction de vos besoins. Nous vous recommandons de définir une planification de sauvegarde régulière complétée d'une sauvegarde supplémentaire après une mise à jour substantielle.|  
 |[model](../../relational-databases/databases/model-database.md)|Modèle de toutes les bases de données créées dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Oui|Configurable par l’utilisateur*|Sauvegardez la base de données **model** aussi souvent que nécessaire en fonction de vos besoins ; par exemple, immédiatement après avoir personnalisé ses options de base de données.<br /><br /> **Bonne pratique :** Nous recommandons d’effectuer uniquement des sauvegardes complètes de **mode**, selon les besoins. Étant donné que **mode** est petit et change rarement, il n'est pas nécessaire de sauvegarder le journal.|  
-|[msdb](../../relational-databases/databases/msdb-database.md)|La base de données est utilisée par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier les alertes et les travaux et pour enregistrer les opérateurs. La base de données**msdb** contient aussi les tables d'historique, telles que les tables d'historique de restauration et de sauvegarde.|Oui|Simple (par défaut)|Sauvegardez la base de données **msdb** chaque fois qu'elle est mise à jour.|  
+|[msdb](../../relational-databases/databases/msdb-database.md)|La base de données est utilisée par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier les alertes et les travaux et pour enregistrer les opérateurs. La base de données **msdb** contient aussi les tables d'historique, telles que les tables d'historique de restauration et de sauvegarde.|Oui|Simple (par défaut)|Sauvegardez la base de données **msdb** chaque fois qu'elle est mise à jour.|  
 |[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Base de données en lecture seule qui contient les copies de tous les objets système fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Non|-|La base de données **Resource** réside dans le fichier mssqlsystemresource.mdf, qui contient uniquement du code. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas sauvegarder la base de données **Resource** .<br /><br /> Remarque : Vous pouvez effectuer une sauvegarde sur fichiers ou sur disque sur le fichier mssqlsystemresource.mdf en le traitant comme s’il s’agissait d’un fichier binaire (.exe) plutôt que d’un fichier de base de données. Toutefois, vous ne pouvez pas utiliser la restauration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les sauvegardes. La restauration d’une copie de sauvegarde du fichier mssqlsystemresource.mdf peut uniquement être effectuée manuellement et vous devez alors veiller à ne pas remplacer la version actuelle de la base de données **Resource** par une version obsolète ou potentiellement instable.|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|Espace de travail qui contient les ensembles de résultats temporaires et intermédiaires. Cette base de données est recréée chaque fois qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre. Lors de l'arrêt de l'instance du serveur, toutes les données dans **tempdb** sont supprimées définitivement.|Non|Simple|Vous ne pouvez pas sauvegarder la base de données système **tempdb** .|  
 |[Configurer la distribution](../../relational-databases/replication/configure-distribution.md)|Base de données qui existe uniquement si le serveur est configuré comme serveur de distribution de réplication. Cette base de données contient les métadonnées et les données historiques de tous les types de réplications, ainsi que les transactions de la réplication transactionnelle.|Oui|Simple|Pour savoir quand vous devez sauvegarder la base de données **distribution** , consultez [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  

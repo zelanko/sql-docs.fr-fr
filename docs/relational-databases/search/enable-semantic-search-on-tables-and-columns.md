@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867463"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130935"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ GO
   
  **Exemple 2 : créer un index sémantique et de recherche en texte intégral sur plusieurs colonnes avec remplissage différé de l'index**  
   
- L’exemple suivant crée un catalogue de texte intégral, **documents_catalog**, dans l’exemple de base de données AdventureWorks2012. L'exemple crée ensuite un index de recherche en texte intégral qui utilise ce nouveau catalogue. L’index de recherche en texte intégral est créé sur les colonnes **Title**, **DocumentSummary**et **Document** de la table **Production.Document** , tandis que l’index sémantique est uniquement créé sur la colonne **Document** . Cet index de recherche en texte intégral utilise le catalogue de texte intégral nouvellement créé et un index de clé unique existant, **PK_Document_DocumentID**. Comme recommandé, cette clé d'index est créée sur une colonne d'entiers, **DocumentID**. L'exemple spécifie le LCID de l'anglais, 1033, qui est la langue des données dans les colonnes.  
+ L’exemple suivant crée un catalogue de texte intégral, **documents_catalog**, dans l’exemple de base de données AdventureWorks2012. L'exemple crée ensuite un index de recherche en texte intégral qui utilise ce nouveau catalogue. L’index de recherche en texte intégral est créé sur les colonnes **Title**, **DocumentSummary** et **Document** de la table **Production.Document** , tandis que l’index sémantique est uniquement créé sur la colonne **Document** . Cet index de recherche en texte intégral utilise le catalogue de texte intégral nouvellement créé et un index de clé unique existant, **PK_Document_DocumentID**. Comme recommandé, cette clé d'index est créée sur une colonne d'entiers, **DocumentID**. L'exemple spécifie le LCID de l'anglais, 1033, qui est la langue des données dans les colonnes.  
   
  Cet exemple spécifie également que le suivi des modifications est désactivé et sans remplissage. Plus tard, durant les heures creuses, cet exemple utilise une instruction **ALTER FULLTEXT INDEX** pour démarrer un remplissage complet sur le nouvel index et activer le suivi automatique des modifications.  
   
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Pour supprimer à la fois l'indexation plein texte et l'indexation sémantique à partir d'une colonne, appelez l'instruction **ALTER FULLTEXT INDEX** avec l'option **ALTER COLUMN**_ column\_name_**DROP**.  
+Pour supprimer à la fois l'indexation plein texte et l'indexation sémantique à partir d'une colonne, appelez l'instruction **ALTER FULLTEXT INDEX** avec l'option **ALTER COLUMN**_column\_name_**DROP**.  
   
 ```sql  
 USE database_name  

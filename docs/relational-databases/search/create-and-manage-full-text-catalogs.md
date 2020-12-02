@@ -18,11 +18,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067339"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130926"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Créer et gérer des catalogues de texte intégral
 
@@ -44,9 +44,9 @@ GO
 ``` 
 
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>Créer un catalogue de texte intégral avec Management Studio
-1.  Dans l’Explorateur d’objets, développez successivement le serveur, le nœud **Bases de données** , puis la base de données contenant le catalogue de texte intégral à créer.  
+1.  Dans l’Explorateur d’objets, développez successivement le serveur, le nœud **Bases de données**, puis la base de données contenant le catalogue de texte intégral à créer.  
   
-2.  Développez **Stockage** , puis cliquez avec le bouton droit sur **Catalogues de texte intégral**.  
+2.  Développez **Stockage**, puis cliquez avec le bouton droit sur **Catalogues de texte intégral**.  
   
 3.  Sélectionnez **Nouveau catalogue de recherche en texte intégral**.  
   
@@ -87,25 +87,25 @@ Le tableau suivant répertorie les propriétés liées aux catalogues de texte i
 Exécutez l’instruction Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md) ou effectuez les opérations suivantes dans SSMS (SQL Server Management Studio).
 
-1.  Dans SSMS, dans l’Explorateur d’objets, développez successivement le serveur, l’option **Bases de données** , puis la base de données contenant le catalogue de texte intégral à reconstruire.  
+1.  Dans SSMS, dans l’Explorateur d’objets, développez successivement le serveur, l’option **Bases de données**, puis la base de données contenant le catalogue de texte intégral à reconstruire.  
   
-2.  Développez **Stockage** , puis **Catalogues de texte intégral**.  
+2.  Développez **Stockage**, puis **Catalogues de texte intégral**.  
   
 3.  Cliquez avec le bouton droit sur le nom du catalogue de texte intégral que vous souhaitez reconstruire, puis sélectionnez **Reconstruire**.  
   
-4.  En réponse à la question **Voulez-vous supprimer le catalogue de texte intégral et le reconstruire ?** , cliquez sur **OK**.  
+4.  En réponse à la question **Voulez-vous supprimer le catalogue de texte intégral et le reconstruire ?**, cliquez sur **OK**.  
   
 5.  Dans la boîte de dialogue **Reconstruire le catalogue de texte intégral** , cliquez sur **Fermer**.  
    
 ##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> Reconstruire tous les catalogues de texte intégral pour une base de données  
 
-1.  Dans SSMS, dans l’Explorateur d’objets, développez successivement le serveur, l’option **Bases de données** , puis la base de données contenant les catalogues de texte intégral à reconstruire.  
+1.  Dans SSMS, dans l’Explorateur d’objets, développez successivement le serveur, l’option **Bases de données**, puis la base de données contenant les catalogues de texte intégral à reconstruire.  
   
-2.  Développez **Stockage** , puis cliquez avec le bouton droit sur **Catalogues de texte intégral**.  
+2.  Développez **Stockage**, puis cliquez avec le bouton droit sur **Catalogues de texte intégral**.  
   
 3.  Sélectionnez **Tout reconstruire**.  
   
-4.  En réponse à la question **Voulez-vous supprimer tous les catalogues de texte intégral et les reconstruire ?** , cliquez sur **OK**.  
+4.  En réponse à la question **Voulez-vous supprimer tous les catalogues de texte intégral et les reconstruire ?**, cliquez sur **OK**.  
   
 5.  Dans la boîte de dialogue **Reconstruire tous les catalogues de texte intégral** , cliquez sur **Fermer**.  
   
@@ -116,9 +116,9 @@ Exécutez l’instruction Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 Exécutez l’instruction Transact-SQL [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) ou effectuez les opérations suivantes dans SSMS (SQL Server Management Studio).
 
-1.  Dans SSMS, dans l’Explorateur d’objets, développez successivement le serveur, l’option **Bases de données** , puis la base de données qui contient le catalogue de texte intégral à supprimer.  
+1.  Dans SSMS, dans l’Explorateur d’objets, développez successivement le serveur, l’option **Bases de données**, puis la base de données qui contient le catalogue de texte intégral à supprimer.  
   
-2.  Développez **Stockage** , puis **Catalogues de texte intégral**.  
+2.  Développez **Stockage**, puis **Catalogues de texte intégral**.  
   
 3.  Cliquez avec le bouton droit sur le catalogue de texte intégral à supprimer, puis cliquez sur **Supprimer**.  
   

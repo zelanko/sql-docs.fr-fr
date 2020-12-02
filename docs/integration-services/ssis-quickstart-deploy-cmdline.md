@@ -10,11 +10,11 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495473"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130006"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Déployer un projet SSIS à partir de l’invite de commandes avec ISDeploymentWizard.exe
 
@@ -76,7 +76,7 @@ Consultez [Méthodes d’authentification pour le déploiement](ssis-quickstart-
     -   Ensuite, sélectionnez **Suivant** pour ouvrir la page **Vérifier**. (Le bouton **Suivant** est activé seulement si vous sélectionnez **Se connecter**.)
 
 4.  Dans la page **Vérifier**, vérifiez les paramètres que vous avez sélectionnés.
-    -   Vous pouvez modifier vos sélections en cliquant sur **Précédent**ou en cliquant sur l'une des étapes dans le volet gauche.
+    -   Vous pouvez modifier vos sélections en cliquant sur **Précédent** ou en cliquant sur l'une des étapes dans le volet gauche.
     -   Cliquez sur **Déployer** pour démarrer le processus de déploiement.
 
 5.  Si vous déployez sur un serveur Azure SQL Database, la page **Valider** s’ouvre et inspecte les packages du projet à la recherche de problèmes connus susceptibles d’impacter leur exécution dans Azure-SSIS Integration Runtime. Pour plus d’informations, consultez [Valider des packages SSIS déployés sur Azure](lift-shift/ssis-azure-validate-packages.md).

@@ -15,11 +15,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebeaebbc4a082bcb7051dc3d6c784b6ce1ec11fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420353"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130956"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurer et gérer des filtres pour la recherche
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88420353"
 ## <a name="filters-and-document-types"></a>Filtres et types de documents
 Un filtre donné est spécifique à un type de document donné (.doc, .pdf, .xls, .xml, etc.). Ces filtres implémentent l'interface IFilter. Pour plus d’informations sur ces types de document, interrogez l’affichage catalogue [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   
-Des documents binaires peuvent être stockés dans une colonne **varbinary(max)** ou **image** . Pour chaque document, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisit le filtre correct en fonction de l'extension de fichier. Dans la mesure où cette dernière n’est pas visible lorsque le fichier est stocké dans une colonne **varbinary(max)** ou **image** , l’extension de fichier (.doc, .xls, .pdf, etc.) doit figurer dans une autre colonne de la table, que l’on nomme colonne de type. Cette colonne de type peut être composée de n'importe quel type de données de caractères ; par ailleurs, elle contient l'extension de fichier du document, par exemple « .doc » pour un document [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Dans la table **Document** contenue dans [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], la colonne **Document** est de type **varbinary(max)** alors que la colonne de type **FileExtension**est de type **nvarchar(8)**.  
+Des documents binaires peuvent être stockés dans une colonne **varbinary(max)** ou **image** . Pour chaque document, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisit le filtre correct en fonction de l'extension de fichier. Dans la mesure où cette dernière n’est pas visible lorsque le fichier est stocké dans une colonne **varbinary(max)** ou **image** , l’extension de fichier (.doc, .xls, .pdf, etc.) doit figurer dans une autre colonne de la table, que l’on nomme colonne de type. Cette colonne de type peut être composée de n'importe quel type de données de caractères ; par ailleurs, elle contient l'extension de fichier du document, par exemple « .doc » pour un document [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Dans la table **Document** contenue dans [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], la colonne **Document** est de type **varbinary(max)** alors que la colonne de type **FileExtension** est de type **nvarchar(8)**.  
 
 **Pour voir la colonne de type dans un index de recherche en texte intégral existant**  
   

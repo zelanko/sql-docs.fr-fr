@@ -15,11 +15,11 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364791"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130181"
 ---
 # <a name="create-a-trace-transact-sql"></a>Créer une trace (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "93364791"
   
 ### <a name="to-create-a-trace"></a>Pour créer une trace  
   
-1.  Exécutez **sp_trace_create** avec les paramètres nécessaires afin de créer une nouvelle trace. La nouvelle trace est à l’état arrêté ( *status* a la valeur **0** ).  
+1.  Exécutez **sp_trace_create** avec les paramètres nécessaires afin de créer une nouvelle trace. La nouvelle trace est à l’état arrêté (*status* a la valeur **0**).  
   
 2.  Exécutez **sp_trace_setevent** avec les paramètres requis pour choisir les événements et les colonnes que vous voulez tracer.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "93364791"
      **sp_trace_setevent** et **sp_trace_setfilter** ne peuvent être exécutées que sur des traces existantes arrêtées.  
   
     > [!IMPORTANT]  
-    >  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées de SQL Server Profiler ( <strong>sp_trace_ *xx*</strong>) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
+    >  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées de SQL Server Profiler (<strong>sp_trace_ *xx*</strong>) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
 ## <a name="examples"></a>Exemples
 

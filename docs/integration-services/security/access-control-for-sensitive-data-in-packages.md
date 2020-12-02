@@ -25,11 +25,11 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d915b70f3f17c1be5c87361ab2810a82d18d6525
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192430"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130023"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Contrôle d'accès pour les données sensibles présentes dans les packages
 
@@ -81,9 +81,9 @@ ms.locfileid: "92192430"
   
  En général, vous modifiez le niveau de protection selon les étapes suivantes :  
   
-1.  Pendant le développement, laissez le niveau de protection de packages défini à la valeur par défaut, **EncryptSensitiveWithUserKey**. Ce paramètre aide à s'assurer que seul le développeur peut afficher les valeurs sensibles dans le package. Ou vous pouvez envisager d'utiliser **EncryptAllWithUserKey**ou **DontSaveSensitive**.  
+1.  Pendant le développement, laissez le niveau de protection de packages défini à la valeur par défaut, **EncryptSensitiveWithUserKey**. Ce paramètre aide à s'assurer que seul le développeur peut afficher les valeurs sensibles dans le package. Ou vous pouvez envisager d'utiliser **EncryptAllWithUserKey** ou **DontSaveSensitive**.  
   
-2.  Lorsqu'il est temps de déployer les packages, vous devez affecter un niveau de protection qui ne dépend pas de la clé utilisateur du développeur. Par conséquent, vous devez sélectionner en général **EncryptSensitiveWithPassword**ou **EncryptAllWithPassword**. Chiffrez les packages en assignant un mot de passe fort temporaire également connu de l'équipe d'exploitation dans l'environnement de production.  
+2.  Lorsqu'il est temps de déployer les packages, vous devez affecter un niveau de protection qui ne dépend pas de la clé utilisateur du développeur. Par conséquent, vous devez sélectionner en général **EncryptSensitiveWithPassword** ou **EncryptAllWithPassword**. Chiffrez les packages en assignant un mot de passe fort temporaire également connu de l'équipe d'exploitation dans l'environnement de production.  
   
 3.  Une fois que les packages ont été déployés dans l'environnement de production, l'équipe d'exploitation peut rechiffrer les packages déployés en assignant un mot de passe fort connu uniquement d'eux. Ils peuvent également chiffrer les packages déployés en sélectionnant **EncryptSensitiveWithUserKey** ou **EncryptAllWithUserKey**, et en utilisant les informations d'identification locales du compte qui exécutera les packages.  
 
@@ -153,7 +153,7 @@ ms.locfileid: "92192430"
  Entrez à nouveau le mot de passe.  
 
 ## <a name="package-password-dialog-box"></a><a name="password_dialog"></a> Boîte de dialogue Mot de passe du package
-  Utilisez la boîte de dialogue **Mot de passe du package** pour fournir le mot de passe d'un package qui est chiffré par un mot de passe. Vous devez fournir un mot de passe si le package utilise le niveau de protection **Chiffrer les données sensibles avec un mot de passe**ou **Chiffrer toutes les données avec un mot de passe** .  
+  Utilisez la boîte de dialogue **Mot de passe du package** pour fournir le mot de passe d'un package qui est chiffré par un mot de passe. Vous devez fournir un mot de passe si le package utilise le niveau de protection **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** .  
   
 ### <a name="options"></a>Options  
  **Mot de passe**  

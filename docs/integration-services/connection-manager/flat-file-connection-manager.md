@@ -24,11 +24,11 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 93890a2bf8fc0b9209eb9582c8129ee6856865ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351285"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130101"
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
 
@@ -51,7 +51,7 @@ ms.locfileid: "88351285"
   
  Par défaut, le gestionnaire de connexions de fichiers plats cherche toujours la présence d'un séparateur de lignes dans les données non délimitées par des guillemets, puis démarre une nouvelle ligne lorsqu'un séparateur de lignes est trouvé. Cela permet au gestionnaire de connexions de fichiers plats d'analyser correctement les fichiers comportant des lignes auxquelles il manque des champs de colonnes.  
   
- Dans certains cas, la désactivation de cette fonctionnalité peut améliorer les performances des packages. Vous pouvez désactiver cette fonctionnalité en affectant à la propriété **AlwaysCheckForRowDelimiters**du gestionnaire de connexions de fichiers plats la valeur **False**.  
+ Dans certains cas, la désactivation de cette fonctionnalité peut améliorer les performances des packages. Vous pouvez désactiver cette fonctionnalité en affectant à la propriété **AlwaysCheckForRowDelimiters** du gestionnaire de connexions de fichiers plats la valeur **False**.  
   
  Vous pouvez configurer le gestionnaire de connexions de fichiers plats de plusieurs manières :  
   
@@ -192,7 +192,7 @@ ms.locfileid: "88351285"
  Affichez les données d'exemple dans le fichier plat, divisées en colonnes et en lignes à l'aide des options sélectionnées.  
   
  **Réinitialiser les colonnes**  
- Cliquez sur **Réinitialiser les colonnes**pour supprimer toutes les colonnes à l’exception de celles d’origine.  
+ Cliquez sur **Réinitialiser les colonnes** pour supprimer toutes les colonnes à l’exception de celles d’origine.  
   
 #### <a name="format--fixed-width"></a>Format = Largeur fixe  
  **Police**  
@@ -205,7 +205,7 @@ ms.locfileid: "88351285"
  Spécifiez la largeur de la ligne avant d'ajouter des séparateurs pour des colonnes distinctes. Vous pouvez également faire glisser la ligne rouge verticale dans la fenêtre d'aperçu pour marquer la fin de la ligne. La valeur de la largeur de ligne est automatiquement mise à jour.  
   
  **Réinitialiser les colonnes**  
- Cliquez sur **Réinitialiser les colonnes**pour supprimer toutes les colonnes à l’exception de celles d’origine.  
+ Cliquez sur **Réinitialiser les colonnes** pour supprimer toutes les colonnes à l’exception de celles d’origine.  
   
 #### <a name="format--ragged-right"></a>Format = En drapeau à droite  
   
@@ -233,7 +233,7 @@ ms.locfileid: "88351285"
 |**Barre verticale {&#124;}**|Les lignes sont séparées par une barre verticale.|  
   
  **Réinitialiser les colonnes**  
- Cliquez sur **Réinitialiser les colonnes**pour supprimer toutes les colonnes à l’exception de celles d’origine.  
+ Cliquez sur **Réinitialiser les colonnes** pour supprimer toutes les colonnes à l’exception de celles d’origine.  
 ## <a name="flat-file-connection-manager-editor-advanced-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (page Avancé)
   La page **Avancé** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** vous permet de définir des propriétés qui spécifient la manière dont Integration Services lit et écrit des données dans les fichiers plats. Vous pouvez modifier les noms des colonnes dans le fichier plat et définir des propriétés qui incluent le type de données et des séparateurs pour chaque colonne du fichier.  
   
@@ -293,7 +293,7 @@ ms.locfileid: "88351285"
  Indiquez le nombre de lignes qui doivent être ignorées à partir du début du fichier plat.  
   
  **Actualiser**  
- Cliquez sur le bouton **Actualiser**pour visualiser l’effet obtenu en modifiant le nombre de lignes à ignorer. Il ne devient visible qu'après avoir changé d'autres options de connexion.  
+ Cliquez sur le bouton **Actualiser** pour visualiser l’effet obtenu en modifiant le nombre de lignes à ignorer. Il ne devient visible qu'après avoir changé d'autres options de connexion.  
   
  **Aperçu des lignes**  
  Affiche un échantillon de données du fichier plat, divisé en colonnes et en lignes en fonction des options que vous avez sélectionnées.  

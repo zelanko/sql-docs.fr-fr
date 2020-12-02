@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869258"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131009"
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission de données
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -129,7 +129,7 @@ Vous pouvez créer par programmation des abonnements par émission de données �
   
    - **\@subscriber_type**. Pour un abonnement client, spécifiez **local**. Pour un abonnement serveur, spécifiez **global**.  
   
-   - **\@subscription_priority**. Pour un abonnement serveur, spécifiez la priorité de l'abonnement (de**0.00** à **99.99**).  
+   - **\@subscription_priority**. Pour un abonnement serveur, spécifiez la priorité de l'abonnement (de **0.00** à **99.99**).  
   
    Pour plus d’informations, consultez [Détection et résolution avancées des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

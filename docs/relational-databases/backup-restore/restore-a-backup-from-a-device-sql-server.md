@@ -14,14 +14,14 @@ helpviewer_keywords:
 - database restores [SQL Server], device restores
 - devices [SQL Server]
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ca37f8761ad2559cf5381e0d80cd6e30d003d13d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1c2125a470390f1b7343e4e0f978eb957bd3695e
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669523"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130303"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>Restaurer une sauvegarde à partir d'une unité (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "85669523"
   
 1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
-2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
+2.  Développez **Bases de données** puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, puis cliquez sur **Restaurer**.  
   
-4.  Cliquez sur le type de restauration de votre choix (**Base de données**, **Fichiers et groupes de fichiers**ou **Journal des transactions**). Cette opération permet d'ouvrir la boîte de dialogue de restauration correspondante.  
+4.  Cliquez sur le type de restauration de votre choix (**Base de données**, **Fichiers et groupes de fichiers** ou **Journal des transactions**). Cette opération permet d'ouvrir la boîte de dialogue de restauration correspondante.  
   
 5.  Dans la page **Général** , dans la section **Source de restauration** , cliquez sur **À partir de l'unité**.  
   

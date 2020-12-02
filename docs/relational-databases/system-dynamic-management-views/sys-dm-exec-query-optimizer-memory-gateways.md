@@ -1,11 +1,11 @@
 ---
-title: sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 description: Retourne l’état actuel des sémaphores de ressource utilisés pour limiter l’optimisation des requêtes simultanées
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: language-reference
 f1_keywords:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646399"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96503413"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -51,10 +51,10 @@ SQL Server nécessite l’autorisation VIEW SERVER STATE sur le serveur.
 Azure SQL Database nécessite l’autorisation VIEW DATABASE STATE dans la base de données.
 
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 SQL Server utilise une approche de passerelle à plusieurs niveaux pour limiter le nombre de compilations simultanées autorisées.  Trois passerelles sont utilisées, y compris petite, moyenne et grande. Les passerelles permettent d’éviter l’épuisement des ressources mémoire globales par une plus grande mémoire de compilation nécessitant des consommateurs.
 
-L’attente d’une passerelle entraîne une compilation différée. En plus des retards dans la compilation, les demandes limitées sont associées à une accumulation RESOURCE_SEMAPHORE_QUERY_COMPILE type d’attente. Le RESOURCE_SEMAPHORE_QUERY_COMPILE type d’attente peut indiquer que les requêtes utilisent une grande quantité de mémoire pour la compilation et que la mémoire est épuisée, ou que la mémoire disponible est insuffisante dans son ensemble, toutefois, les unités disponibles dans une passerelle spécifique sont épuisées. La sortie de **sys. dm_exec_query_optimizer_memory_gateways** peut être utilisée pour dépanner des scénarios où la mémoire était insuffisante pour compiler un plan d’exécution de requête.  
+L’attente d’une passerelle entraîne une compilation différée. En plus des retards dans la compilation, les demandes limitées sont associées à une accumulation RESOURCE_SEMAPHORE_QUERY_COMPILE type d’attente. Le RESOURCE_SEMAPHORE_QUERY_COMPILE type d’attente peut indiquer que les requêtes utilisent une grande quantité de mémoire pour la compilation et que la mémoire est épuisée, ou que la mémoire disponible est insuffisante dans son ensemble, toutefois, les unités disponibles dans une passerelle spécifique sont épuisées. La sortie de **sys.dm_exec_query_optimizer_memory_gateways** peut être utilisée pour dépanner des scénarios où la mémoire était insuffisante pour compiler un plan d’exécution de requête.  
 
 ## <a name="examples"></a>Exemples  
 

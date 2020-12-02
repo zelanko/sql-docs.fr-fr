@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ab82f18d59bd6a2f8df0c236cd44031b740ee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486871"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130249"
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "88486871"
   
 ###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Avantages d'un index unique  
   
--   Les index uniques multicolonnes garantissent que chaque combinaison de valeurs dans la clé d'index est unique. Par exemple, si un index unique est créé sur une combinaison des colonnes **LastName**, **FirstName**et **MiddleName** , deux lignes de la table ne peuvent pas posséder la même combinaison de valeurs pour ces colonnes.  
+-   Les index uniques multicolonnes garantissent que chaque combinaison de valeurs dans la clé d'index est unique. Par exemple, si un index unique est créé sur une combinaison des colonnes **LastName**, **FirstName** et **MiddleName** , deux lignes de la table ne peuvent pas posséder la même combinaison de valeurs pour ces colonnes.  
   
 -   À condition que les données contenues dans chaque colonne soient uniques, vous pouvez créer à la fois un index cluster unique et plusieurs index non cluster uniques sur la même table.  
   
