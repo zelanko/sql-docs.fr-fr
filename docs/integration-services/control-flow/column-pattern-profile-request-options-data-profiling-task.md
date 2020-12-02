@@ -14,11 +14,11 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425971"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123561"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
 

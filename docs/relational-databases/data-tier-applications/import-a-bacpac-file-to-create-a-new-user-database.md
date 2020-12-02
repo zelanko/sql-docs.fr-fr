@@ -27,10 +27,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195581"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
@@ -103,7 +103,7 @@ ms.locfileid: "92195581"
   
 -   **Importer à partir d’Azure** : importe un fichier BACPAC à partir d’un conteneur Microsoft Azure. Vous devez vous connecter à un conteneur Microsoft Azure afin de valider cette option. Notez que l’option Importer à partir d’Azure requiert également que vous spécifiiez un répertoire local pour le fichier temporaire. Le fichier temporaire est créé à l'emplacement spécifié et reste à cet endroit une fois l'opération terminée.  
   
-     Lorsque vous parcourez Azure, vous pouvez basculer entre les conteneurs au sein d’un seul compte. Vous devez spécifier un seul fichier .bacpac pour continuer l'opération d'importation. Vous pouvez trier les colonnes par **Nom**, **Taille**ou **Date de modification**.  
+     Lorsque vous parcourez Azure, vous pouvez basculer entre les conteneurs au sein d’un seul compte. Vous devez spécifier un seul fichier .bacpac pour continuer l'opération d'importation. Vous pouvez trier les colonnes par **Nom**, **Taille** ou **Date de modification**.  
   
      Pour continuer, spécifiez le fichier .bacpac à importer, puis cliquez sur **Ouvrir**.  
   

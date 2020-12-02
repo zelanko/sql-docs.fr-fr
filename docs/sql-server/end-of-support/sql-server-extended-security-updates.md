@@ -2,20 +2,20 @@
 title: Que sont les correctifs de sécurité étendus ?
 description: Découvrez l’utilisation du registre SQL Server pour obtenir des correctifs de sécurité étendus pour vos produits de fin de support et de fin de vie SQL Server, tels que SQL Server 2008 et SQL Server 2008 R2.
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f0eabc247645000d95f9b9c83c17ababc47c6cc2
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793816"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121268"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Que sont les correctifs de sécurité étendus pour SQL Server ?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -80,18 +80,18 @@ Pour enregistrer vos instances de [!INCLUDE[ssNoVersion](../../includes/ssnovers
 Pour créer le registre SQL Server, procédez comme suit :
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com). 
-1. Sélectionnez l'option pour **Créer une ressource** . 
+1. Sélectionnez l'option pour **Créer une ressource**. 
 1. Tapez `SQL Server registry` dans la zone de recherche.  
-1. Choisissez l’option **Registre SQL Server** publiée par [!INCLUDE[msCoName](../../includes/msconame-md.md)] puis, sélectionnez **Créer** . 
+1. Choisissez l’option **Registre SQL Server** publiée par [!INCLUDE[msCoName](../../includes/msconame-md.md)] puis, sélectionnez **Créer**. 
 
    ![Capture d’écran du portail Azure montrant comment créer un registre SQL Server.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. Sous **Détails du projet** , choisissez votre abonnement dans la liste déroulante. Ensuite, choisissez un **Groupe de ressources** existant ou sélectionnez **Créer un nouveau** pour créer un nouveau groupe de ressources pour votre nouveau service de registres SQL Server. 
-1. Sous **Détails du service** , indiquez un nom et une région pour votre nouvelle ressource **Registre SQL Server**  : 
+1. Sous **Détails du projet**, choisissez votre abonnement dans la liste déroulante. Ensuite, choisissez un **Groupe de ressources** existant ou sélectionnez **Créer un nouveau** pour créer un nouveau groupe de ressources pour votre nouveau service de registres SQL Server. 
+1. Sous **Détails du service**, indiquez un nom et une région pour votre nouvelle ressource **Registre SQL Server** : 
 
    ![Capture d’écran du registre SQL Server montrant l’onglet De base.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
-1. Sélectionnez **Évaluer et Créer** pour évaluer les détails de votre **Registre SQL Server** . Sélectionnez **Créer** une fois la validation passée. 
+1. Sélectionnez **Évaluer et Créer** pour évaluer les détails de votre **Registre SQL Server**. Sélectionnez **Créer** une fois la validation passée. 
 
 ## <a name="register-instances-for-esus"></a>Enregistrer des instances pour des ESU
 
@@ -102,12 +102,12 @@ Une fois que la ressource **Registre SQL Server** est déployée, vous pouvez ch
 Pour enregistrer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unique, procédez comme suit :
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com). 
-1. Accédez à votre ressource **Registre SQL Server** . 
-1. Sélectionnez **+ Enregistrer** dans le volet **Vue d’ensemble**  : 
+1. Accédez à votre ressource **Registre SQL Server**. 
+1. Sélectionnez **+ Enregistrer** dans le volet **Vue d’ensemble** : 
 
    ![Choisissez enregistrer pour enregistrer une seule instance de SQL Server](media/sql-server-extended-security-updates/register-single-sql-server-instance.png)
 
-1. Fournissez les informations requises comme détaillées dans ce tableau et sélectionnez **Enregistrer**  : 
+1. Fournissez les informations requises comme détaillées dans ce tableau et sélectionnez **Enregistrer** : 
 
    |**Valeur**| **Description**|
    | :-------| :------------- |
@@ -123,7 +123,7 @@ Pour enregistrer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 
    <sup>1</sup> Uniquement nécessaire pour les machines virtuelles Azure. 
 
-L’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nouvellement enregistrée est désormais visible dans la section **Enregistrer des instances** du volet **Vue d’ensemble**  : 
+L’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nouvellement enregistrée est désormais visible dans la section **Enregistrer des instances** du volet **Vue d’ensemble** : 
 
 ![Instances enregistrées](media/sql-server-extended-security-updates/registered-sql-instance.png)
 
@@ -134,8 +134,8 @@ Une fois qu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 Plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être enregistrées en téléchargeant un fichier .CSV. Une fois votre [fichier .CSV correctement mis en forme](#formatting-requirements-for-csv-file), vous pouvez suivre ces étapes pour enregistrer en bloc vos instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec la ressource de Registre SQL Server : 
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com). 
-1. Accédez à votre ressource **Registre SQL Server** . 
-1. Sélectionnez **Enregistrer en bloc** dans le volet **Vue d’ensemble**  :  
+1. Accédez à votre ressource **Registre SQL Server**. 
+1. Sélectionnez **Enregistrer en bloc** dans le volet **Vue d’ensemble** :  
 
    ![Choisissez Enregistrer en bloc pour enregistrer plusieurs instances de SQL Server](media/sql-server-extended-security-updates/bulk-register-sql-server-instances.png)
 
@@ -200,16 +200,49 @@ Une fois vos instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 Pour télécharger des ESU, procédez comme suit : 
 
 1. Connectez-vous au [portail Azure](https://portal.azure.com). 
-1. Accédez à votre ressource **Registre SQL Server** . 
+1. Accédez à votre ressource **Registre SQL Server**. 
 1. Sélectionnez **Correctifs de sécurité** dans le volet de navigation. 
 
    ![Vérifier les mises à jour disponibles dans le volet des correctifs de sécurité](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. Téléchargez des correctifs de sécurité à partir d’ici, selon leur disponibilité. 
 
+## <a name="supported-regions-and-data-residency"></a>Régions et résidence des données prises en charge
+
+Le service de **Registre SQL Server** (préversion) est disponible dans un sous-ensemble des régions Azure. La table suivante indique les régions prises en charge et le type de résidence des données de chacune.
+
+| **Région** | **Résidence des données** |
+|:--|:--|
+|Australie Est|Zone géographique|
+|Sud-Australie Est|Zone géographique|
+|Centre du Canada|Zone géographique|
+|France Centre|Zone géographique|
+|Japon Est|Zone géographique|
+|OuJapon Est|Zone géographique|
+|Centre de la Corée|Zone géographique|
+|Corée du Sud|Zone géographique|
+|Centre-Nord des États-Unis|Zone géographique|
+|Europe Nord|Zone géographique|
+|États-Unis - partie centrale méridionale|Zone géographique|
+|Asie Sud-Est|Région unique|
+|Inde Sud|Zone géographique|
+|Afrique du Sud Nord|Zone géographique|
+|Sud du Royaume-Uni|Zone géographique|
+|Ouest du Royaume-Uni|Zone géographique|
+|USA Ouest|Zone géographique|
+|USA Est|Zone géographique|
+|USA Centre|Zone géographique|
+|Asie Est|Zone géographique|
+|Europe Ouest|Zone géographique|
+|Centre-USA Ouest|Zone géographique|
+|USA Ouest 2|Zone géographique|
+|USA Est 2|Zone géographique|
+
+Dans les régions avec résidence géographique, le service de Registre SQL gère les sauvegardes de données dans un compte de stockage géoredondant (GRS).  Dans les régions avec résidence de région unique, le service de Registre SQL gère les sauvegardes de données dans un compte de stockage redondant interzone (ZRS). Pour plus d’informations, consultez le [Centre de gestion de la confidentialité](https://azuredatacentermap.azurewebsites.net/).
+
 ## <a name="configure-regional-redundancy"></a>Configurer la redondance régionale 
 
-Les clients qui ont besoin d’une redondance régionale pour leur **Registre SQL Server** peuvent créer des données d’inscription dans deux régions distinctes. Les clients peuvent ensuite télécharger les mises à jour de sécurité à partir de l’une ou l’autre région, en fonction de la disponibilité du service **Registre SQL Server** . 
+Les clients qui ont besoin d’une redondance régionale pour leur **Registre SQL Server** peuvent créer des données d’inscription dans deux régions distinctes. Les clients peuvent ensuite télécharger les mises à jour de sécurité à partir de l’une ou l’autre région, en fonction de la disponibilité du service **Registre SQL Server**. 
 
 Pour la redondance régionale, le service **Registre SQL Server** doit être créé dans deux régions différentes, et votre inventaire SQL Server doit être réparti entre ces deux services. De cette façon, la moitié de vos serveurs SQL sont inscrits auprès du service de registre dans une région, puis l’autre moitié de vos serveurs SQL Server sont inscrits auprès du service de registre dans l’autre région. 
 

@@ -21,10 +21,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8775714da1c59e86a6ba62661610a0f5abbd11e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193177"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
@@ -57,7 +57,7 @@ ms.locfileid: "92193177"
   
  Une propriété ne peut utiliser qu'une expression de propriété et une expression de propriété ne peut s'appliquer qu'à une propriété. Cependant, vous pouvez générer plusieurs expressions de propriété identiques et les affecter à différentes propriétés.  
   
- Certaines propriétés sont définies à l'aide de valeurs provenant d'énumérateurs. Lorsque vous faites référence au membre d'énumérateur dans une expression de propriété, vous devez utiliser la valeur numérique équivalant au nom convivial du membre de l'énumérateur. Par exemple, si une expression de propriété définit la propriété **LoggingMode** qui utilise une valeur de l'énumération **DTSLoggingMode** , l'expression de la propriété doit utiliser 0, 1 ou 2 à la place des noms conviviaux **Enabled**, **Disabled**ou **UseParentSetting**. Pour plus d’informations, consultez la page [Constantes énumérées dans des expressions de propriété](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
+ Certaines propriétés sont définies à l'aide de valeurs provenant d'énumérateurs. Lorsque vous faites référence au membre d'énumérateur dans une expression de propriété, vous devez utiliser la valeur numérique équivalant au nom convivial du membre de l'énumérateur. Par exemple, si une expression de propriété définit la propriété **LoggingMode** qui utilise une valeur de l'énumération **DTSLoggingMode** , l'expression de la propriété doit utiliser 0, 1 ou 2 à la place des noms conviviaux **Enabled**, **Disabled** ou **UseParentSetting**. Pour plus d’informations, consultez la page [Constantes énumérées dans des expressions de propriété](../../integration-services/expressions/enumerated-constants-in-property-expressions.md).  
   
 ## <a name="property-expression-user-interface"></a>Interface utilisateur de l'expression de propriété  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit un ensemble d'outils pour la création et la gestion d'expressions de propriété.  

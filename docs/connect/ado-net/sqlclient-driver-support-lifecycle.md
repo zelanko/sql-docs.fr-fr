@@ -1,7 +1,7 @@
 ---
 title: Cycle de vie de prise en charge du pilote SqlClient
 description: Page contenant des informations sur le cycle de vie du support technique.
-ms.date: 09/08/2020
+ms.date: 11/19/2020
 dev_langs:
 - csharp
 - vb
@@ -12,13 +12,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b9b461454db98de77ed6003477b7a02114067eb
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+ms.reviewer: v-jizho2
+ms.openlocfilehash: 30155a584de4e22692601a1dcf9551a67d4f580f
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614586"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011787"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Cycle de vie de prise en charge du pilote SqlClient
 
@@ -36,6 +36,7 @@ Les nouvelles versions stables (GA) seront publiées tous les six mois sur une c
 
 | Version | Date de publication officielle | Dernière version du correctif | Date de publication du correctif | Niveau de prise en charge  | Fin du support |
 | -- | -- | -- | -- | -- | -- |
+| 2.1 | 19 novembre 2020 | 2.1.0 | 19 novembre 2020 | Actuel | |
 | 2.0 | 16 juin 2020 | 2.0.1 | 25 août 2020 | Actuel | |
 | 1.1 | 20 novembre 2019 | 1.1.3 | 15 mai 2020 | LTS | 21 novembre 2022 |
 | 1.0 | 28 août 2019 | 1.0.19269.1 | 26 septembre 2019 | Actuel | 20 février 2020 |
@@ -50,8 +51,9 @@ Les versions actuelles sont prises en charge pendant trois mois après la public
 
 ## <a name="sql-version-compatibility-with-microsoftdatasqlclient"></a>Compatibilité des versions SQL avec Microsoft.Data.SqlClient
 
-|Version de la base de données&nbsp;&#8594;<br />&#8595; Version du pilote|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
+|Version de la base de données&nbsp;&#8594;<br />Version du pilote &#8595;|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
 |---|---|---|---|---|---|---|---|---|
+|2.1|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
 |2.0|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
 |1.1|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
 |1.0|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|

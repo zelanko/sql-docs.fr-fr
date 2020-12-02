@@ -1,7 +1,7 @@
 ---
 title: Présentation de l’espace de noms Microsoft.Data.SqlClient
 description: Découvrez l’espace de noms Microsoft.Data.SqlClient et la façon dont il est préférable de se connecter à SQL pour les applications .NET.
-ms.date: 09/29/2020
+ms.date: 11/19/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,17 +9,232 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.reviewer: v-kaywon
-ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.reviewer: v-jizho2
+ms.openlocfilehash: f522b856e759ec9821b5cc549ce3f801951b7283
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081468"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95011831"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Présentation de l’espace de noms Microsoft.Data.SqlClient
 
 [!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+
+## <a name="release-notes-for-microsoftdatasqlclient-21"></a>Notes de publication de Microsoft.Data.SqlClient 2.1
+
+Les notes de publication sont également disponibles dans le référentiel GitHub : [Notes de publication 2.1](https://github.com/dotnet/SqlClient/tree/master/release-notes/2.1).
+
+### <a name="new-features"></a>Nouvelles fonctionnalités
+
+### <a name="cross-platform-support-for-always-encrypted"></a>Support multiplateforme pour Always Encrypted
+Microsoft.Data.SqlClient v2.1 étend le support d’Always Encrypted sur les plateformes suivantes :
+
+| Support Always Encrypted | Support Always Encrypted avec enclave sécurisée  | Framework cible | Version Microsoft.Data.SqlClient | Système d’exploitation |
+|:--|:--|:--|:--:|:--:|
+| Oui | Oui | .NET Framework 4.6+ | 1.1.0+ | Windows |
+| Oui | Oui | .NET Core 2.1+ | 2.1.0+<sup>1</sup> | Windows, Linux, macOS |
+| Oui | Non <sup>2</sup> | .NET Standard 2.0 | 2.1.0+ | Windows, Linux, macOS |
+| Oui | Oui | .NET Standard 2.1+ | 2.1.0+ | Windows, Linux, macOS |
+
+> [!NOTE]
+> <sup>1</sup> Avant Microsoft.Data.SqlClient version v2.1, Always Encrypted est pris en charge uniquement sur Windows.
+> <sup>2</sup> Always Encrypted avec enclaves sécurisés n’est pas pris en charge sur .NET Standard 2.0.
+
+### <a name="azure-active-directory-device-code-flow-authentication"></a>Authentification du flux de code de l’appareil Azure Active Directory
+Microsoft.Data.SqlClient v2.1 fournit le support de l’authentification « Flux de code d’appareil » avec MSAL.NET.
+Documentation de référence : [Flux de l’octroi de l’autorisation d’appareil OAuth2.0](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code)
+
+Exemple de chaîne de connexion :
+
+`Server=<server>.database.windows.net; Authentication=Active Directory Device Code Flow; Database=Northwind;`
+
+L’API suivante permet la personnalisation du mécanisme de rappel du flux de code de l’appareil :
+
+```csharp
+public class ActiveDirectoryAuthenticationProvider
+{
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void SetDeviceCodeFlowCallback(Func<DeviceCodeResult, Task> deviceCodeFlowCallbackMethod)
+}
+```
+
+### <a name="azure-active-directory-managed-identity-authentication"></a>Authentification Managed Identity Azure Active Directory
+Microsoft.Data.SqlClient v2.1 introduit le support de l’authentification Azure Active Directory à l’aide des [identités managées](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).
+
+Les mots clé d’authentification suivants sont pris en charge :
+- Identité managée Active Directory
+- Active Directory MSI (pour la compatibilité des pilotes inter MS SQL)
+
+Exemples de chaînes de connexion :
+
+```cs
+// For System Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory MSI; Initial Catalog={db};"
+
+// For System Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory Managed Identity; Initial Catalog={db};"
+
+// For User Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory MSI; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+
+// For User Assigned Managed Identity
+"Server={serverURL}; Authentication=Active Directory Managed Identity; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+```
+
+### <a name="azure-active-directory-interactive-authentication-enhancements"></a>Améliorations de l’authentification interactive Azure Active Directory
+Microsoft.Data.SqlClient v2.1 ajoute les API suivantes pour personnaliser l’expérience d’authentification « Active Directory interactive » :
+
+```csharp
+public class ActiveDirectoryAuthenticationProvider
+{
+    // For .NET Framework targeted applications only
+    public void SetIWin32WindowFunc(Func<IWin32Window> iWin32WindowFunc);
+
+    // For .NET Standard targeted applications only
+    public void SetParentActivityOrWindowFunc(Func<object> parentActivityOrWindowFunc);
+
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken, Task<Uri>> acquireAuthorizationCodeAsyncCallback);
+
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    public void ClearUserTokenCache();
+}
+```
+
+### <a name="sqlclientauthenticationproviders-configuration-section"></a>section de configuration `SqlClientAuthenticationProviders`
+Microsoft.Data.SqlClient v2.1 introduit une nouvelle section de configuration, `SqlClientAuthenticationProviders` (un clone du `SqlAuthenticationProviders` existant). La section de configuration existante, `SqlAuthenticationProviders`, est toujours prise en charge à des fins de compatibilité descendante lorsque le type approprié est défini.
+
+La nouvelle section permet aux fichiers config d’application de contenir à la fois une section SqlAuthenticationProviders pour System.Data.SqlClient et une section SqlClientAuthenticationProviders pour Microsoft.Data.SqlClient.
+
+
+### <a name="azure-active-directory-authentication-using-an-application-client-id"></a>Authentification Azure Active Directory à l’aide d’un ID client d’application
+Microsoft.Data.SqlClient v2.1 introduit le support de la transmission d’un ID client d’application définie par l’utilisateur à la bibliothèque d’authentification Microsoft. L’ID client de l’application est utilisé lors de l’authentification avec Azure Active Directory.
+
+Les nouvelles API suivantes sont introduites :
+
+1. Un nouveau constructeur a été introduit dans ActiveDirectoryAuthenticationProvider:\
+_[S’applique à toutes les plateformes .NET (.NET Framework, .NET Core et .NET Standard)]_
+
+```csharp
+public ActiveDirectoryAuthenticationProvider(string applicationClientId)
+```
+
+Usage :
+```csharp
+string APP_CLIENT_ID = "<GUID>";
+SqlAuthenticationProvider customAuthProvider = new ActiveDirectoryAuthenticationProvider(APP_CLIENT_ID);
+SqlAuthenticationProvider.SetProvider(SqlAuthenticationMethod.ActiveDirectoryInteractive, customAuthProvider);
+
+using (SqlConnection sqlConnection = new SqlConnection("<connection_string>")
+{
+    sqlConnection.Open();
+}
+```
+
+2. Une nouvelle propriété de configuration a été introduite sous `SqlAuthenticationProviderConfigurationSection` et `SqlClientAuthenticationProviderConfigurationSection`:\
+_[S’applique à .NET Framework et .NET Core]_
+
+```csharp
+internal class SqlAuthenticationProviderConfigurationSection : ConfigurationSection
+{
+    ...
+    [ConfigurationProperty("applicationClientId", IsRequired = false)]
+    public string ApplicationClientId => this["applicationClientId"] as string;
+}
+
+// Inheritance
+internal class SqlClientAuthenticationProviderConfigurationSection : SqlAuthenticationProviderConfigurationSection
+{ ... }
+```
+
+Usage :
+```xml
+<configuration>
+    <configSections>
+        <section name="SqlClientAuthenticationProviders"
+                         type="Microsoft.Data.SqlClient.SqlClientAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+    </configSections>
+    <SqlClientAuthenticationProviders applicationClientId ="<GUID>" />
+</configuration>
+
+<!--or-->
+
+<configuration>
+    <configSections>
+        <section name="SqlAuthenticationProviders"
+                         type="Microsoft.Data.SqlClient.SqlAuthenticationProviderConfigurationSection, Microsoft.Data.SqlClient" />
+    </configSections>
+    <SqlAuthenticationProviders applicationClientId ="<GUID>" />
+</configuration>
+```
+
+### <a name="data-classification-v2-support"></a>Support de la classification des données v2
+Microsoft.Data.SqlClient v2.1 introduit le support des informations de « classement de la sensibilité » de la classification des données. Les nouvelles API suivantes sont maintenant disponibles :
+
+```csharp
+public class SensitivityClassification
+{
+    public SensitivityRank SensitivityRank;
+}
+
+public class SensitivityProperty
+{
+    public SensitivityRank SensitivityRank;
+}
+
+public enum SensitivityRank
+{
+    NOT_DEFINED = -1,
+    NONE = 0,
+    LOW = 10,
+    MEDIUM = 20,
+    HIGH = 30,
+    CRITICAL = 40
+}
+```
+
+### <a name="server-process-id-for-an-active-sqlconnection"></a>ID de processus serveur pour un actif `SqlConnection`
+MicrosoftData. SqlClient v2.1 introduit une nouvelle propriété `SqlConnection`, `ServerProcessId`, sur une connexion active.
+
+```csharp
+public class SqlConnection
+{
+    // Returns the server process Id (SPID) of the active connection.
+    public int ServerProcessId;
+}
+```
+
+### <a name="trace-logging-support-in-native-sni"></a>Support du suivi des traces dans Native SNI
+Microsoft.Data.SqlClient v2.1 étend l’implémentation `SqlClientEventSource` existante pour activer le suivi d’événements dans SNI.dll. Les événements doivent être capturés à l’aide d’un outil tel que Xperf.
+
+Le suivi peut être activé en envoyant une commande à `SqlClientEventSource` comme illustré ci-dessous :
+
+```csharp
+// Enables trace events:
+EventSource.SendCommand(eventSource, (EventCommand)8192, null);
+
+// Enables flow events:
+EventSource.SendCommand(eventSource, (EventCommand)16384, null);
+
+// Enables both trace and flow events:
+EventSource.SendCommand(eventSource, (EventCommand)(8192 | 16384), null);
+```
+
+
+### <a name="command-timeout-connection-string-property"></a>Propriété de chaîne de connexion « Délai d’attente de la commande »
+Microsoft.Data.SqlClient v2.1 introduit la propriété de chaîne de connexion « Délai d’attente de la commande » pour remplacer la valeur par défaut de 30 secondes. Le délai d’attente pour les commandes individuelles peut être substitué à l’aide de la propriété `CommandTimeout` sur SqlCommand.
+
+Exemples de chaînes de connexion :
+
+`"Server={serverURL}; Initial Catalog={db}; Integrated Security=true; Command Timeout=60"`
+
+### <a name="removal-of-symbols-from-native-sni"></a>Suppression de symboles de Native SNI
+Avec Microsoft.Data.SqlClient v2.1, nous avons supprimé les symboles introduits dans [v2.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI/2.0.0) de [Microsoft.Data.SqlClient.SNI. Runtime](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime) NuGet à partir de [v2.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime/2.1.1). Les symboles publics sont désormais publiés sur le serveur de symboles Microsoft pour les outils tels que BinSkim qui requièrent l’accès aux symboles publics.
+
+### <a name="source-linking-of-microsoftdatasqlclient-symbols"></a>Liaison à la source des symboles Microsoft.Data.SqlClient
+À compter de Microsoft.Data.SqlClient v2.1, les symboles Microsoft.Data.SqlClient sont liés à la source et publiés sur le serveur de symboles Microsoft pour une expérience de débogage améliorée sans avoir besoin de télécharger le code source.
+
 
 ## <a name="release-notes-for-microsoftdatasqlclient-20"></a>Notes de publication de Microsoft.Data.SqlClient 2.0
 
@@ -45,7 +260,7 @@ Les notes de publication sont également disponibles dans le référentiel GitHu
 
 #### <a name="dns-failure-resiliency"></a>Résilience des échecs DNS
 
-Le pilote met maintenant en cache les adresses IP issues de toutes les connexions réussies dans un point de terminaison SQL Server qui prend en charge la fonctionnalité. En cas d’échec de la résolution DNS lors d’une tentative de connexion, il tente d’établir une connexion à l’aide d’une adresse IP en cache, s’il en existe une pour ce serveur. 
+Le pilote met maintenant en cache les adresses IP issues de toutes les connexions réussies dans un point de terminaison SQL Server qui prend en charge la fonctionnalité. En cas d’échec de la résolution DNS lors d’une tentative de connexion, il tente d’établir une connexion à l’aide d’une adresse IP en cache, s’il en existe une pour ce serveur.
 
 #### <a name="eventsource-tracing"></a>Suivi EventSource
 
@@ -67,7 +282,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWind
 
 Pour obtenir la liste complète des commutateurs disponibles dans le pilote, consultez [Commutateurs AppContext dans SqlClient](appcontext-switches.md).
 
-#### <a name="enabling-decimal-truncation-behavior"></a>Activation du comportement de troncation décimale 
+#### <a name="enabling-decimal-truncation-behavior"></a>Activation du comportement de troncation décimale
 
 L’échelle de données décimale est arrondie par défaut par le pilote, comme le fait SQL Server. À des fins de compatibilité descendante, vous pouvez définir le commutateur AppContext **Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal** sur **true**.
 
@@ -92,7 +307,7 @@ De nouveaux synonymes ont été ajoutés pour les propriétés de chaîne de con
 
 #### <a name="sqlbulkcopy-rowscopied-property"></a>Propriété SqlBulkCopy RowsCopied
 
-La propriété RowsCopied fournit un accès en lecture seule au nombre de lignes traitées dans l’opération de copie en bloc en cours. Cette valeur n’est pas nécessairement égale au nombre final de lignes ajoutées à la table de destination. 
+La propriété RowsCopied fournit un accès en lecture seule au nombre de lignes traitées dans l’opération de copie en bloc en cours. Cette valeur n’est pas nécessairement égale au nombre final de lignes ajoutées à la table de destination.
 
 #### <a name="connection-open-overrides"></a>Remplacement de Connection.Open
 

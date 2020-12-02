@@ -17,10 +17,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f971d0788b33420495f1ae7ceeaca56599c8e239
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194170"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implémenter une recherche en mode Aucun cache ou Cache partiel
@@ -101,7 +101,7 @@ ms.locfileid: "92194170"
   
     -   Dans la liste **Allocation à partir du cache** , sélectionnez le pourcentage du cache à utiliser pour stocker les lignes sans entrées correspondantes.  
   
-12. Pour modifier l’instruction SQL qui génère le dataset de référence, sélectionnez **Modifier l’instruction SQL**et modifiez l’instruction SQL affichée dans la zone de texte.  
+12. Pour modifier l’instruction SQL qui génère le dataset de référence, sélectionnez **Modifier l’instruction SQL** et modifiez l’instruction SQL affichée dans la zone de texte.  
   
      Si l’instruction inclut des paramètres, cliquez sur **Paramètres** pour mapper les paramètres aux colonnes d’entrée.  
   

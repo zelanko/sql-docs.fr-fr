@@ -3,18 +3,18 @@ title: Installer à partir d’une invite de commandes
 description: Exécutez l’installation de SQL Server à partir d’une ligne de commande pour ajouter Machine Learning Services avec Python et R à une instance du moteur de base de données SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020
+ms.date: 11/25/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8e32b14682c7813dd911b52e80249cf6af7ebaac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956762"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122760"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Installer SQL Server Machine Learning Services avec R et Python à partir de la ligne de commande
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +37,9 @@ Vous pouvez spécifier une interaction en mode silencieux, de base ou complète 
 
 ## <a name="command-line-arguments"></a>Arguments de ligne de commande
 
-L’argument FEATURES est obligatoire. Vous devez également indiquer que vous acceptez les termes du contrat de licence. 
+L’argument **/FEATURES** est obligatoire. Vous devez également indiquer que vous acceptez les termes du contrat de licence. 
 
-En cas d’installation à partir de l’invite de commandes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le mode silencieux complet à l’aide du paramètre /Q ou le mode silencieux simple à l’aide du paramètre /QS. Le commutateur /QS affiche seulement la progression ; il n'accepte pas d'entrée et n'affiche aucun message d'erreur. Le paramètre /QS est pris en charge uniquement lorsque /Action=install est spécifié.
+En cas d’installation à partir de l’invite de commandes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le mode silencieux complet à l’aide du paramètre **/Q** ou le mode silencieux simple à l’aide du paramètre **/QS**. Le commutateur **/QS** affiche seulement la progression ; il n'accepte pas d'entrée et n'affiche aucun message d'erreur. Le paramètre **/QS** est pris en charge uniquement lorsque **/Action=install** est spécifié.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | Arguments | Description |

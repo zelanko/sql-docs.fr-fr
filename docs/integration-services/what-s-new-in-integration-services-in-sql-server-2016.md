@@ -16,10 +16,10 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384864"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Nouveautés d’Integration Services dans SQL Server 2016
@@ -203,7 +203,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
  Le nouveau niveau de journalisation **RuntimeLineage** dans le catalogue SSIS permet de collecter les données nécessaires pour le suivi des informations de lignage dans le flux de données. Vous pouvez analyser ces informations de lignage pour mapper la relation de lignage entre différentes tâches. Les éditeurs de logiciels indépendants et les développeurs peuvent créer des outils de mappage de lignage personnalisés à l’aide de ces informations. 
 
 ####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> Nouveau niveau de journalisation personnalisé dans le catalogue SSIS  
- Dans les versions antérieures du catalogue SSIS, vous pouvez choisir l’un des quatre niveaux de journalisation intégrés ( **None, Basic, Performance ou Verbose** ) quand vous exécutez un package. SQL Server 2016 ajoute le niveau de journalisation **RuntimeLineage**. En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Dans les versions antérieures du catalogue SSIS, vous pouvez choisir l’un des quatre niveaux de journalisation intégrés ( **None, Basic, Performance ou Verbose**) quand vous exécutez un package. SQL Server 2016 ajoute le niveau de journalisation **RuntimeLineage**. En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> Noms de colonnes pour les erreurs contenues dans le flux de données  
  Lorsque vous redirigez les lignes contenant des erreurs vers une sortie d'erreur dans le flux de données, la sortie contient un identificateur numérique pour la colonne dans laquelle l'erreur s'est produite, mais n'affiche pas le nom de la colonne. Il existe désormais plusieurs façons de rechercher ou d’afficher le nom de la colonne dans laquelle l’erreur s’est produite.  
@@ -243,7 +243,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
  Durant la mise à niveau des projets SSIS de versions antérieures vers la version actuelle, les gestionnaires de connexions au niveau du projet continuent de fonctionner comme prévu. De plus, la disposition du package et les annotations sont conservées.  
 
 ####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> La propriété AutoAdjustBufferSize calcule automatiquement la taille de la mémoire tampon du flux de données  
- Quand vous définissez la nouvelle propriété **AutoAdjustBufferSize** à la valeur **true** , le moteur de flux de données calcule automatiquement la taille de la mémoire tampon pour le flux de données. Pour plus d’informations, consultez [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
+ Quand vous définissez la nouvelle propriété **AutoAdjustBufferSize** à la valeur **true**, le moteur de flux de données calcule automatiquement la taille de la mémoire tampon pour le flux de données. Pour plus d’informations, consultez [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
 
 ####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> Modèles de flux de contrôle réutilisables  
  Enregistrez une tâche de flux de contrôle ou un conteneur fréquemment utilisé dans un fichier de modèle autonome, puis réutilisez-le plusieurs fois dans un ou plusieurs packages d’un projet à l’aide de modèles de flux de contrôle. Cette possibilité de réutilisation facilite la conception et la gestion des packages SSIS. Pour plus d’informations, consultez [Réutiliser un flux de contrôle sur des packages à l’aide de composants de package de flux de contrôle](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
@@ -325,7 +325,7 @@ La dernière version du Feature Pack Azure comprend la tâche de chargement Azur
 ####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> Prise en charge du multi-ciblage et de plusieurs versions dans le Concepteur SSIS  
  Vous pouvez désormais utiliser le Concepteur SSIS dans SQL Server Data Tools (SSDT) pour Visual Studio 2015 pour créer, gérer et exécuter les packages qui ciblent SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Pour obtenir SSDT, voir [Télécharger la dernière version de SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
- Dans l’Explorateur de solutions, cliquez avec le bouton droit sur un projet Integration Services, puis sélectionnez **Propriétés** pour ouvrir les pages de propriétés du projet. Sous l’onglet **Général** de **Propriétés de configuration** , sélectionnez la propriété **TargetServerVersion** , puis choisissez SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
+ Dans l’Explorateur de solutions, cliquez avec le bouton droit sur un projet Integration Services, puis sélectionnez **Propriétés** pour ouvrir les pages de propriétés du projet. Sous l’onglet **Général** de **Propriétés de configuration**, sélectionnez la propriété **TargetServerVersion** , puis choisissez SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
    
  ![Propriété TargetServerVersion dans la boîte de dialogue Propriétés du projet](../integration-services/media/targetserverversion2.png "Propriété TargetServerVersion dans la boîte de dialogue Propriétés du projet")  
 

@@ -12,10 +12,10 @@ ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cc1bddc579ccce64b4068fd2a5235481fc7b7629
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193199"
 ---
 # <a name="map-columns-to-composite-domains"></a>Mapper des colonnes à des domaines composites
@@ -39,7 +39,7 @@ ms.locfileid: "92193199"
   
 4.  Pour chaque colonne figurant dans le champ **Colonne d’entrée** , sélectionnez un domaine unique dans le champ **Domaine** . Sélectionnez uniquement des domaines uniques figurant dans le domaine composite.  
   
-5.  Si nécessaire, modifiez les noms qui s’affichent dans les champs **Alias source**, **Alias de sortie**et **Alias d’état** .  
+5.  Si nécessaire, modifiez les noms qui s’affichent dans les champs **Alias source**, **Alias de sortie** et **Alias d’état** .  
   
 6.  Si nécessaire, définissez des propriétés sous l’onglet **Avancé** . Pour plus d’informations sur les propriétés, consultez [Éditeur de transformation de nettoyage DQS (boîte de dialogue)](./dqs-cleansing-transformation.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "92193199"
   
 4.  Pour la colonne figurant dans le champ **Colonne d’entrée** , sélectionnez le domaine composite dans le champ **Domaine** .  
   
-5.  Si nécessaire, modifiez les noms qui s’affichent dans les champs **Alias source**, **Alias de sortie**et **Alias d’état** .  
+5.  Si nécessaire, modifiez les noms qui s’affichent dans les champs **Alias source**, **Alias de sortie** et **Alias d’état** .  
   
 6.  Si nécessaire, définissez des propriétés sous l’onglet **Avancé** . Pour plus d’informations sur les propriétés, consultez [Éditeur de transformation de nettoyage DQS (boîte de dialogue)](./dqs-cleansing-transformation.md).  
   

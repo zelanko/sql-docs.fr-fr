@@ -12,10 +12,10 @@ ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b7865180ffd1bcf090e51eafd1542e12c97d17ac
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92194992"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Publier une base de données (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "92194992"
   
 #### <a name="to-publish-a-database-to-a-web-service"></a>Pour publier une base de données sur un service Web  
   
-1.  Dans l’Explorateur d’objets, développez **Bases de données**, cliquez avec le bouton droit sur une base de données, pointez sur **Tâches**et cliquez sur **Générer et publier des scripts**. Exécutez les étapes de l'Assistant pour générer un script pour la publication des objets de la base de données.  
+1.  Dans l’Explorateur d’objets, développez **Bases de données**, cliquez avec le bouton droit sur une base de données, pointez sur **Tâches** et cliquez sur **Générer et publier des scripts**. Exécutez les étapes de l'Assistant pour générer un script pour la publication des objets de la base de données.  
   
 2.  Dans la page **Sélectionner les objets** , sélectionnez les objets à publier sur le service d'hébergement Web.  
   

@@ -21,11 +21,11 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193212"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123381"
 ---
 # <a name="derived-column-transformation"></a>Transformation de colonne dérivée
 
@@ -36,13 +36,13 @@ ms.locfileid: "92193212"
   
  Vous pouvez utiliser cette transformation pour réaliser les tâches suivantes :  
   
--   concaténer des données à partir de différentes colonnes en une colonne dérivée. Par exemple, vous pouvez combiner les valeurs des colonnes **FirstName** et **LastName** en une colonne dérivée unique nommée **FullName**à l’aide de l’expression `FirstName + " " + LastName`.  
+-   concaténer des données à partir de différentes colonnes en une colonne dérivée. Par exemple, vous pouvez combiner les valeurs des colonnes **FirstName** et **LastName** en une colonne dérivée unique nommée **FullName** à l’aide de l’expression `FirstName + " " + LastName`.  
   
 -   extraire des caractères de données de chaîne à l'aide de fonctions telles que SUBSTRING, puis stocker le résultat dans une colonne dérivée. Par exemple, vous pouvez extraire de la colonne **FirstName** l’initiale d’une personne à l’aide de l’expression `SUBSTRING(FirstName,1,1)`.  
   
 -   appliquer des fonctions mathématiques à des données numériques et stocker le résultat dans une colonne dérivée. Par exemple, vous pouvez modifier la longueur et la précision d’une colonne numérique, **SalesTax**, en un nombre à deux décimales à l’aide de l’expression `ROUND(SalesTax, 2)`.  
   
--   créer des expressions qui comparent les colonnes d'entrée et les variables. Par exemple, vous pouvez comparer la variable **Version** aux données de la colonne **ProductVersion**et, suivant le résultat de la comparaison, utiliser la valeur de **Version** ou de **ProductVersion**, à l’aide de l’expression `ProductVersion == @Version? ProductVersion : @Version`.  
+-   créer des expressions qui comparent les colonnes d'entrée et les variables. Par exemple, vous pouvez comparer la variable **Version** aux données de la colonne **ProductVersion** et, suivant le résultat de la comparaison, utiliser la valeur de **Version** ou de **ProductVersion**, à l’aide de l’expression `ProductVersion == @Version? ProductVersion : @Version`.  
   
 -   extraire des parties d'une valeur de date et d'heure. Par exemple, vous pouvez utiliser les fonctions GETDATE et DATEPART pour extraire l’année actuelle à l’aide de l’expression `DATEPART("year",GETDATE())`.  
   

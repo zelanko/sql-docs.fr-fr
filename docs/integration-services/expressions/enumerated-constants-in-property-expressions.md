@@ -19,11 +19,11 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477581"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123255"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes énumérées dans des expressions de propriété
 
@@ -34,7 +34,7 @@ ms.locfileid: "88477581"
   
  Cette rubrique répertorie uniquement les valeurs numériques équivalant aux noms conviviaux d'énumérateurs dont les membres sont fréquemment utilisés dans des expressions de propriété. Le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut de nombreux énumérateurs supplémentaires que vous utilisez quand vous programmez le modèle objet pour générer des packages par programmation ou des éléments de package de code personnalisé, tels que des tâches et des composants de flux de données.  
   
- En complément des propriétés personnalisées pour les packages et les objets package, la fenêtre Propriétés de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclut un jeu de propriétés accessibles aux packages, aux tâches, ainsi qu'aux conteneurs de boucles Foreach, de boucles For et de séquences. Les propriétés communes qui sont définies par des valeurs provenant d’énumérateurs (**ForceExecutionResult**, **LoggingMode**, **IsolationLevel**et **TransactionOption**) sont répertoriées dans la section Propriétés communes.  
+ En complément des propriétés personnalisées pour les packages et les objets package, la fenêtre Propriétés de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclut un jeu de propriétés accessibles aux packages, aux tâches, ainsi qu'aux conteneurs de boucles Foreach, de boucles For et de séquences. Les propriétés communes qui sont définies par des valeurs provenant d’énumérateurs (**ForceExecutionResult**, **LoggingMode**, **IsolationLevel** et **TransactionOption**) sont répertoriées dans la section Propriétés communes.  
   
  Les sections suivantes fournissent des informations sur les constantes énumérées :  
   

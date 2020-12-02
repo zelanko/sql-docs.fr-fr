@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 144b769ce42b192099678cda4cfe6fb2935c1c2f
+ms.sourcegitcommit: af663bdca0df8a1f34a14667390662f6f0e17766
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257339"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94924166"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Déploiement de plusieurs [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] dans le même domaine Active Directory
 
@@ -22,7 +22,7 @@ ms.locfileid: "92257339"
 
 Cet article décrit les mises à jour apportées à SQL Server 2019 CU5 qui offrent la possibilité de déployer et d’intégrer plusieurs clusters Big Data SQL Server 2019 dans le même domaine Active Directory.
 
-Avant CU5, deux problèmes empêchaient le déploiement de plusieurs clusters Big Data dans un domaine AD.
+Avant SQL 2019 CU5, deux problèmes empêchaient le déploiement de plusieurs clusters Big Data dans un domaine AD.
 
 - Conflit de noms entre les noms de principal du service et le domaine DNS
 - Nom du principal du compte de domaine
@@ -35,11 +35,11 @@ Le nom de domaine fourni au moment du déploiement est utilisé comme domaine DN
 
 ### <a name="domain-account-principal-names"></a>Nom du principal du compte de domaine
 
-Lors du déploiement d’un cluster Big Data avec un domaine Active Directory, plusieurs principaux de comptes sont générés pour les services qui s’exécutent dans le cluster. Il s’agit essentiellement de comptes d’utilisateur AD. Avant CU5, leur nom n’était pas unique d’un cluster à l’autre. Cet aspect se manifeste si l’on tente de créer le même nom de compte d’utilisateur pour un service donné de Clusters Big Data dans deux clusters différents. Le cluster déployé en deuxième entrera en conflit dans AD et ne pourra pas créer son compte.
+Lors du déploiement d’un cluster Big Data avec un domaine Active Directory, plusieurs principaux de comptes sont générés pour les services qui s’exécutent dans le cluster. Il s’agit essentiellement de comptes d’utilisateur AD. Avant SQL 2019 CU5, le nom de ces comptes n’était pas unique d’un cluster à l’autre. Cet aspect se manifeste si l’on tente de créer le même nom de compte d’utilisateur pour un service donné de Clusters Big Data dans deux clusters différents. Le cluster déployé en deuxième entrera en conflit dans AD et ne pourra pas créer son compte.
 
 ## <a name="resolution-for-collisions"></a>Résolution des collisions
 
-### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---cu5"></a>Solution pour résoudre le problème lié aux noms SPN et au domaine DNS – CU5
+### <a name="solution-to-solve-the-problem-with-spns-and-dns-domain---sql-2019-cu5"></a>Solution pour résoudre le problème lié aux noms de principal de service et au domaine DNS – SQL 2019 CU5
 
 Étant donné que les noms SPN doivent être différents entre deux clusters, le nom de domaine DNS transmis au moment du déploiement doit être différent. Vous pouvez spécifier différents noms DNS à l’aide du nouveau paramètre introduit dans le fichier de configuration de déploiement : `subdomain`. Si le sous-domaine diffère entre deux clusters et que la communication interne est possible sur ce sous-domaine, les noms SPN incluent le sous-domaine, atteignant ainsi l’unicité requise.
 
@@ -63,7 +63,7 @@ Le sous-domaine ne s’applique qu’au nom DNS. Le nouveau nom de compte d’ut
 
 ## <a name="semantics"></a>Sémantique
 
-En résumé, voici la sémantique des paramètres ajoutés dans CU5 pour plusieurs clusters dans un domaine :
+En résumé, voici la sémantique des paramètres ajoutés dans SQL 2019 CU5 pour plusieurs clusters dans un domaine :
 
 ### `subdomain`
 
@@ -138,7 +138,7 @@ Voici un exemple de spécification de point de terminaison pour les points de te
 
 Ce n’est pas obligatoire, mais recommandé. Le fait de fournir des UO distinctes pour les différents clusters facilite la gestion des comptes d’utilisateurs générés.
 
-### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>Comment revenir au comportement d’avant CU5 ?
+### <a name="how-to-revert-back-to-the-pre-cu5-behavior-in-sql-2019"></a>Comment revenir au comportement d’avant CU5 dans SQL 2019 ?
 
 Il peut exister des cas de figure dans lesquels la prise en compte du nouveau paramètre `subdomain` n’est pas possible, par exemple, si vous devez déployer une version antérieure à CU5 et que vous avez déjà mis à niveau [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Même si cette situation est très improbable, vous pouvez définir le paramètre `useSubdomain` sur `false` dans la section Active Directory de `control.json` pour rétablir le comportement d’avant CU5.
 

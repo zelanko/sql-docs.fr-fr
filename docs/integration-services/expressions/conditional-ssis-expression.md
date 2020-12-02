@@ -15,11 +15,11 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f63ea95489b639672ddb50b44fa882eecc463025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425561"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123277"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Conditionnel) (expression SSIS)
 
@@ -96,7 +96,7 @@ boolean_expression?expression1:expression2
 @AnimalName == "Elephant"? "savannah": "unknown"  
 ```  
   
- L’exemple suivant montre une expression qui fait référence une colonne **ListPrice** . La colonne**ListPrice** a le type de données DT_CY. L’expression multiplie selon une condition la valeur de la colonne **ListPrice** par 0,2 ou 0,1.  
+ L’exemple suivant montre une expression qui fait référence une colonne **ListPrice** . La colonne **ListPrice** a le type de données DT_CY. L’expression multiplie selon une condition la valeur de la colonne **ListPrice** par 0,2 ou 0,1.  
   
 ```  
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  

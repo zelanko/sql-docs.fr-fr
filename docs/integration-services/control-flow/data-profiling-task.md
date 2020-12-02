@@ -18,11 +18,11 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430991"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123540"
 ---
 # <a name="data-profiling-task"></a>Tâche de profilage des données
 
@@ -87,15 +87,15 @@ ms.locfileid: "88430991"
 |FunctionalDependencyProfile|Colonnes de type **entier** , **char** et **datetime**|  
 |InclusionProfile|Colonnes de type **entier** , **char** et **datetime**|  
   
- \* Dans le tableau précédent des types de données valides, les types **entier**, **char**, **datetime**et **numérique** incluent les types de données spécifiques suivants :  
+ \* Dans le tableau précédent des types de données valides, les types **entier**, **char**, **datetime** et **numérique** incluent les types de données spécifiques suivants :  
   
- Les types d’entiers sont **bit**, **tinyint**, **smallint**, **int**et **bigint**.  
+ Les types d’entiers sont **bit**, **tinyint**, **smallint**, **int** et **bigint**.  
   
- Les types de caractères sont **char**, **nchar**, **varchar**et **nvarchar,** mais n’incluent pas **varchar (max)** et **nvarchar (max)**.  
+ Les types de caractères sont **char**, **nchar**, **varchar** et **nvarchar,** mais n’incluent pas **varchar (max)** et **nvarchar (max)**.  
   
- Les types de date et d’heure sont **datetime**, **smalldatetime**et **timestamp**.  
+ Les types de date et d’heure sont **datetime**, **smalldatetime** et **timestamp**.  
   
- Les types numériques sont les types **entier** (sauf **bits**), **money**, **smallmoney**, **décimal**, **float**, **réel**et **numérique**.  
+ Les types numériques sont les types **entier** (sauf **bits**), **money**, **smallmoney**, **décimal**, **float**, **réel** et **numérique**.  
   
  \*\* **image**, **texte**, **XML**, **udt** et **variant** sont pris en charge uniquement pour le profil de ratio de colonne Null.  
   

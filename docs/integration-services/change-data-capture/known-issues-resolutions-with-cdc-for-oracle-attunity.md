@@ -10,10 +10,10 @@ ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "94384727"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Erreurs connues et résolutions avec Change Data Capture pour Oracle d’Attunity
@@ -60,7 +60,7 @@ La **version 2.0.0.114** contient les correctifs suivants :
 La **version 2.0.0.92** contient les correctifs suivants : 
 - Les propriétés ajoutées dans les options avancées de l’instance CDC Attunity sont supprimées lors de l’ajout ou de la suppression d’une table dans CDC. CDC Attunity cesse de fonctionner après l’application du correctif SQL qui ajoute la colonne __$command_id
 - Échec de la validation des métadonnées pour la table Oracle CDC.nom_table. L’index de la colonne nom_colonne est hors limites.  Et le problème suivant : Le service Oracle CDC montre un état Abandonné quand vous utilisez CDC pour Oracle d’Attunity
-    - Correction dans _Mise à jour cumulative 1 pour SQL Server 2014 RTM_ , comme décrit dans KB [2894025](https://support.microsoft.com/kb/2894025).
+    - Correction dans _Mise à jour cumulative 1 pour SQL Server 2014 RTM_, comme décrit dans KB [2894025](https://support.microsoft.com/kb/2894025).
 - Certaines modifications sont ignorées et ne sont pas répliquées dans la base de données SQL Server. Ce problème se produit quand une table contient plusieurs objets CLOB et que l’un de ces objets a une valeur élevée. 
     - Correction dans _Mise à jour cumulative 1 pour SQL Server 2014 SP1_ et _Mise à jour cumulative 8 pour SQL Server 2014 RTM_ comme décrit dans KB [3029096](https://support.microsoft.com/kb/3029096). 
 - CDC pour Oracle d’Attunity cesse de fonctionner quand des tables Oracle ont une colonne avec un type de données Long.
@@ -80,15 +80,15 @@ La **version 1.1.0.102** contient les correctifs suivants :
 - Doublement des largeurs sur des colonnes dans SQL
     - Lors de la création d’une instance CDC pour Oracle, dans les scripts à exécuter sur SQL Server, la longueur d’une colonne de type de données de largeur variable est doublée dans les tables SQL Server créées dans le script. Par exemple, si vous essayez d’effectuer le suivi des modifications sur une colonne VARCHAR2(10) dans une table Oracle, la colonne correspondante dans la table SQL Server est NVARCHAR(20) dans le script de déploiement. Correction dans _Mise à jour cumulative 2 pour SQL Server 2012 SP1_ ou _Mise à jour cumulative 5 pour SQL Server 2012 RTM_ comme décrit dans KB [2769673](https://support.microsoft.com/kb/2769673). 
 - Les données des instructions DDL sont tronquées
-    - Quand vous exécutez une instruction DDL (Data Definition Language) qui dépasse 4 000 octets sur une base de données Oracle qui contient des caractères non latins, CDC pour Oracle d’Attunity échoue. En outre, vous voyez le message d’erreur `ORA-01406: fetched column value was truncated.`. Correction dans _Mise à jour cumulative 4 pour SQL Server 2012 SP1_ , comme décrit dans KB [2839806](https://support.microsoft.com/kb/2839806). 
+    - Quand vous exécutez une instruction DDL (Data Definition Language) qui dépasse 4 000 octets sur une base de données Oracle qui contient des caractères non latins, CDC pour Oracle d’Attunity échoue. En outre, vous voyez le message d’erreur `ORA-01406: fetched column value was truncated.`. Correction dans _Mise à jour cumulative 4 pour SQL Server 2012 SP1_, comme décrit dans KB [2839806](https://support.microsoft.com/kb/2839806). 
 - Les modifications sont perdues dans les deux dernières colonnes
-    - Correction dans _Mise à jour cumulative 6 pour SQL Server 2012 SP1_ , comme décrit dans KB [2874879](https://support.microsoft.com/kb/2874879). 
+    - Correction dans _Mise à jour cumulative 6 pour SQL Server 2012 SP1_, comme décrit dans KB [2874879](https://support.microsoft.com/kb/2874879). 
 - La taille du journal des transactions SQL augmente quand vous utilisez CDC pour Oracle
      - Quand des instances CDC pour Oracle sont configurées, la base de données SQL qui reçoit les données modifiées a des tables mises en miroir, avec des transactions marquées pour la réplication. Ce comportement se produit car CDC pour Oracle s’appuie sur des procédures stockées système sous-jacentes qui ressemblent à celles utilisées dans CDC pour SQL Server. Cependant, comme aucune réplication CDC SQL n’est impliquée quand CDC pour Oracle est utilisée seule, il n’existe aucun lecteur de journal pour effacer les transactions marquées pour la réplication. Comme la transaction ne doit pas être répliquée dans SQL Server, vous pouvez sans problème marquer manuellement la transaction comme étant distribuée en utilisant la solution de contournement décrite plus loin dans cet article. Vous trouverez plus d’informations dans KB [2871474](https://support.microsoft.com/kb/2871474). 
-- Erreur `ORACDC000T: Error encountered at position to change event - SCN not found - EOF simulated`. Correction dans _Mise à jour cumulative 7 pour SQL Server 2012 SP1_ , comme décrit dans KB [2883524](https://support.microsoft.com/kb/2883524). 
-- Échec de la validation des métadonnées pour la table Oracle CDC.nom_table. L’index de la colonne nom_colonne est hors limites. Correction dans _Mise à jour cumulative 7 pour SQL Server 2012 SP1_ , comme décrit dans KB [2883524](https://support.microsoft.com/kb/2883524).
-- Le service Oracle CDC montre un état Abandonné quand vous utilisez CDC pour Oracle d’Attunity dans SQL Server 2012. Correction dans _Mise à jour cumulative 8 pour SQL Server 2012 SP1_ , comme décrit dans KB [2923839](https://support.microsoft.com/kb/2923839).  
-- Certaines modifications sont ignorées et ne sont pas répliquées dans les bases de données SQL Server. Ce problème se produit quand une table contient plusieurs objets CLOB et que l’un de ces objets a une valeur élevée. Correction dans _Mise à jour cumulative 8 pour SQL Server 2012 SP1_ , comme décrit dans KB [2923839](https://support.microsoft.com/kb/2923839).   
+- Erreur `ORACDC000T: Error encountered at position to change event - SCN not found - EOF simulated`. Correction dans _Mise à jour cumulative 7 pour SQL Server 2012 SP1_, comme décrit dans KB [2883524](https://support.microsoft.com/kb/2883524). 
+- Échec de la validation des métadonnées pour la table Oracle CDC.nom_table. L’index de la colonne nom_colonne est hors limites. Correction dans _Mise à jour cumulative 7 pour SQL Server 2012 SP1_, comme décrit dans KB [2883524](https://support.microsoft.com/kb/2883524).
+- Le service Oracle CDC montre un état Abandonné quand vous utilisez CDC pour Oracle d’Attunity dans SQL Server 2012. Correction dans _Mise à jour cumulative 8 pour SQL Server 2012 SP1_, comme décrit dans KB [2923839](https://support.microsoft.com/kb/2923839).  
+- Certaines modifications sont ignorées et ne sont pas répliquées dans les bases de données SQL Server. Ce problème se produit quand une table contient plusieurs objets CLOB et que l’un de ces objets a une valeur élevée. Correction dans _Mise à jour cumulative 8 pour SQL Server 2012 SP1_, comme décrit dans KB [2923839](https://support.microsoft.com/kb/2923839).   
 - CDC pour Oracle d’Attunity cesse de fonctionner quand des tables Oracle ont une colonne avec un type de données Long. Correction dans _Mise à jour cumulative 2 pour SQL Server 2012 SP3_ et _Mise à jour cumulative 11 pour SQL 2012 SP2_ comme décrit dans KB [3145983](https://support.microsoft.com/kb/3145983). 
 
 ## <a name="collect-detailed-logs"></a>Collecter des journaux détaillés 
@@ -115,7 +115,7 @@ Choisissez une heure de début et sélectionnez un emplacement pour le fichier j
 
 ### <a name="detailed-errors"></a>Erreurs détaillées
 
-Vous pouvez augmenter le niveau de suivi collecté par l’instance et répéter le scénario pour obtenir une journalisation plus détaillée. Pour cela, sélectionnez **Properties** (Propriétés) sous **Actions** , puis ajoutez une nouvelle propriété dans la grille **Advanced Settings** (Paramètres avancés) de l’onglet **Advanced** (Avancé). Définissez le nom de la propriété sur `trace`, puis définissez la valeur sur `SOURCE`. 
+Vous pouvez augmenter le niveau de suivi collecté par l’instance et répéter le scénario pour obtenir une journalisation plus détaillée. Pour cela, sélectionnez **Properties** (Propriétés) sous **Actions**, puis ajoutez une nouvelle propriété dans la grille **Advanced Settings** (Paramètres avancés) de l’onglet **Advanced** (Avancé). Définissez le nom de la propriété sur `trace`, puis définissez la valeur sur `SOURCE`. 
 
 ![Capture d’écran montrant l’option Properties (Propriétés) sous Actions.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/properties.png)
 

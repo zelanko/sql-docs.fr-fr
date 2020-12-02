@@ -21,11 +21,11 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c99a1d737e2b3d5c928f1b555915a14443b30584
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194691"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123446"
 ---
 # <a name="aggregate-transformation"></a>Transformation d'agrégation
 
@@ -107,7 +107,7 @@ ms.locfileid: "92194691"
   
  La transformation d'agrégation est asynchrone, ce qui signifie qu'elle ne consomme pas les données et ne les publie pas ligne par ligne. Au lieu de cela, elle consomme tout l'ensemble de lignes, effectue les regroupements et les agrégations, puis publie les résultats.  
   
- Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, l’entrée d’une transformation d’agrégation peut contenir trois colonnes : **PaysRegion**, **Ville**et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
+ Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, l’entrée d’une transformation d’agrégation peut contenir trois colonnes : **PaysRegion**, **Ville** et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
   
  Vous pouvez également ajouter plusieurs sorties à la transformation d'agrégation et diriger chaque agrégation vers une sortie différente. Par exemple, si la transformation d’agrégation applique les fonctions Sum et Average, chaque agrégation peut être dirigée vers une sortie différente.  
   

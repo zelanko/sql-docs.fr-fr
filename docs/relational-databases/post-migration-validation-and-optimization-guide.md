@@ -14,10 +14,10 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93235450"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
@@ -94,7 +94,7 @@ Les index incorrects ou manquants provoquent des suppléments d’E/S qui entra�
 > [!NOTE]
 > Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existe dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en l’état ne concerne pas ce scénario.
 
-L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut uniquement prendre en compte les informations connues au moment de la compilation. Si une charge de travail s’appuie sur des prédicats qui ne peuvent être connus qu’au moment de l’exécution, le potentiel d’un mauvais choix de plan augmente. Pour permettre l’amélioration de la qualité d’un plan, les prédicats doivent être **SARGable** , ou **S** earch **Arg** ument **able**.
+L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut uniquement prendre en compte les informations connues au moment de la compilation. Si une charge de travail s’appuie sur des prédicats qui ne peuvent être connus qu’au moment de l’exécution, le potentiel d’un mauvais choix de plan augmente. Pour permettre l’amélioration de la qualité d’un plan, les prédicats doivent être **SARGable**, ou **S** earch **Arg** ument **able**.
 
 Voici quelques exemples de prédicats non SARGable :
 -   Conversions de données implicites, par exemple de VARCHAR à NVARCHAR, ou de INT à VARCHAR. Recherchez les avertissements d’exécution liés à CONVERT_IMPLICIT dans les plans d’exécution réels. La conversion d’un type vers un autre type peut également entraîner une perte de précision.

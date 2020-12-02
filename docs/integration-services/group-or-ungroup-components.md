@@ -17,10 +17,10 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7cd88383577694d5bef248baea5004056d239136
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195202"
 ---
 # <a name="group-or-ungroup-components"></a>Grouper ou dissocier des composants
@@ -28,7 +28,7 @@ ms.locfileid: "92195202"
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d’événements** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] prennent en charge le groupement réductible. Si un package contient plusieurs composants, les onglets peuvent être encombrés, ce qui rend difficile l'affichage simultané de tous les composants et la recherche de l'élément avec lequel vous souhaitez travailler. La fonctionnalité de groupement réductible permet d'économiser de l'espace sur la surface de travail et de faciliter l'utilisation des packages volumineux.  
+  Les onglets **Flux de contrôle**, **Flux de données** et **Gestionnaires d’événements** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] prennent en charge le groupement réductible. Si un package contient plusieurs composants, les onglets peuvent être encombrés, ce qui rend difficile l'affichage simultané de tous les composants et la recherche de l'élément avec lequel vous souhaitez travailler. La fonctionnalité de groupement réductible permet d'économiser de l'espace sur la surface de travail et de faciliter l'utilisation des packages volumineux.  
   
  Vous sélectionnez les composants à grouper, vous les groupez, puis vous développez ou réduisez les groupes selon vos besoins. Le développement d'un groupe donne accès aux propriétés des composants du groupe. Les contraintes de précédence qui connectent les tâches et conteneurs sont incluses automatiquement dans le groupe.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "92195202"
   
 2.  Dans l'Explorateur de solutions, double-cliquez sur le package pour l'ouvrir.  
   
-3.  Cliquez sur l’onglet **Flux de contrôle**, **Flux de données**ou **Gestionnaires d’événements** .  
+3.  Cliquez sur l’onglet **Flux de contrôle**, **Flux de données** ou **Gestionnaires d’événements** .  
   
 4.  Sur l’aire de conception de l’onglet, sélectionnez les composants que vous souhaitez grouper, cliquez avec le bouton droit sur un composant sélectionné, puis cliquez sur **Groupe**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "92195202"
   
 2.  Dans l'Explorateur de solutions, double-cliquez sur le package pour l'ouvrir.  
   
-3.  Cliquez sur l’onglet **Flux de contrôle**, **Flux de données**ou **Gestionnaires d’événements** .  
+3.  Cliquez sur l’onglet **Flux de contrôle**, **Flux de données** ou **Gestionnaires d’événements** .  
   
 4.  Sur l’aire de conception de l’onglet, sélectionnez le groupe qui contient le composant que vous souhaitez dissocier, cliquez avec le bouton droit sur le composant sélectionné, puis cliquez sur **Dissocier**.  
   

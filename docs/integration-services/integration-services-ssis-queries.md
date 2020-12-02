@@ -19,10 +19,10 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 54a577a2a94c64eafe3817ccd9a041125629f846
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193841"
 ---
 # <a name="integration-services-ssis-queries"></a>Requêtes Integration Services (SSIS)
@@ -114,8 +114,8 @@ Utilisez la boîte de dialogue **Générateur de requêtes** pour créer une req
   
 |Volet|Description|  
 |----------|-----------------|  
-|Volet**Diagramme** .|Affiche la requête dans un diagramme. Le diagramme illustre les tables contenues dans la requête et leur mode de jointure. Activez ou désactivez la case à cocher correspondant à une colonne de la table pour l'ajouter ou la supprimer du résultat de la requête.<br /><br /> Lorsque vous ajoutez des tables à la requête, le Générateur de requêtes crée des jointures entre les tables basées sur les tables, en fonction des clés de la table. Pour ajouter une jointure, faites glisser le champ d'une table vers un champ situé dans une autre table. Pour gérer une jointure, cliquez dessus avec le bouton droit, puis sélectionnez une option du menu.<br /><br /> Cliquez avec le bouton droit sur le volet **Diagramme** pour ajouter ou supprimer des tables, sélectionner toutes les tables et afficher ou masquer des volets.|  
-|Volet**Grille**|Affiche la requête dans une grille. Vous pouvez utiliser ce volet pour ajouter et supprimer des colonnes dans la requête et modifier les paramètres de chaque colonne.|  
-|Volet**SQL**|Affiche la requête sous forme de texte SQL. Les modifications effectuées dans le volet **Diagramme** et le volet **Grille** sont affichées ici et les modifications apportées ici sont affichées dans les volets **Diagramme** et **Grille** .|  
-|Volet**Résultats**|Affiche les résultats de la requête lorsque vous cliquez sur **Exécuter** dans la barre d'outils.| 
+|Volet **Diagramme** .|Affiche la requête dans un diagramme. Le diagramme illustre les tables contenues dans la requête et leur mode de jointure. Activez ou désactivez la case à cocher correspondant à une colonne de la table pour l'ajouter ou la supprimer du résultat de la requête.<br /><br /> Lorsque vous ajoutez des tables à la requête, le Générateur de requêtes crée des jointures entre les tables basées sur les tables, en fonction des clés de la table. Pour ajouter une jointure, faites glisser le champ d'une table vers un champ situé dans une autre table. Pour gérer une jointure, cliquez dessus avec le bouton droit, puis sélectionnez une option du menu.<br /><br /> Cliquez avec le bouton droit sur le volet **Diagramme** pour ajouter ou supprimer des tables, sélectionner toutes les tables et afficher ou masquer des volets.|  
+|Volet **Grille**|Affiche la requête dans une grille. Vous pouvez utiliser ce volet pour ajouter et supprimer des colonnes dans la requête et modifier les paramètres de chaque colonne.|  
+|Volet **SQL**|Affiche la requête sous forme de texte SQL. Les modifications effectuées dans le volet **Diagramme** et le volet **Grille** sont affichées ici et les modifications apportées ici sont affichées dans les volets **Diagramme** et **Grille** .|  
+|Volet **Résultats**|Affiche les résultats de la requête lorsque vous cliquez sur **Exécuter** dans la barre d'outils.| 
 

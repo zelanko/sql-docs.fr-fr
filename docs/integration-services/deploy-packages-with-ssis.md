@@ -22,11 +22,11 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194579"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123339"
 ---
 # <a name="deploy-packages-with-ssis"></a>Déployer des packages avec SSIS
 
@@ -71,7 +71,7 @@ Sur l’ordinateur sur lequel vous créez le bundle de déploiement, **les compo
     
 ### <a name="on-the-destination-computer"></a>Sur l’ordinateur de destination
 
-Les composants suivants **doivent être installés**sur l’ordinateur vers lequel vous déployez des packages :    
+Les composants suivants **doivent être installés** sur l’ordinateur vers lequel vous déployez des packages :    
     
 - Serveur SQL Server. (Téléchargez une édition d’évaluation ou développeur gratuite de SQL Server à partir de [Téléchargements SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).)
 

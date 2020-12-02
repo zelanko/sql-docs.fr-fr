@@ -17,10 +17,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8ff797225d3a97673bf0f1b108ce15eb6e8bd52
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193099"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Création d'une liste pour la boucle Foreach à l'aide de la tâche de script
@@ -34,7 +34,7 @@ ms.locfileid: "92193099"
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- L’exemple suivant utilise des méthodes de l’espace de noms **System.IO** pour établir une liste de classeurs Excel sur l’ordinateur qui sont antérieurs ou postérieurs à un nombre de jours spécifié par l’utilisateur dans une variable. Il effectue une recherche récursive dans les répertoires du lecteur C pour trouver des fichiers dotés de l'extension .xls et examine la date de dernière modification de chaque fichier pour déterminer s'il appartient à la liste. Il ajoute les fichiers répondant aux critères à un objet **** ArrayList**** et enregistre cet objet dans une variable pour une utilisation ultérieure dans un conteneur de boucles Foreach. Le conteneur de boucles Foreach est configuré pour utiliser l'énumérateur Foreach à partir d'une variable.  
+ L’exemple suivant utilise des méthodes de l’espace de noms **System.IO** pour établir une liste de classeurs Excel sur l’ordinateur qui sont antérieurs ou postérieurs à un nombre de jours spécifié par l’utilisateur dans une variable. Il effectue une recherche récursive dans les répertoires du lecteur C pour trouver des fichiers dotés de l'extension .xls et examine la date de dernière modification de chaque fichier pour déterminer s'il appartient à la liste. Il ajoute les fichiers répondant aux critères à un objet ArrayList et enregistre cet objet dans une variable pour une utilisation ultérieure dans un conteneur de boucles Foreach. Le conteneur de boucles Foreach est configuré pour utiliser l'énumérateur Foreach à partir d'une variable.  
   
 > [!NOTE]  
 >  La variable utilisée avec l’énumérateur Foreach From variable doit être de type **Object**. L’objet que vous placez dans la variable doit implémenter l’une des interfaces suivantes : **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** ou **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Un objet **Array** ou **ArrayList** est couramment utilisé. L’objet **ArrayList** nécessite une référence et une instruction **Imports** pour l’espace de noms **System.Collections**.  

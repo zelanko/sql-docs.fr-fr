@@ -30,10 +30,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ce27ef50da9b1c72bc3b620dda61e6c1c925d14
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92195953"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
@@ -56,7 +56,7 @@ ms.locfileid: "92195953"
   
 -   **_key_in**, une colonne qui identifie chaque ligne de manière unique.  
   
--   **_key_out**, une colonne qui identifie un groupe de lignes dupliquées. La colonne **_key_out** a la même valeur que la colonne **_key_in** dans la ligne de données canonique. Les lignes ayant une valeur identique dans **_key_out** font partie du même groupe. La valeur **_key_out**pour un groupe correspond à la valeur **_key_in** dans la ligne de données canonique.  
+-   **_key_out**, une colonne qui identifie un groupe de lignes dupliquées. La colonne **_key_out** a la même valeur que la colonne **_key_in** dans la ligne de données canonique. Les lignes ayant une valeur identique dans **_key_out** font partie du même groupe. La valeur **_key_out** pour un groupe correspond à la valeur **_key_in** dans la ligne de données canonique.  
   
 -   **_score**, valeur comprise entre 0 et 1, qui indique la similarité de la ligne d’entrée avec la ligne canonique.  
   

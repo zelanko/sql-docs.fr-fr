@@ -12,10 +12,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3e1b6c318bd971e5352ad0191ccad51e20f5560a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92193798"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Leçon 2-1 : Génération de l’utilitaire de déploiement
@@ -31,7 +31,7 @@ Avant de générer l'utilitaire de déploiement, vous devez modifier les propri�
   
 ### <a name="to-set-the-deployment-utility-properties"></a>Pour définir les propriétés de l'utilitaire de déploiement  
   
-1.  Si [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] n’est pas déjà ouvert, dans le menu **Démarrer**, pointez sur **Tous les programmes**, puis sur **Microsoft SQL Server**et cliquez sur **Business Intelligence Development Studio**.  
+1.  Si [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] n’est pas déjà ouvert, dans le menu **Démarrer**, pointez sur **Tous les programmes**, puis sur **Microsoft SQL Server** et cliquez sur **Business Intelligence Development Studio**.  
   
 2.  Dans le menu **Fichier** , cliquez successivement sur **Ouvrir**, sur **Projet/Solution**, sur le dossier **Didacticiel de déploiement** et sur **Ouvrir**, puis double-cliquez sur **Deployment Tutorial.sln**.  
   
@@ -39,7 +39,7 @@ Avant de générer l'utilitaire de déploiement, vous devez modifier les propri�
   
 4.  Dans la boîte de dialogue **Pages de propriétés du didacticiel de déploiement** , développez Propriétés de configuration et cliquez sur Utilitaire de déploiement.  
   
-5.  Dans le volet droit de la boîte de dialogue **Pages de propriétés du didacticiel de déploiement** , vérifiez que **AllowConfigurationChanges** a la valeur **true**, affectez à **CreateDeploymentUtility** la valeur **true**et mettez éventuellement à jour la valeur par défaut de **DeploymentOutputPath**.  
+5.  Dans le volet droit de la boîte de dialogue **Pages de propriétés du didacticiel de déploiement** , vérifiez que **AllowConfigurationChanges** a la valeur **true**, affectez à **CreateDeploymentUtility** la valeur **true** et mettez éventuellement à jour la valeur par défaut de **DeploymentOutputPath**.  
   
 6.  Cliquez sur **OK**.  
   

@@ -12,11 +12,11 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0ad1aa213b09afc77d507b874094122611f96dbf
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194826"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123489"
 ---
 # <a name="excel-custom-properties"></a>Propriétés personnalisées d'Excel
 
@@ -31,7 +31,7 @@ ms.locfileid: "92194826"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Mode utilisé pour accéder à la base de données. Les valeurs possibles sont **Open Rowset**, **OpenRowset à partir de Variable**, **Commande SQL**et **Commande SQL à partir d'une variable**. La valeur par défaut est **Open Rowset**.|  
+|AccessMode|Integer|Mode utilisé pour accéder à la base de données. Les valeurs possibles sont **Open Rowset**, **OpenRowset à partir de Variable**, **Commande SQL** et **Commande SQL à partir d'une variable**. La valeur par défaut est **Open Rowset**.|  
 |CommandTimeout|Integer|Nombre de secondes accordées comme délai d'exécution d'une commande.  Une valeur égale à 0 indique un délai illimité.<br /><br /> **Remarque** Cette propriété n’est pas disponible dans l’ **Éditeur de source Excel**, mais elle peut être définie à l’aide de l’ **Éditeur avancé**.|  
 |OpenRowset|String|Nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes.|  
 |OpenRowsetVariable|String|Variable qui contient le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes.|  

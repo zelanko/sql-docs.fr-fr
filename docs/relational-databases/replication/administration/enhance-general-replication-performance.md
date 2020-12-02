@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 307d27f85d5643b837298418279e22dc9225ac67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423583"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121391"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "88423583"
   
 -   Limitez l'utilisation des types de données d'objets volumineux (LOB).  
   
-     Les objets volumineux nécessitent plus d'espace de stockage et de traitement que les autres types de données de colonnes. N'incluez pas ces colonnes dans les articles à moins que votre application en ait besoin. Les types de données **text**, **ntext**et **image** sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)**.  
+     Les objets volumineux nécessitent plus d'espace de stockage et de traitement que les autres types de données de colonnes. N'incluez pas ces colonnes dans les articles à moins que votre application en ait besoin. Les types de données **text**, **ntext** et **image** sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)**.  
   
      Dans le cas d'une réplication transactionnelle, envisagez d'utiliser le profil de l'Agent de distribution appelé **Profil de distribution pour le flux OLEDB**. Pour plus d'informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

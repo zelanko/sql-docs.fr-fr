@@ -23,11 +23,11 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688376"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124264"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -102,7 +102,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Le remplissage de l'index de recherche en texte intégral après l'ajout ou la suppression d'une colonne dans un index de recherche en texte intégral dépend de l'activation du suivi des modifications et si WITH NO POPULATION est spécifié. Pour plus d’informations, consultez [Interactions entre le suivi des modifications et le paramètre NO POPULATION](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
- Spécifie le nom d’une colonne de table, *type_column_name*, utilisée pour contenir le type de document d’un document **varbinary**, **varbinary(max)** ou **image**. Cette colonne,appelée colonne de type, contient une extension de fichier fourni par l'utilisateur (.doc, .pdf, .xls, et ainsi de suite). La colonne doit être de type **char**, **nchar**, **varchar**ou **nvarchar**.  
+ Spécifie le nom d’une colonne de table, *type_column_name*, utilisée pour contenir le type de document d’un document **varbinary**, **varbinary(max)** ou **image**. Cette colonne,appelée colonne de type, contient une extension de fichier fourni par l'utilisateur (.doc, .pdf, .xls, et ainsi de suite). La colonne doit être de type **char**, **nchar**, **varchar** ou **nvarchar**.  
   
  Spécifiez TYPE COLUMN *type_column_name* seulement si *column_name* spécifie une colonne **varbinary**, **varbinary(max)** ou **image**, dans laquelle les données sont stockées sous forme de données binaires ; dans le cas contraire, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur.  
   

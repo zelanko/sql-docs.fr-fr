@@ -16,11 +16,11 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 55585698aaeddc5147455bda61b14eac695071fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477744"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123419"
 ---
 # <a name="convert-data-type-with-data-conversion-transformation"></a>Convertir un type de données avec la transformation de conversion de données
 
@@ -50,7 +50,7 @@ ms.locfileid: "88477744"
   
 8.  Dans la liste **Type de données** , sélectionnez le nouveau type de données de la colonne. Le type de données par défaut est celui de la colonne d'entrée.  
   
-9. Si vous le souhaitez et selon le type de données sélectionné, mettez à jour les valeurs des colonnes **Longueur**, **Précision**, **Échelle**et **Page de codes** .  
+9. Si vous le souhaitez et selon le type de données sélectionné, mettez à jour les valeurs des colonnes **Longueur**, **Précision**, **Échelle** et **Page de codes** .  
   
 10. Pour configurer la sortie d’erreur, cliquez sur **Configurer la sortie d’erreur**. Pour plus d’informations, consultez [Débogage d’un flux de données](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   

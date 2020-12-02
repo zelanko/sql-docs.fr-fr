@@ -16,10 +16,10 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "92192373"
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
@@ -42,7 +42,7 @@ Vous pouvez obtenir des informations supplémentaires sur un composant de la bo�
 ## <a name="toolbox-categories"></a>Catégories de la boîte à outils
  Dans la **boîte à outils SSIS**, le flux de contrôle et les composants de flux de données sont organisés en catégories.  Vous pouvez développer et réduire des catégories, et réorganiser des composants.  Restaurez l’organisation par défaut en cliquant avec le bouton droit dans la boîte à outils, puis en cliquant sur **Restaurer les valeurs par défaut de la boîte à outils**.  
   
- Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories **Autres transformations**, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
+ Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données** et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories **Autres transformations**, **Autres sources** et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Ajouter des composants Azure à la boîte à outils  
  Le Feature Pack Azure pour Integration Services contient les gestionnaires de connexions permettant de se connecter aux sources de données Azure, ainsi que les tâches permettant d’effectuer les opérations Azure courantes. Installez le Feature Pack pour ajouter ces éléments à la boîte à outils. Pour plus d’informations, consultez [Feature Pack Azure pour Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

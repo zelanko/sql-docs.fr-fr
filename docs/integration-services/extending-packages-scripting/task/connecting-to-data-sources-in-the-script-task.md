@@ -25,11 +25,11 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1dc8024520e561ec9c89081c665c8172a1fb9441
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194111"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122956"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Connexion à des sources de données dans la tâche de script
 
@@ -38,7 +38,7 @@ ms.locfileid: "92194111"
 
   Les gestionnaires de connexions fournissent un accès à des sources de données qui ont été configurées dans le package. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
- La tâche de script peut accéder à ces gestionnaires de connexions via la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> de l’objet**Dts**. Chaque gestionnaire de connexions compris dans la collection <xref:Microsoft.SqlServer.Dts.Runtime.Connections> stocke des informations sur la manière d'établir une connexion à la source de données sous-jacente.  
+ La tâche de script peut accéder à ces gestionnaires de connexions via la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> de l’objet **Dts**. Chaque gestionnaire de connexions compris dans la collection <xref:Microsoft.SqlServer.Dts.Runtime.Connections> stocke des informations sur la manière d'établir une connexion à la source de données sous-jacente.  
   
  Lorsque vous appelez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> d'un gestionnaire de connexions, le gestionnaire de connexions se connecte à la source de données, s'il n'est pas déjà connecté, puis renvoie la connexion ou les informations de connexion appropriées que vous devez utiliser dans le code de votre tâche de script.  
   

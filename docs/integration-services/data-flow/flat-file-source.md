@@ -22,11 +22,11 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a0646c394be5d00bea32f69b137e32c03d1663e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197095"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123471"
 ---
 # <a name="flat-file-source"></a>Source de fichier plat
 
@@ -87,7 +87,7 @@ ms.locfileid: "92197095"
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
   
  **Conserver les valeurs NULL de la source comme valeurs NULL dans le flux de données**  
- Indique s'il faut conserver les valeurs NULL lorsque les données sont extraites. La valeur par défaut de cette propriété est **false**. Quand cette propriété a la valeur**false**, la source de fichier plat remplace les valeurs NULL des données sources par les valeurs par défaut appropriées pour chaque colonne, par exemple des chaînes vides pour les colonnes de chaînes et zéro pour les colonnes numériques.  
+ Indique s'il faut conserver les valeurs NULL lorsque les données sont extraites. La valeur par défaut de cette propriété est **false**. Quand cette propriété a la valeur **false**, la source de fichier plat remplace les valeurs NULL des données sources par les valeurs par défaut appropriées pour chaque colonne, par exemple des chaînes vides pour les colonnes de chaînes et zéro pour les colonnes numériques.  
   
  **Préversion**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Vue de données** . L'aperçu peut afficher jusqu'à 200 lignes.  

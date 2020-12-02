@@ -2,7 +2,7 @@
 description: Exemple illustrant l’utilisation du fournisseur Azure Key Vault avec Always Encrypted
 title: Exemple illustrant l’utilisation du fournisseur Azure Key Vault avec Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 11/17/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,22 +11,27 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: b0f389a822b3fcc37572b34a17cd5780f1091bd4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51c99e679855ca762b7adc5763086b4ded9b6cf5
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438661"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96123901"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted"></a>Exemple illustrant l’utilisation du fournisseur Azure Key Vault avec Always Encrypted
 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-[!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
+[!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 Cet exemple illustre l’utilisation du fournisseur Azure Key Vault lors de l’accès à des colonnes chiffrées.
 
 [!code-csharp [AKVProvider Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderExample.cs#1)]
+
+> [!NOTE]
+> - Pour utiliser la fonctionnalité Always Encrypted avec des enclaves sécurisées pour l’application .NET Standard, **Microsoft.Data.SqlClient** version 2.1.0 ou ultérieure est requis. La version de .NET Standard prise en charge est 2.0 ou une version ultérieure. 
+>
+> - Pour utiliser la fonctionnalité Always Encrypted sur Linux et macOS, **Microsoft.Data.SqlClient** version 2.1.0 ou ultérieure est requis.
 
 ## <a name="see-also"></a>Voir aussi
 

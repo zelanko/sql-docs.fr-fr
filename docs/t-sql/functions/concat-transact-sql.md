@@ -20,11 +20,11 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43b05f32ecaf1cb1554180fce9b1591dc02c7358
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115548"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118953"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 
 ## <a name="arguments"></a>Arguments
 *string_value*  
-Valeur de chaîne à concaténer aux autres valeurs. La fonction `CONCAT` nécessite au moins deux arguments*valeur_de_chaîne*, et pas plus de 254 arguments *valeur_de_chaîne*.
+Valeur de chaîne à concaténer aux autres valeurs. La fonction `CONCAT` nécessite au moins deux arguments *valeur_de_chaîne*, et pas plus de 254 arguments *valeur_de_chaîne*.
   
 ## <a name="return-types"></a>Types de retour  
 *string_value*  
