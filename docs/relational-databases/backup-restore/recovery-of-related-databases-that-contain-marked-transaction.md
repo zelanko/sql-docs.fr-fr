@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e43b37dd96a931d98555f05fe6e70b9f8a4f99e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088167"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129170"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Récupération de bases de données associées contenant une transaction marquée
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  Les options STOPATMARK et STOPBEFOREMARK prennent toutes les deux en charge une clause AFTER *datetime* facultative. Lorsqu'ils sont utilisés avec *datetime* , il n'est pas nécessaire que les noms de marque soient uniques.  
   
- Si la clause AFTER *datetime* est omise, la restauration par progression s'arrête à la première marque portant le nom spécifié. Si une valeur est spécifiée pour AFTER *datetime* , la récupération par progression s'arrête à la première marque portant le nom spécifié, à *datetime*exactement ou après.  
+ Si la clause AFTER *datetime* est omise, la restauration par progression s'arrête à la première marque portant le nom spécifié. Si une valeur est spécifiée pour AFTER *datetime* , la récupération par progression s'arrête à la première marque portant le nom spécifié, à *datetime* exactement ou après.  
   
 > [!NOTE]  
 >  Comme dans le cas de toute opération de restauration dans le temps, la récupération jusqu'à une marque n'est pas permise pendant les périodes où la base de données subit des opérations journalisées en bloc.  

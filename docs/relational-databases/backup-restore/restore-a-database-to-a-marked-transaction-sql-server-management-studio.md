@@ -15,14 +15,14 @@ helpviewer_keywords:
 - restoring databases [SQL Server], marked transactions
 - marked transactions [SQL Server], restoring
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3f267e998b0bd9693c821000cd51a044326e9161
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d35f1478d3d9f290557a6eeebd6ce4365e461e21
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718004"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129121"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurer une base de données jusqu’à une transaction marquée (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "85718004"
   
 1.  Après vous être connecté à l’instance appropriée du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)], dans l’Explorateur d’objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
-2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
+2.  Développez **Bases de données** puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
   
 3.  Cliquez avec le bouton droit sur la base de données, pointez sur **Tâches**, puis cliquez sur **Restaurer**.  
   
-4.  Cliquez sur **Journal des transactions**afin d’ouvrir la boîte de dialogue **Restaurer le journal des transactions** .  
+4.  Cliquez sur **Journal des transactions** afin d’ouvrir la boîte de dialogue **Restaurer le journal des transactions** .  
   
-5.  Dans la page **Général** , dans la section **Restaurer sur** , sélectionnez **Transaction marquée**afin d’ouvrir la boîte de dialogue **Sélectionner une transaction marquée** . Cette boîte de dialogue affiche une grille répertoriant les transactions marquées disponibles dans les sauvegardes du journal des transactions sélectionnées.  
+5.  Dans la page **Général** , dans la section **Restaurer sur** , sélectionnez **Transaction marquée** afin d’ouvrir la boîte de dialogue **Sélectionner une transaction marquée** . Cette boîte de dialogue affiche une grille répertoriant les transactions marquées disponibles dans les sauvegardes du journal des transactions sélectionnées.  
   
      Par défaut, la restauration s'effectue jusqu'à la transaction marquée, en l'excluant. Pour restaurer également la transaction marquée, sélectionnez **Inclure la transaction marquée**.  
   

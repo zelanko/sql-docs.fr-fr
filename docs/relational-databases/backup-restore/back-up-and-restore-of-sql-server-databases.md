@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: afc33480cb19ac8b676c6384d839f1ae4b7d9440
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b6e369cc3677e399182f631885afdfb3b3ac53ee
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810085"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129416"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "91810085"
  **sauvegarde** [nom]  
  Copie de données qui peut être utilisée pour restaurer et récupérer les données après une défaillance. Les sauvegardes d'une base de données peuvent également être utilisées pour restaurer une copie de la base de données à un nouvel emplacement.  
   
-unité de**sauvegarde**  
+unité de **sauvegarde**  
  Unité de disque ou de bande sur laquelle les sauvegardes de SQL Server sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent également être écrites dans un service de stockage Blob Azure, et le format d’ **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d’informations, voir [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)(en anglais).  
   
 **support de sauvegarde**  

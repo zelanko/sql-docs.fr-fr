@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 244b815a0e670cd0e697c037c62d66cc78159d81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737715"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129098"
 ---
 # <a name="restore-database-options-page"></a>Restaurer la base de données (page Options)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85737715"
  Pour modifier des aspects du comportement de l’opération de restauration, utilisez les options du volet **Options de restauration** .  
   
  **Remplacer la base de données existante [WITH REPLACE]**  
- L’opération de restauration remplacera les fichiers de toute base de données qui utilise actuellement le nom de base de données que vous spécifiez dans le champ **Restaurer sur**de la page [Général](../../relational-databases/backup-restore/restore-database-general-page.md) de la boîte de dialogue **Restaurer la base de données** . Les fichiers de la base de données existante seront remplacés même si vous restaurez des sauvegardes à partir d'une base de données différente vers le nom de base de données existant. L’activation de cette option revient à utiliser l’option REPLACE dans une instruction [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ( [!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ L’opération de restauration remplacera les fichiers de toute base de données qui utilise actuellement le nom de base de données que vous spécifiez dans le champ **Restaurer sur** de la page [Général](../../relational-databases/backup-restore/restore-database-general-page.md) de la boîte de dialogue **Restaurer la base de données** . Les fichiers de la base de données existante seront remplacés même si vous restaurez des sauvegardes à partir d'une base de données différente vers le nom de base de données existant. L’activation de cette option revient à utiliser l’option REPLACE dans une instruction [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ( [!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Utilisez cette option uniquement après un examen attentif. Pour plus d’informations, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "85737715"
  Pour plus d’informations, consultez [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Restreindre l'accès à la base de données restaurée [WITH RESTRICTED_USER]**  
- Limite l’accès à la base de données restaurée aux membres de **db_owner**, **dbcreator**ou **sysadmin**.  
+ Limite l’accès à la base de données restaurée aux membres de **db_owner**, **dbcreator** ou **sysadmin**.  
   
  La sélection de cette option équivaut à utiliser l'option RESTRICTED_USER dans une instruction RESTORE.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85737715"
  Pour déterminer l’état de la base de données après l’opération de restauration, vous devez sélectionner l’une des options du volet **État de récupération** .  
   
  **RESTORE WITH RECOVERY**  
- Récupère la base de données après avoir restauré la base de données finale sélectionnée dans la grille **Jeux de sauvegarde à restaurer**de la [page Général](../../relational-databases/backup-restore/restore-database-general-page.md). Il s’agit de l’option par défaut. Elle revient à spécifier WITH RECOVERY dans une instruction [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ( [!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ Récupère la base de données après avoir restauré la base de données finale sélectionnée dans la grille **Jeux de sauvegarde à restaurer** de la [page Général](../../relational-databases/backup-restore/restore-database-general-page.md). Il s’agit de l’option par défaut. Elle revient à spécifier WITH RECOVERY dans une instruction [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) ( [!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  Avec le mode de restauration complète ou le mode de récupération utilisant les journaux de transactions, choisissez cette option si vous restaurez tous les fichiers journaux maintenant.  

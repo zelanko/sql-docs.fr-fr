@@ -17,14 +17,14 @@ helpviewer_keywords:
 - overwriting filegroups
 - overwriting files
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5fe155516996d9f5761ccb2b8b1d1071fb975bbe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5f5b0b6a43c3b6cc1dde0fa566fdb4547c831e76
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737700"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129097"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Restaurer des fichiers et groupes de fichiers en remplaçant des fichiers existants (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "85737700"
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], développez cette instance, puis développez **Bases de données**.  
   
-2.  Cliquez avec le bouton droit sur la base de données de votre choix, pointez sur **Tâches**et sur **Restaurer**, puis cliquez sur **Fichiers et groupes de fichiers**.  
+2.  Cliquez avec le bouton droit sur la base de données de votre choix, pointez sur **Tâches** et sur **Restaurer**, puis cliquez sur **Fichiers et groupes de fichiers**.  
   
 3.  Sur la page **Général** , dans la zone de liste **Vers la base de données** , entrez la base de données à restaurer. Vous pouvez entrer une nouvelle base de données ou choisir une base de données existante dans la liste déroulante. La liste contient toutes les bases de données sur le serveur, à l'exception des bases de données système **master** et **tempdb**.  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809270"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129283"
 ---
 # <a name="create-a-full-database-backup"></a>Créer une sauvegarde complète de base de données
 

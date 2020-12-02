@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e181ce4851e2d00867c25942e8842b200525a3bf
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 32a48093f40d048532ff58a1f91f450e52d6019b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810873"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129012"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Gestion de sauvegarde de SQL Server sur Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "91810873"
 ##  <a name="supportability"></a><a name="support_limits"></a> Prise en charge  
  Les considérations et les limitations suivantes relatives à la prise en charge sont spécifiques à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
--   La sauvegarde de bases de données système **master**, **modèle**et **msdb** est prise en charge. La sauvegarde de **tempdb** n’est pas prise en charge. 
+-   La sauvegarde de bases de données système **master**, **modèle** et **msdb** est prise en charge. La sauvegarde de **tempdb** n’est pas prise en charge. 
   
 -   Pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], tous les modes de récupération sont pris en charge (complet, journalisé en bloc et simple).  
   
