@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059617"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535293"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,7 +76,7 @@ ID du fichier. *file_id* est de type int, sans valeur par défaut. Les entrées 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Nom de la base de données.</br></br>Pour Azure Synapse Analytics, il s’agit du nom de la base de données stockée sur le nœud qui est identifiée par pdw_node_id. Chaque nœud possède une base de données tempdb qui contient 13 fichiers. Chaque nœud possède également une base de données par distribution, et chaque base de données de distribution contient 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats affichent 20 fichiers de base de données de distribution par pdw_node_id. 
+|**database_name**|**sysname**|**Ne s’applique pas à :**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Nom de la base de données.</br></br>Pour Azure Synapse Analytics, il s’agit du nom de la base de données stockée sur le nœud qui est identifiée par pdw_node_id. Chaque nœud possède une base de données tempdb qui contient 13 fichiers. Chaque nœud possède également une base de données par distribution, et chaque base de données de distribution contient 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats affichent 20 fichiers de base de données de distribution par pdw_node_id. 
 |**database_id**|**smallint**|ID de la base de données.|  
 |**file_id**|**smallint**|ID du fichier.|  
 |**sample_ms**|**bigint**|Nombre de millisecondes écoulées depuis le démarrage de l'ordinateur. Cette colonne peut être utilisée pour comparer différents résultats de cette fonction.</br></br>Le type de données est **int** pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -122,7 +122,7 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I O fonctions et vues de gestion dynamique associées &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
