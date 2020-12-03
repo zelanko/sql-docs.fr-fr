@@ -1,7 +1,7 @@
 ---
 title: Stratégies de prise en charge d’OLE DB Driver pour SQL Server
 description: Découvrez les stratégies de support pour OLE DB Driver pour SQL Server et les systèmes d’exploitation et versions de base de données SQL pris en charge avec chaque version de pilote.
-ms.date: 08/06/2020
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: aa01dec4758bb91a4b05d65af372ee66c1c53672
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860644"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506418"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Stratégies de prise en charge d’OLE DB Driver pour SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,6 +30,7 @@ Le pilote OLE DB pour SQL Server a été testé et prend en charge les connexio
 
 | Version de la base de données&nbsp;&#8594;<br />Version du pilote &#8595; | Azure SQL Database | Azure Synapse Analytics | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|---|---|---|---|---|---|---|---|
+|18.5|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
 |18.4|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
 |18.3|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
 |18.2|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
@@ -43,6 +44,7 @@ Le tableau suivant liste les systèmes d’exploitation qui prennent en charge O
 
 | Système d’exploitation&nbsp;&#8594;<br />Version du pilote &#8595; | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|---|---|---|---|---|---|
+|18.5|Oui|Oui|Oui|Oui|Oui|Oui|
 |18.4|Oui|Oui|Oui|Oui|Oui|Oui|
 |18.3|Oui|Oui|Oui|Oui|Oui|Oui|
 |18.2|Oui|Oui|Oui|Oui|Oui|Oui|

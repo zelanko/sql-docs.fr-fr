@@ -2,19 +2,19 @@
 title: Matrice de prise en charge des fonctionnalités des pilotes
 description: Découvrez les fonctionnalités courantes prises en charge dans les pilotes pour SQL Server et où trouver des informations à leur sujet.
 ms.custom: ''
-ms.date: 08/05/2020
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 6a781688b4fc24f8b79f3820fbcc3dc339b6c068
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081428"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419671"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matrice de prise en charge des fonctionnalités des pilotes pour Microsoft SQL Server
 
@@ -43,7 +43,7 @@ Nous aimerions que tous les pilotes prennent en charge l’ensemble des fonction
 | [Authentification par mot de passe Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Oui | Oui | | Oui |
 | [Authentification intégrée Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Oui | Oui | | Oui |
 | [Authentification interactive (MFA) Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Oui | Oui | | Oui |
-| [Authentification Managed Identity Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | | | | |
+| [Authentification Managed Identity Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | Oui | Oui | | |
 | [Authentification par principal de service Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | Oui | Oui | | |
 | [Authentification Windows intégrée](/windows-server/security/windows-authentication/windows-authentication-overview) | [Oui](ado-net/sql/authentication-sql-server.md) | [Oui](ado-net/sql/authentication-sql-server.md) | [Oui](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Oui](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Copie en bloc](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Oui](ado-net/sql/bulk-copy-operations-sql-server.md) | [Oui](ado-net/sql/bulk-copy-operations-sql-server.md) | [Oui](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Oui](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
