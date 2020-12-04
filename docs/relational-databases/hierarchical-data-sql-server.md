@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91869049"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
@@ -127,7 +127,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when an XML dedex is created, **hierarchyid** values are used deternally to represent the position de the hierarchy.  
+ Un document XML est une arborescence. Par conséquent, une instance de type de données XML unique peut représenter la totalité d'une hiérarchie. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], quand un index XML est créé, les valeurs **hierarchyid** sont utilisées en interne pour représenter la position dans la hiérarchie.  
   
  Il peut être préférable d'utiliser le type de données XML lorsque les conditions suivantes sont réunies :  
   
