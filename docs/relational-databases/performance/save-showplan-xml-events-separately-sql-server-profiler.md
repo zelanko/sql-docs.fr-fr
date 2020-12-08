@@ -13,14 +13,14 @@ helpviewer_keywords:
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: c7cac6673d190ab8860792a2de1c995804275570
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34c79b9f3dad13a8927296d424d827eb693ad1dd
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458722"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505008"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Enregistrer séparément les événements Showplan XML (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "86458722"
   
 10. Sélectionnez **Tous les lots Showplan XML dans un seul fichier** pour enregistrer tous les événements **Showplan XML** dans un même fichier XML. Sinon, vous pouvez sélectionner l’option **Chaque lot Showplan XML dans un fichier différent** afin de créer un fichier XML pour chaque événement **Showplan XML**.  
   
-11. Pour afficher le fichier d’événements **Showplan XML** dans SQL Server Management Studio, ouvrez le menu **Fichier**, pointez sur **Ouvrir**, puis sélectionnez **Fichier**. Parcourez le répertoire où vous avez enregistré le ou les fichiers d’événements **Showplan XML** pour en sélectionner un et l’ouvrir. Les fichiers d'événements**Showplan XML** ont l'extension .SQLPlan.  
+11. Pour afficher le fichier d’événements **Showplan XML** dans SQL Server Management Studio, ouvrez le menu **Fichier**, pointez sur **Ouvrir**, puis sélectionnez **Fichier**. Parcourez le répertoire où vous avez enregistré le ou les fichiers d’événements **Showplan XML** pour en sélectionner un et l’ouvrir. Les fichiers d'événements **Showplan XML** ont l'extension .SQLPlan.  
 
 ## <a name="see-also"></a>Voir aussi  
  [Analyser des requêtes avec des résultats Showplan dans SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c8cd352c5347cbc48979af4e03775c9d7da8f3d1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890750"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504961"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -398,7 +398,7 @@ database_name.owner_name.table_name
  **Sélectionnez les bases de données et les tables à analyser**  
  Spécifiez les bases de données et les tables à paramétrer. Pour sélectionner toutes les bases de données, activez la case à cocher de l'en-tête de la colonne **Nom** . Pour sélectionner seulement certaines bases de données, activez la case à cocher en regard du nom de chaque base de données à paramétrer. Par défaut, toutes les tables des bases de données sélectionnées sont automatiquement incluses dans la session de paramétrage. Pour exclure certaines tables, cliquez sur la flèche de la colonne **Tables sélectionnées** , puis désactivez la case à cocher en regard des tables que vous ne voulez pas paramétrer.  
   
- Flèche de déroulement**Tables sélectionnées**  
+ Flèche de déroulement **Tables sélectionnées**  
  Développe la liste des tables pour vous permettre de sélectionner chacune des tables à paramétrer.  
   
  **Enregistrer le journal de paramétrage**  

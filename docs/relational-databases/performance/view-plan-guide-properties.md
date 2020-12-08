@@ -13,14 +13,14 @@ helpviewer_keywords:
 - plan guides [SQL Server], view plan guide properties
 - viewing plan guide properties
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 18c1d7f663d5006cae078753e028caf133ec2c5c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2c0615501d2cb191e5c45e33bb50f3898a412fbc
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458868"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504883"
 ---
 # <a name="view-plan-guide-properties"></a>Afficher les propriétés du repère de plan
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "86458868"
      Lorsque le type de portée est OBJECT, affiche le nom du schéma dans lequel l'objet est contenu.  
   
      **Type d'étendue**  
-     Affiche le type de l'entité dans laquelle l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] apparaît. Ce type spécifie le contexte pour la mise en correspondance de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] avec le repère de plan. Les valeurs possibles sont **OBJECT**, **SQL**et **TEMPLATE**.  
+     Affiche le type de l'entité dans laquelle l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] apparaît. Ce type spécifie le contexte pour la mise en correspondance de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] avec le repère de plan. Les valeurs possibles sont **OBJECT**, **SQL** et **TEMPLATE**.  
   
      **Instruction**  
      Affiche l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] par rapport à laquelle le repère de plan est appliqué.  

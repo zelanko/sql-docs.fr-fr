@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 5ff1c4429b14e359ae249f7a9e9baf2f5da46224
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d89ade42fe716e2d457ce0cd5db200773f8a413c
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457815"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504783"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "86457815"
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'au **Resource Governor**.  
   
-2.  Cliquez avec le bouton droit sur **Resource Governor** , puis sélectionnez **Propriétés**afin d’ouvrir la page **Propriétés de Resource Governor** .  
+2.  Cliquez avec le bouton droit sur **Resource Governor** , puis sélectionnez **Propriétés** afin d’ouvrir la page **Propriétés de Resource Governor** .  
   
 3.  Pour obtenir les descriptions des champs de la page, consultez [Propriétés de Resource Governor](#RGProp).  
   
-4.  Cliquez sur **OK**pour enregistrer les éventuelles modifications.  
+4.  Cliquez sur **OK** pour enregistrer les éventuelles modifications.  
 
 ##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **Nom de la fonction classifieur**  

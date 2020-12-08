@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b18741804460a5a95f74345f2158cb647ab3689c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8c0da148cb3d1d733e506aee2ce06b5494e44c90
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457007"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504913"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Utilisation du magasin de requêtes avec l'OLTP en mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ Toutefois, il existe quelques aspects spécifiques que les utilisateurs doivent 
     
 -   Lorsque vous exécutez le magasin de requêtes dans une base de données avec une charge de travail mixte, vous pouvez utiliser le champ **is_natively_compiled** à partir de [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) pour trouver rapidement les plans de requête générés par la compilation de code en mode natif.  
   
--   Le magasin de requêtes (paramètre*QUERY_CAPTURE_MODE* dans l’instruction **ALTER TABLE** ) n’affecte pas les requêtes à partir des modules compilés en mode natif, car elles sont toujours capturées, quelle que soit la valeur configurée. Cela comprend la définition de `QUERY_CAPTURE_MODE = NONE`.  
+-   Le magasin de requêtes (paramètre *QUERY_CAPTURE_MODE* dans l’instruction **ALTER TABLE** ) n’affecte pas les requêtes à partir des modules compilés en mode natif, car elles sont toujours capturées, quelle que soit la valeur configurée. Cela comprend la définition de `QUERY_CAPTURE_MODE = NONE`.  
   
 -   La durée de compilation des requêtes capturée par le magasin de requêtes comprend uniquement le temps passé à l'optimisation des requêtes, avant la génération du code natif. Plus précisément, elle n'inclut pas le temps de compilation du code C et de la génération des structures internes nécessaires à la génération du code C.  
   

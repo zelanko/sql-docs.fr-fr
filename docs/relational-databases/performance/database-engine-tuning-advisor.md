@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 84ff76946cacefee80cc61f7e1b66e6a1e77fb21
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 0fd814ec47548406eef0b8436751a034c97f4717
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458301"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505297"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ L'Assistant Paramétrage du moteur de base de données est conçu pour gérer le
  **Interface graphique utilisateur de l'Assistant Paramétrage du moteur de base de données**  
  Interface simple d'utilisation dans laquelle vous pouvez spécifier la charge de travail et sélectionner plusieurs options de paramétrage.  
   
- Utilitaire**dta**  
+ Utilitaire **dta**  
  Version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
   
  **charge de travail**  

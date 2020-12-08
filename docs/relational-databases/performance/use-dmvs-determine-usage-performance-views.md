@@ -2,19 +2,19 @@
 title: Vues de gestion dynamique - Statistiques d’utilisation et niveau de performance des vues
 description: Découvrez comment utiliser les vues de gestion dynamique sys.dm_exec_query_optimizer_info, sys.views et sys.dmv_exec_cached_plans pour obtenir des statistiques sur les performances des requêtes SQL.
 ms.custom: seo-dt-2019
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: ea5ae310606097b9f25a31337222b941ac963fd0
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: d900786f27280eb66ded8801843e9c657f2ceb5f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899546"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504903"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues
 Cet article décrit la méthodologie et les scripts utilisés pour obtenir des informations sur les **performances des requêtes qui utilisent des vues**. Le but de ces scripts est de fournir des indicateurs sur l’utilisation et les performances des différentes vues trouvées dans une base de données. 
