@@ -15,15 +15,15 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c92c89d86f14f108e1d21643da7b578d6a2f800
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 519d66511b71cb0045623b239cc82d0e80791968
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88499352"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595077"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Analyser et transformer des données JSON avec OPENJSON (SQL Server)
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 La fonction d’ensemble de lignes **OPENJSON** convertit du texte JSON en un ensemble de lignes et de colonnes. Après avoir transformé une collection JSON en ensemble de lignes avec **OPENJSON**, vous pouvez exécuter n’importe quelle requête SQL sur les données retournées ou l’insérer dans une table SQL Server. 
   

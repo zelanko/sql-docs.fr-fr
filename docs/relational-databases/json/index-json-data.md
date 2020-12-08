@@ -14,15 +14,15 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: eb884b2a3e2114d86dda60fc63b528e11a6386c9
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439463"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595050"
 ---
 # <a name="index-json-data"></a>Indexer des données JSON
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 Dans SQL Server et SQL Database, JSON n’est pas un type de données intégré et SQL Server n’a pas d’index JSON personnalisés. Toutefois, vous pouvez optimiser vos requêtes sur des documents JSON à l’aide d’index standard. 
 

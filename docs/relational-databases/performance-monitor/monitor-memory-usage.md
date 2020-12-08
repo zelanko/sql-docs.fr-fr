@@ -22,14 +22,14 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], memory usage
 - server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0d390a0ed1397a7f433c5582361def2f4022d09b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 93e2780c3e51ce46e0687864896c36b7d3166917
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906182"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505995"
 ---
 # <a name="monitor-memory-usage"></a>Surveiller l'utilisation de la mémoire
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "86906182"
  Pour plus d'informations sur la résolution d'une pagination excessive, consultez la documentation du système d'exploitation Windows.  
   
 ## <a name="isolating-memory-used-by-sql-server"></a>Isolement de la mémoire utilisée par SQL Server  
- Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifie dynamiquement ses besoins en mémoire en fonction des ressources système disponibles. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a besoin de plus de mémoire, il demande au système d'exploitation de déterminer si de la mémoire physique libre est disponible. Dans l'affirmative, il l'utilise. Si la mémoire disponible est insuffisante pour le système d’exploitation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libère de la mémoire sur le système d’exploitation jusqu’à ce que la condition de mémoire insuffisante soit atténuée ou que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atteigne la limite minservermemory. Vous pouvez cependant ignorer cette option pour utiliser dynamiquement de la mémoire au moyen des options de configuration du serveur **minservermemory**et **maxservermemory** Pour plus d'informations, consultez [Options de mémoire du serveur](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
+ Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifie dynamiquement ses besoins en mémoire en fonction des ressources système disponibles. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a besoin de plus de mémoire, il demande au système d'exploitation de déterminer si de la mémoire physique libre est disponible. Dans l'affirmative, il l'utilise. Si la mémoire disponible est insuffisante pour le système d’exploitation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libère de la mémoire sur le système d’exploitation jusqu’à ce que la condition de mémoire insuffisante soit atténuée ou que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atteigne la limite minservermemory. Vous pouvez cependant ignorer cette option pour utiliser dynamiquement de la mémoire au moyen des options de configuration du serveur **minservermemory** et **maxservermemory** Pour plus d'informations, consultez [Options de mémoire du serveur](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
  Pour surveiller la mémoire utilisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , examinez les compteurs de performances suivants :  
   

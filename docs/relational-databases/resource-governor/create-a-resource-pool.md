@@ -11,14 +11,14 @@ helpviewer_keywords:
 - resource pools [SQL Server], create
 - Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: cc46e2e759dbfec54064975281101cb694039786
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a37ffa8d49f850d25aeb815683d9f3541e24bb64
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457541"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506613"
 ---
 # <a name="create-a-resource-pool"></a>Créer un pool de ressources
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86457541"
 ##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> Créer un pool de ressources à l'aide de SQL Server Management Studio  
  **Pour créer un pool de ressources à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'à **Resource Governor**inclus.  
+1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez l'Explorateur d'objets et développez de manière récursive le nœud **Gestion** jusqu'à **Resource Governor** inclus.  
   
 2.  Cliquez avec le bouton droit sur **Resource Governor**, puis sélectionnez **Propriétés**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "86457541"
   
 5.  Cliquez ou double-cliquez sur toutes les autres cellules de la ligne que vous souhaitez modifier, puis entrez les nouvelles valeurs.  
   
-6.  Cliquez sur **OK**pour enregistrer les modifications.  
+6.  Cliquez sur **OK** pour enregistrer les modifications.  
   
 ##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a> Créer un pool de ressources à l'aide de Transact-SQL  
  **Pour créer un pool de ressources à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

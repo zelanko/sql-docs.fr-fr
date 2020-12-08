@@ -12,15 +12,15 @@ helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbe2358e2be461666378cc18c5a735a71574f17a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 829229371dfecd55a56fdbb9a6530635a6170904
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456161"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506350"
 ---
 # <a name="row-compression-implementation"></a>Implémentation de la compression de ligne
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "86456161"
   
 -   Il réduit la charge mémoire des métadonnées qui est associée à l'enregistrement. Ces métadonnées sont des informations sur les colonnes, leur longueur et leur décalage. Dans certains cas, la charge mémoire des métadonnées peut être plus importante qu'avec l'ancien format de stockage.  
   
--   Il utilise le format de stockage de longueur variable pour les types de données numériques (par exemple **integer**, **decimal**et **float**) et les types reposant sur le type numérique (par exemple **datetime** et **money**).  
+-   Il utilise le format de stockage de longueur variable pour les types de données numériques (par exemple **integer**, **decimal** et **float**) et les types reposant sur le type numérique (par exemple **datetime** et **money**).  
   
 -   Il stocke les chaînes de caractères de longueur fixe en utilisant le format de longueur variable, mais sans stocker les caractères blancs.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "86456161"
 |**bit**|Oui|La charge mémoire des métadonnées porte cette valeur à 4 bits.|  
 |**smallmoney**|Oui|Utilise la représentation des données de type entier sur un entier de 4 octets. La valeur monétaire est multipliée par 10000 et la valeur entière résultante est stockée en supprimant tous les chiffres après la virgule. L'optimisation du stockage de ce type de données est semblable à celle des types de données entiers.|  
 |**money**|Oui|Utilise la représentation des données de type entier sur un entier de 8 octets. La valeur monétaire est multipliée par 10000 et la valeur entière résultante est stockée en supprimant tous les chiffres après la virgule. Ce type a une plus grande plage que **smallmoney**. L'optimisation du stockage de ce type de données est semblable à celle des types de données entiers.|  
-|**float**|Oui|Les octets les moins significatifs avec des zéros ne sont pas stockés. La compression**float** est principalement applicable aux valeurs non fractionnaires de la mantisse.|  
-|**real**|Oui|Les octets les moins significatifs avec des zéros ne sont pas stockés. La compression**real** est principalement applicable aux valeurs non fractionnaires de la mantisse.|  
+|**float**|Oui|Les octets les moins significatifs avec des zéros ne sont pas stockés. La compression **float** est principalement applicable aux valeurs non fractionnaires de la mantisse.|  
+|**real**|Oui|Les octets les moins significatifs avec des zéros ne sont pas stockés. La compression **real** est principalement applicable aux valeurs non fractionnaires de la mantisse.|  
 |**smalldatetime**|Non|Utilise la représentation des données de type entier sur deux entiers de 2 octets. La date occupe 2 octets. Il s'agit du nombre de jours depuis le 1/1/1901. À partir de 1902, deux octets sont nécessaires. Par conséquent, aucune économie n'est réalisée après cette date.<br /><br /> L'heure est le nombre de minutes depuis minuit. Les valeurs d'heure situées légèrement après 16h00 commencent à utiliser le deuxième octet.<br /><br /> Si un **smalldatetime** est utilisé uniquement pour représenter une date (ce qui est souvent le cas), l’heure est 0.0. La compression permet d'économiser 2 octets en stockant l'heure dans le format d'octet le plus significatif pour la compression de ligne.|  
 |**datetime**|Oui|Utilise la représentation des données de type entier sur deux entiers de 4 octets. La valeur entière représente le nombre de jours depuis la date de base du 1/1/1900. Les 2 premiers octets peuvent représenter jusqu'à l'année 2079. La compression permet toujours d'économiser 2 octets jusqu'à cette date. Chaque valeur entière représente 3,33 millisecondes. La compression épuise les 2 premiers octets dans les cinq premières minutes et a besoin du quatrième octet après 16h00. La compression permet donc d'économiser uniquement 1 octet après 16h00. Lorsque **datetime** est compressé comme tout autre entier, la compression permet d'économiser 2 octets dans la date.|  
 |**date**|Non|Utilise la représentation des données de type entier sur 3 octets. Représente la date à compter du 1/1/0001. Pour les dates contemporaines, la compression de ligne utilise les 3 octets. Aucune économie n'est réalisée.|  

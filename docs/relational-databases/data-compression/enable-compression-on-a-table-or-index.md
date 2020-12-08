@@ -21,15 +21,15 @@ helpviewer_keywords:
 - data compression wizard
 - compression [SQL Server], enable
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d168265fbd400f94939103411a6f56afe901f07
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 27fd0226590b0466a00299c20688cfbb136f0c09
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457518"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506493"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Activer la compression sur une table ou un index
 
@@ -82,14 +82,14 @@ ms.locfileid: "86457518"
   
      Les options suivantes sont disponibles dans la page **Sélectionner le type de compression** :  
   
-     Case**Utiliser le même type de compression pour toutes les partitions**  
-     Sélectionnez cette option pour configurer le même paramètre de compression pour toutes les partitions. La zone de sélection est alors activée et la colonne **Type de compression** de la grille est désactivée. Lorsqu'une option est sélectionnée, les options dans la liste adjacente sont **None**, **Row**et **Page**.  
+     Case **Utiliser le même type de compression pour toutes les partitions**  
+     Sélectionnez cette option pour configurer le même paramètre de compression pour toutes les partitions. La zone de sélection est alors activée et la colonne **Type de compression** de la grille est désactivée. Lorsqu'une option est sélectionnée, les options dans la liste adjacente sont **None**, **Row** et **Page**.  
   
      **Numéro de partition**  
      Répertorie chaque partition de la table ou de l'index. Cette colonne est en lecture seule.  
   
      **Type de compression**  
-     Sélectionnez l'option de compression de chaque partition. Non disponible lorsque **Utiliser le même type de compression pour toutes les partitions** est sélectionné. Les options de la liste sont **None**, **Row**et **Page**.  
+     Sélectionnez l'option de compression de chaque partition. Non disponible lorsque **Utiliser le même type de compression pour toutes les partitions** est sélectionné. Les options de la liste sont **None**, **Row** et **Page**.  
   
      **Limite**  
      Affiche la limite de la partition. Cette colonne est en lecture seule.  
@@ -147,7 +147,7 @@ ms.locfileid: "86457518"
   
                 -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le 15 du mois un mois sur deux, sélectionnez **Jour**, puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
   
-                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième**ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez que le nombre maximum autorisé dans la dernière zone est « 99 ».  
+                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième** ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez que le nombre maximum autorisé dans la dernière zone est « 99 ».  
   
         2.  Sous **Fréquence quotidienne**, spécifiez la fréquence à laquelle la planification du travail se répète le jour de son exécution :  
   
@@ -159,7 +159,7 @@ ms.locfileid: "86457518"
   
         3.  Sous **Durée**, dans la zone **Date de début**, entrez la date à laquelle vous souhaitez que l'exécution de la planification du travail commence. Sélectionnez **Date de fin** ou **Aucune date de fin** pour indiquer à quel moment l'exécution de la planification du travail doit s'arrêter. Si vous sélectionnez **Date de fin**, entrez la date à laquelle l'exécution de la planification du travail doit s'arrêter.  
   
-    5.  Si vous sélectionnez **Une fois**sous **Une seule occurrence**, dans la zone **Date** , entrez la date à laquelle la planification du travail est exécutée. Dans la zone **Heure** , entrez l'heure à laquelle la planification du travail sera exécutée. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
+    5.  Si vous sélectionnez **Une fois** sous **Une seule occurrence**, dans la zone **Date** , entrez la date à laquelle la planification du travail est exécutée. Dans la zone **Heure** , entrez l'heure à laquelle la planification du travail sera exécutée. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
     6.  Sous **Résumé**, dans **Description**, vérifiez que tous les paramètres de planification du travail sont corrects.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "86457518"
      Indique les messages d'erreur ou d'avertissement retournés par le processus.  
   
      **Report**  
-     Crée un rapport qui contient les résultats de l'Assistant Création de partition. Les options sont **Afficher le rapport**, **Enregistrer le rapport dans un fichier**, **Copier le rapport dans le Presse-papiers**et **Envoyer le rapport sous forme de courrier électronique**.  
+     Crée un rapport qui contient les résultats de l'Assistant Création de partition. Les options sont **Afficher le rapport**, **Enregistrer le rapport dans un fichier**, **Copier le rapport dans le Presse-papiers** et **Envoyer le rapport sous forme de courrier électronique**.  
   
      **Afficher le rapport**  
      Ouvre la boîte de dialogue **Afficher le rapport** , qui contient un rapport au format texte de la progression de l’Assistant Création de partition.  

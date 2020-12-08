@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a833e7029697693a6620ce5196a10b6ef95acc8f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4e6e6ae53bfc9cf3c6c702e9caf8a1a9bdaf29a1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890919"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505717"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |CREATE TRIGGER WITH APPEND|Une instruction CREATE TRIGGER avec la clause WITH APPEND a été rencontrée. Recréez à la place le déclencheur entier. Se produit une fois par utilisation dans une instruction DDL.|  
 |CREATE_DROP_DEFAULT|La syntaxe CREATE DEFAULT ou DROP DEFAULT a été rencontrée. Réécrivez la commande en utilisant l'option DEFAULT de CREATE TABLE ou ALTER TABLE. Se produit une fois par compilation.|  
 |CREATE_DROP_RULE|La syntaxe CREATE RULE a été rencontrée. Réécrivez la commande en utilisant des contraintes. Se produit une fois par compilation.|  
-|Types de données text, ntext ou image|Un type de données **text**, **ntext**ou **image** a été rencontré. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
+|Types de données text, ntext ou image|Un type de données **text**, **ntext** ou **image** a été rencontré. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext** et **image** . Se produit une fois par requête.|  
 ||Nombre total de fois où le niveau de compatibilité 80 a été appliqué à une base de données. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu’une base de données présentant le niveau de compatibilité 80 est démarrée.|  
 |Niveau de compatibilité de base de données 100, 110, 120|Nombre total de fois où le niveau de compatibilité d’une base de données a été modifié. Projetez de mettre à niveau la base de données et l'application avant la prochaine version. Se produit également lorsqu’une base de données ayant un niveau de compatibilité déconseillé est démarrée.|  
 |DATABASE_MIRRORING|Des références à la fonctionnalité de mise en miroir de bases de données ont été rencontrées. Prévoyez d’effectuer une mise à niveau vers des groupes de disponibilité Always On, ou si vous exécutez une édition de SQL Server qui ne prend pas en charge les groupes de disponibilité Always On, planifiez une migration vers la copie des journaux de transaction.|  
@@ -266,10 +266,10 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |sysusers|Des références à sysusers ont été rencontrées. Utilisez à la place sys.database_principals. Se produit une fois par compilation.|  
 |Indicateur de table sans WITH|Une instruction utilisant des indicateurs de table sans le mot clé WITH a été rencontrée. Modifiez les instructions de manière à inclure le mot clé WITH. Se produit une fois par compilation.|  
 |Option de table text in row|Des références à l'option de table 'text in row' ont été rencontrées. Utilisez à la place sp_tableoption 'large value types out of row'. Se produit une fois par requête.|  
-|TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
-|TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
+|TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext** et **image** . Se produit une fois par requête.|  
+|TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext** et **image** . Se produit une fois par requête.|  
 |timestamp|Nombre total des fois où le type de données **timestamp** déconseillé a été rencontré dans une instruction DDL. Utilisez à la place le type de données **rowversion** .|  
-|UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext**et **image** . Se produit une fois par requête.|  
+|UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données **varchar(max)** et à supprimer la syntaxe des types de données **text**, **ntext** et **image** . Se produit une fois par requête.|  
 |USER_ID|Des références à la fonction USER_ID ont été rencontrées. Utilisez à la place la fonction DATABASE_PRINCIPAL_ID. Se produit une fois par compilation.|  
 |Utilisation d'OLEDB pour les serveurs liés||  
 |Format de stockage vardecimal|Le format de stockage **vardecimal** a été rencontré. Utilisez à la place la compression de données.|  
