@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235386"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443204"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -148,7 +148,7 @@ ALTER DATABASE { database_name | CURRENT }
 > Cette option n'est pas disponible dans une base de données autonome.
 
 CURRENT   
-**S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
 
 Indique que la base de données actuelle en cours d'utilisation doit être modifiée.
 
@@ -166,7 +166,7 @@ Lors de la création de bases de données autrement qu'avec le classement par d�
 Pour plus d’informations sur les noms de classements Windows et SQL, voir [COLLATE](~/t-sql/statements/collations.md).
 
 **\<delayed_durability_option> ::=**    
-**S’applique à**  : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.
 
 Pour plus d’informations, voir [Options d’ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) et [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md).
 
@@ -263,7 +263,7 @@ GO
 
 L'exemple suivant crée une base de données nommée `testdb` qui utilise le classement `SQL_Latin1_General_CP1_CI_A`S, puis modifie le classement de la base de données `testdb` en `COLLATE French_CI_AI`.
 
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 USE master;
@@ -476,7 +476,7 @@ Spécifie la taille maximale de la base de données. La taille maximale doit êt
 |200 Go|N/A|√|√|√|√|
 |250 Go|N/A|√ (D)|√ (D)|√|√|
 |300 Go|N/A|√|√|√|√|
-|400 Go|N/A|√|√|√|√|
+|400 Go|NON APPLICABLE|√|√|√|√|
 |500 Go|N/A|√|√|√ (D)|√|
 |750 Go|N/A|√|√|√|√|
 |1 024 Go|N/A|√|√|√|√ (D)|
@@ -950,7 +950,7 @@ Indique la syntaxe à utiliser et les informations associées pour modifier les 
 
 ## <a name="syntax"></a>Syntaxe
 
-### <a name="sql-pool"></a>[Pool SQL](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[Pool SQL dédié](#tab/sqlpool)
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -974,7 +974,7 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
-### <a name="sql-on-demand-preview"></a>[SQL à la demande (préversion)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[Pool SQL serverless](#tab/sqlod)
 ```syntaxsql
 ALTER DATABASE { database_name | Current } 
 { 
@@ -1163,7 +1163,7 @@ LOG_SIZE = *size* [GB]
 Spécifie le nouveau nombre maximal de gigaoctets par base de données pour le stockage de tous les journaux des transactions dans la base de données en cours de modification. La taille est répartie entre tous les nœuds de calcul dans l’appliance.
 
 ENCRYPTION { ON | OFF }   
-Spécifie si la base de données doit être chiffrée (ON) ou non chiffrée (OFF). Le chiffrement peut être configuré uniquement pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] quand [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) a été défini sur  **1**. Une clé de chiffrement de base de données doit être créée avant de pouvoir configurer le chiffrement transparent des données. Pour plus d’informations sur le chiffrement des bases de données, consultez l’article [Chiffrement TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md).
+Spécifie si la base de données doit être chiffrée (ON) ou non chiffrée (OFF). Le chiffrement peut être configuré uniquement pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] quand [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) a été défini sur **1**. Une clé de chiffrement de base de données doit être créée avant de pouvoir configurer le chiffrement transparent des données. Pour plus d’informations sur le chiffrement des bases de données, consultez l’article [Chiffrement TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md).
 
 SET AUTO_CREATE_STATISTICS { ON | OFF }   
 Quand l’option de création automatique de statistiques AUTO_CREATE_STATISTICS est activée, l’optimiseur de requête crée les statistiques nécessaires sur les colonnes individuelles du prédicat de requête pour améliorer les estimations de cardinalité pour le plan de requête. Ces statistiques de colonne unique sont créées sur les colonnes où ne figure pas déjà un histogramme au niveau d'un objet de statistiques existant.
