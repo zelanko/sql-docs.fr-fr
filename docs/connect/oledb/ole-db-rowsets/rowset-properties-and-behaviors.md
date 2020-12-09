@@ -2,7 +2,7 @@
 title: Propriétés et comportements des ensembles de lignes (pilote OLE DB)
 description: Il s’agit des propriétés d’ensemble de lignes OLE DB Driver pour SQL Server, comprenant le nom et la description des propriétés.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ff19eb334fceba0b49a88fd1f812ad5b320c762f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859990"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504730"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriétés et comportements de l'ensemble de lignes
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il s’agit des propriétés d’ensemble de lignes OLE DB Driver pour SQL Server.  
+  Il s’agit des propriétés d’ensemble de lignes OLE DB Driver pour SQL Server.
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "88859990"
 |DBPROP_BOOKMARKTYPE|R/W : Lecture seule<br /><br /> Valeur par défaut : DBPROPVAL_BMK_NUMERIC<br /><br /> Description : OLE DB Driver pour SQL Server implémente uniquement les signets numériques. Un signet OLE DB Driver pour SQL Server est un entier non signé de 32 bits de type DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Cette propriété d’ensemble de lignes n’est pas implémentée par OLE DB Driver pour SQL Server. Toute tentative de lecture ou d'écriture de la valeur de propriété génère une erreur.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : OLE DB Driver pour SQL Server prend en charge l'extraction et le défilement vers l'arrière dans les ensembles de lignes non séquentiels. Le pilote OLE DB pour SQL Server crée un ensemble de lignes pris en charge par le curseur lorsque DBPROP_CANFETCHBACKWARDS ou DBPROP_CANSCROLLBACKWARDS a la valeur VARIANT_TRUE. Pour plus d’informations, consultez [Ensembles de lignes et curseurs SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Par défaut, le pilote OLE DB pour SQL Server retourne DB_E_ROWSNOTRELEASED si le consommateur essaie d’obtenir davantage de lignes pour un ensemble de lignes alors que des modifications sont en attente pour les lignes de cet ensemble. Ce comportement peut être modifié.<br /><br /> L'affectation de la valeur VARIANT_TRUE à DBPROP_CANHOLDROWS et DBPROP_IRowsetChange implique un ensemble de lignes contenant un signet. Si les deux propriétés ont la valeur VARIANT_TRUE, l’interface **IRowsetLocate** est disponible sur l’ensemble de lignes. Par ailleurs, DBPROP_BOOKMARKS et DBPROP_LITERALBOOKMARKS ont tous les deux la valeur VARIANT_TRUE.<br /><br /> Les ensembles de lignes du fournisseur OLE DB Driver pour SQL Server qui contiennent des signets sont pris en charge par les curseurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|DBPROP_CANHOLDROWS|R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Par défaut, OLE DB Driver pour SQL Server retourne DB_E_ROWSNOTRELEASED si le contrôle serveur consommateur essaie d’obtenir davantage de lignes pour un ensemble de lignes alors que des modifications sont en attente pour les lignes actuellement dans cet ensemble. Ce comportement peut être modifié.<br /><br /> L'affectation de la valeur VARIANT_TRUE à DBPROP_CANHOLDROWS et DBPROP_IRowsetChange implique un ensemble de lignes contenant un signet. Si les deux propriétés ont la valeur VARIANT_TRUE, l’interface **IRowsetLocate** est disponible sur l’ensemble de lignes. Par ailleurs, DBPROP_BOOKMARKS et DBPROP_LITERALBOOKMARKS ont tous les deux la valeur VARIANT_TRUE.<br /><br /> Les ensembles de lignes du fournisseur OLE DB Driver pour SQL Server qui contiennent des signets sont pris en charge par les curseurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |DBPROP_CHANGEINSERTEDROWS|R/W : Lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Cette propriété peut être définie uniquement à VARIANT_TRUE si l'ensemble de lignes utilise un curseur de jeu de clés.|  
 |DBPROP_COLUMNRESTRICT|R/W : Lecture seule<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Le pilote OLE DB pour SQL Server définit la propriété sur VARIANT_TRUE lorsqu’une colonne d’un ensemble de lignes ne peut pas être modifiée par le consommateur. D'autres colonnes de l'ensemble de lignes peuvent être mises à jour et les lignes elles-mêmes peuvent être supprimées.<br /><br /> Lorsque la propriété a la valeur VARIANT_TRUE, le consommateur examine le membre *dwFlags* de la structure DBCOLUMNINFO pour déterminer si la valeur d’une colonne individuelle peut être écrite ou non. Pour les colonnes modifiables, *dwFlags* expose DBCOLUMNFLAGS_WRITE.|  
 |DBPROP_COMMANDTIMEOUT|R/W : Lecture/écriture<br /><br /> Valeur par défaut : 0<br /><br /> Description : Par défaut,OLE DB Driver pour SQL Server n’expire pas sur la méthode **ICommand::Execute**.|  
@@ -97,6 +97,7 @@ ms.locfileid: "88859990"
 |SSPROP_DEFERPREPARE|Colonne : Non<br /><br /> R/W : Lecture/écriture<br /><br /> Tapez : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_TRUE<br /><br /> Description : VARIANT_TRUE : Dans l’exécution préparée, la préparation de la commande est différée jusqu’à ce que **ICommand::Execute** soit appelé ou qu’une opération de métapropriété soit effectuée. Si la propriété a la valeur<br /><br /> VARIANT_FALSE : L’instruction est préparée lorsque **ICommandPrepare::Prepare** est exécuté.|  
 |SSPROP_IRowsetFastLoad|Colonne : Non<br /><br /> R/W : Lecture/écriture<br /><br /> Tapez : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Définissez cette propriété sur VARIANT_TRUE pour ouvrir un ensemble de lignes à chargement rapide via **IOpenRowset::OpenRowset**. Vous ne pouvez pas définir cette propriété dans **ICommandProperties::SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Colonne : Non.<br /><br /> R/W : Lecture/écriture<br /><br /> Tapez : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Définissez cette propriété sur VARIANT_TRUE pour activer les opérations asynchrones à l’aide de l’interface [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md).|  
+|SSPROP_ISSDataClassification|R/W : Lecture/écriture<br /><br />  Tapez : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_TRUE<br /><br /> Description : OLE DB Driver pour SQL Server prend en charge la récupération des informations de classification de sensibilité à l’aide de l’interface [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) .|  
 |SSPROP_MAXBLOBLENGTH|Colonne : Non<br /><br /> R/W : Lecture/écriture<br /><br /> Tapez : VT_I4<br /><br /> Valeur par défaut : Le fournisseur ne restreint pas la taille du texte retourné par le serveur et la valeur de propriété est définie à sa valeur maximale. Par exemple 2 147 483 647.<br /><br /> Description : Le pilote OLE DB pour SQL Server exécute une instruction SET TEXTSIZE pour restreindre la longueur des données d’objet BLOB (Binary Large Object) retournées dans une instruction SELECT.|  
 |SSPROP_NOCOUNT_STATUS|Colonne : NoCount<br /><br /> R/W : Lecture seule<br /><br /> Tapez : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Valeur booléenne représentant l'état de SET NOCOUNT ON/OFF dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :<br /><br /> VARIANT_TRUE : avec SET NOCOUNT ON<br /><br /> VARIANT_FALSE : avec SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Colonne : Non<br /><br /> R/W : Lecture/écriture<br /><br /> Tapez : VT_BSTR (entre 1 et 2 000 caractères sont autorisés)<br /><br /> Valeur par défaut : Chaîne vide<br /><br /> Description : Texte du message de notification de requête. Il est défini par l'utilisateur et n'a aucun format spécifique.|  

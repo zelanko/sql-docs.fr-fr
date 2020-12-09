@@ -2,7 +2,7 @@
 title: Compte de connexion SQL Server, boîte de dialogue (OLE DB) | Microsoft Docs
 description: Lorsque vous tentez de vous connecter sans spécifier suffisamment d’informations, OLE DB Driver pour SQL Server affiche la boîte de dialogue Connexion SQL Server.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 97b52f8c1e4560c5fe1654d8e81d2ac00cdb6257
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727250"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506381"
 ---
 # <a name="sql-server-login-dialog-box"></a>Boîte de dialogue de connexion SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +35,10 @@ Lorsque vous tentez de vous connecter sans spécifier suffisamment d’informati
 |Option|Description|
 |---   |---        |
 |Serveur|Nom d'une instance de SQL Server sur votre réseau. Tapez le nom serveur\instance dans la zone **Serveur**, ou sélectionnez-en un dans la liste. Vous pouvez si vous le souhaitez créer un alias de serveur sur l’ordinateur client avec le **Gestionnaire de configuration SQL Server** et taper ce nom dans la zone **Serveur**. <br/><br/>Vous pouvez entrer "(local)" lorsque vous utilisez le même ordinateur que SQL Server. Vous pouvez alors vous connecter à une instance locale de SQL Server, même s’il s’agit d’une version de SQL Server qui n’est pas en réseau.<br/><br/>Pour plus d'informations sur les noms de serveurs de différents types de réseau, consultez [Installation de SQL Server](../../../database-engine/install-windows/install-sql-server.md).|
-|Mode d'authentification|Vous pouvez sélectionner les options d’authentification suivantes dans la liste déroulante :<br/><ul><li>`Windows Authentication:` Authentification à SQL Server à l’aide des informations d’identification du compte Windows de l’utilisateur connecté.</li><li>`SQL Server Authentication:` Authentification à l’aide de l’ID de connexion et du mot de passe.</li><li>`Active Directory - Integrated:` Authentification intégrée avec une identité Azure Active Directory. Ce mode peut également être utilisé pour l’authentification Windows à SQL Server.</li><li>`Active Directory - Password:` Authentification par ID d’utilisateur et mot de passe avec une identité Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Authentification interactive avec une identité Azure Active Directory. Ce mode prend en charge Azure Multi-Factor Authentication (MFA).</li></ul>|
+|Mode d'authentification|Vous pouvez sélectionner les options d’authentification suivantes dans la liste déroulante :<br/><ul><li>`Windows Authentication:` Authentification à SQL Server à l’aide des informations d’identification du compte Windows de l’utilisateur connecté.</li><li>`SQL Server Authentication:` Authentification à l’aide de l’ID de connexion et du mot de passe.</li><li>`Active Directory - Integrated:` Authentification intégrée avec une identité Azure Active Directory. Ce mode peut également être utilisé pour l’authentification Windows à SQL Server.</li><li>`Active Directory - Password:` Authentification par ID d’utilisateur et mot de passe avec une identité Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Authentification interactive avec une identité Azure Active Directory. Ce mode prend en charge Azure Multi-Factor Authentication (MFA).</li><li>Authentification `Active Directory - Service Principal:` avec un principal de service Azure Active Directory. **L’identifiant de connexion** doit être défini sur l’ID de l’application (client). **Le mot de passe** doit être défini sur le secret de l’application (client).</li></ul>|
 |SPN du serveur|Si vous utilisez une connexion approuvée, vous pouvez spécifier un nom de principal de service (SPN) pour le serveur.|
-|Nom d'accès|Spécifie l’ID de connexion à utiliser pour la connexion. La zone de texte ID de connexion est activée uniquement si `Authentication Mode` est défini sur `SQL Server Authentication`, `Active Directory - Password` ou `Active Directory - Universal with MFA support`.|
-|Mot de passe|Spécifie le mot de passe utilisé pour la connexion. La zone de texte Mot de passe est activée uniquement si `Authentication Mode` est défini sur `SQL Server Authentication` ou `Active Directory - Password`.|
+|Nom d'accès|Spécifie l’ID de connexion à utiliser pour la connexion. La zone de texte ID de connexion est activée uniquement si `Authentication Mode` est défini sur `SQL Server Authentication`, `Active Directory - Password`, `Active Directory - Universal with MFA support` ou `Active Directory - Service Principal`.|
+|Mot de passe|Spécifie le mot de passe utilisé pour la connexion. La zone de texte Mot de passe est activée uniquement si `Authentication Mode` est défini sur `SQL Server Authentication`, `Active Directory - Password` ou `Active Directory - Service Principal`.|
 |Options|Affiche ou masque le groupe **Options**. Le bouton **Options** est activé si **Serveur** a une valeur.|
 |Modification du mot de passe|Lorsque cette option est activée, les zones de texte **Nouveau mot de passe** et **Confirmer le nouveau mot de passe** s’affichent.|
 |Nouveau mot de passe|Spécifie le nouveau mot de passe.|

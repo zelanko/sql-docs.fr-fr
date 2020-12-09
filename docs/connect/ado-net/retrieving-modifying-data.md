@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cbe61aafd8dcd1681230c355187a65a231535e00
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126389"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419734"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Extraction et modification de données dans ADO.NET
 
@@ -29,11 +29,11 @@ Une fonction principale de toute application de base de données consiste à se 
 
 [Connexion à une source de données](connecting-to-data-source.md) décrit comment établir une connexion à une source de données et comment utiliser les événements de connexion.
 
-[Chaîne de connexion](connection-strings.md) contient des rubriques qui décrivent divers aspects de l'utilisation de chaînes de connexion, y compris des mots clés de chaîne de connexion, des informations de sécurité, ainsi que de leur stockage et de leur extraction.
+[Chaînes de connexion](connection-strings.md) contient des rubriques qui décrivent divers aspects de l'utilisation de chaînes de connexion, y compris des mots clés de chaîne de connexion, des informations de sécurité, ainsi que de leur stockage et de leur extraction.
 
-[Regroupement de connexions](connection-pooling.md) Décrit le regroupement de connexions pour le Fournisseur de données Microsoft SqlClient pour SQL Server.
+[Regroupement de connexions](connection-pooling.md) décrit le regroupement de connexions pour le Fournisseur de données Microsoft SqlClient pour SQL Server.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Mappages de types de données dans ADO.NET](data-type-mappings-ado-net.md)
+- [Mappages des types de données dans ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server et ADO.NET](./sql/index.md)

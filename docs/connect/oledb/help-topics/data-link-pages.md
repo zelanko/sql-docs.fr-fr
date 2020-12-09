@@ -2,7 +2,7 @@
 title: Configuration UDL (Universal Data Link) | Microsoft Docs
 description: Découvrez comment utiliser l’onglet Connexion pour spécifier la méthode de connexion à vos données à l’aide de OLE DB Driver pour SQL Server.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8d9444864dfe144918374c6d10e1a9f403faff3
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727277"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504724"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configuration UDL (Universal Data Link)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ L’onglet Connexion est propre à chaque fournisseur et affiche uniquement les 
 |Option|Description|
 |---   |---        |
 |Sélectionnez ou entrez un nom de serveur.|Sélectionnez le nom d'un serveur dans la liste déroulante ou tapez l'emplacement du serveur sur lequel se trouve la base de données à laquelle vous souhaitez accéder. La sélection de la base de données sur le serveur est une action distincte. Mettez à jour la liste en cliquant sur « Actualiser ».
-|Entrez des informations pour vous connecter au serveur|Vous pouvez sélectionner les options d’authentification suivantes dans cette liste déroulante : <ul><li>`Windows Authentication:` Authentification à SQL Server à l’aide des informations d’identification du compte Windows de l’utilisateur connecté.</li><li>`SQL Server Authentication:` Authentification à l’aide de l’ID de connexion et du mot de passe.</li><li>`Active Directory - Integrated:` Authentification intégrée avec une identité Azure Active Directory. Ce mode peut également être utilisé pour l’authentification Windows à SQL Server.</li><li>`Active Directory - Password:` Authentification par ID d’utilisateur et mot de passe avec une identité Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Authentification interactive avec une identité Azure Active Directory. Ce mode prend en charge Azure Multi-Factor Authentication (MFA).</li></ul>|
+|Entrez des informations pour vous connecter au serveur|Vous pouvez sélectionner les options d’authentification suivantes dans cette liste déroulante : <ul><li>`Windows Authentication:` Authentification à SQL Server à l’aide des informations d’identification du compte Windows de l’utilisateur connecté.</li><li>`SQL Server Authentication:` Authentification à l’aide de l’ID de connexion et du mot de passe.</li><li>`Active Directory - Integrated:` Authentification intégrée avec une identité Azure Active Directory. Ce mode peut également être utilisé pour l’authentification Windows à SQL Server.</li><li>`Active Directory - Password:` Authentification par ID d’utilisateur et mot de passe avec une identité Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Authentification interactive avec une identité Azure Active Directory. Ce mode prend en charge Azure Multi-Factor Authentication (MFA).</li><li>Authentification `Active Directory - Service Principal:` avec un principal de service Azure Active Directory. **Le nom d’utilisateur** doit être défini sur l’ID de l’application (client). **Le mot de passe** doit être défini sur le secret de l’application (client).</li></ul>|
 |SPN du serveur|Si vous utilisez une connexion approuvée, vous pouvez spécifier un nom de principal de service (SPN) pour le serveur.|
 |Nom d'utilisateur|Saisissez l’ID d’utilisateur à utiliser pour l’authentification lorsque vous vous connectez à la source de données.|
 |Mot de passe|Saisissez le mot de passe à utiliser pour l’authentification lorsque vous vous connectez à la source de données.|

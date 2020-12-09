@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: ee78b145965c17ff0a496611c6506d23df1a31a3
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 7894ea12ef77a7fb07a61ff454f27150812c7dfb
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384498"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443063"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -245,7 +245,7 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|Indique si les différences dans la durée pendant laquelle SQL Server conserve l’itinéraire dans la table de routage doivent être ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|Spécifie si les différences dans les points-virgules des instructions T-SQL sont ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|Spécifie si les différences dans les options de table sont ignorées ou mises à jour lors de la publication dans une base de données.|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Spécifie si les différences dans les options de partition de table sont ignorées ou mises à jour lors de la publication dans une base de données.  Cette option s’applique uniquement aux bases de données du pool SQL Azure Synapse Analytics (entrepôt de données).|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|Spécifie si les différences dans les options de partition de table sont ignorées ou mises à jour lors de la publication dans une base de données.  Cette option s’applique uniquement aux bases de données du pool SQL dédié Azure Synapse Analytics.|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|Spécifie si les différences dans les objets de paramètres utilisateur sont ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|Spécifie si les différences dans les espaces blancs sont ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|Indique si les différences dans la valeur de la clause WITH NOCHECK pour les contraintes Check sont ignorées ou mises à jour lors de la publication.|

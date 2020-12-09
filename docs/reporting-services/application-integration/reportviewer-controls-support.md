@@ -9,23 +9,37 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.date: 06/03/2020
-ms.openlocfilehash: 087be959ea39ba9b223b7bd5ae0e3e343d90a594
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.date: 12/01/2020
+ms.openlocfilehash: f6c713d579042425dc863b7d4f942229a091d0c4
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891479"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96502693"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Prise en charge des versions Current Branch de Report Viewer
 
 **_S’applique à: Microsoft Report Viewer versions 150.900.148 et ultérieures_**
 
-Le **contrôle Microsoft Report Viewer** est compatible avec SQL Server Reporting Services et Power BI Report Server qui respectent la [politique moderne de durée de vie du support](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) de Microsoft. Ces informations s’appliquent aux versions **ASP.net** et **WinForms** distribuées par le biais de [NuGet](https://www.nuget.org/). Toutes les versions publiées sont disponibles sur [NuGet](https://www.nuget.org/). Les correctifs, fonctionnalités ou autres mises à jour sont restaurés par progression vers la dernière version. Vous devez appliquer les versions les plus récentes pour recevoir des changements. Report Viewer continue de recevoir les **mises à jour critiques et de sécurité**, avec un préavis d’au moins un an concernant tout changement lié à la politique de support.
+Le **contrôle Microsoft Report Viewer** est compatible avec SQL Server Reporting Services et Power BI Report Server qui respectent la [politique moderne de durée de vie du support](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy) de Microsoft. Ces informations s’appliquent aux versions **ASP.NET** et **WinForms** distribuées par le biais de [NuGet](https://www.nuget.org/). Toutes les versions publiées sont disponibles sur [NuGet](https://www.nuget.org/). Les correctifs, fonctionnalités ou autres mises à jour sont restaurés par progression vers la dernière version. Vous devez appliquer les versions les plus récentes pour recevoir des changements. Report Viewer continue de recevoir les **mises à jour critiques et de sécurité**, avec un préavis d’au moins un an concernant tout changement lié à la politique de support.
 
 Pour un historique des versions du contrôle Report Viewer, consultez les liens suivants :
 
 - [Windows Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/)
-- [Web Forms ASP.NET](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- [Formulaires web ASP.NET](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
 
-Pour plus d’informations sur la version actuelle du contrôle Report Viewer, passez en revue ce [blog](/archive/blogs/sqlrsteamblog/report-viewer-2016-control-update-now-available).
+## <a name="application-server-and-report-server-combinations"></a>Combinaisons de serveurs d’applications et de serveurs de rapports
+
+Certaines fonctionnalités du contrôle Visionneuse de rapports se calquent sur les comportements par défaut du système d'exploitation. Par conséquent, ils peuvent nécessiter l’exécution de la même version pour le client (le serveur d’applications exécutant le contrôle Visionneuse de rapports) et le serveur (exécutant Reporting Services). Les combinaisons de serveurs d’applications et de serveurs de rapports suivantes sont prises en charge :
+
+| Serveur d’applications | Serveur de rapports |
+| :----------------- | :------ |
+| Windows Server 2012 | Windows Server 2012 |
+| Windows Server 2012 | Windows Server 2012 R2 |
+| Windows Server 2012 R2 | Windows Server 2012 R2 |
+| Windows Server 2012 R2 | Windows Server 2012 |
+| Windows Server 2016 et versions ultérieures | Windows Server 2016 et versions ultérieures |
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour plus d’informations sur le contrôle Visionneuse de rapports, consultez [Démarrage de l’intégration de Reporting Services à l’aide des contrôles de la visionneuse de rapports](integrating-reporting-services-using-reportviewer-controls-get-started.md).

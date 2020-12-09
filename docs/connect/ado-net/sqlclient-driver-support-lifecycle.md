@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 30155a584de4e22692601a1dcf9551a67d4f580f
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: eef9e81c94c930b9f00689b41339d54a0f0302be
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011787"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442713"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Cycle de vie de prise en charge du pilote SqlClient
 
@@ -32,16 +32,21 @@ La bibliothèque Microsoft.Data.SqlClient suit la dernière stratégie de prise 
 
 Les nouvelles versions stables (GA) seront publiées tous les six mois sur une cadence normale à partir de la version 1.2, avec en plus de 2 à 3 préversions entre elles. Les versions avec prise en charge à long terme (LTS) seront choisies par les parties prenantes et les responsables de maintenance en fonction de quelques qualifications et de la réponse des clients.
 
-### <a name="release-life-cycles"></a>Cycles de vie des versions
+### <a name="actively-supported-releases"></a>Mises en production activement prises en charge
 
 | Version | Date de publication officielle | Dernière version du correctif | Date de publication du correctif | Niveau de prise en charge  | Fin du support |
 | -- | -- | -- | -- | -- | -- |
 | 2.1 | 19 novembre 2020 | 2.1.0 | 19 novembre 2020 | Actuel | |
-| 2.0 | 16 juin 2020 | 2.0.1 | 25 août 2020 | Actuel | |
+| 2.0 | 16 juin 2020 | 2.0.1 | 25 août 2020 | Actuel | 19 février 2021 |
 | 1.1 | 20 novembre 2019 | 1.1.3 | 15 mai 2020 | LTS | 21 novembre 2022 |
-| 1.0 | 28 août 2019 | 1.0.19269.1 | 26 septembre 2019 | Actuel | 20 février 2020 |
 
-### <a name="long-term-support-lts-releases"></a>Versions avec prise en charge à long terme (LTS)
+### <a name="out-of-support-releases"></a>Mises en production non prises en charge
+
+| Version | Date de mise en production du dernier patch | Dernière version du correctif | Prise en charge terminée |
+| -- | -- | -- | -- |
+| 1.0 | 26 septembre 2019 | 1.0.19269.1 | 20 février 2020 |
+
+### <a name="long-term-support-lts-releases"></a>Mises en production de la prise en charge à long terme (LTS)
 
 Les versions LTS sont prises en charge pendant trois ans après la version initiale.
 
@@ -57,3 +62,20 @@ Les versions actuelles sont prises en charge pendant trois mois après la public
 |2.0|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
 |1.1|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
 |1.0|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+
+## <a name="supported-os-versions"></a>Versions du système d'exploitation prises en charge
+
+### <a name="support-for-net-framework-applications"></a>Support pour les applications .NET Framework
+
+Microsoft.Data.SqlClient prend en charge tous les systèmes d’exploitation pris en charge par .NET Framework v4.6 et versions ultérieures.
+
+[Configuration requise de .NET Framework](/dotnet/framework/get-started/system-requirements).
+
+### <a name="support-for-net-core-applications"></a>Support pour les applications .NET Core
+
+Microsoft.Data.SqlClient prend en charge tous les systèmes d’exploitation pris en charge par .NET Core v2.1 et versions ultérieures.
+
+[Stratégie de cycle de vie du système d’exploitation .NET Core pris en charge](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
+
+> [!NOTE]
+> Le mode de globalisation invariant n’est pas pris en charge actuellement.
