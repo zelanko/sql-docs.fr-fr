@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b474931aad2958a4ddba3bccb20773e7f36fd0e7
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 910ee3433bfa4298412a10a58405fb27dad0b157
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753817"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900977"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée une planification pour un travail de l’agent SQL.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
   > Dans [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -67,14 +67,14 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @enabled = ] enabled_flag` Indique l’état actuel de la planification. *enabled_flag* est de **type tinyint**, avec **1** comme valeur par défaut (activé). Si la **valeur est 0**, la planification n’est pas activée. Lorsque la planification n'est pas activée, le travail n'est pas exécuté.  
   
-`[ @freq_type = ] frequency_type` Valeur qui indique le moment où la tâche doit être exécutée. *frequency_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes :  
+`[ @freq_type = ] frequency_type` Valeur qui indique le moment où la tâche doit être exécutée. *frequency_type* est de **type int**, avec **0** comme valeur par défaut et peut prendre l’une des valeurs suivantes :  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**4**|Quotidien|  
 |**8**|Hebdomadaire|  
-|**16**|Chaque mois|  
+|**16**|Mensuelle|  
 |**32**|Mensuellement, par rapport à *frequency_interval.*|  
 |**64**|Lancer lorsque le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] démarre.|  
 |**128**|Lancer lorsque l'ordinateur est inactif.|  
@@ -96,6 +96,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |Valeur|Description (unité)|  
 |-----------|--------------------------|  
 |**0x1**|À une heure spécifiée|  
+|**0X2**|Secondes|  
 |**0x4**|Minutes|  
 |**0x8**|Heures|  
   
@@ -113,9 +114,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**8**|Quatrième|  
 |**16**|Dernier|  
   
- *frequency_relative_interval* indique l’occurrence de l’intervalle. Par exemple, si *frequency_relative_interval* a la valeur **2**, *frequency_type* a la valeur **32**et *frequency_interval* la valeur **3**, la tâche planifiée se produit le deuxième mardi de chaque mois.  
+ *frequency_relative_interval* indique l’occurrence de l’intervalle. Par exemple, si *frequency_relative_interval* a la valeur **2**, *frequency_type* a la valeur **32** et *frequency_interval* la valeur **3**, la tâche planifiée se produit le deuxième mardi de chaque mois.  
   
-`[ @freq_recurrence_factor = ] frequency_recurrence_factor` Nombre de semaines ou de mois entre l’exécution planifiée du travail. *frequency_recurrence_factor* est utilisé uniquement si *frequency_type* a la valeur **8**, **16**ou **32**. *frequency_recurrence_factor* est de **type int**, avec 0 comme valeur par défaut.  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor` Nombre de semaines ou de mois entre l’exécution planifiée du travail. *frequency_recurrence_factor* est utilisé uniquement si *frequency_type* a la valeur **8**, **16** ou **32**. *frequency_recurrence_factor* est de **type int**, avec 0 comme valeur par défaut.  
   
 `[ @active_start_date = ] active_start_date` Date à laquelle l’exécution du travail peut commencer. *active_start_date* est de **type int**, sans valeur par défaut. La date est au format AAAAMMJJ. Si *active_start_date* est défini, la date doit être supérieure ou égale à 19900101.  
   
@@ -137,7 +138,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="result-sets"></a>Jeux de résultats  
  None  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Il est désormais possible de gérer la planification des travaux indépendamment des travaux. Pour ajouter une planification à un travail, utilisez **sp_add_schedule** pour créer la planification et **sp_attach_schedule** pour joindre la planification à un travail.  
   
 ## <a name="permissions"></a>Autorisations  

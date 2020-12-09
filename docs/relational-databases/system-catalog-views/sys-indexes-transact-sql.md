@@ -21,12 +21,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44fcac654dcbfe3cc8257c665600f2948cbe491e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7908cf5767dfdc36d69a9df0279041c6e965a1c9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537445"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900989"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "89537445"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID de l'objet auquel appartient cet index.|  
 |**name**|**sysname**|Nom de l'index. le **nom** est unique dans l’objet.<br /><br /> NULL = Segment|  
-|**index_id**|**int**|Identificateur de l'index. **index_id** n’est unique que dans l’objet.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = Index non-cluster|  
+|**index_id**|**int**|Identificateur de l'index. **index_id** n’est unique que dans l’objet.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 ou 5 = index cluster (B Tree, ColumnStore)<br /><br /> > 1 et <> 5 = index non cluster|  
 |**type**|**tinyint**|Type de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = Clustered<br /><br /> 2 = Non cluster<br /><br /> 3 = XML<br /><br /> 4 = Spatial<br /><br /> 5 = index cluster ColumnStore. **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> 6 = index ColumnStore non cluster. **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> 7 = index de hachage non cluster. **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.|  
-|**type_desc**|**nvarchar(60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> CLUSTERed COLUMNSTORE : **s’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> COLUMNSTORE non CLUSTER : **s’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> HACHAGE non-CLUSTER : les index de hachage non CLUSTER sont pris en charge uniquement sur les tables optimisées en mémoire. La vue sys.hash_indexes indique les index de hachage actuels et les propriétés de hachage. Pour plus d’informations, consultez [sys. hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.|  
+|**type_desc**|**nvarchar(60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> CLUSTERed COLUMNSTORE : **s’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> COLUMNSTORE non CLUSTER : **s’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> HACHAGE non-CLUSTER : les index de hachage non CLUSTER sont pris en charge uniquement sur les tables optimisées en mémoire. La vue sys.hash_indexes indique les index de hachage actuels et les propriétés de hachage. Pour plus d’informations, consultez [sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.|  
 |**is_unique**|**bit**|1 = L'index est unique.<br /><br /> 0 = L'index n'est pas unique.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
 |**data_space_id**|**int**|ID de l'espace de données de cet index. L'espace de données est soit un groupe de fichiers, soit un schéma de partition.<br /><br /> 0 = **object_id** est une fonction table ou un index en mémoire.|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY est ON.<br /><br /> 0 = IGNORE_DUP_KEY est OFF.|  
@@ -94,7 +94,7 @@ GO
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.xml_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys.partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
