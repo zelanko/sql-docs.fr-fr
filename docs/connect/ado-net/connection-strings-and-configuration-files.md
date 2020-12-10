@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126418"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563115"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Chaînes de connexion et fichiers config
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126418"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-L'incorporation de chaînes de connexion dans le code de votre application peut entraîner des vulnérabilités de sécurité et des problèmes de maintenance. Les chaînes de connexion non chiffrées compilées dans le code source d’une application peuvent être affichées à l’aide de l’outil [Ildasm.exe (IL Disassembler)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md). En outre, si la chaîne de connexion change, votre application doit être recompilée. Pour ces raisons, nous vous recommandons de stocker les chaînes de connexion dans un fichier de configuration de l'application.
+L'incorporation de chaînes de connexion dans le code de votre application peut entraîner des vulnérabilités de sécurité et des problèmes de maintenance. Les chaînes de connexion non chiffrées compilées dans le code source d’une application peuvent être affichées à l’aide de l’outil [Ildasm.exe (IL Disassembler)](/dotnet/framework/tools/ildasm-exe-il-disassembler). En outre, si la chaîne de connexion change, votre application doit être recompilée. Pour ces raisons, nous vous recommandons de stocker les chaînes de connexion dans un fichier de configuration de l'application.
 
 ## <a name="working-with-application-configuration-files"></a>Utilisation de fichiers de configuration de l'application
 
@@ -194,5 +194,5 @@ Pour plus d’informations sur la sécurisation d’applications ASP.NET, consul
 - [Builders de chaînes de connexion](connection-string-builders.md)
 - [Protection des informations de connexion](protecting-connection-information.md)
 - [Utilisation des classes de configuration](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configuration d’applications](/dotnet/docs/framework/configure-apps/index.md)
+- [Configuration d’applications](/dotnet/framework/configure-apps/index)
 - [Administration de site web ASP.NET](/previous-versions/aspnet/6hy1xzbw(v=vs.100))

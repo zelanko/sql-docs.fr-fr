@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 127b163ff7f75b4c7ebeff37781f8a5670a47cf9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364076"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900822"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Créer une extension de mappage de touches Azure Data Studio
 
@@ -44,7 +44,7 @@ Azure Data Studio repose sur la même infrastructure que Visual Studio Code, ain
 Pour simplifier le processus de création d’extensions, nous avons créé un [générateur d’extensions](https://code.visualstudio.com/docs/extensions/yocode) à l’aide de Yeoman. Pour l’installer, exécutez le code dans l’invite de commandes ci-dessous :
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-keymap-extension"></a>Créer votre extension de mappage de touches
@@ -137,7 +137,7 @@ Les mappages de clés sont une des extensions les plus rapides à créer. Ainsi,
 Pour partager votre extension avec d’autres personnes, vous avez besoin de l’empaqueter dans un fichier unique. Ce fichier peut être publié sur le marketplace d’extensions Azure Data Studio ou partagé avec votre équipe ou votre communauté. Pour ce faire, vous devez installer un autre package npm à partir de la ligne de commande :
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Accédez au répertoire de base de l’extension, puis exécutez `vsce package`. J’ai dû ajouter quelques lignes supplémentaires pour empêcher l'outil *vsce* de se plaindre :

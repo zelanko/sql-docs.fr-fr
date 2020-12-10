@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 2eb3c7d996463b9c581ea60bc11f853a5d131582
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419742"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563083"
 ---
 # <a name="establishing-connection"></a>Établir une connexion
 
@@ -29,12 +29,12 @@ Pour vous connecter à Microsoft SQL Server, utilisez l'objet <xref:Microsoft.Da
 
 ## <a name="closing-connections"></a>Fermeture de connexions
 
-Nous vous recommandons de toujours fermer la connexion lorsque vous avez fini de l'utiliser, de façon à ce qu'elle puisse être retournée au pool. Le bloc `Using` dans Visual Basic ou C# supprime automatiquement la connexion lorsque le code quitte le bloc, même dans le cas d'une exception non traitée. Pour plus d'informations, consultez [Instruction using](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) et [Instruction Using](/dotnet/docs/visual-basic/language-reference/statements/using-statement.md).
+Nous vous recommandons de toujours fermer la connexion lorsque vous avez fini de l'utiliser, de façon à ce qu'elle puisse être retournée au pool. Le bloc `Using` dans Visual Basic ou C# supprime automatiquement la connexion lorsque le code quitte le bloc, même dans le cas d'une exception non traitée. Pour plus d'informations, consultez [Instruction using](/dotnet/csharp/language-reference/keywords/using-statement) et [Instruction Using](/dotnet/visual-basic/language-reference/statements/using-statement).
 
 Vous pouvez également utiliser les méthodes `Close` ou `Dispose` de l’objet de connexion. Les connexions qui ne sont pas explicitement fermées risquent de ne pas être ajoutées ni retournées au pool. Par exemple, une connexion devenue hors de portée mais qui n'a pas été explicitement fermée sera retournée au pool de connexion seulement si la taille maximale de celui-ci a été atteinte et si la connexion est toujours valide.
 
 > [!NOTE]
-> N'appelez pas `Close` ni `Dispose` sur un objet managé de type **Connexion**, **DataReader** ou autre dans la méthode `Finalize` de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressource non managée, n'incluez pas une méthode `Finalize` dans la définition de classe. Pour plus d’informations, consultez [Nettoyage de la mémoire](/dotnet/docs/standard/garbage-collection/index.md).
+> N'appelez pas `Close` ni `Dispose` sur un objet managé de type **Connexion**, **DataReader** ou autre dans la méthode `Finalize` de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressource non managée, n'incluez pas une méthode `Finalize` dans la définition de classe. Pour plus d’informations, consultez [Nettoyage de la mémoire](/dotnet/standard/garbage-collection/index).
 
 > [!NOTE]
 > Les événements de connexion et de déconnexion ne seront pas déclenchés sur le serveur si une connexion est récupérée depuis le pool de connexions ou qu’elle est retournée au pool, car elle n’est pas réellement fermée lorsqu’elle est retournée au pool. Pour plus d’informations, consultez [Regroupement de connexions SQL Server (ADO.NET)](sql-server-connection-pooling.md).

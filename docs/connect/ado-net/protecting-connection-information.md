@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 87d8e2013693d2e8123adb97273309d6f22de03e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 146063d665b89a8541c34d9cc3b0b6da3939d801
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126386"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563095"
 ---
 # <a name="protecting-connection-information"></a>Protection des informations de connexion
 
@@ -23,7 +23,7 @@ ms.locfileid: "96126386"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-La protection de l'accès à votre source de données représente l'un de vos principaux objectifs lorsque vous sécurisez une application. Une chaîne de connexion présente une vulnérabilité potentielle si elle n'est pas sécurisée. Le stockage d'informations de connexion au format texte brut ou sa conservation dans la mémoire risque de compromettre l'ensemble de votre système. Des chaînes de connexion incorporées dans votre code source peuvent être lues à l'aide de [lidasm.exe (Désassembleur IL)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md) pour afficher MSIL (Microsoft intermediate language) dans un assembly compilé.
+La protection de l'accès à votre source de données représente l'un de vos principaux objectifs lorsque vous sécurisez une application. Une chaîne de connexion présente une vulnérabilité potentielle si elle n'est pas sécurisée. Le stockage d'informations de connexion au format texte brut ou sa conservation dans la mémoire risque de compromettre l'ensemble de votre système. Des chaînes de connexion incorporées dans votre code source peuvent être lues à l'aide de [lidasm.exe (Désassembleur IL)](/dotnet/framework/tools/ildasm-exe-il-disassembler) pour afficher MSIL (Microsoft intermediate language) dans un assembly compilé.
 
 Des vulnérabilités de sécurité impliquant des chaînes de connexion peuvent se produire en fonction du type d'authentification utilisé, de la manière dont les chaînes de connexion sont conservées dans la mémoire et sur le disque, et des techniques utilisées pour les construire au moment de l'exécution.
 

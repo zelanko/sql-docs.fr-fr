@@ -2,19 +2,19 @@
 title: Matrice de prise en charge des fonctionnalités des pilotes
 description: Découvrez les fonctionnalités courantes prises en charge dans les pilotes pour SQL Server et où trouver des informations à leur sujet.
 ms.custom: ''
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 4fff9c04098bd0796f714d160864e4edb93613ac
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419671"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595230"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matrice de prise en charge des fonctionnalités des pilotes pour Microsoft SQL Server
 
@@ -40,14 +40,14 @@ Nous aimerions que tous les pilotes prennent en charge l’ensemble des fonction
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Oui](ado-net/sql/sqlclient-support-always-encrypted.md) | [Oui](ado-net/sql/sqlclient-support-always-encrypted.md) | | [Oui](ado-net/sql/sqlclient-support-always-encrypted.md) |
 | [Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Oui](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | [Oui](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | | [Oui](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) |
 | [Authentification par jeton d’accès Azure Active Directory](/azure/active-directory/develop/access-tokens) | [Oui](/dotnet/api/system.data.sqlclient.sqlconnection.accesstoken) | [Oui](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Oui](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Oui](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) |
-| [Authentification par mot de passe Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Oui | Oui | | Oui |
-| [Authentification intégrée Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Oui | Oui | | Oui |
-| [Authentification interactive (MFA) Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | Oui | Oui | | Oui |
-| [Authentification Managed Identity Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | Oui | Oui | | |
-| [Authentification par principal de service Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | Oui | Oui | | |
+| [Authentification par mot de passe Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | | Oui |
+| [Authentification intégrée Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | | Oui |
+| [Authentification interactive (MFA) Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | | Oui |
+| [Authentification Managed Identity Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | | |
+| [Authentification par principal de service Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | [Oui](ado-net/sql/azure-active-directory-authentication.md) | | |
 | [Authentification Windows intégrée](/windows-server/security/windows-authentication/windows-authentication-overview) | [Oui](ado-net/sql/authentication-sql-server.md) | [Oui](ado-net/sql/authentication-sql-server.md) | [Oui](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Oui](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Copie en bloc](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Oui](ado-net/sql/bulk-copy-operations-sql-server.md) | [Oui](ado-net/sql/bulk-copy-operations-sql-server.md) | [Oui](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Oui](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [Métadonnées de niveau de confidentialité et de classification des données](../relational-databases/security/sql-data-discovery-and-classification.md) | Oui | Oui | Oui | Oui |
+| [Métadonnées de niveau de confidentialité et de classification des données](../relational-databases/security/sql-data-discovery-and-classification.md) | [Oui](ado-net/sql/data-classification.md) | [Oui](ado-net/sql/data-classification.md) | Oui | Oui |
 | [MARS (Multiple Active Result Sets)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Oui](ado-net/sql/multiple-active-result-sets-mars.md) | [Oui](ado-net/sql/multiple-active-result-sets-mars.md) | [Oui](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [Oui](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [Types de données spatiales](../relational-databases/spatial/spatial-data-sql-server.md) | | Oui | | Oui |
 | [Paramètres table](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Oui](ado-net/sql/table-valued-parameters.md) | [Oui](ado-net/sql/table-valued-parameters.md) | [Oui](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Oui](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
@@ -64,7 +64,7 @@ Nous aimerions que tous les pilotes prennent en charge l’ensemble des fonction
 | [Authentification intégrée Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](odbc/using-azure-active-directory.md) | [Oui](odbc/using-azure-active-directory.md) | [Oui](jdbc/connecting-using-azure-active-directory-authentication.md) | [Oui](oledb/features/using-azure-active-directory.md) |
 | [Authentification interactive (MFA) Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](odbc/using-azure-active-directory.md) | | | [Oui](oledb/features/using-azure-active-directory.md) |
 | [Authentification Managed Identity Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Oui](odbc/using-azure-active-directory.md) | [Oui](odbc/using-azure-active-directory.md) | [Oui](jdbc/connecting-using-azure-active-directory-authentication.md) | [Oui](oledb/features/using-azure-active-directory.md) |
-| [Authentification par principal de service Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
+| [Authentification par principal de service Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [Oui](oledb/features/using-azure-active-directory.md) |
 | [Authentification Windows intégrée](/windows-server/security/windows-authentication/windows-authentication-overview) | Oui | [Oui](odbc/linux-mac/using-integrated-authentication.md) | [Oui](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Oui |
 | [Copie en bloc](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Oui](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Oui](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Oui](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Oui](oledb/features/performing-bulk-copy-operations.md) |
 | [Métadonnées de recherche et de classification des données](../relational-databases/security/sql-data-discovery-and-classification.md) | [Oui](odbc/data-classification.md) | [Oui](odbc/data-classification.md) | [Oui](jdbc/data-discovery-classification-sample.md) | |

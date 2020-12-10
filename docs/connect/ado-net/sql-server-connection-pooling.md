@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 1cf7cf010724453aadcc3c93ef216e44d6a869fc
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419733"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563076"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Regroupement de connexions SQL Server (ADO.NET)
 
@@ -68,10 +68,10 @@ Quand un objet <xref:Microsoft.Data.SqlClient.SqlConnection> est demandé, il es
 Le dispositif de regroupement de connexions répond à ces requêtes de connexion en réallouant les connexions à mesure qu’elles se libèrent dans le pool. Si la taille maximale du pool est atteinte et qu'aucune connexion utilisable n'est disponible, la requête est mise en attente. La fonction de regroupement essaie ensuite de récupérer toutes les connexions jusqu’à ce que le délai d’attente soit atteint (**la valeur par défaut est de 15 secondes**). Si le dispositif de regroupement de connexions ne peut pas répondre à la requête avant que le délai de temporisation de la connexion ait expiré, une exception est levée.
 
 > [!CAUTION]
-> Il est vivement recommandé de toujours fermer la connexion lorsque vous avez terminé de l'utiliser, de sorte qu'elle soit retournée au pool. Pour ce faire, utilisez la méthode `Close` ou `Dispose` de l'objet `Connection` ou ouvrez toutes les connexions à l'intérieur d'une instruction `using` dans C# ou d'une instruction `Using` dans Visual Basic. Les connexions qui ne sont pas explicitement fermées risquent de ne pas être ajoutées ni retournées au pool. Pour plus d'informations, consultez [Utilisation des instructions](/dotnet/docs/csharp/language-reference/keywords/using-statement.md) ou [Procédure : Supprimer une ressource système](/dotnet/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) pour Visual Basic.
+> Il est vivement recommandé de toujours fermer la connexion lorsque vous avez terminé de l'utiliser, de sorte qu'elle soit retournée au pool. Pour ce faire, utilisez la méthode `Close` ou `Dispose` de l'objet `Connection` ou ouvrez toutes les connexions à l'intérieur d'une instruction `using` dans C# ou d'une instruction `Using` dans Visual Basic. Les connexions qui ne sont pas explicitement fermées risquent de ne pas être ajoutées ni retournées au pool. Pour plus d'informations, consultez [Utilisation des instructions](/dotnet/csharp/language-reference/keywords/using-statement) ou [Procédure : Supprimer une ressource système](/dotnet/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource) pour Visual Basic.
 
 > [!NOTE]
-> N'appelez pas une commande `Close` ou `Dispose` sur une `Connection`, un `DataReader` ou tout autre objet managé dans la méthode `Finalize` de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressource non managée, n'incluez pas une méthode `Finalize` dans la définition de classe. Pour plus d’informations, consultez [Nettoyage de la mémoire](/dotnet/docs/standard/garbage-collection/index.md).
+> N'appelez pas une commande `Close` ou `Dispose` sur une `Connection`, un `DataReader` ou tout autre objet managé dans la méthode `Finalize` de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressource non managée, n'incluez pas une méthode `Finalize` dans la définition de classe. Pour plus d’informations, consultez [Nettoyage de la mémoire](/dotnet/standard/garbage-collection/index).
 
 Pour plus d’informations sur les événements associés aux connexions d’ouverture et de fermeture, consultez [Auditer la classe d'événements de connexions](/sql/relational-databases/event-classes/audit-login-event-class) et [Auditer la classe d'événements de déconnexion](/sql/relational-databases/event-classes/audit-logout-event-class) dans la documentation SQL Server.
 

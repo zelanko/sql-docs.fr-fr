@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364096"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900872"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Créer une extension de tableau de bord Azure Data Studio
 
@@ -44,7 +44,7 @@ Azure Data Studio repose sur la même infrastructure que Visual Studio Code, ain
 Pour simplifier le processus de création d’extensions, nous avons créé un [générateur d’extensions](https://code.visualstudio.com/docs/extensions/yocode) à l’aide de Yeoman. Pour l’installer, exécutez la commande suivante à partir de l’invite de commandes :
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-dashboard-extension"></a>Créer votre extension de tableau de bord
@@ -108,7 +108,7 @@ Voici quelques modifications à essayer :
 Pour partager votre extension avec d’autres personnes, vous avez besoin de l’empaqueter dans un fichier unique. Votre extension peut être publiée sur le marketplace d’extensions Azure Data Studio ou partagée avec votre équipe ou votre communauté. Pour ce faire, vous devez installer un autre package npm à partir de la ligne de commande.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Modifiez le fichier `README.md` à votre convenance. Puis, accédez au répertoire de base de l’extension, puis exécutez `vsce package`. Vous pouvez éventuellement lier un référentiel à votre extension ou continuer sans référentiel. Pour en ajouter un, ajoutez une ligne similaire à votre fichier `package.json`.

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 03ebdbdd15adfae8e765964e8338f043999319f3
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 98127e41b5b07c38030ef27214c9c92bf7c4b4be
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428199"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761477"
 ---
 # <a name="using-commands-to-modify-data"></a>Utilisation des commandes pour modifier les données
 
@@ -31,11 +31,14 @@ Bien que la méthode **ExecuteNonQuery** ne retourne pas de lignes, les paramèt
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[La mise à jour des données dans une source de données](update-data-inside-data-source.md) explique comment exécuter des commandes ou des procédures stockées qui modifient les données d’une base de données.
+[Mise à jour des données dans une source de données](update-data-inside-data-source.md)  
+Décrit l'exécution de commandes ou de procédures stockées qui modifient les données dans une base de données.
 
-[Exécution d’opérations de catalogue](perform-catalog-operations.md) décrit comment exécuter des commandes qui modifient le schéma de base de données.
+[Exécution d'opérations du catalogue](perform-catalog-operations.md)  
+Décrit l'exécution des commandes qui modifient le schéma de base de données.
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Récupération et modification de données dans ADO.NET](retrieving-modifying-data.md)
 - [Commandes et paramètres](commands-parameters.md)
+- [Microsoft ADO.NET pour SQL Server](microsoft-ado-net-sql-server.md)

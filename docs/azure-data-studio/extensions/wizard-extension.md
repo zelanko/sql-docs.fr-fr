@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 2d4864a3475b8e27fd86e90fbfa690c49a0c413d
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364056"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900792"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Créer une extension de l’Assistant Azure Data Studio
 
@@ -43,7 +43,7 @@ Azure Data Studio repose sur la même infrastructure que Visual Studio Code, ain
 Pour simplifier le processus de création d’extensions, nous avons créé un [générateur d’extensions](https://code.visualstudio.com/docs/extensions/yocode) à l’aide de Yeoman. Pour l’installer, exécutez la commande suivante à partir de l’invite de commandes :
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-wizard-extension"></a>Créer votre extension de l’Assistant
@@ -104,7 +104,7 @@ Une fois que vous connaissez le modèle, voici quelques idées supplémentaires 
 Pour partager votre extension avec d’autres personnes, vous devez l’empaqueter dans un fichier unique. Il peut être publié sur le marketplace d’extensions Azure Data Studio ou partagé avec votre équipe ou votre communauté. Pour ce faire, vous devez installer un autre package npm à partir de la ligne de commande :
 
 ```console
-npm install -g vsce`
+npm install -g vsce
 ```
 
 Modifiez le fichier `README.md` à votre gré, puis accédez au répertoire de base de l’extension et exécutez `vsce package`. Vous pouvez éventuellement lier un référentiel à votre extension ou continuer sans référentiel. Pour en ajouter un, ajoutez une ligne similaire à votre fichier `package.json`.
