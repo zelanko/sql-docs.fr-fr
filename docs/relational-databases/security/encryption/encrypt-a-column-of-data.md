@@ -18,18 +18,18 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 4d1fefc10f19a4b8fda411337cd4b35a6f8f2939
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439333"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442975"
 ---
 # <a name="encrypt-a-column-of-data"></a>Chiffrer une colonne de données
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  Cet article explique comment chiffrer une colonne de données à l’aide du chiffrement symétrique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] avec [!INCLUDE[tsql](../../../includes/tsql-md.md)]. On parle parfois de chiffrement au niveau colonne ou au niveau cellule. Cette fonctionnalité est en version préliminaire pour Azure Synapse Analytics (SQL DW)
+  Cet article explique comment chiffrer une colonne de données à l’aide du chiffrement symétrique dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] avec [!INCLUDE[tsql](../../../includes/tsql-md.md)]. On parle parfois de chiffrement au niveau colonne ou au niveau cellule. Cette fonctionnalité est en préversion pour Azure Synapse Analytics.
 
 ## <a name="security"></a>Sécurité  
   
@@ -57,11 +57,11 @@ Sauvegardez toujours votre clé principale de base de données. Pour plus d’in
 
 ### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Pour chiffrer une colonne de données à l'aide du chiffrement symétrique qui inclut un authentificateur  
   
-1. Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. Dans la barre d'outils standard, cliquez sur **Nouvelle requête** .  
+2. Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter** .  
+3. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
 
     ```sql
     USE AdventureWorks2012;  
@@ -115,11 +115,11 @@ Sauvegardez toujours votre clé principale de base de données. Pour plus d’in
   
 ### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Pour chiffrer une colonne de données à l'aide d'un chiffrement symétrique simple  
   
-1. Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1. Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. Dans la barre d'outils standard, cliquez sur **Nouvelle requête** .  
+2. Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter** .  
+3. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```sql
     USE AdventureWorks2012;  

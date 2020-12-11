@@ -1,5 +1,5 @@
 ---
-title: COPY INTO (Transact-SQL) (préversion)
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Utilisez l’instruction COPY dans Azure Synapse Analytics pour le chargement à partir de comptes de stockage externes.
 ms.date: 09/25/2020
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300290"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96787990"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -45,7 +45,7 @@ Pour obtenir des exemples complets et des Démarrages rapides à l’aide de l�
 
 - [Démarrage rapide : Charger en masse des données à l’aide de l’instruction COPY](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [Démarrage rapide : Exemples utilisant l’instruction COPY et les méthodes d’authentification prises en charge](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Démarrage rapide : Création de l’instruction COPY à l’aide de l’interface utilisateur de Synapse Studio enrichie (version préliminaire de l’espace de travail)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Démarrage rapide : Création de l’instruction COPY à l’aide de l’interface utilisateur de Synapse Studio enrichie](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>Syntaxe  
 
@@ -85,9 +85,9 @@ Est une liste facultative d’une ou de plusieurs colonnes utilisées pour mappe
 
 [(Column_name [Default_value] [Field_number] [,...n])]
 
-- *Column_name*  : nom de la colonne dans la table cible.
-- *Default_value*  : valeur par défaut qui remplace toute valeur NULL dans le fichier d’entrée. Elle s’applique à tous les formats de fichier. L’instruction COPY tente de charger une valeur NULL à partir du fichier d’entrée quand une colonne de la liste de colonnes est omise ou qu’un champ est vide dans le fichier d’entrée.
-- *Field_number*  : numéro du champ du fichier d’entrée à mapper au nom de la colonne cible.
+- *Column_name* : nom de la colonne dans la table cible.
+- *Default_value* : valeur par défaut qui remplace toute valeur NULL dans le fichier d’entrée. Elle s’applique à tous les formats de fichier. L’instruction COPY tente de charger une valeur NULL à partir du fichier d’entrée quand une colonne de la liste de colonnes est omise ou qu’un champ est vide dans le fichier d’entrée.
+- *Field_number* : numéro du champ du fichier d’entrée à mapper au nom de la colonne cible.
 - L’indexation des champs commence au numéro 1.
 
 Quand aucune liste de colonnes n’est spécifiée, COPY mappe les colonnes en suivant l’ordre de la source et de la cible : le champ d’entrée 1 est mappé à la colonne cible 1, le champ 2 à la colonne 2, et ainsi de suite.
@@ -101,11 +101,11 @@ Désigne l’emplacement où sont placés les fichiers de données. Actuellement
 > [!NOTE]  
 > Le point de terminaison .blob est également disponible pour la ADLS Gen2 et produit actuellement les meilleures performances. Utilisez le point de terminaison .blob quand .dfs n’est pas nécessaire pour votre méthode d’authentification.
 
-- *Account*  : nom du compte de stockage
+- *Account* : nom du compte de stockage
 
-- *Container*  : nom du conteneur d’objets blob
+- *Container* : nom du conteneur d’objets blob
 
-- *Path*  : chemin du fichier ou dossier contenant les données. L’emplacement part du conteneur. Si un dossier est spécifié, l’opération COPY récupère tous les fichiers du dossier et de tous ses sous-dossiers. COPY ignore les dossiers masqués et ne retourne pas les fichiers dont le nom débute par un trait de soulignement (_) ou un point (.), sauf si ces caractères sont explicitement spécifiés dans le chemin. Ce comportement est le même quand vous spécifiez un chemin comportant un caractère générique.
+- *Path* : chemin du fichier ou dossier contenant les données. L’emplacement part du conteneur. Si un dossier est spécifié, l’opération COPY récupère tous les fichiers du dossier et de tous ses sous-dossiers. COPY ignore les dossiers masqués et ne retourne pas les fichiers dont le nom débute par un trait de soulignement (_) ou un point (.), sauf si ces caractères sont explicitement spécifiés dans le chemin. Ce comportement est le même quand vous spécifiez un chemin comportant un caractère générique.
 
 Les caractères génériques sont autorisés dans les chemins dans les cas suivants
 
@@ -141,9 +141,9 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
 |  **Stockage Blob Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1 : Le point de terminaison .blob ( **.blob** .core.windows.net) dans le chemin de votre emplacement externe est nécessaire pour cette méthode d’authentification.
+1 : Le point de terminaison .blob ( **.blob**.core.windows.net) dans le chemin de votre emplacement externe est nécessaire pour cette méthode d’authentification.
 
-2 : Le point de terminaison .dfs ( **.dfs** .core.windows.net) dans le chemin de votre emplacement externe est nécessaire pour cette méthode d’authentification.
+2 : Le point de terminaison .dfs ( **.dfs**.core.windows.net) dans le chemin de votre emplacement externe est nécessaire pour cette méthode d’authentification.
 
 
 > [!NOTE]  
@@ -179,7 +179,7 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
   - Rôles RBAC minimum requis : Contributeur aux données Blob du stockage ou Propriétaire des données Blob du stockage pour l’utilisateur AAD
 
 *ERRORFILE = emplacement du répertoire*</br>
-*ERRORFILE* s’applique uniquement au format CSV. Spécifie le répertoire dans l’instruction COPY dans lequel les lignes rejetées et le fichier d’erreur correspondant doivent être écrits. Il est possible de spécifier le chemin complet du compte de stockage ou le chemin relatif du conteneur. Si le chemin spécifié n’existe pas, un chemin est créé pour vous. Un répertoire enfant est créé sous le nom «  _rejectedrows ». Le caractère «_   » garantit que le répertoire est placé dans une séquence d’échappement pour le traitement d’autres données, sauf s’il est explicitement nommé dans le paramètre d’emplacement. 
+*ERRORFILE* s’applique uniquement au format CSV. Spécifie le répertoire dans l’instruction COPY dans lequel les lignes rejetées et le fichier d’erreur correspondant doivent être écrits. Il est possible de spécifier le chemin complet du compte de stockage ou le chemin relatif du conteneur. Si le chemin spécifié n’existe pas, un chemin est créé pour vous. Un répertoire enfant est créé sous le nom « _rejectedrows ». Le caractère «_   » garantit que le répertoire est placé dans une séquence d’échappement pour le traitement d’autres données, sauf s’il est explicitement nommé dans le paramètre d’emplacement. 
 
 Dans ce répertoire figure un dossier qui est créé d’après l’heure de soumission du chargement au format AnnéeMoisJour - HeureMinuteSeconde (par exemple, 20180330-173205). Dans ce dossier, deux types de fichiers sont écrits : le fichier de la raison (erreur) et le fichier des données (ligne). Chaque fichier est prérempli avec un ID de requête (queryID), un ID de distribution (distributionID) et un GUID de fichier. Comme les données et la raison se trouvent dans des fichiers distincts, les fichiers correspondants ont un préfixe analogue.
 
@@ -262,7 +262,7 @@ DATEFORMAT s’applique uniquement au format CSV et spécifie le format de date
 *ENCODING* s’applique uniquement au format CSV. La valeur par défaut est UTF8. Spécifie la norme d’encodage des données dans les fichiers chargés par la commande COPY. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT spécifie si la ou les valeurs d’identité figurant dans le fichier de données importé doivent être utilisées pour la colonne d’identité. Si IDENTITY_INSERT est défini sur OFF (valeur par défaut), les valeurs d’identité de cette colonne sont vérifiées, mais pas importées. SQL Database Warehouse affectera automatiquement des valeurs uniques en fonction des valeurs de départ et d’incrément spécifiées au moment de la création de la table. Notez le comportement suivant avec la commande COPY :
+IDENTITY_INSERT spécifie si la ou les valeurs d’identité figurant dans le fichier de données importé doivent être utilisées pour la colonne d’identité. Si IDENTITY_INSERT est défini sur OFF (valeur par défaut), les valeurs d’identité de cette colonne sont vérifiées, mais pas importées. Azure Synapse Analytics affectera automatiquement des valeurs uniques en fonction des valeurs de départ et d’incrément spécifiées au moment de la création de la table. Notez le comportement suivant avec la commande COPY :
 
 - Quand IDENTITY_INSERT est défini sur OFF et que la table possède une colonne d’identité
   - Une liste de colonnes doit être spécifiée, mais elle ne doit pas mapper un champ d’entrée à la colonne d’identité.
@@ -433,17 +433,6 @@ Il n’est pas nécessaire de fractionner les fichiers Parquet et ORC car la com
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Existe-t-il des restrictions quant au nombre ou à la taille des fichiers ?
 Il n’existe aucune limite quant au nombre ou à la taille des fichiers ; toutefois, pour des performances optimales, nous recommandons des fichiers d’au moins 4 Mo.
 
-### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Y-a-t-il des limitations d’utilisation des espaces de travail Synapse avec COPY (préversion) ?
-
-L’authentification à l’aide de Managed Identity (MSI) n’est pas prise en charge avec l’instruction COPY ou PolyBase (y compris en cas d’utilisation dans des pipelines). Vous pouvez rencontrer un message d’erreur semblable à celui-ci :
-
-*com.microsoft.sqlserver.jdbc.SQLServerException : Managed Service Identity n’a pas été activée sur ce serveur. Activez Managed Service Identity, puis réessayez.*
-
-L’authentification MSI est nécessaire lorsque le compte de stockage est associé à un réseau virtuel. Vous devez utiliser l’insertion BCP/Bulk au lieu de COPY ou de PolyBase pour charger des données si votre compte de stockage est attaché à un réseau virtuel.
-
-Cette limitation s’applique uniquement aux pools SQL appartenant à un espace de travail Synapse (préversion). Nous allons activer la prise en charge de MSI dans les espaces de travail Synapse dans une prochaine version. 
-
-Envoyez vos commentaires ou signalez vos problèmes à la liste de distribution suivante : sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>Voir aussi  
 

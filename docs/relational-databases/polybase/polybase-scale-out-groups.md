@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523844"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535273"
 ---
 # <a name="polybase-scale-out-groups"></a>Groupes de scale-out PolyBase
 
@@ -35,11 +35,11 @@ Consultez [Prise en main de PolyBase](./polybase-guide.md) et [Guide de PolyBase
   
 ## <a name="head-node"></a>Nœud principal  
 
-Le nœud principal contient l’instance de SQL Server à laquelle les requêtes PolyBase sont envoyées. Chaque groupe PolyBase ne peut avoir qu’un seul nœud principal. Un nœud principal est un regroupement logique du moteur de base de données SQL, du moteur PolyBase et du PolyBase Data Movement Service sur l’instance de SQL Server.
+Le nœud principal contient l’instance de SQL Server à laquelle les requêtes PolyBase sont envoyées. Chaque groupe PolyBase ne peut avoir qu’un seul nœud principal. Un nœud principal est un groupe logique composé du Moteur de base de données SQL Server, du Moteur PolyBase et du service Mouvement de données PolyBase sur l’instance SQL Server. Avec SQL Server 2017 et SQL Server 2016, le nœud principal PolyBase doit être créé sous l’Édition Entreprise. À partir de SQL Server 2019, il peut s’agir indifféremment de l’Édition Entreprise ou de l’Édition Standard.
   
-## <a name="compute-node"></a>Nœud de calcul  
+## <a name="compute-node"></a>Nœud de calcul
 
-Un nœud de calcul contient l’instance de SQL Server qui assiste dans le traitement des requêtes avec montée en puissance sur des données externes. Un nœud de calcul est un regroupement logique de SQL Server et du PolyBase Data Movement Service sur l’instance de SQL Server. Un groupe PolyBase peut avoir plusieurs nœuds de calcul. Le nœud principal et les nœuds de calcul doivent tous exécuter la même version de SQL Server.
+Un nœud de calcul contient l’instance de SQL Server qui assiste dans le traitement des requêtes avec montée en puissance sur des données externes. Un nœud de calcul est un regroupement logique de SQL Server et du PolyBase Data Movement Service sur l’instance de SQL Server. Un groupe PolyBase peut avoir plusieurs nœuds de calcul. Le nœud principal et les nœuds de calcul doivent tous exécuter la même version de SQL Server. Dans la version initiale de SQL Server 2016, les nœuds de calcul pouvaient être créés sous l’Édition Enterprise ou l’Édition Standard. À partir de SQL Server 2016 SP1, toutes les éditions de SQL Server peuvent constituer un nœud de calcul.
 
 ## <a name="scale-out-reads"></a>Lectures scale-out
 

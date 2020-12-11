@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
-ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
+ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93417427"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443098"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ Crée une source de données externe pour des requêtes PolyBase. Des sources de
 - Virtualisation des données et chargement des données à l’aide de [PolyBase][intro_pb]
 - Les opérations de chargement en bloc à l’aide de `BULK INSERT` ou `OPENROWSET`
 
-**S’applique à**  : À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+**S’applique à** : À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -732,7 +732,7 @@ Spécifie les informations d’identification limitées à la base de données s
 
 Remarques et conseils supplémentaires lors de la création d’informations d’identification :
 
-- Pour charger des données en provenance du stockage Azure ou d’Azure Data Lake Store (ADLS) Gén. 2 dans SQL DW, utilisez une clé de stockage Azure.
+- Pour charger des données du Stockage Azure ou d’Azure Data Lake Storage (ADLS) Gen2 dans Azure Synapse Analytics, utilisez une clé de stockage Azure.
 - `CREDENTIAL` est requis uniquement si les données ont été sécurisées. `CREDENTIAL` n’est pas requis pour les jeux de données qui autorisent l’accès anonyme.
 
 Pour créer des informations d’identification délimitées à la base de données, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].

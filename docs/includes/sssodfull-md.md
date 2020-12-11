@@ -1,1 +1,1 @@
-Pool SQL serverless (préversion) dans Azure Synapse Analytics
+Pool SQL serverless dans Azure Synapse Analytics

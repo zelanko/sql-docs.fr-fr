@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: f290da98335aaf46c3c0d12c94d265f14dc1e2bd
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669591"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535283"
 ---
 # <a name="sql-server-express-localdb"></a>Base de données locale SQL Server Express
 
@@ -64,6 +64,10 @@ L’utilitaire `SqlLocalDb` peut créer des instances de LocalDB, démarrer et a
 Le classement d'instance pour LocalDB a la valeur `SQL_Latin1_General_CP1_CI_AS` et ne peut pas être modifié. Les classements au niveau des bases de données, des colonnes ou des expressions sont pris en charge normalement. Les bases de données autonomes suivent les règles de classement des métadonnées et de `tempdb` définies par [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md).
 
 ### <a name="restrictions"></a>Restrictions
+
+- La Base de données locale ne peut pas être corrigée au-delà des Service Packs. Ni les mises à jour cumulatives ni les mises à jour de sécurité ne peuvent être appliquées manuellement. Elles ne seront par ailleurs appliquées ni par Windows Update, ni par Windows Update pour Entreprise, ni par d’autres méthodes.
+
+- La Base de données locale ne peut pas être gérée à distance avec SQL Server Management Studio.
 
 - LocalDB ne peut pas être un abonné de réplication de fusion.
 

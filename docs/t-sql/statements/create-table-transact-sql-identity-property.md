@@ -22,12 +22,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9508420a8f629a189a1d623e5ac1d310a7f940
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 309243b635cb42b3f4acc62422bdfd3eb4aff807
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257756"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443144"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propriété)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -57,7 +57,7 @@ IDENTITY [ (seed , increment) ]
  Valeur d'incrément ajoutée à la valeur d'identité de la ligne précédemment chargée.
 
  > [!NOTE]
- > Dans Azure Synapse Analytics, les valeurs d’identité ne sont pas incrémentielles en raison de l’architecture distribuée de l’entrepôt de données. Pour plus d’informations, consultez [Utiliser IDENTITY pour créer des clés de substitution dans le pool SQL Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values).
+ > Dans Azure Synapse Analytics, les valeurs d’identité ne sont pas incrémentielles en raison de l’architecture distribuée de l’entrepôt de données. Pour plus d’informations, consultez [Création de clés de substitution dans un pool Synapse SQL avec IDENTITY](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values).
   
  Vous devez spécifier à la fois la valeur initiale et l'incrément, ou aucun des deux. Si vous n'en spécifiez aucun, la valeur par défaut est (1,1).  
   
@@ -70,16 +70,16 @@ IDENTITY [ (seed , increment) ]
   
  La propriété d'identité sur une colonne ne garantit pas ce qui suit :  
   
--   **Unicité de la valeur**  : l’unicité doit être appliquée avec une contrainte **PRIMARY KEY** ou **UNIQUE** , ou avec un index **UNIQUE** . - 
+-   **Unicité de la valeur** : l’unicité doit être appliquée avec une contrainte **PRIMARY KEY** ou **UNIQUE**, ou avec un index **UNIQUE**. - 
  
 > [!NOTE]
-> Azure Synapse Analytics ne prend pas en charge la contrainte **PRIMARY KEY** ou **UNIQUE** ou l’index **UNIQUE** . Pour plus d’informations, consultez [Utiliser IDENTITY pour créer des clés de substitution dans le pool SQL Synapse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key).
+> Azure Synapse Analytics ne prend pas en charge la contrainte **PRIMARY KEY** ou **UNIQUE** ou l’index **UNIQUE**. Pour plus d’informations, consultez [Création de clés de substitution dans un pool Synapse SQL avec IDENTITY](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key).
 
--   **Valeurs consécutives dans une transaction**  : il n’est pas garanti qu’une transaction insérant plusieurs lignes obtienne des valeurs consécutives pour les lignes, car d’autres insertions simultanées peuvent se produire sur la table. Si les valeurs doivent être consécutives, alors la transaction doit utiliser un verrou sur la table ou le niveau d’isolation **SERIALIZABLE** .  
+-   **Valeurs consécutives dans une transaction** : il n’est pas garanti qu’une transaction insérant plusieurs lignes obtienne des valeurs consécutives pour les lignes, car d’autres insertions simultanées peuvent se produire sur la table. Si les valeurs doivent être consécutives, alors la transaction doit utiliser un verrou sur la table ou le niveau d’isolation **SERIALIZABLE**.  
   
--   **Valeurs consécutives après le redémarrage du serveur ou d’autres échecs**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut mettre en cache les valeurs d’identité pour des raisons de performance, et certaines valeurs affectées peuvent être perdues lors d’un échec de base de données ou du redémarrage du serveur. Cela peut entraîner des intervalles de valeur d'identité à l'insertion. Si les intervalles ne sont pas acceptables, alors l'application doit utiliser son propre mécanisme pour générer des valeurs clés. L’utilisation d’un générateur de séquence avec l’option **NOCACHE** peut limiter les intervalles pour les transactions qui ne sont jamais validées.  
+-   **Valeurs consécutives après le redémarrage du serveur ou d’autres échecs** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut mettre en cache les valeurs d’identité pour des raisons de performance, et certaines valeurs affectées peuvent être perdues lors d’un échec de base de données ou du redémarrage du serveur. Cela peut entraîner des intervalles de valeur d'identité à l'insertion. Si les intervalles ne sont pas acceptables, alors l'application doit utiliser son propre mécanisme pour générer des valeurs clés. L’utilisation d’un générateur de séquence avec l’option **NOCACHE** peut limiter les intervalles pour les transactions qui ne sont jamais validées.  
   
--   **Réutilisation des valeurs**  : pour une propriété d’identité donnée, avec une valeur/un incrément spécifique, les valeurs d’identité ne sont pas réutilisées par le moteur. Si une instruction d'insertion donnée échoue, ou si l'instruction d'insertion est restaurée, alors les valeurs d'identité consommées sont perdues et ne peuvent plus être générées. Cela peut entraîner des intervalles lorsque les valeurs d'identité ultérieures sont générées.  
+-   **Réutilisation des valeurs** : pour une propriété d’identité donnée, avec une valeur/un incrément spécifique, les valeurs d’identité ne sont pas réutilisées par le moteur. Si une instruction d'insertion donnée échoue, ou si l'instruction d'insertion est restaurée, alors les valeurs d'identité consommées sont perdues et ne peuvent plus être générées. Cela peut entraîner des intervalles lorsque les valeurs d'identité ultérieures sont générées.  
   
  Ces restrictions sont dues à la conception et visent à améliorer les performances, car elles sont acceptables dans la plupart des situations. Si vous ne pouvez pas utiliser les valeurs d'identité en raison de ces restrictions, créez une table distincte contenant une valeur actuelle et gérez l'accès à la table et l'affectation de numéro dans votre application.  
   

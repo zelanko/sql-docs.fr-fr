@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 96e137f3e49ac21a38577704c2663d3de85151ff
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418021"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505143"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 
@@ -35,7 +35,7 @@ Pour plus d’informations sur l’utilisation du Magasin des requêtes dans Azu
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Activation du magasin de requêtes
 
- Le magasin des requêtes n’est pas activé par défaut pour les nouvelles bases de données SQL Server et Azure Synapse Analytics (SQL DW), mais il est activé par défaut pour les nouvelles bases de données Azure SQL Database.
+ Le Magasin des requêtes est activé par défaut pour les nouvelles bases de données Azure SQL Database, mais non pour les nouvelles bases de données SQL Server et Azure Synapse Analytics.
 
 ### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Utiliser la page Magasin des requêtes dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 

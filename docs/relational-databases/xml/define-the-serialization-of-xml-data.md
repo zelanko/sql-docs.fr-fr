@@ -2,7 +2,7 @@
 title: Définir la sérialisation des données XML | Microsoft Docs
 description: En savoir plus sur les règles utilisées lors de la sérialisation de données xml dans SQL Server.
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/07/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 67201804cc1f93a9595ff46c02a57da7ea6e6109
+ms.sourcegitcommit: 68063a1857f40487e6a2028de25990728419e3a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738435"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96749701"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Définir la sérialisation des données XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "85738435"
   
  Par exemple :  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
  Voici le résultat obtenu :  
   
-```  
+```console
 0xFFFE3C0094032F003E00  
 ```  
   
@@ -49,13 +49,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Par exemple :  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  Voici le résultat obtenu :  
   
-```  
+```console
 <Δ/>  
 ```  
   
@@ -63,7 +63,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Par exemple :  
   
-```  
+```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
@@ -77,21 +77,21 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Codage d'entité des caractères XML au cours de la sérialisation  
  Chaque structure XML sérialisée doit pouvoir subir une nouvelle analyse. C’est pourquoi certains caractères doivent être sérialisés à l’aide du codage d’entité de façon à autoriser les accès répétés aux caractères, tout au long de la phase de normalisation de l’analyseur XML. Il s'avère aussi nécessaire de spécifier le codage d'entité de certains caractères afin d'assurer la bonne formation du document et son analyse. Voici les règles de codage d'entité qui s'appliquent au cours de la sérialisation :  
   
--   Les caractères &, \<, and > sont toujours codés sous la forme &amp;, &lt; et &gt;, respectivement, s’ils se trouvent dans la valeur d’un attribut ou dans le contenu d’un élément.  
+-   Les caractères &, \<, and > sont toujours codés sous la forme `&amp;`, `&lt;` et `&gt;`, respectivement, s’ils se trouvent dans la valeur d’un attribut ou dans le contenu d’un élément.  
   
--   Étant donné que SQL Server utilise les guillemets (U+0022) pour délimiter les valeurs des attributs, le guillemet des valeurs de l’attribut est codé par &quot;.  
+-   Étant donné que SQL Server utilise les guillemets (U+0022) pour délimiter les valeurs des attributs, le guillemet des valeurs de l’attribut est codé par `&quot;`.  
   
--   Une paire de substitution est codée sous forme d'une seule référence de caractère numérique, lors de la conversion sur le serveur uniquement. Par exemple, la paire de substitution U+D800 U+DF00 est codée par la référence de caractère numérique &\#x00010300;.  
+-   Une paire de substitution est codée sous forme d'une seule référence de caractère numérique, lors de la conversion sur le serveur uniquement. Par exemple, la paire de substitution U+D800 U+DF00 est codée par la référence de caractère numérique `&#x00010300;`.  
   
--   Pour empêcher la normalisation d’une tabulation (U+0009) et d’un saut de ligne (LF, U+000A) lors de l’analyse, ces derniers sont codés par leurs références de caractère numérique, &\#x9; et &\#xA; respectivement, dans les valeurs des attributs.  
+-   Pour empêcher leur normalisation lors de l’analyse, la tabulation (U+0009) et le saut de ligne (LF, U+000A) sont codés par leur référence de caractère numérique, respectivement `&#x9;` et `&#xA;`, dans les valeurs d’attribut.  
   
--   Pour empêcher la normalisation d’un retour chariot (CR, U+000D) lors de l’analyse, ce dernier est codé par sa référence de caractère numérique, &\#xD; dans les valeurs des attributs et le contenu des éléments.  
+-   Pour empêcher sa normalisation lors de l’analyse, le retour chariot (CR, U+000D) est codé par sa référence de caractère numérique, `&#xD;` dans les valeurs d’attribut et le contenu des éléments.  
   
 -   Pour protéger les nœuds de texte contenant des espaces, l'un des espaces (généralement le dernier) est codé par sa référence de caractère numérique. De cette façon, l'analyse préserve le nœud de texte contenant des espaces, quel que soit le mode de traitement choisi pour les espaces au cours de l'analyse.  
   
  Par exemple :  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
@@ -100,7 +100,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  Voici le résultat obtenu :  
   
-```  
+```console
 <a a="  
     𐌀>">     
 </a>  
@@ -108,13 +108,13 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
  Si vous ne voulez pas appliquer la règle de protection du dernier espace, vous pouvez utiliser explicitement l’option 1 de CONVERT lors de la conversion de **xml** en type chaîne ou binaire. Par exemple, vous pouvez éviter le codage d'entité en procédant ainsi :  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  Remarquez que la [méthode query() (type de données xml)](../../t-sql/xml/query-method-xml-data-type.md) génère une instance de type xml. Ainsi, tout résultat de la méthode **query()** converti en type chaîne ou binaire a recours au codage d’entité conformément aux règles précédemment décrites. Si vous souhaitez obtenir les valeurs de chaîne sans conversion en entité, utilisez la [méthode value() (type de données xml)](../../t-sql/xml/value-method-xml-data-type.md) . L’exemple suivant montre comment utiliser la méthode **query()** :  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
@@ -122,19 +122,19 @@ select @x.query('/a/text()')
   
  Voici le résultat obtenu :  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
  L’exemple suivant montre comment utiliser la méthode **value()** :  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
  Voici le résultat obtenu :  
   
-```  
+```console
 This example contains an entitized char: <.  
 ```  
   
@@ -143,7 +143,7 @@ This example contains an entitized char: <.
   
  Par exemple, la valeur xs:double 1.34e1 est sérialisée en 13.4 comme le montre l'exemple suivant :  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
@@ -153,6 +153,5 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
 ## <a name="see-also"></a>Voir aussi  
  [Règles de conversion de types dans XQuery](../../xquery/type-casting-rules-in-xquery.md)   
- [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
+ [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+ 

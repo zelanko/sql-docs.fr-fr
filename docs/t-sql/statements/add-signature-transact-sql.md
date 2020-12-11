@@ -18,18 +18,18 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: 0f0ed0ee3619abae19df06879fbfd1d60b22a0b0
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 1202cb470530941b23c3e0a742ea9a1715170784
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688427"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523070"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Ajoute une signature numérique à une procédure stockée, une fonction, un assembly ou un déclencheur. Ajoute également une contre-signature à une procédure stockée, une fonction, un assembly ou un déclencheur.
+Ajoute une signature numérique à une procédure stockée, à une fonction, à un assembly ou à un déclencheur DML. Ajoute également une contre-signature à une procédure stockée, à une fonction, à un assembly ou à un déclencheur DML.
 
 ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -83,7 +83,7 @@ Le module signé ou contresigné et le certificat ou la clé asymétrique utilis
 > [!CAUTION]
 > La signature de module ne doit être utilisée que pour accorder des autorisations, jamais pour en refuser ou en révoquer.  
   
- Les fonctions table inline ne peuvent pas être signées.  
+ Ni les déclencheurs de langage de définition de données (DDL) ni les fonctions table incluses ne peuvent être signés.  
   
  Des informations sur les signatures sont visibles dans l'affichage catalogue sys.crypt_properties.  
   

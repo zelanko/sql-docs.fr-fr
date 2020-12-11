@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73f9f3a39f5a30fe611c5ec839d8d2c7172206d8
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778438"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761507"
 ---
 # <a name="azure-data-studio-extensibility"></a>Extensibilité d’Azure Data Studio
 
@@ -32,6 +32,9 @@ Voici quelques-uns des principaux points d’extensibilité :
 ## <a name="visual-studio-code-extensibility-apis"></a>API d’extensibilité de Visual Studio Code
 
 Étant donné que la plateforme principale Azure Data Studio repose sur Visual Studio Code, vous trouverez des détails sur les API d’extensibilité de Visual Studio Code dans les documentations [Création d’extensions](https://code.visualstudio.com/docs/extensions/overview) et [API d’extension](https://code.visualstudio.com/docs/extensionAPI/overview) sur le site web Visual Studio Code.
+
+> [!NOTE]
+>  Les versions d’Azure Data Studio sont alignées avec une version récente de VS Code. Cependant, le moteur VS Code inclus ne correspond pas forcément à la version actuelle de VS Code. Par exemple, en novembre 2020, le moteur VS Code dans Azure Data Studio est sous la version 1.48 alors que la version actuelle de VS Code est 1.51.  Le message d’erreur « Impossible d’installer l’extension "<name>", car elle n’est pas compatible avec VS Code <version> », qui apparaît lors de l’installation d’une extension, est provoqué par une extension pour laquelle la version du moteur VS Code définie dans le manifeste du package est une version ultérieure (`package.json`). Vous pouvez vérifier la version du moteur VS Code dans Azure Data Studio par le biais du menu **Aide** sous **À propos de**.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>Gestion des contributions du panneau des onglets du tableau de bord
 

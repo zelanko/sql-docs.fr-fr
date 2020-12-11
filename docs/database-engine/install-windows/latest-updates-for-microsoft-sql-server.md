@@ -1,38 +1,31 @@
 ---
-description: Dernières mises à jour pour Microsoft SQL Server
-title: Dernières mises à jour pour Microsoft SQL Server
-TOCTitle: Latest updates for Microsoft SQL Server
-ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
-ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
-ms:contentKeyID: 31804705
-ms.date: 09/02/2020
+description: Liste des derniers Service Packs et mises à jour cumulatives, avec les numéros de build pour Microsoft SQL Server.
+title: Dernières mises à jour pour SQL Server
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
-mtps_version: v=MSDN.10
-ms.openlocfilehash: 52db4b0919294929c393348ac64f8e854fd394c3
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 148df97bf2c353e2cf12fe8f31ef2f85f6307b7d
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670559"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443077"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Dernières mises à jour pour Microsoft SQL Server
 
-Recherchez et gérez les mises à jour à un même emplacement pour vos produits SQL Server. Pour vous renseigner sur les mises à jour et télécharger les mises à jour nécessaires, consultez le [blog de votre version de SQL Server](https://aka.ms/sqlreleases).
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Cette page suit les dernières mises à jour de toutes les versions de SQL Server prises en charge. 
+Cet article donne la liste des dernières mises à jour des produits SQL Server. Pour vous renseigner sur les mises à jour et télécharger les mises à jour nécessaires, consultez le [blog de votre version de SQL Server](https://aka.ms/sqlreleases).
 
-Pour plus d’informations sur les mises à jour précédentes, consultez le [blog des builds SQL Server](https://sqlserverbuilds.blogspot.com/). 
-
-Pour plus d’informations sur les produits pris en charge, consultez la [page de cycle de vie du produit Microsoft](https://support.microsoft.com/lifecycle/). 
+Pour plus d’informations sur les produits pris en charge, consultez la [page de cycle de vie du produit Microsoft](/lifecycle/products/?terms=sql).
 
 ## <a name="latest-updates"></a>Dernières mises à jour
 
-Chacun des liens suivants fournit des informations sur tous les produits et technologies applicables listés dans la section **S’applique à** de cette page.
+Chacun des liens suivants fournit des informations sur tous les produits et technologies applicables.
 
 |Versions du produit   | Dernier Service Pack |  Dernier correctif logiciel grand public | Dernière mise à jour cumulative | Date de mise en production de la mise à jour cumulative | Conseils d’ordre général  |
 |--|--|--|--|--|--|
@@ -53,25 +46,21 @@ Chacun des liens suivants fournit des informations sur tous les produits et tech
 |SQL Server 2008 R2 |SP2 [(KB 2630458)](https://support.microsoft.com/kb/2630458)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 13 [(KB 2967540)](https://support.microsoft.com/kb/2967540)|30/6/2014|[Installation de SQL Server 2008 R2 SP2](https://www.microsoft.com/download/details.aspx?id=30437)|
 |SQL Server 2008 |SP4 [(KB 2979596)](https://support.microsoft.com/kb/2979596)|[4057114](https://support.microsoft.com/help/4057114/security-update-for-vulnerabilities-in-sql-server)|N/A|N/A|[Maintenance de SQL Server 2008](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 |SQL Server 2008|SP3 [(KB 2546951)](https://support.microsoft.com/kb/2546951)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|Mise à jour cumulative 17 [(KB 2958696)](https://support.microsoft.com/kb/2958696)|19/5/2014|[Maintenance de SQL Server 2008](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
-|SQL Server 2005 |SP4 [(KB 2463332)](https://support.microsoft.com/kb/2463332)|N/A|N/A|N/A|[Installation de SQL Server 2005](/previous-versions/sql/sql-server-2005/ms143516(v=sql.90))|
-|SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/A|N/A|N/A|[Installation de SQL Server 2000](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
-**Découvrez comment tester les mises à jour :**  [Testing and Developing Supportability Roadmaps for ISV Applications (Feuilles de route pour le développement et les tests de la prise en charge d’applications ISV) (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+**Découvrez comment tester les mises à jour :** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf) (Feuilles de route pour les tests et le développement de la prise en charge d’applications ISV)
 
 [!INCLUDE [sql-server-servicing-updates-version-15](../../includes/sql-server-servicing-updates-version-15.md)]
 
-### <a name="knowledge-base"></a>Base de connaissances
+## <a name="knowledge-base"></a>Base de connaissances
 
-  - KB 935897 : [L’équipe SQL Server met à votre disposition un modèle de maintenance incrémentiel qui fournit des correctifs logiciels pour les problèmes signalés](https://support.microsoft.com/kb/935897)
-  - KB 824684 : [Description de la terminologie standard utilisée pour décrire les mises à jour logicielles Microsoft](https://support.microsoft.com/kb/824684)
-  - KB 822499 : [Schéma de nommage des packages de mises à jour logicielles Microsoft SQL Server](https://support.microsoft.com/kb/822499)
-  - KB 321185 : [Comment déterminer la version et l’édition de SQL Server et de ses composants](https://support.microsoft.com/kb/321185)
+- KB 935897 : [L’équipe SQL Server met à votre disposition un modèle de maintenance incrémentiel qui fournit des correctifs logiciels pour les problèmes signalés](https://support.microsoft.com/kb/935897)
+- KB 824684 : [Description de la terminologie standard utilisée pour décrire les mises à jour logicielles Microsoft](https://support.microsoft.com/kb/824684)
+- KB 822499 : [Schéma de nommage des packages de mises à jour logicielles Microsoft SQL Server](https://support.microsoft.com/kb/822499)
+- KB 321185 : [Comment déterminer la version et l’édition de SQL Server et de ses composants](https://support.microsoft.com/kb/321185)
 
-### <a name="additional-resources"></a>Ressources supplémentaires
+## <a name="additional-resources"></a>Ressources supplémentaires
 
-  - [Site de l’équipe de conseil clientèle SQL](/archive/blogs/sqlcat/)
-  - [SQL Server DevCenter](../../sql-server/index.yml)
-  - [TechCenter SQL Server](../../sql-server/index.yml)
-  - [Centre d’information sur le produit SQL Server](https://www.microsoft.com/sqlserver/default.aspx)
-  - [Blog des builds SQL Server](https://sqlserverbuilds.blogspot.com/)
-  - [Blogs des versions de SQL Server](https://aka.ms/sqlreleases)
+- [Documentation SQL Server](../../sql-server/index.yml)
+- [Centre d’informations sur les produits SQL Server](https://www.microsoft.com/sqlserver/default.aspx)
+- [Blogs des versions de SQL Server](https://aka.ms/sqlreleases)
+- [Guide pratique pour déterminer la version, l’édition et le niveau de mise à jour de SQL Server et de ses composants](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)

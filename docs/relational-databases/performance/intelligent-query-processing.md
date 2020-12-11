@@ -5,23 +5,23 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+ms.openlocfilehash: d1171d4f3570c6bcfcf222043c5036de15c98241
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134867"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595140"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 La famille de fonctionnalités de traitement de requêtes intelligent inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation à entreprendre. 
 
@@ -40,8 +40,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 Le tableau suivant détaille toutes les fonctionnalités du traitement de requêtes intelligent ainsi que les exigences qui y sont associées pour le niveau de compatibilité de base de données.
 
-| **Fonctionnalité IQP** | **Pris en charge dans Azure SQL Database** | **Pris en charge dans SQL Server** |**Description** |
-| --- | --- | --- |--- |
+| **Fonctionnalité IQP** | **Pris en charge dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]** | **Pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Description** |
+| ---------------- | ------- | ------- | ---------------- |
 | [Jointures adaptatives (mode batch)](#batch-mode-adaptive-joins) | Oui, avec le niveau de compatibilité 140| Oui, à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] sous le niveau de compatibilité 140|Les jointures adaptatives sélectionnent dynamiquement un type de jointure lors de l’exécution en fonction des lignes d’entrée réelles.|
 | [Nombre approximatif distinct](#approximate-query-processing) | Oui| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Fournit un comptage distinct (COUNT DISTINCT) approximatif pour les scénarios Big Data avec les avantages de performances élevées et d’une faible empreinte mémoire. |
 | [Mode Batch sur Rowstore](#batch-mode-on-rowstore) | Oui, avec le niveau de compatibilité 150| Oui, à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] avec le niveau de compatibilité 150|Fournit un mode batch pour les charges de travail DW relationnelles utilisant le processeur de manière intensive sans nécessiter d’index columnstore.  | 
@@ -78,7 +78,7 @@ Si le retour d’allocation de mémoire est activé, pour la deuxième exécutio
 
 ### <a name="memory-grant-feedback-sizing"></a>Dimensionnement du retour d’allocation de mémoire
 Dans le cas d’une allocation de mémoire excessive, si la mémoire allouée est plus de deux fois supérieure à la taille de la mémoire réelle utilisée, le retour d’allocation de mémoire recalcule l’allocation de mémoire et met à jour le plan mis en cache. Les plans dont les allocations de mémoire sont inférieures à 1 Mo ne sont pas recalculés par rapport à d’éventuels dépassements.
-Dans le cas d’une allocation de mémoire dont la taille est insuffisante et qui entraîne un dépassement de capacité sur le disque pour les opérateurs en mode batch, le retour d’allocation de mémoire déclenche un nouveau calcul de l’allocation de mémoire. Les événements de dépassement de capacité sont signalés au retour d’allocation de mémoire et peuvent être exposés via l’événement xEvent *spilling_report_to_memory_grant_feedback* . Cet événement retourne l’ID de nœud du plan et la taille du dépassement de données de ce nœud.
+Dans le cas d’une allocation de mémoire dont la taille est insuffisante et qui entraîne un dépassement de capacité sur le disque pour les opérateurs en mode batch, le retour d’allocation de mémoire déclenche un nouveau calcul de l’allocation de mémoire. Les événements de dépassement de capacité sont signalés au retour d’allocation de mémoire et peuvent être exposés via l’événement xEvent *spilling_report_to_memory_grant_feedback*. Cet événement retourne l’ID de nœud du plan et la taille du dépassement de données de ce nœud.
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>Retour d’allocation de mémoire et scénarios sensibles aux paramètres
 Différentes valeurs de paramètre peuvent également nécessiter différents plans de requête pour maintenir une situation optimale. Ce type de requête est défini comme « sensible aux paramètres ». Pour les plans sensibles aux paramètres, le retour d’allocation de mémoire se désactive sur une requête si la mémoire requise est instable. Le plan est désactivé après plusieurs exécutions répétées de la requête et ce comportement peut être observé en surveillant l’événement xEvent *memory_grant_feedback_loop_disabled* XEvent. Pour plus d’informations sur la détection et la sensibilité des paramètres, reportez-vous au [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -88,7 +88,7 @@ Le retour peut être stocké dans le plan mis en cache pour une seule exécution
 Le retour n’est pas persistant si le plan est supprimé du cache. Le retour est également perdu en cas de basculement. Une instruction qui utilise `OPTION (RECOMPILE)` crée un plan et ne le met pas en cache. Parce qu’il n’est pas mis en cache, aucun retour d’allocation de mémoire n’est généré, et il n’est pas stocké pour cette compilation et l’exécution. Toutefois, si une instruction équivalente (autrement dit, avec le même hachage de requête) qui n’utilise **pas**`OPTION (RECOMPILE)` a été mise en cache, puis réexécutée, l’instruction consécutive peut bénéficier du retour d’allocation de mémoire.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>Suivi de l’activité du retour d’allocation de mémoire
-Vous pouvez suivre les événements du retour d’allocation de mémoire à l’aide de l’événement xEvent *memory_grant_updated_by_feedback* . Cet événement effectue le suivi de l’historique du nombre d’exécutions actuel, du nombre de fois que le plan a été mis à jour par le retour d’allocation de mémoire, de l’allocation de mémoire supplémentaire idéale avant modification et l’allocation de mémoire supplémentaire idéale après que le retour d’allocation de mémoire a modifié le plan mis en cache.
+Vous pouvez suivre les événements du retour d’allocation de mémoire à l’aide de l’événement xEvent *memory_grant_updated_by_feedback*. Cet événement effectue le suivi de l’historique du nombre d’exécutions actuel, du nombre de fois que le plan a été mis à jour par le retour d’allocation de mémoire, de l’allocation de mémoire supplémentaire idéale avant modification et l’allocation de mémoire supplémentaire idéale après que le retour d’allocation de mémoire a modifié le plan mis en cache.
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Retour d’allocation de mémoire, resource governor et indicateurs de requête
 La mémoire réelle allouée respecte la limite de mémoire de requête déterminée par l’indicateur de requête ou resource governor.
@@ -134,9 +134,9 @@ La rétroaction d’allocation de mémoire en mode ligne étend la fonctionnalit
 
 Pour activer la rétroaction d’allocation de mémoire en mode ligne dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
 
-L’activité de la rétroaction d’allocation de mémoire en mode ligne sera visible par le biais du XEvent **memory_grant_updated_by_feedback** . 
+L’activité de la rétroaction d’allocation de mémoire en mode ligne sera visible par le biais du XEvent **memory_grant_updated_by_feedback**. 
 
-Dans la rétroaction d’allocation de mémoire en mode ligne, deux nouveaux attributs de plan de requête sont affichés pour les plans post-exécution : ***IsMemoryGrantFeedbackAdjusted*** et ***LastRequestedMemory*** , qui sont ajoutés à l’élément XML de plan de requête *MemoryGrantInfo* . 
+Avec la rétroaction d’allocation de mémoire en mode ligne, deux nouveaux attributs de plan de requête apparaissent pour les plans réels après exécution : **_IsMemoryGrantFeedbackAdjusted_* _ et _*_LastRequestedMemory_*_, ajoutés à l’élément XML du plan de requête _MemoryGrantInfo*. 
 
 *LastRequestedMemory* indique la mémoire allouée en kilo-octets (Ko) à partir de l’exécution de la requête précédente. L’attribut *IsMemoryGrantFeedbackAdjusted* permet de vérifier l’état de la rétroaction d’allocation de mémoire de l’instruction au sein d’un plan d’exécution de requête réel. Les valeurs affichées dans cet attribut sont les suivantes :
 
@@ -215,8 +215,8 @@ Vous pouvez voir les attributs d’utilisation dans le plan d’exécution de re
 
 | Attribut de plan d'exécution | Description |
 | --- | --- |
-| ContainsInterleavedExecutionCandidates | S’applique au nœud *QueryPlan* . Quand la valeur est *true* , cela signifie que le plan contient des candidats pour l’exécution entrelacée. |
-| IsInterleavedExecuted | Attribut de l’élément *RuntimeInformation* sous le RelOp pour le nœud TVF. Quand la valeur est *true* , cela signifie que l’opération a été matérialisée dans le cadre d’une opération d’exécution entrelacée. |
+| ContainsInterleavedExecutionCandidates | S’applique au nœud *QueryPlan*. Quand la valeur est *true*, cela signifie que le plan contient des candidats pour l’exécution entrelacée. |
+| IsInterleavedExecuted | Attribut de l’élément *RuntimeInformation* sous le RelOp pour le nœud TVF. Quand la valeur est *true*, cela signifie que l’opération a été matérialisée dans le cadre d’une opération d’exécution entrelacée. |
 
 Vous pouvez également suivre les occurrences d’exécution entrelacée via les événements xEvent suivants :
 
@@ -289,7 +289,7 @@ Pour permettre la compilation différée des variables de table, définissez le 
 
 La compilation différée de variables de table **ne** modifie aucune autre caractéristique des variables de table. Par exemple, cette fonctionnalité n’ajoute pas de statistiques de colonnes aux variables de table.
 
-La compilation différée de variables de table **n’augmente pas la fréquence des recompilations** . Au lieu de cela, elle se positionne là où la compilation initiale se produit. Le plan mis en cache obtenu est généré en fonction du nombre de lignes de variable de table dans la compilation différée initiale. Le plan mis en cache est réutilisé par des requêtes consécutives. Et ce, jusqu’à ce que le plan soit supprimé ou recompilé. 
+La compilation différée de variables de table **n’augmente pas la fréquence des recompilations**. Au lieu de cela, elle se positionne là où la compilation initiale se produit. Le plan mis en cache obtenu est généré en fonction du nombre de lignes de variable de table dans la compilation différée initiale. Le plan mis en cache est réutilisé par des requêtes consécutives. Et ce, jusqu’à ce que le plan soit supprimé ou recompilé. 
 
 Le nombre de lignes de variable de table utilisé pour la compilation du plan initial représente une valeur type très différente d’une estimation du nombre de lignes fixe. S’il est différent, les opérations en aval en bénéficieront. Si le nombre de lignes de variable de table varie de manière significative entre les exécutions, il est possible que cette fonctionnalité n’améliore pas les performances.
 
@@ -319,14 +319,14 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT  O_OrderKey,
+SELECT O_OrderKey,
     O_CustKey,
     O_OrderStatus,
     L_QUANTITY
 FROM    
     ORDERS,
     @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
+WHERE    O_ORDERKEY    =    L_ORDERKEY
     AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
@@ -356,7 +356,7 @@ Le mode batch sur rowstore permet l’exécution en mode batch des charges de tr
 ### <a name="background"></a>Arrière-plan
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a introduit une nouvelle fonctionnalité pour accélérer les charges de travail analytiques : les index columnstore. Nous avons étendu les cas d’utilisation et amélioré les performances des index columnstore dans chaque version suivante. Jusqu’à présent, nous avons présenté et documenté toutes ces fonctionnalités sous la forme d’une fonctionnalité unique. Vous créez des index columnstore sur vos tables. Et votre charge de travail analytique s’exécute plus rapidement. Toutefois, il existe deux jeux de technologies connexes mais distincts :
 - Les index **ColumnStore** permettent aux requêtes analytiques d’accéder uniquement aux données dans les colonnes nécessaires. La compression de page au format columnstore est aussi plus efficace que la compression dans des index **rowstore** traditionnels. 
-- Avec le traitement **en mode batch** , les opérateurs de requête traitent les données plus efficacement. Ils travaillent sur un lot de lignes au lieu d’une ligne à la fois. Plusieurs autres améliorations d’évolutivité sont liées au traitement en mode Batch. Pour plus d’informations sur le mode batch, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
+- Avec le traitement **en mode batch**, les opérateurs de requête traitent les données plus efficacement. Ils travaillent sur un lot de lignes au lieu d’une ligne à la fois. Plusieurs autres améliorations d’évolutivité sont liées au traitement en mode Batch. Pour plus d’informations sur le mode batch, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
 Les deux ensembles de fonctionnalités interagissent pour améliorer les E/S (entrées/sorties) et l’utilisation du processeur :
 - En utilisant des index columnstore, une plus grande quantité de vos données s’intègre dans la mémoire. Cela réduit la charge de travail d’E/S.
@@ -370,7 +370,7 @@ Il est toutefois important de comprendre que les deux fonctionnalités sont ind�
 
 Vous obtenez généralement les meilleurs résultats lorsque vous utilisez les deux fonctionnalités ensemble. Donc, jusqu’à présent, l’optimiseur de requête SQL Server ne prenait en compte le traitement en mode batch que pour les requêtes impliquant au moins une table avec un index columnstore.
 
-Les index columnstore ne sont peut-être pas appropriés pour certaines applications. Une application peut utiliser une autre fonctionnalité qui n’est pas pris en charge avec des index columnstore. Par exemple, les modifications sur place ne sont pas compatibles avec la compression columnstore. Les déclencheurs ne sont donc pas pris en charge sur les tables avec des index columnstore en cluster. Plus important encore, les index columnstore ajoutent une surcharge aux instructions **DELETE** et **UPDATE** . 
+Les index columnstore ne sont peut-être pas appropriés pour certaines applications. Une application peut utiliser une autre fonctionnalité qui n’est pas pris en charge avec des index columnstore. Par exemple, les modifications sur place ne sont pas compatibles avec la compression columnstore. Les déclencheurs ne sont donc pas pris en charge sur les tables avec des index columnstore en cluster. Plus important encore, les index columnstore ajoutent une surcharge aux instructions **DELETE** et **UPDATE**. 
 
 Pour certaines charges de travail transactionnelles-analytiques hybrides, la surcharge d’une charge de travail transactionnelle l’emporte sur les avantages liés à l’utilisation des index columnstore. De tels scénarios peuvent bénéficier d’une utilisation améliorée du processeur via un traitement en mode batch uniquement. C’est la raison pour laquelle la fonctionnalité Mode batch sur rowstore prend en compte le mode batch pour toutes les requêtes, quel que soit le type d’index concerné.
 
@@ -391,7 +391,6 @@ Définissez le niveau de compatibilité de la base de données à 150. Aucun au
 Même si une requête n’accède à aucune table avec des index columnstore, le processeur de requêtes détermine l’utilisation ou non du mode batch à l’aide d’informations heuristiques. Les données heuristiques sont constituées de ces vérifications :
 1. Une vérification initiale des tailles de la table, des opérateurs utilisés et des cardinalités estimées dans la requête d’entrée.
 2. Des points de contrôle supplémentaires, lorsque l’optimiseur détecte des plans nouveaux et à moindre coût pour la requête. Si ces autres plans n’utilisent pas le mode Batch de manière significative, l’optimiseur cesse d’explorer les alternatives du mode Batch.
-
 
 Si le mode Batch sur rowstore est utilisé, vous voyez le mode d’exécution réel en tant que **mode Batch** dans le plan de requête. L’opérateur d’analyse utilise le mode Batch pour les segments de mémoire sur disque et les index B-tree. Cette analyse en mode Batch peut évaluer les filtres de bitmap du mode Batch. Vous pouvez également voir d’autres opérateurs en mode Batch dans le plan. Par exemple, les jonctions de hachage, les agrégats basés sur le hachage, les tris, les agrégats de fenêtre, les filtres, la concaténation et les opérateurs scalaires de calcul.
 
@@ -420,7 +419,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
 
-Vous pouvez désactiver le mode Batch sur rowstore via la configuration au niveau de la base de données. Mais vous pouvez toujours remplacer le paramètre au niveau de la requête à l’aide de l’indicateur de requête **ALLOW_BATCH_MODE** . L’exemple suivant active le mode Batch sur rowstore même avec la fonctionnalité désactivée via la configuration limitée à la base de données :
+Vous pouvez désactiver le mode Batch sur rowstore via la configuration au niveau de la base de données. Mais vous pouvez toujours remplacer le paramètre au niveau de la requête à l’aide de l’indicateur de requête **ALLOW_BATCH_MODE**. L’exemple suivant active le mode Batch sur rowstore même avec la fonctionnalité désactivée via la configuration limitée à la base de données :
 
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
@@ -431,7 +430,7 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
 
-Vous pouvez aussi désactiver le mode Batch sur rowstore pour une requête spécifique à l’aide de l’indicateur de requête **DISALLOW_BATCH_MODE** . Voir l’exemple suivant :
+Vous pouvez aussi désactiver le mode Batch sur rowstore pour une requête spécifique à l’aide de l’indicateur de requête **DISALLOW_BATCH_MODE**. Voir l’exemple suivant :
 
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER

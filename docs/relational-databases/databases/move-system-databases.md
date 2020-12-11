@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195006"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523058"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92195006"
 >  Si vous déplacez une base de données système et que vous recréez ultérieurement la base de données master, vous devez redéplacer la base de données système car l'opération de recréation installe toutes les bases de données système à leur emplacement par défaut.  
 
 > [!IMPORTANT]  
->  Après le déplacement de fichiers, le compte de service [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] doit être autorisé à accéder aux fichiers dans le nouvel emplacement de dossier du fichier.
+>  Une fois les fichiers déplacés, le compte de service [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] doit être autorisé à y accéder dans le nouvel emplacement de dossier de fichiers. Pour plus d’informations, consultez [Configuration des autorisations du système de fichiers pour l’accès au moteur de base de données](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Procédure de réadressage planifié et de maintenance de disque planifiée  
@@ -145,7 +145,7 @@ ms.locfileid: "92195006"
 ##  <a name="moving-the-master-database"></a><a name="master"></a> Déplacement de la base de données master  
  Pour déplacer la base de données master, procédez comme suit.  
   
-1.  Dans le menu **Démarrer** , pointez successivement sur **Tous les programmes**, sur **Microsoft SQL Server**et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
+1.  Dans le menu **Démarrer** , pointez successivement sur **Tous les programmes**, sur **Microsoft SQL Server** et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
 2.  Dans le nœud **Services SQL Server** , cliquez avec le bouton droit sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, **SQL Server (MSSQLSERVER)** ), puis cliquez sur **Propriétés**.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116277"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523048"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -120,9 +120,9 @@ Le paramètre DATA permet de spécifier les données utilisées pour calculer le
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> L’argument `RUNTIME = ONNX` n’est disponible que dans [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) et [Azure SQL Edge](/azure/sql-database-edge/onnx-overview).
+> L’argument `RUNTIME = ONNX` n’est disponible que dans [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview), [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) et [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is).
 
-Indique le moteur d’apprentissage automatique utilisé pour l’exécution du modèle. La valeur du paramètre `RUNTIME` est toujours `ONNX`. Le paramètre est requis pour Azure SQL Edge. Dans Azure SQL Managed Instance, le paramètre est facultatif et utilisé uniquement lors de l’utilisation de modèles ONNX.
+Indique le moteur d’apprentissage automatique utilisé pour l’exécution du modèle. La valeur du paramètre `RUNTIME` est toujours `ONNX`. Le paramètre est obligatoire pour Azure SQL Edge et Azure Synapse Analytics. Dans Azure SQL Managed Instance, le paramètre est facultatif et utilisé uniquement lors de l’utilisation de modèles ONNX.
 
 **WITH ( <result_set_definition> )**
 
@@ -186,7 +186,7 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,6 +216,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 Un cas d’usage courant pour la prédiction consiste à calculer un score pour les données d’entrée, puis à insérer les valeurs prédites dans une table. L’exemple suivant suppose que l’application appelante utilise une procédure stockée pour insérer une ligne contenant la valeur prédite dans une table :
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -223,6 +225,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - Les résultats de `PREDICT` sont stockés dans une table appelée PredictionResults. 
 - Le modèle est stocké en tant que colonne `varbinary(max)` dans l’appel de table **Models**. Des informations supplémentaires telles que l’ID et la description sont enregistrées dans la table pour identifier le modèle.

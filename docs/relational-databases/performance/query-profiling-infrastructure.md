@@ -4,7 +4,7 @@ description: Découvrez comment le moteur de base de données SQL Server accède
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 125a95f14f7082a3ed806d6dfa7fcb05b6d11c81
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890770"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505068"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastructure du profilage de requête
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ L’*infrastructure de profil de statistiques d’exécution de requête*, ou pr
 
 Les méthodes suivantes de collecte globale d’informations sur les plans d’exécution pour **toutes les sessions** tirent parti de l’infrastructure de profilage standard :
 
--  L’événement étendu ***query_post_execution_showplan***. Pour activer les événements étendus, consultez [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
-- L’événement de trace **Showplan XML** dans [Trace SQL](../../relational-databases/sql-trace/sql-trace.md) et [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Pour plus d’informations sur cet événement de trace, consultez [Classe d’événements Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md).
+-  L’événement étendu **_query_post_execution_showplan_* _. Pour activer les événements étendus, consultez [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+- L’événement de trace _ *Showplan XML** dans [Trace SQL](../../relational-databases/sql-trace/sql-trace.md) et [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Pour plus d’informations sur cet événement de trace, consultez [Classe d’événements Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md).
 
 Lors de l’exécution d’une session d’événements étendus qui utilise l’événement *query_post_execution_showplan*, la vue de gestion dynamique [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) est également renseignée, ce qui active les statistiques des requêtes actives pour tous les sessions, à l’aide du [Moniteur d’activité](../../relational-databases/performance-monitor/activity-monitor.md) ou par interrogation directe de la vue de gestion dynamique. Pour plus d’informations, voir [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
@@ -64,7 +64,7 @@ Lors de l’exécution d’une session d’événements étendus qui utilise l�
   
 À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la surcharge de performances liée à la collecte des informations sur les plans d’exécution a été réduite avec l’introduction du profilage léger. Contrairement au profilage standard, le profilage léger ne collecte pas d’informations sur l’exécution de l’UC. Toutefois, le profilage léger collecte toujours les informations sur le nombre de lignes et l’utilisation des E/S.
 
-Un nouvel événement étendu ***query_thread_profile*** reposant sur le profilage léger a également été introduit. Cet événement étendu expose les statistiques d’exécution par opérateur, ce qui permet de bénéficier d’insights supplémentaires sur les performances de chaque nœud et chaque thread. Un exemple de session utilisant cet événement étendu peut être configuré comme dans l’exemple ci-dessous :
+Un nouvel événement étendu **_query_thread_profile_* _ reposant sur le profilage léger a également été introduit. Cet événement étendu expose les statistiques d’exécution par opérateur, ce qui permet de bénéficier d’insights supplémentaires sur les performances de chaque nœud et chaque thread. Un exemple de session utilisant cet événement étendu peut être configuré comme dans l’exemple ci-dessous :
 
 ```sql
 CREATE EVENT SESSION [NodePerfStats] ON SERVER
@@ -86,7 +86,7 @@ WITH (MAX_MEMORY=4096 KB,
 > [!NOTE]
 > Pour plus d’informations sur la surcharge de performances liée au profilage de requête, consultez le billet de blog [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere). 
 
-Lors de l’exécution d’une session d’événements étendus qui utilise l’événement *query_thread_profile*, la vue de gestion dynamique [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) est également renseignée à l’aide du profilage léger, ce qui active les statistiques des requêtes actives pour tous les sessions, à l’aide du [Moniteur d’activité](../../relational-databases/performance-monitor/activity-monitor.md) ou par interrogation directe de la vue de gestion dynamique.
+Lors de l’exécution d’une session d’événements étendus qui utilise l’événement _query_thread_profile*, la vue de gestion dynamique [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) est également renseignée à l’aide du profilage léger. Les statistiques des requêtes en direct sont ainsi activées pour toutes les sessions, à l’aide du [Moniteur d’activité](../../relational-databases/performance-monitor/activity-monitor.md) ou en interrogeant directement la vue de gestion dynamique.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infrastructure légère de profilage des statistiques sur l’exécution des requêtes v2
 
@@ -94,7 +94,7 @@ Lors de l’exécution d’une session d’événements étendus qui utilise l�
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 inclut une version révisée du profilage léger avec une surcharge minimale. Vous pouvez aussi activer le profilage léger de manière globale à l’aide de l’[indicateur de trace 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) pour les versions mentionnées ci-dessus dans *S’applique à*. Une nouvelle fonction de gestion dynamique [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) a été introduite afin de retourner le plan d’exécution de requête pour les requêtes en cours.
 
-À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, si le profilage léger n’est pas activé globalement, le nouvel argument d’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)**QUERY_PLAN_PROFILE** peut être utilisé pour activer le profilage léger au niveau de la requête, pour toute session. Quand une requête qui contient ce nouvel indicateur se termine, un nouvel événement étendu ***query_plan_profile*** est également généré. Il fournit du code XML de plan d’exécution réel semblable à l’événement étendu *query_post_execution_showplan*. 
+À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, si le profilage léger n’est pas activé globalement, le nouvel argument d’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)**QUERY_PLAN_PROFILE** peut être utilisé pour activer le profilage léger au niveau de la requête, pour toute session. Quand une requête contenant ce nouvel indicateur se termine, un nouvel événement étendu **_query_plan_profile_* _ est également généré. Il fournit le code XML d’un plan d’exécution réel semblable à l’événement étendu _query_post_execution_showplan*. 
 
 > [!NOTE]
 > L’événement étendu *query_plan_profile* s’appuie également sur le profilage léger même si l’indicateur de requête n’est pas utilisé. 

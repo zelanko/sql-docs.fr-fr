@@ -26,12 +26,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f90d94a11b4e026082bd3be9f25cc7ad7246df9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5802f6e2a078a50797579f2c03079802be5c097
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006662"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443049"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importation et exportation en bloc de données (SQL Server)
 
@@ -40,7 +40,7 @@ ms.locfileid: "86006662"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’exportation en bloc de données (*données en bloc*) à partir d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une vue non partitionnée.
 
 - L'*exportation en bloc* consiste à copier des données d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données.
-- Le terme*importation en bloc* fait référence au chargement de données d’un fichier de données vers une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, vous pouvez exporter des données d'une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel vers un fichier de données, puis importer en bloc ces données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+- Le terme *importation en bloc* fait référence au chargement de données d’un fichier de données vers une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, vous pouvez exporter des données d'une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel vers un fichier de données, puis importer en bloc ces données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ## <a name="methods-for-bulk-importing-and-exporting-data"></a><a name="MethodsForBuliIE"></a> Méthodes pour l’importation et l’exportation de données en bloc
 
@@ -57,7 +57,7 @@ ms.locfileid: "86006662"
 > Pour découvrir les règles liées à l’utilisation d’un fichier de valeurs séparées par des virgules (CSV) comme fichier de données pour une importation en bloc de données dans SQL Server, consultez [ (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
 > [!NOTE]
-> Seul l’utilitaire bcp est pris en charge par Azure SQL Data Warehouse pour l’importation et l’exportation des fichiers délimités.
+> Seul l’utilitaire BCP est pris en charge par Azure Synapse Analytics pour l’importation et l’exportation de fichiers délimités.
 
 ## <a name="format-files"></a><a name="FFs"></a> Fichiers de format
 
