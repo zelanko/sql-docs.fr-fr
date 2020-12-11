@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_process_memory (Transact-SQL)
-title: sys. dm_os_process_memory (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_process_memory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4234894d907a383902a00a659e954ccfea2ff74c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a60651016355dcf6b78a514a4b4ee3b523c9136
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325485"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   La plupart des allocations de mémoire qui sont attribuées à l'espace du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont contrôlées par le biais d'interfaces qui permettent le suivi et la comptabilité de ces allocations. Toutefois, les allocations de mémoire peuvent être effectuées dans l'espace d'adressage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ignore les routines de gestion de la mémoire interne. Les valeurs sont obtenues par le biais d'appels au système d'exploitation de base. Elles ne sont pas manipulées par des méthodes internes à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sauf lorsqu’elles s’adaptent aux allocations de pages verrouillées ou volumineuses.  
   
- Toutes les valeurs retournées qui indiquent des tailles de mémoire sont affichées en kilo-octets (Ko). La **total_virtual_address_space_reserved_kb** de colonne est un doublon de **virtual_memory_in_bytes** à partir de **sys. dm_os_sys_info**.  
+ Toutes les valeurs retournées qui indiquent des tailles de mémoire sont affichées en kilo-octets (Ko). La **total_virtual_address_space_reserved_kb** de colonne est un doublon de **virtual_memory_in_bytes** à partir d' **sys.dm_os_sys_info**.  
   
  Le tableau suivant fournit une illustration complète de l'espace d'adressage de processus.  
   
 > [!NOTE]  
->  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_process_memory**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_os_process_memory**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539306"
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite l'autorisation VIEW SERVER STATE sur le serveur.  
   
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_tran_transactions_snapshot (Transact-SQL)
-title: sys. dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs
+title: sys.dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb750ba886aeddc9871e9b3fdbc6d020b9839079
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b7ecd301c08127e4fdc8dbec923961f397006964
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333093"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89546439"
   
 -   Identifier les modifications de données qui sont ignorées par une transaction d'instantané spécifique. Pour une transaction qui est active lorsqu'une transaction d'instantané démarre, toutes les modifications de données effectuées par cette transaction (même après sa validation) sont ignorées par la transaction d'instantané.  
   
- Par exemple, considérez la sortie suivante de **sys. dm_tran_transactions_snapshot**:  
+ Par exemple, considérez la sortie suivante de **sys.dm_tran_transactions_snapshot**:  
   
 ```  
 transaction_sequence_num snapshot_id snapshot_sequence_num  
@@ -70,10 +70,10 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
   
 ## <a name="remarks"></a>Notes  
- Lorsqu'une transaction d'instantané démarre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] enregistre toutes les transactions qui sont actives à ce moment précis. **sys. dm_tran_transactions_snapshot** signale ces informations pour toutes les transactions d’instantanés actives.  
+ Lorsqu'une transaction d'instantané démarre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] enregistre toutes les transactions qui sont actives à ce moment précis. **sys.dm_tran_transactions_snapshot** signale ces informations pour toutes les transactions d’instantanés actives.  
   
  Chaque transaction est identifiée par un numéro de séquence qui lui est affecté au moment où elle commence. Les transactions commencent au moment où une instruction BEGIN TRANSACTION ou BEGIN WORK est exécutée. Toutefois, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'attribue le numéro de séquence de la transaction que lors de l'exécution de la première instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui accède aux données suite à l'instruction BEGIN TRANSACTION ou BEGIN WORK. Les numéros de séquence des transactions sont incrémentés d'une unité à la fois.  
   

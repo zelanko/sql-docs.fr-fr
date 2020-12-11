@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_resource_semaphores (Transact-SQL)
-title: sys. dm_exec_query_resource_semaphores (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_resource_semaphores (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,24 +21,24 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d782c81ce803441e91d6008ae5b0117522c3286
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8c04104f41631e57a277c339151157353d0d830
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330928"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Retourne les informations relatives à l'état actuel du sémaphore de ressource de requête dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sys. dm_exec_query_resource_semaphores** fournit l’état général de la mémoire d’exécution des requêtes et vous permet de déterminer si le système peut accéder à suffisamment de mémoire. Cette vue complète les informations de mémoire obtenues à partir de [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) pour fournir une image complète de l’état de la mémoire du serveur. **sys. dm_exec_query_resource_semaphores** retourne une ligne pour le sémaphore de ressource ordinaire et une autre ligne pour le sémaphore de ressource de petite requête. Deux conditions sont requises pour un sémaphore de petite requête :  
+  Retourne les informations relatives à l'état actuel du sémaphore de ressource de requête dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sys.dm_exec_query_resource_semaphores** fournit l’état général de la mémoire d’exécution des requêtes et vous permet de déterminer si le système peut accéder à suffisamment de mémoire. Cette vue complète les informations de mémoire obtenues à partir de [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) pour fournir une image complète de l’état de la mémoire du serveur. **sys.dm_exec_query_resource_semaphores** retourne une ligne pour le sémaphore de ressource ordinaire et une autre ligne pour le sémaphore de ressource de petite requête. Deux conditions sont requises pour un sémaphore de petite requête :  
   
 -   L’allocation de mémoire demandée doit être inférieure à 5 Mo  
   
 -   Le coût de la requête doit être inférieur à 3 unités de coût  
   
 > [!NOTE]  
->  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_exec_query_resource_semaphores**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_exec_query_resource_semaphores**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -59,12 +59,12 @@ ms.locfileid: "89548529"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
   
 ## <a name="remarks"></a>Notes  
  Les requêtes qui utilisent des vues de gestion dynamiques qui incluent ORDER BY ou des fonctions d'agrégation peuvent accroître la consommation de mémoire et par conséquent contribuer au problème qu'elles tentent de résoudre.  
   
- Utilisez **sys. dm_exec_query_resource_semaphores** pour la résolution des problèmes, mais ne l’incluez pas dans les applications qui utiliseront les futures versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Utilisez **sys.dm_exec_query_resource_semaphores** pour la résolution des problèmes, mais ne l’incluez pas dans les applications qui utiliseront les futures versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  La fonctionnalité Gouverneur de ressources permet à un administrateur de base de données de répartir des ressources serveur entre plusieurs pools de ressources (64 pools au maximum). Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions ultérieures, chaque pool se comporte comme une petite instance de serveur indépendante et requiert 2 sémaphores.  
   

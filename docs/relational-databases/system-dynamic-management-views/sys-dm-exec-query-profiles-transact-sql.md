@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_query_profiles (Transact-SQL)
-title: sys. dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b761064191f26a05d565e673428221afb4805b1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 332b554797282510463ae3ec837fb00256db31b3
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548589"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330890"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,7 +41,7 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |session_id|**smallint**|Identifie la session dans laquelle cette requête s'exécute. Référence dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifie la demande cible. Référence dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Référence dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot exécuté et dont le plan réside dans le cache du plan, ou qui est en cours d’exécution. Référence dm_exec_query_stats. plan_handle.|  
+|plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot exécuté et dont le plan réside dans le cache du plan, ou qui est en cours d’exécution. Fait référence à dm_exec_query_stats. plan_handle.|  
 |physical_operator_name|**nvarchar (256)**|Nom de l'opérateur physique.|  
 |node_id|**int**|Identifie un nœud d'opérateur dans l'arborescence de requête.|  
 |thread_id|**int**|Fait la distinction entre les threads (pour une requête parallèle) qui appartiennent au même nœud d'opérateur de requête.|  
@@ -91,7 +91,7 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et Azure SQL Managed instance, requiert `VIEW DATABASE STATE` l’autorisation et l’appartenance du `db_owner` rôle de base de données.   
-Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] les objectifs de service SQL Database de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
    
 ## <a name="examples"></a>Exemples  
  Étape 1 : Connectez-vous à une session dans laquelle vous envisagez d’exécuter la requête que vous allez analyser avec `sys.dm_exec_query_profiles` . Pour configurer la requête pour le profilage `SET STATISTICS PROFILE ON` , utilisez. Exécutez votre requête dans la même session.  

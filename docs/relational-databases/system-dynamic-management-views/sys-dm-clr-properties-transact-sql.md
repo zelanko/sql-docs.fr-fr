@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_properties (Transact-SQL)
-title: sys. dm_clr_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f966cbb5570eb1efb2068d7796ccecb4463750
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e313b3e873fbd59a53306475d0641ddbe5566703
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551289"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330027"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
-  Renvoie une ligne pour chaque propriété relative à l'intégration du CLR (Common Language Runtime) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comprenant la version et l'état du CLR hébergé. Le CLR hébergé est initialisé en exécutant les instructions [Create Assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER assembly](../../t-sql/statements/alter-assembly-transact-sql.md)ou [Drop assembly](../../t-sql/statements/drop-assembly-transact-sql.md) , ou en exécutant une routine, un type ou un déclencheur CLR. La vue **sys. dm_clr_properties** ne spécifie pas si l’exécution du code CLR utilisateur a été activée sur le serveur. L’exécution du code CLR utilisateur est activée à l’aide de la procédure stockée [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) avec l’option [CLR activée](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) définie sur 1.  
+  Renvoie une ligne pour chaque propriété relative à l'intégration du CLR (Common Language Runtime) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comprenant la version et l'état du CLR hébergé. Le CLR hébergé est initialisé en exécutant les instructions [Create Assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER assembly](../../t-sql/statements/alter-assembly-transact-sql.md)ou [Drop assembly](../../t-sql/statements/drop-assembly-transact-sql.md) , ou en exécutant une routine, un type ou un déclencheur CLR. La vue de **sys.dm_clr_properties** ne spécifie pas si l’exécution du code CLR utilisateur a été activée sur le serveur. L’exécution du code CLR utilisateur est activée à l’aide de la procédure stockée [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) avec l’option [CLR activée](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) définie sur 1.  
   
- La vue **sys. dm_clr_properties** contient les colonnes **Name** et **value** . Chaque ligne de cette vue fournit des détails sur une propriété du CLR hébergé. Utilisez cette vue pour recueillir des informations sur le CLR hébergé, telles que le répertoire d'installation du CLR, sa version ou encore son état actuel. Cette vue peut vous aider à déterminer que le code d'intégration CLR ne fonctionne pas en raison de problèmes d'installation du CLR sur le serveur.  
+ La vue **sys.dm_clr_properties** contient les colonnes **Name** et **value** . Chaque ligne de cette vue fournit des détails sur une propriété du CLR hébergé. Utilisez cette vue pour recueillir des informations sur le CLR hébergé, telles que le répertoire d'installation du CLR, sa version ou encore son état actuel. Cette vue peut vous aider à déterminer que le code d'intégration CLR ne fonctionne pas en raison de problèmes d'installation du CLR sur le serveur.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "89551289"
   
  La propriété **version** indique la version du .NET Framework et du CLR hébergé sur le serveur.  
   
- La vue de gestion dynamique **sys. dm_clr_properties** peut retourner six valeurs différentes pour la propriété **State** , qui reflète l’état du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hébergé. Les voici :  
+ La **sys.dm_clr_properties** vue managée dynamique peut retourner six valeurs différentes pour la propriété **State** , qui reflète l’état du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hébergé. Il s'agit des éléments suivants :  
   
 -   Mscoree is not loaded.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "89551289"
 ## <a name="permissions"></a>Autorisations  
   
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
 
 ## <a name="examples"></a>Exemples  
  L'exemple suivant récupère des informations sur le CLR hébergé :  

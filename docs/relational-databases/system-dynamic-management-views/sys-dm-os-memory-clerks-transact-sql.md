@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_memory_clerks (Transact-SQL)
-title: sys. dm_os_memory_clerks (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_memory_clerks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f5841aab34fbea23d3933f918c2ab9298594c81
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 91900dc582246c7af67ca13ff49b465b48599b5d
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326954"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89550256"
   Renvoie l'ensemble de tous les régisseurs de mémoire actuellement actifs dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_memory_clerks**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_os_memory_clerks**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,14 +51,14 @@ ms.locfileid: "89550256"
 |**shared_memory_reserved_kb**|**bigint**|Spécifie la quantité de mémoire partagée qui est réservée par un régisseur de mémoire. Il s'agit de la quantité de mémoire réservée à l'usage de la mémoire partagée et du mappage de fichiers. N'accepte pas la valeur NULL.|  
 |**shared_memory_committed_kb**|**bigint**|Spécifie la quantité de mémoire partagée qui est validée par le régisseur de mémoire. N'accepte pas la valeur NULL.|  
 |**page_size_in_bytes**|**bigint**|Spécifie la granularité de l'allocation de page pour ce régisseur de mémoire. N'accepte pas la valeur NULL.|  
-|**page_allocator_address**|**varbinary (8)**|Spécifie l'adresse de l'allocateur de page mémoire. Cette adresse est unique pour un régisseur de mémoire et peut être utilisée dans **sys. dm_os_memory_objects** pour localiser des objets mémoire qui sont liés à ce Clerk. N'accepte pas la valeur NULL.|  
-|**host_address**|**varbinary (8)**|Spécifie l'adresse mémoire de l'hôte associé à ce régisseur de mémoire. Pour plus d’informations, consultez [sys. dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Les composants, tels que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, accèdent aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ressources mémoire par le biais de l’interface hôte.<br /><br /> 0x00000000 = Le régisseur de mémoire appartient à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> N'accepte pas la valeur NULL.|  
+|**page_allocator_address**|**varbinary (8)**|Spécifie l'adresse de l'allocateur de page mémoire. Cette adresse est unique pour un régisseur de mémoire et peut être utilisée dans **sys.dm_os_memory_objects** pour localiser des objets mémoire qui sont liés à ce Clerk. N'accepte pas la valeur NULL.|  
+|**host_address**|**varbinary (8)**|Spécifie l'adresse mémoire de l'hôte associé à ce régisseur de mémoire. Pour plus d’informations, consultez [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Les composants, tels que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, accèdent aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ressources mémoire par le biais de l’interface hôte.<br /><br /> 0x00000000 = Le régisseur de mémoire appartient à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> N'accepte pas la valeur NULL.|  
 |**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations 
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
   
 ## <a name="remarks"></a>Notes  
  Le gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se compose d'une hiérarchie à trois niveaux. La base de la hiérarchie est constituée par les nœuds de mémoire. Le niveau intermédiaire est constitué de régisseurs de mémoire, de caches mémoire et de pools de mémoires. Le niveau supérieur comprend les objets de mémoire. Ces objets sont généralement utilisés pour allouer de la mémoire dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -69,10 +69,10 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
 
  [SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   
 

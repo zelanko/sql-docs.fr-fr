@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_latch_stats (Transact-SQL)
-title: sys. dm_os_latch_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e4e29a7e416a5c3aebb109c871af00bbd31871a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: abb813e008fdf00e7094ce59000f07be8da6bf25
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548520"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321948"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548520"
 Retourne des informations sur toutes les attentes de verrou interne, organisées par classe. 
   
 > [!NOTE]  
-> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_latch_stats**.  
+> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_os_latch_stats**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +44,7 @@ Retourne des informations sur toutes les attentes de verrou interne, organisées
   
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
   
 ## <a name="remarks"></a>Notes  
  sys.dm_os_latch_stats peut être utilisé pour identifier l'origine d'une contention de verrouillage en examinant le nombre d'attentes et les temps d'attente relatifs pour les différentes classes de verrous internes. Dans certaines situations, vous pouvez être en mesure de résoudre ou de réduire les problèmes de contention de verrouillage. Il peut toutefois arriver que vous soyez obligé de contacter le Support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
@@ -101,7 +101,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Verrous utilisés pour synchroniser les opérations de sauvegarde différentielle avec DBCC.|  
 |BACKUP_OPERATION|Verrous utilisés pour la synchronisation de la structure interne des données dans une opération de sauvegarde (de base de données, de journal ou de fichiers).|  
 |BACKUP_FILE_HANDLE|Verrous utilisés pour synchroniser les opérations d'ouverture de fichier pendant une opération de restauration.|  
-|BUFFER|Verrous utilisés pour synchroniser l'accès à court terme aux pages de base de données. Un verrou de mémoire tampon est nécessaire avant la lecture ou la modification d'une page de base de données. Une contention de verrou de ce type peut indiquer plusieurs problèmes, notamment des pages sensibles et des E/S lentes.<br /><br /> Cette classe de verrous englobe toutes les utilisations possibles des verrous de page. sys. dm_os_wait_stats fait la différence entre les attentes de verrous de page provoquées par des opérations d’e/s et des opérations de lecture et d’écriture sur la page.|  
+|BUFFER|Verrous utilisés pour synchroniser l'accès à court terme aux pages de base de données. Un verrou de mémoire tampon est nécessaire avant la lecture ou la modification d'une page de base de données. Une contention de verrou de ce type peut indiquer plusieurs problèmes, notamment des pages sensibles et des E/S lentes.<br /><br /> Cette classe de verrous englobe toutes les utilisations possibles des verrous de page. sys.dm_os_wait_stats fait une différence entre les attentes de verrous de page provoquées par des opérations d’e/s et des opérations de lecture et d’écriture sur la page.|  
 |BUFFER_POOL_GROW|Verrous utilisés pour la synchronisation du gestionnaire de mémoires tampons interne pendant les opérations de développement du pool de mémoires tampons.|  
 |DATABASE_CHECKPOINT|Verrous utilisés pour sérialiser les points de contrôle dans une base de données.|  
 |CLR_PROCEDURE_HASHTABLE|À usage interne uniquement|  

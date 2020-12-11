@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_buffer_descriptors (Transact-SQL)
-title: sys. dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe2641c33169e094b5e3cf5ae49a36508f5d4d00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c778e2e2ccc1d54a6a61110457ce6a2b0756920e
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539395"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322069"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89539395"
   
  Lorsqu'une page de données est lue à partir du disque, cette page est copiée dans le pool de mémoires tampons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et mise en cache en vue de sa réutilisation. Chaque page de données mise en cache est associée à un descripteur de mémoire tampon. Les descripteurs de mémoire tampon identifient de manière unique chaque page de données actuellement mise en cache dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors retourne les pages mises en cache pour toutes les bases de données utilisateur et système. Cela inclut les pages qui sont associées à la base de données Resource.  
   
-> **Remarque :** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_buffer_descriptors**.  
+> **Remarque :** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,23 +49,23 @@ ms.locfileid: "89539395"
 |free_space_in_bytes|**int**|Quantité d'espace disponible dans la page, en octets. Autorise la valeur NULL.|  
 |is_modified|**bit**|1 = la page a été modifiée après avoir été lue sur le disque. Autorise la valeur NULL.|  
 |numa_node|**int**|Nœud NUMA (Nonuniform Memory Access) pour la mémoire tampon. Autorise la valeur NULL.|  
-|read_microsec|**bigint**|Temps réel (en microsecondes) requis pour lire la page dans la mémoire tampon. Ce nombre est réinitialisé lorsque la mémoire tampon est réutilisée. Autorise la valeur NULL.|  
-|is_in_bpool_extension|**bit**|1 = la page est dans l’extension du pool de mémoires tampons. Autorise la valeur NULL.|  
-|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|read_microsec|**bigint**|Temps réel (en microsecondes) requis pour lire la page dans la mémoire tampon. Ce nombre est réinitialisé lorsque la mémoire tampon est réutilisée. Autorise la valeur NULL.|  
+|is_in_bpool_extension|**bit**|1 = la page est dans l’extension du pool de mémoires tampons. Autorise la valeur NULL.|  
+|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
    
 ## <a name="remarks"></a>Notes  
- sys. dm_os_buffer_descriptors retourne les pages utilisées par la base de données des ressources. sys. dm_os_buffer_descriptors ne retourne pas d’informations sur les pages libres ou occultées, ni sur les pages qui comportaient des erreurs lors de leur lecture.  
+ sys.dm_os_buffer_descriptors retourne les pages utilisées par la base de données des ressources. sys.dm_os_buffer_descriptors ne retourne pas d’informations sur les pages libres ou occultées, ni sur les pages qui comportaient des erreurs lors de leur lecture.  
   
-|Du|À|Activé|Relation|  
+|Du|À|Activé|Relationship|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|plusieurs-à-un|  
-|sys.dm_os_buffer_descriptors|\<userdb>. sys. allocation_units|allocation_unit_id|plusieurs-à-un|  
-|sys.dm_os_buffer_descriptors|\<userdb>. sys. database_files|file_id|plusieurs-à-un|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|plusieurs-à-un|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|plusieurs-à-un|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|plusieurs-à-un|  
   
 ## <a name="examples"></a>Exemples  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_missing_index_details (Transact-SQL)
-title: sys. dm_db_missing_index_details (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_missing_index_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f88249c10b9e6c58e1ae68b598cfb92a876bf56a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bb253a26812d07a2527dc0a21a400906f1bb638a
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518626"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321887"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "89518626"
   >Le jeu de résultats pour cette DMV est limité à 600 lignes. Chaque ligne contient un index manquant. Si vous avez plus de 600 index manquants, vous devez traiter les index manquants existants afin de pouvoir en afficher les plus récents. 
   
 ## <a name="using-missing-index-information-in-create-index-statements"></a>Utilisation des informations sur les index manquants dans les instructions CREATE INDEX  
- Pour convertir les informations retournées par **sys. dm_db_missing_index_details** dans une instruction CREATE index pour les index à mémoire optimisée et sur disque, les colonnes d’égalité doivent être placées avant les colonnes d’inégalité, et ensemble, elles doivent créer la clé de l’index. Les colonnes incluses doivent être ajoutées à l'instruction CREATE INDEX à l'aide de la clause INCLUDE. Pour déterminer un ordre efficace pour les colonnes d'égalité, vous devez les organiser en fonction de leur sélectivité : répertoriez les colonnes les plus sélectives (les colonnes de gauche dans la liste des colonnes).  
+ Pour convertir les informations retournées par **sys.dm_db_missing_index_details** dans une instruction CREATE index pour les index à mémoire optimisée et sur disque, les colonnes d’égalité doivent être placées avant les colonnes d’inégalité, et ensemble, elles doivent créer la clé de l’index. Les colonnes incluses doivent être ajoutées à l'instruction CREATE INDEX à l'aide de la clause INCLUDE. Pour déterminer un ordre efficace pour les colonnes d'égalité, vous devez les organiser en fonction de leur sélectivité : répertoriez les colonnes les plus sélectives (les colonnes de gauche dans la liste des colonnes).  
   
- Pour plus d’informations sur les index optimisés en mémoire, consultez [index pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
+ Pour plus d’informations sur les index optimisés en mémoire, consultez [index pour les Tables Memory-Optimized](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   
 ## <a name="transaction-consistency"></a>Cohérence transactionnelle  
  Si une transaction crée ou supprime une table, les lignes qui contiennent les informations d'index manquants concernant les objets supprimés sont retirées de cet objet de gestion dynamique, ce qui permet de préserver la cohérence des transactions.  
@@ -66,11 +66,11 @@ ms.locfileid: "89518626"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
 
 ## <a name="see-also"></a>Voir aussi  
- [sys. dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys. dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys. dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

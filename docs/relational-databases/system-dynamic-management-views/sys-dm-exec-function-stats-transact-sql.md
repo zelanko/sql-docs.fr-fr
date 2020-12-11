@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_function_stats (Transact-SQL)
-title: sys. dm_exec_function_stats (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_function_stats (Transact-SQL)
+title: sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -19,14 +19,14 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ec3f05f40f6de423cec2d08f2a240729201e43e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 35f0ab89e1aa90ea8eeeb09f57911b7b526026f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332175"
 ---
-# <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
+# <a name="sysdm_exec_function_stats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Retourne des statistiques de performances agrégées pour les fonctions mises en cache. La vue retourne une ligne pour chaque plan de fonction mis en cache, et la durée de vie de la ligne est tant que la fonction reste en cache. Lorsqu’une fonction est supprimée du cache, la ligne correspondante est éliminée de cette vue. Un événement de trace SQL de statistiques de performances similaire à **sys.dm_exec_query_stats** est alors déclenché. Retourne des informations sur les fonctions scalaires, y compris les fonctions en mémoire et les fonctions scalaires CLR. Ne retourne pas d’informations sur les fonctions table.  
@@ -34,7 +34,7 @@ ms.locfileid: "89550284"
  Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d’exposer ces informations, chaque ligne qui contient des données qui n’appartiennent pas au locataire connecté est filtrée.  
   
 > [!NOTE]
-> Les résultats de **sys. dm_exec_function_stats**  peuvent varier en fonction de chaque exécution, car les données reflètent uniquement les requêtes terminées, et non celles toujours en cours. 
+> Les résultats de **sys.dm_exec_function_stats**  peuvent varier en fonction de chaque exécution, car les données reflètent uniquement les requêtes terminées, et non celles toujours en cours. 
 
   
 |Nom de la colonne|Type de données|Description|  
@@ -43,8 +43,8 @@ ms.locfileid: "89550284"
 |**object_id**|**int**|Numéro d’identification d’objet de la fonction.|  
 |**type**|**char(2)**|Type de l’objet : FN = fonctions scalaires|  
 |**type_desc**|**nvarchar(60)**|Description du type d’objet : SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|Cela peut être utilisé pour établir une corrélation avec les requêtes dans **sys. dm_exec_query_stats** qui ont été exécutées à partir de cette fonction.|  
-|**plan_handle**|**varbinary(64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec la vue de gestion dynamique **sys. dm_exec_cached_plans** .<br /><br /> Sera toujours 0x000 quand une fonction compilée en mode natif interroge une table optimisée en mémoire.|  
+|**sql_handle**|**varbinary(64)**|Cela peut être utilisé pour établir une corrélation avec des requêtes dans **sys.dm_exec_query_stats** qui ont été exécutées à partir de cette fonction.|  
+|**plan_handle**|**varbinary(64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec la vue de gestion dynamique **sys.dm_exec_cached_plans** .<br /><br /> Sera toujours 0x000 quand une fonction compilée en mode natif interroge une table optimisée en mémoire.|  
 |**cached_time**|**datetime**|Heure à laquelle la fonction a été ajoutée au cache.|  
 |**last_execution_time**|**datetime**|Heure à laquelle la fonction a été exécutée pour la dernière fois.|  
 |**execution_count**|**bigint**|Nombre de fois où la fonction a été exécutée depuis sa dernière compilation.|  
@@ -76,7 +76,7 @@ ms.locfileid: "89550284"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.   
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne des informations sur les dix principales fonctions identifiées par le temps moyen écoulé.  
@@ -92,10 +92,10 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

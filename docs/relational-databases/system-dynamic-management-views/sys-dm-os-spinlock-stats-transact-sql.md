@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 05e8698484f9445de7a5fb3265d1e0e294dc65d7
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332079"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -42,14 +42,14 @@ Retourne des informations sur toutes les attentes de verrouillages spinlock orga
 |name|**nvarchar (256)**|Nom du type de verrouillage SpinLock.|  
 |collisions|**bigint**|Nombre de fois où un thread tente d’acquérir le SpinLock et est bloqué, car un autre thread contient actuellement le SpinLock.|  
 |tourne|**bigint**|Nombre de fois où un thread exécute une boucle lors de la tentative d’acquisition du SpinLock.|  
-|spins_per_collision|**real**|Taux de spins par collision.|  
+|spins_per_collision|**real**|Nombre de spins par collision.|  
 |sleep_time|**bigint**|Durée en millisecondes pendant laquelle les threads sont en veille en cas d’interruption.|  
 |interruptions|**int**|Nombre de fois où un thread en « tournant » ne parvient pas à acquérir le SpinLock et génère le planificateur.|  
 
 
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .    
+Sur SQL Database objectifs de service de base, S0 et S1, et pour les bases de données dans des pools élastiques, le `Server admin` ou un `Azure Active Directory admin` compte est requis. Pour tous les autres SQL Database objectifs de service, l' `VIEW DATABASE STATE` autorisation est requise dans la base de données.    
   
 ## <a name="remarks"></a>Notes  
  
