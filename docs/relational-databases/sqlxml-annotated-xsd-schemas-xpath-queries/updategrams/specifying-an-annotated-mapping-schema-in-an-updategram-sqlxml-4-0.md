@@ -21,13 +21,13 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06299f367f987cfc716154f4d26ffb8e5e07a868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c8643c40f7b62c0a0fdc3d85d32111d05ee955f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760411"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405108"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "85760411"
 >  Cette documentation suppose une connaissance suffisante des modèles et de la prise en charge des schémas de mappage dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Introduction aux schémas XSD Annotés &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour les applications héritées qui utilisent XDR, consultez [schémas XDR Annotés &#40;dépréciés dans SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Traitement des types de données  
- Si le schéma spécifie le type de données **image**, **Binary**ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (à l’aide de **SQL : DataType**) et qu’il ne spécifie pas de type de données XML, mise à jour suppose que le type de données XML est **Binary base 64**. Si vos données sont de type **bin. base** , vous devez spécifier explicitement le type (**DT : type = bin. base** ou **type = "xsd : hexBinary"**).  
+ Si le schéma spécifie le type de données **image**, **Binary** ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (à l’aide de **SQL : DataType**) et qu’il ne spécifie pas de type de données XML, mise à jour suppose que le type de données XML est **Binary base 64**. Si vos données sont de type **bin. base** , vous devez spécifier explicitement le type (**DT : type = bin. base** ou **type = "xsd : hexBinary"**).  
   
- Si le schéma spécifie le type de données XSD **DateTime**, **Date**ou **Time** , vous devez également spécifier le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données correspondant à l’aide de **SQL : datatype = "DateTime"**.  
+ Si le schéma spécifie le type de données XSD **DateTime**, **Date** ou **Time** , vous devez également spécifier le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données correspondant à l’aide de **SQL : datatype = "DateTime"**.  
   
  Lors du traitement des paramètres de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type **Money** , vous devez spécifier explicitement **SQL : datatype = "Money"** sur le nœud approprié dans le schéma de mappage.  
   
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l’aide des exemples suivants, vous devez respecter les exigences spécifiées dans la [Configuration requise pour l’exécution d’exemples SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Création d'un code de mise à jour avec un schéma de mappage simple  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>R. Création d'un code de mise à jour avec un schéma de mappage simple  
  Le schéma XSD suivant (SampleSchema.xml) est un schéma de mappage qui mappe l' **\<Customer>** élément à la table Sales. Customer :  
   
 ```  

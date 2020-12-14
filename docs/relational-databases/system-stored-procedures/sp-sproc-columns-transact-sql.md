@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 756b50b22b470ec8dcf3f54467af78e71558ea1c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 180d57f7daacb1f7aeb6b638dba03f893340c1d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006487"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404182"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,9 +49,9 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ## <a name="arguments"></a>Arguments  
 `[ @procedure_name = ] 'name'` Nom de la procédure utilisée pour retourner les informations de catalogue. *Name* est de type **nvarchar (** 390 **)**, avec% comme valeur par défaut, qui correspond à toutes les tables de la base de données active. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @procedure_owner = ] 'owner'` Nom du propriétaire de la procédure. *owner*est de type **nvarchar (** 384 **)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité des procédures par défaut du SGBD sous-jacent s’appliquent.  
+`[ @procedure_owner = ] 'owner'` Nom du propriétaire de la procédure. *owner* est de type **nvarchar (** 384 **)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité des procédures par défaut du SGBD sous-jacent s’appliquent.  
   
- Si l'utilisateur actuel possède une procédure du nom spécifié, les informations relatives à cette procédure sont retournées. Si *owner*n’est pas spécifié et que l’utilisateur actuel ne possède pas de procédure portant le nom spécifié, **sp_sproc_columns** recherche une procédure portant le nom spécifié qui appartient au propriétaire de la base de données. Si la procédure existe, les informations relatives à ses colonnes sont renvoyées.  
+ Si l'utilisateur actuel possède une procédure du nom spécifié, les informations relatives à cette procédure sont retournées. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de procédure portant le nom spécifié, **sp_sproc_columns** recherche une procédure portant le nom spécifié qui appartient au propriétaire de la base de données. Si la procédure existe, les informations relatives à ses colonnes sont renvoyées.  
   
 `[ @procedure_qualifier = ] 'qualifier'` Nom du qualificateur de la procédure. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de table en trois parties (*qualifier.Owner.Name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
@@ -83,14 +83,14 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**NOTES**|**varchar (** 254 **)**|Description de la colonne de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valeur par défaut de la colonne.|  
 |**SQL_DATA_TYPE**|**smallint**|Valeur du type de données SQL tel qu’il apparaît dans le champ **type** du descripteur. Cette colonne est la même que la colonne **DATA_TYPE**, excepté pour les types de données **datetime** et **interval** ISO. Cette colonne renvoie toujours une valeur.|  
-|**SQL_DATETIME_SUB**|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les types de données autres que **DateTime** et **Interval**ISO, ce champ a la valeur null.|  
+|**SQL_DATETIME_SUB**|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les types de données autres que **DateTime** et **Interval** ISO, ce champ a la valeur null.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longueur maximale en octets d’une colonne de type de données **binaire** ou **caractère** . Pour tous les autres types de données, cette colonne retourne une valeur NULL.|  
 |**ORDINAL_POSITION**|**int**|Numéro d'ordre de la colonne dans la table. La première colonne de la table est la colonne 1. Cette colonne renvoie toujours une valeur.|  
 |**IS_NULLABLE**|**varchar (254)**|Possibilité de valeurs NULL dans la colonne de la table. Les règles ISO sont utilisées pour déterminer la possibilité de valeur Null. Un SGBD compatible avec la norme ISO ne peut pas renvoyer de chaîne vide.<br /><br /> Affiche YES si la colonne peut comprendre des valeurs NULL et NO dans le cas contraire.<br /><br /> Cette colonne renvoie une chaîne de longueur zéro si la possibilité de valeurs Null n'est pas connue.<br /><br /> La valeur renvoyée pour cette colonne est différente de celle renvoyée pour la colonne NULLABLE.|  
 |**SS_DATA_TYPE**|**tinyint**|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé par les procédures stockées étendues. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
-## <a name="remarks"></a>Notes  
- **sp_sproc_columns** est équivalent à **SQLProcedureColumns** dans ODBC. Les résultats retournés sont triés par **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **PROCEDURE_NAME**et l’ordre dans lequel les paramètres apparaissent dans la définition de la procédure.  
+## <a name="remarks"></a>Remarks  
+ **sp_sproc_columns** est équivalent à **SQLProcedureColumns** dans ODBC. Les résultats retournés sont triés par **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **PROCEDURE_NAME** et l’ordre dans lequel les paramètres apparaissent dans la définition de la procédure.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
