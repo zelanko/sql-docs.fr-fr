@@ -1,6 +1,6 @@
 ---
 description: sys.fn_check_object_signatures (Transact-SQL)
-title: sys. fn_check_object_signatures (Transact-SQL) | Microsoft Docs
+title: sys.fn_check_object_signatures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dc2f5c8700bef804b77e97917250152988baf7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 652f7d896d68097d081d209fd6617a8a3b389eb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481822"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472770"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88481822"
   Retourne une liste de tous les objets signables et indique si un objet est signé par un certificat spécifié ou une clé asymétrique. Retourne également une valeur indiquant si la signature d'un objet est valide si l'objet est signé par le certificat spécifié ou une clé asymétrique.  
   
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- \@*class* est **sysname**.  
+ \@la *classe* est de **type sysname**.  
   
  { \@ *empreinte numérique* }  
  Hachage SHA-1 du certificat avec lequel la clé est chiffrée ou GUID de la clé asymétrique avec laquelle la clé est chiffrée. \@l' *empreinte numérique* est **varbinary (20)**.  
@@ -68,7 +68,7 @@ fn_ check_object_signatures (
 |is_signed|**int**|Retourne la valeur 0 lorsque l'objet n'est pas signé par l'empreinte numérique fournie. Retourne la valeur 1 lorsque l'objet est signé par l'empreinte numérique fournie.|  
 |is_signature_valid|**int**|Lorsque is_signed a la valeur 1, retourne la valeur 0 lorsque la signature n'est pas valide. Retourne la valeur 1 lorsque la signature est valide.<br /><br /> Lorsque is_signed a la valeur 0, retourne toujours la valeur 0.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Utilisez **fn_check_object_signatures** pour confirmer que les utilisateurs malveillants n’ont pas falsifié d’objets.  
   
 ## <a name="permissions"></a>Autorisations  

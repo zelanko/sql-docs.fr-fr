@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_page_info (Transact-SQL)
-title: sys. dm_db_page_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 60df2ed8bf279bf7da8193282768124815aa6ab3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: 429f8049ef0b92168be5e3e0fc90c91e3d37224e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493692"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472810"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -60,61 +60,61 @@ Détermine le niveau de détail dans la sortie de la fonction. 'LIMITED’renver
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|database_id |int |ID de base de données |
-|file_id |int |ID de fichier |
-|page_id |int |ID de page |
-|page_header_version |int |Version d’en-tête de page |
-|page_type |int |Type de page |
-|page_type_desc |nvarchar (64) |Description du type de page |
-|page_type_flag_bits |nvarchar (64) |Taper les bits des indicateurs dans l’en-tête de page |
-|page_type_flag_bits_desc |nvarchar (64) |Entrer l’indicateur de description bits dans l’en-tête de page |
-|page_flag_bits |nvarchar (64) |Marquer les bits dans l’en-tête de page |
-|page_flag_bits_desc |nvarchar(256) |Baliser la description bits dans l’en-tête de page |
-|page_lsn |nvarchar (64) |Numéro séquentiel dans le journal/horodateur |
-|page_level |int |Niveau de la page dans l’index (feuille = 0) |
-|object_id |int |ID de l’objet propriétaire de la page |
-|index_id |int |ID de l’index (0 pour les pages de données du tas) |
-|partition_id |bigint |ID de la partition |
-|alloc_unit_id |bigint |ID de l’unité d’allocation |
+|database_id |int |ID de base de données |
+|file_id |int |ID de fichier |
+|page_id |int |ID de page |
+|page_header_version |int |Version d’en-tête de page |
+|page_type |int |Type de page |
+|page_type_desc |nvarchar (64) |Description du type de page |
+|page_type_flag_bits |nvarchar (64) |Taper les bits des indicateurs dans l’en-tête de page |
+|page_type_flag_bits_desc |nvarchar (64) |Entrer l’indicateur de description bits dans l’en-tête de page |
+|page_flag_bits |nvarchar (64) |Marquer les bits dans l’en-tête de page |
+|page_flag_bits_desc |nvarchar(256) |Baliser la description bits dans l’en-tête de page |
+|page_lsn |nvarchar (64) |Numéro séquentiel dans le journal/horodateur |
+|page_level |int |Niveau de la page dans l’index (feuille = 0) |
+|object_id |int |ID de l’objet propriétaire de la page |
+|index_id |int |ID de l’index (0 pour les pages de données du tas) |
+|partition_id |bigint |ID de la partition |
+|alloc_unit_id |bigint |ID de l’unité d’allocation |
 |is_encrypted |bit |Bit pour indiquer si la page est chiffrée ou non |
 |has_checksum |bit |Bit pour indiquer si la page a une valeur de somme de contrôle |
-|somme de contrôle |int |Stocke la valeur de somme de contrôle utilisée pour détecter les données endommagées |
-|is_iam_pg |bit |Bit pour indiquer si la page est une page IAM  |
-|is_mixed_ext |bit |Bit pour indiquer si alloué dans une extension mixte |
+|somme de contrôle |int |Stocke la valeur de somme de contrôle utilisée pour détecter les données endommagées |
+|is_iam_pg |bit |Bit pour indiquer si la page est une page IAM  |
+|is_mixed_ext |bit |Bit pour indiquer si alloué dans une extension mixte |
 |has_ghost_records |bit |Bit pour indiquer si la page contient des enregistrements fantômes <br> Un enregistrement fantôme est un enregistrement qui a été marqué pour suppression mais qui n’a pas encore été supprimé.|
 |has_version_records |bit |Bit indiquant si la page contient des enregistrements de version utilisés pour la [récupération accélérée de la base de données](../backup-restore/restore-and-recovery-overview-sql-server.md#adr) |
-|pfs_page_id |int |ID de page de la page PFS correspondante |
+|pfs_page_id |int |ID de page de la page PFS correspondante |
 |pfs_is_allocated |bit |Bit indiquant si la page est marquée comme allouée dans la page PFS correspondante |
-|pfs_alloc_percent |int |Pourcentage d’allocation comme indiqué par l’octet PFS correspondant |
-|pfs_status |nvarchar (64) |Octet PFS |
-|pfs_status_desc |nvarchar (64) |Description de l’octet PFS |
-|gam_page_id |int |ID de page de la page GAM correspondante |
-|gam_status |bit |Bit pour indiquer si alloué dans GAM |
-|gam_status_desc |nvarchar (64) |Description du bit d’État GAM |
-|sgam_page_id |int |ID de page de la page SGAM correspondante |
-|sgam_status |bit |Bit pour indiquer si alloué dans SGAM |
-|sgam_status_desc |nvarchar (64) |Description du bit d’État SGAM |
-|diff_map_page_id |int |ID de page de la page bitmap différentielle correspondante |
-|diff_status |bit |Bit pour indiquer si l’État diff est modifié |
-|diff_status_desc |nvarchar (64) |Description du bit d’État diff |
-|ml_map_page_id |int |ID de page de la page bitmap de journalisation minimale correspondante |
-|ml_status |bit |Bit indiquant si la page est journalisée au minimum |
-|ml_status_desc |nvarchar (64) |Description du bit d’État minimal de la journalisation |
-|prev_page_file_id |SMALLINT |ID du fichier de page précédente |
-|prev_page_page_id |int |ID de page de page précédente |
-|next_page_file_id |SMALLINT |ID de fichier de la page suivante |
-|next_page_page_id |int |ID de page de page suivante |
-|fixed_length |SMALLINT |Longueur des lignes de taille fixe |
-|slot_count |SMALLINT |Nombre total d’emplacements (utilisés et inutilisés) <br> Pour une page de données, ce nombre est équivalent au nombre de lignes. |
-|ghost_rec_count |SMALLINT |Nombre d’enregistrements marqués comme fantômes sur la page <br> Un enregistrement fantôme est un enregistrement qui a été marqué pour suppression mais qui n’a pas encore été supprimé. |
-|free_bytes |SMALLINT |Nombre d’octets disponibles sur la page |
-|free_data_offset |int |Décalage de l’espace libre à la fin de la zone de données |
-|reserved_bytes |SMALLINT |Nombre d’octets libres réservés par toutes les transactions (si Heap) <br> Nombre de lignes dupliquées (sous la feuille d’index) |
-|reserved_bytes_by_xdes_id |SMALLINT |Espace fourni par m_xdesID à m_reservedCnt <br> À des fins de débogage uniquement |
-|xdes_id |nvarchar (64) |Dernière transaction fournie par m_reserved <br> À des fins de débogage uniquement |
+|pfs_alloc_percent |int |Pourcentage d’allocation comme indiqué par l’octet PFS correspondant |
+|pfs_status |nvarchar (64) |Octet PFS |
+|pfs_status_desc |nvarchar (64) |Description de l’octet PFS |
+|gam_page_id |int |ID de page de la page GAM correspondante |
+|gam_status |bit |Bit pour indiquer si alloué dans GAM |
+|gam_status_desc |nvarchar (64) |Description du bit d’État GAM |
+|sgam_page_id |int |ID de page de la page SGAM correspondante |
+|sgam_status |bit |Bit pour indiquer si alloué dans SGAM |
+|sgam_status_desc |nvarchar (64) |Description du bit d’État SGAM |
+|diff_map_page_id |int |ID de page de la page bitmap différentielle correspondante |
+|diff_status |bit |Bit pour indiquer si l’État diff est modifié |
+|diff_status_desc |nvarchar (64) |Description du bit d’État diff |
+|ml_map_page_id |int |ID de page de la page bitmap de journalisation minimale correspondante |
+|ml_status |bit |Bit indiquant si la page est journalisée au minimum |
+|ml_status_desc |nvarchar (64) |Description du bit d’État minimal de la journalisation |
+|prev_page_file_id |SMALLINT |ID du fichier de page précédente |
+|prev_page_page_id |int |ID de page de page précédente |
+|next_page_file_id |SMALLINT |ID de fichier de la page suivante |
+|next_page_page_id |int |ID de page de page suivante |
+|fixed_length |SMALLINT |Longueur des lignes de taille fixe |
+|slot_count |SMALLINT |Nombre total d’emplacements (utilisés et inutilisés) <br> Pour une page de données, ce nombre est équivalent au nombre de lignes. |
+|ghost_rec_count |SMALLINT |Nombre d’enregistrements marqués comme fantômes sur la page <br> Un enregistrement fantôme est un enregistrement qui a été marqué pour suppression mais qui n’a pas encore été supprimé. |
+|free_bytes |SMALLINT |Nombre d’octets disponibles sur la page |
+|free_data_offset |int |Décalage de l’espace libre à la fin de la zone de données |
+|reserved_bytes |SMALLINT |Nombre d’octets libres réservés par toutes les transactions (si Heap) <br> Nombre de lignes dupliquées (sous la feuille d’index) |
+|reserved_bytes_by_xdes_id |SMALLINT |Espace fourni par m_xdesID à m_reservedCnt <br> À des fins de débogage uniquement |
+|xdes_id |nvarchar (64) |Dernière transaction fournie par m_reserved <br> À des fins de débogage uniquement |
 ||||
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarks
 La `sys.dm_db_page_info` fonction de gestion dynamique retourne des informations `page_id` de page comme, `file_id` , `index_id` , `object_id` etc. qui sont présentes dans un en-tête de page. Ces informations sont utiles pour le dépannage et le débogage des performances (verrouillage et contention de verrous internes) et des problèmes d’altération.
 
 `sys.dm_db_page_info` peut être utilisé à la place de l' `DBCC PAGE` instruction dans de nombreux cas, mais retourne uniquement les informations d’en-tête de page, et non le corps de la page. `DBCC PAGE` est toujours nécessaire pour les cas d’usage où le contenu entier de la page est requis.
@@ -137,7 +137,7 @@ SELECT *
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. Utilisation de sys. dm_db_page_info avec d’autres DMV 
+### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. Utilisation de sys.dm_db_page_info avec d’autres DMV 
 
 La requête suivante retourne une ligne par `wait_resource` exposée par `sys.dm_exec_requests` lorsque la ligne contient une valeur non null `page_resource`
 

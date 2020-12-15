@@ -18,13 +18,13 @@ ms.author: maghan
 ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cbf8a5d7fa207b7be9eb2e6359766064dbef343
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: edff3154a4385ee87bf7686cf5e2954e026e495f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455917"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473660"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
@@ -174,7 +174,7 @@ Le tableau suivant répertorie les types de données énumérées valides et les
 
  SUCCEED ou FAIL.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarks
 
 Utilisez **bcp_bind** pour une façon rapide et efficace de copier des données à partir d’une variable de programme dans une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
@@ -218,7 +218,7 @@ Pour plus d’informations sur les types utilisés avec le paramètre *eDataType
 
 Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
   
 ```
 #include sql.h  
@@ -299,6 +299,6 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)

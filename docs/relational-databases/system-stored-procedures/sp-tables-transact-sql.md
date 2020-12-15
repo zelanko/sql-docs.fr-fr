@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58f27f22e0a0d69ab35f21b9dcecdc80fd12e63
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dbbf927943b34c81ad1f0a49b831314803969d7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005562"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472650"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 `[ @table_qualifier = ] 'qualifier'` Nom du qualificateur de la table. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` Liste de valeurs, séparées par des virgules, qui donne des informations sur toutes les tables des types de tables qui sont spécifiés. Il s’agit notamment de **table**, **SYSTEMTABLE**et **View**. *type* **varchar (100)**, avec NULL comme valeur par défaut.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` Liste de valeurs, séparées par des virgules, qui donne des informations sur toutes les tables des types de tables qui sont spécifiés. Il s’agit notamment de **table**, **SYSTEMTABLE** et **View**. *type* **varchar (100)**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Chaque type de table doit être encadré de guillemets simples, l'ensemble du paramètre devant être encadré de guillemets doubles. Les types de table sont en lettres majuscules. Si SET QUOTED_IDENTIFIER est défini à ON, chaque guillemet simple doit devenir double et l'ensemble du paramètre doit être encadré de guillemets simples.  
@@ -77,12 +77,12 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar(32)**|Table, table système ou vue.|  
 |**NOTES**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les critères spéciaux SQL standard de SQL-92 (caractères génériques % et _).  
   
  Les informations de privilège concernant l'accès en lecture/écriture de l'utilisateur actuel à une table spécifique ne sont pas toujours vérifiées. Par conséquent, l'accès n'est pas garanti. Ce jeu de résultats ne comprend pas uniquement des tables et des vues, mais également des synonymes et des noms d'alias, dans le cas des passerelles vers les SGBD qui gèrent ces types. Si l’attribut de serveur **ACCESSIBLE_TABLES** est Y dans le jeu de résultats pour **sp_server_info**, seules les tables accessibles par l’utilisateur actuel sont retournées.  
   
- **sp_tables** équivaut à **SQLTables** dans ODBC. Les résultats retournés sont triés par **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER**et **table_name**.  
+ **sp_tables** équivaut à **SQLTables** dans ODBC. Les résultats retournés sont triés par **TABLE_TYPE**, **TABLE_QUALIFIER**, **TABLE_OWNER** et **table_name**.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  

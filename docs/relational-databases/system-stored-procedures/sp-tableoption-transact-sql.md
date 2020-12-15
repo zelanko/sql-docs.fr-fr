@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3920007400a4ae407303f3fddff50c0a5ace2328
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 05de24f511f5d72bc4eba1947d1731491e3c1a37
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534799"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472680"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Définit les valeurs d'option des tables définies par l'utilisateur. sp_tableoption peut être utilisé pour contrôler le comportement dans la ligne des tables avec des colonnes de type **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Text**, **ntext**, **image**ou de type large défini par l’utilisateur.  
+  Définit les valeurs d'option des tables définies par l'utilisateur. sp_tableoption peut être utilisé pour contrôler le comportement dans la ligne des tables avec des colonnes de type **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Text**, **ntext**, **image** ou de type large défini par l’utilisateur.  
   
 > [!IMPORTANT]  
 >  La fonctionnalité text in row sera supprimée dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour stocker des données de valeur élevée, nous vous recommandons d’utiliser les types de données **varchar (max)**, **nvarchar (max)** et **varbinary (max)** .  
@@ -53,11 +53,11 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  Spécifie un nom d'option de table. *option_name* est de type **varchar (35)**, sans valeur par défaut null. *option_name* peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |table lock on bulk load|Désactivée (valeur par défaut), oblige le processus de chargement en masse effectué sur les tables définies par l'utilisateur à obtenir des verrous de lignes. Activée, oblige le processus de chargement en masse effectué sur les tables définies par l'utilisateur à obtenir un verrou de mise à jour en bloc.|  
 |insert row lock|N'est plus pris en charge.<br /><br /> Cette option n'a aucun effet sur le comportement de verrouillage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et elle n'est incluse qu'à des fins de compatibilité des scripts et des procédures existants.|  
-|text in row|Si la valeur est OFF ou 0 (désactivé, valeur par défaut), le comportement en cours n'est pas modifié, et la ligne ne contient pas d'objet BLOB.<br /><br /> Quand elle est spécifiée et que @OptionValue est activé (Enabled) ou une valeur entière comprise entre 24 et 7000, les nouvelles chaînes **Text**, **ntext**ou **image** sont stockées directement dans la ligne de données. Toutes les données d’objet BLOB (Binary Large Object : **Text**, **ntext**ou **image** ) existantes seront remplacées par le format Text in Row lorsque la valeur de l’objet blob est mise à jour. Pour plus d'informations, consultez la section Notes.|  
+|text in row|Si la valeur est OFF ou 0 (désactivé, valeur par défaut), le comportement en cours n'est pas modifié, et la ligne ne contient pas d'objet BLOB.<br /><br /> Quand elle est spécifiée et que @OptionValue est activé (Enabled) ou une valeur entière comprise entre 24 et 7000, les nouvelles chaînes **Text**, **ntext** ou **image** sont stockées directement dans la ligne de données. Toutes les données d’objet BLOB (Binary Large Object : **Text**, **ntext** ou **image** ) existantes seront remplacées par le format Text in Row lorsque la valeur de l’objet blob est mise à jour. Pour plus d'informations, consultez la section Notes.|  
 |large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** et les colonnes de type défini par l’utilisateur (UDT) volumineuses de la table sont stockées hors ligne, avec un pointeur de 16 octets vers la racine.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** et les valeurs UDT volumineuses sont stockées directement dans la ligne de données, jusqu’à une limite de 8000 octets et tant que la valeur peut être contenue dans l’enregistrement. Si la valeur ne tient pas dans l'enregistrement, un pointeur est stocké dans la ligne et le reste est stocké hors de la ligne dans l'espace de stockage LOB. La valeur par défaut est 0.<br /><br /> Le type défini par l’utilisateur (UDT) volumineux s’applique à : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures. <br /><br /> Utilisez l’option TEXTIMAGE_ON de [Create table](../../t-sql/statements/create-table-transact-sql.md) pour spécifier un emplacement pour le stockage des types de données volumineux. |  
 |format de stockage vardecimal|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> Lorsque la valeur est TRUE, ON ou 1, la table désignée est activée pour le format de stockage vardecimal. Lorsque la valeur est FALSE, OFF ou 0, la table n'est pas activée pour le format de stockage vardecimal. Le format de stockage vardecimal ne peut être activé que si la base de données a été activée pour le format de stockage vardecimal à l’aide de [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, le format de stockage **vardecimal** est déconseillé. Utilisez plutôt la compression ROW. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md). La valeur par défaut est 0.|  
   
@@ -69,14 +69,14 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou numéro d'erreur (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  La procédure sp_tableoption peut être utilisée uniquement pour définir les valeurs des options des tables définies par l'utilisateur. Pour afficher les propriétés d’une table, utilisez OBJECTPROPERTY ou Query sys. tables.  
   
  L'option text in row de sp_tableoption peut être activée ou désactivée uniquement pour les tables qui contiennent des colonnes de texte. Si la table ne contient pas de colonne de texte, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur.  
   
  Lorsque l’option text in Row est activée, le @OptionValue paramètre permet aux utilisateurs de spécifier la taille maximale à stocker dans une ligne pour un objet BLOB. La valeur par défaut est de 256 octets, mais les valeurs peuvent être comprises entre 24 et 7 000 octets.  
   
- les chaînes **Text**, **ntext**ou **image** sont stockées dans la ligne de données si les conditions suivantes s’appliquent :  
+ les chaînes **Text**, **ntext** ou **image** sont stockées dans la ligne de données si les conditions suivantes s’appliquent :  
   
 -   l'option text in row est activée ;  
   
@@ -84,13 +84,13 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   l'espace disque disponible s'avère suffisant dans la ligne de données.  
   
- Lorsque les chaînes d’objets BLOB sont stockées dans la ligne de données, la lecture et l’écriture des chaînes **Text**, **ntext**ou **image** peuvent être aussi rapides que la lecture ou l’écriture de chaînes de caractères et binaires. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas besoin d'accéder à des pages séparées pour lire ou écrire la chaîne BLOB.  
+ Lorsque les chaînes d’objets BLOB sont stockées dans la ligne de données, la lecture et l’écriture des chaînes **Text**, **ntext** ou **image** peuvent être aussi rapides que la lecture ou l’écriture de chaînes de caractères et binaires. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas besoin d'accéder à des pages séparées pour lire ou écrire la chaîne BLOB.  
   
- Si une chaîne **Text**, **ntext**ou **image** est supérieure à la limite spécifiée ou à l’espace disponible dans la ligne, les pointeurs sont stockés à la place dans la ligne. Les conditions concernant le stockage des chaînes BLOB dans la ligne sont toujours applicables : la ligne de données doit disposer d'un espace suffisant pour contenir les pointeurs.  
+ Si une chaîne **Text**, **ntext** ou **image** est supérieure à la limite spécifiée ou à l’espace disponible dans la ligne, les pointeurs sont stockés à la place dans la ligne. Les conditions concernant le stockage des chaînes BLOB dans la ligne sont toujours applicables : la ligne de données doit disposer d'un espace suffisant pour contenir les pointeurs.  
   
  Les chaînes d'objets BLOB et les pointeurs stockés dans la ligne d'une table sont considérés comme des chaînes de longueur variable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'utilise que le nombre d'octets nécessaires au stockage de la chaîne ou du pointeur.  
   
- Les chaînes d'objets BLOB existantes ne sont pas converties immédiatement lorsque l'option text in row est activée pour la première fois. Ces chaînes ne sont converties que lors de leur mise à jour. De même, lorsque la limite de l’option text in Row est augmentée, les chaînes **Text**, **ntext**ou **image** déjà présentes dans la ligne de données ne sont pas converties pour respecter la nouvelle limite jusqu’au moment où elles sont mises à jour.  
+ Les chaînes d'objets BLOB existantes ne sont pas converties immédiatement lorsque l'option text in row est activée pour la première fois. Ces chaînes ne sont converties que lors de leur mise à jour. De même, lorsque la limite de l’option text in Row est augmentée, les chaînes **Text**, **ntext** ou **image** déjà présentes dans la ligne de données ne sont pas converties pour respecter la nouvelle limite jusqu’au moment où elles sont mises à jour.  
   
 > [!NOTE]  
 >  La désactivation de l'option text in row ou la réduction de sa limite nécessite la conversion de tous les objets BLOB, ce qui peut rallonger le processus, en fonction du nombre de chaînes d'objets BLOB à convertir. La table est verrouillée au cours du processus de conversion.  

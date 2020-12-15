@@ -1,6 +1,6 @@
 ---
 description: sys.bandwidth_usage (Azure SQL Database)
-title: sys. bandwidth_usage (Azure SQL Database) | Microsoft Docs
+title: sys.bandwidth_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: c71fdc21c634e8f473d628373ae5adfa9c1c072f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402525"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473030"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -34,11 +34,11 @@ ms.locfileid: "88402525"
 > [!NOTE]
 > Cela s’applique uniquement à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11. * *  
   
- Retourne des informations sur la bande passante réseau utilisée par chaque base de données dans un ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] serveur de base de données v11**,. Chaque ligne retournée pour une base de données donnée résume une direction unique et une classe d'utilisation sur une période d'une heure.  
+ Retourne des informations sur la bande passante réseau utilisée par chaque base de données dans un **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] serveur de base de données v11**,. Chaque ligne retournée pour une base de données donnée résume une direction unique et une classe d'utilisation sur une période d'une heure.  
   
  **Cela est déconseillé dans un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
- La vue **sys. bandwidth_usage** contient les colonnes suivantes.  
+ La vue **sys.bandwidth_usage** contient les colonnes suivantes.  
   
 |Nom de la colonne|Description|  
 |-----------------|-----------------|  
@@ -53,11 +53,11 @@ ms.locfileid: "88402525"
 
  Cette vue est disponible uniquement dans la base de données **Master** à la connexion du principal au niveau du serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="external-and-internal-classes"></a>Classes externes et internes
 
- Pour chaque base de données utilisée à un moment donné, la vue **sys. bandwidth_usage** retourne des lignes qui indiquent la classe et la direction de l’utilisation de la bande passante. L'exemple suivant illustre les données qui peuvent être exposées pour une base de données donnée. Dans cet exemple, la date et l'heure sont 2012-04-21 17h00 : 00, au cours d'une période de pointe. Le nom de la base de données est Db1. Dans cet exemple, **sys. bandwidth_usage** a retourné une ligne pour les quatre combinaisons de directions d’entrée et de sortie et de classes externes et internes, comme suit :  
+ Pour chaque base de données utilisée à un moment donné, la vue **sys.bandwidth_usage** retourne des lignes qui indiquent la classe et la direction de l’utilisation de la bande passante. L'exemple suivant illustre les données qui peuvent être exposées pour une base de données donnée. Dans cet exemple, la date et l'heure sont 2012-04-21 17h00 : 00, au cours d'une période de pointe. Le nom de la base de données est Db1. Dans cet exemple, **sys.bandwidth_usage** a retourné une ligne pour les quatre combinaisons de directions d’entrée et de sortie et de classes externes et internes, comme suit :  
   
 |time|database_name|direction|class|time_period|quantité|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  

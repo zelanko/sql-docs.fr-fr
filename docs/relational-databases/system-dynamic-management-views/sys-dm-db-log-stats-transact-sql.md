@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_log_stats (Transact-SQL)
-title: sys. dm_db_log_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98c8b45ccde39b7155443b1ef7fabd994f6b26ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5a5ea85a212e33a3e26ef295cc4d38c84967560a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550297"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472830"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-i
 |recovery_vlf_count |**bigint** |   Nombre total de [fichiers journaux virtuels (fichiers journaux virtuels)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) à récupérer, en cas de basculement ou de redémarrage du serveur. |  
 
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarks
 En cas d’exécution `sys.dm_db_log_stats` sur une base de données qui participe à un groupe de disponibilité en tant que réplica secondaire, seul un sous-ensemble des champs décrits ci-dessus est renvoyé.  Actuellement, seuls `database_id` , `recovery_model` et `log_backup_time` sont retournés lorsqu’ils sont exécutés sur une base de données secondaire.   
 
 ## <a name="permissions"></a>Autorisations  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5ae01aef91edd1a7fe45c9203be407dbf7620c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2478558cdb8df2de852fcdd4654c90d51b8356a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455911"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473630"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,7 +88,7 @@ RETCODE bcp_colfmt (
   
  Pour les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] character et binary, *cbUserData* peut avoir la valeur SQL_VARLEN_DATA, SQL_NULL_DATA, 0 ou une valeur positive quelconque. Si *cbUserData* a la valeur SQL_VARLEN_DATA, le système utilise l'indicateur de longueur, s'il est présent, ou une séquence de terminaison pour déterminer la longueur des données. Si un indicateur de longueur et une séquence de terminaison sont fournis, la copie en bloc utilise celui qui implique le volume de données à copier le plus faible. Si *cbUserData* a la valeur SQL_VARLEN_DATA, le type de données est un type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] character ou binary, et si aucun indicateur de longueur ou séquence de terminaison n'est spécifié, le système retourne un message d'erreur.  
   
- Si *cbUserData* a la valeur 0 ou une valeur positive, le système utilise *cbUserData* comme longueur de données maximale. Toutefois, si un indicateur de longueur ou une séquence de terminaison est fournie en plus d'une valeur *cbUserData*positive, le système détermine la longueur de données en utilisant la méthode qui entraîne la plus petite quantité de données à copier.  
+ Si *cbUserData* a la valeur 0 ou une valeur positive, le système utilise *cbUserData* comme longueur de données maximale. Toutefois, si un indicateur de longueur ou une séquence de terminaison est fournie en plus d'une valeur *cbUserData* positive, le système détermine la longueur de données en utilisant la méthode qui entraîne la plus petite quantité de données à copier.  
   
  La valeur *cbUserData* représente le nombre d'octets de données. Si des données caractères sont représentées par des caractères Unicode étendus, une valeur de paramètre *cbUserData* positive représente le nombre de caractères multiplié par la taille, en octets, de chaque caractère.  
   
@@ -112,7 +112,7 @@ RETCODE bcp_colfmt (
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  La fonction **bcp_colfmt** permet de spécifier le format du fichier utilisateur pour les copies en bloc. Pour la copie en bloc, un format se compose des éléments suivants :  
   
 -   Mappage des colonnes du fichier utilisateur avec les colonnes de la base de données  
@@ -127,7 +127,7 @@ RETCODE bcp_colfmt (
   
 -   Longueur de la séquence d'octets de fin facultative  
   
- Chaque appel à **bcp_colfmt** spécifie le format pour une colonne du fichier utilisateur. Par exemple, pour modifier les paramètres par défaut de trois colonnes d'un fichier de données utilisateur de cinq colonnes, appelez d'abord [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, puis **bcp_colfmt** cinq fois (trois de ces appels définissant votre format personnalisé). Pour les deux appels restants, définissez *eUserDataType* avec la valeur 0 et définissez respectivement *cbIndicator*, *cbUserData*et *cbUserDataTerm* avec les valeurs 0, SQL_VARLEN_DATA et 0. Cette procédure copie les cinq colonnes, trois avec votre format personnalisé et deux avec le format par défaut.  
+ Chaque appel à **bcp_colfmt** spécifie le format pour une colonne du fichier utilisateur. Par exemple, pour modifier les paramètres par défaut de trois colonnes d'un fichier de données utilisateur de cinq colonnes, appelez d'abord [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, puis **bcp_colfmt** cinq fois (trois de ces appels définissant votre format personnalisé). Pour les deux appels restants, définissez *eUserDataType* avec la valeur 0 et définissez respectivement *cbIndicator*, *cbUserData* et *cbUserDataTerm* avec les valeurs 0, SQL_VARLEN_DATA et 0. Cette procédure copie les cinq colonnes, trois avec votre format personnalisé et deux avec le format par défaut.  
   
  Pour *cbIndicator*, la valeur 8 pour indiquer un type valeur élevé est désormais valide. Si le préfixe est spécifié pour un champ dont la colonne correspondante est un nouveau type max, il ne peut avoir que la valeur 8. Pour plus d’informations, consultez [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   

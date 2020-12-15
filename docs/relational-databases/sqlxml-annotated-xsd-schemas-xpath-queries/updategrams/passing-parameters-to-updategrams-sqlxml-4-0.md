@@ -17,13 +17,13 @@ ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce7be0a6f01ac92f13f35e4410dc59601fdbdc01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 129fceaeac7de8ca1ab44ff181dd0971b3744fa5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790558"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473100"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passage de paramètres aux codes de mise à jour (updategrams) (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85790558"
   
 -   Les exemples utilisent le mappage par défaut (en d'autres termes, aucun schéma de mappage n'est spécifié dans le code de mise à jour (updategram)). Pour obtenir plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage annoté dans un mise à jour &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-### <a name="a-passing-parameters-to-an-updategram"></a>A. Passage de paramètres à un code de mise à jour  
+### <a name="a-passing-parameters-to-an-updategram"></a>R. Passage de paramètres à un code de mise à jour  
  Dans cet exemple, le code de mise à jour modifie le nom d'un employé dans la table HumanResources.Shift. Deux paramètres sont passés au code de mise à jour : ShiftID, utilisé pour identifier un horaire de travail de manière unique, et Nom.  
   
 ```  
@@ -65,7 +65,7 @@ ms.locfileid: "85790558"
   
 1.  Copiez le code de mise à jour ci-dessus dans le Bloc-notes et enregistrez-le sous le nom UpdategramWithParameters.xml.  
   
-2.  Préparez le script de test SQLXML 4,0 (Sqlxml4test. vbs) dans [à l’aide d’ADO pour exécuter des requêtes sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) afin d’exécuter le mise à jour en ajoutant les lignes suivantes après `cmd.Properties("Output Stream").Value = outStream` :  
+2.  Préparez le script de test SQLXML 4,0 (Sqlxml4test.vbs) dans [à l’aide d’ADO pour exécuter des requêtes sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) afin d’exécuter le mise à jour en ajoutant les lignes suivantes après `cmd.Properties("Output Stream").Value = outStream` :  
 
     ```  
     cmd.NamedParameters = True  
@@ -100,7 +100,7 @@ ms.locfileid: "85790558"
   
 1.  Copiez le code de mise à jour ci-dessus dans le Bloc-notes et enregistrez-le sous le nom UpdategramPassingNullvalues.xml.  
   
-2.  Préparez le script de test SQLXML 4,0 (Sqlxml4test. vbs) dans [à l’aide d’ADO pour exécuter des requêtes sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) afin d’exécuter le mise à jour en ajoutant les lignes suivantes après `cmd.Properties("Output Stream").Value = outStream` :  
+2.  Préparez le script de test SQLXML 4,0 (Sqlxml4test.vbs) dans [à l’aide d’ADO pour exécuter des requêtes sqlxml 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) afin d’exécuter le mise à jour en ajoutant les lignes suivantes après `cmd.Properties("Output Stream").Value = outStream` :  
   
     ```  
     cmd.NamedParameters = True  

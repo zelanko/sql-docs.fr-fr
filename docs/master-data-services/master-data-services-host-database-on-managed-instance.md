@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521089"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469970"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Héberger une base de données MDS sur une instance gérée
 
@@ -51,7 +51,7 @@ Pour vous préparer, vous devez créer et configurer un Managed Instance SQL Azu
      - Extensibilité .NET 3.5
      - Extensibilité .NET 4.5
      - ASP.NET 3.5
-     - ASP.NET 4.5
+     - ASP.NET 4.5
      - Extensions ISAPI
      - Filtres ISAPI
      - Fonctionnalités HTTP communes
@@ -73,7 +73,7 @@ Pour vous préparer, vous devez créer et configurer un Managed Instance SQL Azu
    - Fonctionnalités :
      - .NET Framework 3.5 (inclut .NET 2.0 et 3.0)
      - .NET Framework 4.5 Advanced Services
-     - ASP.NET 4.5
+     - ASP.NET 4.5
      - Services WCF
      - Activation HTTP (obligatoire)
      - Partage de port TCP
@@ -135,22 +135,22 @@ Cette action installe :
 
 1. Une fois la base de données créée et configurée, sélectionnez **Terminer**.
 
-   Pour plus d’informations sur les paramètres de l' **Assistant Création d’une base de données** , consultez [Assistant Création de base de données &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
+   Pour plus d’informations sur les paramètres de l' **Assistant Création d’une base de données**, consultez [Assistant Création de base de données &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
 1. Dans la page **configuration de la base de données** du [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , choisissez **Sélectionner une base de données**.
 
-1. Sélectionnez **se connecter** , choisissez la [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] base de données, puis cliquez sur **OK**.
+1. Sélectionnez **se connecter**, choisissez la [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] base de données, puis cliquez sur **OK**.
 
    ![Capture d’écran de la boîte de dialogue se connecter à la base de données.](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
 1. Dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , sélectionnez **configuration Web** dans le volet gauche.
 
-1. Dans la zone de liste **site** Web, choisissez **site Web par défaut** , puis sélectionnez **créer** pour créer une application Web.
+1. Dans la zone de liste **site** Web, choisissez **site Web par défaut**, puis sélectionnez **créer** pour créer une application Web.
 
    ![Capture d’écran de la boîte de dialogue Gestionnaire de configuration Master Data Services.](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
 
    > [!NOTE]
-   > Si vous sélectionnez **site Web par défaut** , vous devez créer séparément une application Web. Si vous choisissez **créer un nouveau site Web** dans la zone de liste, l’application est automatiquement créée.
+   > Si vous sélectionnez **site Web par défaut**, vous devez créer séparément une application Web. Si vous choisissez **créer un nouveau site Web** dans la zone de liste, l’application est automatiquement créée.
 
 1. Dans la section **pool d’applications** , entrez un autre nom d’utilisateur, entrez le mot de passe, puis sélectionnez **OK**.
 
@@ -214,7 +214,7 @@ Pour résoudre ce problème, vous devez mettre à niveau la version de la base d
 
 1. Dans la page **configuration de la base de données** du [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] , choisissez **Sélectionner une base de données**.
 
-1. Choisissez la [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] base de données que vous avez associée à l’application Web. Sélectionnez **se connecter** , puis cliquez sur **OK**.
+1. Choisissez la [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] base de données que vous avez associée à l’application Web. Sélectionnez **se connecter**, puis cliquez sur **OK**.
 
    ![Capture d’écran de la boîte de dialogue Connexion à une base de données Master Data Service.](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
 
