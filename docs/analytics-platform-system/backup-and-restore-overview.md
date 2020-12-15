@@ -9,12 +9,12 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e7f106e462d3d1bb7848b15523ef3d3f7feed2a1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9dd52db9d34519f2b09cbaba880806c17509c84c
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767208"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489709"
 ---
 # <a name="backup-and-restore"></a>Sauvegarde et restauration
 
@@ -24,7 +24,7 @@ Décrit le fonctionnement de la sauvegarde et de la restauration des données po
 
 Une *sauvegarde de base de données* PDW est une copie d’une base de données d’appliance, stockée dans un format afin de pouvoir être utilisée pour restaurer la base de données d’origine sur un appareil.  
   
-Une sauvegarde de base de données PDW est créée avec l’instruction t-SQL [Backup database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) et mise en forme pour une utilisation avec l’instruction [Restore Database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) . Il est inutilisable à d’autres fins. La sauvegarde ne peut être restaurée que sur une appliance ayant le même nombre ou un plus grand nombre de nœuds de calcul.  
+Une sauvegarde de base de données PDW est créée avec l’instruction t-SQL [Backup database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true) et mise en forme pour une utilisation avec l’instruction [Restore Database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) . Il est inutilisable à d’autres fins. La sauvegarde ne peut être restaurée que sur une appliance ayant le même nombre ou un plus grand nombre de nœuds de calcul.  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -104,7 +104,7 @@ Lors de la restauration de données, l’appliance détecte le nombre de nœuds 
   
 1.  La sauvegarde de base de données à restaurer est disponible sur un partage de fichiers Windows sur un serveur de sauvegarde non-appareil. Pour de meilleures performances, ce serveur est connecté au réseau de l’appliance InfiniBand.  
   
-2.  L’utilisateur soumet une instruction TSQL [Restore Database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) au nœud de contrôle.  
+2.  L’utilisateur soumet une instruction TSQL [Restore Database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true) au nœud de contrôle.  
   
     -   La restauration est une restauration complète ou une restauration d’en-tête. La restauration complète restaure une sauvegarde complète, puis restaure éventuellement une sauvegarde différentielle.  
   
@@ -133,8 +133,8 @@ Après la redistribution, chaque nœud de calcul contiendra moins de données r�
 |Tâche de sauvegarde et de restauration|Description|  
 |---------------------------|---------------|  
 |Préparez un serveur en tant que serveur de sauvegarde.|[Obtenir et configurer un serveur de sauvegarde](acquire-and-configure-backup-server.md)|  
-|Sauvegardez une base de données.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
-|Restaure une base de données.|[RESTAURER LA BASE DE DONNÉES](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
+|Sauvegardez une base de données.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|  
+|Restaurer la base de données.|[RESTAURER LA BASE DE DONNÉES](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)|    
 
 <!-- MISSING LINKS
 

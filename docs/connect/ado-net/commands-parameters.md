@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 931c36619f5eaed0159ee04db3a08eb745634698
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: f899ad41e609874cbcc22c2a3ac959c41574e0eb
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428222"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761527"
 ---
 # <a name="commands-and-parameters"></a>Commandes et paramètres
 
@@ -29,17 +29,22 @@ Vous pouvez également configurer ces objets en tant que propriétés de la comm
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Exécution d’une commande](execute-command.md) décrit l’objet ADO.NET `Command` et comment l’utiliser pour exécuter des requêtes et des commandes sur une source de données.
+[Exécution d’une commande](execute-command.md)  
+Décrit l'objet `Command` et son utilisation pour exécuter des requêtes et des commandes sur une source de données.
 
-[Configuration des paramètres](configure-parameters.md) décrit l’utilisation des paramètres `Command`, notamment la direction, les types de données et la syntaxe des paramètres.
+[Configuration des paramètres](configure-parameters.md)  
+Décrit l'utilisation des paramètres `Command`, y compris la direction, les types de données et la syntaxe des paramètres.
 
 [Génération de commandes avec CommandBuilders](generate-commands-with-commandbuilders.md)  
 Décrit l'utilisation de générateurs de commande pour générer automatiquement les commandes INSERT, UPDATE et DELETE pour un `DataAdapter` ayant une commande SELECT d'analyse unique.
 
-[L’obtention d’une valeur unique à partir d’une base de données](obtain-single-value-from-database.md) explique comment utiliser la méthode `ExecuteScalar` d’un objet `Command` pour retourner une valeur unique à partir d’une requête de base de données.
+[Obtention d’une valeur unique dans une base de données](obtain-single-value-from-database.md)  
+Décrit comment utiliser la méthode `ExecuteScalar` d'un objet `Command` pour retourner une valeur unique à partir d'une requête de base de données.
 
-[Utilisation des commandes pour modifier les données](use-commands-to-modify-data.md) décrit comment utiliser le Fournisseur de données SqlClient Microsoft pour SQL Server pour exécuter des procédures stockées ou des instructions de langage de description de données (DDL).
+[Utilisation des commandes pour modifier les données](use-commands-to-modify-data.md)  
+Décrit comment utiliser le Fournisseur de données Microsoft SqlClient pour SQL Server pour exécuter des procédures stockées ou des instructions du langage de définition de données (DDL).
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Connexion à une source de données](connecting-to-data-source.md)
+- [Microsoft ADO.NET pour SQL Server](microsoft-ado-net-sql-server.md)

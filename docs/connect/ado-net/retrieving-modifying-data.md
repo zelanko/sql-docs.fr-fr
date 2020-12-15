@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419734"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761487"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Extraction et modification de données dans ADO.NET
 
@@ -27,13 +27,23 @@ Une fonction principale de toute application de base de données consiste à se 
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Connexion à une source de données](connecting-to-data-source.md) décrit comment établir une connexion à une source de données et comment utiliser les événements de connexion.
+[Connexion à une source de données](connecting-to-data-source.md)  
+Décrit comment établir une connexion à une source de données et comment travailler avec des événements de connexion.
 
-[Chaînes de connexion](connection-strings.md) contient des rubriques qui décrivent divers aspects de l'utilisation de chaînes de connexion, y compris des mots clés de chaîne de connexion, des informations de sécurité, ainsi que de leur stockage et de leur extraction.
+[Chaînes de connexion](connection-strings.md)  
+Contient des rubriques qui décrivent divers aspects de l'utilisation de chaînes de connexion, y compris des mots clés de chaîne de connexion, des informations de sécurité, ainsi que de leur stockage et leur extraction.
 
-[Regroupement de connexions](connection-pooling.md) décrit le regroupement de connexions pour le Fournisseur de données Microsoft SqlClient pour SQL Server.
+[Regroupement de connexions](connection-pooling.md)  
+Décrit le regroupement de connexions pour le Fournisseur de données Microsoft SqlClient pour SQL Server.
+
+[Commandes et paramètres](commands-parameters.md)  
+Contient des rubriques qui décrivent comment créer des commandes et des générateurs de commande, configurer des paramètres et exécuter des commandes pour extraire et modifier des données.
+
+[DataAdapters et DataReaders](dataadapters-datareaders.md)  
+Contient des rubriques qui décrivent les objets DataReader et DataAdapter, les paramètres, la gestion des événements DataAdapter et l'exécution d'opérations par lots.
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Mappages des types de données dans ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server et ADO.NET](./sql/index.md)
+- [Microsoft ADO.NET pour SQL Server](microsoft-ado-net-sql-server.md)

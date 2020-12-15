@@ -8,17 +8,28 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 11/12/2020
-ms.openlocfilehash: b9bfda0507b81211feefb0fdb2505ae31f0c8c3b
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.date: 12/9/2020
+ms.openlocfilehash: cd990278d7478c089df7b01fa4a3738ad36368c3
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442647"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933845"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](./download-azure-data-studio.md)**
+
+## <a name="december-2020"></a>Décembre 2020
+
+9 décembre 2020 &nbsp; / &nbsp; version : 1.25.0
+
+&nbsp;
+
+| Modifier | Détails |
+| ------ | ------- |
+| Correctifs de bogues | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22December+2020+Release%22). |
+| Mise à jour de l’extension Projets de base de données | Espaces de travail ajoutés et barre latérale améliorée |
 
 ## <a name="november-2020"></a>Novembre 2020
 

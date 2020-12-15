@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41842a2eb754aedc31bad206ad427a86bb65f00f
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126421"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761497"
 ---
 # <a name="connection-pooling"></a>Regroupement de connexions
 
@@ -27,8 +27,10 @@ Se connecter à une source de données peut prendre beaucoup de temps. Pour mini
 
 ## <a name="in-this-section"></a>Dans cette section  
 
-[Le regroupement de connexions SQL Server (ADO.NET)](sql-server-connection-pooling.md) fournit une vue d'ensemble du regroupement de connexions et décrit son fonctionnement dans SQL Server.
+[Regroupement de connexions SQL Server (ADO.NET)](sql-server-connection-pooling.md)  
+Fournit une vue d’ensemble du regroupement de connexions et décrit son fonctionnement dans SQL Server.
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Extraction et modification de données dans ADO.NET](retrieving-modifying-data.md)
+- [Microsoft ADO.NET pour SQL Server](microsoft-ado-net-sql-server.md)

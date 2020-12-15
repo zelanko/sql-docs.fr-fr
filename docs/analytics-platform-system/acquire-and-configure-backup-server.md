@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6e0bbfd3acbc7616fca0f180d6de3238a724231
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767158"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489719"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Acquérir et configurer un serveur de sauvegarde pour les Data Warehouse parallèles
 Cet article explique comment configurer un système non-appareil Windows comme serveur de sauvegarde à utiliser avec les fonctionnalités de sauvegarde et de restauration dans Analytics Platform System (APS) et Parallel Data Warehouse (PDW).  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 Pour plus d'informations, consultez les pages suivantes : 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)   
   
--   [RESTAURER LA BASE DE DONNÉES](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
+-   [RESTAURER LA BASE DE DONNÉES](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Notifications de sécurité  
 Le serveur de sauvegarde n’est pas joint au domaine privé de l’appliance. Il se trouve dans votre propre réseau, et il n’existe aucune relation d’approbation entre votre propre domaine et votre propre domaine d’appliance privé.  
@@ -140,7 +140,7 @@ Pour stocker le nom d’utilisateur et le mot de passe dans PDW, utilisez la pro
   
 Pour supprimer les informations d’identification réseau de PDW, utilisez la procédure stockée [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) .  
   
-Pour répertorier toutes les informations d’identification réseau stockées dans SQL Server PDW, utilisez la vue de gestion dynamique [sys. dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
+Pour répertorier toutes les informations d’identification réseau stockées dans SQL Server PDW, utilisez la vue de gestion dynamique [sys.dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
   
 ### <a name="secure-communications"></a>Communications sécurisées  
   

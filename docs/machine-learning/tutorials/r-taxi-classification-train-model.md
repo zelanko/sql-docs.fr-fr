@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412547"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934023"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>Didacticiel R : Entraîner et enregistrer le modèle
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,9 +40,9 @@ Dans la [cinquième partie](r-taxi-classification-deploy-model.md), vous apprend
 
 Lorsque vous appelez R à partir de T-SQL, vous utilisez la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Toutefois, si les processus sont souvent répétés, notamment pour entraîner à nouveau un modèle, il est plus facile d’encapsuler l’appel à `sp_execute_external_script` dans une autre procédure stockée.
 
-1. Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez une nouvelle fenêtre de **requête** .
+1. Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez une nouvelle fenêtre de **requête**.
 
-2. Exécutez l’instruction suivante pour créer la procédure stockée **RTrainLogitModel** . Cette procédure stockée définit les données d’entrée et utilise **glm** pour créer un modèle de régression logistique.
+2. Exécutez l’instruction suivante pour créer la procédure stockée **RTrainLogitModel**. Cette procédure stockée définit les données d’entrée et utilise **glm** pour créer un modèle de régression logistique.
 
    ```sql
    CREATE PROCEDURE [dbo].[RTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
@@ -79,7 +79,7 @@ Lorsque vous appelez R à partir de T-SQL, vous utilisez la procédure stockée 
   
    + Le script R appelle la fonction R **glm** pour créer le modèle de régression logistique.
   
-     La variable binaire _tipped_ est utilisée comme *étiquette* ou colonne de résultat, et le modèle est adapté à l’aide de ces colonnes de caractéristiques :  _passenger_count_ , _trip_distance_ , _trip_time_in_secs_ et _direct_distance_ .
+     La variable binaire _tipped_ est utilisée comme *étiquette* ou colonne de résultat, et le modèle est adapté à l’aide de ces colonnes de caractéristiques :  _passenger_count_, _trip_distance_, _trip_time_in_secs_ et _direct_distance_.
   
    + Le modèle entraîné (enregistré dans la variable R `logitObj`) est sérialisé et retourné en tant que paramètre de sortie.
 
@@ -99,9 +99,9 @@ Lorsque vous appelez R à partir de T-SQL, vous utilisez la procédure stockée 
 
    « Message(s) STDOUT provenant du script externe : Lignes lues : 1193025, Nombre total de lignes traitées : 1193025, durée totale de la segmentation : 0,093 seconde »
 
-3. Une fois l’instruction terminée, ouvrez la table *nyc_taxi_models* . Le traitement des données et l’ajustement du modèle peuvent prendre un certain temps.
+3. Une fois l’instruction terminée, ouvrez la table *nyc_taxi_models*. Le traitement des données et l’ajustement du modèle peuvent prendre un certain temps.
 
-   Vous pouvez voir qu’une nouvelle ligne a été ajoutée et que celle-ci contient le modèle sérialisé dans la colonne _model_ , ainsi que le nom de modèle **TrainLog_model** dans la colonne _name_ .
+   Vous pouvez voir qu’une nouvelle ligne a été ajoutée et que celle-ci contient le modèle sérialisé dans la colonne _model_ ainsi que le nom de modèle **RTrainLogit_model** dans la colonne _name_.
 
    ```text
    model                        name

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636169"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489543"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Relire une trace dans Assistant Expérimentation de base de données
 
@@ -52,7 +52,7 @@ Tout d’abord, vous devez effectuer une relecture de trace sur la cible 1, qui 
 
 3. Vérifiez que vous avez restauré la ou les bases de données en activant la case à cocher **Oui, j’ai restauré manuellement la ou les bases de données** .
 
-4. Sous **SQL Server les détails**de la connexion, entrez ou sélectionnez les informations suivantes :
+4. Sous **SQL Server les détails** de la connexion, entrez ou sélectionnez les informations suivantes :
 
     - **Type de serveur**: spécifiez le type de SQL Server **(SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
     - **Nom du serveur**: spécifiez le nom du serveur ou l’adresse IP de votre SQL Server.
@@ -139,7 +139,7 @@ Vous pouvez obtenir plus de détails dans les journaux de% temp% \\ DEA. Si le p
 
 - Vérifiez que le service du contrôleur de Distributed Replay est en cours d’exécution sur l’ordinateur contrôleur. Pour vérifier, utilisez les outils de gestion Distributed Replay (exécutez la commande `dreplay.exe status -f 1` ).
 - Si la relecture est démarrée à distance :
-  - Vérifiez que l’ordinateur qui exécute la DEA peut effectuer un test ping sur le contrôleur. Vérifiez que les paramètres du pare-feu autorisent les connexions en suivant les instructions de la page **configurer l’environnement de relecture** . Pour plus d’informations, consultez l’article [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
+  - Vérifiez que l’ordinateur qui exécute la DEA peut effectuer un test ping sur le contrôleur. Vérifiez que les paramètres du pare-feu autorisent les connexions en suivant les instructions de la page **configurer l’environnement de relecture** . Pour plus d’informations, consultez l’article [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
   - Assurez-vous que le lancement à distance DCOM et l’activation à distance sont autorisés pour l’utilisateur du contrôleur de Distributed Replay.
   - Assurez-vous que les droits d’utilisateur de l’accès à distance DCOM sont autorisés pour l’utilisateur du contrôleur de Distributed Replay.
 

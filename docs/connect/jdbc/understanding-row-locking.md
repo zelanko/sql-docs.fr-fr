@@ -2,7 +2,7 @@
 description: Présentation du verrouillage de ligne
 title: Présentation du verrouillage de ligne | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69b04db86ce8784f5f346a4ac0d19b2bedd0e456
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5305f3feaa80d0a83dd1e7bfd97088492608ae5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488020"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901057"
 ---
 # <a name="understanding-row-locking"></a>Présentation du verrouillage de ligne
 
@@ -30,7 +30,7 @@ Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] utilise des ver
 Le verrouillage est utilisé pour garantir l'intégrité transactionnelle et la cohérence de base de données. Le verrouillage empêche les utilisateurs de lire des données qui sont en cours de modification par d'autres utilisateurs et empêche plusieurs utilisateurs de modifier simultanément les mêmes données. Si le verrouillage n'est pas utilisé, les données dans la base de données peuvent devenir logiquement incorrectes et les requêtes exécutées contre ces données peuvent produire des résultats inattendus.
 
 > [!NOTE]  
-> Pour plus d’informations sur le verrouillage de ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la rubrique « Verrouillage du [!INCLUDE[ssDE](../../includes/ssde_md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Pour plus d’informations sur le verrouillage de ligne dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [« Verrouillage dans [!INCLUDE[ssDE](../../includes/ssde_md.md)] »](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## <a name="see-also"></a>Voir aussi
 

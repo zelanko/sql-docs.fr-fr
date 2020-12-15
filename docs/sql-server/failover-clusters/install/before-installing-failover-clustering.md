@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127677"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999241"
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127677"
   
 -   L'administration à distance doit être activée.  
   
--   Pour le port [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour vérifier la configuration réseau [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] du protocole TCP/IP pour l'instance à débloquer. Vous devez activer le port TCP pour IPALL si vous voulez vous connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de TCP après l'installation. SQL Browser écoute sur le port UDP 1434 par défaut.  
+- Pour les instances SQL Server utilisant un port autre que le port par défaut, utilisez la configuration réseau du Gestionnaire de configuration SQL Server pour déterminer le port utilisé par l’instance SQL Server que vous voulez débloquer. Activez le port TCP pour IPALL dans le pare-feu si vous voulez vous connecter à votre instance SQL Server en utilisant le [service SQL Server Browser](../../../tools/configuration-manager/sql-server-browser-service.md), qui utilise une adresse IP différente de celle de l’instance clusterisée et le port UDP 1434. 
   
 -   Les opérations d'installation du cluster de basculement incluent une règle qui vérifie l'ordre de liaison réseau. Bien que les ordres de liaison semblent corrects, il se peut que vous ayez désactivé ou créé des configurations de carte réseau « fantômes » sur le système. Les configurations de carte réseau « fantômes » peuvent affecter l'ordre de liaison et provoquer l'émission d'un avertissement par ce dernier. Pour éviter cela, effectuez les opérations suivantes pour identifier et supprimer les cartes réseau désactivées :  
   

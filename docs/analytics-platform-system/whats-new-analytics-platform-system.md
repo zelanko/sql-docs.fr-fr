@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 590ca4149bc93fd2c22d04f22c3c47b7389245a2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97420166"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489606"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Nouveautés d’Analytics Platform System, un entrepôt de données MPP avec montée en puissance parallèle
 Découvrez les nouveautés des dernières mises à jour d’appliance pour Microsoft Analytics Platform System (APS). APS est un appareil local avec montée en puissance parallèle qui héberge les Data Warehouses MPP SQL Server parallèles. 
@@ -45,13 +45,13 @@ Les clients pourront désormais modifier les vues. Pour plus d’informations, c
 Date de publication : septembre 2019
 
 ### <a name="alter-external-data-source"></a>Modifier la source de données externe
-Les clients seront en mesure de modifier la définition de la source de données externe avec la mise à jour CU 7.5. Les clients avec une haute disponibilité de nœud de nom Hadoop peuvent désormais modifier la source de données pour modifier les arguments en cas de basculement. Pour les APS, seuls l’emplacement, les RESOURCE_MANAGER_LOCATION et les informations d’identification peuvent être modifiés. Pour plus d’informations, consultez [ALTER external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) .
+Les clients seront en mesure de modifier la définition de la source de données externe avec la mise à jour CU 7.5. Les clients avec une haute disponibilité de nœud de nom Hadoop peuvent désormais modifier la source de données pour modifier les arguments en cas de basculement. Pour les APS, seuls l’emplacement, les RESOURCE_MANAGER_LOCATION et les informations d’identification peuvent être modifiés. Pour plus d’informations, consultez [ALTER external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017&preserve-view=true) .
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>Prise en charge de CDH 5,15 et 5,16 avec Polybase
 Polybase sur APS avec mise à jour CU 7.5 prend désormais en charge les versions CDH 5,15 et 5,16 de la distribution Hadoop à partir de Cloudera. Utilisez l’option 6 pour les versions CDH 5. x. 
 
 ### <a name="try_convert-and-try_cast-support"></a>Prise en charge des Try_Convert et des Try_Cast
-CU 7.5 les APS prennent désormais en charge les fonctions TSQL [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) et [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) . Ces deux fonctions retournent une valeur convertie dans le type de données spécifié si la conversion réussit ; Sinon, retourne la valeur null.
+CU 7.5 les APS prennent désormais en charge les fonctions TSQL [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017&preserve-view=true) et [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017&preserve-view=true) . Ces deux fonctions retournent une valeur convertie dans le type de données spécifié si la conversion réussit ; Sinon, retourne la valeur null.
 
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4

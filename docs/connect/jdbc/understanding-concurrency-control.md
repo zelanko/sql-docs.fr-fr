@@ -2,7 +2,7 @@
 title: Présentation du contrôle d'accès concurrentiel
 description: Découvrez le contrôle de la concurrence et comment préserver l’intégrité de la base de données lors du développement d’une application multi-utilisateur avec JDBC Driver pour SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: c44f52697fa8048a8c7db2286c3e69114f658152
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435306"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900942"
 ---
 # <a name="understanding-concurrency-control"></a>Présentation du contrôle d'accès concurrentiel
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "87435306"
   Le contrôle concurrentiel fait référence aux différentes techniques utilisées pour conserver l'intégrité de la base de données lorsque plusieurs utilisateurs mettent à jour des lignes en même temps. Une concurrence incorrecte peut entraîner des problèmes tels que des lectures erronées, des lectures fantômes et des lectures non reproductibles. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit des interfaces pour toutes les techniques de concurrence utilisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour résoudre ces problèmes.  
   
 > [!NOTE]  
->  Pour plus d’informations sur l’accès simultané [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez « Gestion de l’accès concurrentiel aux données » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Pour plus d’informations sur l’accès simultané [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [« Gestion de l’accès concurrentiel aux données »](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#managing-concurrent-data-access).  
   
 ## <a name="remarks"></a>Notes  
  Le pilote JDBC prend en charge les types d'accès simultanés suivants :  

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5c0ddd9aa7c89f7f77212155a0b85089c34087d9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c88a289e21e7cd70980763474e82b7dd6cbd49c2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726299"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489516"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de migration SQL Server avec l’assistant Migration de données
 
@@ -125,23 +125,23 @@ La durée de l’évaluation dépend du nombre de bases de données ajoutées et
 
 2. Examinez les problèmes de compatibilité entre tous les niveaux de compatibilité pris en charge par la version de SQL Server cible que vous avez sélectionnée dans la page **options** .
 
-Vous pouvez examiner les problèmes de compatibilité en analysant l’objet affecté, ses détails et éventuellement un correctif pour chaque problème identifié sous **modifications avec rupture**, **changements de comportement**et **fonctionnalités dépréciées**.
+Vous pouvez examiner les problèmes de compatibilité en analysant l’objet affecté, ses détails et éventuellement un correctif pour chaque problème identifié sous **modifications avec rupture**, **changements de comportement** et **fonctionnalités dépréciées**.
 
 ![Afficher les résultats de l’évaluation](../dma/media/dma-assesssqlonprem/review-results.png)
 
-De même, vous pouvez passer en revue les recommandations relatives aux fonctionnalités dans les domaines des **performances**, du **stockage**et de la **sécurité** .
+De même, vous pouvez passer en revue les recommandations relatives aux fonctionnalités dans les domaines des **performances**, du **stockage** et de la **sécurité** .
 
-Les recommandations relatives aux fonctionnalités couvrent différents types de fonctionnalités, comme OLTP en mémoire, ColumnStore, Stretch Database, Always Encrypted, Dynamic Data Masking et Transparent Data Encryption.
+Les recommandations relatives aux fonctionnalités couvrent différents types de fonctionnalités, telles que In-Memory OLTP, ColumnStore, Stretch Database, Always Encrypted, Dynamic Data Masking et Transparent Data Encryption.
 
 ![Afficher les recommandations relatives aux fonctionnalités](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Par Azure SQL Database, les évaluations fournissent des problèmes de blocage de la migration et des problèmes de parité de fonctionnalité.Passez en revue les résultats des deux catégories en sélectionnant les options spécifiques.
+Par Azure SQL Database, les évaluations fournissent des problèmes de blocage de la migration et des problèmes de parité de fonctionnalité. Passez en revue les résultats des deux catégories en sélectionnant les options spécifiques.
 
 - La catégorie de **parité de fonctionnalité de SQL Server** fournit un ensemble complet de recommandations, d’approches alternatives disponibles dans Azure et d’atténuation des étapes. Il vous aide à planifier cet effort dans vos projets de migration.
 
   ![Afficher des informations sur SQL Server parité des fonctionnalités](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- La catégorie de **problèmes de compatibilité** fournit des fonctionnalités partiellement prises en charge ou non prises en charge qui bloquent la migration de bases de données SQL Serveres locales vers des bases de données SQL Azure.Il fournit ensuite des recommandations pour vous aider à résoudre ces problèmes.
+- La catégorie de **problèmes de compatibilité** fournit des fonctionnalités partiellement prises en charge ou non prises en charge qui bloquent la migration de bases de données SQL Serveres locales vers des bases de données SQL Azure. Il fournit ensuite des recommandations pour vous aider à résoudre ces problèmes.
 
   ![Afficher les problèmes de compatibilité](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
@@ -151,7 +151,7 @@ Si vous souhaitez étendre davantage ces évaluations à l’ensemble de l’esp
 
 Cela vous permet d’afficher les résultats consolidés sur le projet Azure Migrate Hub.
 
-Des instructions pas à pas détaillées sur les évaluations de la disponibilité cible sont disponibles [ici](./dma-assess-sql-data-estate-to-sqldb.md?view=sql-server-2017).
+Des instructions pas à pas détaillées sur les évaluations de la disponibilité cible sont disponibles [ici](./dma-assess-sql-data-estate-to-sqldb.md).
 
    ![Charger les résultats dans Azure Migrate](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 

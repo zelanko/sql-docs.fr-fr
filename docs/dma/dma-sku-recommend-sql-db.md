@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947929"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489495"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifier la référence SKU Azure SQL Database/Managed Instance appropriée pour votre base de données locale
 
@@ -44,7 +44,7 @@ Voici des instructions pour vous aider à déterminer les recommandations relati
 - Assurez-vous que votre ordinateur dispose de [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) ou ultérieure, ce qui est nécessaire pour exécuter tous les scripts. Pour plus d’informations sur la façon de déterminer quelle version de PowerShell est installée sur votre ordinateur, consultez l’article [Télécharger et installer Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
   > [!NOTE]
   > Pour collecter des informations sur l’ordinateur, le script de collecte de données utilise l’applet de commande Get-WmiObject, qui était dépréciée dans PowerShell 6. Pour exécuter ce script dans PowerShell 6 ou 7, vous devez remplacer les applets de commande WMI par les applets de commande CIM plus récentes.
-- Assurez-vous que le module Azure PowerShell est installé sur votre ordinateur. Pour plus d’informations, consultez l’article [installer le module Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Assurez-vous que le module Azure PowerShell est installé sur votre ordinateur. Pour plus d’informations, consultez l’article [installer le module Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
 - Vérifiez que le fichier PowerShell **SkuRecommendationDataCollectionScript.ps1**, qui est requis pour collecter les compteurs de performances, est installé dans le dossier DMA.
 - Assurez-vous que l’ordinateur sur lequel vous allez effectuer ce processus dispose des autorisations d’administrateur sur l’ordinateur qui héberge vos bases de données.
 
@@ -239,4 +239,4 @@ Pour entrer les informations de configuration et apporter des modifications aux 
 
 ## <a name="next-step"></a>Étape suivante
 
-- Pour obtenir la liste complète des commandes d’exécution de DMA à partir de l’interface CLI, consultez l’article [exécuter Assistant Migration de données à partir de la ligne de commande](./dma-commandline.md?view=sql-server-2017).
+- Pour obtenir la liste complète des commandes d’exécution de DMA à partir de l’interface CLI, consultez l’article [exécuter Assistant Migration de données à partir de la ligne de commande](./dma-commandline.md).

@@ -1,5 +1,5 @@
 ---
-title: Chargeur de ligne de commande dwloader
+title: Chargeur de Command-Line dwloader
 description: dwloader est un outil de ligne de commande PDW (Parallel Data Warehouse) qui charge des lignes de table en bloc dans une table existante.
 author: mzaman1
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3635aff3c3dad371c969acd3d72b2fb738748ecc
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767048"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489689"
 ---
-# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Chargeur de ligne de commande dwloader pour les Data Warehouse parallèles
-**dwloader** est un outil de ligne de commande PDW (Parallel Data Warehouse) qui charge des lignes de table en bloc dans une table existante. Lors du chargement de lignes, vous pouvez ajouter toutes les lignes à la fin de la table (mode*Append* ou *mode fastappend*), ajouter de nouvelles lignes et mettre à jour les lignes existantes (*mode upsert*), ou supprimer toutes les lignes existantes avant le chargement, puis insérer toutes les lignes dans une table vide (*mode de rechargement*).  
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader Command-Line Loader pour les Data Warehouse parallèles
+**dwloader** est un outil de ligne de commande PDW (Parallel Data Warehouse) qui charge des lignes de table en bloc dans une table existante. Lors du chargement de lignes, vous pouvez ajouter toutes les lignes à la fin de la table (mode *Append* ou *mode fastappend*), ajouter de nouvelles lignes et mettre à jour les lignes existantes (*mode upsert*), ou supprimer toutes les lignes existantes avant le chargement, puis insérer toutes les lignes dans une table vide (*mode de rechargement*).  
   
 **Processus de chargement des données**  
   
@@ -124,7 +124,7 @@ Affiche des informations d’aide simples sur l’utilisation du chargeur. L’a
 Une connexion d’authentification SQL Server valide avec les autorisations appropriées pour effectuer la charge.  
   
 **-P** *password*  
-Mot de passe d’une *Login_name*d’authentification SQL Server.  
+Mot de passe d’une *Login_name* d’authentification SQL Server.  
   
 **-W**  
 Utiliser l'authentification Windows. (Aucun *login_name* ou *mot de passe* requis.) 
@@ -427,7 +427,7 @@ Si le type de charge est FASTAPPEND, la valeur *BatchSize* s’applique au charg
 Spécifie les options permettant de déterminer le nombre d’échecs de chargement autorisés par le chargeur. Si les échecs de chargement dépassent le seuil, le chargeur s’arrêtera et ne validera aucune ligne.  
   
 **-RT** { **valeur** | pourcentage}  
-Spécifie si le*reject_value* dans l’option **-RV** *reject_value* est un nombre littéral de lignes (valeur) ou un taux d’échec (pourcentage). La valeur par défaut est la valeur.  
+Spécifie si le *reject_value* dans l’option **-RV** *reject_value* est un nombre littéral de lignes (valeur) ou un taux d’échec (pourcentage). La valeur par défaut est la valeur.  
   
 L’option pourcentage est un calcul en temps réel qui se produit à des intervalles en fonction de l’option-RS.  
   
@@ -466,7 +466,7 @@ Avec **-m**, SQL Server PDW effectue et valide les charges en parallèle. Cela s
   
 Sans **-m**, SQL Server PDW effectue et valide les chargements en série sur les distributions au sein de chaque nœud de calcul, et simultanément sur les nœuds de calcul. Cette méthode est plus lente que le mode multi-transaction, mais elle est sécurisée pour les transactions.  
   
-**-m** est facultatif pour *Append*, *Reload*et *upsert*.  
+**-m** est facultatif pour *Append*, *Reload* et *upsert*.  
   
 **-m** est requis pour fastappend.  
   
@@ -528,7 +528,7 @@ Les données chargées peuvent nécessiter plus ou moins d’espace sur l’appl
 Bien que **dwloader** soit un processus de transaction et s’annule normalement en cas d’échec, il ne peut pas être restauré une fois que le chargement en masse a été effectué avec succès. Pour annuler un processus **dwloader** actif, tapez Ctrl + C.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
-La taille totale de toutes les charges se produisant simultanément doit être inférieure à LOG_SIZE pour la base de données, et nous recommandons que la taille totale de toutes les charges simultanées soit inférieure à 50% du LOG_SIZE. Pour atteindre cette limite de taille, vous pouvez fractionner des charges importantes en plusieurs lots. Pour plus d’informations sur les LOG_SIZE, consultez [Create Database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016) .  
+La taille totale de toutes les charges se produisant simultanément doit être inférieure à LOG_SIZE pour la base de données, et nous recommandons que la taille totale de toutes les charges simultanées soit inférieure à 50% du LOG_SIZE. Pour atteindre cette limite de taille, vous pouvez fractionner des charges importantes en plusieurs lots. Pour plus d’informations sur les LOG_SIZE, consultez [Create Database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true) .  
   
 Lors du chargement de plusieurs fichiers à l’aide d’une commande de chargement, toutes les lignes rejetées sont écrites dans le même fichier de rejet. Le fichier rejeté n’indique pas quel fichier d’entrée contient chaque ligne rejetée.  
   
@@ -554,13 +554,13 @@ Le mode Append charge les données en deux phases. La phase 1 charge simultaném
   
 |Type de table|Plusieurs transactions<br />Mode (-m)|La table est vide|Accès concurrentiel pris en charge|Journalisation|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Segment de mémoire (heap)|Oui|Oui|Oui|Minimales|  
-|Segment de mémoire (heap)|Oui|Non|Oui|Minimales|  
-|Segment de mémoire (heap)|Non|Oui|Non|Minimales|  
-|Segment de mémoire (heap)|Non|Non|Non|Minimales|  
-|CL|Oui|Oui|Non|Minimales|  
+|Segment de mémoire (heap)|Oui|Oui|Oui|Minimal|  
+|Segment de mémoire (heap)|Oui|Non|Oui|Minimal|  
+|Segment de mémoire (heap)|Non|Oui|Non|Minimal|  
+|Segment de mémoire (heap)|Non|Non|Non|Minimal|  
+|CL|Oui|Oui|Non|Minimal|  
 |CL|Oui|Non|Oui|Complète|  
-|CL|Non|Oui|Non|Minimales|  
+|CL|Non|Oui|Non|Minimal|  
 |CL|Non|Non|Oui|Complète|  
   
 Le tableau ci-dessus affiche **dwloader** en utilisant le mode Append chargé dans un segment de mémoire ou une table d’index cluster (ci), avec ou sans l’indicateur multitransactionnel, et en chargeant dans une table vide ou une table non vide. Le comportement de verrouillage et de journalisation de chaque combinaison de charge est affiché dans le tableau. Par exemple, si vous chargez (2e) la phase avec le mode Append dans un index cluster sans mode multitransactionnel et dans une table vide, PDW crée un verrou exclusif sur la table et la journalisation est minimale. Cela signifie qu’un client ne sera pas en mesure de charger (2e) la phase et la requête simultanément dans une table vide. Toutefois, lors du chargement avec la même configuration dans une table non vide, PDW n’émet pas de verrou exclusif sur la table et l’accès concurrentiel est possible. Malheureusement, la journalisation complète se produit, ce qui ralentit le processus.  
@@ -695,7 +695,7 @@ Description des paramètres de ligne de commande :
   
 -   *-r \r\n* spécifie chaque ligne dans DimAccount.txt se termine par un retour chariot et un caractère de saut de ligne.  
   
--   *-U <login_name>-P <password> * spécifie la connexion et le mot de passe de la connexion qui dispose des autorisations nécessaires pour effectuer la charge.  
+-   *-U <login_name>-P <password>* spécifie la connexion et le mot de passe de la connexion qui dispose des autorisations nécessaires pour effectuer la charge.  
   
 
 <!-- MISSING LINK

@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fb1f2af32479ef295d578b3fd6f0f7581524d960
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461500"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489527"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -58,13 +58,13 @@ Des colonnes de score supplémentaires, telles que l’intervalle de confiance, 
 Pour permettre l’utilisation de la procédure stockée, SQLCLR doit être activé sur l’instance.
 
 > [!NOTE]
-> Il existe des implications en matière de sécurité pour enabing cette option. Utilisez une autre implémentation, telle que la fonction [Transact-SQL Predict](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017) , si SQLCLR ne peut pas être activé sur votre serveur.
+> L’activation de cette option présente des implications en matière de sécurité. Utilisez une autre implémentation, telle que la fonction [Transact-SQL Predict](../../t-sql/queries/predict-transact-sql.md?view=sql-server-2017&preserve-view=true) , si SQLCLR ne peut pas être activé sur votre serveur.
 
 L’utilisateur a besoin `EXECUTE` d’une autorisation sur la base de données.
 
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-Pour créer et former un modèle, utilisez l’un des algorithmes pris en charge pour R ou python, fournis par [SQL Server machine learning services (r ou python)](../../machine-learning/sql-server-machine-learning-services.md), [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md), [SQL Server machine learning Server (autonome) (r ou python)](../../machine-learning/r/r-server-standalone.md)ou [SQL Server 2016 R Server (autonome)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016).
+Pour créer et former un modèle, utilisez l’un des algorithmes pris en charge pour R ou python, fournis par [SQL Server machine learning services (r ou python)](../../machine-learning/sql-server-machine-learning-services.md), [SQL Server 2016 R Services](../../machine-learning/r/sql-server-r-services.md), [SQL Server machine learning Server (autonome) (r ou python)](../../machine-learning/r/r-server-standalone.md)ou [SQL Server 2016 R Server (autonome)](../../machine-learning/r/r-server-standalone.md?view=sql-server-2016&preserve-view=true).
 
 #### <a name="r-revoscaler-models"></a>R : modèles RevoScaleR
 
