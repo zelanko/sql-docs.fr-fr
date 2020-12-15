@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1038b37cf97fed506d8503ceafb94a7bdabb0b2d
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 043de5c53de1c616b78a4571d3cb61a4f8d44538
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419830"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475100"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "96419830"
 |**pdw_node_id**|**int**|ID unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
 |**distribution_id**|**int**|ID unique de la distribution.|
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  Retourne une ligne pour chaque groupe de lignes columnstore pour chaque table ayant un index columnstore cluster ou non cluster.  
   
  Utilisez **sys.pdw_nodes_column_store_row_groups** pour déterminer le nombre de lignes incluses dans le groupe de lignes et la taille du groupe de lignes.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 823ca21dd04fe89c3b1598fba068a0f58bcceaf3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2e5cd2a11340fe40dbfce93447054be1520fb50e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246759"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476020"
 ---
-# <a name="inserting-data-into-table-valued-parameters-native-client-ole-db-provider"></a>Insertion de données dans des paramètres table (fournisseur Native Client OLE DB)
+# <a name="inserting-data-into-table-valued-parameters-native-client-ole-db-provider"></a>Insertion de données dans des paramètres Table-Valued (fournisseur Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge deux modèles pour que le consommateur spécifie des données pour les lignes de paramètres table : un modèle d’émission et un modèle d’extraction. Pour obtenir un exemple illustrant le modèle de tirage (pull) des données, consultez [Exemples de programmation de données SQL Server](https://msftdpprodsamples.codeplex.com/).  
@@ -29,7 +29,7 @@ ms.locfileid: "87246759"
 > [!NOTE]  
 >  Une colonne de paramètre table doit avoir, soit des valeurs non définies par défaut, soit des valeurs définies par défaut dans toutes les lignes. Il n'est pas possible d'avoir des valeurs par défaut dans certaines lignes et pas d'autres. Par conséquent, dans les liaisons de paramètres table, les seules valeurs d'état autorisées pour les données de colonnes d'ensembles de lignes de paramètres table sont DBSTATUS_S_ISNULL et DBSTATUS_S_OK. DBSTATUS_S_DEFAULT provoque un échec et la valeur d'état liée est définie à DBSTATUS_E_BADSTATUS.  
   
-## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>Modèle d’émission (charge toutes les données de paramètre table en mémoire)  
+## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>Modèle de transmission de type push (charge toutes les données de paramètres table en mémoire)  
  Le modèle d’envoi (push) des données est semblable à l’utilisation des jeux de paramètres (c’est-à-dire le paramètre DBPARAMS dans ICommand::Execute). Le modèle d’envoi des données est utilisé uniquement si les objets d’ensembles de lignes de paramètres table sont utilisés sans implémentation personnalisée des interfaces IRowset. Le modèle d'émission des données est recommandé lorsque le nombre de lignes de l'ensemble de lignes de paramètres table est faible et qu'il ne risque pas d'entraîner une sollicitation excessive de la mémoire dans l'application. Il est plus simple que le modèle d'extraction des données, car les seules fonctionnalités qu'il requiert de la part de l'application du consommateur sont celles communes aux applications OLE DB classiques.  
   
  Le consommateur est censé fournir toutes les données de paramètres table au fournisseur avant d'exécuter une commande. Pour fournir les données, le consommateur remplit un objet d'ensemble de lignes de paramètres table pour chaque paramètre table. L'objet d'ensemble de lignes de paramètres table expose les opérations d'insertion, de définition et de suppression de l'ensemble de lignes, qui permettent au consommateur de manipuler les données de paramètres table. Le fournisseur extrait les données de cet objet d'ensemble de lignes de paramètres table au moment de l'exécution.  

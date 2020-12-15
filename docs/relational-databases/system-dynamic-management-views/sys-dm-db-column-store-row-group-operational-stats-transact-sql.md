@@ -1,6 +1,6 @@
 ---
-description: sys. dm_db_column_store_row_group_operational_stats (Transact-SQL)
-title: sys. dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
+description: sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
+title: sys.dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -13,19 +13,19 @@ dev_langs:
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d384029cb8a226dfed01d14360247d00cb998cd8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aa29c7c3eed19871479e116d8d8969d71c38641d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537607"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475020"
 ---
-# <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-SQL)
+# <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  Retourne l’activité actuelle des e/s au niveau des lignes, du verrouillage et de la méthode d’accès pour les RowGroups compressés dans un index ColumnStore. Utilisez **sys. dm_db_column_store_row_group_operational_stats** pour suivre la durée pendant laquelle une requête de l’utilisateur doit attendre la lecture ou l’écriture dans un rowgroup ou une partition d’un index ColumnStore compressé, et identifier les RowGroups qui rencontrent une activité d’e/s importante ou des zones réactives.  
+  Retourne l’activité actuelle des e/s au niveau des lignes, du verrouillage et de la méthode d’accès pour les RowGroups compressés dans un index ColumnStore. Utilisez **sys.dm_db_column_store_row_group_operational_stats** pour suivre la durée pendant laquelle une requête de l’utilisateur doit attendre la lecture ou l’écriture dans un rowgroup ou une partition d’un index ColumnStore compressé, et identifier les RowGroups qui rencontrent une activité d’e/s importante ou des zones réactives.  
   
  Les index ColumnStore en mémoire n’apparaissent pas dans cette vue DMV.  
  
@@ -61,9 +61,9 @@ ms.locfileid: "89537607"
  [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
- [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

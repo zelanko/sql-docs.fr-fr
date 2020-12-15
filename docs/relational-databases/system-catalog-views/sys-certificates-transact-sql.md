@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 169f0069565c3d1f6561d6edc8e8b459fc77ac9a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486523"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475260"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "88486523"
 |**is_active_for_begin_dialog**|**bit**|Si cette valeur est égale à 1, ce certificat est utilisé pour lancer des échanges de service chiffrés.|  
 |**issuer_name**|**nvarchar (442)**|Nom de l'émetteur du certificat.|  
 |**cert_serial_number**|**nvarchar (64)**|Numéro de série du certificat.|  
-|**sid**|**varbinary (85)**|Numéro d'identification de sécurité (SID) de connexion de ce certificat.|  
+|**sid**|**varbinary(85)**|Numéro d'identification de sécurité (SID) de connexion de ce certificat.|  
 |**string_sid**|**nvarchar(128)**|Représentation en chaîne de caractères du numéro d'identification de sécurité (SID) de connexion de ce certificat|  
 |**subject**|**nvarchar(4000)**|Objet de ce certificat.|  
 |**expiry_date**|**datetime**|Date d'expiration du certificat.|  
 |**start_date**|**datetime**|Moment où le certificat devient valide.|  
-|**d**|**varbinary(32)**|Hachage SHA-1 du certificat. Hachage SHA-1 globalement unique.|  
+|**thumbprint**|**varbinary(32)**|Hachage SHA-1 du certificat. Hachage SHA-1 globalement unique.|  
 |**attested_by**|**nvarchar(260)**|Utilisation réservée au système.|  
 |**pvt_key_last_backup_date**|**datetime**|Date et heure de la dernière exportation de la clé privée du certificat.|  
   

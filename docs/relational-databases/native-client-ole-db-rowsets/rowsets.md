@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2254c566e30cec9e0869e1a09c850e7013e0482a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1af4116ce0318a4a88c66fc4560b4158b7501bc8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246831"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476070"
 ---
 # <a name="rowsets-native-client-ole-db-provider"></a>Ensembles de lignes (fournisseur OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,17 +50,17 @@ ms.locfileid: "87246831"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Création d'un ensemble de lignes avec IOpenRowset](../../relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
+-   [Création d’un ensemble de lignes avec IOpenRowset](../../relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [Création d'ensembles de lignes avec ICommand::Execute](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [Création d’ensembles de lignes avec ICommand::Execute](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
--   [Propriétés et comportements de l’ensemble de lignes](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
+-   [Propriétés et comportements des ensembles de lignes](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
 -   [Ensembles de lignes et curseurs SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   
--   [Extraction de lignes](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  
+-   [Récupération de lignes](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  
   
--   [Extraction d'une ligne unique avec IRow](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [Récupération d’une ligne unique avec IRow](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
 -   [Signets](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
   

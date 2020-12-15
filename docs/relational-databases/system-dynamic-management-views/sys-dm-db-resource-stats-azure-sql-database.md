@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 0f1a31c5822ca8d3d7a18eed49145d37a07b49ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833703"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475010"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "91833703"
 |avg_cpu_percent|**décimal (5, 2)**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
 |avg_data_io_percent|**décimal (5, 2)**|Utilisation moyenne des e/s de données en pourcentage de la limite du niveau de service. Pour les bases de données Hyperscale, consultez [e/s de données dans statistiques d’utilisation des ressources](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**décimal (5, 2)**|Moyenne des écritures du journal des transactions (en Mbits/s) en pourcentage de la limite du niveau de service.|  
-|avg_memory_usage_percent|**décimal (5, 2)**|Utilisation moyenne de la mémoire en pourcentage de la limite de la couche de service.<br /><br /> Cela comprend la mémoire utilisée pour les pages du pool de mémoires tampons et le stockage des objets OLTP en mémoire.|  
-|xtp_storage_percent|**décimal (5, 2)**|Utilisation du stockage pour l’OLTP en mémoire en pourcentage de la limite du niveau de service (à la fin de l’intervalle de création de rapports). Cela comprend la mémoire utilisée pour le stockage des objets OLTP en mémoire suivants : les tables optimisées en mémoire, les index et les variables de table. Il comprend également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si l’OLTP en mémoire n’est pas utilisé dans la base de données.|  
+|avg_memory_usage_percent|**décimal (5, 2)**|Utilisation moyenne de la mémoire en pourcentage de la limite de la couche de service.<br /><br /> Cela comprend la mémoire utilisée pour les pages du pool de mémoires tampons et le stockage des objets OLTP In-Memory.|  
+|xtp_storage_percent|**décimal (5, 2)**|Utilisation du stockage pour In-Memory OLTP en pourcentage de la limite du niveau de service (à la fin de l’intervalle de création de rapports). Cela comprend la mémoire utilisée pour le stockage des objets OLTP In-Memory suivants : les tables optimisées en mémoire, les index et les variables de table. Il comprend également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si In-Memory OLTP n’est pas utilisé dans la base de données.|  
 |max_worker_percent|**décimal (5, 2)**|Nombre maximal de threads de travail simultanés (demandes) en pourcentage de la limite du niveau de service de la base de données.|  
 |max_session_percent|**décimal (5, 2)**|Nombre maximal de sessions simultanées en pourcentage de la limite du niveau de service de la base de données.|  
 |dtu_limit|**int**|Paramètre DTU maximal de la base de données actuelle pour cette base de données au cours de cet intervalle. Pour les bases de données utilisant le modèle vCore, cette colonne a la valeur NULL.|
@@ -56,7 +56,7 @@ ms.locfileid: "91833703"
 ## <a name="permissions"></a>Autorisations
  Cette vue nécessite l'autorisation VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarks
  Les données retournées par **sys.dm_db_resource_stats** sont exprimées sous la forme d’un pourcentage des limites maximales autorisées pour le niveau de service/niveau de performances que vous exécutez.
  
  Si la base de données a basculé vers un autre serveur dans les 60 dernières minutes, la vue ne retourne que les données pour la durée écoulée depuis le basculement.  

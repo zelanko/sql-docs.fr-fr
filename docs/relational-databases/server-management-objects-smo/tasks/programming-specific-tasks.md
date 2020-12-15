@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68b952ed0497f9c5c94b9ef71b8e06e495900616
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b8415ab941364efce2f6a1b273e3eb48a1751b30
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455481"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475460"
 ---
 # <a name="programming-specific-tasks"></a>Programmation de tâches spécifiques
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88455481"
 |[Octroi, révocation et refus d'autorisations](../../../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md)|Explique comment utiliser SMO pour accorder, révoquer et refuser des autorisations aux utilisateurs ou membres d'un rôle.|  
 |[Utilisation du chiffrement](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)|Explique comment protéger des données à l'aide du chiffrement dans SMO.|  
 |[Planification des tâches administratives automatiques dans l'Agent SQL Server](../../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md)|Explique comment utiliser l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour analyser, signaler et planifier des travaux dans SMO.|  
-|[Sauvegarde et restauration de bases de données et de journaux de transactions](../../../relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md)|Explique comment sauvegarder et restaurer des bases de données et des journaux des transactions dans SMO.|  
+|[Sauvegarde et restauration des bases de données et des journaux des transactions](../../../relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md)|Explique comment sauvegarder et restaurer des bases de données et des journaux des transactions dans SMO.|  
 |[Création de scripts](../../../relational-databases/server-management-objects-smo/tasks/scripting.md)|Explique comment créer des scripts basés sur des objets et découvrir les dépendances entre les objets dans SMO.|  
 |[Transfert de données](../../../relational-databases/server-management-objects-smo/tasks/transferring-data.md)|Explique comment transférer des données dans SMO.|  
 |[Utilisation de la messagerie de base de données](../../../relational-databases/server-management-objects-smo/tasks/using-database-mail.md)|Explique comment SMO utilise les services de messagerie électronique.|  

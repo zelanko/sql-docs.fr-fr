@@ -1,6 +1,6 @@
 ---
 description: sys.database_permissions (Transact-SQL)
-title: sys. database_permissions (Transact-SQL) | Microsoft Docs
+title: sys.database_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc503cec67334a95a7e5e06e19a3b6eb722e27f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0af3adae81e4f0bb9489e3534427dfe03efebf09
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469957"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475250"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "88469957"
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifie la classe sur laquelle l'autorisation existe.<br /><br /> 0 = Base de données<br />1 = objet ou colonne<br />3 = Schéma<br />4 = Principal de la base de données<br />5 = assembly- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />6 = Type<br />10 = collection de schémas XML- <br />                      **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />15 = type de message : **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />16 = contrat de service- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />17 = service- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />18 = liaison de service distant- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />19 = route- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />23 = catalogue de texte intégral- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />24 = clé symétrique- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />25 = certificat- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br />26 = clé asymétrique- **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|  
 |**class_desc**|**nvarchar(60)**|Description de la classe sur laquelle l'autorisation existe.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|ID de l'objet sur lequel l'autorisation existe, interprété en fonction de la classe. En règle générale, le **major_id** est simplement le type d’ID qui s’applique à ce que la classe représente. <br /><br /> 0 = la base de données elle-même <br /><br /> >0 = ID d’objet pour les objets utilisateur <br /><br /> \<0 = ID d’objet pour les objets système |  
+|**major_id**|**int**|ID de l'objet sur lequel l'autorisation existe, interprété en fonction de la classe. En règle générale, le **major_id** est simplement le type d’ID qui s’applique à ce que la classe représente. <br /><br /> 0 = la base de données elle-même <br /><br /> >0 = Object-IDs pour les objets utilisateur <br /><br /> \<0 = Object-IDs pour les objets système |  
 |**minor_id**|**int**|ID secondaire de l'objet sur lequel l'autorisation existe, interprété en fonction de la classe. Souvent, le **minor_id** est égal à zéro, car aucune sous-catégorie n’est disponible pour la classe de l’objet. Dans le cas contraire, il s’agit de l’ID de colonne d’une table.|  
 |**grantee_principal_id**|**int**|ID du principal de la base de données à laquelle les autorisations sont accordées.|  
 |**grantor_principal_id**|**int**|ID du principal de la base de données du fournisseur de ces autorisations.|  
 |**type**|**Char (4)**|Type d'autorisation de la base de données. Pour obtenir la liste des types d'autorisations, consultez le tableau ci-dessous.|  
 |**permission_name**|**nvarchar(128)**|Nom de l’autorisation.|  
-|**state**|**Char(1**|État de l'autorisation :<br /><br /> D = Refusée<br /><br /> R = Révoquée<br /><br /> G = Accordée<br /><br /> W = Accordée avec option Grant|  
+|**state**|**char(1)**|État de l'autorisation :<br /><br /> D = Refusée<br /><br /> R = Révoquée<br /><br /> G = Accordée<br /><br /> W = Accordée avec option Grant|  
 |**state_desc**|**nvarchar(60)**|Description de l'état de l'autorisation :<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>Autorisations de base de données   
@@ -110,7 +110,7 @@ Les types d’autorisations suivants sont possibles.
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|Suppression|DATABASE, OBJECT, SCHEMA|  
+|DL|DELETE|DATABASE, OBJECT, SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|Exécutez|ASSEMBLY, DATABASE, OBJECT, SCHEMA, TYPE, XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|Utilisateur|  

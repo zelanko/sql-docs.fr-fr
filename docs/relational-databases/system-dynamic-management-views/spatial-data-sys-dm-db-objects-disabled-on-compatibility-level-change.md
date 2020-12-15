@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)
-title: sys. dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4779675cd37f6f49f90ab01fa17e5f5e9259260
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdb9fb661ed0da6eee45206acb302922243609c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519033"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475080"
 ---
-# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Données spatiales-sys. dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Données spatiales-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Répertorie les index et les contraintes qui seront désactivés suite à la modification du niveau de compatibilité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les index et les contraintes qui contiennent des colonnes calculées persistantes dont les expressions utilisent des types définis par l'utilisateur spatiaux sont désactivés après une mise à niveau ou une modification du niveau de compatibilité. Utilisez cette fonction de gestion dynamique pour déterminer l'impact d'un changement de niveau de compatibilité.  
@@ -147,7 +147,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  Requiert l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre une requête sur **sys. dm_db_objects_disabled_on_compatibility_level_change** pour rechercher les objets affectés en modifiant le niveau de compatibilité sur 120.  
+ L’exemple suivant montre une requête sur **sys.dm_db_objects_disabled_on_compatibility_level_change** pour rechercher les objets affectés en modifiant le niveau de compatibilité sur 120.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

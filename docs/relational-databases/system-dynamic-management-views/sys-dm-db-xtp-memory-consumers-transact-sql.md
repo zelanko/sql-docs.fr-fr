@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_memory_consumers (Transact-SQL)
-title: sys. dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 321297a2590a18ed7e51364b3f532076f90ce740
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542229"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474970"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -51,10 +51,10 @@ ms.locfileid: "89542229"
 |sizeclass_count|**int**|À usage interne uniquement|  
 |min_sizeclass|**int**|À usage interne uniquement|  
 |max_sizeclass|**int**|À usage interne uniquement|  
-|memory_consumer_address|**varbinary**|Adresse interne du consommateur. Uniquement réservé à un usage interne.|  
+|memory_consumer_address|**varbinary**|Adresse interne du consommateur. À usage interne uniquement.|  
 |xtp_object_id|**bigint**|ID d’objet OLTP en mémoire qui correspond à la table optimisée en mémoire.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Dans le résultat, les allocateurs au niveau de la base de données font référence aux tables utilisateur, aux index, et aux tables système. VARHEAP avec object_id = NULL fait référence à la mémoire allouée aux tables contenant des colonnes de longueur variable.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -65,7 +65,7 @@ ms.locfileid: "89542229"
  Les tables système sont retournées uniquement pour les utilisateurs qui ont l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Lorsqu’une table mémoire optimisée a un index ColumnStore, le système utilise des tables internes, qui consomment de la mémoire, pour suivre les données de l’index ColumnStore. Pour plus d’informations sur ces tables internes et des exemples de requêtes indiquant leur consommation de mémoire, consultez [sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+ Lorsqu’une table mémoire optimisée a un index ColumnStore, le système utilise des tables internes, qui consomment de la mémoire, pour suivre les données de l’index ColumnStore. Pour plus d’informations sur ces tables internes et des exemples de requêtes indiquant leur consommation de mémoire, consultez [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
 ## <a name="examples"></a>Exemples  
@@ -112,7 +112,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- La mémoire totale allouée et utilisée à partir de cette vue de gestion dynamique est identique au niveau objet dans [sys. dm_db_xtp_table_memory_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ La mémoire totale allouée et utilisée à partir de cette vue de gestion dynamique est identique au niveau objet dans [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   

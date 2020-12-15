@@ -1,5 +1,5 @@
 ---
-description: Création de scripts
+description: Scripts
 title: Scripts | Documents Microsoft
 ms.custom: ''
 ms.date: 08/06/2017
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d36bbbe1f52ffb6ff7b020b339e136e2482d1aa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0f59d526c2b238eb5bed080087cfbc453dabee8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448041"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475440"
 ---
-# <a name="scripting"></a>Création de scripts
+# <a name="scripting"></a>Scripts
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Les scripts dans SMO sont contrôlés par l' <xref:Microsoft.SqlServer.Management.Smo.Scripter> objet et ses objets enfants, ou par la méthode de **script** sur des objets individuels. L' <xref:Microsoft.SqlServer.Management.Smo.Scripter> objet contrôle le mappage à partir des relations de dépendance pour les objets sur une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
