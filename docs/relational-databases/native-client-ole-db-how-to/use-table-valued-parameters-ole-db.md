@@ -1,5 +1,5 @@
 ---
-description: Utiliser des paramètres table en SQL Server Native Client (OLE DB)
+description: Utiliser des paramètres de Table-Valued dans SQL Server Native Client (OLE DB)
 title: Utiliser des paramètres table (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,15 +11,15 @@ ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d8e35803c71047f73faac83cb79f309cf803a27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9e5c470cc438f9985e93313d746bf0671c0b8a59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448431"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97419611"
 ---
-# <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>Utiliser des paramètres table en SQL Server Native Client (OLE DB)
+# <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>Utiliser des paramètres de Table-Valued dans SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure. L’exemple fait ce qui suit :  
