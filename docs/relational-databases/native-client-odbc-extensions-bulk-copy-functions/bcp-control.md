@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f84f1afbc1ede59e170e3fa4d17c9b921d2d1674
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 24aac8fe3f903ebb0cadec8f662a1cc870340d1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499216"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473810"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -128,19 +128,19 @@ RETCODE bcp_control (
  Lorsque la valeur est TRUE, spécifie que le fichier d'entrée est un fichier Unicode.  
   
  *iValue*  
- Valeur du *eOption*spécifié. *iValue* est une valeur entière (LongLong) transtypée en un pointeur void pour permettre une expansion future vers des valeurs 64 bits.  
+ Valeur du *eOption* spécifié. *iValue* est une valeur entière (LongLong) transtypée en un pointeur void pour permettre une expansion future vers des valeurs 64 bits.  
   
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Cette fonction définit différents paramètres de contrôle pour les opérations de copie en bloc, y compris le nombre d'erreurs autorisées avant l'annulation de la copie en bloc, les numéros des première et dernière lignes à copier à partir d'un fichier de données, et la taille du lot.  
   
  Cette fonction est également utilisée pour spécifier l'instruction SELECT lors de la copie en bloc à partir du jeu de résultats [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'une instruction SELECT. Affectez à *eOption* la valeur valeur BCPHINTS et à *iValue* la valeur d’un pointeur vers une chaîne SQLTCHAR contenant l’instruction SELECT.  
   
  Ces paramètres de contrôle ne sont explicites qu'en cas de copie entre un fichier utilisateur et une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les paramètres de contrôle n’ont aucun effet sur les lignes copiées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // Variables like henv not specified.  
@@ -204,7 +204,7 @@ printf_s("%ld rows processed by bulk copy.", nRowsProcessed);
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

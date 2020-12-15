@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b060b0d22b3fa4eb5557b6903164974874f5d30
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 847e046c89a11ec8d26db47d33f6f605c24cef28
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753928"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474710"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91753928"
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|Nom de la base de données active|  
 |**SCHEMA_NAME**|**nvarchar (** 128 **)**|Renvoie le nom du schéma|  
-|**SCHEMA_OWNER**|**nvarchar (** 128 **)**|Nom du propriétaire du schéma<br /><br /> **&#42;&#42;  &#42;&#42;importante ** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. Les vues de INFORMATION_SCHEMA représentent seulement un sous-ensemble des métadonnées d’un objet. La seule méthode fiable pour rechercher le schéma d'un objet est d'interroger l'affichage catalogue sys.objects.|  
+|**SCHEMA_OWNER**|**nvarchar (** 128 **)**|Nom du propriétaire du schéma<br /><br /> **&#42;&#42;  &#42;&#42;importante** N’utilisez pas de vues de INFORMATION_SCHEMA pour déterminer le schéma d’un objet. Les vues de INFORMATION_SCHEMA représentent seulement un sous-ensemble des métadonnées d’un objet. La seule méthode fiable pour rechercher le schéma d'un objet est d'interroger l'affichage catalogue sys.objects.|  
 |**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Retourne toujours la valeur Null.|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Retourne toujours la valeur Null.|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|Renvoie le nom du jeu de caractères par défaut|  

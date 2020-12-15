@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f60adc4bdd8e8d3cdfc7f44751854b97a2f7345
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 16a51a2578718db33e27a5c0c027f607eb4d37fc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535683"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474640"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Une fois qu'un verrou d'application a été acquis, seuls les 32 premiers caractères peuvent être récupérés sous forme de texte brut ; les autres caractères sont hachés.  
   
  [ @LockMode =] '*lock_mode*'  
- Mode de verrouillage à obtenir pour une ressource spécifique. *lock_mode* est de type **varchar (32)** et n’a pas de valeur par défaut. La valeur peut être l’une des suivantes : **Shared**, **Update**, **IntentShared**, **IntentExclusive**ou **exclusive**. Pour plus d’informations, consultez [modes de verrouillage](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ Mode de verrouillage à obtenir pour une ressource spécifique. *lock_mode* est de type **varchar (32)** et n’a pas de valeur par défaut. La valeur peut être l’une des suivantes : **Shared**, **Update**, **IntentShared**, **IntentExclusive** ou **exclusive**. Pour plus d’informations, consultez [modes de verrouillage](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner =] '*lock_owner*'  
  Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est **de type varchar (32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque la valeur de *lock_owner* est **transaction**, par défaut ou explicitement spécifiée, sp_getapplock doit être exécutée à partir d’une transaction.  
@@ -79,7 +79,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|La demande de verrou a été choisie comme victime du blocage.|  
 |-999|Erreur de validation de paramètre ou autre erreur d'appel.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Les verrous placés sur une ressource sont associés à la transaction en cours ou à la session en cours. Les verrous associés à la transaction en cours sont libérés lorsque la transaction est validée ou annulée. Les verrous associés à la session sont libérés lorsque la session est déconnectée. Lorsque le serveur s’arrête pour une raison quelconque, tous les verrous sont libérés.  
   
  La ressource de verrou créée par sp_getapplock est créée dans la base de données active de la session. Chaque ressource de verrou est identifiée par les valeurs combinées :  

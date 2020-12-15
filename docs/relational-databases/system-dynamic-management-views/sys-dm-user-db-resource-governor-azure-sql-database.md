@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 933b7749218e71a66cdc6d0a25666be32c8badfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753723"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474750"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -95,7 +95,7 @@ Retourne les paramètres réels de configuration et de capacité utilisés par l
 
 Cette vue nécessite l'autorisation VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarks
 
 Pour obtenir une description de la gouvernance des ressources dans Azure SQL Database, consultez [limites des ressources de SQL Database](/azure/sql-database/sql-database-resource-limits-database-server).
 

@@ -1,6 +1,6 @@
 ---
 description: sys.fn_virtualfilestats (Transact-SQL)
-title: sys. fn_virtualfilestats (Transact-SQL) | Microsoft Docs
+title: sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ helpviewer_keywords:
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fedf4b7412578bb73a717d1646f29ac1471b14ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5cb40699cf7c4ba8c2391ea12d0c060f2c388986
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481788"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474740"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Retourne des statistiques sur les entrées/sorties (E/S) des fichiers de base de données, notamment sur les fichiers journaux. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ces informations sont également disponibles à partir de la vue de gestion dynamique [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
+  Retourne des statistiques sur les entrées/sorties (E/S) des fichiers de base de données, notamment sur les fichiers journaux. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ces informations sont également disponibles dans le [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) vue de gestion dynamique.  
 
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,9 +65,9 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**IoStallWriteMS**|**bigint**|Durée totale (en millisecondes) d'exécution des E/S d'écriture sur le fichier|  
 |**IoStallMS**|**bigint**|Somme de **IoStallReadMS** et **IoStallWriteMS**.|  
 |**FileHandle**|**bigint**|Valeur du handle de fichier.|  
-|**BytesOnDisk**|**bigint**|Taille physique du fichier sur le disque (en octets).<br /><br /> Pour les fichiers de base de données, il s’agit de la même valeur que la **taille** dans **sys. database_files**, mais est exprimé en octets plutôt que sous forme de pages.<br /><br /> Dans le cas des fichiers partiellement alloués d'instantané de base de données, il s'agit de l'espace qu'utilise le système d'exploitation pour ceux-ci.|  
+|**BytesOnDisk**|**bigint**|Taille physique du fichier sur le disque (en octets).<br /><br /> Pour les fichiers de base de données, il s’agit de la même valeur que la **taille** dans **sys.database_files**, mais elle est exprimée en octets plutôt que en pages.<br /><br /> Dans le cas des fichiers partiellement alloués d'instantané de base de données, il s'agit de l'espace qu'utilise le système d'exploitation pour ceux-ci.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  **fn_virtualfilestats** est une fonction table système qui fournit des informations statistiques, telles que le nombre total d’e/s effectuées sur un fichier. Cette fonction vous permet d'enregistrer et de suivre la durée d'attente de l'utilisateur avant de pouvoir lire ou écrire dans un fichier. Cette fonction permet également d'identifier les fichiers dont l'activité est intense au niveau des entrées/sorties (E/S).  
   
 ## <a name="permissions"></a>Autorisations  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fb15ad9040276302586efc1b9661ff1e08e62e2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 184328e9b6d5c197b06f89f151942535a90f7f91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548398"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474650"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -100,7 +100,7 @@ sp_addextendedproperty
  Les propriétés étendues sont répliquées uniquement dans la synchronisation initiale entre le serveur de publication et l'Abonné. Si vous ajoutez ou modifiez une propriété étendue après la synchronisation initiale, la modification n'est pas répliquée. Pour plus d’informations sur la façon de répliquer des objets de base de données, consultez [publier des données et des objets de base de](../../relational-databases/replication/publish/publish-data-and-database-objects.md)données.  
   
 ## <a name="schema-vs-user"></a>Schéma ou  Utilisateur  
- Nous ne vous recommandons pas de spécifier l'argument USER comme type de niveau 0 lorsque vous appliquez une propriété étendue à un objet de base de données, car vous pourriez engendrer une ambiguïté de résolution de noms. Par exemple, supposez que l'utilisateur Marie détient deux schémas (Marie et MySchema) et que ceux-ci contiennent tous deux une table intitulée MyTable. Si Mary ajoute une propriété étendue à la table MyTable et spécifie ** @level0type = n’User'**, ** @level0name = Mary**, il n’est pas évident de savoir à quelle table la propriété étendue est appliquée. Pour assurer la compatibilité descendante, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique la propriété étendue à la table contenue dans le schéma nommé Mary.  
+ Nous ne vous recommandons pas de spécifier l'argument USER comme type de niveau 0 lorsque vous appliquez une propriété étendue à un objet de base de données, car vous pourriez engendrer une ambiguïté de résolution de noms. Par exemple, supposez que l'utilisateur Marie détient deux schémas (Marie et MySchema) et que ceux-ci contiennent tous deux une table intitulée MyTable. Si Mary ajoute une propriété étendue à la table MyTable et spécifie **@level0type = n’User'**, **@level0name = Mary**, il n’est pas évident de savoir à quelle table la propriété étendue est appliquée. Pour assurer la compatibilité descendante, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique la propriété étendue à la table contenue dans le schéma nommé Mary.  
   
 ## <a name="permissions"></a>Autorisations  
  Les membres des rôles de base de données fixes db_owner et db_ddladmin peuvent ajouter des propriétés étendues à n'importe quel objet, avec toutefois la restriction suivante : db_ddladmin ne peut pas ajouter de propriétés à la base de données elle-même, ni aux utilisateurs ou rôles.  
@@ -238,7 +238,7 @@ EXEC sys.sp_addextendedproperty
   
 ## <a name="see-also"></a>Voir aussi  
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
