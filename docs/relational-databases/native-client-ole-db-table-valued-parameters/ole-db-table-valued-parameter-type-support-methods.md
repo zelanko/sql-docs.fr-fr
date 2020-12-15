@@ -1,6 +1,6 @@
 ---
-description: Prise en charge OLE DB type de paramètre table dans les SQL Server Native Client (méthodes)
-title: Type de paramètre table OLE DB (méthodes)
+description: Prise en charge du type de paramètre OLE DB Table-Valued dans SQL Server Native Client (méthodes)
+title: Type de paramètre OLE DB Table-Valued (méthodes)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4552440a8c4b970fbbf95af4cf084dace53d17d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81fc48569ff6cc53b0c1003b96efc6095b0e6734
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484941"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-methods"></a>Prise en charge OLE DB type de paramètre table dans les SQL Server Native Client (méthodes)
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-methods"></a>Prise en charge du type de paramètre OLE DB Table-Valued dans SQL Server Native Client (méthodes)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Les méthodes OLE DB standard suivantes prennent en charge les paramètres table :  

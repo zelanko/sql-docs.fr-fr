@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_workload_groups (Transact-SQL)
-title: sys. dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
+title: sys.dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2020
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27116016633e9a7d12bf87c39f1bb6e6fc6cd4bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 696543b1fc06090609a6404f228970e02a540a8e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543861"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484611"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "89543861"
   Retourne les statistiques de groupe de charges de travail et la configuration en mémoire actuelle du groupe de charges de travail. Cette vue peut être jointe avec sys.dm_resource_governor_resource_pools pour obtenir le nom de pool de ressources.  
   
 > [!NOTE]  
->  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_resource_governor_workload_groups**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_resource_governor_workload_groups**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ID du groupe de charges de travail. N'accepte pas la valeur NULL.|  
 |name|**sysname**|Nom du groupe de charges de travail. N'accepte pas la valeur NULL.|  
 |pool_id|**int**|ID du pool de ressources. N'accepte pas la valeur NULL.|  
-|external_pool_id|**int**|**S’applique à : à**partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br /> ID du pool de ressources externes. N'accepte pas la valeur NULL.|  
+|external_pool_id|**int**|**S’applique à : à** partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br /> ID du pool de ressources externes. N'accepte pas la valeur NULL.|  
 |statistics_start_time|**datetime**|Heure à laquelle la collection de statistiques a été réinitialisée pour le groupe de charges de travail. N'accepte pas la valeur NULL.|  
 |total_request_count|**bigint**|Nombre cumulatif de demandes traitées dans le groupe de charges de travail. N'accepte pas la valeur NULL.|  
 |total_queued_request_count|**bigint**|Nombre cumulatif de demandes mises en file d'attente une fois la limite GROUP_MAX_REQUESTS atteinte. N'accepte pas la valeur NULL.|  
@@ -64,13 +64,13 @@ ms.locfileid: "89543861"
 |request_memory_grant_timeout_sec|**int**|Paramètre actuel du délai d'attente d'allocation de mémoire, en secondes, pour une demande unique. N'accepte pas la valeur NULL.|  
 |group_max_requests|**int**|Paramètre actuel du nombre maximal de demandes simultanées. N'accepte pas la valeur NULL.|  
 |max_dop|**int**|Degré maximal de parallélisme configuré pour le groupe de charge de travail. La valeur par défaut 0 utilise des paramètres globaux. N'accepte pas la valeur NULL.| 
-|effective_max_dop|**int**|**S’applique à : à**partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Degré maximal de parallélisme effectif pour le groupe de charge de travail. N'accepte pas la valeur NULL.| 
-|total_cpu_usage_preemptive_ms|**bigint**|**S’applique à : à**partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Temps processeur total utilisé lors de la planification en mode préemptif pour le groupe de charge de travail, mesuré en ms. N'accepte pas la valeur NULL.<br /><br />Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif.| 
-|request_max_memory_grant_percent_numeric|**float**|**S’applique à : à**partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Paramètre actuel de l'allocation de mémoire maximale, en pourcentage, pour une demande unique. N'accepte pas la valeur NULL.| 
+|effective_max_dop|**int**|**S’applique à : à** partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Degré maximal de parallélisme effectif pour le groupe de charge de travail. N'accepte pas la valeur NULL.| 
+|total_cpu_usage_preemptive_ms|**bigint**|**S’applique à : à** partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Temps processeur total utilisé lors de la planification en mode préemptif pour le groupe de charge de travail, mesuré en ms. N'accepte pas la valeur NULL.<br /><br />Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif.| 
+|request_max_memory_grant_percent_numeric|**float**|**S’applique à : à** partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Paramètre actuel de l'allocation de mémoire maximale, en pourcentage, pour une demande unique. N'accepte pas la valeur NULL.| 
 |pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
-## <a name="remarks"></a>Notes  
- Cette vue de gestion dynamique montre la configuration en mémoire. Pour afficher les métadonnées de configuration stockées, utilisez l’affichage catalogue [sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
+## <a name="remarks"></a>Remarks  
+ Cette vue de gestion dynamique montre la configuration en mémoire. Pour afficher les métadonnées de configuration stockées, utilisez l’affichage catalogue [sys.resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
   
  Lorsque `ALTER RESOURCE GOVERNOR RESET STATISTICS` est exécuté avec succès, les compteurs suivants sont réinitialisés : `statistics_start_time` , `total_request_count` , `total_queued_request_count` , `total_cpu_limit_violation_count` , `total_cpu_usage_ms` , `max_request_cpu_time_ms` , `total_lock_wait_count` , `total_lock_wait_time_ms` , `total_query_optimization_count` , `total_suboptimal_plan_generation_count` , `total_reduced_memgrant_count` et `max_request_grant_memory_kb` . Le compteur `statistics_start_time` est défini sur la date et l’heure système actuelles et les autres compteurs ont la valeur zéro (0).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "89543861"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   

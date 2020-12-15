@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25f65c590c4b1d6dadfc0c34dc375a97ce638086
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ca7253dc04d629f1bed01b8e952752af06b236b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547925"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484531"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -54,25 +54,25 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="arguments"></a>Arguments  
 `[ @sequence_name = ] N'sequence'` Nom de l’objet séquence. Le schéma est facultatif. *sequence_name* est **de type nvarchar (776)**.  
   
-`[ @range_size = ] range_size` Nombre de valeurs à extraire de la séquence. ** \@ range_size** est de type **bigint**.  
+`[ @range_size = ] range_size` Nombre de valeurs à extraire de la séquence. **\@ range_size** est de type **bigint**.  
   
-`[ @range_first_value = ] range_first_value` Le paramètre de sortie retourne la première valeur (minimale ou maximale) de l’objet séquence utilisé pour calculer la plage demandée. ** \@ range_first_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+`[ @range_first_value = ] range_first_value` Le paramètre de sortie retourne la première valeur (minimale ou maximale) de l’objet séquence utilisé pour calculer la plage demandée. **\@ range_first_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
-`[ @range_last_value = ] range_last_value` Le paramètre de sortie facultatif retourne la dernière valeur de la plage demandée. ** \@ range_last_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+`[ @range_last_value = ] range_last_value` Le paramètre de sortie facultatif retourne la dernière valeur de la plage demandée. **\@ range_last_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
-`[ @range_cycle_count = ] range_cycle_count` Paramètre de sortie facultatif retourne le nombre de fois où l’objet séquence a été recycle pour retourner la plage demandée. ** \@ range_cycle_count** est de **type int**.  
+`[ @range_cycle_count = ] range_cycle_count` Paramètre de sortie facultatif retourne le nombre de fois où l’objet séquence a été recycle pour retourner la plage demandée. **\@ range_cycle_count** est de **type int**.  
   
-`[ @sequence_increment = ] sequence_increment` Le paramètre de sortie facultatif retourne l’incrément de l’objet séquence utilisé pour calculer la plage demandée. ** \@ sequence_increment** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+`[ @sequence_increment = ] sequence_increment` Le paramètre de sortie facultatif retourne l’incrément de l’objet séquence utilisé pour calculer la plage demandée. **\@ sequence_increment** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
-`[ @sequence_min_value = ] sequence_min_value` Le paramètre de sortie facultatif retourne la valeur minimale de l’objet séquence. ** \@ sequence_min_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+`[ @sequence_min_value = ] sequence_min_value` Le paramètre de sortie facultatif retourne la valeur minimale de l’objet séquence. **\@ sequence_min_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
-`[ @sequence_max_value = ] sequence_max_value` Le paramètre de sortie facultatif retourne la valeur maximale de l’objet séquence. ** \@ sequence_max_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
+`[ @sequence_max_value = ] sequence_max_value` Le paramètre de sortie facultatif retourne la valeur maximale de l’objet séquence. **\@ sequence_max_value** est **sql_variant** avec le même type de base que celui de l’objet séquence utilisé dans la demande.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- sp_sequence_get_rangeis dans sys. le schéma et peuvent être référencés en tant que sys. sp_sequence_get_range.  
+ sp_sequence_get_rangeis dans sys. le schéma et peuvent être référencés en tant que sys.sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Séquences se répétant  
  Si nécessaire, l'objet séquence se répétera le nombre de fois approprié afin de fournir la plage demandée. Le nombre de répétitions est retourné à l'appelant via le paramètre `@range_cycle_count`.  

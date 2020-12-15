@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01576468fb54618e34f72bbd42fbd1ae861c8520
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5f97b9fbd9c3f53dab9bcfaa07863dcf1d8b861c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420533"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483300"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ RETCODE bcp_setcolfmt (
  *property*  
  L'une des constantes de propriété. Les constantes de propriété sont définies dans le tableau qui suit.  
   
-|Propriété|Valeur|Description|  
+|Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Type de données de la colonne dans le fichier utilisateur. Si le type de données est différent de celui de la colonne correspondante dans la table de base de données, la copie en bloc convertit, si possible, les données.<br /><br /> Le paramètre BCP_FMT_TYPE est énuméré par les jetons de type de données SQL Server dans sqlncli.h, et non par les énumérateurs de type de données C ODBC. Par exemple, vous pouvez spécifier une chaîne de caractères (type de données ODBC SQL_C_CHAR) à l'aide du type SQLCHARACTER propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Pour spécifier la représentation des données par défaut pour le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , attribuez la valeur 0 à ce paramètre.<br /><br /> Pour une copie en bloc de SQL Server dans un fichier, quand BCP_FMT_TYPE est SQLDECIMAL ou SQLNUMERIC, si la colonne source n’est pas **décimale** ou **numérique**, la précision et l’échelle par défaut sont utilisées. Dans le cas contraire, si la colonne source est **décimale** ou **numérique**, la précision et l’échelle de la colonne source sont utilisées.|  
 |BCP_FMT_INDICATOR_LEN|INT|Longueur, en octets, de l'indicateur (préfixe).<br /><br /> Longueur, en octets, d'un indicateur de longueur/null au sein des données de la colonne. Les valeurs de longueur d'indicateur valides sont 0 (quand aucun indicateur n'est utilisé), 1, 2, 4 ou 8.<br /><br /> Pour spécifier l'utilisation d'un indicateur de copie en bloc par défaut, définissez ce paramètre sur SQL_VARLEN_DATA.<br /><br /> Les indicateurs apparaissent directement en mémoire avant les autres données et, dans le fichier de données, juste avant les données auxquelles ils s'appliquent.<br /><br /> Si plusieurs méthodes de spécification de la longueur de colonne d'un fichier de données sont utilisées (par exemple, un indicateur et une longueur de colonne maximale, ou un indicateur et une séquence de terminaison), la copie en bloc choisit celle qui implique la quantité de données à copier la moins élevée.<br /><br /> Les fichiers de données générés par la copie en bloc lorsqu'aucune intervention de l'utilisateur n'ajuste le format des données contiennent des indicateurs si la longueur des données de la colonne est variable ou si la colonne peut accepter la valeur NULL.|  
@@ -75,7 +75,7 @@ RETCODE bcp_setcolfmt (
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Cette fonction remplace la fonction **bcp_colfmt** . Toutes les fonctionnalités de **bcp_colfmt** sont fournies dans **bcp_setcolfmt** fonction. Le classement des colonnes est également pris en charge. Il est préférable de définir les attributs de format de colonne suivants dans l'ordre précisé ci-dessous :  
   
  BCP_FMT_SERVER_COL  
