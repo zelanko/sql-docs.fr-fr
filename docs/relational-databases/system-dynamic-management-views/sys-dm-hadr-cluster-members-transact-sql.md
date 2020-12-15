@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster_members (Transact-SQL)
-title: sys. dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c7e182c4b8efb2ecc882c0e81bb1c1863b310a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d7c9f7b1145eec5d9c0c7f3644f18e8de7739b11
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468460"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  Si le nœud WSFC qui héberge une instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activée pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] possède un quorum WSFC, retourne une ligne pour chacun des membres qui constituent le quorum et l'état de chacun d'eux. Cela comprend tous les nœuds du cluster (retournés avec CLUSTER_ENUM_NODE type par la fonction **Clusterenum** ) et le disque ou le témoin de partage de fichiers, le cas échéant. La ligne retournée pour un membre donné contient des informations sur l'état de ce membre. Par exemple, pour un cluster à cinq nœuds avec quorum de nœud majoritaire dans lequel un nœud est défaillant, lorsque **sys. dm_hadr_cluster_members** est interrogé à partir d’une instance de serveur qui est activée pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] qui réside sur un nœud avec quorum, **sys. dm_hadr_cluster_members** reflète l’état du nœud descendant comme « NODE_DOWN ».  
+  Si le nœud WSFC qui héberge une instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activée pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] possède un quorum WSFC, retourne une ligne pour chacun des membres qui constituent le quorum et l'état de chacun d'eux. Cela comprend tous les nœuds du cluster (retournés avec CLUSTER_ENUM_NODE type par la fonction **Clusterenum** ) et le disque ou le témoin de partage de fichiers, le cas échéant. La ligne retournée pour un membre donné contient des informations sur l'état de ce membre. Par exemple, pour un cluster à cinq nœuds avec quorum de nœud majoritaire dans lequel un nœud est défaillant, lorsque **sys.dm_hadr_cluster_members** est interrogé à partir d’une instance de serveur qui est activée pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] qui réside sur un nœud avec quorum, **sys.dm_hadr_cluster_members** reflète l’état du nœud descendant comme « NODE_DOWN ».  
   
  Si le nœud WSFC n'a aucun quorum, aucune ligne n'est retournée.  
   

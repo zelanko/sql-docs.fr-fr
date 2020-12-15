@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e73d8f6345be199c44278cb15aa43c6ada7f91c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480951"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466790"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Vérifie la validité des noms d'identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutes les données non binaires et non null, y compris les données Unicode qui peuvent être stockées à l’aide des types de données **nchar**, **nvarchar**ou **ntext** , sont acceptées comme caractères valides pour les noms d’identificateurs.  
+  Vérifie la validité des noms d'identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutes les données non binaires et non null, y compris les données Unicode qui peuvent être stockées à l’aide des types de données **nchar**, **nvarchar** ou **ntext** , sont acceptées comme caractères valides pour les noms d’identificateurs.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

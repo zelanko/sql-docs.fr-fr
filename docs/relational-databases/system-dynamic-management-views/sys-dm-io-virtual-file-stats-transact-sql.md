@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
-ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 132add407f19a8a4ac33a1b2ee7587748807754e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96535293"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466900"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -93,7 +93,7 @@ ID du fichier. *file_id* est de type int, sans valeur par défaut. Les entrées 
 |**io_stall_queued_write_ms**|**bigint**|**Ne s’applique pas à :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les écritures. N'accepte pas la valeur NULL.|
 |**pdw_node_id**|**int**|**S’applique à :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud de la distribution.
  
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Remarks
 Les compteurs sont initialisés à vide chaque fois que le service SQL Server (MSSQLSERVER) est démarré.
   
 ## <a name="permissions"></a>Autorisations  
@@ -122,7 +122,7 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I O fonctions et vues de gestion dynamique associées &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

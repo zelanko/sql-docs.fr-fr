@@ -1,5 +1,5 @@
 ---
-description: Prise en charge du type de paramètre table OLE DB (fournisseur Native Client OLE DB)
+description: Prise en charge du type de paramètre OLE DB Table-Valued (fournisseur OLE DB Native Client)
 title: Prise en charge du type de paramètre table (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6852ac833d45f132d514f9e707e6a3c2103c82b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d8b0817146d1be3ce15349844ce37a1cdae853a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482595"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469270"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-native-client-ole-db-provider"></a>Prise en charge du type de paramètre table OLE DB (fournisseur Native Client OLE DB)
+# <a name="ole-db-table-valued-parameter-type-support-native-client-ole-db-provider"></a>Prise en charge du type de paramètre OLE DB Table-Valued (fournisseur OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cette rubrique décrit la prise en charge du type OLE DB pour les paramètres table.  

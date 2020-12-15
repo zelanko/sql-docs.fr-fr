@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ddb2ace735188b86761257675a496bc95489b94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a99510bb6ae8847882b4242af524cc894b533961
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498861"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469200"
 ---
 # <a name="performing-bulk-copy-operations-in-sql-server-native-client"></a>Exécution d’opérations de copie en bloc dans SQL Server Native Client 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "88498861"
   
 -   **ISupportErrorInfo**  
   
- Les propriétés spécifiques au fournisseur SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS et SSPROP_FASTLOADKEEPIDENTITY contrôle les comportements d'un ensemble de lignes de copie en bloc du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les propriétés sont spécifiées dans le membre *rgProperties* d’un membre de paramètre**IOpenRowset** _rgPropertySets_.  
+ Les propriétés spécifiques au fournisseur SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS et SSPROP_FASTLOADKEEPIDENTITY contrôle les comportements d'un ensemble de lignes de copie en bloc du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les propriétés sont spécifiées dans le membre *rgProperties* d’un membre de paramètre **IOpenRowset** _rgPropertySets_.  
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  

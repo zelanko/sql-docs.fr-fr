@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-title: sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 310fb757ca9956ac3206ac3d9bff0cc99c857a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542257"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468480"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "89542257"
 Les chaînes de type Long peuvent affecter les performances des opérations DML sur des lignes, notamment SELECT et INSERT. Les chaînes de type Short avec un nombre de compartiments vides élevé sont une indication de bucket_count trop élevé. Cela altère les performances des analyses d'index.  
   
 > [!WARNING]
-> **sys. dm_db_xtp_hash_index_stats** analyse la totalité de la table. Ainsi, s’il existe de grandes tables dans votre base de données, **sys. dm_db_xtp_hash_index_stats** peut prendre beaucoup de temps.  
+> **sys.dm_db_xtp_hash_index_stats** analyse la totalité de la table. Ainsi, s’il existe de grandes tables dans votre base de données, l’exécution de **sys.dm_db_xtp_hash_index_stats** peut prendre beaucoup de temps.  
   
-Pour plus d’informations, consultez [index de hachage pour les tables optimisées en mémoire](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Pour plus d’informations, consultez [index de hachage pour les Tables Memory-Optimized](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
 |Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
@@ -88,7 +88,7 @@ La requête suivante peut être utilisée pour résoudre les problèmes liés au
   ORDER BY [table], [index];  
 ``` 
 
-Pour plus d’informations sur la façon d’interpréter les résultats de cette requête, consultez [résolution des problèmes liés aux index de hachage pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Pour plus d’informations sur la façon d’interpréter les résultats de cette requête, consultez [résolution des problèmes liés aux index de hachage pour les Tables Memory-Optimized](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Statistiques d’index de hachage pour les tables internes
 

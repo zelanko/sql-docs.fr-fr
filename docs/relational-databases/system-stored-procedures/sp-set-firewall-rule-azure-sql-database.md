@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ed1df2288067d30f9443736b914b7560c0c6a784
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 795aeb9a03f839cae400e92060ac21056f314d2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810474"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468280"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -51,7 +51,7 @@ sp_set_firewall_rule [@name =] 'name',
 |[ @start_ip_address =] 'start_ip_address'|**VARCHAR (50)**|Adresse IP la plus basse dans la plage de paramètres de pare-feu au niveau serveur. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter au serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`.|  
 |[ @end_ip_address =] 'end_ip_address'|**VARCHAR (50)**|Adresse IP la plus élevée dans la plage de paramètres de pare-feu au niveau serveur. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter au serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`.<br /><br /> Remarque : les tentatives de connexion Azure sont autorisées lorsque ce champ et le champ *start_ip_address* est égal à `0.0.0.0` .|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Les noms des paramètres de pare-feu au niveau serveur doivent être uniques. Si le nom du paramètre de pare-feu spécifié pour la procédure stockée existe déjà dans le tableau des paramètres de pare-feu, les adresses IP de début et de fin sont mises à jour. Sinon, un nouveau paramètre de pare-feu au niveau serveur est créé.  
   
  Lorsque vous ajoutez un paramètre de pare-feu de niveau serveur et que les adresses IP de début et de fin sont égales à `0.0.0.0`, vous activez l'accès à votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] à partir de Azure. Spécifiez une valeur pour le paramètre de *nom* qui vous aidera à vous souvenir de la fonction du paramètre de pare-feu au niveau du serveur.  

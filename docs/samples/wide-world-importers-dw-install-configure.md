@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 18d4e9c18c4848a0857c1afb146b0d0405f418ce
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 5096ecd27f6ba9d5d06dd4efd322a42e3218a0bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956560"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466600"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Installation et configuration de WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ Instructions d’installation et de configuration pour la base de données WideW
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (ou version ultérieure) ou [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Pour utiliser la version complète de l’exemple, utilisez l’édition Évaluation SQL Server/Developer/Enterprise.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Pour obtenir les meilleurs résultats, utilisez la version du 2016 juin ou une version ultérieure.
 
-## <a name="download"></a>Téléchargement
+## <a name="download"></a>Télécharger
 
 La dernière version de l’exemple :
 

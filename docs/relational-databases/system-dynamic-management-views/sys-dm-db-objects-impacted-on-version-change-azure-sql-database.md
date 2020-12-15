@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c316d1f87b76387ebf382754970a6b9dc1ab609f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2996d419ae22b58c065eb2b6dbcdae6786703420
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89517655"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466850"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -61,14 +61,14 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="how-to-update-impacted-objects"></a>Procédure : mettre à jour les objets affectés  
  Les étapes ordonnées suivantes décrivent l'action corrective à entreprendre après la mise à niveau Service Release de juin.  
   
-|JSON|Objet affecté|Action corrective|  
+|Commande|Objet affecté|Action corrective|  
 |-----------|---------------------|-----------------------|  
-|1|**Index**|Reconstruisez tout index identifié par **sys. dm_db_objects_impacted_on_version_change** par exemple :  `ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
+|1|**Index**|Reconstruisez tout index identifié par **sys.dm_db_objects_impacted_on_version_change** par exemple :  `ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Object**|Toutes les contraintes identifiées par **sys.dm_db_objects_impacted_on_version_change** doivent être revalidées lorsque les données de géométrie et de géographie de la table sous-jacente ont été recalculées. Pour les contraintes, revalidez l'aide de ALTER TABLE. <br />Par exemple : <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />or<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

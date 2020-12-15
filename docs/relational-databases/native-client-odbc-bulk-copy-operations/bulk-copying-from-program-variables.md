@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66fc82b8253c5bb9eeac669bf88846737b315d91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455972"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465060"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copie en bloc à partir de variables de programme
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88455972"
   
  Ces trois méthodes peuvent être utilisées sur le même appel de **bcp_bind** , auquel cas la spécification qui produit la plus petite quantité de données copiée est utilisée.  
   
- Le paramètre de_type_ **bcp_bind**utilise des identificateurs de type de données DB-Library, et non des identificateurs de type de données ODBC. Les identificateurs de type de données DB-Library sont définis dans sqlncli. h pour une utilisation avec la fonction ODBC **bcp_bind** .  
+ Le paramètre de _type_ **bcp_bind** utilise DB-Library identificateurs de type de données, et non des identificateurs de type de données ODBC. DB-Library identificateurs de type de données sont définis dans sqlncli. h pour une utilisation avec la fonction ODBC **bcp_bind** .  
   
  Les fonctions de copie en bloc ne prennent pas en charge tous les types de données ODBC C. Par exemple, les fonctions de copie en bloc ne prennent pas en charge la structure ODBC SQL_C_TYPE_TIMESTAMP. Utilisez donc [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) ou [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) pour convertir les données ODBC SQL_TYPE_TIMESTAMP en une variable SQL_C_CHAR. Si vous utilisez ensuite **bcp_bind** avec un paramètre de *type* SQLCHARACTER pour lier la variable à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne **DateTime** , les fonctions de copie en bloc convertissent la clause d’échappement timestamp dans la variable caractère au format DateTime approprié.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88455972"
   
 |Type de données ODBC SQL|Type de données ODBC C|paramètre de *type* bcp_bind|Type de données SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**symbole**<br /><br /> **char**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **character varying**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
@@ -78,7 +78,7 @@ ms.locfileid: "88455972"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **variables binaires**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
@@ -86,7 +86,7 @@ ms.locfileid: "88455972"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas de types de données **tinyint**, unsigned **smallint**ou unsigned **int** signés. Pour empêcher la perte de valeurs de données lors de la migration de ces types de données, créez la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le plus grand type de données integer suivant. Pour empêcher les utilisateurs d'ajouter ultérieurement des valeurs en dehors de la plage autorisée par le type de données d'origine, appliquez une règle à la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manière à limiter les valeurs autorisées à la plage prise en charge par le type de données dans la source d'origine :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas de types de données **tinyint**, unsigned **smallint** ou unsigned **int** signés. Pour empêcher la perte de valeurs de données lors de la migration de ces types de données, créez la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le plus grand type de données integer suivant. Pour empêcher les utilisateurs d'ajouter ultérieurement des valeurs en dehors de la plage autorisée par le type de données d'origine, appliquez une règle à la colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manière à limiter les valeurs autorisées à la plage prise en charge par le type de données dans la source d'origine :  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  

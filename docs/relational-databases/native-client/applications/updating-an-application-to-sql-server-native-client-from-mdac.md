@@ -16,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b74cc8b3248d566ece7a5706e616dc7623d94518
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fb360bbc4f874af32b720ea024f9322aa02dea24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004250"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469220"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Mise à jour d'une application vers SQL Server Native Client à partir de MDAC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86004250"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge l'accès aux bases de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] précédentes.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client n'offre pas l'intégration XML. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client prend en charge SELECT... Les requêtes FOR XML, mais ne prennent pas en charge d’autres fonctionnalités XML. Toutefois, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge le type de données **XML** introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client n'offre pas l'intégration XML. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge SELECT... Les requêtes FOR XML, mais ne prennent pas en charge d’autres fonctionnalités XML. Toutefois, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge le type de données **XML** introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend uniquement en charge la configuration de bibliothèques réseau côté client à l'aide d'attributs de chaîne de connexion. Pour configurer une bibliothèque réseau de manière plus complète, vous devez utiliser le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -72,11 +73,11 @@ ms.locfileid: "86004250"
   
 -   Lorsque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est connecté à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures, l'erreur de serveur 16947 est retournée en tant qu'erreur (SQL_ERROR). Cette erreur se produit lorsqu'une mise à jour ou une suppression positionnée ne parvient pas à mettre à jour ou à supprimer une ligne. Avec MDAC lors de la connexion à n'importe quelle version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'erreur de serveur 16947 est retournée en tant qu'avertissement (SQL_SUCCESS_WITH_INFO).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client implémente l’interface **IDBDataSourceAdmin** , qui est une interface OLE DB facultative qui n’a pas été implémentée précédemment, mais seule la méthode **CreateDataSource** de cette interface facultative est implémentée. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implémente l’interface **IDBDataSourceAdmin** , qui est une interface OLE DB facultative qui n’a pas été implémentée précédemment, mais seule la méthode **CreateDataSource** de cette interface facultative est implémentée. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 -   Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retourne des synonymes dans les ensembles de lignes de schéma TABLES et TABLE_INFO, avec la valeur SYNONYM attribuée à TABLE_TYPE.  
   
--   Les valeurs de retour de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **UDT**ou d’autres types d’objets volumineux ne peuvent pas être retournées aux versions clientes antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Si vous souhaitez utiliser ces types comme valeurs de retour, vous devez utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+-   Les valeurs de retour de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **UDT** ou d’autres types d’objets volumineux ne peuvent pas être retournées aux versions clientes antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Si vous souhaitez utiliser ces types comme valeurs de retour, vous devez utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 -   Contrairement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, MDAC permet l'exécution des instructions suivantes au démarrage de transactions manuelles et implicites. Elles doivent être exécutées en mode de validation automatique.  
   
@@ -90,7 +91,7 @@ ms.locfileid: "86004250"
   
     -   Tuer  
   
-    -   Sauvegarde  
+    -   Backup  
   
 -   Lorsque des applications MDAC se connectent à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les types de données introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] apparaissent en tant que types de données compatibles avec [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], comme indiqué dans le tableau suivant.  
   

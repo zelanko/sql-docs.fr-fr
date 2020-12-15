@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 232ad1cfe65fca719260a9ed8ab87a7f2d7ed3dd
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: 710265fca96078ef08d54ca503f174a8150aca8e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443158"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466840"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -88,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|À usage interne uniquement.|  
 |**suggested_tds_length**|**int NOT NULL**|À usage interne uniquement.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
  **sp_describe_undeclared_parameters** retourne toujours le statut de retour égal à zéro.  
   
  Le cas d'utilisation le plus courant est celui d'une application qui reçoit une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] pouvant contenir des paramètres et devant les traiter d'une certaine façon. Il peut s'agir, par exemple, d'une interface utilisateur (telle qu'ODBCTest ou RowsetViewer) où l'utilisateur fournit une requête avec une syntaxe de paramètre ODBC. L'application doit découvrir dynamiquement le nombre de paramètres et inviter l'utilisateur à fournir chacun d'eux.  

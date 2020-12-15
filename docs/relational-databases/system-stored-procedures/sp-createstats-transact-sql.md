@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c49367f78a257b1ba4e19d9916b590a67991d1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536691"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466870"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ sp_createstats
 ## <a name="result-sets"></a>Jeux de résultats  
  Chaque nouvel objet de statistiques porte le même nom que la colonne sur laquelle il est créé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  sp_createstats ne crée pas ou ne met pas à jour les statistiques sur les colonnes qui sont la première colonne d’un objet de statistiques existant ;  Cela comprend la première colonne de statistiques créées pour les index, les colonnes avec des statistiques à une seule colonne générées avec l’option AUTO_CREATE_STATISTICS et la première colonne de statistiques créée avec l’instruction CREATe STATISTICs. sp_createstats ne crée pas de statistiques sur les premières colonnes des index désactivés, sauf si cette colonne est utilisée dans un autre index activé. sp_createstats ne crée pas de statistiques sur les tables avec un index cluster désactivé.  
   
  Lorsque la table contient un jeu de colonnes, sp_createstats ne crée pas de statistiques sur les colonnes éparses. Pour plus d’informations sur les jeux de colonnes et les colonnes éparses, consultez [utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md) et utiliser des [colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).  

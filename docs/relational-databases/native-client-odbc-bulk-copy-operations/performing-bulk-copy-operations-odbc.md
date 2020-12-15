@@ -1,6 +1,6 @@
 ---
 title: Exécution d’opérations de copie en bloc (ODBC) | Microsoft Docs
-description: Découvrez comment le pilote ODBC SQL Server Native Client prend en charge les fonctions DB-Library qui effectuent SQL Server des opérations de copie en bloc.
+description: Découvrez comment le pilote ODBC SQL Server Native Client prend en charge les fonctions DB-Library qui effectuent SQL Server opérations de copie en bloc.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55736dd07331a12fe2ec2c5495e860e26ef908af
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0261b223d3a7a8e775b23ab37c264efa8a1e835f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007176"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465000"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Exécution d'opérations de copie en bloc (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "86007176"
 -   [Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/converting-from-db-library-to-odbc-bulk-copy.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server Native Client &#40;&#41;ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL Server Native Client &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

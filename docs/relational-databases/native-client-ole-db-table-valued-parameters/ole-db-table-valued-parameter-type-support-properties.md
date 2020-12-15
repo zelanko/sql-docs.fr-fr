@@ -1,6 +1,6 @@
 ---
-description: Prise en charge du type de paramètre table OLE DB dans SQL Server Native Client (propriétés)
-title: Type de paramètre table OLE DB (propriétés)
+description: Prise en charge du type de paramètre OLE DB Table-Valued dans SQL Server Native Client (propriétés)
+title: Type de paramètre OLE DB Table-Valued (propriétés)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96fdbd152eacf5a23f530f5bd5caa7cebb801980
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4eb8247110cdd4c69c1bf4b93c35417d0b575db1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482613"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469280"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>Prise en charge du type de paramètre table OLE DB dans SQL Server Native Client (propriétés)
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>Prise en charge du type de paramètre OLE DB Table-Valued dans SQL Server Native Client (propriétés)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cette rubrique fournit des informations sur les propriétés et les jeux de propriétés OLE DB associés aux objets d'ensemble de lignes de paramètre table.  

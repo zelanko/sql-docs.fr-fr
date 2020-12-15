@@ -1,6 +1,6 @@
 ---
 description: sys.server_permissions (Transact-SQL)
-title: sys. server_permissions (Transact-SQL) | Microsoft Docs
+title: sys.server_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8f0541d743ea7feaa8991c2b085173b4c6e8f40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bc833da8d53eadd88152e603777b4799ac30938f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376935"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464660"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88376935"
 |**grantor_principal_id**|**int**|ID du principal du serveur de la personne qui accorde ces autorisations.|  
 |**type**|**Char (4)**|Type d'autorisation serveur. Pour obtenir la liste des types d'autorisations, consultez le tableau ci-dessous.|  
 |**permission_name**|**nvarchar(128)**|Nom de l’autorisation.|  
-|**state**|**Char(1**|État de l'autorisation :<br /><br /> D = Refusée<br /><br /> R = Révoquée<br /><br /> G = Accordée<br /><br /> W = GRANT WITH GRANT OPTION|  
+|**state**|**char(1)**|État de l'autorisation :<br /><br /> D = Refusée<br /><br /> R = Révoquée<br /><br /> G = Accordée<br /><br /> W = GRANT WITH GRANT OPTION|  
 |**state_desc**|**nvarchar(60)**|Description de l'état de l'autorisation :<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |Type d'autorisation|Nom de l'autorisation|S'applique à l'élément sécurisable|  

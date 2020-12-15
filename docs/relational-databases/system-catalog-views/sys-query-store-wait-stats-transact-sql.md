@@ -1,6 +1,6 @@
 ---
-description: sys. query_store_wait_stats (Transact-SQL)
-title: sys. query_store_wait_stats (Transact-SQL) | Microsoft Docs
+description: sys.query_store_wait_stats (Transact-SQL)
+title: sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc28729ef4f3743e945f782fed0409057e90224a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2ab48b6155e26873c22a3b951ef65705d3addd79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537306"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466920"
 ---
-# <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
+# <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
@@ -36,8 +36,8 @@ ms.locfileid: "89537306"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Identificateur de la ligne représentant les statistiques d’attente pour le plan_id, runtime_stats_interval_id, execution_type et wait_category. Elle est unique uniquement pour les intervalles de statistiques d’exécution précédents. Pour l’intervalle actuellement actif, il peut y avoir plusieurs lignes représentant des statistiques d’attente pour le plan référencé par plan_id, avec le type d’exécution représenté par execution_type et la catégorie d’attente représentée par wait_category. En règle générale, une ligne représente les statistiques d’attente qui sont vidées sur le disque, tandis que d’autres représentent l’État en mémoire. Par conséquent, pour obtenir l’état réel de chaque intervalle, vous devez agréger les métriques, les regrouper par plan_id, les runtime_stats_interval_id, les execution_type et les wait_category. |  
-|**plan_id**|**bigint**|Clé étrangère. Jointures à [sys. query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Clé étrangère. Jointures à [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|Clé étrangère. Jointures à [sys.query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Clé étrangère. Jointures à [sys.query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Les types d’attente sont catégorisés à l’aide du tableau ci-dessous, puis le temps d’attente est agrégé sur ces catégories d’attente. Les différentes catégories d’attente nécessitent une analyse de suivi différente pour résoudre le problème, mais les types d’attente de la même catégorie mènent à des expériences de dépannage similaires et le fait de fournir la requête affectée en plus des attentes est la pièce manquante permettant d’effectuer la majorité de ces investigations.|
 |**wait_category_desc**|**nvarchar(128)**|Pour une description textuelle du champ de catégorie d’attente, consultez le tableau ci-dessous.|
 |**execution_type**|**tinyint**|Détermine le type d’exécution de la requête :<br /><br /> 0-exécution normale (terminée avec succès)<br /><br /> 3-exécution abandonnée par le client<br /><br /> 4-exécution abandonnée par l’exception|  
@@ -58,12 +58,12 @@ ms.locfileid: "89537306"
 |**0**|**Unknown**|Unknown |  
 |**1**|**UC**|SOS_SCHEDULER_YIELD|
 |**2**|**Thread de travail**|THREADPOOL|
-|**3**|**Verrouiller**|LCK_M_%|
-|**4**|**Circuit**|LATCH_%|
+|**3**|**Verrou**|LCK_M_%|
+|**4**|**Latch**|LATCH_%|
 |**5**|**Verrou de mémoire tampon**|PAGELATCH_%|
 |**6**|**E/s de mémoire tampon**|PAGEIOLATCH_%|
-|**7**|**Élaboration***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL CLR**|CLR%, SQLCLR%|
+|**7**|**Compilation** _|RESOURCE_SEMAPHORE_QUERY_COMPILE|
+|_ *8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Mise en miroir**|DBMIRROR%|
 |**10**|**Transaction**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|

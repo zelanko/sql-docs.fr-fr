@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 462c857e6067e6431248e86edb72d007e56d84e7
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2145297325aa71aad6a235e93254bbc2857d8afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734614"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468290"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,18 +44,18 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>Arguments  
  [ @key =] N’key'  
- Clé qui est définie, de type **sysname** . La taille de clé maximale est de 128 octets.  
+ Clé qui est définie, de type **sysname**. La taille de clé maximale est de 128 octets.  
   
  [ @value =] 'valeur'  
- Valeur de la clé spécifiée, de type **sql_variant** . La définition d’une valeur NULL libère la mémoire. La taille maximale est de 8 000 octets.  
+ Valeur de la clé spécifiée, de type **sql_variant**. La définition d’une valeur NULL libère la mémoire. La taille maximale est de 8 000 octets.  
   
  [ @read_only =] {0 | 1}  
- Indicateur de type **bit** . Si la valeur est 1, la valeur de la clé spécifiée ne peut pas être modifiée à nouveau sur cette connexion logique. Si la valeur est 0 (valeur par défaut), la valeur peut être modifiée.  
+ Indicateur de type **bit**. Si la valeur est 1, la valeur de la clé spécifiée ne peut pas être modifiée à nouveau sur cette connexion logique. Si la valeur est 0 (valeur par défaut), la valeur peut être modifiée.  
   
 ## <a name="permissions"></a>Autorisations  
  N’importe quel utilisateur peut définir un contexte de session pour sa session.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  À l’instar des autres procédures stockées, seuls les littéraux et les variables (et non les expressions ou les appels de fonction) peuvent être passés en tant que paramètres.  
   
  La taille totale du contexte de session est limitée à 1 Mo. Si vous définissez une valeur qui entraîne le dépassement de cette limite, l’instruction échoue. Vous pouvez surveiller l’utilisation globale de la mémoire dans [sys.dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  

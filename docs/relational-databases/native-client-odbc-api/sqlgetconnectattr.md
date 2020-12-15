@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 966d76cd9d0582cc94d3419714c4368e24a68eac
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f988f8fa6b09a3efd895499bfa1a367e0bb44774
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810793"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465180"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit des attributs de connexion spécifiques au pilote. Certains des attributs sont accessibles à **SQLGetConnectAttr**et la fonction est utilisée pour indiquer leurs paramètres actuels. Les valeurs indiquées pour ces attributs ne sont pas garanties tant qu'une connexion n'a pas été établie ou que l'attribut n'a pas été défini à l'aide de [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+  Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit des attributs de connexion spécifiques au pilote. Certains des attributs sont accessibles à **SQLGetConnectAttr** et la fonction est utilisée pour indiquer leurs paramètres actuels. Les valeurs indiquées pour ces attributs ne sont pas garanties tant qu'une connexion n'a pas été établie ou que l'attribut n'a pas été défini à l'aide de [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
  Cette rubrique dresse la liste des attributs accessibles en lecture seule. Pour plus d'informations sur les autres attributs de connexion spécifiques au pilote de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC, consultez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "91810793"
 > [!NOTE]  
 >  L'attribut de connexion ODBC standard SQL_ATTR_CONNECTION_DEAD retourne l'état le plus récent de la connexion. Cela peut ne pas être l'état actuel de la connexion.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|La connexion au serveur a été perdue.|  
 |SQL_CD_FALSE|La connexion est ouverte et disponible pour le traitement d'instruction.|  
@@ -51,7 +51,7 @@ ms.locfileid: "91810793"
   
  Pour plus d’informations, consultez [accès aux informations de diagnostic dans le journal des événements étendus](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|La connexion a échoué.|  
 |SQL_SUCCESS|La connexion a abouti. L'ID de connexion client se trouve dans le tampon de sortie.|  
@@ -59,7 +59,7 @@ ms.locfileid: "91810793"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  L'attribut SQL_COPT_SS_PERF_DATA retourne un pointeur vers une structure SQLPERF contenant les statistiques actuelles de performances de pilote. **SQLGetConnectAttr** retourne NULL si l'enregistrement de performance n'est pas activé. Les statistiques dans la structure SQLPERF ne sont pas mises à jour de manière dynamique par le pilote. Appelez **SQLGetConnectAttr** chaque fois que les statistiques de performances doivent être actualisées.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |NULL|L'enregistrement des performances n'est pas activé.|  
 |Toute autre valeur|Pointeur vers une structure SQLPERF.|  
@@ -70,7 +70,7 @@ ms.locfileid: "91810793"
 ## <a name="sql_copt_ss_user_data"></a>SQL_COPT_SS_USER_DATA  
  L'attribut SQL_COPT_SS_USER_DATA extrait le pointeur de données utilisateur. Les données utilisateur sont stockées dans la mémoire détenue par le client et enregistrées par connexion. Si le pointeur de données utilisateur n'a pas été défini, SQL_UD_NOTSET, un pointeur NULL, est retourné.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Aucun pointeur de données utilisateur n'est défini.|  
 |Toute autre valeur|Pointeur vers les données utilisateur.|  

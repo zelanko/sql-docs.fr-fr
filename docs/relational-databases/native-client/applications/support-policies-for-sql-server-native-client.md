@@ -10,12 +10,13 @@ ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08efcc441e0c06c05dcb49f2a5d18a3fc9e5d72d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1bdc9812b46869a46879adfe10efda8b35128bf9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005727"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469250"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Stratégies de prise en charge pour SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -23,12 +24,12 @@ ms.locfileid: "86005727"
   Cette rubrique décrit les façons dont différents composants d'accès aux données peuvent être utilisés avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="server-support"></a>Prise en charge de serveur  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 11,0 prend en charge les connexions à,,,, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11,0 prend en charge les connexions à,,,, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] et [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] .  
   
 ## <a name="supported-operating-system-versions"></a>Versions de système d’exploitation prises en charge  
  Le tableau suivant répertorie les systèmes d'exploitation qui prennent en charge [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-|Version de SQL Server Native Client|Systèmes d’exploitation pris en charge|  
+|Version de SQL Server Native Client|Systèmes d'exploitation pris en charge|  
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 ou version ultérieure<br /><br /> Microsoft Windows Server 2003 ou version ultérieure<br /><br /> Microsoft Windows XP Service Pack 1 ou version ultérieure<br /><br /> Microsoft Windows Vista (requiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2, ou version ultérieure)<br /><br /> Microsoft Windows Server 2008 R2 (nécessite le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 ou version ultérieure)|  
 |SQL Server Native Client 10,0 ( [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] )|Microsoft Windows Server 2003 Service Pack 2, ou version ultérieure<br /><br /> Microsoft Windows XP Service Pack 2 ou version ultérieure<br /><br /> Microsoft Windows Vista<br /><br /> Microsoft Windows Server 2008 R2|  

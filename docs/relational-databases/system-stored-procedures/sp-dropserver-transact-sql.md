@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6bb8e372ffa6a9bea01052f4185040dd9942157
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: e3caee2593f6b02688ab82fcfd72686670c493dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549806"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466810"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>Arguments  
  *server*  
- Serveur à supprimer. *server* est de type **sysname**et n'a pas de valeur par défaut. le *serveur* doit exister.  
+ Serveur à supprimer. *server* est de type **sysname** et n'a pas de valeur par défaut. le *serveur* doit exister.  
   
  *DropLogins*  
  Indique que les connexions de serveur lié et distant associées au *serveur* doivent également être supprimées si **DropLogins** est spécifié. **`@droplogins`** est de **type char (10)**, avec NULL comme valeur par défaut.  

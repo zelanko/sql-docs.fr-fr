@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b75eeeb466c8b611437cc0984b1c50fbc3130953
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f85320fff9c44a1904ea3500b32b0d9305237b99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810015"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465326"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Pour les instructions exécutées, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’a pas besoin d’interroger le serveur pour décrire les colonnes d’un jeu de résultats. Dans ce cas, **SQLDescribeCol** n’entraîne pas l’aller-retour d’un serveur. Comme [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)et[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), l’appel de **SQLDescribeCol** sur des instructions préparées mais non exécutées génère un aller-retour sur le serveur.  
+  Pour les instructions exécutées, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’a pas besoin d’interroger le serveur pour décrire les colonnes d’un jeu de résultats. Dans ce cas, **SQLDescribeCol** n’entraîne pas l’aller-retour d’un serveur. Comme [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)et [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), l’appel de **SQLDescribeCol** sur des instructions préparées mais non exécutées génère un aller-retour sur le serveur.  
   
  Lorsqu'une instruction ou un lot d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] retourne plusieurs ensembles de lignes de résultats, il est possible qu'une colonne, référencée par un ordinal, ait pour origine une table distincte ou référence une colonne entièrement différente dans le jeu de résultats. **SQLDescribeCol** doit être appelé pour chaque ensemble. Lorsque le jeu de résultats change, l'application doit de nouveau lier les valeurs de données avant d'extraire les résultats de ligne. Pour plus d'informations sur la gestion de plusieurs retours de jeux de résultats, consultez [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "91810015"
  Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>Prise en charge par SQLDescribeCol des grands types CLR définis par l'utilisateur  
- **SQLDescribeCol** prend en charge les grands types CLR définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLDescribeCol** prend en charge les grands types CLR définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types de User-Defined CLR volumineux &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonction SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md)   

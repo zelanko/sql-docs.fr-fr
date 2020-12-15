@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95b9d9feca9f2bb3ac896c45aa30f18f5d23ad7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8414c966bb6caa53d092aa3517ebd4660d22d8d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868180"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467710"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Envoi de données comme paramètre table avec toutes les valeurs en mémoire (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cette rubrique décrit comment envoyer des données à une procédure stockée comme paramètre table lorsque toutes les valeurs sont en mémoire. Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser des paramètres de Table-Valued &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
-## <a name="prerequisite"></a>Configuration requise  
+## <a name="prerequisite"></a>Prérequis  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
   
 ```sql

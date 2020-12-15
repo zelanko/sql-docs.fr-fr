@@ -22,13 +22,13 @@ ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 857710f894ddc8ef2c874bdc3fed127f0625c8f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 030c1d04575c412c2cae9c69d0798e7d40e89450
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725852"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467100"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Utilisation de schémas XSD annotés dans les requêtes (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -142,6 +142,6 @@ ms.locfileid: "85725852"
 </sql:xpath-query>  
 ```  
   
- Le modèle spécifie une requête XPath mais ne spécifie pas de schéma de mappage. Par conséquent, cette requête est traitée comme une requête de type **dbobject** dans laquelle production. ProductPhoto est le nom de la table et @ProductPhotoID = « 100 » est un prédicat qui recherche une photo du produit avec la valeur d’ID 100. @LargePhotocolonne à partir de laquelle la valeur doit être récupérée.  
+ Le modèle spécifie une requête XPath mais ne spécifie pas de schéma de mappage. Par conséquent, cette requête est traitée comme une requête de type **dbobject** dans laquelle production. ProductPhoto est le nom de la table et @ProductPhotoID = « 100 » est un prédicat qui recherche une photo du produit avec la valeur d’ID 100. @LargePhoto colonne à partir de laquelle la valeur doit être récupérée.  
   
   

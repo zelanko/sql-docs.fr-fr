@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68d230ed9696188ea0ff1c3aee1ab16007494984
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81ff3340b54937af5a64bca44f2b705f5046eb6e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810551"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465160"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **SQLGetData** est utilisé pour récupérer les données du jeu de résultats sans les valeurs de colonne de liaison. **SQLGetData** peut être appelé successivement sur la même colonne pour récupérer de grandes quantités de données à partir d’une colonne avec un type de données **Text**, **ntext**ou **image** .  
+  **SQLGetData** est utilisé pour récupérer les données du jeu de résultats sans les valeurs de colonne de liaison. **SQLGetData** peut être appelé successivement sur la même colonne pour récupérer de grandes quantités de données à partir d’une colonne avec un type de données **Text**, **ntext** ou **image** .  
   
  Il n'y a aucune spécification exigeant qu'une application lie des variables pour extraire des données de jeu de résultats. Les données de n’importe quelle colonne peuvent être récupérées à partir du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client à l’aide de **SQLGetData**.  
   
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge l’utilisation de **SQLGetData** pour récupérer des données dans l’ordre aléatoire des colonnes. Toutes les colonnes indépendantes traitées avec **SQLGetData** doivent avoir des ordinaux de colonne plus élevés que les colonnes liées dans le jeu de résultats. L'application doit traiter les données de la valeur d'ordinal de colonne indépendante la plus basse à la plus élevée. Toute tentative d'extraction de données d'une colonne d'ordinal inférieur provoque une erreur. Si l'application utilise des curseurs côté serveur pour signaler les lignes de jeu de résultats, l'application peut réextraire la ligne actuelle, puis extraire la valeur d'une colonne. Si une instruction est exécutée sur le curseur par défaut en lecture seule et avant uniquement, vous devez exécuter à nouveau l’instruction pour sauvegarder **SQLGetData**.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client signale avec précision la longueur des données **Text**, **ntext**et **image** extraites à l’aide de **SQLGetData**. L’application peut utiliser le retour du paramètre *StrLen_or_IndPtr* pour récupérer rapidement des données de type long.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client signale avec précision la longueur des données **Text**, **ntext** et **image** extraites à l’aide de **SQLGetData**. L’application peut utiliser le retour du paramètre *StrLen_or_IndPtr* pour récupérer rapidement des données de type long.  
   
 > [!NOTE]  
 >  Pour les types de valeur élevée, *StrLen_or_IndPtr* retourne SQL_NO_TOTAL en cas de troncation des données.  
@@ -42,7 +42,7 @@ ms.locfileid: "91810551"
  Pour plus d’informations, consultez améliorations de la [date et de l’heure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>Prise en charge SQLGetData pour les types CLR volumineux définis par l'utilisateur  
- **SQLGetData** prend en charge les grands types CLR définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLGetData** prend en charge les grands types CLR définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types de User-Defined CLR volumineux &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Exemple  
   

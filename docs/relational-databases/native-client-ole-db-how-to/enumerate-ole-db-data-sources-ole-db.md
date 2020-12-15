@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 42e11b7c4a973312cb71756d0e67cc964664410e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867994"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469460"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>Énumérer les sources de données SQL Server Native Client OLE DB (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,17 +39,17 @@ ms.locfileid: "91867994"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Pour énumérer des sources de données OLE DB  
   
-1.  Appelez **ISourceRowset::GetSourcesRowset**pour extraire l'ensemble de lignes source.  
+1.  Appelez **ISourceRowset::GetSourcesRowset** pour extraire l'ensemble de lignes source.  
   
-2.  Appelez **GetColumnInfo::IColumnInfo**pour rechercher la description de l'ensemble de lignes des énumérateurs.  
+2.  Appelez **GetColumnInfo::IColumnInfo** pour rechercher la description de l'ensemble de lignes des énumérateurs.  
   
 3.  Créez les structures de liaison à partir des informations sur les colonnes.  
   
-4.  Appelez **IAccessor::CreateAccessor**pour créer l'accesseur de l'ensemble de lignes.  
+4.  Appelez **IAccessor::CreateAccessor** pour créer l'accesseur de l'ensemble de lignes.  
   
-5.  Appelez **IRowset::GetNextRows**pour extraire les lignes.  
+5.  Appelez **IRowset::GetNextRows** pour extraire les lignes.  
   
-6.  Appelez **IRowset::GetData**pour récupérer les données de la copie de l'ensemble de lignes de la ligne et traiter ces données.  
+6.  Appelez **IRowset::GetData** pour récupérer les données de la copie de l'ensemble de lignes de la ligne et traiter ces données.  
   
 ## <a name="example"></a>Exemple  
  Compilez avec ole32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion L« (local) » par L« (local)\\\nom », où le nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  

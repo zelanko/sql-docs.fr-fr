@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f8d77853846a18bd310d8afa58101cf66a24475b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 73d1eb9fe27fa060a8bfcd13341a3908545aeed3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258090"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468340"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a>sp_pdw_database_encryption (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -35,7 +35,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 #### <a name="parameters"></a>Paramètres  
-`[ @enabled = ] enabled` Détermine si le chiffrement transparent des données est activé. l' *option Enabled* est de **type int**et peut prendre l’une des valeurs suivantes :  
+`[ @enabled = ] enabled` Détermine si le chiffrement transparent des données est activé. l' *option Enabled* est de **type int** et peut prendre l’une des valeurs suivantes :  
   
 -   0 - Désactivé  
   
@@ -46,7 +46,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Lorsque le TDE est activé à l’aide de **sp_pdw_database_encryption**, la base de données tempdb est supprimée, recréée et chiffrée. Pour cette raison, le TDE ne peut pas être activé sur un appareil tant qu’il existe d’autres sessions actives utilisant tempdb. L’activation ou la désactivation de TDE sur un appareil est une action qui modifie l’état de l’appliance. dans la plupart des cas, il est prévu qu’elle soit exécutée une fois dans la durée de vie de l’appliance et doit être exécutée en l’absence de trafic sur l’appliance.  
   
 ## <a name="permissions"></a>Autorisations  

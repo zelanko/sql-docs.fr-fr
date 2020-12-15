@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba7ad5c6c822bff351c09d264b25310e8ca51990
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dabf2e0c4fe2f23ad5dee576c73a2bafdb67a8be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425131"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464950"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connexion à une source de données (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "88425131"
   
  Lorsque **SQLBrowseConnect** termine une connexion réussie, il retourne une chaîne de connexion qui peut être utilisée lors des appels suivants à **SQLDriverConnect**.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne toujours SQL_SUCCESS_WITH_INFO sur un **SQLConnect**, **SQLDriverConnect**ou **SQLBrowseConnect**réussi. Quand une application ODBC appelle **SQLGetDiagRec** après l’obtention de SQL_SUCCESS_WITH_INFO, elle peut recevoir les messages suivants :  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client retourne toujours SQL_SUCCESS_WITH_INFO sur un **SQLConnect**, **SQLDriverConnect** ou **SQLBrowseConnect** réussi. Quand une application ODBC appelle **SQLGetDiagRec** après l’obtention de SQL_SUCCESS_WITH_INFO, elle peut recevoir les messages suivants :  
   
  5701  
  Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a placé le contexte de l'utilisateur dans la base de données par défaut définie dans la source de données ou dans la base de données par défaut définie pour l'ID de connexion employé dans la connexion si la source de données ne disposait pas d'une base de données par défaut.  

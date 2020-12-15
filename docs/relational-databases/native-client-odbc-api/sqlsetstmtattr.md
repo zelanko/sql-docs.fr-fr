@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e338ba67bdd2535f54e4678b4ff013c768571da8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868455"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465100"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91868455"
   
  Lorsque ces options sont définies, le serveur ferme automatiquement le curseur lorsqu'il détecte que la dernière ligne a été extraite. L’application doit toujours appeler [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) (SQL_CLOSE) ou [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), mais le pilote n’a pas besoin d’envoyer la notification de fermeture au serveur.  
   
- Si la liste de sélection contient une colonne **Text**, **ntext**ou **image** , le curseur avant uniquement rapide est converti en curseur dynamique et **SQLGetData** est autorisé.  
+ Si la liste de sélection contient une colonne **Text**, **ntext** ou **image** , le curseur avant uniquement rapide est converti en curseur dynamique et **SQLGetData** est autorisé.  
   
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  L’attribut SQL_SOPT_SS_DEFER_PREPARE détermine si l’instruction est préparée immédiatement ou différée jusqu’à l’exécution de **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) . Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 et version antérieure, cette propriété est ignorée (aucune préparation différée). La valeur de *ValuePtr* est de type SQLLEN.  
@@ -134,10 +134,10 @@ ms.locfileid: "91868455"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Par défaut.<br /><br /> Lors de l'utilisation de paramètres table, indique que les métadonnées des tables réelles doivent être retournées.<br /><br /> Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns ne retourne que les colonnes qui ne sont pas membres du **column_set**épars.|  
+|SQL_SS_NAME_SCOPE_TABLE|Par défaut.<br /><br /> Lors de l'utilisation de paramètres table, indique que les métadonnées des tables réelles doivent être retournées.<br /><br /> Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns ne retourne que les colonnes qui ne sont pas membres du **column_set** épars.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indique que l'application requiert les métadonnées pour un type de table, plutôt qu'une table réelle (les fonctions de catalogue doivent retourner les métadonnées pour les types de table). L’application passe ensuite la TYPE_NAME du paramètre table comme paramètre *TableName* .|  
 |SQL_SS_NAME_SCOPE_EXTENDED|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne toutes les colonnes, indépendamment de l’appartenance **column_set** .|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne uniquement les colonnes qui sont membres du **column_set**épars.|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Lors de l’utilisation de la fonctionnalité des colonnes éparses, SQLColumns retourne uniquement les colonnes qui sont membres du **column_set** épars.|  
 |SQL_SS_NAME_SCOPE_DEFAULT|Identique à SQL_SS_NAME_SCOPE_TABLE.|  
   
  SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME sont respectivement utilisés avec les paramètres *nomcatalogue* et *SchemaName* pour identifier le catalogue et le schéma du paramètre table. Quand une application a fini d'extraire les métadonnées des paramètres table, elle doit redéfinir SQL_SOPT_SS_NAME_SCOPE avec sa valeur par défaut SQL_SS_NAME_SCOPE_TABLE.  

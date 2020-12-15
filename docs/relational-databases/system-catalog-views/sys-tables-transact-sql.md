@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d87bd3ec1361cbe3c038ff57bdde31c5593a4dbb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1ed3eb33c3e7c1f54787d71c3d70bbb8ea10b810
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544009"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466990"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "89544009"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |\<inherited columns>||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|lob_data_space_id|**int**|Une valeur différente de zéro représente l'ID d'espace de données (groupe de fichiers ou schéma de partition) qui contient les données d'objet binaire volumineux (LOB) de cette table. Les exemples de types de données LOB sont **varbinary (max)**, **varchar (max)**, **Geography**ou **XML**.<br /><br /> 0 = La table ne contient pas de données LOB.|  
-|filestream_data_space_id|**int**|ID d'espace de données pour un groupe de fichiers FILESTREAM ou un schéma de partition composé de groupes de fichiers FILESTREAM.<br /><br /> Pour signaler le nom d’un groupe de fichiers FILESTREAM, exécutez la requête `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables peut être joint aux vues suivantes sur filestream_data_space_id = data_space_id.<br /><br /> -sys. FileGroups<br /><br /> -sys. partition_schemes<br /><br /> -sys. Indexes<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (jointure sur filegroup_id)|  
+|lob_data_space_id|**int**|Une valeur différente de zéro représente l'ID d'espace de données (groupe de fichiers ou schéma de partition) qui contient les données d'objet binaire volumineux (LOB) de cette table. Les exemples de types de données LOB sont **varbinary (max)**, **varchar (max)**, **Geography** ou **XML**.<br /><br /> 0 = La table ne contient pas de données LOB.|  
+|filestream_data_space_id|**int**|ID d'espace de données pour un groupe de fichiers FILESTREAM ou un schéma de partition composé de groupes de fichiers FILESTREAM.<br /><br /> Pour signaler le nom d’un groupe de fichiers FILESTREAM, exécutez la requête `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables peut être joint aux vues suivantes sur filestream_data_space_id = data_space_id.<br /><br /> -sys. FileGroups<br /><br /> -sys.partition_schemes<br /><br /> -sys. Indexes<br /><br /> -sys.allocation_units<br /><br /> -sys.fulltext_catalogs<br /><br /> -sys.data_spaces<br /><br /> -sys.destination_data_spaces<br /><br /> -sys.master_files<br /><br /> -sys.database_files<br /><br /> -backupfilegroup (jointure sur filegroup_id)|  
 |max_column_id_used|**int**|ID de colonne maximum utilisé à ce jour par cette table.|  
 |lock_on_bulk_load|**bit**|La table est verrouillée pour le chargement en masse. Pour plus d’informations, consultez [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |uses_ansi_nulls|**bit**|Lorsque la table a été créée, l'option de base de données SET ANSI_NULLS avait pour valeur ON.|  
@@ -48,7 +48,7 @@ ms.locfileid: "89544009"
 |has_unchecked_assembly_data|**bit**|1 = La table contient des données persistantes qui dépendent d'un assembly dont la définition a été modifiée lors de la dernière exécution de ALTER ASSEMBLY. Cette valeur est réinitialisée à 0 après exécution correcte de l'opération DBCC CHECKDB ou DBCC CHECKTABLE suivante.|  
 |text_in_row_limit|**int**|Taille maximale en octets du texte de la ligne.<br /><br /> 0 = l'option « text in row » n'est pas définie. Pour plus d’informations, consultez [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |large_value_types_out_of_row|**bit**|1 = les types de valeur élevée sont stockés en dehors de la ligne. Pour plus d’informations, consultez [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
-|is_tracked_by_cdc|**bit**|1 = la table est activée pour la capture des données modifiées. Pour plus d’informations, consultez [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
+|is_tracked_by_cdc|**bit**|1 = la table est activée pour la capture des données modifiées. Pour plus d’informations, consultez [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
 |lock_escalation|**tinyint**|Valeur de l'option LOCK_ESCALATION pour la table :<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
 |lock_escalation_desc|**nvarchar(60)**|Description textuelle de l'option lock_escalation pour la table. Les valeurs possibles sont : TABLE, AUTO et DISABLE.|  
 |is_filetable|**bit**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures et [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = La table est un FileTable.<br /><br /> Pour plus d’informations sur les FileTables, consultez [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).|  

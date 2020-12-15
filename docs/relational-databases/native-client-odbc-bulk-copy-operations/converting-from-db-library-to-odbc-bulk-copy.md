@@ -17,45 +17,45 @@ helpviewer_keywords:
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed2fce2e56d0d4bc8a1776bdc57f70446dc0919c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 488f3f1583a58431c5606fade81e9eb3f56bd076
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475767"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465030"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  La conversion d’un programme de copie en bloc DB-Library vers ODBC est simple, car les fonctions de copie en bloc prises en charge par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client sont similaires aux fonctions de copie en bloc de DB-Library, avec les exceptions suivantes :  
+  La conversion d’un programme de copie en bloc DB-Library dans ODBC est simple, car les fonctions de copie en bloc prises en charge par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC native client sont similaires aux fonctions de copie en bloc DB-Library, avec les exceptions suivantes :  
   
 -   Les applications de bibliothèque de bases de données passent un pointeur à une structure DBPROCESS comme premier paramètre de fonctions de copie en bloc. Dans les applications ODBC, le pointeur DBPROCESS est remplacé par un handle de connexion ODBC.  
   
--   Les applications DB-Library appellent **BCP_SETL** avant de se connecter pour activer les opérations de copie en bloc sur un DBPROCESS. Les applications ODBC appellent plutôt [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avant de se connecter pour activer les opérations en bloc sur un handle de connexion :  
+-   DB-Library applications appellent **BCP_SETL** avant de se connecter pour activer les opérations de copie en bloc sur un DBPROCESS. Les applications ODBC appellent plutôt [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avant de se connecter pour activer les opérations en bloc sur un handle de connexion :  
   
     ```  
     SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP,  
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge les gestionnaires d’erreurs et de messages DB-Library ; vous devez appeler **SQLGetDiagRec** pour recevoir les erreurs et les messages générés par les fonctions de copie en bloc ODBC. Les versions ODBC de fonctions de copie en bloc retournent les codes de retour de copie en bloc standard de SUCCEED ou FAILED, et non les codes de retour de style ODBC, tels que SQL_SUCCESS ou SQL_ERROR.  
+-   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge les gestionnaires de messages et d’erreurs DB-Library ; vous devez appeler **SQLGetDiagRec** pour recevoir les erreurs et les messages générés par les fonctions de copie en bloc ODBC. Les versions ODBC de fonctions de copie en bloc retournent les codes de retour de copie en bloc standard de SUCCEED ou FAILED, et non les codes de retour de style ODBC, tels que SQL_SUCCESS ou SQL_ERROR.  
   
 -   Les valeurs spécifiées pour le paramètre DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* sont interprétées différemment du paramètre ODBC **bcp_bind**_cbData_ .  
   
-    |Condition indiquée|Valeur *VARLEN* DB-Library|Valeur *CBDATA* ODBC|  
+    |Condition indiquée|DB-Library valeur *varlen*|Valeur *CBDATA* ODBC|  
     |-------------------------|--------------------------------|-------------------------|  
     |Valeurs NULL fournies|0|-1 (SQL_NULL_DATA)|  
     |Données de variables fournies|-1|-10 (SQL_VARLEN_DATA)|  
     |Caractère de longueur nulle ou chaîne binaire|N/D|0|  
   
-     Dans DB-Library, une valeur *varlen* de-1 indique que les données de longueur variable sont fournies, ce qui, dans le *cbData* ODBC, est interprété comme signifiant que seules les valeurs NULL sont fournies. Modifiez les spécifications *VARLEN* DB-Library de-1 en SQL_VARLEN_DATA et toutes les spécifications *varlen* de 0 à SQL_NULL_DATA.  
+     Dans DB-Library, une valeur *varlen* de-1 indique que les données de longueur variable sont fournies, ce qui, dans le *cbData* ODBC, est interprété comme signifiant que seules les valeurs NULL sont fournies. Remplacez les spécifications DB-Library *varlen* de-1 par SQL_VARLEN_DATA et toutes les spécifications de *varlen* de 0 par SQL_NULL_DATA.  
   
--   Les **BCP_COLFMT**DB-Library_file_collen_ et ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* ont le même problème que les paramètres **bcp_bind**_varlen_ et *cbData* indiqués ci-dessus. Remplacez les spécifications de *FILE_COLLEN* DB-Library de-1 par SQL_VARLEN_DATA et toutes les spécifications de *file_collen* comprises entre 0 et SQL_NULL_DATA.  
+-   Les DB-Library **bcp_colfmt**_file_collen_ et ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* ont le même problème que les paramètres **bcp_bind**_varlen_ et *cbData* indiqués ci-dessus. Modifiez les spécifications de *file_collen* de DB-Library de-1 pour SQL_VARLEN_DATA et les spécifications de *file_collen* de 0 à SQL_NULL_DATA.  
   
 -   Le paramètre *iValue* de la fonction [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) ODBC est un pointeur void. Dans DB-Library, *iValue* était un entier. Effectuez un cast des valeurs pour le *IVALUE* ODBC vers void *.  
   
--   L’option **BCP_CONTROL** BCPMAXERRS spécifie le nombre de lignes individuelles pouvant comporter des erreurs avant l’échec d’une opération de copie en bloc. La valeur par défaut de BCPMAXERRS est 0 (échec de la première erreur) dans la version DB-Library de **bcp_control** et 10 dans la version ODBC. Les applications DB-Library qui dépendent de la valeur par défaut 0 pour terminer une opération de copie en bloc doivent être modifiées pour appeler le **BCP_CONTROL** ODBC afin de définir BCPMAXERRS sur 0.  
+-   L’option **BCP_CONTROL** BCPMAXERRS spécifie le nombre de lignes individuelles pouvant comporter des erreurs avant l’échec d’une opération de copie en bloc. La valeur par défaut de BCPMAXERRS est 0 (échec de la première erreur) dans la version DB-Library de **bcp_control** et 10 dans la version ODBC. DB-Library applications qui dépendent de la valeur par défaut 0 pour terminer une opération de copie en bloc doivent être modifiées pour appeler la **BCP_CONTROL** ODBC afin de définir BCPMAXERRS sur 0.  
   
 -   La fonction ODBC **bcp_control** prend en charge les options suivantes non prises en charge par la version DB-Library de **bcp_control**:  
   
@@ -99,11 +99,11 @@ ms.locfileid: "88475767"
   
     -   Le format par défaut est *mmm jj aaaa hh : mmxx* , où *XX* est AM ou PM.  
   
-    -   chaînes de caractères **DateTime** et **smalldatetime** dans n’importe quel format pris en charge par la fonction **DBConvert** de la bibliothèque DB-Library.  
+    -   les chaînes de caractères **DateTime** et **smalldatetime** dans n’importe quel format pris en charge par la fonction DB-Library **DBConvert** .  
   
-    -   Lorsque la case **utiliser les paramètres internationaux** est cochée sous l’onglet **options** de la bibliothèque de bases de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilitaire réseau client, les fonctions de copie en bloc de la bibliothèque de bases de la bibliothèque acceptent également les dates au format de date régional défini pour les paramètres régionaux du registre de l’ordinateur client.  
+    -   Lorsque la case **utiliser les paramètres internationaux** est cochée sous l’onglet **options** de DB-Library de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilitaire réseau client, les fonctions de copie en bloc DB-Library acceptent également les dates au format de date régional défini pour les paramètres régionaux du registre de l’ordinateur client.  
   
-     Les fonctions de copie en bloc de DB-Library n’acceptent pas les formats **DateTime** et **smalldatetime** ODBC.  
+     Les fonctions de copie en bloc DB-Library n’acceptent pas les formats **DateTime** et **smalldatetime** ODBC.  
   
      Si l'attribut d'instruction SQL_SOPT_SS_REGIONALIZE a la valeur SQL_RE_ON, les fonctions de copie en bloc ODBC acceptent les dates au format de date régional défini pour les paramètres régionaux du Registre de l'ordinateur client.  
   

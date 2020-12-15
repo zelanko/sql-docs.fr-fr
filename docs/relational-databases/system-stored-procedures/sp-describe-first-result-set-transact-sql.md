@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cc2e3bef68a6900d5b9735ef3a5f8a050a34361
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c95a79bb42cbc3ab32a5521682aacc8f4f9079d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548101"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466910"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Retourne les métadonnées pour le premier jeu de résultats possible du [!INCLUDE[tsql](../../includes/tsql-md.md)] lot. Retourne un jeu de résultats vide si le lot ne retourne pas de résultats. Génère une erreur si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas déterminer les métadonnées de la première requête qui sera exécutée en effectuant une analyse statique. La vue de gestion dynamique [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) retourne les mêmes informations.  
+  Retourne les métadonnées pour le premier jeu de résultats possible du [!INCLUDE[tsql](../../includes/tsql-md.md)] lot. Retourne un jeu de résultats vide si le lot ne retourne pas de résultats. Génère une erreur si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut pas déterminer les métadonnées de la première requête qui sera exécutée en effectuant une analyse statique. La vue de gestion dynamique [sys.dm_exec_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) retourne les mêmes informations.  
   
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ \@tsql = ] 'Transact-SQL_batch'` Une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être de type **nvarchar (***n***)** ou **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être de type **nvarchar (**_n_*_)_* ou **nvarchar (max)**.  
   
 `[ \@params = ] N'parameters'`\@params fournit une chaîne de déclaration pour les paramètres du [!INCLUDE[tsql](../../includes/tsql-md.md)] lot, qui est similaire à sp_executesql. Les paramètres peuvent être de type **nvarchar (n)** ou **nvarchar (max)**.  
   
@@ -58,7 +58,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   Si la valeur 2 est définie, chaque requête est analysée comme si elle était utilisée lors de la préparation ou de l'exécution d'un curseur. Retourne les noms de vues comme informations de colonne source.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- **sp_describe_first_result_set** retourne toujours l’état zéro en cas de réussite. Si la procédure génère une erreur et que la procédure est appelée en tant que RPC, l’état de retour est rempli par le type d’erreur décrit dans la colonne error_type de sys. dm_exec_describe_first_result_set. Si la procédure est appelée de [!INCLUDE[tsql](../../includes/tsql-md.md)], la valeur de retour est toujours de zéro, même en présence d'une erreur.  
+ **sp_describe_first_result_set** retourne toujours l’état zéro en cas de réussite. Si la procédure génère une erreur et que la procédure est appelée en tant que RPC, l’état de retour est rempli par le type d’erreur décrit dans la colonne error_type de sys.dm_exec_describe_first_result_set. Si la procédure est appelée de [!INCLUDE[tsql](../../includes/tsql-md.md)], la valeur de retour est toujours de zéro, même en présence d'une erreur.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Ces métadonnées communes sont retournées en tant que jeu de résultats avec une ligne pour chaque colonne dans les métadonnées de résultats. Chaque ligne décrit le type et la possibilité de valeur NULL de la colonne dans le format décrit dans la section suivante. S'il n'existe pas de première instruction pour chaque chemin d'accès de contrôle, un jeu de résultats avec des lignes nulles est retourné.  
@@ -105,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|À usage interne uniquement.|  
 |**tds_collation_sort_id**|**tinyint NULL**|À usage interne uniquement.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  **sp_describe_first_result_set** garantit que si la procédure retourne les premières métadonnées du jeu de résultats pour (un hypothétique) lot a et si ce lot (a) est exécuté par la suite, le traitement (1) génère une erreur de temps d’optimisation. (2) déclenche une erreur d’exécution, (3) ne retourne aucun jeu de résultats, ou (4) retourne un premier jeu de résultats avec les mêmes métadonnées que celles décrites par **sp_describe_first_result_set**.  
   
  Le nom, la possibilité de valeur NULL et le type de données peuvent différer. Si **sp_describe_first_result_set** retourne un jeu de résultats vide, la garantie est que l’exécution du lot ne retourne pas de jeu de résultats.  
@@ -401,6 +401,6 @@ N'
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  
