@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec57f41be3971b41d5bebf6c139b9913666e8c20
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eb990b9cb78d36bfe680562574eda0688422c7c3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753959"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462730"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91753959"
 |**NUMERIC_PRECISION**|**tinyint**|Précision des données numériques approchées ou exactes, des données de type entier ou monétaire. Dans le cas contraire, la valeur NULL est retournée.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de précision des données numériques approchées ou exactes, des données de type entier ou monétaire. Dans le cas contraire, la valeur NULL est retournée.|  
 |**NUMERIC_SCALE**|**tinyint**|Échelle des données numériques approchées ou exactes, des données de type entier ou monétaire. Dans le cas contraire, la valeur NULL est retournée.|  
-|**DATETIME_PRECISION**|**smallint**|Code de sous-type pour les types de données**Integer** **DateTime** et ISO. Retourne la valeur NULL pour les autres types de données.|  
+|**DATETIME_PRECISION**|**smallint**|Code de sous-type pour les types de données **Integer** **DateTime** et ISO. Retourne la valeur NULL pour les autres types de données.|  
 |**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Retourne **Master**. Il s’agit de la base de données dans laquelle se trouve le jeu de caractères si la colonne est de type de données caractère ou **texte** . Dans le cas contraire, la valeur NULL est retournée.|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Retourne toujours la valeur Null.|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Retourne le nom unique du jeu de caractères si cette colonne est une donnée de type caractère ou **texte** . Dans le cas contraire, la valeur NULL est retournée.|  

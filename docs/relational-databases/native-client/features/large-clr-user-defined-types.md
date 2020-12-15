@@ -1,5 +1,5 @@
 ---
-description: Types CLR volumineux définis par l’utilisateur dans SQL Server Native Client
+description: Types de User-Defined CLR volumineux dans SQL Server Native Client
 title: Types CLR volumineux définis par l'utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b841020b73ea7dde90eca5a0b693bb1f943fa4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 039b57d8eaaee8004dda5988cb877c4ec7ccc037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498919"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463370"
 ---
-# <a name="large-clr-user-defined-types-in-sql-server-native-client"></a>Types CLR volumineux définis par l’utilisateur dans SQL Server Native Client
+# <a name="large-clr-user-defined-types-in-sql-server-native-client"></a>Types de User-Defined CLR volumineux dans SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Dans SQL Server 2005, les types définis par l'utilisateur (UDT) dans le CLR (Common Language Runtime) se limitaient à une taille de 8 000 octets. Cette limite n'est plus d'actualité dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et versions ultérieures. Les types CLR définis par l'utilisateur sont désormais traités de la même manière que les objets LOB. Ainsi, les types définis par l'utilisateur dont la taille est inférieure ou égale à 8 000 octets adoptent le même comportement que dans SQL Server 2005 mais les types définis par l'utilisateur plus volumineux sont pris en charge et affichent une taille « illimitée ».  
   
- Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) et [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Pour plus d’informations, consultez [types de User-Defined CLR volumineux &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) et [types CLR de grande taille User-Defined ODBC ](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)&#40;.  
   
 ## <a name="use-cases"></a>Cas d'utilisation  
  Pour ODBC, la prise en charge des types définis par l'utilisateur volumineux incluent la possibilité de transmettre des valeurs UDT en fragments sous forme de paramètres de données en cours d'exécution. Pour ce faire, utilisez SQLPutData.  

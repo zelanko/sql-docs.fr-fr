@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_stats_properties (Transact-SQL)
-title: sys. dm_db_stats_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1039850e4322003ddfedd5407d18ab6170077c42
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f412097e74c8230ee7fe9941e48f39b034c2ebca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537026"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462740"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Retourne les propriétés de statistiques de l'objet de base de données spécifié (table ou vue indexée) dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] active. Pour les tables partitionnées, consultez la section [sys. dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)similaire. 
+  Retourne les propriétés de statistiques de l'objet de base de données spécifié (table ou vue indexée) dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] active. Pour les tables partitionnées, consultez la [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)similaire. 
  
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,14 +61,14 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |persisted_sample_percent|**float**|Pourcentage d’échantillon persistant utilisé pour les mises à jour des statistiques qui ne spécifient pas explicitement un pourcentage d’échantillonnage. Si la valeur est zéro, aucun pourcentage d’échantillon persistant n’est défini pour cette statistique.<br /><br /> **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> Notes  
- **sys. dm_db_stats_properties** retourne un ensemble de lignes vide dans l’une des conditions suivantes :  
+ **sys.dm_db_stats_properties** retourne un ensemble de lignes vide dans l’une des conditions suivantes :  
   
 -   **object_id** ou **stats_id** a la valeur null.    
 -   L'objet spécifié est introuvable ou ne correspond à aucune table ou vue indexée.    
 -   L'ID de statistiques spécifié ne correspond pas à des statistiques existantes pour l'ID d'objet spécifié.    
 -   L'utilisateur actuel n'est pas autorisé à afficher l'objet de statistiques.  
   
- Ce comportement permet d’utiliser en toute sécurité **sys. dm_db_stats_properties** lorsqu’il est appliqué à des lignes dans des vues telles que **sys. Objects** et **sys. stats**.  
+ Ce comportement permet d’utiliser en toute sécurité des **sys.dm_db_stats_properties** lorsqu’il est appliqué à des lignes dans des vues telles que **sys. Objects** et **sys. stats**.  
  
 La date de mise à jour des statistiques est stockée dans l’[objet blob de statistiques](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) avec l’[histogramme](../../relational-databases/statistics/statistics.md#histogram) et le [vecteur de densité](../../relational-databases/statistics/statistics.md#density), et non dans les métadonnées. Quand aucune donnée n’est lue pour générer des données de statistiques, l’objet blob de statistiques n’est pas créé, la date n’est pas disponible et la colonne *last_updated* a la valeur null. C’est le cas pour les statistiques filtrées pour lesquelles le prédicat ne renvoie aucune ligne, ou pour les nouvelles tables vides.
   

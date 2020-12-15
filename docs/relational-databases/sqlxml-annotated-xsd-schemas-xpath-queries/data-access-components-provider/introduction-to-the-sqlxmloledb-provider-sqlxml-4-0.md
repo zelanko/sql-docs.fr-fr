@@ -15,13 +15,13 @@ ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aafc93dd9cf83a648cc4eecfe9301ad6e3ab24c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6b3d36e6aae398c8b480a800cdd2dc6064eb220e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650077"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462890"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Présentation du fournisseur SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -40,16 +40,16 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Propriétés spécifiques au fournisseur SQLXMLOLEDB  
  Le fournisseur SQLXMLOLEDB expose la propriété de connexion spécifique au fournisseur suivante.  
   
-|Connexion<br /><br /> propriété|Valeur par défaut<br /><br /> (le cas échéant)|Description|  
+|Connexion<br /><br /> propriété|Par défaut<br /><br /> (le cas échéant)|Description|  
 |-----------------------------|----------------------------|-----------------|  
 |Fournisseur de données||Fournit l'identificateur PROGID du fournisseur OLE DB par l'intermédiaire duquel SQLXMLOLEDB exécute les commandes. À compter de SQLXML 4.0 et de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ce fournisseur est contenu dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ; par conséquent, cette valeur de propriété est limitée à « SQLNCLI11 ». Pour plus d’informations, consultez [Programmation de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  Le fournisseur SQLXMLOLEDB expose les propriétés de commande spécifiques au fournisseur suivantes.  
   
-|Commande<br /><br /> propriété|Valeur par défaut<br /><br /> (le cas échéant)|Description|  
+|Commande<br /><br /> propriété|Par défaut<br /><br /> (le cas échéant)|Description|  
 |--------------------------|----------------------------|-----------------|  
 |Chemin de base|""|Spécifie le chemin d'accès au fichier de base. Le chemin d'accès au fichier de base est utilisé pour spécifier l'emplacement des fichiers XSL (XML Stylesheet Language) ou de schéma de mappage. Le chemin d’accès au fichier de base est également utilisé pour résoudre les chemins d’accès relatifs des fichiers XSL ou de schéma de mappage qui ont été spécifiés dans le XSL ou les propriétés du schéma de mappage.<br /><br /> Pour obtenir un exemple d’utilisation de cette propriété, consultez [exécution de requêtes XPath &#40;&#41;fournisseur SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
-|ClientSideXML|False|Attribuez la valeur True à cette propriété si vous souhaitez que le processus de conversion de l'ensemble de lignes en XML se produise sur le client et non sur le serveur. Cela s'avère utile si vous souhaitez déplacer la charge de performance vers le niveau intermédiaire.<br /><br /> Pour obtenir un exemple d’utilisation de cette propriété, consultez [exécution de requêtes sql &#40;fournisseur SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) ou [exécution de modèles contenant des requêtes SQL &#40;fournisseur SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
+|ClientSideXML|Faux|Attribuez la valeur True à cette propriété si vous souhaitez que le processus de conversion de l'ensemble de lignes en XML se produise sur le client et non sur le serveur. Cela s'avère utile si vous souhaitez déplacer la charge de performance vers le niveau intermédiaire.<br /><br /> Pour obtenir un exemple d’utilisation de cette propriété, consultez [exécution de requêtes sql &#40;fournisseur SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) ou [exécution de modèles contenant des requêtes SQL &#40;fournisseur SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
 |Type de contenu||Retourne le type de contenu de sortie. Il s'agit d'une propriété READ ONLY.<br /><br /> Cette propriété fournit des informations au navigateur sur le type de contenu (telles que TEXT/XML, TEXT/HTML, image/jpeg et ainsi de suite). La valeur de cette propriété devient le champ **Content-type** qui est envoyé au navigateur dans le cadre de l’en-tête http, qui contient le type MIME (Multipurpose Internet Mail Extensions) du document envoyé en tant que corps.|  
 |Schéma de mappage|NULL|Si une application cliente exécute une requête XPath sur un schéma de mappage (XDR ou XSD), cette propriété est utilisée pour spécifier le nom du schéma de mappage.<br /><br /> Le chemin d'accès spécifié peut être relatif (xyz/abc/MonSchéma.xml) ou absolu (C:\MonDossier\abc\MonSchéma.xml).<br /><br /> Si un chemin d’accès relatif est spécifié, le chemin d’accès de base spécifié par la propriété chemin d’accès de base est utilisé pour résoudre le chemin d’accès relatif. Si aucun chemin d’accès n’a été spécifié dans la propriété chemin d’accès de base, le chemin d’accès relatif est relatif au répertoire actif.<br /><br /> Si vous spécifiez une valeur pour la propriété schéma de mappage, vous pouvez spécifier un chemin d’accès au répertoire local ou une URL (https://...). Si vous spécifiez une URL, vous devez configurer WinHTTP pour accéder aux serveurs HTTP et HTTPs par le biais d’un serveur proxy. Pour cela, vous pouvez exécuter l'utilitaire Proxycfg.exe. Pour plus d'informations, consultez l'article relatif à l'utilisation de l'utilitaire de configuration de l'utilitaire WinHTTP dans MSDN Library.<br /><br /> Pour obtenir un exemple d’utilisation de cette propriété, consultez [exécution de requêtes XPath &#40;&#41;fournisseur SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |espaces de noms||Cette propriété active l'exécution de requêtes XPath qui utilisent des espaces de noms. Pour obtenir un exemple d’utilisation de cette propriété, consultez [exécution de requêtes XPath avec des espaces de noms &#40;fournisseur SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md).|  

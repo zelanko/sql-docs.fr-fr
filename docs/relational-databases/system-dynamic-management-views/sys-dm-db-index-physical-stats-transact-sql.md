@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e4d175fe42497d2a75c23d3ae49d60821952ccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833858"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458480"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91833858"
  **sys.dm_db_index_physical_stats** ne retourne pas d’informations sur les index optimisés en mémoire. Pour plus d’informations sur l’utilisation des index optimisés en mémoire, consultez [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,7 @@ sys.dm_db_index_physical_stats (
  *database_id* \| Valeur NULL \| 0 \| par défaut  
  ID de la base de données. *database_id* est de type **smallint**. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
- Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez NULL pour *database_id*, vous devez également spécifier null pour *object_id*, *index_id*et *partition_number*.  
+ Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez NULL pour *database_id*, vous devez également spécifier null pour *object_id*, *index_id* et *partition_number*.  
   
  Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Si vous utilisez DB_ID sans spécifier de nom de base de données, le niveau de compatibilité de la base de données active doit être égal à 90 ou plus.  
   
@@ -121,11 +121,11 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|Nombre d’enregistrements de version conservés en dehors de la ligne de données d’origine. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|Nombre d’enregistrements de version considérés à long terme. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  La fonction de gestion dynamique sys.dm_db_index_physical_stats remplace l'instruction DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modes d'analyse  
- Le mode d'exécution de la fonction détermine le niveau de l'analyse effectuée pour obtenir les données statistiques utilisées par la fonction. le *mode* est spécifié sous la forme Limited, SAMPLED ou detailed. La fonction traverse les chaînes de pages des unités d'allocation qui composent les partitions spécifiées de la table ou de l'index. sys.dm_db_index_physical_stats nécessite uniquement un verrou de table intentionnel (IS), quel que soit le mode dans lequel il s’exécute.  
+ Le mode d'exécution de la fonction détermine le niveau de l'analyse effectuée pour obtenir les données statistiques utilisées par la fonction. le *mode* est spécifié sous la forme Limited, SAMPLED ou detailed. La fonction traverse les chaînes de pages des unités d'allocation qui composent les partitions spécifiées de la table ou de l'index. sys.dm_db_index_physical_stats requiert uniquement un verrou de table Intent-Shared (IS), quel que soit le mode dans lequel il s’exécute.  
   
  Le mode LIMITED est le mode plus rapide : il analyse le plus petit nombre de pages. Pour un index, seules les pages de niveau parent de l'arbre B (B-tree) (autrement dit, les pages au-dessus du niveau feuille) sont analysées. Pour un segment de mémoire, les pages PFS et IAM associées sont examinées et les pages de données d'un segment de mémoire sont analysées en mode LIMITED.  
   
@@ -184,7 +184,7 @@ GO
   
  **Fragmentation logique**  
   
- Pourcentage de pages hors service dans les pages de feuilles d'un index. Une page non ordonnée est une page pour laquelle la page physique suivante allouée à l’index n’est pas la page désignée par le pointeur de pag*e* suivante dans la page feuille actuelle.  
+ Pourcentage de pages hors service dans les pages de feuilles d'un index. Une page non ordonnée est une page pour laquelle la page physique suivante allouée à l’index n’est pas la page désignée par le pointeur de pag *e* suivante dans la page feuille actuelle.  
   
  **Fragmentation de l'étendue**  
   

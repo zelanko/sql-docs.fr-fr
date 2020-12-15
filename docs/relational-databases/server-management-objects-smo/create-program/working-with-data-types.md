@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99ac0e206244404d1f4155acdd10c0a35df6e719
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1939f6608b6175463103fce2a69a3d5936346605
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420303"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463000"
 ---
 # <a name="working-with-data-types"></a>Utilisation des types de données
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88420303"
   
 -   Utilisez l’un des membres statiques de la <xref:Microsoft.SqlServer.Management.Smo.DataType> classe, par exemple **int**. Cela renverra en fait une instance d’un <xref:Microsoft.SqlServer.Management.Smo.DataType> objet.  
   
- L'objet <xref:Microsoft.SqlServer.Management.Smo.DataType> a plusieurs propriétés qui définissent le type de données. Par exemple, la propriété <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> spécifie le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les valeurs constantes qui représentent des types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont répertoriées dans l'énumération <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. Cela fait référence à des types de données tels que **varchar**, **nchar**, **currency**, **integer**, **float**et **datetime**.  
+ L'objet <xref:Microsoft.SqlServer.Management.Smo.DataType> a plusieurs propriétés qui définissent le type de données. Par exemple, la propriété <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> spécifie le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les valeurs constantes qui représentent des types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont répertoriées dans l'énumération <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. Cela fait référence à des types de données tels que **varchar**, **nchar**, **currency**, **integer**, **float** et **datetime**.  
   
  Lorsque le type de données est établi, des propriétés spécifiques doivent être définies pour les données. Par exemple, s'il s'agit d'un type **nchar** , la longueur des données de chaîne doit être définie dans la propriété **Length** . La même règle s'applique aux valeurs numériques, pour lesquelles il vous faudrait spécifier la précision et l'échelle.  
   

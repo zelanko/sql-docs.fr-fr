@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b96269437d8dd793c6a1baf0884d8a16160145d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9832373d4b6c65ba16bfa83b8ef54cba963777c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538716"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462710"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |**RoleId**|**smallint**|ID de **roleName**.|  
 |**IsAppRole**|**int**|0 = **roleName** n’est pas un rôle d’application.<br /><br /> 1 = **roleName** est un rôle d’application.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Pour afficher les autorisations associées au rôle, utilisez **sp_helprotect**. Pour afficher les membres d’un rôle de base de données, utilisez **sp_helprolemember**.  
   
 ## <a name="permissions"></a>Autorisations  

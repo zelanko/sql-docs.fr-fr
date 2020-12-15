@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84c61b1e6517bc98e8acb32a8215f2dad853d7e5
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3271963cf5a07e88b6209bd2b7316ab40f43bc05
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328589"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461530"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "93328589"
 |**is_copy_only**|**bit**|1 = Sauvegarde de copie unique. Pour plus d’informations, consultez [Sauvegardes de copie uniquement &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|ID du branchement de récupération de début. Cela correspond à **FirstRecoveryForkID** de RESTORE HEADERONLY.<br /><br /> Pour les sauvegardes de données, **first_recovery_fork_guid** est égal à **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|ID du branchement de récupération de fin. Cela correspond à **RecoveryForkID** de RESTORE HEADERONLY.<br /><br /> Pour les sauvegardes de données, **first_recovery_fork_guid** est égal à **last_recovery_fork_guid**.|  
-|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** n’est pas égal à **last_recovery_fork_guid** , il s’agit du numéro séquentiel dans le journal du point de fourche. Dans le cas contraire, la valeur est NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** n’est pas égal à **last_recovery_fork_guid**, il s’agit du numéro séquentiel dans le journal du point de fourche. Dans le cas contraire, la valeur est NULL.|  
 |**database_guid**|**uniqueidentifier**|ID unique de la base de données. Cela correspond à **BindingId** de RESTORE HEADERONLY. Lors de la restauration de la base de données, une nouvelle valeur est attribuée.|  
 |**family_guid**|**uniqueidentifier**|ID unique de la base de données d'origine lors de sa création. Cette valeur demeure identique lors de la restauration de la base de données, même sous un nom différent.|  
 |**differential_base_lsn**|**numeric(25,0)**|Numéro de séquence d'enregistrement de base pour les sauvegardes différentielles. Pour une sauvegarde différentielle unique ; les modifications dont le LSN est supérieur ou égal à **differential_base_lsn** sont incluses dans la sauvegarde différentielle.<br /><br /> Pour une différentielle multibase, la valeur est NULL et le LSN de base doit être déterminé au niveau du fichier (consultez [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Pour les types de sauvegarde non différentiels, la valeur est toujours NULL.|  
@@ -102,7 +102,7 @@ ms.locfileid: "93328589"
 |**encryptor_thumbprint**|**varbinary(20)**|Empreinte numérique du chiffreur pouvant être utilisé pour rechercher un certificat ou la clé asymétrique dans la base de données. Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Type de chiffreur utilisé : certificat ou clé asymétrique. . Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  RESTORE VERIFYONLY à partir de *backup_device* avec LoadHistory remplit la colonne de la table **backupmediaset** avec les valeurs appropriées de l’en-tête Media-Set.  
   
  Pour réduire le nombre de lignes dans cette table et dans d’autres tables de sauvegarde et d’historique, exécutez la procédure stockée [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  

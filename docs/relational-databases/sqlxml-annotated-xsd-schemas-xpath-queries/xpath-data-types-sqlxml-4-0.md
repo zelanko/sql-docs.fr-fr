@@ -28,19 +28,19 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 15b308481b6622284d6f8bdd36d474b3886570d6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332636"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460036"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath et le schéma XML (XSD) ont des types de données très différents. Par exemple, XPath n'affiche aucun type de données integer ou date tandis que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et XSD en possèdent un grand nombre. XSD utilise une précision à la nanoseconde pour les valeurs temporelles ; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche au maximum une précision de 1/300ème de seconde. Par conséquent, le mappage d'un type de données à un autre n'est pas toujours possible. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le mappage des types de données aux types de données XSD, consultez [forçages de type de données et annotation sql : DataType &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
- XPath a trois types de données : **chaîne**, **nombre**et **booléen**. Le type de données Number est toujours un **nombre** à virgule flottante double précision IEEE 754. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données **float (53)** est le plus proche du **nombre**XPath. Toutefois, **float (53)** n’est pas exactement IEEE 754. Par exemple, ni la valeur NaN (Not-a-Number,), ni une valeur infinie n'est employée. Toute tentative de conversion d’une chaîne non numérique en **nombre** et d’une tentative de division par zéro provoque une erreur.  
+ XPath a trois types de données : **chaîne**, **nombre** et **booléen**. Le type de données Number est toujours un **nombre** à virgule flottante double précision IEEE 754. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données **float (53)** est le plus proche du **nombre** XPath. Toutefois, **float (53)** n’est pas exactement IEEE 754. Par exemple, ni la valeur NaN (Not-a-Number,), ni une valeur infinie n'est employée. Toute tentative de conversion d’une chaîne non numérique en **nombre** et d’une tentative de division par zéro provoque une erreur.  
   
 ## <a name="xpath-conversions"></a>Conversions XPath  
  Lorsque vous utilisez une requête XPath, telle que `OrderDetail[@UnitPrice > "10.0"]`, les conversions de type de données implicites et explicites peuvent modifier la signification de la requête de manière subtile. Par conséquent, il est primordial de comprendre la manière dont les types de données Xpath sont implémentés. La spécification du langage XPath, XML Path Language (XPath) version 1,0 W3C proposed Recommendation 8 octobre 1999, est disponible sur le site Web du W3C à l’adresse http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
@@ -55,7 +55,7 @@ ms.locfileid: "87332636"
   
 -   Opérateurs arithmétiques (+, -, *, div, mod)  
   
- Chaque catégorie d'opérateur convertit ses opérandes de manière distincte. Les opérateurs XPath convertissent implicitement leurs opérandes si cela est nécessaire. Les opérateurs arithmétiques convertissent leurs opérandes en **nombres**et génèrent une valeur numérique. Les opérateurs booléens convertissent leurs opérandes en **booléen**et génèrent une valeur booléenne. Les opérateurs relationnels et d'égalité génèrent une valeur booléenne. Toutefois, ils suivent des règles de conversion différentes en fonction des types de données d'origine de leurs opérandes comme le montre le tableau ci-après.  
+ Chaque catégorie d'opérateur convertit ses opérandes de manière distincte. Les opérateurs XPath convertissent implicitement leurs opérandes si cela est nécessaire. Les opérateurs arithmétiques convertissent leurs opérandes en **nombres** et génèrent une valeur numérique. Les opérateurs booléens convertissent leurs opérandes en **booléen** et génèrent une valeur booléenne. Les opérateurs relationnels et d'égalité génèrent une valeur booléenne. Toutefois, ils suivent des règles de conversion différentes en fonction des types de données d'origine de leurs opérandes comme le montre le tableau ci-après.  
   
 |Opérande|Opérateur relationnel|Opérateur d’égalité|  
 |-------------|-------------------------|-----------------------|  
@@ -66,7 +66,7 @@ ms.locfileid: "87332636"
 |Ni l'un ni l'autre n'est un élément node-set.|Convertissez les deux opérandes en **nombre** , puis comparez-les.|Convertissez les deux opérandes en un type commun, puis comparez-les. Convertit en **valeur booléenne** si l’un des deux est **Boolean**, **Number** si l’un ou l’autre est **Number**; Sinon, convertir en **chaîne**.|  
   
 > [!NOTE]  
->  Étant donné que les opérateurs relationnels XPath convertissent toujours leurs opérandes en **nombre**, les comparaisons de **chaînes** ne sont pas possibles. Pour inclure des comparaisons de dates, SQL Server 2000 offre cette variation à la spécification XPath : lorsqu’un opérateur relationnel compare une **chaîne** à une **chaîne, un**ensemble de nœuds à une **chaîne**ou un node-Valued node-set à un ensemble de nœuds à valeur de chaîne, une comparaison de **chaînes** (et non une comparaison de **nombres** ) est effectuée.  
+>  Étant donné que les opérateurs relationnels XPath convertissent toujours leurs opérandes en **nombre**, les comparaisons de **chaînes** ne sont pas possibles. Pour inclure des comparaisons de dates, SQL Server 2000 offre cette variation à la spécification XPath : lorsqu’un opérateur relationnel compare une **chaîne** à une **chaîne, un** ensemble de nœuds à une **chaîne** ou un node-Valued node-set à un ensemble de nœuds à valeur de chaîne, une comparaison de **chaînes** (et non une comparaison de **nombres** ) est effectuée.  
   
 ## <a name="node-set-conversions"></a>Conversions des éléments node-set  
  Les conversions des éléments node-set ne sont pas toujours intuitives. Une définition de nœud est convertie en **chaîne** en utilisant uniquement la valeur de chaîne du premier nœud du jeu. Une définition de nœud est convertie en **nombre** en la convertissant en **chaîne**, puis en convertissant la **chaîne** en **nombre**. Une définition de nœud est convertie en valeur **booléenne** en testant son existence.  
@@ -74,7 +74,7 @@ ms.locfileid: "87332636"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne procède à aucune sélection positionnelle sur les éléments node-set : par exemple, la requête XPath `Customer[3]` désigne le troisième client ; ce type de sélection positionnelle n'est pas pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, les conversions node-set-to-**String** ou node-set-to-**Number** , comme décrit dans la spécification XPath, ne sont pas implémentées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une sémantique « quelconque » partout où la recommandation XPath spécifie la « première » sémantique. Par exemple, en fonction de la spécification XPath du W3C, la requête XPath `Order[OrderDetail/@UnitPrice > 10.0]` sélectionne les commandes avec le premier **OrderDetail** dont la valeur **UnitPrice** est supérieure à 10,0. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette requête XPath sélectionne les commandes avec un **OrderDetail** dont la valeur **UnitPrice** est supérieure à 10,0.  
   
- La conversion en **valeur booléenne** génère un test d’existence ; par conséquent, la requête XPath `Products[@Discontinued=true()]` équivaut à l’expression SQL « Products. Discontinued is not null », et non à l’expression SQL « Products. Discontinued = 1 ». Pour que la requête soit équivalente à la dernière expression SQL, convertissez d’abord node-set en type non**booléen** , tel que **Number**. Par exemple : `Products[number(@Discontinued) = true()]`.  
+ La conversion en **valeur booléenne** génère un test d’existence ; par conséquent, la requête XPath `Products[@Discontinued=true()]` équivaut à l’expression SQL « Products. Discontinued is not null », et non à l’expression SQL « Products. Discontinued = 1 ». Pour que la requête soit équivalente à la dernière expression SQL, convertissez d’abord node-set en type non **booléen** , tel que **Number**. Par exemple, `Products[number(@Discontinued) = true()]`.  
   
  Du fait que la plupart des opérateurs sont définis pour être vrais (TRUE) s'ils le sont pour un nœud quelconque ou l'un des nœuds de l'élément node-set, ces opérations prennent toujours la valeur FALSE si l'élément node-set est vide. Ainsi donc, si A est vide, `A = B` et `A != B` ont tous les deux la valeur FALSE et `not(A=B)` et `not(A!=B)` ont la valeur TRUE.  
   

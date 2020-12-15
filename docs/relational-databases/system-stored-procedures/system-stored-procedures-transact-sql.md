@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810295"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462670"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procédures stockées système (Transact-SQL)
 
@@ -38,9 +38,9 @@ ms.locfileid: "91810295"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Category|Description|  
+|Catégorie|Description|  
 |--------------|-----------------|  
-|[Procédures stockées de géo-réplication Active]()|Utilisé pour gérer pour gérer les configurations de géo-réplication Active dans Azure SQL Database|  
+|[Procédures stockées active Geo-Replication]()|Utilisé pour gérer pour gérer les configurations de Geo-Replication actives dans Azure SQL Database|  
 |[Procédures stockées du catalogue](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Permettent d'implémenter les fonctions du dictionnaire de données ODBC et d'isoler les applications ODBC des modifications apportées aux tables système concernées.|  
 |[Procédures stockées de capture des données modifiées](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Permettent d'activer, de désactiver ou de créer des rapports sur des objets de capture des données modifiées.|  
 |[Procédures stockées de curseur](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Permettent d'implémenter les fonctionnalités de variable de curseur.|  
@@ -75,7 +75,7 @@ ms.locfileid: "91810295"
 ## <a name="api-system-stored-procedures"></a>Procédures système API  
  Les utilisateurs qui exécutent le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sur des applications ADO, OLE DB et ODBC peuvent remarquer que celles-ci utilisent des procédures stockées système non abordées dans le manuel de référence [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces procédures stockées sont utilisées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client pour implémenter les fonctionnalités d’une API de base de données. Ces procédures stockées sont simplement le mécanisme utilisé par le fournisseur ou le pilote afin de communiquer les requêtes des utilisateurs à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont uniquement destinées à l'utilisation interne du fournisseur ou du pilote. Les appeler explicitement à partir d’une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] application basée sur ne sont pas pris en charge.  
   
- Les procédures stockées sp_createorphan et sp_droporphans sont utilisées pour le traitement des **images** , de **texte**et **ntext**ODBC.  
+ Les procédures stockées sp_createorphan et sp_droporphans sont utilisées pour le traitement des **images** , de **texte** et **ntext** ODBC.  
   
  La procédure stockée sp_reset_connection est utilisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de prendre en charge les appels de procédure stockée distante dans une transaction. Cette procédure stockée peut aussi déclencher des événements Audit Login et Audit Logout si une connexion est réutilisée dans un regroupement de connexions.  
   

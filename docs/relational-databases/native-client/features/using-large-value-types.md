@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dce3adf92772a69875a644a2dc23344b6b139f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243900"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461990"
 ---
 # <a name="using-large-value-types-in-sql-server-native-client"></a>Utilisation de types de valeur élevée dans SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilisation de types de données de valeur élevée nécessitait une gestion particulière. Les types de données à valeur élevée sont ceux dont la taille de ligne maximale dépasse 8 Ko. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]a introduit un spécificateur **Max** pour les types de données **varchar**, **nvarchar** et **varbinary** pour permettre le stockage de valeurs allant jusqu’à 2 ^ 31-1 octets. Les colonnes de table et les [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables peuvent spécifier des types de données **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** .  
+  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilisation de types de données de valeur élevée nécessitait une gestion particulière. Les types de données à valeur élevée sont ceux dont la taille de ligne maximale dépasse 8 Ko. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un spécificateur **Max** pour les types de données **varchar**, **nvarchar** et **varbinary** pour permettre le stockage de valeurs allant jusqu’à 2 ^ 31-1 octets. Les colonnes de table et les [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables peuvent spécifier des types de données **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** .  
   
 > [!NOTE]  
 >  La taille maximale des types de données de valeur élevée peut être comprise entre 1 et 8 Ko. Il est aussi possible de spécifier une taille illimitée.  
@@ -701,7 +701,7 @@ _ExitProcessResultSet:
   
 -   La valeur « illimité », dans le cas d’une colonne **varchar (max)** est égale à 0.  
   
- Les règles de conversion standard s’appliquent à une colonne **varchar (max)** , ce qui signifie que toute conversion valide pour une colonne **varchar (** 2000 **)** sera également valide pour une colonne **varchar (max)** . Il en va de même pour les colonnes **nvarchar(max)** et **varbinary(max)**.  
+ Les règles de conversion standard s’appliquent à une colonne **varchar (max)** , ce qui signifie que toute conversion valide pour une colonne **varchar (** 2000 **)** sera également valide pour une colonne **varchar (max)** . Il en va de même pour les colonnes **nvarchar(max)** et **varbinary(max)** .  
   
  Voici une liste des fonctions de l'API ODBC qui ont été améliorées pour prendre en charge les types de données de valeur élevée :  
   

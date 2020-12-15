@@ -1,6 +1,6 @@
 ---
-description: sys. dm_db_log_info (Transact-SQL)
-title: sys. dm_db_log_info (Transact-SQL) | Microsoft Docs
+description: sys.dm_db_log_info (Transact-SQL)
+title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447661"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440824"
 ---
-# <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
+# <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Retourne les informations de [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) du journal des transactions. Notez que tous les fichiers journaux des transactions sont combinés dans la sortie de la table. Chaque ligne de la sortie représente un fichier journal virtuel dans le journal des transactions et fournit des informations relatives à ce fichier journal virtuel dans le journal.
@@ -63,7 +63,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar (48)** |[Numéro séquentiel dans le journal (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de l’enregistrement de journal qui a créé le [fichier journal virtuel (fichier journal virtuel)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_encryptor_thumbprint|**varbinary(20)**| **S’applique à :** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Affiche l’empreinte numérique du chiffreur du fichier journal virtuel si le fichier journal virtuel est chiffré à l’aide de [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), sinon null. |
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarks
 La `sys.dm_db_log_info` fonction de gestion dynamique remplace l' `DBCC LOGINFO` instruction.    
  
 ## <a name="permissions"></a>Autorisations  

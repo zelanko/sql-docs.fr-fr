@@ -15,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 625157885fa4494f4d8c70da5bea8ac70472d3b5
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 55514f89487a06e16413f199f744013d2c4f8c90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809480"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461500"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -53,7 +53,7 @@ Une requête SQL valide
 Une colonne score est retournée, ainsi que toutes les colonnes directes de la source de données d’entrée.
 Des colonnes de score supplémentaires, telles que l’intervalle de confiance, peuvent être retournées si l’algorithme prend en charge la génération de telles valeurs.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarks
 
 Pour permettre l’utilisation de la procédure stockée, SQLCLR doit être activé sur l’instance.
 
@@ -135,7 +135,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-En plus d’être une requête SQL valide, les données d’entrée dans * \@ inputData* doivent inclure des colonnes compatibles avec les colonnes du modèle stocké.
+En plus d’être une requête SQL valide, les données d’entrée dans *\@ inputData* doivent inclure des colonnes compatibles avec les colonnes du modèle stocké.
 
 `sp_rxPredict` prend en charge uniquement les types de colonnes .NET suivants : double, float, Short, ushort, long, ULONG et String. Vous devrez peut-être filtrer les types non pris en charge dans vos données d’entrée avant de les utiliser pour une notation en temps réel. 
 

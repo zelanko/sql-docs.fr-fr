@@ -10,13 +10,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: e246d516d3c05b9a2c6725f7fd3e3f787066b8aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112435"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461400"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogue de bases de données WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ Les différents types de tables sont organisés en trois schémas.
 |schéma|Description|
 |-----------------------------|---------------------|
 |Dimension|Tables de dimension.|
-|Fact|Tables de faits.|  
+|Fact| Tables de faits.|  
 |Intégration|Tables de mise en lots et autres objets nécessaires à l’ETL.|  
 
 ## <a name="tables"></a>Tables
@@ -49,7 +49,7 @@ WideWorldImportersDW possède les tables de dimension suivantes. La description 
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Date|Nouvelle table avec des informations sur les dates, y compris l’année financière (basée sur le 1er novembre de l’année financière).|
-|Employee|`Application.People`.|
+|Employé|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fournisseur|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
 |PaymentMethod|`Application.PaymentMethods`.|
@@ -61,9 +61,9 @@ WideWorldImportersDW contient les tables de faits suivantes. La description comp
 
 |Table de charge de travail|Tables sources|Exemple d’analyse|
 |-----------------------------|---------------------|---------------------|
-|JSON|`Sales.Orders` et `Sales.OrderLines`|Les vendeurs, le sélecteur/la productivité des packs et le temps de prélèvement des commandes. En outre, les situations de stock faible conduisent à des commandes en différé.|
+|Commande|`Sales.Orders` et `Sales.OrderLines`|Les vendeurs, le sélecteur/la productivité des packs et le temps de prélèvement des commandes. En outre, les situations de stock faible conduisent à des commandes en différé.|
 |Sale|`Sales.Invoices` et `Sales.InvoiceLines`|Les ventes, les dates de livraison, la rentabilité dans le temps, la rentabilité par commercial.|
-|Acheter|`Purchasing.PurchaseOrderLines`|Temps de leads comparatifs attendus|
+|Purchase|`Purchasing.PurchaseOrderLines`|Temps de leads comparatifs attendus|
 |Transaction|`Sales.CustomerTransactions` et `Purchasing.SupplierTransactions`|Mesure des dates de sortie et des dates de finalisation et des montants.|
 |Movement|`Warehouse.StockTransactions`|Mouvements dans le temps.|
 |Détention des actions|`Warehouse.StockItemHoldings`|Niveaux et valeurs de stock disponibles.|
@@ -72,7 +72,7 @@ WideWorldImportersDW contient les tables de faits suivantes. La description comp
 
 Les procédures stockées sont principalement utilisées pour le processus ETL et à des fins de configuration.
 
-Toutes les extensions de l’exemple sont encouragées à `Reports` utiliser le schéma pour les rapports Reporting Services `PowerBI` et le schéma pour l’accès à Power bi.
+Toutes les extensions de l’exemple sont encouragées à utiliser le `Reports` schéma pour les rapports Reporting Services et le `PowerBI` schéma pour l’accès à Power bi.
 
 ### <a name="application-schema"></a>Schéma d’application
 
@@ -92,7 +92,7 @@ Ces procédures sont utilisées pour configurer l’exemple. Ils sont utilisés 
 Les procédures utilisées dans le processus ETL sont classées dans les catégories suivantes :
 - Procédures d’assistance pour le package ETL-toutes les procédures obtenir *.
 - Procédures utilisées par le package ETL pour la migration des données intermédiaires vers les procédures de migration des tables DW *.
-- `PopulateDateDimensionForYear`-Prend un an et s’assure que toutes les dates de cette année sont remplies `Dimension.Date` dans la table.
+- `PopulateDateDimensionForYear` -Prend un an et s’assure que toutes les dates de cette année sont remplies dans la `Dimension.Date` table.
 
 ### <a name="sequences-schema"></a>Schéma de séquences
 
@@ -101,4 +101,4 @@ Procédures pour configurer les séquences dans la base de données.
 |Procédure|Objectif|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Appelle la procédure `ReseedSequenceBeyondTableValue` pour toutes les séquences.|
-|ReseedSequenceBeyondTableValue|Utilisé pour repositionner la valeur de séquence suivante au-delà de la valeur dans une table qui utilise la même séquence. ( `DBCC CHECKIDENT` Par exemple, pour les colonnes d’identité équivalentes pour les séquences, mais dans les tables potentiellement multiples.)|
+|ReseedSequenceBeyondTableValue|Utilisé pour repositionner la valeur de séquence suivante au-delà de la valeur dans une table qui utilise la même séquence. (Par exemple `DBCC CHECKIDENT` , pour les colonnes d’identité équivalentes pour les séquences, mais dans les tables potentiellement multiples.)|

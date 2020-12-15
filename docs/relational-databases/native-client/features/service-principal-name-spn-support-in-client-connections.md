@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f500e41737bf3c1c17ada377f533bd1241d0db4b
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 492ec9b3aad422ffe2c075bdeab6db932b14ff21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892289"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462060"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections-in-sql-server-native-client"></a>Prise en charge du nom de principal du service (SPN) dans les connexions clientes dans SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,8 +55,8 @@ ms.locfileid: "91892289"
 |Une application OLE DB spécifie un nom principal de service en tant que propriété d'initialisation d'une source de données pour le serveur principal ou pour un partenaire de basculement.|La propriété de connexion **SSPROP_INIT_SERVER_SPN** du jeu de propriétés **DBPROPSET_SQLSERVERDBINIT** peut être utilisée pour spécifier le nom principal de service d'une connexion.<br /><br /> La propriété de connexion **SSPROP_INIT_FAILOVER_PARTNER_SPN** dans **DBPROPSET_SQLSERVERDBINIT** peut être utilisée pour spécifier le nom principal de service du serveur partenaire de basculement.|  
 |Un utilisateur spécifie un nom principal de service pour un serveur ou un partenaire de basculement dans un nom de source de données ODBC.|Le nom principal de service peut être spécifié dans un nom de source de données ODBC via les boîtes de dialogue d'installation du nom de la source de données.|  
 |L'utilisateur spécifie un nom principal de service pour un serveur ou un serveur partenaire de basculement dans une boîte de dialogue **Liaison de données** ou **Connexion** OLE DB.|Le nom principal de service peut être spécifié dans une boîte de dialogue **Liaison de données** ou **Connexion** . La boîte de dialogue **Connexion** peut être utilisée avec ODBC ou OLE DB.|  
-|Une application ODBC détermine la méthode d'authentification utilisée pour établir une connexion.|Lorsqu'une connexion est ouverte avec succès, une application peut interroger l'attribut de connexion **SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD** pour déterminer la méthode d'authentification utilisée. Les valeurs incluent **NTLM** et **Kerberos**mais ne se limitent pas à ces dernières.|  
-|Une application OLE DB détermine la méthode d'authentification utilisée pour établir une connexion.|Lorsqu'une connexion est ouverte avec succès, une application peut interroger la propriété de connexion **SSPROP_AUTHENTICATION_METHOD** dans le jeu de propriétés **DBPROPSET_SQLSERVERDATASOURCEINFO** pour déterminer la méthode d'authentification utilisée. Les valeurs incluent **NTLM** et **Kerberos**mais ne se limitent pas à ces dernières.|  
+|Une application ODBC détermine la méthode d'authentification utilisée pour établir une connexion.|Lorsqu'une connexion est ouverte avec succès, une application peut interroger l'attribut de connexion **SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD** pour déterminer la méthode d'authentification utilisée. Les valeurs incluent **NTLM** et **Kerberos** mais ne se limitent pas à ces dernières.|  
+|Une application OLE DB détermine la méthode d'authentification utilisée pour établir une connexion.|Lorsqu'une connexion est ouverte avec succès, une application peut interroger la propriété de connexion **SSPROP_AUTHENTICATION_METHOD** dans le jeu de propriétés **DBPROPSET_SQLSERVERDATASOURCEINFO** pour déterminer la méthode d'authentification utilisée. Les valeurs incluent **NTLM** et **Kerberos** mais ne se limitent pas à ces dernières.|  
   
 ## <a name="failover"></a>Basculement  
  Les noms principaux de service ne sont pas stockés dans le cache de basculement et par conséquent ne peuvent pas être passés entre les connexions. Les noms principaux de service sont utilisés lors de toutes les tentatives de connexion au principal et au serveur partenaire lorsque cela est spécifié dans la chaîne de connexion ou les attributs de connexion.  

@@ -12,18 +12,18 @@ dev_langs:
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2bf5b58a1e9dca5f282691ae29dd534a06ca5002
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9bb87af8d580830072dd3a8199958497b8e38a25
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059471"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440801"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Retourne le texte du lot SQL identifié par le *sql_handle*spécifié. Cette fonction à valeur de table remplace la fonction système **fn_get_sql**.  
+Retourne le texte du lot SQL identifié par le *sql_handle* spécifié. Cette fonction à valeur de table remplace la fonction système **fn_get_sql**.  
    
 ## <a name="table-returned"></a>Table retournée  
 |Nom de la colonne|Type de données|Description|  
@@ -35,13 +35,13 @@ Retourne le texte du lot SQL identifié par le *sql_handle*spécifié. Cette fon
 |**chiffrées**|**bit**|1 : le texte SQL est chiffré.<br /><br /> 0 : le texte SQL n’est pas chiffré.|  
 |**text**|**nvarchar(max)**|Texte de la requête SQL.<br /><br /> NULL pour les objets chiffrés.|  
 
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarks  
 Les mêmes remarques dans [sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md?view=sql-server-ver15) s’appliquent.  
   
 ## <a name="permissions"></a>Autorisations  
  Exiger un rôle de serveur **sysadmin** ou une `VIEW SERVER STATE` autorisation sur le serveur.  
   
-## <a name="see-also"></a>Voir également  
+## <a name="see-also"></a>Voir aussi  
  [Azure Synapse Analytics et les vues de gestion dynamique Parallel Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## <a name="next-steps"></a>Étapes suivantes
