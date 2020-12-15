@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af8424ad63c110f8c6c8b9814b384450ba2bc9cf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7199b56a0bf0c0eb397a061ca366534bdbf9c6ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404167"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="arguments"></a>Arguments  
 `[ @objname = ] 'table'` Table sur laquelle sont retournées les informations de contrainte. La table spécifiée doit être locale par rapport à la base de données active. *table* est de type **nvarchar (776)**, sans valeur par défaut.  
   
-`[ @nomsg = ] 'no_message'` Est un paramètre facultatif qui imprime le nom de la table. *no_message* est de type **varchar (5)**, avec **MSG**comme valeur par défaut. **nomsg** supprime l’impression.  
+`[ @nomsg = ] 'no_message'` Est un paramètre facultatif qui imprime le nom de la table. *no_message* est de type **varchar (5)**, avec **MSG** comme valeur par défaut. **nomsg** supprime l’impression.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -52,7 +52,7 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_helpconstraint** affiche une colonne indexée décroissante si elle a participé à des clés primaires. Une colonne indexée descendante sera listée dans le jeu de résultats avec un signe moins (-) derrière son nom. Une colonne indexée ascendante (valeur par défaut) sera listée sous son seul nom.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  L’exécution de **sp_help**_table_ signale toutes les informations relatives à la table spécifiée. Pour afficher uniquement les informations de contrainte, utilisez **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -73,8 +73,8 @@ EXEC sp_helpconstraint 'Production.Product';
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys. check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [sys. default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys.default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

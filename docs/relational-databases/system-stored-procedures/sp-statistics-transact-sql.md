@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b22227de702e787f183a7ec15e3b26d685fd6cb
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ab64c4fa1ea96390631508130ba9a7b57d8a8493
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005961"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410511"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,15 +53,15 @@ sp_statistics [ @table_name = ] 'table_name'
   
 `[ @table_owner = ] 'owner'` Nom du propriétaire de la table utilisée pour retourner les informations de catalogue. *TABLE_OWNER* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
- Si, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les index de la table sont retournés. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table portant le *nom*spécifié, cette procédure recherche une table portant le *nom* spécifié, détenue par le propriétaire de la base de données. Si cette table existe, ses index sont retournés.  
+ Si, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les index de la table sont retournés. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table portant le *nom* spécifié, cette procédure recherche une table portant le *nom* spécifié, détenue par le propriétaire de la base de données. Si cette table existe, ses index sont retournés.  
   
 `[ @table_qualifier = ] 'qualifier'` Nom du qualificateur de la table. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
 `[ @index_name = ] 'index_name'` Nom de l’index. *index_name* est de **type sysname**, avec% comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @is_unique = ] 'is_unique'` Indique si seuls les index uniques (si **Y**) doivent être retournés. *is_unique* est de **type char (1)**, avec **N**comme valeur par défaut.  
+`[ @is_unique = ] 'is_unique'` Indique si seuls les index uniques (si **Y**) doivent être retournés. *is_unique* est de **type char (1)**, avec **N** comme valeur par défaut.  
   
-`[ @accuracy = ] 'accuracy'` Niveau de cardinalité et de précision de la page pour les statistiques. la *précision* est **char (1)**, avec **Q**comme valeur par défaut. Spécifiez **E** pour vous assurer que les statistiques sont mises à jour afin que la cardinalité et les pages soient exactes.  
+`[ @accuracy = ] 'accuracy'` Niveau de cardinalité et de précision de la page pour les statistiques. la *précision* est **char (1)**, avec **Q** comme valeur par défaut. Spécifiez **E** pour vous assurer que les statistiques sont mises à jour afin que la cardinalité et les pages soient exactes.  
   
  La valeur **E** (SQL_ENSURE) demande au pilote de récupérer de manière inconditionnelle les statistiques.  
   
@@ -81,7 +81,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|Position de la colonne dans l'index|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne de chaque colonne de la **table_name** retournée. Cette colonne renvoie toujours une valeur.|  
 |**COLLATION**|**char(1)**|Ordre utilisé dans les classements. Valeurs possibles :<br /><br /> A = Croissant<br /><br /> D = Décroissant<br /><br /> NULL = Non applicable|  
-|**CARDINALITY**|**int**|Nombre de lignes dans la table ou valeurs uniques dans l’index.|  
+|**CARDINALITÉ**|**int**|Nombre de lignes dans la table ou valeurs uniques dans l’index.|  
 |**PAGES**|**int**|Nombre de pages pour stocker l'index ou la table.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur.|  
   
@@ -89,13 +89,13 @@ sp_statistics [ @table_name = ] 'table_name'
  None  
   
 ## <a name="remarks"></a>Notes  
- Les index du jeu de résultats s’affichent par ordre croissant selon les colonnes **NON_UNIQUE**, **type**, **index_name**et **SEQ_IN_INDEX**.  
+ Les index du jeu de résultats s’affichent par ordre croissant selon les colonnes **NON_UNIQUE**, **type**, **index_name** et **SEQ_IN_INDEX**.  
   
  Le type d'index cluster fait référence à un index dans lequel les données de la table sont stockées dans l'ordre de l'index. Cela correspond aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] index cluster.  
   
  Le type d'index haché accepte les recherches de concordance exacte ou d'intervalle, mais les recherches par critères spéciaux n'utilisent pas l'index.  
   
- **sp_statistics** est équivalent à **SQLStatistics** dans ODBC. Les résultats retournés sont triés par **NON_UNIQUE**, **type**, **INDEX_QUALIFIER**, **index_name**et **SEQ_IN_INDEX**. Pour plus d’informations, consultez [référence de l’API ODBC](../../odbc/reference/syntax/odbc-reference.md).  
+ **sp_statistics** est équivalent à **SQLStatistics** dans ODBC. Les résultats retournés sont triés par **NON_UNIQUE**, **type**, **INDEX_QUALIFIER**, **index_name** et **SEQ_IN_INDEX**. Pour plus d’informations, consultez [référence de l’API ODBC](../../odbc/reference/syntax/odbc-reference.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
