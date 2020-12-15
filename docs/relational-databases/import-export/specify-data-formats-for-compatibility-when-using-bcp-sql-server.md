@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9bae99e460ea8a9e5e2877917bd8a82b25f8cc8a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c243b1f715ecf3b6196c23250c5f52836fba8ffa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001135"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407815"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Spécifier des formats de données pour la compatibilité lors de l’utilisation de bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "86001135"
   
   
 ##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> Vue d'ensemble des invites spécifiques aux champs  
- Si une commande **bcp** interactive contient l’option **in** ou **out** , mais non le commutateur de fichier de format ( **-f**) ni le commutateur de format de données ( **-n**, **-c**, **-w**ou **-N**), pour chaque colonne de la table source ou cible, la commande vous invite à fournir chacun des attributs précédents. À chaque invite, la commande **bcp** fournit une valeur par défaut basée sur le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif ( **-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
+ Si une commande **bcp** interactive contient l’option **in** ou **out** , mais non le commutateur de fichier de format ( **-f**) ni le commutateur de format de données ( **-n**, **-c**, **-w** ou **-N**), pour chaque colonne de la table source ou cible, la commande vous invite à fournir chacun des attributs précédents. À chaque invite, la commande **bcp** fournit une valeur par défaut basée sur le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif ( **-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
   
 ### <a name="example"></a>Exemple  
  L’exemple suivant utilise la commande **bcp** pour l’exportation en bloc interactive de données à partir de la table `HumanResources.myTeam` vers le fichier `myTeam.txt` . Avant de pouvoir exécuter cet exemple, vous devez créer cette table. Pour plus d’informations sur la table et la manière de la créer, consultez [Exemple de table HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  

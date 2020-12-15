@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 874326a9eb3673a0b091e06fe5e9ba3f04e1c3b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86c5e6c9edb33147979c7df34386dc474529b18f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003152"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407556"
 ---
 # <a name="specify-file-storage-type-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l’aide de bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Les données peuvent être exportées vers un fichier de données correspondant à son type de table de base de données (format natif), dans sa représentation caractère (format caractère) ou en tant que tout type de données pour lequel la conversion implicite est prise en charge, par exemple, en copiant un type de données **smallint** comme **int**. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Invite bcp pour le type de stockage de fichier  
- Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format ( **-f**) ou sans commutateur de format de données ( **-n**, **-c**, **-w**ou **-N**), la commande demande le type de stockage de fichiers de chaque champ de données, comme suit :  
+ Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format ( **-f**) ou sans commutateur de format de données ( **-n**, **-c**, **-w** ou **-N**), la commande demande le type de stockage de fichiers de chaque champ de données, comme suit :  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -78,7 +78,7 @@ ms.locfileid: "86003152"
   
      \*L’interaction entre la longueur de champ, la longueur de préfixe et les terminateurs détermine la quantité d’espace de stockage alloué dans un fichier de données pour des données autres que des caractères exportées en tant que type de stockage de fichier **char** .  
   
-     \*\* Les types de données **ntext**, **text**et **image** seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans un nouveau travail de développement, évitez ces types de données et prévoyez la modification des applications qui les utilisent actuellement. Utilisez plutôt les types de données **nvarchar(max)** , **varchar(max)** et **varbinary(max)** .  
+     \*\* Les types de données **ntext**, **text** et **image** seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans un nouveau travail de développement, évitez ces types de données et prévoyez la modification des applications qui les utilisent actuellement. Utilisez plutôt les types de données **nvarchar(max)** , **varchar(max)** et **varbinary(max)** .  
   
 ## <a name="native-file-storage-types"></a>Types de stockage de fichier natifs  
  Chaque type de stockage de fichier natif est enregistré dans le fichier de format comme un type de données du fichier hôte correspondant.  
@@ -114,7 +114,7 @@ ms.locfileid: "86003152"
   
  \*Les fichiers de données qui sont stockés au format caractère utilisent **char** comme type de stockage de fichier. Par conséquent, pour les fichiers de données de type caractère, SQLCHAR est le seul type de données qui apparaît dans un fichier de format.  
   
- \*\*Vous ne pouvez pas importer des données en bloc dans des colonnes **text**, **ntext**et **image** qui présentent des valeurs DEFAULT.  
+ \*\*Vous ne pouvez pas importer des données en bloc dans des colonnes **text**, **ntext** et **image** qui présentent des valeurs DEFAULT.  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>Observations supplémentaires concernant les types de stockage de fichier  
  Lorsque vous exportez des données en bloc à partir d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données :  
@@ -123,7 +123,7 @@ ms.locfileid: "86003152"
   
 -   Si vous entrez un type de stockage de fichier qui représente une conversion implicite non valide, **bcp** échoue ; par exemple, bien que vous puissiez spécifier **int** pour des données **smallint** , si vous spécifiez **smallint** pour des données **int** , des erreurs de dépassement se produisent.  
   
--   Quand des types de données autres que des caractères tels que **float**, **money**, **datetime**ou **int** sont stockés avec leurs types de base de données, les données sont écrites dans le fichier de données au format natif de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Quand des types de données autres que des caractères tels que **float**, **money**, **datetime** ou **int** sont stockés avec leurs types de base de données, les données sont écrites dans le fichier de données au format natif de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
     >  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
