@@ -16,13 +16,13 @@ ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dbc6d4d2be27ca0a91a7ed312d26baf19a72551
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c4681c4babe25ec9c683d78e583ddd2c1a4d91fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415240"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Exemples de DiffGrams (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "85650012"
   
      Enregistrez ce schéma sous le nom DiffGramSchema.xml dans le dossier où vous enregistrez les autres fichiers utilisés dans les exemples.  
   
-## <a name="a-deleting-a-record-by-using-a-diffgram"></a>A. Suppression d'un enregistrement à l'aide d'un DiffGram  
+## <a name="a-deleting-a-record-by-using-a-diffgram"></a>R. Suppression d'un enregistrement à l'aide d'un DiffGram  
  Le DiffGram de cet exemple supprime un client (dont CustomerID a la valeur ALFKI) de la table Cust et supprime l'enregistrement de commande correspondant (dont OrderID a la valeur 1) de la table Ord.  
   
 ```  

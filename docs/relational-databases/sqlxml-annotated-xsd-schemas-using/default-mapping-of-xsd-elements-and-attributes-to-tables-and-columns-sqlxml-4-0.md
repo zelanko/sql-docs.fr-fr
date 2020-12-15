@@ -27,13 +27,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1820f99d5250d9687fb83c57f9f743e2e1b5c33b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fbe7cea458f317138f4ad63698c3ff68af0eacd7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750798"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415734"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mappage par défaut d'éléments et d'attributs XSD à des tables et des colonnes (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85750798"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-default-mapping"></a>A. Spécification du mappage par défaut  
+### <a name="a-specifying-default-mapping"></a>R. Spécification du mappage par défaut  
  Dans cet exemple, aucune annotation n'est spécifiée dans le schéma XSD. L' **\<Person.Contact>** élément est de type complexe et, par conséquent, est mappé par défaut à la table Person. contact de la base de données AdventureWorks. Tous les attributs (ContactID, FirstName, LastName) de l' **\<Person.Contact>** élément sont de type simple et sont mappés par défaut aux colonnes portant le même nom dans la table Person. contact.  
   
 ```  
@@ -208,7 +208,7 @@ ctions">
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations sur la sécurité des schémas annotés &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [SQL Server de &#40;de données XML&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
+ [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Prise en charge du type de données xml dans SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

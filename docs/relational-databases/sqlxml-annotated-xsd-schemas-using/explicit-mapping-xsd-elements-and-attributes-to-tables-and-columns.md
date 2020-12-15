@@ -29,13 +29,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 534de76c28dea79ba52b28983fe56daf666760f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 988a15524f4d0fdbdd3174ba1017dfd85562e3a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750759"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415916"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Mappages XSD personnalisés aux tables/colonnes (SQLXML)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "85750759"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Spécification des annotations sql:relation et sql:field  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>R. Spécification des annotations sql:relation et sql:field  
  Dans cet exemple, le schéma XSD se compose d’un **\<Contact>** élément de type complexe avec les **\<FName>** **\<LName>** éléments enfants et et l’attribut **ContactID** .  
   
  L’annotation **SQL : relation** mappe l' **\<Contact>** élément à la table Person. contact de la base de données AdventureWorks. L’annotation **SQL : Field** mappe l' **\<FName>** élément à la colonne FirstName et **\<LName>** à l’élément à la colonne LastName.  

@@ -32,13 +32,13 @@ ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9ec14bb6a13b3dc8675c2bf2710bdcf101b80ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 181b5a7dd62b5a3cae2ff433f718d8c40b40e6bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650832"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415251"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Exemples de chargement en masse XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>A. Chargement en masse XML dans une table  
+## <a name="a-bulk-loading-xml-in-a-table"></a>R. Chargement en masse XML dans une table  
  Cet exemple établit une connexion à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifiée dans la propriété ConnectionString (MyServer). L’exemple spécifie également la propriété ErrorLogFile. Par conséquent, la sortie d'erreur est enregistrée dans le fichier spécifié (« C:\error.log »), dont l'emplacement peut également être modifié. Notez également que la méthode Execute a comme paramètres le fichier de schéma de mappage (SampleSchema.xml) et le fichier de données XML (SampleXMLData.xml). Lorsque le chargement en masse s’exécute, la table Cust que vous avez créée dans la base de données **tempdb** contient de nouveaux enregistrements basés sur le contenu du fichier de données XML.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Pour tester un exemple de chargement en masse  

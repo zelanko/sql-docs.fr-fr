@@ -18,13 +18,13 @@ ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17f6ca29f9a91315eef11c39a884bf773cad6daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c02a33e76fd478e77e2b5a743b5cc6e1d32f1ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649778"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414440"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Spécification de prédicats de sélection dans le chemin d'accès d'emplacement (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85649778"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- Dans cette requête XPath, `child` et `attribute` sont les noms d'axes. `Customer`est le test de nœud (TRUE si `Customer` est un **\<element node>** , car **\<element>** est le type de nœud principal de l' `child` axe). `attribute::CustomerID="ALFKI"` est le prédicat. Dans le prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (true si **CustomerID** est un attribut du nœud de contexte, car **\<attribute>** est le type de nœud principal de l’axe d' **attribut** ).  
+ Dans cette requête XPath, `child` et `attribute` sont les noms d'axes. `Customer` est le test de nœud (TRUE si `Customer` est un **\<element node>** , car **\<element>** est le type de nœud principal de l' `child` axe). `attribute::CustomerID="ALFKI"` est le prédicat. Dans le prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (true si **CustomerID** est un attribut du nœud de contexte, car **\<attribute>** est le type de nœud principal de l’axe d' **attribut** ).  
   
  À l'aide de la syntaxe abrégée, la requête XPath peut également être spécifiée de la façon suivante :  
   
@@ -74,7 +74,7 @@ child::Customer[child::ContactName]
   
  Cet exemple suppose que **\<ContactName>** est un élément enfant de l' **\<Customer>** élément dans le document XML, appelé *mappage centré* sur l’élément dans un schéma XSD annoté.  
   
- Dans cette expression XPath, `child` est le nom de l'axe. `Customer`est le test de nœud (TRUE si `Customer` est un **\<element>** nœud, car **\<element>** est le type de nœud principal pour `child` Axis). `child::ContactName` est le prédicat. Dans le prédicat, `child` est l’axe et `ContactName` est le test de nœud (true si `ContactName` est un **\<element>** nœud).  
+ Dans cette expression XPath, `child` est le nom de l'axe. `Customer` est le test de nœud (TRUE si `Customer` est un **\<element>** nœud, car **\<element>** est le type de nœud principal pour `child` Axis). `child::ContactName` est le prédicat. Dans le prédicat, `child` est l’axe et `ContactName` est le test de nœud (true si `ContactName` est un **\<element>** nœud).  
   
  Cette expression retourne uniquement les **\<Customer>** éléments enfants du nœud de contexte qui ont des **\<ContactName>** éléments enfants.  
   
@@ -93,7 +93,7 @@ child::Customer[not(child::ContactName)]
   
  Cet exemple suppose que **\<ContactName>** est un élément enfant de l' **\<Customer>** élément dans le document XML et que le champ ContactName n’est pas requis dans la base de données.  
   
- Dans cet exemple, `child` est l'axe. `Customer`est le test de nœud (TRUE si `Customer` est un \<element> nœud). `not(child::ContactName)` est le prédicat. Dans le prédicat, `child` est l’axe et `ContactName` est le test de nœud (true si `ContactName` est un \<element> nœud).  
+ Dans cet exemple, `child` est l'axe. `Customer` est le test de nœud (TRUE si `Customer` est un \<element> nœud). `not(child::ContactName)` est le prédicat. Dans le prédicat, `child` est l’axe et `ContactName` est le test de nœud (true si `ContactName` est un \<element> nœud).  
   
  À l'aide de la syntaxe abrégée, la requête XPath peut également être spécifiée de la façon suivante :  
   

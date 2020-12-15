@@ -23,13 +23,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 51e236b690c8523337b66d19a9b47755a6117f0c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750814"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415835"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Création d'attributs de type Valid ID, IDREF et IDREFS à l'aide de sql:prefix (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85750814"
   
 -   La valeur d'un ID, IDREF et IDREFS doit être un jeton nommé. (Par exemple, la valeur entière 101 ne peut pas être une valeur d'ID.)  
   
--   Les attributs de type ID, IDREF et IDREFS ne peuvent pas être mappés à des colonnes de type **Text**, **ntext**ou **image** ou tout autre type de données binaire (par exemple, **timestamp**).  
+-   Les attributs de type ID, IDREF et IDREFS ne peuvent pas être mappés à des colonnes de type **Text**, **ntext** ou **image** ou tout autre type de données binaire (par exemple, **timestamp**).  
   
  Si un document XML contient plusieurs ID, utilisez l’annotation **SQL : prefix** pour vous assurer que les valeurs sont uniques.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "85750814"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [Configuration requise pour l’exécution d’exemples SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>A. Spécification des types ID et IDREFS  
+### <a name="a-specifying-id-and-idrefs-types"></a>R. Spécification des types ID et IDREFS  
  Dans le schéma suivant, l' **\<Customer>** élément est constitué de l' **\<Order>** élément enfant. L' **\<Order>** élément a également un élément enfant, l' **\<OrderDetail>** élément.  
   
  L’attribut **attribut OrderIDList** de **\<Customer>** est un attribut de type IDREFS qui fait référence à l’attribut **OrderID** de l' **\<Order>** élément.  
