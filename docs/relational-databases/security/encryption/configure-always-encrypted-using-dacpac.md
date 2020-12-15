@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130901"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405592"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configurer le chiffrement de colonne en utilisant Always Encrypted avec un package DAC 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ Le déploiement d’un package DAC peut également entraîner la création ou la
 ## <a name="performance-considerations"></a>Considérations relatives aux performances
 Pour effectuer des opérations de chiffrement, l’outil que vous utilisez pour déployer un DACPAC doit déplacer les données en dehors de la base de données. L’outil crée une ou plusieurs tables avec la configuration de chiffrement souhaitée dans la base de données, charge toutes les données des tables d’origine, effectue les opérations de chiffrement demandées, charge les données dans les nouvelles tables, puis remplace les tables d’origine par les nouvelles tables. L’exécution des opérations de chiffrement peut prendre beaucoup de temps. Pendant ce temps, votre base de données n’est pas disponible pour l’écriture de transactions. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Si vous utilisez [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] et que votre instance SQL Server est configurée avec une enclave sécurisée, vous pouvez exécuter des opérations de chiffrement sur place, sans déplacer les données en dehors de la base de données. Consultez [Configurer le chiffrement de colonne sur place en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-configure-encryption.md). Notez que le chiffrement sur place n’est pas disponible pour les déploiements DACPAC.

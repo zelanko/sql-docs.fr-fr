@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43ef52303110cb26b145348edc6aa9ec09bf38de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 780ee667e84b0def82e27afff1b27886150c8bb0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408135"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407262"
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -279,7 +279,7 @@ Les pages de niveau intermédiaire sont presque entièrement remplies, ce qui la
  Au niveau supérieur, si un objet couvre plus de cellules que le nombre spécifié par *n*, l’indexation utilise autant de cellules que nécessaire pour fournir un pavage de niveau supérieur complet. Dans de tels cas, un objet peut recevoir plus de cellules que le nombre spécifié. Dans ce cas, le nombre maximal est le nombre de cellules générées par la grille de niveau supérieur, qui dépend de la densité du **Niveau 1** .  
   
 ### <a name="grids"></a>Grilles  
- Ce panneau affiche la densité de la grille à chaque niveau du schéma de pavage. La densité est spécifiée comme suit : **Basse**, **Moyenne**ou **Haute**. La valeur par défaut est **Moyenne**. **Basse** représente une grille 4x4 (16 cellules), **Moyenne** une grille 8x8 (64 cellules) et **Haute** une grille 16x16 (256 cellules). Ces options ne sont pas disponibles lorsque les options de pavage **Grille automatique géométrique** ou **Grille automatique géographique** sont choisies.  
+ Ce panneau affiche la densité de la grille à chaque niveau du schéma de pavage. La densité est spécifiée comme suit : **Basse**, **Moyenne** ou **Haute**. La valeur par défaut est **Moyenne**. **Basse** représente une grille 4x4 (16 cellules), **Moyenne** une grille 8x8 (64 cellules) et **Haute** une grille 16x16 (256 cellules). Ces options ne sont pas disponibles lorsque les options de pavage **Grille automatique géométrique** ou **Grille automatique géographique** sont choisies.  
   
  **Niveau 1**  
  Densité de la grille de premier niveau (haut).  

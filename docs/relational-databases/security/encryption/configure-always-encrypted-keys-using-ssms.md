@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765144"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405571"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Provisionner des clés Always Encrypted avec SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ La boîte de dialogue **Nouvelle clé principale de colonne** vous permet de gé
     - **Magasin de certificats - Utilisateur actuel** : indique l’emplacement du magasin de certificats de l’utilisateur actuel dans le magasin de certificats Windows, qui est votre magasin personnel. 
     - **Magasin de certificats - Ordinateur local** : indique l’emplacement du magasin de certificats de l’ordinateur local dans le magasin de certificats Windows. 
     - **Azure Key Vault** : Vous devez vous connecter à Azure (cliquez sur **Se connecter**). Une fois que vous êtes connecté, vous pouvez choisir un de vos abonnements Azure et un coffre de clés.
-    - **Fournisseur du magasin de clés (KSP)**  : indique un magasin de clés accessible via un fournisseur du magasin de clés (KSP) qui implémente l’API de chiffrement nouvelle génération (CNG). En règle générale, ce type de magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur KSP. Le**fournisseur de stockage de clés des logiciels Microsoft** est sélectionné par défaut. Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur KSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
+    - **Fournisseur du magasin de clés (KSP)**  : indique un magasin de clés accessible via un fournisseur du magasin de clés (KSP) qui implémente l’API de chiffrement nouvelle génération (CNG). En règle générale, ce type de magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur KSP. Le **fournisseur de stockage de clés des logiciels Microsoft** est sélectionné par défaut. Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur KSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
     -   **Fournisseur de services de chiffrement (CSP)** : un magasin de clés accessible via un fournisseur de services de chiffrement (CSP) qui implémente l’API de chiffrement (CAPI). En règle générale, un tel magasin est un module de sécurité matériel. Après avoir sélectionné cette option, vous devez choisir un fournisseur CSP.  Si vous souhaitez utiliser une clé principale de colonne stockée dans un module de sécurité matériel, sélectionnez un fournisseur CSP pour votre appareil (il doit être installé et configuré sur l’ordinateur avant d’ouvrir la boîte de dialogue).
     
     > [!NOTE]
@@ -60,7 +60,7 @@ La boîte de dialogue **Nouvelle clé principale de colonne** vous permet de gé
 
 Une fois que vous en avez terminé avec la boîte de dialogue, SQL Server Management Studio crée des métadonnées pour votre clé principale de colonne dans la base de données. La boîte de dialogue effectue cette opération en générant et en émettant une instruction [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) .
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 Si vous configurez une clé principale de colonne activée pour les enclaves, SSMS signe également les métadonnées en utilisant la clé principale de colonne. 
 

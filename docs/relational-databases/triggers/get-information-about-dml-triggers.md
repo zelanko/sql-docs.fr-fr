@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de602d5a975cb04c6c2f1496f0fcf01eae5a85a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 39a4d0a6136990cdb583a432757503099f61cfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485365"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97403410"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obtenir des informations sur les déclencheurs DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88485365"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
+ Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin** et **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Requiert l’autorisation VIEW DEFINITION sur la base de données et l’autorisation SELECT sur **sys.sql_expression_dependencies** pour la base de données. Par défaut, l’autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe **db_owner** . Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  
@@ -77,7 +77,7 @@ ms.locfileid: "88485365"
   
      Pour afficher les objets dont dépend le déclencheur DML, sélectionnez **Objets dont dépend \<DML trigger name>** . Les objets apparaissent dans la zone **Dépendances** . Développez chaque nœud pour voir tous les objets.  
   
-5.  Pour obtenir des informations sur un objet qui apparaît dans la zone **Dépendances** , cliquez sur l'objet. Dans le champ **Objet sélectionné** , les informations sont fournies dans les zones **Nom**, **Type**et **Type de dépendance** .  
+5.  Pour obtenir des informations sur un objet qui apparaît dans la zone **Dépendances** , cliquez sur l'objet. Dans le champ **Objet sélectionné** , les informations sont fournies dans les zones **Nom**, **Type** et **Type de dépendance** .  
   
 6.  Pour fermer la fenêtre **Dépendances d'objet** , cliquez sur **OK**.  
   
