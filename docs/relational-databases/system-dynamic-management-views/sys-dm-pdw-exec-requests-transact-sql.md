@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: a84facf470cbafa9480c1beb48b19be7b9783f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328586"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482573"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -49,24 +49,24 @@ ms.locfileid: "93328586"
 |client_correlation_id|**nvarchar(255)**|Nom facultatif défini par l’utilisateur pour une session cliente.  Pour définir une session, appelez sp_set_session_context’client_correlation_id', ' <CorrelationIDName> '.  Exécutez `SELECT SESSION_CONTEXT(N'client_correlation_id')` pour récupérer sa valeur.|
 ||||
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Remarks 
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section métadonnées dans la rubrique [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
 La valeur entière négative dans la colonne result_cache_hit est une valeur bitmap de toutes les raisons appliquées pour lesquelles le jeu de résultats d’une requête ne peut pas être mis en cache.  Cette colonne peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes :  
   
-|Valeur            |Description  |  
+|Value            |Description  |  
 |-----------------|-----------------|  
 |**1**|Accès au cache du jeu de résultats|  
-|**0x00** ( **0** )|Absence dans le cache du jeu de résultats|  
-|-**0x01** ( **-1** )|La mise en cache du jeu de résultats est désactivée sur la base de données.|  
-|-**0x02** ( **-2** )|La mise en cache du jeu de résultats est désactivée sur la session. | 
-|-**0x04** ( **-4** )|La mise en cache du jeu de résultats est désactivée en raison de l’absence de sources de données pour la requête.|  
-|-**0x08** ( **-8** )|La mise en cache du jeu de résultats est désactivée en raison des prédicats de sécurité au niveau des lignes.|  
-|-**0x10** ( **-16** )|La mise en cache du jeu de résultats est désactivée en raison de l’utilisation d’une table système, d’une table temporaire ou d’une table externe dans la requête.|  
-|-**0x20** ( **-32** )|La mise en cache du jeu de résultats est désactivée, car la requête contient des constantes d’exécution, des fonctions définies par l’utilisateur ou des fonctions non déterministes.|  
-|-**0x40** ( **-64** )|La mise en cache du jeu de résultats est désactivée, car la taille estimée du jeu de résultats est >10 Go.|  
-|-**0x80** ( **-128** ) |La mise en cache du jeu de résultats est désactivée, car le jeu de résultats contient des lignes de grande taille (>64 Ko).|  
-|-**0x100** ( **-256** ) |La mise en cache du jeu de résultats est désactivée en raison de l’utilisation du masquage des données dynamiques granulaires.|  
+|**0x00** (**0**)|Absence dans le cache du jeu de résultats|  
+|-**0x01** (**-1**)|La mise en cache du jeu de résultats est désactivée sur la base de données.|  
+|-**0x02** (**-2**)|La mise en cache du jeu de résultats est désactivée sur la session. | 
+|-**0x04** (**-4**)|La mise en cache du jeu de résultats est désactivée en raison de l’absence de sources de données pour la requête.|  
+|-**0x08** (**-8**)|La mise en cache du jeu de résultats est désactivée en raison des prédicats de sécurité au niveau des lignes.|  
+|-**0x10** (**-16**)|La mise en cache du jeu de résultats est désactivée en raison de l’utilisation d’une table système, d’une table temporaire ou d’une table externe dans la requête.|  
+|-**0x20** (**-32**)|La mise en cache du jeu de résultats est désactivée, car la requête contient des constantes d’exécution, des fonctions définies par l’utilisateur ou des fonctions non déterministes.|  
+|-**0x40**(**-64**)|La mise en cache du jeu de résultats est désactivée, car la taille estimée du jeu de résultats est >10 Go.|  
+|-**0x80**(**-128**) |La mise en cache du jeu de résultats est désactivée, car le jeu de résultats contient des lignes de grande taille (>64 Ko).|  
+|-**0x100**(**-256**) |La mise en cache du jeu de résultats est désactivée en raison de l’utilisation du masquage des données dynamiques granulaires.|  
 
 ## <a name="permissions"></a>Autorisations
 

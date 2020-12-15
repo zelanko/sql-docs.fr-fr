@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: 1ab5c24dadbe3e8d0ad333cd67452c752cb2937b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753744"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478990"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -52,11 +52,11 @@ fn_get_audit_file ( file_pattern,
     
     Cet argument doit inclure à la fois un chemin d'accès (lettre de lecteur ou partage réseau) et un nom de fichier qui peut inclure un caractère générique. Un seul astérisque (*) peut être utilisé pour collecter plusieurs fichiers à partir d’un jeu de fichiers d’audit. Par exemple :  
   
-    -   **\<path>\\\*** -Collecter tous les fichiers d’audit à l’emplacement spécifié.  
+    -   **\<path>\\\** _-Collecter tous les fichiers d’audit à l’emplacement spécifié.  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID}***-collecter tous les fichiers d’audit qui ont le nom et la paire GUID spécifiés.  
+    -   _* \<path> \LoginsAudit_{Guid} * * _-collecter tous les fichiers d’audit qui ont le nom et la paire de GUID spécifiés.  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** -collecter un fichier d’audit spécifique.  
+    -   _* \<path> \LoginsAudit_{GUID} _00_29384. sqlaudit * *-collecter un fichier d’audit spécifique.  
   
  - **Azure SQL Database**:
  
@@ -64,7 +64,7 @@ fn_get_audit_file ( file_pattern,
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** -collecte tous les fichiers d’audit (objets BLOB) pour la base de données spécifique.    
       
-      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . Xel** -collecte un fichier d’audit spécifique (objet BLOB).
+      - **\<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . Xel** -collecte un fichier d’audit spécifique (objet BLOB).
   
 > [!NOTE]  
 >  Le passage d'un chemin d'accès sans modèle de nom de fichier génère une erreur.  
@@ -128,7 +128,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, Azure SQL Database et SQL Managed instance<br /><br /> Utilisé pour enregistrer les informations supplémentaires que l’utilisateur souhaite enregistrer dans le journal d’audit à l’aide de la procédure stockée **sp_audit_write** . |  
 
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Si l’argument *file_pattern* passé à **fn_get_audit_file** fait référence à un chemin d’accès ou à un fichier qui n’existe pas, ou si le fichier n’est pas un fichier d’audit, le message d’erreur **MSG_INVALID_AUDIT_FILE** est retourné.  
   
 ## <a name="permissions"></a>Autorisations
@@ -159,7 +159,7 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```  
 
-  Cet exemple lit à partir du même fichier que ci-dessus, mais avec des clauses T-SQL supplémentaires (clause**Top**, **order by**et **Where** pour filtrer les enregistrements d’audit retournés par la fonction) :
+  Cet exemple lit à partir du même fichier que ci-dessus, mais avec des clauses T-SQL supplémentaires (clause **Top**, **order by** et **Where** pour filtrer les enregistrements d’audit retournés par la fonction) :
   
   ```  
   SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)

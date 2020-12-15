@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f167741a2064020cfbc7fdc43e881a74609e4ac6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235576"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480160"
 ---
 # <a name="sql-graph-architecture"></a>Architecture du graphique SQL  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -99,14 +99,14 @@ Le tableau suivant répertorie les valeurs valides pour la `graph_type` colonne
 
 Colonnes implicites dans une table de nœuds
 
-|Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
+|Nom de la colonne    |Type de données  |is_hidden  |Comment  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |`graph_id`colonne interne  |
 |$node _id_\<hex_string> |NVARCHAR   |0  |Colonne de nœud externe `node_id`  |
 
 Colonnes implicites dans une table Edge
 
-|Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
+|Nom de la colonne    |Type de données  |is_hidden  |Comment  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |`graph_id`colonne interne  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |`edge_id`colonne externe  |
@@ -150,7 +150,7 @@ Découvrez les [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdu
 |Tâche   |Article connexe  |Notes
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|L’insertion dans une table de nœuds n’est pas différente de l’insertion dans une table relationnelle. Les valeurs de la `$node_id` colonne sont générées automatiquement. Toute tentative d’insertion d’une valeur dans `$node_id` ou de `$edge_id` colonne génère une erreur. Les utilisateurs doivent fournir des valeurs pour les `$from_id` `$to_id` colonnes et lors de l’insertion dans une table Edge. `$from_id` et `$to_id` sont les `$node_id` valeurs des nœuds auxquels se connecte un bord donné.  |
-|Suppression | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Les données des tables de nœuds ou d’arêtes peuvent être supprimées de la même façon qu’elles sont supprimées des tables relationnelles. Toutefois, dans cette version, il n’existe aucune contrainte pour garantir qu’aucun bord ne pointe vers un nœud supprimé et que la suppression en cascade des bords n’est pas prise en charge lors de la suppression d’un nœud. Quand un nœud est supprimé, tous les bords de connexion à ce nœud sont également supprimés, afin de préserver l’intégrité du graphique.  |
+|DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Les données des tables de nœuds ou d’arêtes peuvent être supprimées de la même façon qu’elles sont supprimées des tables relationnelles. Toutefois, dans cette version, il n’existe aucune contrainte pour garantir qu’aucun bord ne pointe vers un nœud supprimé et que la suppression en cascade des bords n’est pas prise en charge lors de la suppression d’un nœud. Quand un nœud est supprimé, tous les bords de connexion à ce nœud sont également supprimés, afin de préserver l’intégrité du graphique.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Les valeurs des colonnes définies par l’utilisateur peuvent être mises à jour à l’aide de l’instruction UPDATE. La mise à jour des colonnes graphiques internes, `$node_id` , `$edge_id` `$from_id` et `$to_id` n’est pas autorisée.  |
 |MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` l’instruction est prise en charge sur une table de nœuds ou d’arêtes.  |
 

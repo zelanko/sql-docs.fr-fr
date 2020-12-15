@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sessions (Transact-SQL)
-title: sys. dm_exec_sessions (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7b50b83a71df6485afae83fb371abb04209898ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539433"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482790"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne une ligne par session authentifiée sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_exec_sessions est une vue dans l'étendue du serveur qui affiche des informations sur toutes les connexions utilisateur et les tâches internes actives. Ces informations concernent la version du client, le nom du programme client, l'heure de connexion du client, l'utilisateur connecté, le paramètre de session en cours, etc. Utilisez sys.dm_exec_sessions pour d'abord consulter la charge système en cours et pour identifier une session d'intérêt, puis pour en savoir plus sur cette session en faisant appel à d'autres vues ou fonctions de gestion dynamique.  
   
- Les vues de gestion dynamique sys. dm_exec_connections, sys. dm_exec_sessions et sys. dm_exec_requests sont mappées à la table système [sys.sysprocessus](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
+ Les vues de gestion dynamique sys.dm_exec_connections, sys.dm_exec_sessions et sys.dm_exec_requests sont mappées à la table système [sys.sysprocessus](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
-> **Remarque :** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_exec_sessions**.  
+> **Remarque :** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Nom de la colonne|Type de données|Description et informations spécifiques à la version|  
 |-----------------|---------------|-----------------|  
@@ -94,11 +94,11 @@ ms.locfileid: "89539433"
   
 ## <a name="permissions"></a>Autorisations  
 Tout le monde peut voir ses propres informations de session.  
-** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** Nécessite `VIEW SERVER STATE` l’autorisation sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pour voir toutes les sessions sur le serveur.  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Nécessite `VIEW DATABASE STATE` de voir toutes les connexions à la base de données actuelle. `VIEW DATABASE STATE` ne peut pas être accordé dans la `master` base de données. 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** Nécessite `VIEW SERVER STATE` l’autorisation sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pour voir toutes les sessions sur le serveur.  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Nécessite `VIEW DATABASE STATE` de voir toutes les connexions à la base de données actuelle. `VIEW DATABASE STATE` ne peut pas être accordé dans la `master` base de données. 
   
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Lorsque l’option de configuration de serveur **conformité aux critères communs** est activée, les statistiques de connexion s’affichent dans les colonnes suivantes.  
   
 -   last_successful_logon  
@@ -115,12 +115,12 @@ Tout le monde peut voir ses propres informations de session.
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|Du|À|Actif/Appliquer|Relation|  
+|Du|À|Actif/Appliquer|Relationship|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Un-à-zéro ou un-à-plusieurs|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Un-à-zéro ou un-à-plusieurs|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|Un-à-zéro ou un-à-plusieurs|  
-|sys.dm_exec_sessions|[sys. dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Un-à-zéro ou un-à-plusieurs|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Un-à-zéro ou un-à-plusieurs|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|Un-à-un|  
   
 ## <a name="examples"></a>Exemples  

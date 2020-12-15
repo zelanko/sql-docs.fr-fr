@@ -12,18 +12,18 @@ dev_langs:
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb32b46347105b6dd80bf8013fe263018fad80e3
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016'
+ms.openlocfilehash: 8c93497ad0fd1c51a5422b80c835f3dbc8f1aff7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035012"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477370"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys.pdw_database_mappings (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  Mappe le **database_id**s de bases de données au nom physique utilisé sur les nœuds de calcul, et fournit l' **ID principal** du propriétaire de la base de données sur le système. Joindre **sys.pdw_database_mappings** à **sys. databases** et **sys.pdw_nodes_pdw_physical_databases**.  
+  Mappe le **database_id** s de bases de données au nom physique utilisé sur les nœuds de calcul, et fournit l' **ID principal** du propriétaire de la base de données sur le système. Joindre **sys.pdw_database_mappings** à **sys. databases** et **sys.pdw_nodes_pdw_physical_databases**.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  

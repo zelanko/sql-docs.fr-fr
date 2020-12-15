@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21f743aa4c28095a3167ebb16cf873f46afece38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9cad51a7a83f694ac89b41584929a46e1fbc725c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541956"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482413"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,9 +48,9 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="arguments"></a>Arguments  
 `[ @defname = ] 'default'` Nom de la valeur par défaut créée par CREATe DEFAULT. la *valeur par défaut* est **nvarchar (776)**, sans valeur par défaut.  
   
-`[ @objname = ] 'object_name'` Nom de la table et de la colonne ou type de données de l’alias auquel la valeur par défaut doit être liée. *object_name* est de type **nvarchar (776)** sans valeur par défaut. *object_name* ne peut pas être défini avec les types **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**ou CLR définis par l’utilisateur.  
+`[ @objname = ] 'object_name'` Nom de la table et de la colonne ou type de données de l’alias auquel la valeur par défaut doit être liée. *object_name* est de type **nvarchar (776)** sans valeur par défaut. *object_name* ne peut pas être défini avec les types **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** ou CLR définis par l’utilisateur.  
   
- Si *object_name* est un nom en une partie, il est résolu en tant que type de données d’alias. S'il s'agit d'un nom à deux ou trois composantes, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *par défaut*, sauf si une valeur par défaut a été liée directement à la colonne. Une valeur par défaut ne peut pas être liée à une colonne de type **Text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **timestamp**ou CLR défini par l’utilisateur, une colonne avec la propriété Identity, une colonne calculée ou une colonne qui a déjà une contrainte default.  
+ Si *object_name* est un nom en une partie, il est résolu en tant que type de données d’alias. S'il s'agit d'un nom à deux ou trois composantes, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *par défaut*, sauf si une valeur par défaut a été liée directement à la colonne. Une valeur par défaut ne peut pas être liée à une colonne de type **Text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **timestamp** ou CLR défini par l’utilisateur, une colonne avec la propriété Identity, une colonne calculée ou une colonne qui a déjà une contrainte default.  
   
 > [!NOTE]  
 >  les *object_name* peuvent contenir des crochets **[]** comme identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -82,7 +82,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Liaison d'une valeur par défaut à un type de données d'alias  
- Une valeur par défaut nommée `def_ssn` et un type de données d'alias nommé `ssn` existent déjà. L'exemple suivant lie la valeur par défaut `def_ssn` à `ssn`. Lors de la création d'une table, toutes les colonnes affectées au type de données d'alias `ssn` héritent la valeur par défaut. Les colonnes existantes de type **SSN** héritent également de la **def_ssn**par défaut, sauf si **futureonly** est spécifié pour *futureonly_flag* valeur, ou à moins que la colonne ait directement une liaison par défaut. Les valeurs par défaut liées aux colonnes ont toujours priorité sur celles liées à des types de données.  
+ Une valeur par défaut nommée `def_ssn` et un type de données d'alias nommé `ssn` existent déjà. L'exemple suivant lie la valeur par défaut `def_ssn` à `ssn`. Lors de la création d'une table, toutes les colonnes affectées au type de données d'alias `ssn` héritent la valeur par défaut. Les colonnes existantes de type **SSN** héritent également de la **def_ssn** par défaut, sauf si **futureonly** est spécifié pour *futureonly_flag* valeur, ou à moins que la colonne ait directement une liaison par défaut. Les valeurs par défaut liées aux colonnes ont toujours priorité sur celles liées à des types de données.  
   
 ```  
 USE master;  

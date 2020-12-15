@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d155f836abb975b39ef7b2396057a43e59686f9b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 1e5fc3af931460de84dde4467b803226dcd6d431
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035337"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482557"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "92035337"
 |is_transactional|**bit**|Capture si une session est actuellement dans une transaction ou non.|0 pour la validation automatique, 1 pour transaction.|  
 |client_id|**nvarchar(255)**|Capture les informations client pour la session.|Toute chaîne valide.|  
 |app_name|**nvarchar(255)**|Capture les informations de nom de l’application, éventuellement définies dans le cadre du processus de connexion.|Toute chaîne valide.|  
-|sql_spid|**int**|Numéro d’identification du SPID. Utilisez `session_id` cette session. Utilisez la `sql_spid` colonne pour joindre à **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> AVERTISSEMENT Cette colonne contient des SPID fermés. ** \* \* \* \* **||  
+|sql_spid|**int**|Numéro d’identification du SPID. Utilisez `session_id` cette session. Utilisez la `sql_spid` colonne pour joindre à **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> AVERTISSEMENT Cette colonne contient des SPID fermés. **\* \* \* \***||  
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section métadonnées dans la rubrique [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

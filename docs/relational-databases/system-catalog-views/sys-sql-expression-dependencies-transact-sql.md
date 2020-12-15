@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2a9810d1c1fbda616b6dec588375529f4cbbb15c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006426"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477410"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "92006426"
 |is_caller_dependent|**bit**|Indique que la liaison de schéma pour l'entité référencée se produit au moment de l'exécution ; par conséquent, la résolution de l'ID d'entité dépend du schéma de l'appelant. Cela se produit lorsque l'entité référencée est une procédure stockée, procédure stockée étendue ou fonction définie par l'utilisateur non liée au schéma appelée dans une instruction EXECUTE.<br /><br /> 1 = l'entité référencée dépend de l'appelant et est résolue au moment de l'exécution. Dans ce cas, referenced_id a la valeur NULL.<br /><br /> 0 = l'ID de l'entité référencée ne dépend pas de l'appelant.<br /><br /> Toujours 0 pour les références liées au schéma et pour les références des bases de données croisées et entre serveurs qui spécifient explicitement un nom de schéma. Par exemple, une référence à une entité au format `EXEC MyDatabase.MySchema.MyProc` ne dépend pas de l'appelant. Toutefois, une référence au format `EXEC MyDatabase..MyProc` dépend de l'appelant.|  
 |is_ambiguous|**bit**|Indique que la référence est ambiguë et peut être résolue au moment de l’exécution en une fonction définie par l’utilisateur, un type défini par l’utilisateur (UDT) ou une référence XQuery à une colonne de type **XML**.<br /><br /> Par exemple, supposez que l'instruction `SELECT Sales.GetOrder() FROM Sales.MySales` est définie dans une procédure stockée. Jusqu'à ce que la procédure stockée soit exécutée, il n'est pas possible de savoir si `Sales.GetOrder()` est une fonction définie par l'utilisateur dans le schéma `Sales` ou une colonne nommée `Sales` de type défini par l'utilisateur avec une méthode nommée `GetOrder()`.<br /><br /> 1 = la référence est ambiguë.<br /><br /> 0 = la référence n'est pas équivoque ou l'entité peut être liée avec succès lorsque la vue est appelée.<br /><br /> Toujours 0 pour les références liées au schéma.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Le tableau suivant répertorie les types des entités pour lesquelles les informations de dépendance sont créées et gérées. Les informations de dépendance ne sont pas créées ni gérées pour les règles, les valeurs par défaut, les tables temporaires, les procédures stockées temporaires ou les objets système.  
 
 > [!NOTE]
@@ -77,7 +77,7 @@ ms.locfileid: "92006426"
 |Affichage|Oui|Oui|  
 |Index filtré|Oui**|Non|  
 |Statistiques filtrées|Oui**|Non|  
-|Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Oui|Oui|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée * * _|Oui|Oui|  
 |Procédure stockée CLR|Non|Oui|  
 |Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
 |Fonction CLR définie par l'utilisateur|Non|Oui|  
@@ -86,17 +86,17 @@ ms.locfileid: "92006426"
 |Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
 |Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
 |Procédures stockées étendues|Non|Oui|  
-|File d’attente|Non|Oui|  
+|File d'attente|Non|Oui|  
 |Synonyme|Non|Oui|  
 |Type (alias et type CLR défini par l'utilisateur)|Non|Oui|  
 |Collection de schémas XML|Non|Oui|  
 |Fonction de partition|Non|Oui|  
   
- \* Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
+ \_ Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
   
  ** Chaque colonne utilisée dans le prédicat de filtre est suivie en tant qu'entité de référence.  
   
- *** Les procédures stockées numérotées avec une valeur entière supérieure à 1 ne sont pas suivies en tant qu'entité de référence ou référencée.  
+ * * Les procédures stockées numérotées avec une valeur entière supérieure à 1 ne sont pas suivies en tant qu’entité de référence ou référencée.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DEFINITION sur la base de données et l'autorisation SELECT sur sys.sql_expression_dependencies pour la base de données. Par défaut, l'autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe db_owner. Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  
@@ -154,7 +154,7 @@ CREATE DATABASE db1;
 GO  
 USE db1;  
 GO  
-CREATE PROCEDURE p1 AS SELECT * FROM db2.s1.t1;  
+CREATE PROCEDURE p1 AS SELECT _ FROM db2.s1.t1;  
 GO  
 CREATE PROCEDURE p2 AS  
     UPDATE db3..t3  

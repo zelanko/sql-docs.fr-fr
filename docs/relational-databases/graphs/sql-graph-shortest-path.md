@@ -18,20 +18,20 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
+ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475838"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480180"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   Spécifie une condition de recherche pour un graphique, qui est recherchée de manière récursive ou répétée. SHORTEST_PATH peut être utilisé dans une correspondance avec le nœud de graphique et les tables de bord, dans l’instruction SELECT. 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="shortest-path"></a>Chemin d’accès le plus rapide
 La fonction SHORTEST_PATH vous permet de trouver :    
@@ -50,7 +50,7 @@ POUR PATH doit être utilisé avec n’importe quel nom de table de nœud ou d�
 Ce modèle comprend les nœuds et les bords qui doivent être parcourus à plusieurs reprises jusqu’à ce que le nœud souhaité soit atteint ou jusqu’à ce que le nombre maximal d’itérations spécifié dans le modèle soit respecté. Chaque fois que la requête est exécutée, le résultat de l’exécution de ce modèle est une collection ordonnée des nœuds et des bords parcourus le long du nœud de départ jusqu’au nœud de fin. Il s’agit d’un modèle de syntaxe de style d’expression régulière et les quantificateurs de deux modèles suivants sont pris en charge :
 
 * **' + '**: Répéter le modèle 1 ou plusieurs fois. Arrêtez dès qu’un chemin d’accès le plus court est trouvé.
-* **{1, n}**: répéter le modèle de 1 à’n’fois. Terminer dès qu’un plus petit est trouvé.
+* **{1,n}**  : Répétez le modèle une à « n » fois. Terminer dès qu’un plus petit est trouvé.
 
 ## <a name="last_node"></a>LAST_NODE
 La fonction LAST_NODE () autorise le chaînage de deux modèles de traversée de longueur arbitraire. Il peut être utilisé dans les scénarios où :    
@@ -109,7 +109,7 @@ Retourne la valeur minimale des valeurs d’attribut de nœud/de bord fournies o
 ### <a name="max"></a>MAX
 Retourne la valeur maximale des valeurs d’attribut de nœud/de bord fournies ou de l’expression qui apparaissaient dans le chemin parcouru.
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
 shortest_path fonction ne peut être utilisée qu’à l’intérieur de MATCH.     
 LAST_NODE est pris en charge uniquement dans les shortest_path.     
 Recherche du chemin d’accès le plus faible pondéré, tous les chemins d’accès ou tous les chemins les plus courts ne sont pas pris en charge.         
@@ -213,6 +213,6 @@ WHERE Q.levels = 2
 ## <a name="see-also"></a>Voir aussi  
  [MATCH (graphique SQL)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [Insert (graphique SQL)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Traitement des graphes avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)     
  

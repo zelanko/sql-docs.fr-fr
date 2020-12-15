@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea021b39d01af931a989c55233a7f1cd8fa2cb82
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6a55bcdd0df9f288daa22c5f4f1454b14305ec6a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004800"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478940"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ sp_pkeys [ @table_name = ] 'name'
  [ @table_owner =] '*propriétaire*'  
  Spécifie le propriétaire de la table désignée. *owner* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si le *propriétaire* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table portant le *nom*spécifié, cette procédure recherche une table portant le *nom* spécifié, détenue par le propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si le *propriétaire* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table portant le *nom* spécifié, cette procédure recherche une table portant le *nom* spécifié, détenue par le propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
   
  [ @table_qualifier =] '*qualificateur*'  
  Qualificateur de la table. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
@@ -68,7 +68,7 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|Numéro de séquence de la colonne dans une clé primaire multicolonne.|  
 |PK_NAME|**sysname**|Identificateur de clé primaire. Retourne NULL s'il n'est pas applicable à la source de données.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  sp_pkeys renvoie des informations sur les colonnes explicitement définies avec une contrainte PRIMARY KEY. Comme tous les systèmes ne prennent en charge pas les clés primaires explicitement nommées, la personne chargée de la mise en œuvre des passerelles détermine ce qui constitue une clé primaire. Notez que le terme « clé primaire » fait référence à une clé primaire logique pour une table. À chaque clé indiquée comme étant une clé primaire logique doit correspondre un seul index défini sur cette clé. Cet index unique est également renvoyé dans sp_statistics.  
   
  La procédure stockée sp_pkeys est équivalente à SQLPrimaryKeys dans ODBC. Les résultats renvoyés sont triés par TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME et KEY_SEQ.  

@@ -11,18 +11,18 @@ ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b19c4bea8498ddb8ba900ba9f4e566b7176bf1b9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 336c63cf5b9be674ef8dfe972da67cf386e42f92
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868407"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481050"
 ---
 # <a name="use-enhanced-date-and-time-features-in-sql-server-native-client-ole-db"></a>Utiliser les fonctionnalités de date et d’heure améliorées dans SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Cet exemple montre comment utiliser les fonctionnalités de date et d'heure introduites dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. L'exemple utilise les quatre nouveaux types de date et d'heure (**date**, **time**, **datetime2**et **datetimeoffset**) pour exécuter des commandes avec les paramètres et récupérer les résultats de l’ensemble de lignes.  
+  Cet exemple montre comment utiliser les fonctionnalités de date et d'heure introduites dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. L'exemple utilise les quatre nouveaux types de date et d'heure (**date**, **time**, **datetime2** et **datetimeoffset**) pour exécuter des commandes avec les paramètres et récupérer les résultats de l’ensemble de lignes.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   

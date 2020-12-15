@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8222058b5e26dd8e2d1c932705889ec0ee6d68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753701"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482518"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Spécifie le texte à rechercher dans *column_name* et les conditions de correspondance à remplir. Pour plus d’informations sur les conditions de recherche, consultez [contains &#40;&#41;Transact-SQL ](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Les prédicats et les fonctions de texte intégral s'appliquent à une table unique, ce qui est implicite dans le prédicat FROM. Pour effectuer des recherches sur plusieurs tables, utilisez une table jointe dans votre clause FROM afin de baser votre recherche sur un jeu de résultats qui est le produit de deux tables ou plus.  
   
  La table retournée a une colonne nommée **Key** qui contient des valeurs de clé de texte intégral. Chaque table indexée de texte intégral possède une colonne dont les valeurs sont uniques, et les valeurs retournées dans la colonne **clé** sont les valeurs de clés de texte intégral des lignes qui correspondent aux critères de sélection spécifiés dans la condition de recherche Contains. La propriété **TableFulltextKeyColumn** , obtenue à partir de la fonction OBJECTPROPERTYEX, fournit l’identité de cette colonne clé unique. Pour obtenir l’ID de la colonne associée à la clé de texte intégral de l’index de recherche en texte intégral, utilisez **sys.fulltext_indexes**. Pour plus d’informations, consultez [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  

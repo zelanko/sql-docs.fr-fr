@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_text_query_plan (Transact-SQL)
-title: sys. dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51e2ee0d9867f952b219434ff59432732a96ddd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f24871b199c66ea1efdd238b7141d8f0f7d99e19
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539424"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482820"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Retourne le plan d'exécution de requêtes au format texte pour un lot [!INCLUDE[tsql](../../includes/tsql-md.md)] ou pour une instruction spécifique dans le lot. Le plan de requête spécifié par le descripteur de plan peut être en cache ou en cours d'exécution. Cette fonction à valeur de table est similaire à [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), mais présente les différences suivantes :  
+Retourne le plan d'exécution de requêtes au format texte pour un lot [!INCLUDE[tsql](../../includes/tsql-md.md)] ou pour une instruction spécifique dans le lot. Le plan de requête spécifié par le descripteur de plan peut être en cache ou en cours d'exécution. Cette fonction à valeur de table est similaire à [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), mais présente les différences suivantes :  
   
 -   La sortie du plan de requête est au format texte.  
 -   La taille de cette sortie n'est pas limitée.  
@@ -64,9 +64,9 @@ Le *plan_handle* peut être obtenu à partir des objets de gestion dynamique sui
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 *statement_start_offset* | 0 | VALEURS  
 Indique, en octets, la position de début de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant. *statement_start_offset* est de **type int**. La valeur 0 indique le début du traitement. La valeur par défaut est 0.  
@@ -94,14 +94,14 @@ La valeur -1 indique la fin du traitement. La valeur par défaut est -1.
 |**chiffrées**|**bit**|Indique si la procédure stockée correspondante est chiffrée.<br /><br /> 0 = Non chiffrée.<br /><br /> 1 = Chiffrée.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
 |**query_plan**|**nvarchar(max)**|Contient la représentation Showplan au moment de la compilation du plan d’exécution de requête spécifié avec *plan_handle*. Le Showplan est au format texte. Un plan est généré pour chaque traitement contenant par exemple des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, des appels de procédures stockées et des appels de fonctions définies par l'utilisateur.<br /><br /> Colonne acceptant la valeur NULL.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Aucune sortie Showplan n'est retournée dans la colonne **plan** de la table retournée pour l'objet **sys.dm_exec_text_query_plan** dans les conditions suivantes :  
   
 -   Si le plan de requête spécifié à l’aide de *plan_handle* a été supprimé de la mémoire cache des plans, la colonne **query_plan** de la table retournée est null. Ceci peut se produire par exemple s'il existe un délai entre le moment où le descripteur de plan est capturé et le moment de son utilisation avec **sys.dm_exec_text_query_plan**.  
   
 -   Certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne sont pas mises en mémoire cache, par exemple les instructions d'opérations en bloc ou les instructions contenant des littéraux de chaîne dont la taille est supérieure à 8 Ko. Il est impossible de récupérer pour de telles instructions des plans d'exécution XML à l'aide de **sys.dm_exec_text_query_plan** car elles n'existent pas dans la mémoire cache.  
   
--   Si une [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée ou un traitement contient un appel à une fonction définie par l’utilisateur ou un appel à du code SQL dynamique, par exemple à l’aide de exec (*String*), le plan d’exécution de requêtes XML compilé pour la fonction définie par l’utilisateur n’est pas inclus dans la table retournée par **sys. dm_exec_text_query_plan** pour le traitement ou la procédure stockée. Au lieu de cela, vous devez effectuer un appel distinct à **sys. dm_exec_text_query_plan** pour le *plan_handle* qui correspond à la fonction définie par l’utilisateur.  
+-   Si une [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée ou un traitement contient un appel à une fonction définie par l’utilisateur ou un appel à du code SQL dynamique, par exemple à l’aide de exec (*String*), le plan d’exécution de requêtes XML compilé pour la fonction définie par l’utilisateur n’est pas inclus dans la table retournée par **sys.dm_exec_text_query_plan** pour le traitement ou la procédure stockée. Au lieu de cela, vous devez effectuer un appel distinct à **sys.dm_exec_text_query_plan** pour le *plan_handle* qui correspond à la fonction définie par l’utilisateur.  
   
 Lorsqu’une requête ad hoc utilise un [Paramétrage](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) ou forcé, la **query_plan** colonne contient uniquement le texte de l’instruction et non le plan de requête réel. Pour retourner le plan de requête, appelez **sys.dm_exec_text_query_plan** pour le descripteur de plan de la requête paramétrable préparée. Vous pouvez déterminer si la requête a été rendue paramétrable par le référencement de la colonne **sql** de la vue [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) ou la colonne de texte de la vue de gestion dynamique [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
@@ -181,4 +181,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

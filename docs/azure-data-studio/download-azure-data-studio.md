@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 12/9/2020
-ms.openlocfilehash: 3e0fd0a79a47f0feaf306fee02a3068ac470bfe2
-ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
+ms.date: 12/11/2020
+ms.openlocfilehash: a37431580c6ba2afa314d6b0596f4d319e729cf0
+ms.sourcegitcommit: e120899c5e72ce3108d1e459703ccd2ea6a84a5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96933991"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97353651"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Télécharger et installer Azure Data Studio
 
@@ -26,9 +26,9 @@ Azure Data Studio offre une expérience d’éditeur moderne avec des fonctionna
 
 | Plateforme | Téléchargement | Date de publication | Version |
 |----------|----------|--------------|---------|
-| Windows | [Programme d’installation utilisateur (recommandé)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[Programme d’installation système](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | 9 décembre 2020 | 1.25.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | 9 décembre 2020 | 1.25.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | 9 décembre 2020 | 1.25.0 |
+| Windows | [Programme d’installation utilisateur (recommandé)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[Programme d’installation système](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | 11 décembre 2020 | 1.25.1 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | 11 décembre 2020 | 1.25.1 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | 11 décembre 2020 | 1.25.1 |
 
 **Pour plus d’informations sur la dernière version, consultez les [notes de publication](./release-notes-azure-data-studio.md).**
 

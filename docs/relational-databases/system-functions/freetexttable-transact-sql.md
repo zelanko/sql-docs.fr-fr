@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f44a757695d067f518de22f9d3bc59af455a67c
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 83aa956f8a9a9421cdbc411856be78af272f1fa6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753769"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482515"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Fonction utilisée dans la [clause from](../../t-sql/queries/from-transact-sql.md) d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction SELECT pour effectuer une recherche en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] texte intégral sur les colonnes indexées en texte intégral qui contiennent des types de données basés sur des caractères. Cette fonction retourne une table de zéro, une ou plusieurs lignes pour les colonnes qui contiennent des valeurs qui correspondent à la signification et non exactement à la formulation exacte du texte de la *freetext_string*spécifiée. FREETEXTTABLE est référencé comme s'il s'agissait d'un nom de table classique.  
+  Fonction utilisée dans la [clause from](../../t-sql/queries/from-transact-sql.md) d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction SELECT pour effectuer une recherche en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] texte intégral sur les colonnes indexées en texte intégral qui contiennent des types de données basés sur des caractères. Cette fonction retourne une table de zéro, une ou plusieurs lignes pour les colonnes qui contiennent des valeurs qui correspondent à la signification et non exactement à la formulation exacte du texte de la *freetext_string* spécifiée. FREETEXTTABLE est référencé comme s'il s'agissait d'un nom de table classique.  
   
  FREETEXTTABLE est utile pour les mêmes types de correspondances que l' [&#41;FREETEXT &#40;Transact-SQL ](../../t-sql/queries/freetext-transact-sql.md),  
   
@@ -44,7 +44,7 @@ ms.locfileid: "91753769"
   
 (https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>Arguments  
  *table*  
- Nom de la table marquée pour les requêtes de texte intégral. la *table* ou la *vue*peut être un nom d’objet de base de données en une, deux ou trois parties. Lors de l'interrogation d'une vue, une seule table de base indexée en texte intégral peut être impliquée.  
+ Nom de la table marquée pour les requêtes de texte intégral. la *table* ou la *vue* peut être un nom d’objet de base de données en une, deux ou trois parties. Lors de l'interrogation d'une vue, une seule table de base indexée en texte intégral peut être impliquée.  
   
  la *table* ne peut pas spécifier un nom de serveur et ne peut pas être utilisée dans des requêtes sur des serveurs liés.  
   
@@ -90,9 +90,9 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Si la langue spécifiée n'est pas valide ou si aucune ressource correspondant à cette langue n'est installée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur. Pour utiliser des ressources linguistiques neutres, indiquez 0x0 pour *language_term*.  
   
  *top_n_by_rank*  
- Spécifie que seules les *n*correspondances de rang le plus élevé, dans l’ordre décroissant, sont retournées. S’applique uniquement lorsqu’une valeur entière, *n*, est spécifiée. Si *top_n_by_rank* est associé à d’autres paramètres, la requête peut retourner moins de lignes que le nombre de lignes correspondant effectivement à tous les prédicats. *top_n_by_rank* vous permet d’augmenter les performances des requêtes en rappelant uniquement les accès les plus pertinents.  
+ Spécifie que seules les *n* correspondances de rang le plus élevé, dans l’ordre décroissant, sont retournées. S’applique uniquement lorsqu’une valeur entière, *n*, est spécifiée. Si *top_n_by_rank* est associé à d’autres paramètres, la requête peut retourner moins de lignes que le nombre de lignes correspondant effectivement à tous les prédicats. *top_n_by_rank* vous permet d’augmenter les performances des requêtes en rappelant uniquement les accès les plus pertinents.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Les prédicats et les fonctions de texte intégral s'appliquent à une table unique, ce qui est implicite dans le prédicat FROM. Pour effectuer des recherches sur plusieurs tables, utilisez une table jointe dans votre clause FROM afin de baser votre recherche sur un jeu de résultats qui est le produit de deux tables ou plus.  
   
  FREETEXTTABLE utilise les mêmes conditions de recherche que le prédicat FREETEXT.  

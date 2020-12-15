@@ -1,6 +1,6 @@
 ---
 description: sys.asymmetric_keys (Transact-SQL)
-title: sys. asymmetric_keys (Transact-SQL) | Microsoft Docs
+title: sys.asymmetric_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d8ff4d42014f0e3b61c4087ae879edfb8f9da744
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 785b3095987a0ade14008f9251a45167ce5011ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539703"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479070"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "89539703"
 |**asymmetric_key_id**|**int**|ID de la clé. Unique dans la base de données.|  
 |**pvt_key_encryption_type**|**char(2)**|Mode de chiffrement de la clé.<br /><br /> NA = Non chiffrée<br /><br /> MK = La clé est chiffrée par la clé principale<br /><br /> PW = La clé est chiffrée par un mot de passe défini par l'utilisateur<br /><br /> SK = La clé est chiffrée par la clé principale du service.|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Description du mode de chiffrement de la clé privée.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**d**|**varbinary(32)**|Hachage SHA-1 de la clé. Hachage globalement unique.|  
+|**thumbprint**|**varbinary(32)**|Hachage SHA-1 de la clé. Hachage globalement unique.|  
 |**utilisé**|**char(2)**|Algorithme utilisé avec la clé.<br /><br /> 1R = RSA 512 bits<br /><br /> 2R = RSA 1024 bits<br /><br /> 3R = RSA 2048 bits|  
 |**algorithm_desc**|**nvarchar(60)**|Description de l'algorithme utilisé avec la clé.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|Longueur en bits de la clé.|  
