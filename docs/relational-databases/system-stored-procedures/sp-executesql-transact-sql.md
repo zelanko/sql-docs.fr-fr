@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005761"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427897"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ sp_executesql [ @stmt = ] statement
  Valeur du premier paramètre qui est défini dans la chaîne de paramètres. Cette valeur peut être une constante ou une variable Unicode. Une valeur de paramètre doit être fournie pour chaque paramètre inclus dans \@ stmt. Les valeurs ne sont pas obligatoires lorsque l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans \@ stmt n’a pas de paramètres.  
   
  [ OUT | OUTPUT ]  
- Indique que le paramètre est un paramètre de sortie. les paramètres **Text**, **ntext**et **image** peuvent être utilisés comme paramètres de sortie, sauf si la procédure est une procédure Common Language Runtime (CLR). Un paramètre de sortie qui utilise le mot clé OUTPUT peut être un espace réservé de curseur, sauf si la procédure est une procédure CLR (Common Language Runtime).  
+ Indique que le paramètre est un paramètre de sortie. les paramètres **Text**, **ntext** et **image** peuvent être utilisés comme paramètres de sortie, sauf si la procédure est une procédure Common Language Runtime (CLR). Un paramètre de sortie qui utilise le mot clé OUTPUT peut être un espace réservé de curseur, sauf si la procédure est une procédure CLR (Common Language Runtime).  
   
  *n*  
  Représente un espace réservé destiné aux valeurs de paramètres supplémentaires. Ces valeurs doivent être des constantes ou des variables. Leur degré de complexité ne doit pas dépasser celui d'expressions telles que les fonctions ou expressions créées à l'aide d'opérateurs.  
@@ -76,7 +76,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne les jeux de résultats de toutes les instructions SQL de la chaîne SQL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  sp_executesql paramètres doivent être entrés dans l’ordre spécifique, comme décrit dans la section « syntaxe », plus haut dans cette rubrique. Si les paramètres sont entrés dans le désordre, un message d'erreur se produira.  
   
  La procédure sp_executesql a le même comportement vis-à-vis des traitements d'instructions, de l'étendue des noms et du contexte de base de données que l'instruction EXECUTE. L' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans le \@ paramètre sp_executesql stmt n’est pas compilé tant que l’instruction sp_executesql n’est pas exécutée. Le contenu de \@ stmt est ensuite compilé et exécuté en tant que plan d’exécution distinct du plan d’exécution du lot qui a appelé sp_executesql. Le traitement sp_executesql ne peut pas faire référence à des variables déclarées dans le traitement qui a appelé sp_executesql. Les curseurs ou les variables locaux du traitement sp_executesql ne sont pas visibles pour le traitement qui appelle sp_executesql. Les modifications apportées au contexte de base de données ne durent que jusqu'à la fin de l'exécution de l'instruction sp_executesql.  

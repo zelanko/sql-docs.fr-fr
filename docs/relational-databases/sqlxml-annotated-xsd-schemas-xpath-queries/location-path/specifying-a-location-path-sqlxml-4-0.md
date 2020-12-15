@@ -17,13 +17,13 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f5793bef7a6b025198972b1be40fc9f482fd53c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9dedf4df4aa43f79ca4146da6f1183b0ee06286b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649734"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431258"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Spécification d'un chemin d'accès d'emplacement (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "85649734"
   
 -   **Axe**  
   
-     L'axe spécifie la relation d'arborescence entre les nœuds sélectionnés par l'étape d'emplacement et le nœud de contexte. Les axes **parent**, **enfant**, **attribut**et **Self** sont pris en charge. Si un axe **enfant** est spécifié dans le chemin d’accès de l’emplacement, tous les nœuds sélectionnés par la requête sont les enfants du nœud de contexte. Si un axe **parent** est spécifié, le nœud sélectionné est le nœud parent du nœud de contexte. Si un axe d' **attribut** est spécifié, les nœuds sélectionnés sont les attributs du nœud de contexte.  
+     L'axe spécifie la relation d'arborescence entre les nœuds sélectionnés par l'étape d'emplacement et le nœud de contexte. Les axes **parent**, **enfant**, **attribut** et **Self** sont pris en charge. Si un axe **enfant** est spécifié dans le chemin d’accès de l’emplacement, tous les nœuds sélectionnés par la requête sont les enfants du nœud de contexte. Si un axe **parent** est spécifié, le nœud sélectionné est le nœud parent du nœud de contexte. Si un axe d' **attribut** est spécifié, les nœuds sélectionnés sont les attributs du nœud de contexte.  
   
 -   **Test de nœud**  
   
-     Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (**enfant**, **parent**, **attribut**et **Self**) a un type de nœud principal. Pour l’axe **attribute** , le type de nœud principal est **\<attribute>** . Pour les axes **parent**, **enfant**et **Self** , le type de nœud principal est **\<element>** .  
+     Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (**enfant**, **parent**, **attribut** et **Self**) a un type de nœud principal. Pour l’axe **attribute** , le type de nœud principal est **\<attribute>** . Pour les axes **parent**, **enfant** et **Self** , le type de nœud principal est **\<element>** .  
   
      Par exemple, si le chemin d’accès de l’emplacement spécifie **Child :: Customer**, les **\<Customer>** enfants de l’élément du nœud de contexte sont sélectionnés. Étant donné que l’axe **enfant** a **\<element>** comme type de nœud principal, le test de nœud, Customer, a la valeur true si Customer est un **\<element>** nœud.  
   

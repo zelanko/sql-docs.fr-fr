@@ -1,6 +1,6 @@
 ---
 description: sys.column_master_keys (Transact-SQL)
-title: sys. column_master_keys (Transact-SQL) | Microsoft Docs
+title: sys.column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a49dd0832e0319f078d91c44708e8ab821ad107
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9b62a54ec2ab17d76f5f726dbd26f28a60d79afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646719"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97429581"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 
@@ -48,7 +48,7 @@ ms.locfileid: "88646719"
 |**key_store_provider_name**|**sysname**|Nom du fournisseur pour le magasin de clés principales de colonne qui contient CMK. Les valeurs autorisées sont les suivantes :<br /><br /> MSSQL_CERTIFICATE_STORE-si le magasin de clés principales de colonne est un magasin de certificats.<br /><br /> Valeur définie par l’utilisateur, si le magasin de clés principales de colonne est d’un type personnalisé.|  
 |**key_path**|**nvarchar(4000)**|Chemin d’accès spécifique au magasin de clés principales de colonne pour la clé. Le format du chemin d’accès dépend du type de magasin de clés principales de colonne. Exemple :<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Pour un magasin de clés principales de colonne personnalisé, le développeur est chargé de définir ce qu’est un chemin d’accès de clé pour le magasin de clés principales de colonne personnalisé.|  
 |**allow_enclave_computations**|**bit**|Indique si la clé principale de colonne est activée pour l’enclave, (si les clés de chiffrement de colonne, chiffrées avec cette clé principale, peuvent être utilisées pour les calculs dans les enclaves sécurisées côté serveur). Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
-|**signature**|**varbinary(max)**|Une signature numérique de **key_path** et **allow_enclave_computations**produite à l’aide de la clé principale de colonne, référencée par **key_path**.|
+|**signature**|**varbinary(max)**|Une signature numérique de **key_path** et **allow_enclave_computations** produite à l’aide de la clé principale de colonne, référencée par **key_path**.|
 
 
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955860"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427352"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -85,7 +85,7 @@ RECONFIGURE
 |**config_value**|**int**|Valeur à laquelle l’option de configuration a été définie à l’aide de **sp_configure** (valeur dans **sys.configurations. Value**). Pour plus d’informations sur ces options, consultez [options de configuration du serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) et [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Valeur en cours d’exécution de l’option de configuration (valeur dans **sys.configurations.value_in_use**).<br /><br /> Pour plus d’informations, consultez [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  Utilisez **sp_configure** pour afficher ou modifier les paramètres au niveau du serveur. Pour modifier les paramètres au niveau de la base de données, utilisez ALTER DATABASE. Pour modifier uniquement les paramètres qui ont une incidence sur la session de l'utilisateur actuel, utilisez l'instruction SET.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -102,7 +102,7 @@ RECONFIGURE
   
  Certaines options peuvent être mises à jour de façon dynamique par l'instruction RECONFIGURE, alors que d'autres nécessitent un arrêt et un redémarrage du serveur. Par exemple, les options **min Server Memory** et **Max Server** Memory Server sont mises à jour dynamiquement dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; par conséquent, vous pouvez les modifier sans redémarrer le serveur. En revanche, la reconfiguration de la valeur d’exécution de l’option **facteur de remplissage** nécessite le redémarrage de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Après l’exécution de RECONFIGURE sur une option de configuration, vous pouvez voir si l’option a été mise à jour de manière dynamique en exécutant **sp_configure «***option_name***»**. Les valeurs des colonnes **run_value** et **config_value** doivent correspondre pour une option mise à jour dynamiquement. Vous pouvez également vérifier quelles options sont dynamiques en examinant la **is_dynamic** colonne de l’affichage catalogue **sys.configurations** .  
+ Après l’exécution de RECONFIGURE sur une option de configuration, vous pouvez voir si l’option a été mise à jour de manière dynamique en exécutant **sp_configure «**_option_name_*_»_*. Les valeurs des colonnes **run_value** et **config_value** doivent correspondre pour une option mise à jour dynamiquement. Vous pouvez également vérifier quelles options sont dynamiques en examinant la **is_dynamic** colonne de l’affichage catalogue **sys.configurations** .  
  
  La modification est également écrite dans le journal des erreurs SQL Server.
   
