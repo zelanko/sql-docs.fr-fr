@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7a46f76385a724f1aa8622ac85301cdc7e12b6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7257b24d2908ea17977c0b08f0517d65d2481979
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006509"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439484"
 ---
 # <a name="sp_columns-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ sp_columns [ @table_name = ] object
   
 `[ \@table_owner = ] owner` Propriétaire de l’objet utilisé pour retourner les informations de catalogue. *owner* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité d’objet par défaut du SGBD sous-jacent s’appliquent.  
   
- Si l'utilisateur actuel est propriétaire d'un objet portant le nom spécifié, les colonnes de cet objet sont retournées. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas d’objet avec l' *objet*spécifié, **sp_columns** recherche un objet avec l' *objet* spécifié détenu par le propriétaire de la base de données. S'il en existe un, les colonnes de cet objet sont retournées.  
+ Si l'utilisateur actuel est propriétaire d'un objet portant le nom spécifié, les colonnes de cet objet sont retournées. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas d’objet avec l' *objet* spécifié, **sp_columns** recherche un objet avec l' *objet* spécifié détenu par le propriétaire de la base de données. S'il en existe un, les colonnes de cet objet sont retournées.  
   
 `[ \@table_qualifier = ] qualifier` Nom du qualificateur de l’objet. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms d’objets en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
   
@@ -62,7 +62,7 @@ sp_columns [ @table_name = ] object
  Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- La procédure stockée du catalogue **sp_columns** est équivalente à **SQLColumns** dans ODBC. Les résultats retournés sont triés par **TABLE_QUALIFIER**, **TABLE_OWNER**et **table_name**.  
+ La procédure stockée du catalogue **sp_columns** est équivalente à **SQLColumns** dans ODBC. Les résultats retournés sont triés par **TABLE_QUALIFIER**, **TABLE_OWNER** et **table_name**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -91,7 +91,7 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>Autorisations  
  Requiert des autorisations SELECT et VIEW DEFINITION sur le schéma.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  **sp_columns** suit la configuration requise pour les identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Exemples  

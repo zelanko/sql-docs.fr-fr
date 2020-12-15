@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8939bfbec2f309c899a527288de35a3d3ea10d09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 91301000df95b19338313d4541d7a7de4956095d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420193"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439815"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termes du contrat de licence SQL Server Shared Management Objects (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 
 **2.    CONDITIONS DE LICENCE ET/OU DROITS D’UTILISATION SUPPLÉMENTAIRES.**
 
-&nbsp;&nbsp;**Code. distribuable.**
+&nbsp;&nbsp;**un.    Code distribuable.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i. droit d’utiliser et de distribuer. Si vous vous conformez aux termes ci-dessous :**
 *   Vous pouvez copier et distribuer la forme de code objet du logiciel (« code distribuable ») dans les programmes que vous développez. les
@@ -86,9 +86,9 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 
 **10.   RÉGLEMENTATION APPLICABLE.**
 
-&nbsp;&nbsp;**un. États-Unis.** Si vous avez acquis le logiciel aux États-Unis, les lois de l’État de Washington, États-Unis d’Amérique, régissent l’interprétation de ce contrat et s’appliquent en cas de réclamation pour rupture dudit contrat, sans donner d’effet aux dispositions régissant les conflits de lois. Les lois du pays dans lequel vous vivez régissent toutes les autres réclamations, notamment les réclamations fondées sur les lois fédérales en matière de protection des consommateurs, de concurrence déloyale et de délits.
+&nbsp;&nbsp;**un.    États-Unis.** Si vous avez acquis le logiciel aux États-Unis, les lois de l’État de Washington, États-Unis d’Amérique, régissent l’interprétation de ce contrat et s’appliquent en cas de réclamation pour rupture dudit contrat, sans donner d’effet aux dispositions régissant les conflits de lois. Les lois du pays dans lequel vous vivez régissent toutes les autres réclamations, notamment les réclamations fondées sur les lois fédérales en matière de protection des consommateurs, de concurrence déloyale et de délits.
 
-&nbsp;&nbsp;**b. à l’extérieur du États-Unis.** Si vous avez acquis le logiciel dans un autre pays, les lois de ce pays s’appliquent.
+&nbsp;&nbsp;**p.    En dehors du États-Unis.** Si vous avez acquis le logiciel dans un autre pays, les lois de ce pays s’appliquent.
 
 **11.   EFFET JURIDIQUE.** Le présent contrat décrit certains droits juridiques. Vous pouvez avoir d’autres droits au regard des lois de votre pays. Vous pouvez également bénéficier de certains droits à l’égard de la partie auprès de laquelle vous avez acquis le logiciel. Le présent contrat ne modifie pas vos droits au regard des lois de votre pays si celles-ci ne le permettent pas.
 

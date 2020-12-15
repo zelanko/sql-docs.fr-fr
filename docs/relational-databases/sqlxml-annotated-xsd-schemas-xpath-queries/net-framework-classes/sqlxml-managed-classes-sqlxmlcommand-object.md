@@ -31,13 +31,13 @@ ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c3c3c829b49f52476498e744c91fa5c1af37b6b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c5736ffab10bc0be104f06dbd6627d48aa45cd98
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767539"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439660"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classes managées SQLXML - Objet SqlXmlCommand
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -109,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifie le type de commande. Cette propriété est utilisée pour spécifier le type de commande que vous souhaitez exécuter. Les valeurs du tableau ci-dessous déterminent le type de la commande. Pour obtenir un exemple fonctionnel, consultez [accès à la fonctionnalité SQLXML dans l’environnement .net](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SqlXmlCommandType. SQL|Exécute une commande SQL (par exemple, `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType. XPath|Exécute une commande XPath (par exemple, `Employees[@EmployeeID=1]`).|  

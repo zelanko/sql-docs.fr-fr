@@ -22,13 +22,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2d11ac386a822a6e6c0d6630fcc83ba2cf61486
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cbc39f5ea259007f19a57e77601d2528730ae88f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764884"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439700"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -172,7 +172,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Pour produire différentes profondeurs de hiérarchies dans le résultat, modifiez la valeur de l’annotation **SQL : max-depth** dans le schéma et réexécutez le modèle après chaque modification.  
   
- Dans le schéma précédent, tous les **\<Emp>** éléments avaient exactement le même jeu d’attributs (**EmployeeID**, **FirstName**et **LastName**). Le schéma suivant a été légèrement modifié pour retourner un attribut de **rendez** -vous supplémentaire pour tous les **\<Emp>** éléments signalés à un responsable.  
+ Dans le schéma précédent, tous les **\<Emp>** éléments avaient exactement le même jeu d’attributs (**EmployeeID**, **FirstName** et **LastName**). Le schéma suivant a été légèrement modifié pour retourner un attribut de **rendez** -vous supplémentaire pour tous les **\<Emp>** éléments signalés à un responsable.  
   
  Par exemple, ce fragment XML affiche les subalternes de l'employé 1 :  
   

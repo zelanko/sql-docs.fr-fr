@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 2ab1c51c53282b5f245cf7da0d33cf4f797bf53a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810245"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439462"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91810245"
   
  La procédure stockée fait partie de la fonctionnalité de requête élastique.  Consultez [Azure SQL Database vue d’ensemble des requêtes de base de données élastique](/azure/azure-sql/database/elastic-query-overview) et [requêtes de bases de données élastiques pour partitionnement (partitionnement horizontal)](/azure/azure-sql/database/elastic-query-horizontal-partitioning).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,10 +73,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  `sp_execute_remote` les paramètres doivent être entrés dans l’ordre spécifique, comme décrit dans la section syntaxe ci-dessus. Si les paramètres sont entrés dans le désordre, un message d'erreur se produira.  
   
- `sp_execute_remote` a le même comportement que [execute &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) en ce qui concerne les lots et l’étendue des noms. L’instruction ou le lot Transact-SQL dans le paramètre sp_execute_remote * \@ stmt* n’est pas compilé tant que l’instruction sp_execute_remote n’est pas exécutée.  
+ `sp_execute_remote` a le même comportement que [execute &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) en ce qui concerne les lots et l’étendue des noms. L’instruction ou le lot Transact-SQL dans le paramètre sp_execute_remote *\@ stmt* n’est pas compilé tant que l’instruction sp_execute_remote n’est pas exécutée.  
   
  `sp_execute_remote` Ajoute une colonne supplémentaire au jeu de résultats nommé « $ShardName » qui contient le nom de la base de données distante qui a produit la ligne.  
   
