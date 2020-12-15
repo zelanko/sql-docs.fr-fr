@@ -1,6 +1,6 @@
 ---
-title: Transfert de données de paramètres table
-description: Décrire Transfert de données des paramètres table
+title: Transfert de données des paramètres de Table-Valued
+description: Décrire Transfert de données des paramètres de Table-Valued
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: native-client
@@ -11,12 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 19a7f22cd26ea4988364d51ff70300cdbf42d365
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97436152"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Liaison et transfert de données de paramètres table et de valeurs de colonnes
 
@@ -78,7 +79,7 @@ Pour la liaison de ligne fixe, une application alloue des mémoires tampon (ou t
 
 Pour la liaison de ligne variable, les lignes sont transférées par lots au moment de l’exécution et l’application transmet les lignes au pilote à la demande. Cela s'apparente à la fonctionnalité « data-at-execution » pour les valeurs de paramètre individuelles. Pour la liaison de ligne variable, l'application effectue les opérations suivantes :  
 
-1. Lie les paramètres et les colonnes de paramètre table, comme décrit dans les étapes 1 à 3 de la section précédente, « liaison de ligne de paramètre table fixe ».  
+1. Lie les paramètres et les colonnes de paramètre table, comme décrit dans les étapes 1 à 3 de la section précédente, « fixe Table-Valued liaison de ligne de paramètre ».  
 
 2. Définit *StrLen_or_IndPtr* ou SQL_DESC_OCTET_LENGTH_PTR pour tous les paramètres table à passer au moment de l’exécution pour SQL_DATA_AT_EXEC. Si aucun de ces paramètres n’est défini, le paramètre est traité comme décrit dans la section précédente.  
 

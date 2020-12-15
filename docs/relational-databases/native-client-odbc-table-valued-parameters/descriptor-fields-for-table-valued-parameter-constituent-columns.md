@@ -1,6 +1,6 @@
 ---
 description: Champs de descripteur pour les colonnes constituantes des paramètres table
-title: Champ de descripteur pour le paramètre table
+title: Champ de descripteur pour le paramètre Table-Valued
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93e89dd98538f8c7c814388e0d9dd8ea25171862
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2e7e19b7af6ffcd9e8601a5a8da97be93e2185b7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499099"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97435827"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Champs de descripteur pour les colonnes constituantes des paramètres table
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Les champs de descripteur de paramètre table décrits dans cette section sont manipulés à l’aide de [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) et de [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) avec le descripteur du descripteur de paramètre d’implémentation (IPD).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  SQL_DESC_AUTO_UNIQUE_VALUE est utilisé pour les paramètres table ainsi que pour d'autres fonctionnalités.  
   
 |Nom de l’attribut|Type|Description|  

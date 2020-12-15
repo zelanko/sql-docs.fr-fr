@@ -1,6 +1,6 @@
 ---
 description: type ODBC SQL pour les paramètres table
-title: Type SQL ODBC pour les paramètres table | Microsoft Docs
+title: Type SQL ODBC pour les paramètres de Table-Valued | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bdde09e3ee58390d8b6b1e14e19de247b0a7b60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1d56ba19777e4c4ef99b067cd98265b7e774a1a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499080"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97435438"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>type ODBC SQL pour les paramètres table
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La prise en charge des paramètres de table est fournie par un nouveau type SQL ODBC, SQL_SS_TABLE.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
  SQL_SS_TABLE ne peut pas être converti en un autre type de données ODBC ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Si SQL_SS_TABLE est utilisé comme type de données C dans le paramètre *ValueType* de SQLBindParameter ou si une tentative est faite pour définir SQL_DESC_TYPE dans un enregistrement de descripteur de paramètre d’application (APD) à SQL_SS_TABLE, SQL_ERROR est retourné et un enregistrement de diagnostic est généré avec SQLSTATE = HY003, « type de tampon d’application non valide ».  
