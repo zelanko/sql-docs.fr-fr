@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b359aff3a8164c9d25782b0b10c05f1b68ac5230
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3628c3a508aed473604bcc0b3f1d3d7f2b8e5264
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908945"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432215"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -136,7 +136,7 @@ Le moniteur de réplication fournit l'onglet **Agents** qui contient des informa
 2.  Cliquez sur l'onglet **Tous les abonnements** pour afficher des informations sur les abonnements. Vous pouvez aussi accéder à des informations plus détaillées et effectuer des tâches sur cet onglet :   
     -   Pour afficher des informations détaillées sur l'agent associé à un abonnement, cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Afficher les détails**. Ces informations détaillées sont les suivantes : messages d'historique et d'erreur de l'agent, statistiques de performances pour la réplication transactionnelle et statistiques de synchronisation au niveau des articles pour la réplication de fusion.  
   
-         Les onglets de la fenêtre des détails qui est ouverte dépendent du type d'abonnement : pour les abonnements d'instantané, l'onglet est **Historique du serveur de distribution vers l'Abonné**; pour les abonnements transactionnels, les onglets sont **Historique du serveur de publication vers le serveur de distribution**, **Historique du serveur de distribution vers l'Abonné**et **Commandes non distribuées**; pour les abonnements de fusion, l'onglet est **Historique de synchronisation**.  
+         Les onglets de la fenêtre des détails qui est ouverte dépendent du type d'abonnement : pour les abonnements d'instantané, l'onglet est **Historique du serveur de distribution vers l'Abonné**; pour les abonnements transactionnels, les onglets sont **Historique du serveur de publication vers le serveur de distribution**, **Historique du serveur de distribution vers l'Abonné** et **Commandes non distribuées**; pour les abonnements de fusion, l'onglet est **Historique de synchronisation**.  
   
     -   Pour synchroniser un abonnement par envoi de données (push), cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Démarrer la synchronisation**.    
     -   Pour réinitialiser un abonnement, cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Réinitialiser l'abonnement**.    
@@ -148,7 +148,7 @@ Le moniteur de réplication fournit l'onglet **Agents** qui contient des informa
 1.  Développez un groupe de serveurs de publication dans le volet gauche, puis développez un serveur de publication.    
 2.  Cliquez sur l'onglet **Liste de suivi des abonnements** pour afficher des informations sur les abonnements. Vous pouvez aussi accéder à des informations plus détaillées et effectuer des tâches sur cet onglet :   
     -   Pour afficher des informations détaillées sur l'agent associé à un abonnement, cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Afficher les détails**. Ces informations détaillées sont les suivantes : messages d'historique et d'erreur de l'agent, statistiques de performances pour la réplication transactionnelle et statistiques de synchronisation au niveau des articles pour la réplication de fusion.    
-         Les onglets de la fenêtre des détails qui est ouverte dépendent du type d'abonnement : pour les abonnements d'instantané, l'onglet est **Historique du serveur de distribution vers l'Abonné**; pour les abonnements transactionnels, les onglets sont **Historique du serveur de publication vers le serveur de distribution**, **Historique du serveur de distribution vers l'Abonné**et **Performances**; pour les abonnements de fusion, l'onglet est **Historique de synchronisation**.  
+         Les onglets de la fenêtre des détails qui est ouverte dépendent du type d'abonnement : pour les abonnements d'instantané, l'onglet est **Historique du serveur de distribution vers l'Abonné**; pour les abonnements transactionnels, les onglets sont **Historique du serveur de publication vers le serveur de distribution**, **Historique du serveur de distribution vers l'Abonné** et **Performances**; pour les abonnements de fusion, l'onglet est **Historique de synchronisation**.  
   
     -   Pour synchroniser un abonnement par envoi de données (push), cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Démarrer la synchronisation**.    
     -   Pour réinitialiser un abonnement, cliquez avec le bouton droit sur l'abonnement, puis cliquez sur **Réinitialiser l'abonnement**.    
