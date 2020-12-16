@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c69b375ae55f8d7a4d76c4c619f9c9afe1d50def
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440650"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515367"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
@@ -34,12 +34,12 @@ ms.locfileid: "97440650"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID de la base de données active dans la vue sys. databases.|  
-|start_date|**datetimeoffset**|Heure UTC dans un centre de données de SQL Database régional lorsque la réplication de base de données a été lancée|  
-|modify_date|**datetimeoffset**|Heure UTC à laquelle la géo-réplication de la base de données est effectuée au niveau régional SQL Database Datacenter. La nouvelle base de données est synchronisée avec la base de données primaire à ce moment-là. .|  
+|start_date|**datetimeoffset**|Heure UTC dans un centre de données de SQL Database régional lorsque la réplication de base de données a été lancée.|  
+|modify_date|**datetimeoffset**|Heure UTC à laquelle la géo-réplication de la base de données est effectuée au niveau régional SQL Database Datacenter. La nouvelle base de données est synchronisée avec la base de données primaire à ce moment-là.|  
 |link_guid|**uniqueidentifier**|ID unique du lien de géo-réplication.|  
 |partner_server|**sysname**|Nom du serveur de SQL Database qui contient la base de données géo-répliquée.|  
 |partner_database|**sysname**|Nom de la base de données géo-répliquée sur le serveur de SQL Database lié.|  
-|replication_state|**tinyint**|État de la géo-réplication pour cette base de données, un des suivants :.<br /><br /> 0 = en attente. La création de la base de données secondaire active est planifiée, mais les étapes de préparation nécessaires ne sont pas encore terminées.<br /><br /> 1 = amorçage. La cible de géo-réplication est amorcée, mais les deux bases de données ne sont pas encore synchronisées. Tant que l’amorçage n’est pas terminé, vous ne pouvez pas vous connecter à la base de données secondaire. La suppression de la base de données secondaire du réplica principal annule l’opération d’amorçage.<br /><br /> 2 = rattrapage. La base de données secondaire est dans un état cohérent au niveau transactionnel et est constamment synchronisée avec la base de données primaire.|  
+|replication_state|**tinyint**|État de la géo-réplication pour cette base de données, parmi les suivants :<br /><br /> 0 = en attente. La création de la base de données secondaire active est planifiée, mais les étapes de préparation nécessaires ne sont pas encore terminées.<br /><br /> 1 = amorçage. La cible de géo-réplication est amorcée, mais les deux bases de données ne sont pas encore synchronisées. Tant que l’amorçage n’est pas terminé, vous ne pouvez pas vous connecter à la base de données secondaire. La suppression de la base de données secondaire du réplica principal annule l’opération d’amorçage.<br /><br /> 2 = rattrapage. La base de données secondaire est dans un état cohérent au niveau transactionnel et est constamment synchronisée avec la base de données primaire.|  
 |replication_state_desc|**nvarchar (256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |rôle|**tinyint**|Rôle de géo-réplication, parmi les suivants :<br /><br /> 0 = principal. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
 |role_desc|**nvarchar (256)**|PRIMARY<br /><br /> SECONDARY|  

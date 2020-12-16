@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8e5da6272ce3bb60852e10f3bac9cd3fa9a1435f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9597b6c0811ff2fe917a2282b43e677b74eebd4f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426861"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490069"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "88426861"
  Spécifie la colonne associée à une définition DEFAULT au niveau de la table.  
   
  WITH VALUES  
- En cas d’ajout d’une colonne AND qui autorise les valeurs NULL avec WITH VALUES, ainsi que d’une contrainte DEFAULT, attribuez, pour les lignes existantes, la valeur donnée dans *constant_expression* DEFAULT à la nouvelle colonne. Si la colonne ajoutée n’autorise pas les valeurs NULL, sa valeur sera toujours celle qui est donnée dans *l’expression constante* DEFAULT pour les lignes existantes. À partir de SQL Server 2012, il peut s’agir d’une opération de métadonnées [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ En cas d’ajout d’une colonne AND qui autorise les valeurs NULL avec WITH VALUES, ainsi que d’une contrainte DEFAULT, attribuez, pour les lignes existantes, la valeur donnée dans *constant_expression* DEFAULT à la nouvelle colonne. Si la colonne ajoutée n’autorise pas les valeurs NULL, sa valeur sera toujours celle qui est donnée dans *l’expression constante* DEFAULT pour les lignes existantes. À partir de SQL Server 2012, il peut s’agir d’une opération de métadonnées [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 Si elle est utilisée sans que la colonne associée soit elle aussi ajoutée, elle n’a aucun effet. 
   
  CHECK  
