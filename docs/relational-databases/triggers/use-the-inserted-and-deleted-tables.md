@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1caf51460496fa734bed5e2a88cce3abf9b138e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bd89afe79f1e6cf7a5745b04378c1b403142c56e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427391"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426406"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utiliser les tables inserted et deleted
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88427391"
 > [!NOTE]  
 >  Si les actions du déclencheur dépendent du nombre de lignes affectées par une modification de données, utilisez les tests (comme l’examen de @@ROWCOUNT) pour les modifications de données multilignes (une instruction INSERT, DELETE ou UPDATE basée sur une instruction SELECT), puis effectuez les opérations appropriées. Pour plus d’informations, consultez [Créer de déclencheurs DML pour gérer plusieurs lignes de données](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] n’autorise pas les références aux colonnes de type **text**, **ntext**ou **image** dans les tables inserted et deleted pour les déclencheurs AFTER. Cependant, ces types de données sont inclus à des fins de compatibilité ascendante uniquement. Pour le stockage des données volumineuses, il est préférable d’utiliser les types de données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** . Les déclencheurs AFTER et INSTEAD OF prennent en charge les données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** dans les tables inserted et deleted. Pour plus d’informations, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] n’autorise pas les références aux colonnes de type **text**, **ntext** ou **image** dans les tables inserted et deleted pour les déclencheurs AFTER. Cependant, ces types de données sont inclus à des fins de compatibilité ascendante uniquement. Pour le stockage des données volumineuses, il est préférable d’utiliser les types de données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** . Les déclencheurs AFTER et INSTEAD OF prennent en charge les données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** dans les tables inserted et deleted. Pour plus d’informations, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Exemple de l'utilisation de la table insérée dans un déclencheur pour imposer des règles d'entreprise**  
   
