@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864478"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460067"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,15 +81,13 @@ ms.locfileid: "91864478"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>Si la personne qui se connecte doit se connecter à une seule base de données  
   
-1.  Créez une connexion pour les groupes Windows. (Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorez les étapes d’Active Directory et créez ici des connexions d’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
+1.  Dans la base de données utilisateur, créez un utilisateur de base de données autonome pour le groupe Windows. (Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ignorez les étapes d’Active Directory et créez ici une authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’utilisateur de base de données autonome.)  
   
-2.  Dans la base de données utilisateur, créez un utilisateur de base de données autonome pour le groupe Windows. (Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ignorez les étapes d’Active Directory et créez ici une authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’utilisateur de base de données autonome.)  
+1.  Dans la base de données utilisateur, créez un ou plusieurs rôles de base de données définis par l’utilisateur, chacun représentant une fonction similaire. Par exemple, analyste financier et analyste des ventes.  
   
-3.  Dans la base de données utilisateur, créez un ou plusieurs rôles de base de données définis par l’utilisateur, chacun représentant une fonction similaire. Par exemple, analyste financier et analyste des ventes.  
+1.  Ajoutez les utilisateurs de base de données à un ou plusieurs rôles de base de données définis par l’utilisateur.  
   
-4.  Ajoutez les utilisateurs de base de données à un ou plusieurs rôles de base de données définis par l’utilisateur.  
-  
-5.  Accordez des autorisations aux rôles de base de données définis par l’utilisateur.  
+1.  Accordez des autorisations aux rôles de base de données définis par l’utilisateur.  
   
  En général, à ce stade, un utilisateur Windows est devenu membre d’un groupe Windows. Le groupe Windows dispose d’une connexion dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. La connexion est mappée à une identité d’utilisateur dans la base de données utilisateur. L’utilisateur est membre d’un rôle de base de données. Vous devez maintenant ajouter des autorisations au rôle.  
   

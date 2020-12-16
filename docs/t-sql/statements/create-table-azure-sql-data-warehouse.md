@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: fdadefa5b898a2b37c7e5a7f087c429ccc6b8d4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300207"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438959"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -140,7 +140,7 @@ Stocke la table sous forme d’index cluster columnstore. L’index cluster colu
  
  `HEAP` Stocke la table sous forme de segment de mémoire. Il s'agit du comportement par défaut pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- `CLUSTERED INDEX` ( *index_column_name* [ ,... *n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  Stocke le tableau sous forme d’index cluster avec une ou plusieurs colonnes clés. Ce comportement stocke les données par ligne. Utilisez *index_column_name* pour spécifier le nom d’une ou plusieurs colonnes clés dans l’index.  Pour plus d’informations, consultez Tables Rowstore dans la section Remarques d’ordre général.
  
  `LOCATION = USER_DB` Cette fonction est déconseillée. Bien qu’elle soit acceptée du point de vue de la syntaxe, elle n’est plus nécessaire et n’a plus d’effet sur le comportement.   
@@ -149,7 +149,7 @@ Stocke la table sous forme d’index cluster columnstore. L’index cluster colu
 
 Pour comprendre comment choisir la meilleure méthode de distribution et utiliser des tables distribuées, consultez [Distribution de tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH` ( *distribution_column_name* ) Affecte chaque ligne à une distribution en hachant la valeur stockée dans *distribution_column_name* . L’algorithme est déterministe, ce qui signifie qu’il hache toujours la même valeur pour la même distribution.  La colonne de distribution doit être définie comme étant une valeur NOT NULL, car toutes les lignes de valeur NULL sont affectées à la même distribution.
+`DISTRIBUTION = HASH` ( *distribution_column_name* ) Affecte chaque ligne à une distribution en hachant la valeur stockée dans *distribution_column_name*. L’algorithme est déterministe, ce qui signifie qu’il hache toujours la même valeur pour la même distribution.  La colonne de distribution doit être définie comme étant une valeur NOT NULL, car toutes les lignes de valeur NULL sont affectées à la même distribution.
 
 `DISTRIBUTION = ROUND_ROBIN` Distribue les lignes uniformément entre toutes les distributions selon le principe du tourniquet (round robin). Il s'agit du comportement par défaut pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
@@ -158,7 +158,7 @@ Pour comprendre comment choisir la meilleure méthode de distribution et utilise
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Options de partitions de table
 Pour obtenir de l’aide sur les partitions de table, consultez [Partitionnement de tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,... *n* ] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de table horizontales qui vous permettent d’effectuer des opérations sur des sous-ensembles de lignes, que la table soit stockée sous forme de segment de mémoire, d’index cluster ou d’index cluster columnstore. Contrairement aux colonnes de distribution, les partitions de table ne déterminent dans quelle distribution chaque ligne est stockée. En revanche, elles déterminent la façon dont les lignes sont regroupées et stockées dans chaque distribution.  
 
 | Argument | Explication |
@@ -166,7 +166,7 @@ Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de ta
 |*partition_column_name*| Indique la colonne que [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] utilisera pour partitionner les lignes. Cette colonne peut être de n’importe quel type de données. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] trie les valeurs de colonne de partition par ordre croissant. L’ordre croissant va de `LEFT` à `RIGHT` dans la spécification `RANGE`. |  
 | `RANGE LEFT` | Indique que la valeur limite fait partie de la partition de gauche (valeurs inférieures). La valeur par défaut est LEFT. |
 | `RANGE RIGHT` | Indique que la valeur limite fait partie de la partition de droite (valeurs supérieures). | 
-| `FOR VALUES` ( *boundary_value* [,... *n* ] ) | Spécifie les valeurs limites de la partition. *boundary_value* est une expression constante. Ne peut pas être NULL. Son type de données doit correspondre à celui de *partition_column_name* ou être implicitement convertible dans celui-ci. Elle ne peut pas être tronquée lors d’une conversion implicite de telle sorte que la taille et l’échelle de la valeur ne correspondent pas au type de données de *partition_column_name*<br></br><br></br>Si vous spécifiez la clause `PARTITION`, mais que vous ne spécifiez pas de valeur limite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] crée une table partitionnée à une partition. Le cas échéant, vous pouvez par la suite scinder la table en deux partitions.<br></br><br></br>Si vous spécifiez une valeur limite, la table obtenue comprend deux partitions : l’une contenant les valeurs inférieures à la valeur limite et l’autre contenant les valeurs supérieures à la valeur limite. Si vous déplacez une partition dans une table non partitionnée, celle-ci reçoit les données, mais les limites de partition en figurent pas dans ses métadonnées.| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Spécifie les valeurs limites de la partition. *boundary_value* est une expression constante. Ne peut pas être NULL. Son type de données doit correspondre à celui de *partition_column_name* ou être implicitement convertible dans celui-ci. Elle ne peut pas être tronquée lors d’une conversion implicite de telle sorte que la taille et l’échelle de la valeur ne correspondent pas au type de données de *partition_column_name*<br></br><br></br>Si vous spécifiez la clause `PARTITION`, mais que vous ne spécifiez pas de valeur limite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] crée une table partitionnée à une partition. Le cas échéant, vous pouvez par la suite scinder la table en deux partitions.<br></br><br></br>Si vous spécifiez une valeur limite, la table obtenue comprend deux partitions : l’une contenant les valeurs inférieures à la valeur limite et l’autre contenant les valeurs supérieures à la valeur limite. Si vous déplacez une partition dans une table non partitionnée, celle-ci reçoit les données, mais les limites de partition en figurent pas dans ses métadonnées.| 
 
  Consultez [Créer une table partitionnée](#PartitionedTable) dans la section Exemples.
 
@@ -240,7 +240,7 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
  Nombre total maximal de chiffres décimaux qui peuvent être stockés, aussi bien à gauche qu’à droite de la décimale. La précision doit être une valeur comprise entre `1` et la précision maximale de `38`. La précision par défaut est `18`.  
   
  *scale*  
- Nombre maximal de chiffres décimaux à droite de la virgule. La valeur de *scale* doit être comprise entre `0` et la valeur de *precision* . Vous ne pouvez spécifier *scale* que si *precision* est spécifié. La valeur par défaut de scale est `0` ; par conséquent, `0` <= *scale* <= *precision* . Les tailles de stockage maximales varient en fonction de la précision.  
+ Nombre maximal de chiffres décimaux à droite de la virgule. La valeur de *scale* doit être comprise entre `0` et la valeur de *precision*. Vous ne pouvez spécifier *scale* que si *precision* est spécifié. La valeur par défaut de scale est `0` ; par conséquent, `0` <= *scale* <= *precision*. Les tailles de stockage maximales varient en fonction de la précision.  
   
 | Precision | Taille de stockage (octets)  |  
 | ---------: |-------------: |  
@@ -341,7 +341,7 @@ Quand des partitions sont utilisées, la colonne de partition ne peut pas avoir 
 CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
 ```  
  
- Si *boundary_value* est une valeur littérale qui doit être convertie implicitement dans le type de données de *partition_column_name* , cela produit un écart. La valeur littérale s’affiche via les vues système [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], mais la valeur convertie est utilisée pour des opérations [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+ Si *boundary_value* est une valeur littérale qui doit être convertie implicitement dans le type de données de *partition_column_name*, cela produit un écart. La valeur littérale s’affiche via les vues système [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], mais la valeur convertie est utilisée pour des opérations [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
 ### <a name="temporary-tables"></a>tables temporaires ;
 

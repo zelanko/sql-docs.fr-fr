@@ -8,13 +8,13 @@ ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a1ce0e4a54810730935b4a93aef72edfa404d88
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 75f999052eecd750d548cb6d383eafe5375ed130
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506450"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440144"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnostiquer et résoudre la contention de latchs sur SQL Server
 
@@ -69,9 +69,9 @@ La compatibilité des modes de latch est indiquée dans le tableau suivant (**O*
 
 |Mode de latch |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
-|**KP**  |O       |Y      |Y       |Y       |N|
-|**SH**  |O       |Y      |Y       |N       |N|
-|**UP**  |O       |Y      |N       |N       |N|
+|**KP**  |O       |O      |O       |O       |N|
+|**SH**  |O       |O      |O       |N       |N|
+|**UP**  |O       |O      |N       |N       |N|
 |**EX**  |O       |N      |N       |N       |N|
 |**DT**  |N       |N      |N       |N       |N|
 

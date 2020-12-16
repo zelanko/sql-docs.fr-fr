@@ -9,13 +9,13 @@ ms.topic: language-reference
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e97f98a4e9080ceffdf4925c4467bfc27fc40d9
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 826265f7d04ac96c3e2c9dcdc4a144bb1ca382c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300147"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439004"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "92300147"
 Inscrit les extensions de langage externe dans la base de données à partir du flux d’octets ou du chemin de fichier spécifié. Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données d’inscrire de nouvelles extensions de langage externe sur toute plateforme de système d’exploitation prise en charge par SQL Server. Pour plus d’informations, consultez [Extensions de langage](../../language-extensions/language-extensions-overview.md).
 
 > [!NOTE]
-> **R** et **Python** étant des noms réservés, aucun langage externe ne peut être créé avec ces derniers. Pour plus d’informations sur l’utilisation de **R** et de **Python** , consultez [SQL Server Machine Learning Services](../../machine-learning/index.yml).
+> **R** et **Python** étant des noms réservés, aucun langage externe ne peut être créé avec ces derniers. Pour plus d’informations sur l’utilisation de **R** et de **Python**, consultez [SQL Server Machine Learning Services](../../machine-learning/index.yml).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -109,7 +109,7 @@ Ce paramètre est nécessaire pour les scénarios de systèmes d’exploitation 
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite l’autorisation `CREATE EXTERNAL LANGUAGE`. Par défaut, les utilisateurs qui ont **dbo** , membre du rôle **db_owner** , disposent des autorisations nécessaires pour créer un langage externe. En ce qui concerne les autres utilisateurs, vous devez leur en donner l’autorisation explicitement à l’aide d’une instruction [GRANT](./grant-database-permissions-transact-sql.md), en spécifiant le privilège CREATE EXTERNAL LANGUAGE.
+Nécessite l’autorisation `CREATE EXTERNAL LANGUAGE`. Par défaut, les utilisateurs qui ont **dbo**, membre du rôle **db_owner**, disposent des autorisations nécessaires pour créer un langage externe. En ce qui concerne les autres utilisateurs, vous devez leur en donner l’autorisation explicitement à l’aide d’une instruction [GRANT](./grant-database-permissions-transact-sql.md), en spécifiant le privilège CREATE EXTERNAL LANGUAGE.
 
 La modification d’une bibliothèque nécessite l’autorisation distincte `ALTER ANY EXTERNAL LANGUAGE`.
 
@@ -117,7 +117,7 @@ La modification d’une bibliothèque nécessite l’autorisation distincte `ALT
 
 Vous pouvez utiliser des autorisations EXECUTE EXTERNAL SCRIPT afin qu’une exécution de script externe puisse être accordée sur des langages spécifiques. C’est différent de l’autorisation de base de données EXECUTE ANY EXTERNAL SCRIPT qui ne permet pas d’accorder d’autorisation d’exécution sur un langage spécifique.
 
-Cela signifie que les utilisateurs non- **dbo** doivent se voir accorder une autorisation pour exécuter un langage spécifique :
+Cela signifie que les utilisateurs non-**dbo** doivent se voir accorder une autorisation pour exécuter un langage spécifique :
 
 ```sql
 GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::language_name 
@@ -153,7 +153,7 @@ GO
 ```
 ### <a name="c-grant-permissions-to-execute-external-script"></a>C. Accorder des autorisations pour exécuter un script externe
 
-L’exemple suivant permet au principal **mylogin** d’exécuter des scripts à l’aide du langage externe **Java** .
+L’exemple suivant permet au principal **mylogin** d’exécuter des scripts à l’aide du langage externe **Java**.
 
 ```sql
 GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 

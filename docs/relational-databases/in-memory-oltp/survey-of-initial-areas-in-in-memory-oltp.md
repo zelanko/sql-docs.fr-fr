@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ed52b1ddfe0a55a4a443dd865f980367b90f973
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5287bb37b779775edb3375d545c1745c6ed63e93
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005673"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438745"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Inspection des zones initiales dans OLTP en mémoire
 
@@ -35,7 +35,7 @@ Pour OLTP en mémoire, cet article fournit les éléments suivants :
 SQL Server et SQL Database ne varient que légèrement dans leur prise en charge des technologies en mémoire.  
   
   
-Les blogueurs font parfois référence à l’OLTP en mémoire sous le terme *Hekaton* .  
+Les blogueurs font parfois référence à l’OLTP en mémoire sous le terme *Hekaton*.  
   
   
 <a name="benefits-of-in-memory-features-21a"></a>  
@@ -71,7 +71,7 @@ L’analytique en mémoire fait référence aux instructions SQL INSERT qui agr�
   
 Il existe deux scénarios principaux :  
   
-- L’ *analytique opérationnelle par lot* fait référence aux processus d’agrégation qui s’exécutent soit après les heures de bureau, soit sur du matériel secondaire qui comporte des copies des données transactionnelles.  
+- L’*analytique opérationnelle par lot* fait référence aux processus d’agrégation qui s’exécutent soit après les heures de bureau, soit sur du matériel secondaire qui comporte des copies des données transactionnelles.  
   - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) est également lié à l’analytique opérationnelle par lots.  
 - *L’analytique opérationnelle en temps réel* fait référence aux processus d’agrégation qui s’exécutent pendant les heures de bureau et sur le matériel principal utilisé pour les charges de travail transactionnelles.  
   
@@ -188,7 +188,7 @@ ALTER DATABASE CURRENT
 ## <a name="2-elevate-to-snapshot"></a>2. Élever au niveau capture instantanée (SNAPSHOT)  
   
   
-Une transaction impliquant à la fois une table basée sur disque et une table optimisée en mémoire est une *transaction entre conteneurs* . Dans ce type de transaction, il est essentiel que la partie optimisation en mémoire de la transaction fonctionne au niveau d’isolation de la transaction nommé SNAPSHOT.  
+Une transaction impliquant à la fois une table basée sur disque et une table optimisée en mémoire est une *transaction entre conteneurs*. Dans ce type de transaction, il est essentiel que la partie optimisation en mémoire de la transaction fonctionne au niveau d’isolation de la transaction nommé SNAPSHOT.  
   
 Pour appliquer de manière fiable ce niveau aux tables optimisées en mémoire dans une transaction entre conteneurs, [modifiez le paramétrage de votre base de données](../../t-sql/statements/alter-database-transact-sql-set-options.md) en exécutant le code T-SQL suivant.  
   
@@ -406,7 +406,7 @@ Le reste de cette section répertorie les principaux éléments à prendre en co
 - [Taille de la table et des lignes dans les tables mémoire optimisées](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Partitionner votre table volumineuse :** une façon de répondre à la demande d’une quantité de mémoire active élevée consiste à partitionner votre table volumineuse en parties en mémoire qui stockent les lignes de données *récentes à chaud* , tandis que les autres parties sur le disque comportent les lignes *héritées à froid* (telles que les commandes qui ont été entièrement livrées et terminées). Ce partitionnement est un processus manuel de conception et d’implémentation. Consultez l'article :  
+**Partitionner votre table volumineuse :** une façon de répondre à la demande d’une quantité de mémoire active élevée consiste à partitionner votre table volumineuse en parties en mémoire qui stockent les lignes de données *récentes à chaud*, tandis que les autres parties sur le disque comportent les lignes *héritées à froid* (telles que les commandes qui ont été entièrement livrées et terminées). Ce partitionnement est un processus manuel de conception et d’implémentation. Consultez l'article :  
   
 - [Partitionnement au niveau de l’application](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Modèle d’application pour partitionner des tables mémoire optimisées](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  

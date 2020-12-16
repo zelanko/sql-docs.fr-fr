@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
+ms.openlocfilehash: 16f81a4ac6265d37cb9e5d50a6500ca68740e394
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670518"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438842"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017
 
@@ -89,7 +89,7 @@ Mise à niveau à partir de la version 100 (SQL Server 2008 et SQL Server 2008 
 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité | ID de la fonctionnalité |
 |--------------------|-------------|--------------|------------|
-| **SET ROWCOUNT** pour les instructions **INSERT**, **UPDATE**et **DELETE** | Mot clé TOP | SET ROWCOUNT | 109 |
+| **SET ROWCOUNT** pour les instructions **INSERT**, **UPDATE** et **DELETE** | Mot clé TOP | SET ROWCOUNT | 109 |
 | Indicateur de table HOLDLOCK sans parenthèses. | Utilisez HOLDLOCK avec la parenthèse. | Indicateur de table HOLDLOCK sans parenthèses | 167 |
 
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Fonctionnalités dépréciées dans une future version de SQL Server
@@ -124,7 +124,7 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
 |--------------------|-------------|--------------|
 | sp_addtype <br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE | sp_addtype<br /><br /> sp_droptype |
-| Syntaxe de**timestamp** pour le type de données **rowversion** | Syntaxe du type de données**rowversion** | timestamp |
+| Syntaxe de **timestamp** pour le type de données **rowversion** | Syntaxe du type de données **rowversion** | timestamp |
 | Possibilité d'insérer des valeurs NULL dans les colonnes **timestamp** . | Utilisez DEFAULT à la place. | INSERT NULL dans des colonnes TIMESTAMP |
 | Option de table 'text in row'|Utilisez les types de données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** . Pour plus d’informations, consultez [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Option de table text in row |
 | Types de données :<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Utilisez les types de données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** .|Types de données : **text**, **ntext** ou **image** |
@@ -270,7 +270,7 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 
 | Fonctionnalité déconseillée | Remplacement | Nom de la fonctionnalité |
 |--------------------|-------------|--------------|
-| Notification**net send**<br /><br />Notification par radiomessagerie | Notification par e-mail<br /><br />Notification par e-mail | None |
+| Notification **net send**<br /><br />Notification par radiomessagerie | Notification par e-mail<br /><br />Notification par e-mail | None |
 
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
@@ -329,7 +329,7 @@ Les fonctionnalités du moteur de base de données SQL Server décrites ci-desso
 | Références de colonnes en 3 et 4 parties. | Les noms en deux parties sont la norme.|Nom de la colonne à plus de deux parties |
 | Une chaîne entre guillemets utilisée en tant qu'alias de colonne pour une expression dans une liste SELECT :<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | Littéraux de chaîne comme alias de colonne |
 | Procédures numérotées | Aucun. Ne pas utiliser. | ProcNums |
-| Syntaxe*table_name.index_name* dans DROP INDEX|Syntaxe*index_name* ON *table_name* dans DROP INDEX.|DROP INDEX avec nom en deux parties |
+| Syntaxe *table_name.index_name* dans DROP INDEX|Syntaxe *index_name* ON *table_name* dans DROP INDEX.|DROP INDEX avec nom en deux parties |
 | Pas d’instructions Transact-SQL se terminant par un point-virgule.|Terminez les instructions Transact-SQL par un point-virgule ( ; ). | None |
 | GROUP BY ALL|Utilisez la solution personnalisée cas par cas avec UNION ou une table dérivée. | GROUP BY ALL |
 | ROWGUIDCOL comme nom de colonne dans les instructions DML.|Utilisez $rowguid.|ROWGUIDCOL |

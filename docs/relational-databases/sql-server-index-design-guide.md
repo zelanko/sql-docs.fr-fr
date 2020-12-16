@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e982f8a8a2ee42c1ac2d84529a29842f8c4b4577
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fe0c23f3cd5b087b4e5a14d50d681b983aeac496
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235540"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459970"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -107,7 +107,7 @@ Pour plus d’informations sur les index de recherche en texte intégral, consul
   
 -   Créez des index non cluster sur les colonnes fréquemment utilisées dans des prédicats et des conditions de jointure dans des requêtes. Il s’agit de vos colonnes SARGable<sup>1</sup>. Toutefois, évitez d'ajouter des colonnes superflues. L'ajout d'un trop grand nombre de colonnes d'index peut avoir une influence négative sur les performances de gestion des index et de l'espace disque.  
   
--   La couverture des index peut améliorer les performances des requêtes, car toutes les données nécessaires pour répondre aux exigences de la requête existent dans l'index proprement dit. Cela signifie que seules les pages d'index, et non les pages de données de la table ou de l'index cluster, sont nécessaires pour récupérer les données demandées, réduisant ainsi globalement le nombre d'E/S des disques. Par exemple, une requête de colonnes **a** et **b** sur une table possédant un index composite créé sur les colonnes **a** , **b** et **c** peut récupérer les données spécifiées à partir du seul index.  
+-   La couverture des index peut améliorer les performances des requêtes, car toutes les données nécessaires pour répondre aux exigences de la requête existent dans l'index proprement dit. Cela signifie que seules les pages d'index, et non les pages de données de la table ou de l'index cluster, sont nécessaires pour récupérer les données demandées, réduisant ainsi globalement le nombre d'E/S des disques. Par exemple, une requête de colonnes **a** et **b** sur une table possédant un index composite créé sur les colonnes **a**, **b** et **c** peut récupérer les données spécifiées à partir du seul index.  
 
     > [!IMPORTANT]
     > Un index couvrant désigne un [index non cluster](#nonclustered-index-architecture) qui résout directement un ou plusieurs résultats de requête similaires sans avoir accès à sa table de base ni entraîner de recherches.
@@ -118,14 +118,14 @@ Pour plus d’informations sur les index de recherche en texte intégral, consul
   
 -   Évaluez le type de requête et la manière dont les colonnes sont utilisées dans la requête. Par exemple, une colonne utilisée dans un type de requête de correspondance exacte constitue un candidat valable à un index non-cluster ou cluster.
 
-<a name="sargable"></a><sup>1</sup> Le terme SARGable dans les bases de données relationnelles fait référence à un prédicat « **S** earch **ARG** ument- **able** » capable d’exploiter un index pour accélérer l’exécution de la requête.
+<a name="sargable"></a><sup>1</sup> Le terme SARGable dans les bases de données relationnelles fait référence à un prédicat « **S** earch **ARG** ument-**able** » capable d’exploiter un index pour accélérer l’exécution de la requête.
   
 ### <a name="column-considerations"></a>Remarques sur les colonnes  
  Lorsque vous créez un index, prenez en compte les directives suivantes relatives aux colonnes :  
   
 -   Veillez à ce que la clé d'index des index cluster soit courte. En outre, les index cluster bénéficient du fait d'être créés sur des colonnes uniques ou non NULL.  
   
--   Les colonnes dont le type de données est **ntext** , **text** , **image** , **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** ne peuvent pas être spécifiées en tant que colonnes de clés d’index. Cependant, les types de données **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et **xml** peuvent participer à des index non-cluster en tant que colonnes d’index non-clés. Pour plus d'informations, consultez la section [Index avec colonnes incluses](#Included_Columns)dans ce guide.  
+-   Les colonnes dont le type de données est **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** ne peuvent pas être spécifiées en tant que colonnes de clés d’index. Cependant, les types de données **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et **xml** peuvent participer à des index non-cluster en tant que colonnes d’index non-clés. Pour plus d'informations, consultez la section [Index avec colonnes incluses](#Included_Columns)dans ce guide.  
   
 -   Un type de données **xml** ne peut être qu'une colonne clé dans un index XML. Pour plus d’informations, consultez [Index XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). SQL Server 2012 SP1 introduit un nouveau type d'index XML appelé index XML sélectif. Ce nouvel index améliore les performances de requête sur les données stockées en XML dans SQL Server, permettant ainsi d'indexer plus rapidement les charges de travail comportant beaucoup de données XML et améliorant l'évolutivité en réduisant les coûts de stockage de l'index en lui-même. Pour plus d’informations, consultez [Index XML sélectifs &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -476,11 +476,11 @@ Lors de la conception d'index non-cluster contenant des colonnes incluses, tenez
   
 -   Les colonnes non-clés peuvent être définies uniquement sur les index non-cluster de tables ou de vues indexées.  
   
--   Tous les types de données sont autorisés, à l'exception de **text** , **ntext** et **image**.  
+-   Tous les types de données sont autorisés, à l'exception de **text**, **ntext** et **image**.  
   
 -   Les colonnes calculées déterministes et précises ou imprécises peuvent être des colonnes incluses. Pour plus d'informations, consultez [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Comme pour les colonnes clés, les colonnes calculées dérivées des types de données **image** , **ntext** et **text** peuvent être des colonnes non-clés (incluses) tant que le type de données de la colonne calculée est autorisé en tant que colonne d’index non-clé.  
+-   Comme pour les colonnes clés, les colonnes calculées dérivées des types de données **image**, **ntext** et **text** peuvent être des colonnes non-clés (incluses) tant que le type de données de la colonne calculée est autorisé en tant que colonne d’index non-clé.  
   
 -   Les noms des colonnes ne peuvent pas être spécifiés à la fois dans la liste INCLUDE et dans la liste des colonnes clés.  
   
@@ -503,7 +503,7 @@ Lors de la conception d'index non-cluster contenant des colonnes incluses, tenez
   
     -   modifier la possibilité de valeur NULL de la colonne de NOT NULL à NULL ;  
   
-    -   augmenter la longueur des colonnes **varchar** , **nvarchar** ou **varbinary** .  
+    -   augmenter la longueur des colonnes **varchar**, **nvarchar** ou **varbinary** .  
   
         > [!NOTE]  
         >  Ces restrictions sur la modification des colonnes s'appliquent également aux colonnes de clés d'index.  
@@ -567,7 +567,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> Instructions de conception d'index filtrés  
  Un index filtré est un index non cluster optimisé, convenant tout particulièrement aux requêtes qui effectuent des sélections dans un sous-ensemble de données bien défini. Il utilise un prédicat de filtre pour indexer une partie des lignes de la table. Un index filtré bien conçu peut améliorer les performances des requêtes, réduire les coûts de maintenance des index et réduire les coûts de stockage des index par rapport aux index de table entière.  
   
-**S'applique à** : [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Les index filtrés peuvent présenter les avantages suivants par rapport aux index de table entière :  
   
@@ -821,7 +821,7 @@ Pour plus d’informations, consultez [Index columnstore - Guide de conception](
 
 Chaque table à mémoire optimisée doit avoir au moins un index, car l’index permet de lier les lignes de la table entre elles. Sur une table optimisée en mémoire, chaque index est également optimisé en mémoire. Les index de hachage sont l’un des types d’index possibles dans une table optimisée en mémoire. Pour plus d’informations, consultez [Index pour les tables à mémoire optimisée](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**S'applique à** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="hash-index-architecture"></a>Architecture des index de hachage
 Un index de hachage se compose d’un tableau de pointeurs, chaque élément du tableau constituant un compartiment de hachage.
@@ -913,7 +913,7 @@ Par la suite, quand les anciennes versions ne sont plus nécessaires, un thread 
 
 Les index non-cluster sont l’un des types d’index possibles dans une table à mémoire optimisée. Pour plus d’informations, consultez [Index pour les tables à mémoire optimisée](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
-**S'applique à** : [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Architecture des index non-cluster en mémoire
 

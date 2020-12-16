@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f117b284799ba4849131254b90a018a397824e7b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 24be57e6e964fea4ddb0f050480dbe79353ddcd2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006331"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459987"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92006331"
 ### <a name="accepted-instances"></a>Instances acceptées  
  Pour qu'une instance **CurvePolygon** soit acceptée, elle doit être soit vide, soit contenir uniquement des anneaux d'arc circulaires acceptés. Un anneau d'arc circulaire accepté satisfait les exigences suivantes.  
   
-1.  Être une instance acceptée **LineString**, **CircularString**ou **CompoundCurve** . Pour plus d'informations sur les instances acceptées, consultez [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)et [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
+1.  Être une instance acceptée **LineString**, **CircularString** ou **CompoundCurve** . Pour plus d'informations sur les instances acceptées, consultez [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)et [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
   
 2.  Contenir au moins quatre points.  
   
@@ -77,7 +77,7 @@ Pour qu'une instance **CurvePolygon** soit valide, les anneaux extérieur et int
 3.  Chaque anneau doit contenir au moins quatre points.  
 4.  Chaque anneau doit être un type de courbe acceptable.  
   
-Les instances**CurvePolygon** doivent également répondre à des critères spécifiques, selon qu'il s'agisse de types de données **geometry** ou **geography** .  
+Les instances **CurvePolygon** doivent également répondre à des critères spécifiques, selon qu'il s'agisse de types de données **geometry** ou **geography** .  
   
 #### <a name="geometry-data-type"></a>Type de données geometry  
 Une instance **geometryCurvePolygon** valide doit avoir les attributs suivants :  

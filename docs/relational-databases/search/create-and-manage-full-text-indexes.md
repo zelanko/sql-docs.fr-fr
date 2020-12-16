@@ -13,13 +13,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 501be7ed93ec7be0edd55d95bf7bd0b5bce229d8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493848"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460092"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ Pour plus d’informations, consultez [Alimenter des index de recherche en texte
   
 3.  Développez **Tables**.  
   
-4.  Cliquez avec le bouton droit sur la table sur laquelle l’index de recherche en texte intégral est défini, sélectionnez **Index de recherche en texte intégral**et, dans le menu contextuel **Index de recherche en texte intégral** , cliquez sur **Propriétés**. La boîte de dialogue **Propriétés d’index de recherche en texte intégral** s’affiche.  
+4.  Cliquez avec le bouton droit sur la table sur laquelle l’index de recherche en texte intégral est défini, sélectionnez **Index de recherche en texte intégral** et, dans le menu contextuel **Index de recherche en texte intégral** , cliquez sur **Propriétés**. La boîte de dialogue **Propriétés d’index de recherche en texte intégral** s’affiche.  
   
 5.  Dans le volet **Sélectionner une page** , vous pouvez sélectionner l’une des pages suivantes :  
   
@@ -166,7 +166,7 @@ GO
  Cet exemple retourne une colonne de jeu de résultats appelée `Unique Key Column`, qui contient une seule ligne indiquant le nom de la colonne clé unique de la table Document, DocumentNode. Notez que, si cette requête contenait un nom d'index non valide, si le nom d'index ne correspondait pas à la table, si la table n'existait pas, etc., une valeur NULL serait retournée.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Colonnes varbinary(max) et xml d’index  
- Si une colonne **varbinary(max)** , **varbinary**ou **xml** est indexée en texte intégral, elle peut faire l’objet d’une requête à l’aide des prédicats de texte intégral (CONTAINS et FREETEXT) et des fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE), au même titre que n’importe quelle autre colonne indexée en texte intégral.
+ Si une colonne **varbinary(max)** , **varbinary** ou **xml** est indexée en texte intégral, elle peut faire l’objet d’une requête à l’aide des prédicats de texte intégral (CONTAINS et FREETEXT) et des fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE), au même titre que n’importe quelle autre colonne indexée en texte intégral.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Données varbinary(max) ou varbinary d’index  
  Une seule colonne **varbinary(max)** ou **varbinary** peut stocker de nombreux types de documents. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge tout type de document pour lequel un filtre est installé et disponible dans le système d'exploitation. Le type d'un document est identifié par l'extension de fichier de celui-ci. Par exemple, pour une extension de fichier .doc, la recherche en texte intégral utilise le filtre qui prend en charge les documents Microsoft Word. Pour obtenir la liste des types de documents disponibles, interrogez l’affichage catalogue [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
@@ -191,7 +191,7 @@ Pour créer un index de recherche en texte intégral sur une colonne **varbinary
 
 1.  Développez le groupe de serveurs, **Bases de données**, puis la base de données qui contient la table à activer pour l’indexation de texte intégral.  
   
-2.  Développez **Tables**et cliquez avec le bouton droit sur la table que vous souhaitez désactiver ou réactiver pour l’indexation de texte intégral.  
+2.  Développez **Tables** et cliquez avec le bouton droit sur la table que vous souhaitez désactiver ou réactiver pour l’indexation de texte intégral.  
   
 3.  Sélectionnez **Index de recherche en texte intégral**, puis cliquez sur **Disable Full-Text index** (Désactiver l’index de recherche en texte intégral) ou **Enable Full-Text index**(Activer l’index de recherche en texte intégral).  
   
