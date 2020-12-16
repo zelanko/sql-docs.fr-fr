@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756342"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481430"
 ---
 # <a name="contained-databases"></a>Bases de données autonomes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "85756342"
  Utilisez les vues [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) et [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) pour retourner des informations sur des objets ou des fonctionnalités sans relation contenant-contenu. En déterminant l'état de la relation contenant-contenu des éléments de votre base de données, vous pouvez découvrir les objets ou les fonctionnalités qui doivent être remplacés ou modifiés pour promouvoir la relation contenant-contenu.  
   
 > [!IMPORTANT]  
->  Étant donné que certains objets ont pour paramètre de relation contenant-contenu **NONE**par défaut, cette vue peut retourner des faux positifs.  
+>  Étant donné que certains objets ont pour paramètre de relation contenant-contenu **NONE** par défaut, cette vue peut retourner des faux positifs.  
   
  Le comportement des bases de données partiellement autonomes est très différent de celui des bases de données non autonomes en termes de classement. Pour plus d'informations sur les problèmes de classement, consultez [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md).  
   

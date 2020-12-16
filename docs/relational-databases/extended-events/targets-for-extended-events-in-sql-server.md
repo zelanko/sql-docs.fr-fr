@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 116d2f34bef990cca174117238981bb7e87917b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868769"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481340"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
 
@@ -151,7 +151,7 @@ La cible **event_file** écrit la sortie de session d’événements à partir d
 
 - Le nom de fichier que vous choisissez est utilisé par le système en tant que préfixe auquel un entier long basé sur une date-heure est ajouté suivi de l’extension .xel.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
 > Azure SQL Database ne prend en charge le stockage de fichiers `xel` que dans le Stockage Blob Azure. 

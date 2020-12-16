@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d64eedf43ee8ef64a5a2e5e958df02ea8e20b2cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e70793cab3740089246cc3e1f0738f559566e3f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428421"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481190"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Description des index cluster et non-cluster
 
@@ -32,7 +32,7 @@ Une table ou une vue peut comporter les types d'index suivants :
 
 - Cluster
 
-  - Les index cluster trient et stockent les lignes de données de la table ou la vue en fonction de leurs valeurs de clé. Ce sont les colonnes incluses dans la définition de l'index. Il ne peut y avoir qu’un index cluster par table car les lignes de données peuvent être stockées dans un seul ordre.  
+  - Les index cluster trient et stockent les lignes de données de la table ou la vue en fonction de leurs valeurs de clé. Ce sont les colonnes incluses dans la définition de l'index. Il ne peut y avoir qu’un index cluster par table car les lignes de données peuvent être stockées dans un seul ordre.  
   - Le seul moment où les lignes de données d'une table sont stockées dans l'ordre de tri se produit lorsque la table contient un index cluster. Lorsqu'une table possède un index cluster, elle est appelée table cluster. En l'absence de cet index, ses lignes de données sont stockées dans une structure désordonnée nommée segment.
 
 - Non-cluster
@@ -67,7 +67,7 @@ Lorsque l'optimiseur de requête utilise un index, il recherche les colonnes de 
 > [!IMPORTANT]
 > Pour plus d’informations sur les règles de conception d’index et les éléments internes, consultez le [Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
-## <a name="related-content"></a>Contenu connexe
+## <a name="related-content"></a>Contenu associé
 
 - [Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md)
 - [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)

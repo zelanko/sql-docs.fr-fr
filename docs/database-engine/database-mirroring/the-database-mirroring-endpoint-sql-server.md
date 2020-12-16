@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dd3477fb75040443fdfa56969ba9772baaabb0c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d674ed580a3c4a73a3f136344b8c2c5d76d33ac4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896989"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481500"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Point de terminaison de mise en miroir de bases de données (SQL Server)
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Pour faire partie de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de la mise en miroir de bases de données, chaque instance de serveur requiert son propre *point de terminaison de mise en miroir de bases de données*dédié. Ce point de terminaison a un objectif spécifique qui permet exclusivement de recevoir des connexions provenant d'autres instances de serveur. Sur une instance de serveur donnée, chaque connexion de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de mise en miroir de bases de données à une autre instance de serveur utilise un point de terminaison de mise en miroir de bases de données unique.  
+  Pour faire partie de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de la mise en miroir de bases de données, chaque instance de serveur requiert son propre *point de terminaison de mise en miroir de bases de données* dédié. Ce point de terminaison a un objectif spécifique qui permet exclusivement de recevoir des connexions provenant d'autres instances de serveur. Sur une instance de serveur donnée, chaque connexion de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de mise en miroir de bases de données à une autre instance de serveur utilise un point de terminaison de mise en miroir de bases de données unique.  
   
  Les points de terminaison de mise en miroir de bases de données utilisent le protocole TCP (Transmission Control Protocol) pour l'envoi et la réception de messages entre les instances de serveur participant à des sessions de mise en miroir de bases de donnée ou hébergeant des réplicas de disponibilité. Le point de terminaison de mise en miroir de bases de données écoute sur un numéro de port TCP unique.  
   

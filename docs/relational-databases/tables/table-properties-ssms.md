@@ -18,13 +18,13 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f41013db7cbd871ef132c3c0a3bad8a772511022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344055"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480780"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 
@@ -86,11 +86,11 @@ ms.locfileid: "92344055"
  Empêche l'escalade de verrous dans la plupart des cas. Les verrous de niveau table ne sont pas totalement interdits. Par exemple, lorsque vous analysez une table ne contenant aucun index cluster sous le niveau d'isolement sérialisable, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit prendre un verrou de table pour protéger l'intégrité des données.  
   
  **Table répliquée**  
- Indique lorsqu'une table est répliquée vers une autre base de données à l'aide de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les valeurs possibles sont **True** et **False** .  
+ Indique lorsqu'une table est répliquée vers une autre base de données à l'aide de la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les valeurs possibles sont **True** et **False**.  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Page de suivi des modifications  
  **Suivi des modifications**  
- Indique si le suivi des modifications est activé pour la table. La valeur par défaut est **False** .  
+ Indique si le suivi des modifications est activé pour la table. La valeur par défaut est **False**.  
   
  Cette option est disponible uniquement lorsque le suivi des modifications est activé pour la base de données.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "92344055"
  Dossier racine pour le FileTable.  
   
  **Espace de noms FileTable activé**  
- Quand la valeur est **True** , cette valeur indique que la table est un FileTable. Si vous remplacez cette valeur par **False** , vous modifiez le FileTable pour en faire une table utilisateur ordinaire. Si vous souhaitez ultérieurement remodifier la table pour en faire un FileTable, la table devra réussir la vérification de cohérence de FileTable pour la conversion puisse aboutir.  
+ Quand la valeur est **True**, cette valeur indique que la table est un FileTable. Si vous remplacez cette valeur par **False**, vous modifiez le FileTable pour en faire une table utilisateur ordinaire. Si vous souhaitez ultérieurement remodifier la table pour en faire un FileTable, la table devra réussir la vérification de cohérence de FileTable pour la conversion puisse aboutir.  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> Page de stockage  
  Affiche les propriétés de stockage de la table sélectionnée.  
@@ -137,7 +137,7 @@ ms.locfileid: "92344055"
  Nom du groupe de fichiers contenant la table.  
   
  **Table partitionnée**  
- Les valeurs possibles sont **True** et **False** .  
+ Les valeurs possibles sont **True** et **False**.  
   
  **Groupe de fichiers Filestream**  
  Indiquez le nom du groupe de fichiers de données FILESTREAM si la table contient une colonne **varbinary(max)** avec l’attribut FILESTREAM. La valeur par défaut est le groupe de fichiers de données FILESTREAM par défaut.  
@@ -146,7 +146,7 @@ ms.locfileid: "92344055"
   
 ### <a name="general"></a>Général  
  **Le format de stockage VarDecimal est activé**  
- Quand elle est égale à **True** , cette valeur en lecture seule indique que les types de données **decimal** et **numeric** sont stockés selon le format de stockage vardecimal. Pour modifier cette option, utilisez l’option de **format de stockage VarDecimal** de [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Le format de stockage vardecimal est déconseillé. Utilisez plutôt la compression ROW.  
+ Quand elle est égale à **True**, cette valeur en lecture seule indique que les types de données **decimal** et **numeric** sont stockés selon le format de stockage vardecimal. Pour modifier cette option, utilisez l’option de **format de stockage VarDecimal** de [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Le format de stockage vardecimal est déconseillé. Utilisez plutôt la compression ROW.  
   
  **Espace d'index**  
  Quantité d'espace occupée par les index dans la table, en mégaoctets. Cette valeur n'inclut pas l'utilisation de l'espace des index XML pour la table. Si les index XML appartiennent à la table, utilisez plutôt [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  

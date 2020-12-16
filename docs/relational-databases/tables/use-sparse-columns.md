@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b422f4c34831c570b3ed6d9d54bcdb90d1d86754
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645927"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482337"
 ---
 # <a name="use-sparse-columns"></a>Utiliser des colonnes éparses
 
@@ -125,7 +125,7 @@ ms.locfileid: "88645927"
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrictions relatives à l'utilisation des colonnes éparses  
  Les colonnes éparses peuvent contenir n'importe quel type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; en outre, elles se comportent comme n'importe quelle autre colonne avec les restrictions suivantes :  
   
--   Une colonne éparse doit être nullable et ne peut pas avoir les propriétés ROWGUIDCOL ou IDENTITY. Une colonne éparse ne peut pas être des types de données suivants : **text**, **ntext**, **image**, **timestamp**, type de données défini par l’utilisateur, **geometry**ou **geography**; ni avoir l’attribut FILESTREAM.  
+-   Une colonne éparse doit être nullable et ne peut pas avoir les propriétés ROWGUIDCOL ou IDENTITY. Une colonne éparse ne peut pas être des types de données suivants : **text**, **ntext**, **image**, **timestamp**, type de données défini par l’utilisateur, **geometry** ou **geography**; ni avoir l’attribut FILESTREAM.  
   
 -   Une colonne éparse ne peut pas avoir de valeur par défaut.  
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408265"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480050"
 ---
 # <a name="create-indexes-with-included-columns"></a>Créer des index avec colonnes incluses
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,11 +54,11 @@ ms.locfileid: "88408265"
   
 -   Les colonnes non-clés peuvent uniquement être définies sur des index non cluster.  
   
--   Tous les types de données, à l'exception de **text**, de **ntext**et de **image** , peuvent être utilisés en tant que colonnes non-clés.  
+-   Tous les types de données, à l'exception de **text**, de **ntext** et de **image** , peuvent être utilisés en tant que colonnes non-clés.  
   
 -   Les colonnes calculées déterministes et précises ou imprécises peuvent être des colonnes non-clés. Pour plus d'informations, consultez [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Les colonnes calculées dérivées des types de données **image**, **ntext**et **text** peuvent être des colonnes non-clés tant que le type de données de la colonne calculée est autorisé en tant que colonne d'index non-clé.  
+-   Les colonnes calculées dérivées des types de données **image**, **ntext** et **text** peuvent être des colonnes non-clés tant que le type de données de la colonne calculée est autorisé en tant que colonne d'index non-clé.  
   
 -   Les colonnes non-clés ne peuvent pas être supprimées d’une table, sauf si l’index de cette table est d’abord supprimé.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88408265"
   
     -   modifier la possibilité de valeur NULL de la colonne de NOT NULL à NULL ;  
   
-    -   augmenter la longueur des colonnes **varchar**, **nvarchar**ou **varbinary** .  
+    -   augmenter la longueur des colonnes **varchar**, **nvarchar** ou **varbinary** .  
   
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
   

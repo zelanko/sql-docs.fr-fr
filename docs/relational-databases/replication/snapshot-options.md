@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3117e274c146413dcf8b973f054c7d0b1865e7de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 4a51a126cb16aed9159177b60472c4e5262eb2ad
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767602"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479710"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modifier les options d’initialisation d’instantané pour la réplication SQL 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ Si vous souhaitez spécifier un autre emplacement pour le dossier d'instantanés
 #### <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio
 1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication – \<Publication>**  :  
   
-    1.  Sélectionnez **Placer les fichiers dans le dossier suivant**puis cliquez sur **Parcourir** pour accéder à un répertoire ou entrez le chemin d'accès au répertoire dans lequel stocker les fichiers d'instantanés.  
+    1.  Sélectionnez **Placer les fichiers dans le dossier suivant** puis cliquez sur **Parcourir** pour accéder à un répertoire ou entrez le chemin d'accès au répertoire dans lequel stocker les fichiers d'instantanés.  
   
         > [!NOTE]  
         >  L'Agent d'instantané doit posséder des autorisations en écriture sur le répertoire spécifié et les Agents de distribution et de fusion des autorisations en lecture. Si vous utilisez des abonnements par extraction, vous devez définir un répertoire partagé en tant que chemin UNC, par exemple \\\nom_ordinateur\snapshot. Pour plus d’informations, consultez [Sécuriser le dossier d’instantanés](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
@@ -100,7 +100,7 @@ Lors de la [configuration des propriétés des instantanés &#40;programmation T
 ### <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio
 1.  Dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication – \<Publication>**  :  
   
-    1.  Sélectionnez **Placer les fichiers dans le dossier suivant**puis cliquez sur **Parcourir** pour accéder à un répertoire ou entrez le chemin d'accès au répertoire dans lequel stocker les fichiers d'instantanés.  
+    1.  Sélectionnez **Placer les fichiers dans le dossier suivant** puis cliquez sur **Parcourir** pour accéder à un répertoire ou entrez le chemin d'accès au répertoire dans lequel stocker les fichiers d'instantanés.  
   
         > [!NOTE]  
         >  L'Agent d'instantané doit posséder des autorisations en écriture sur le répertoire spécifié et les Agents de distribution et de fusion des autorisations en lecture. Si vous utilisez des abonnements par extraction, vous devez définir un répertoire partagé en tant que chemin UNC, par exemple \\\nom_ordinateur\snapshot. Pour plus d’informations, consultez [Sécuriser le dossier d’instantanés](security/secure-the-snapshot-folder.md).  

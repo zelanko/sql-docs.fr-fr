@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60c06966368720b4d996c32be221cf37d805a381
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807512"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478350"
 ---
 # <a name="shrink-a-database"></a>Réduire une base de données
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "87807512"
   
 2.  Développez **Bases de données**, puis cliquez avec le bouton droit sur la base de données à réduire.  
   
-3.  Pointez sur **Tâches**puis sur **Réduire**, puis cliquez sur **Base de données**.  
+3.  Pointez sur **Tâches** puis sur **Réduire**, puis cliquez sur **Base de données**.  
   
      **Sauvegarde de la base de données**  
      Affiche le nom de la base de données sélectionnée.  

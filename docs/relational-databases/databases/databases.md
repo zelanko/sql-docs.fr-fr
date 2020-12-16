@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d1550e59cfa9579cf2c7bf38cdbc8c688b447b69
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87361446"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478370"
 ---
 # <a name="databases"></a>Bases de données
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,16 +49,16 @@ ms.locfileid: "87361446"
         [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md)  
         [États d’une base de données](../../relational-databases/databases/database-states.md)  
         [États des fichiers](../../relational-databases/databases/file-states.md)  
-        [Estimer la taille d’une base de données](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
+        [Estimer la taille d'une base de données](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
         [Copier des bases de données sur d’autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
         [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-        [Ajouter des données ou des fichiers journaux à une base de données](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+        [Ajouter des fichiers de données ou journaux à une base de données](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
         [Modifier les paramètres de configuration d’une base de données](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)  
         [Créer une base de données](../../relational-databases/databases/create-a-database.md)  
         [Supprimer une base de données](../../relational-databases/databases/delete-a-database.md)  
     :::column-end:::
     :::column:::
-        [Supprimer des données ou des fichiers journaux d’une base de données](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
+        [Supprimer des fichiers de données ou des fichiers journaux d’une base de données](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
         [Afficher les informations sur l’espace occupé par les données et par le journal d’une base de données](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
         [Augmenter la taille d’une base de données](../../relational-databases/databases/increase-the-size-of-a-database.md)  
         [Renommer une base de données](../../relational-databases/databases/rename-a-database.md)  
@@ -66,9 +66,9 @@ ms.locfileid: "87361446"
         [Réduire une base de données](../../relational-databases/databases/shrink-a-database.md)  
         [Réduire un fichier](../../relational-databases/databases/shrink-a-file.md)  
         [Afficher ou modifier les propriétés d’une base de données](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)  
-        [Afficher la liste des bases de données d’une instance SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)  
+        [Afficher une liste des bases de données sur une instance de SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)  
         [Afficher ou modifier le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
-        [Utiliser l’Assistant Plan de maintenance](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
+        [Utiliser l'Assistant Plan de maintenance](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
         [Créer un alias de type de données défini par l’utilisateur](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
         [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
     :::column-end:::

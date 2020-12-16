@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e2c218d9f474638c7d0d8c390f79bf42ca3679
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3ba8729558f6e3e1736db9c380a268cd606444f1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548872"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482353"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considérations et limitations liées aux tables temporelles
 
@@ -41,7 +41,7 @@ Prenez les points suivants en compte lorsque vous travaillez avec des tables tem
 - La table d’historique ne peut pas avoir de contraintes (clé primaire, clé étrangère, contraintes de table ou de colonne).
 - Les vues indexées ne sont pas prises en charge sur les requêtes temporelles (requêtes qui utilisent la clause **FOR SYSTEM_TIME**).
 - L’option Online (**WITH (ONLINE = ON**) n’a aucun effet sur **ALTER TABLE ALTER COLUMN** si la version de table temporelle est contrôlée par le système. L’opération ALTER COLUMN n’est pas effectuée en ligne, quelle que soit la valeur spécifiée pour l’option ONLINE.
-- Les instructions**INSERT** et **UPDATE** ne peuvent pas faire référence à des colonnes de période SYSTEM_TIME. Les tentatives d’insertion de valeurs directement dans ces colonnes sont bloquées.
+- Les instructions **INSERT** et **UPDATE** ne peuvent pas faire référence à des colonnes de période SYSTEM_TIME. Les tentatives d’insertion de valeurs directement dans ces colonnes sont bloquées.
 - **TRUNCATE TABLE** n’est pas pris en charge quand **SYSTEM_VERSIONING** a la valeur **ON**
 - La modification directe des données dans une table d’historique n’est pas autorisée.
 - **ON DELETE CASCADE** et **ON UPDATE CASCADE** ne sont pas autorisées dans la table actuelle. En d’autres termes, quand la table temporelle fait référence à la table dans la relation de clé étrangère (correspondant à *parent_object_id* dans sys.foreign_keys), les options CASCADE ne sont pas autorisées. Pour contourner cette limitation, utilisez une logique d’application ou des déclencheurs After pour maintenir la cohérence en cas de suppression dans la table de clé primaire (correspondant à *referenced_object_id* dans sys.foreign_keys). Si la table de clé primaire est temporelle alors que la table de référence ne l’est pas, il n’existe aucune limitation de ce type.
@@ -49,7 +49,7 @@ Prenez les points suivants en compte lorsque vous travaillez avec des tables tem
   > [!NOTE]
   > cette limitation s’applique uniquement à SQL Server 2016. Les options CASCADE sont prises en charge dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et SQL Server 2017 à partir de la version CTP 2.0.
 
-- Les déclencheurs**INSTEAD OF** ne sont pas autorisés sur la table actuelle ou sur la table d’historique pour éviter l’invalidation de la logique DML. Les déclencheurs**AFTER** sont autorisés uniquement dans la table actuelle. Ils sont bloqués dans la table d’historique afin d’éviter l’invalidation de la logique DML.
+- Les déclencheurs **INSTEAD OF** ne sont pas autorisés sur la table actuelle ou sur la table d’historique pour éviter l’invalidation de la logique DML. Les déclencheurs **AFTER** sont autorisés uniquement dans la table actuelle. Ils sont bloqués dans la table d’historique afin d’éviter l’invalidation de la logique DML.
 - L’utilisation de technologies de réplication est limitée :
 
   - **Always On (Toujours active) :** entièrement prise en charge

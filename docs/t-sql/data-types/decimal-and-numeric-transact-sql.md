@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05c7ee73b7f37cdc96847f546db11f351b5edd68
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b9b05261fe92be3c7f9805f05ada280ced5a66a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116162"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478730"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal et numeric (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ Nombre total maximal de chiffres décimaux à stocker. Ce nombre inclut le côt�
 >  Informatica prend uniquement en charge 16 chiffres significatifs, quelles que soient la précision et l’échelle spécifiées.  
   
 *s* (échelle)  
-Nombre de chiffres décimaux stockés à droite de la virgule. Ce nombre est soustrait de *p* afin de déterminer le nombre maximal de chiffres à gauche de la virgule décimale. La mise à l’échelle doit être une valeur comprise entre 0 et *p*et peut uniquement être spécifiée si la précision est indiquée. La valeur par défaut de l’échelle est de 0, par conséquent 0 <= *s* \<= *p*. Les tailles de stockage maximales varient en fonction de la précision.
+Nombre de chiffres décimaux stockés à droite de la virgule. Ce nombre est soustrait de *p* afin de déterminer le nombre maximal de chiffres à gauche de la virgule décimale. La mise à l’échelle doit être une valeur comprise entre 0 et *p* et peut uniquement être spécifiée si la précision est indiquée. La valeur par défaut de l’échelle est de 0, par conséquent 0 <= *s* \<= *p*. Les tailles de stockage maximales varient en fonction de la précision.
   
 |Precision|Taille de stockage (octets)|  
 |---|---|

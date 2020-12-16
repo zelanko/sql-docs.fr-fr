@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1225f99547dd143b4284f6415df761bdca5c0c38
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679267"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480850"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Charger en masse des données chiffrées dans des colonnes à l’aide d’Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ Le scénario suivant indique comment une importation de données incorrecte peut
 
 1.  L’option est définie sur ON pour un utilisateur.  
  
-2.  L’utilisateur exécute l’application qui se connecte à la base de données. L’application utilise des API en bloc pour insérer des valeurs en texte brut dans des colonnes chiffrées. L’application attend un pilote client compatible avec Always Encrypted pour chiffrer les données lors de l’insertion. Cependant, l’application est mal configurée. Et elle utilise finalement un pilote qui ne prend pas en charge Always Encrypted, ou la chaîne de connexion ne contient pas **column encryption setting=enabled** .  
+2.  L’utilisateur exécute l’application qui se connecte à la base de données. L’application utilise des API en bloc pour insérer des valeurs en texte brut dans des colonnes chiffrées. L’application attend un pilote client compatible avec Always Encrypted pour chiffrer les données lors de l’insertion. Cependant, l’application est mal configurée. Et elle utilise finalement un pilote qui ne prend pas en charge Always Encrypted, ou la chaîne de connexion ne contient pas **column encryption setting=enabled**.  
 
 3.  L’application envoie des valeurs en texte en clair au serveur. Les contrôles des métadonnées de chiffrement étant désactivés dans le serveur pour l’utilisateur, le serveur permet l’insertion de données incorrectes (texte brut au lieu de texte correctement chiffré) dans une colonne chiffrée.  
  

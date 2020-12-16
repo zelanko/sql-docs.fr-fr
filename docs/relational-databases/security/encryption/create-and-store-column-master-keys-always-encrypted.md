@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c9a0dfad97e37325c0990bb8c1786a63a5bf897a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867821"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479360"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Créer et stocker des clés principales de colonne pour Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-Dans Always Encrypted, les*clés principales de colonne* sont des clés de protection de clés servant à chiffrer les clés de chiffrement de colonne. Les clés principales de colonne doivent être stockées dans un magasin de clés approuvé, et les clés doivent être accessibles aux applications qui doivent chiffrer ou déchiffrer des données, ainsi qu’aux outils servant à la configuration d’Always Encrypted et à la gestion des clés Always Encrypted.
+Dans Always Encrypted, les *clés principales de colonne* sont des clés de protection de clés servant à chiffrer les clés de chiffrement de colonne. Les clés principales de colonne doivent être stockées dans un magasin de clés approuvé, et les clés doivent être accessibles aux applications qui doivent chiffrer ou déchiffrer des données, ainsi qu’aux outils servant à la configuration d’Always Encrypted et à la gestion des clés Always Encrypted.
 
 Cet article fournit des informations détaillées sur la sélection d’un magasin de clés et la création de clés principales de colonne pour Always Encrypted. Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
@@ -30,7 +30,7 @@ Cet article fournit des informations détaillées sur la sélection d’un magas
 
 Always Encrypted prend en charge plusieurs magasins de clés pour le stockage des clés principales de colonne Always Encrypted. Les magasins de clés pris en charge varient selon le pilote et la version que vous utilisez.
 
-Il existe deux catégories principales de magasins de clés : les *magasins de clés locaux*et les *magasins de clés centralisés*.
+Il existe deux catégories principales de magasins de clés : les *magasins de clés locaux* et les *magasins de clés centralisés*.
 
 ###  <a name="local-or-centralized-key-store"></a>Magasin de clés local ou centralisé ?
 
@@ -134,7 +134,7 @@ Pour obtenir un didacticiel pas à pas qui utilise SSMS et stocke les clés Alwa
 
 Lorsque vous utilisez une clé Azure Key Vault comme clé principale de colonne, votre application doit s’authentifier auprès d’Azure et l’identité de votre application doit disposer des autorisations suivantes dans le coffre de clés : *get*, *unwrapKey* et *verify*. 
 
-Pour mettre en service les clés de chiffrement de colonne qui sont protégées par une clé principale de colonne stockée dans Azure Key Vault, vous devez disposer des autorisations *get*, *unwrapKey*, *wrapKey*, *sign*et *verify* . En outre, pour créer une nouvelle clé dans un coffre de clés Azure, vous devez disposer de l’autorisation *create* . Pour afficher le contenu du coffre de clés, vous devez disposer de l’autorisation *list* .
+Pour mettre en service les clés de chiffrement de colonne qui sont protégées par une clé principale de colonne stockée dans Azure Key Vault, vous devez disposer des autorisations *get*, *unwrapKey*, *wrapKey*, *sign* et *verify* . En outre, pour créer une nouvelle clé dans un coffre de clés Azure, vous devez disposer de l’autorisation *create* . Pour afficher le contenu du coffre de clés, vous devez disposer de l’autorisation *list* .
 
 #### <a name="using-powershell"></a>Utilisation de PowerShell
 

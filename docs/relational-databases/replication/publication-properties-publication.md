@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 01d90b3a146c8e110b5cfad11b4d198a1f97c609
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: fa48c38c00732759cf49c8fb694a54f8bc210971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720880"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483020"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés de la publication
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -141,12 +141,12 @@ Pour accroître au maximum les performances de votre application et réduire le 
   
 ### <a name="options"></a>Options  
  **Accéder aux fichiers d'instantanés via FTP**  
- Sélectionnez **Autoriser les abonnés à télécharger des fichiers d'instantanés via le protocole FTP (File Transfer Protocol)** et spécifiez le **nom du serveur FTP**, le **numéro de port**, **le chemin d'accès depuis le dossier racine FTP**, la **connexion**et le **mot de passe**pour permettre aux abonnés d'utiliser FTP pour l'envoi d'instantanés.  
+ Sélectionnez **Autoriser les abonnés à télécharger des fichiers d'instantanés via le protocole FTP (File Transfer Protocol)** et spécifiez le **nom du serveur FTP**, le **numéro de port**, **le chemin d'accès depuis le dossier racine FTP**, la **connexion** et le **mot de passe** pour permettre aux abonnés d'utiliser FTP pour l'envoi d'instantanés.  
   
  Cette option permet aux abonnés d'utiliser FTP pour extraire les fichiers d'instantanés, mais elle ne les oblige pas à le faire. Si vous sélectionnez cette option, l'Assistant Nouvel abonnement amène par défaut les abonnés à extraire les fichiers d'instantanés via FTP. Pour changer ce paramètre, utilisez la boîte de dialogue **Propriétés de l'abonnement** . Si vous autorisez les abonnés à accéder aux fichiers d'instantanés via FTP, définissez le dossier FTP comme emplacement de stockage des fichiers d'instantanés dans la page **Instantané** de la boîte de dialogue **Propriétés de la publication** . Dans ce cas, l'Agent d'instantané met à jour automatiquement les fichiers du dossier FTP lorsqu'un nouvel instantané est généré. Si l'emplacement ne correspond pas au dossier FTP, vous devez mettre à jour les fichiers manuellement lorsqu'un nouvel instantané est généré. Pour plus d’informations, consultez [Remettre un instantané via FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
  **Synchronisation Web**  
- Réplication de fusion uniquement. Sélectionnez **Autoriser les abonnés à se synchroniser en se connectant à un serveur Web**et définissez une adresse de serveur Web pour permettre aux abonnés d'utiliser la synchronisation Web. Le serveur web doit utiliser le protocole TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), et l’adresse web doit être complète, par exemple `https://server.domain.com/synchronize`. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).  
+ Réplication de fusion uniquement. Sélectionnez **Autoriser les abonnés à se synchroniser en se connectant à un serveur Web** et définissez une adresse de serveur Web pour permettre aux abonnés d'utiliser la synchronisation Web. Le serveur web doit utiliser le protocole TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), et l’adresse web doit être complète, par exemple `https://server.domain.com/synchronize`. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).  
 
 
 ## <a name="agent-security"></a>Sécurité de l’agent
