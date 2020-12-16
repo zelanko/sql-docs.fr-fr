@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ed7d71fb9c4e1306826c281806c66db38285e06d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 50ff8dde3d4c15217630500b07786674b518afc1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868619"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473390"
 ---
 # <a name="mssql_eng018752"></a>MSSQL_ENG018752
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91868619"
 |Texte du message|Un seul Agent de lecture du journal ou une seule procédure liée au journal (sp_repldone, sp_replcmds et sp_replshowcmds) peut se connecter à une base de données à la fois. Si vous avez exécuté une procédure liée au journal, supprimez la connexion à travers laquelle fut exécutée la procédure ou exécutez sp_replflush sur cette connexion avant de démarrer l'Agent de lecture du journal ou d'exécuter toute autre procédure liée au journal.|  
   
 ## <a name="explanation"></a>Explication  
- Plusieurs connexions tentent actuellement d'exécuter l'une des procédures suivantes : **sp_repldone**, **sp_replcmds**ou **sp_replshowcmds**. Les procédures stockées [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md) et [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) sont utilisées par l’Agent de lecture du journal pour détecter et mettre à jour les informations relatives aux transactions répliquées dans une base de données publiée. La procédure stockée [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md) est utilisée pour résoudre certains problèmes rencontrés en réplication transactionnelle.  
+ Plusieurs connexions tentent actuellement d'exécuter l'une des procédures suivantes : **sp_repldone**, **sp_replcmds** ou **sp_replshowcmds**. Les procédures stockées [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md) et [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) sont utilisées par l’Agent de lecture du journal pour détecter et mettre à jour les informations relatives aux transactions répliquées dans une base de données publiée. La procédure stockée [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md) est utilisée pour résoudre certains problèmes rencontrés en réplication transactionnelle.  
   
  Cette erreur se produit dans les circonstances suivantes :  
   
@@ -44,20 +44,20 @@ ms.locfileid: "91868619"
   
      Dans les situations où plusieurs agents sont impliqués, il est possible que l'un d'entre eux résulte d'un processus orphelin.  
   
--   Si l'Agent de lecture du journal d'une base de données publiée est démarré et qu'un utilisateur exécute **sp_repldone**, **sp_replcmds**ou **sp_replshowcmds** sur la même base de données, cette erreur est émise dans l'application où la procédure stockée a été exécutée (par exemple **sqlcmd**).  
+-   Si l'Agent de lecture du journal d'une base de données publiée est démarré et qu'un utilisateur exécute **sp_repldone**, **sp_replcmds** ou **sp_replshowcmds** sur la même base de données, cette erreur est émise dans l'application où la procédure stockée a été exécutée (par exemple **sqlcmd**).  
   
--   Si aucun Agent de lecture de journal n'est en cours d'exécution sur une base de données publiée et si un utilisateur exécute **sp_repldone**, **sp_replcmds**ou **sp_replshowcmds** , puis omet de fermer la connexion sur laquelle la procédure a été exécutée, cette erreur est générée lorsque l'Agent de lecture de journal tente de se connecter à la base de données.  
+-   Si aucun Agent de lecture de journal n'est en cours d'exécution sur une base de données publiée et si un utilisateur exécute **sp_repldone**, **sp_replcmds** ou **sp_replshowcmds** , puis omet de fermer la connexion sur laquelle la procédure a été exécutée, cette erreur est générée lorsque l'Agent de lecture de journal tente de se connecter à la base de données.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  La procédure suivante peut vous aider à résoudre ce problème. Si l'une des étapes permet à l'Agent de lecture de journal de démarrer sans erreur, il n'est pas nécessaire d'exécuter le reste de la procédure.  
   
 -   Vérifiez dans l'historique de l'Agent de lecture de journal s'il y a d'autres erreurs qui pourraient être cause de cette erreur. Pour obtenir des informations sur l’affichage de l’état de l’agent et des détails de l’erreur dans le moniteur de réplication, consultez [Afficher des informations et effectuer des tâches avec le moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
--   Recherchez dans le résultat de [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) s’il existe des numéros spécifiques d’identification de processus (SPID) relatifs à la base de données publiée. Fermez toute connexion susceptible d'avoir exécuté **sp_repldone**, **sp_replcmds**ou **sp_replshowcmds**.  
+-   Recherchez dans le résultat de [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) s’il existe des numéros spécifiques d’identification de processus (SPID) relatifs à la base de données publiée. Fermez toute connexion susceptible d'avoir exécuté **sp_repldone**, **sp_replcmds** ou **sp_replshowcmds**.  
   
 -   Redémarrez l'Agent de lecture du journal. Pour plus d’informations, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   Redémarrez le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (mettez-le hors ligne ou en ligne dans un cluster) sur le serveur de distribution. S'il est possible qu'une tâche planifiée ait exécuté **sp_repldone**, **sp_replcmds**ou **sp_replshowcmds** à partir d'autres instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , redémarrez également l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour ces instances. Pour plus d’informations, consultez [Démarrer, arrêter ou suspendre le service SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
+-   Redémarrez le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (mettez-le hors ligne ou en ligne dans un cluster) sur le serveur de distribution. S'il est possible qu'une tâche planifiée ait exécuté **sp_repldone**, **sp_replcmds** ou **sp_replshowcmds** à partir d'autres instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , redémarrez également l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour ces instances. Pour plus d’informations, consultez [Démarrer, arrêter ou suspendre le service SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
   
 -   Exécutez [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) sur le serveur de publication sur la base de données de publication, puis redémarrez l’Agent de lecture du journal.  
   

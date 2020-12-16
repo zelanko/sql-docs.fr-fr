@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 283ed2043029ad89934079df96b81ac1bc11e040
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e0b88119bf8f49ea7ab880423555c10f2fa116d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116753"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472110"
 ---
 # <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ERROR_MESSAGE ( )
 ## <a name="return-types"></a>Types de retour
  **nvarchar(4000)**  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
 Quand elle est appelée dans un bloc CATCH, la fonction `ERROR_MESSAGE` retourne le texte complet du message d’erreur qui a provoqué l’exécution du bloc `CATCH`. Le texte comprend les valeurs fournies pour tous les paramètres remplaçables (par exemple, les longueurs, les noms d’objets ou les heures).  
   
 `ERROR_MESSAGE` retourne NULL quand l’appel a lieu en dehors de l’étendue d’un bloc CATCH.  

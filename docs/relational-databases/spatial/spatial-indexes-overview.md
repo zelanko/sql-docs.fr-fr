@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006280"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473140"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92006280"
 ##  <a name="about-spatial-indexes"></a><a name="about"></a> À propos des index spatiaux  
   
 ###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Décomposition de l'espace indexé en une hiérarchie de grille  
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les index spatiaux sont construits à l'aide d'arbres B (B-trees), ce qui signifie que les index doivent représenter les données spatiales bidimensionnelles dans l'ordre linéaire d'arbres B. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente une décomposition uniforme hiérarchique de l'espace avant de lire des données dans un index spatial. Le processus de création d’index *décompose* l’espace en une *hiérarchie de grille*à quatre niveaux. Ces niveaux sont appelés *niveau 1* (niveau supérieur), *niveau 2*, *niveau 3*et *niveau 4*.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les index spatiaux sont construits à l'aide d'arbres B (B-trees), ce qui signifie que les index doivent représenter les données spatiales bidimensionnelles dans l'ordre linéaire d'arbres B. Par conséquent, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente une décomposition uniforme hiérarchique de l'espace avant de lire des données dans un index spatial. Le processus de création d’index *décompose* l’espace en une *hiérarchie de grille* à quatre niveaux. Ces niveaux sont appelés *niveau 1* (niveau supérieur), *niveau 2*, *niveau 3* et *niveau 4*.  
   
  Chaque niveau consécutif décompose davantage le niveau supérieur ; chaque cellule de niveau supérieur contient donc une grille complète au niveau suivant. Sur un niveau donné, toutes les grilles ont le même nombre de cellules le long des deux axes (par exemple, 4x4 ou 8x8) et les cellules sont toutes d'une seule taille.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "92006280"
 ###  <a name="tessellation-schemes"></a><a name="schemes"></a> Schémas de pavage  
  Le comportement d'un index spatial dépend en partie de son *schéma de pavage*. Le schéma de pavage est spécifique au type de données. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les index spatiaux prennent en charge deux schémas de pavage :  
   
--   Le*pavage de grille géométrique*, qui est le schéma pour le type de données **geometry** .  
+-   Le *pavage de grille géométrique*, qui est le schéma pour le type de données **geometry** .  
   
--   Le*pavage de grille géographique*, qui s'applique aux colonnes du type de données **geography** .  
+-   Le *pavage de grille géographique*, qui s'applique aux colonnes du type de données **geography** .  
   
 > [!NOTE]  
 >  Le paramètre **tessellation_scheme** d’un index spatial est visible dans l’affichage catalogue [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -130,7 +130,7 @@ ms.locfileid: "92006280"
 >  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##### <a name="the-bounding-box"></a>Cadre englobant  
- Les données géométriques occupent un plan qui peut être infini. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], toutefois, un index spatial requiert un espace fini. Pour établir un espace fini pour la décomposition, le schéma de pavage de grille géométrique requiert un *cadre englobant*rectangulaire. Le cadre englobant est défini par quatre coordonnées, **(**_x-min_**,**_y-min_**)** et **(**_x-max_**,**_y-max_**)**, qui sont stockées en tant que propriétés de l’index spatial. Ces coordonnées représentent les éléments suivants :  
+ Les données géométriques occupent un plan qui peut être infini. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], toutefois, un index spatial requiert un espace fini. Pour établir un espace fini pour la décomposition, le schéma de pavage de grille géométrique requiert un *cadre englobant* rectangulaire. Le cadre englobant est défini par quatre coordonnées, **(**_x-min_**,**_y-min_**)** et **(**_x-max_**,**_y-max_**)**, qui sont stockées en tant que propriétés de l’index spatial. Ces coordonnées représentent les éléments suivants :  
   
 -   *x-min* est la coordonnée x de l’angle inférieur gauche du cadre englobant.  
   

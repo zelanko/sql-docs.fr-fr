@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0626ff511e504a4718a426ae9b1ca85c674ab5f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868577"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473870"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "91868577"
   
  S’il n’existe aucune clé primaire et que la table est migrée vers une table non durable, cet écran ne s’affiche pas.  
   
- Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar**et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
+ Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar** et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
   
  Vous pouvez configurer les paramètres suivants pour la clé primaire :  
   

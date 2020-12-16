@@ -7,13 +7,13 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
+ms.openlocfilehash: b5fcfbf30028c904be96ca17be1ebb7feeb6f91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471420"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurer une base de données SQL Server dans un conteneur Docker Linux
 
@@ -26,7 +26,7 @@ Ce tutoriel montre comment déplacer et restaurer un fichier de sauvegarde SQL S
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Ce tutoriel montre comment déplacer et restaurer un fichier de sauvegarde SQL Server dans une image conteneur SQL Server 2019 Linux exécutée sur Docker.
 
@@ -108,7 +108,7 @@ Ce tutoriel montre comment déplacer et restaurer un fichier de sauvegarde SQL S
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Ouvrez un terminal bash sur Linux/Mac ou une session PowerShell avec élévation de privilèges sur Windows.
 
@@ -465,7 +465,7 @@ Outre la réalisation de sauvegardes de base de données pour protéger vos donn
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Arrêtez le conteneur **sql1**.
 
@@ -529,7 +529,7 @@ Dans ce tutoriel, vous avez appris à sauvegarder une base de données sur Windo
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Dans ce tutoriel, vous avez appris à sauvegarder une base de données sur Windows et à la déplacer vers un serveur Linux exécutant SQL Server 2019. Vous avez appris à :
 
