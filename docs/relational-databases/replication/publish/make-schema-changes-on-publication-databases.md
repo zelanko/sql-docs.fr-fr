@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfa866c6c03234a28fbccb14a2c45cea2571090
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 81929c8da672e9294d276b5b562e55886a1c3515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918485"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469000"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "86918485"
         |**hierarchyid**|Autoriser la modification|Bloquer la modification|Bloquer la modification|  
         |**geography** et **geometry**|Autoriser la modification|Autoriser la modification*|Bloquer la modification|  
         |**flux de fichier**|Autoriser la modification|Bloquer la modification|Bloquer la modification|  
-        |**date**, **time**, **datetime2**et **datetimeoffset**|Autoriser la modification|Autoriser la modification*|Bloquer la modification|  
+        |**date**, **time**, **datetime2** et **datetimeoffset**|Autoriser la modification|Autoriser la modification*|Bloquer la modification|  
   
          *Les Abonnés SQL Server Compact convertissent ces types de données côté Abonné.  
   

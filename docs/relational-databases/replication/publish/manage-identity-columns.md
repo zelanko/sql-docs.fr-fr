@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7d0a169e6b160bc865c5ba3c115803fb690cbe68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6c7f660c4550a3bd792b2132ad0699d944b90a2e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423483"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468990"
 ---
 # <a name="manage-identity-columns"></a>Gérer des colonnes d'identité
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88423483"
   
 2.  Dans la page **Articles** , sélectionnez une table avec une colonne d'identité.  
   
-3.  Cliquez sur **Propriétés de l'article**puis sur **Définir les propriétés de l'article de la table en surbrillance**.  
+3.  Cliquez sur **Propriétés de l'article** puis sur **Définir les propriétés de l'article de la table en surbrillance**.  
   
 4.  Sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>** , dans la section **Gestion des plages d’identité**, définissez la propriété **Gérer automatiquement les plages d’identité** sur **Automatique** ou **Manuelle** (pour les serveurs de publication exécutant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou plus), ou sur **True** ou **False** (pour les serveurs de publication exécutant une version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88423483"
   
 1.  Dans la page **Articles** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table avec une colonne d’identité.  
   
-2.  Cliquez sur **Propriétés de l'article**puis sur **Définir les propriétés de l'article de la table en surbrillance**.  
+2.  Cliquez sur **Propriétés de l'article** puis sur **Définir les propriétés de l'article de la table en surbrillance**.  
   
 3.  Dans l’onglet **Propriétés**, dans la boîte de dialogue **Propriétés de l’article - \<Article>** au sein de la section **Gestion des plages d’identité**, entrez des valeurs pour une ou plusieurs des propriétés suivantes : **Taille de la plage sur le serveur de publication**, **Taille de la plage sur l’Abonné** et **Pourcentage du seuil de plage**.  
   

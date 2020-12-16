@@ -8,14 +8,14 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 6c27959422023c0407d7abe3a1219c6a242bae7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524016"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469070"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Utiliser l’Assistant Table externe avec des sources de données ODBC
 
@@ -45,7 +45,7 @@ Sélectionnez **Suivant** pour continuer.
 
 ## <a name="create-a-database-master-key"></a>Créer une clé principale de base de données
 
-Lors de cette étape, vous allez créer une clé principale de base de données. La création d’une clé principale est obligatoire. Une clé principale sécurise les informations d’identification utilisées par une source de données externe. Choisissez un mot de passe fort pour votre clé principale. Sauvegardez également la clé principale à l’aide de **BACKUP MASTER KEY** . Conservez la sauvegarde en lieu sûr, en dehors de votre lieu de travail.
+Lors de cette étape, vous allez créer une clé principale de base de données. La création d’une clé principale est obligatoire. Une clé principale sécurise les informations d’identification utilisées par une source de données externe. Choisissez un mot de passe fort pour votre clé principale. Sauvegardez également la clé principale à l’aide de **BACKUP MASTER KEY**. Conservez la sauvegarde en lieu sûr, en dehors de votre lieu de travail.
 
 ![Créer une clé principale de base de données](media/data-virtualization/virtualize-data-master-key.png)
 
@@ -78,11 +78,11 @@ Cette étape fournit un récapitulatif de vos sélections. Elle indique le nom d
 
 ![Écran Récapitulatif](media/data-virtualization/virtualize-data-summary.png)
 
-Si vous sélectionnez **Créer** , l’objet de source de données externe créé dans la base de données de destination apparaît.
+Si vous sélectionnez **Créer**, l’objet de source de données externe créé dans la base de données de destination apparaît.
 
 ![Sources de données externes](media/data-virtualization/external-data-sources.png)
 
-Si vous sélectionnez **Générer un script** , la requête T-SQL qui est générée pour créer l’objet de source de données externe apparaît.
+Si vous sélectionnez **Générer un script**, la requête T-SQL qui est générée pour créer l’objet de source de données externe apparaît.
 
 ![Générer un script](media/data-virtualization/generated-script.png)
 
