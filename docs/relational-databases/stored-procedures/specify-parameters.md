@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e101fe01c421dbd75b7d0426f13539fb0688e3d
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 476741da7da2e0e463a5a5a0abf4ebf0a8e70d40
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005856"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467080"
 ---
 # <a name="specify-parameters"></a>Spécifier les paramètres
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,13 +62,13 @@ GO
 ## <a name="specifying-parameter-names"></a>Spécification des noms de paramètres  
  Dans le cadre de la création d'une procédure et de la déclaration d'un nom de paramètre, le nom de ce dernier doit commencer par un seul caractère \@ et être unique dans la portée de la procédure.  
   
- En nommant explicitement les paramètres et en attribuant les valeurs appropriées à chaque paramètre dans un appel de procédure, il est possible de fournir les paramètres dans n'importe quel ordre. Par exemple, si la procédure **my_proc** attend trois paramètres nommés **\@first** , **\@second** et **\@third** , les valeurs qui lui sont transmises peuvent être assignées aux noms de paramètres, par exemple : `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ En nommant explicitement les paramètres et en attribuant les valeurs appropriées à chaque paramètre dans un appel de procédure, il est possible de fournir les paramètres dans n'importe quel ordre. Par exemple, si la procédure **my_proc** attend trois paramètres nommés **\@first**, **\@second** et **\@third**, les valeurs qui lui sont transmises peuvent être assignées aux noms de paramètres, par exemple : `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Si une valeur de paramètre est fournie sous la forme **\@paramètre =** _valeur_ , tous les paramètres suivants doivent être indiqués de cette manière. Si les valeurs des paramètres ne sont pas transmises sous la forme **\@paramètre =** _valeur_ , elles doivent être indiquées dans le même ordre (de gauche à droite) que les paramètres répertoriés dans l’instruction CREATE PROCEDURE.  
+>  Si une valeur de paramètre est fournie sous la forme **\@paramètre =** _valeur_, tous les paramètres suivants doivent être indiqués de cette manière. Si les valeurs des paramètres ne sont pas transmises sous la forme **\@paramètre =** _valeur_, elles doivent être indiquées dans le même ordre (de gauche à droite) que les paramètres répertoriés dans l’instruction CREATE PROCEDURE.  
   
 > [!WARNING]  
->  Un paramètre transmis sous la forme **\@paramètre =** _valeur_ , mais mal orthographié, générera une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et empêchera l’exécution de la procédure.  
+>  Un paramètre transmis sous la forme **\@paramètre =** _valeur_, mais mal orthographié, générera une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et empêchera l’exécution de la procédure.  
   
 ## <a name="specifying-parameter-data-types"></a>Spécification des types de données de paramètre  
  Les paramètres doivent être définis avec un type de données lorsqu'ils sont déclarés dans une instruction CREATE PROCEDURE. Le type de données d'un paramètre détermine le type et la plage de valeurs admis pour le paramètre lorsque la procédure est appelée. Par exemple, si vous définissez un paramètre avec le type de données **tinyint** , seules les valeurs numériques comprises entre 0 et 255 sont acceptées lorsqu'elles sont passées à ce paramètre. Une erreur est renvoyée lorsqu'une procédure est exécutée avec une valeur incompatible avec le type de données.  
@@ -131,7 +131,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- Bien que vous puissiez omettre des paramètres ayant des valeurs par défaut, la liste des paramètres peut seulement être tronquée. Par exemple, si une procédure a cinq paramètres, le quatrième et le cinquième peuvent être omis. Toutefois, le quatrième ne peut pas être ignoré tant que le cinquième est précisé, sauf si les paramètres sont transmis sous la forme **\@paramètre =** _valeur_ .  
+ Bien que vous puissiez omettre des paramètres ayant des valeurs par défaut, la liste des paramètres peut seulement être tronquée. Par exemple, si une procédure a cinq paramètres, le quatrième et le cinquième peuvent être omis. Toutefois, le quatrième ne peut pas être ignoré tant que le cinquième est précisé, sauf si les paramètres sont transmis sous la forme **\@paramètre =** _valeur_.  
   
 ## <a name="specifying-parameter-direction"></a>Spécification de la direction du paramètre  
  La direction d'un paramètre peut être une entrée (une valeur passée dans le corps de la procédure) ou une sortie (la procédure retourne une valeur au programme appelant). La valeur par défaut est un paramètre d'entrée.  
@@ -169,10 +169,10 @@ GO
   
 ```  
   
- Exécutez `usp_GetList` afin de retourner la liste des produits [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (vélos) qui coûtent moins de 700 $. Les paramètres OUTPUT **\@cost** et **\@compareprices** sont utilisés en conjonction avec un langage de contrôle de flux afin de retourner un message dans la fenêtre **Messages** .  
+ Exécutez `usp_GetList` afin de retourner la liste des produits [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (vélos) qui coûtent moins de 700 $. Les paramètres OUTPUT **\@cost** et **\@compareprices** sont utilisés en conjonction avec un langage de contrôle de flux afin de retourner un message dans la fenêtre **Messages**.  
   
 > [!NOTE]  
->  La variable OUTPUT doit être définie pendant la création de la procédure et pendant l'utilisation de la variable. Le nom du paramètre et celui de la variable ne doivent pas nécessairement correspondre. En revanche, le type de données et le positionnement du paramètre doivent correspondre (sauf en cas d’utilisation de **\@listprice=** _variable_ ).  
+>  La variable OUTPUT doit être définie pendant la création de la procédure et pendant l'utilisation de la variable. Le nom du paramètre et celui de la variable ne doivent pas nécessairement correspondre. En revanche, le type de données et le positionnement du paramètre doivent correspondre (sauf en cas d’utilisation de **\@listprice=** _variable_).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

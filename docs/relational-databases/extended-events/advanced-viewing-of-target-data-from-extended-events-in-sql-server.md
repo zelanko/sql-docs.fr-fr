@@ -11,13 +11,13 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174873d62a2c90ba6309f9063294a27517326d62
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f6bfcd07a238c94938793d3c25769057eb058fde
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523982"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465630"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Affichage avancé des données cibles d’événements étendus dans SQL Server
 
@@ -76,8 +76,8 @@ Pour plus d’informations sur les événements étendus propres à la Base de d
 En général, les différents modes d’accès aux options avancées sont les suivants :
 
 
-- Menu standard **Fichier** > **Ouvrir** > **Fichier** .
-- Clics droits dans l’ **Explorateur d’objets** sous **Gestion** > **Événements étendus** .
+- Menu standard **Fichier** > **Ouvrir** > **Fichier**.
+- Clics droits dans l’ **Explorateur d’objets** sous **Gestion** > **Événements étendus**.
 - Menu spécial **Événements étendus** et barre d’outils spéciale pour les événements étendus.
 - Clics droits dans le volet à onglets qui présente les données cibles.
 
@@ -96,30 +96,30 @@ Il existe différentes façons d’importer des données cibles event_file dans 
 
 
 - Le contenu à l’intérieur d’un fichier . XEL n’est pas du texte brut qui peut être affiché dans Notepad.exe.
-  - Vous pouvez éventuellement accoler plusieurs fichiers .XEL via le menu **Fichier** > **Ouvrir** > **Fusionner les fichiers des événements étendus** .
+  - Vous pouvez éventuellement accoler plusieurs fichiers .XEL via le menu **Fichier** > **Ouvrir** > **Fusionner les fichiers des événements étendus**.
 
 
 
 SSMS peut afficher les données de n’importe quelle cible. Cependant, leur affichage varie en fonction de la cible :
 
-- *event_file*  : les données issues d’une cible event_file s’affichent très bien, avec des fonctionnalités complètes.
+- *event_file* : les données issues d’une cible event_file s’affichent très bien, avec des fonctionnalités complètes.
 
 
-- *ring_buffer*  : les données issues d’une cible de mémoire tampon en anneau s’affichent sous forme de données XML brutes.
+- *ring_buffer* : les données issues d’une cible de mémoire tampon en anneau s’affichent sous forme de données XML brutes.
 
 
 - Pour les autres cibles, les possibilités en termes d’affichage se situent entre event_file et ring_buffer.
   - Il s’agit notamment des cibles event_counter, histogram et pair_matching.
 
 
-- *etw_classic_sync_target*  : SSMS ne peut pas afficher les données issues du type de cible etw_classic_sync_target.
+- *etw_classic_sync_target* : SSMS ne peut pas afficher les données issues du type de cible etw_classic_sync_target.
 
 
 
 ### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Ouvrir un fichier .XEL via le menu Fichier > Ouvrir > Fichier
 
 
-Vous pouvez ouvrir un fichier .XEL via le menu standard **Fichier** > **Ouvrir** > **Fichier** .
+Vous pouvez ouvrir un fichier .XEL via le menu standard **Fichier** > **Ouvrir** > **Fichier**.
 
 Vous pouvez aussi glisser-déplacer un fichier .XEL dans la barre d’onglets de l’interface utilisateur de SSMS.
 
@@ -133,7 +133,7 @@ L’option **Afficher les données cibles** affiche les données qui ont été c
 
 Dans le volet **Explorateur d’objets** , vous pouvez développer les nœuds et cliquer ensuite avec le bouton droit sur :
 
-- **Gestion** > **Événements étendus** > **Sessions** >  *[votre-session]*  >  *[votre-nœud-cible]*  > **Afficher les données cibles** .
+- **Gestion** > **Événements étendus** > **Sessions** >  *[votre-session]*  >  *[votre-nœud-cible]*  > **Afficher les données cibles**.
 
 
 Les données cibles s’affichent dans un volet à onglets dans SSMS. Ceci est illustré dans la capture d’écran suivante.
@@ -153,7 +153,7 @@ Les données cibles s’affichent dans un volet à onglets dans SSMS. Ceci est i
 Quand votre session d’événements est active, vous pouvez souhaiter surveiller les données d’événements en temps réel, à mesure que la cible les reçoit.
 
 
-- **Gestion** > **Événements étendus** > **Sessions** >  *[votre-session]*  > **Surveiller les données actives** .
+- **Gestion** > **Événements étendus** > **Sessions** >  *[votre-session]*  > **Surveiller les données actives**.
 
 
 ![votre session > Surveiller les données actives](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -186,8 +186,8 @@ Une fois les données cibles dans SSMS, vous pouvez exporter les données dans d
 
     ![Exporter les données affichées, Événements étendus > Exporter vers > (fichier .csv, .xel ou une table)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
 
-2. Cliquez sur le nouvel élément de menu **Événements étendus** .
-3. Cliquez sur **Exporter vers** , puis choisissez un format.
+2. Cliquez sur le nouvel élément de menu **Événements étendus**.
+3. Cliquez sur **Exporter vers**, puis choisissez un format.
 
 
 
@@ -238,7 +238,7 @@ L’option **Choisir les colonnes** vous permet de contrôler l’affichage des 
 - dans le menu contextuel d’un en-tête de l’affichage de données.
 
 
-Quand vous cliquez sur **Choisir les colonnes** , la boîte de dialogue du même nom s’affiche.
+Quand vous cliquez sur **Choisir les colonnes**, la boîte de dialogue du même nom s’affiche.
 
 
 ![Boîte de dialogue Choisir les colonnes, propose aussi les options de fusion des colonnes](../../relational-databases/extended-events/media/xevents-ssms-ui35-choosecolumns.png)
@@ -260,9 +260,9 @@ La boîte de dialogue **Choisir les colonnes** comporte une section consacrée �
 
 Dans le domaine des événements étendus, vous pouvez spécifier deux types de filtres principaux :
 
-- *Filtres de préciblage*  : filtres qui réduisent la quantité de données envoyées par le moteur d’événements à votre cible.
+- *Filtres de préciblage* : filtres qui réduisent la quantité de données envoyées par le moteur d’événements à votre cible.
 
-- *Filtres de post-ciblage*  : filtres que vous pouvez sélectionner dans l’interface utilisateur de SSMS pour exclure certains enregistrements cibles de l’affichage.
+- *Filtres de post-ciblage* : filtres que vous pouvez sélectionner dans l’interface utilisateur de SSMS pour exclure certains enregistrements cibles de l’affichage.
 
 
 Les filtres de l’affichage SSMS sont les suivants :
@@ -271,7 +271,7 @@ Les filtres de l’affichage SSMS sont les suivants :
 - un filtre de *valeurs de colonne* .
 
 
-La relation entre les filtres de temps et de colonne est une valeur booléenne « *AND* ».
+La relation entre les filtres de temps et de colonne est une valeur booléenne «*AND*».
 
 
 ![Filtres d’intervalle de temps et de colonne, dans la boîte de dialogue Filtres](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
@@ -288,7 +288,7 @@ Regrouper des lignes par la mise en correspondance des valeurs d’une colonne d
 #### <a name="d41-grouping"></a>D.4.1 Regroupement
 
 
-Dans la barre d’outils des événements étendus, le bouton **Regroupement** donne accès à une boîte de dialogue dans laquelle vous pouvez regrouper les données affichées par une colonne donnée. La capture d’écran suivante montre une boîte de dialogue qui permet d’effectuer un regroupement en fonction de la colonne *nom* .
+Dans la barre d’outils des événements étendus, le bouton **Regroupement** donne accès à une boîte de dialogue dans laquelle vous pouvez regrouper les données affichées par une colonne donnée. La capture d’écran suivante montre une boîte de dialogue qui permet d’effectuer un regroupement en fonction de la colonne *nom*.
 
 ![Capture d’écran montrant la barre d’outils avec le bouton Regroupement sélectionné et la boîte de dialogue Regroupement.](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
@@ -301,7 +301,7 @@ Dans la barre d’outils des événements étendus, le bouton **Regroupement** d
 #### <a name="d42-aggregation"></a>D.4.2 Agrégation
 
 
-Une fois que les données affichées ont été regroupées, vous pouvez poursuivre en agrégeant les données dans d’autres colonnes.  La capture d’écran suivante illustre l’agrégation des données regroupées par nombre ( *count* ).
+Une fois que les données affichées ont été regroupées, vous pouvez poursuivre en agrégeant les données dans d’autres colonnes.  La capture d’écran suivante illustre l’agrégation des données regroupées par nombre ( *count*).
 
 ![Capture d’écran montrant la barre d’outils avec l’option Agrégation sélectionnée et la boîte de dialogue Agrégation.](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 

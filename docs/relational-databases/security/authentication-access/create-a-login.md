@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b94fa9994a42dd11b6fa5a54fffd222e87feb2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867447"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468590"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "91867447"
   
      Si vous cliquez sur **Rechercher…**  :  
   
-    1.  Sous **Sélectionner ce type d’objet**, cliquez sur **Types d’objet...** pour ouvrir la boîte de dialogue **Types d’objet** et sélectionnez tout ou partie des éléments suivants : **Entités de sécurité intégrées**, **Groupes** et **Utilisateurs**. Les options**Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
+    1.  Sous **Sélectionner ce type d’objet**, cliquez sur **Types d’objet...** pour ouvrir la boîte de dialogue **Types d’objet** et sélectionnez tout ou partie des éléments suivants : **Entités de sécurité intégrées**, **Groupes** et **Utilisateurs**. Les options **Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
   
     2.  Sous **À partir de cet emplacement**, cliquez sur **Emplacements…** pour ouvrir la boîte de dialogue **Emplacements** et sélectionner un des emplacements de serveur disponibles. Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "91867447"
   
     3.  Pour appliquer des options de stratégie de mot de passe pour la complexité et l'application, sélectionnez **Conserver la stratégie de mot de passe**. Pour plus d'informations, consultez [Password Policy](../../../relational-databases/security/password-policy.md). Il s'agit d'une option par défaut lorsque **Authentification SQL Server** est sélectionné.  
   
-    4.  Pour appliquer des options de stratégie de mot de passe pour l'expiration, sélectionnez **Conserver l'expiration du mot de passe**. L'option**Conserver la stratégie de mot de passe** doit être sélectionnée pour activer cette case à cocher. Il s'agit d'une option par défaut lorsque **Authentification SQL Server** est sélectionné.  
+    4.  Pour appliquer des options de stratégie de mot de passe pour l'expiration, sélectionnez **Conserver l'expiration du mot de passe**. L'option **Conserver la stratégie de mot de passe** doit être sélectionnée pour activer cette case à cocher. Il s'agit d'une option par défaut lorsque **Authentification SQL Server** est sélectionné.  
   
-    5.  Pour forcer l'utilisateur à créer un nouveau mot de passe après la première utilisation du compte de connexion, sélectionnez **L'utilisateur doit changer de mot de passe à la prochaine connexion**. L'option**Conserver l'expiration du mot de passe** doit être sélectionnée pour activer cette case à cocher. Il s'agit d'une option par défaut lorsque **Authentification SQL Server** est sélectionné.  
+    5.  Pour forcer l'utilisateur à créer un nouveau mot de passe après la première utilisation du compte de connexion, sélectionnez **L'utilisateur doit changer de mot de passe à la prochaine connexion**. L'option **Conserver l'expiration du mot de passe** doit être sélectionnée pour activer cette case à cocher. Il s'agit d'une option par défaut lorsque **Authentification SQL Server** est sélectionné.  
   
 6.  Pour associer le compte de connexion à un certificat de sécurité autonome, sélectionnez **Mappé au certificat** , puis sélectionnez le nom d’un certificat existant dans la liste.  
   
@@ -104,31 +104,31 @@ ms.locfileid: "91867447"
 ### <a name="server-roles"></a>Rôles de serveur  
  La page **Rôles de serveur** répertorie tous les rôles possibles qui peuvent être affectés au nouveau compte de connexion. Les options suivantes sont disponibles :  
   
- Case à cocher**bulkadmin**  
+ Case à cocher **bulkadmin**  
  Les membres du rôle serveur fixe **bulkadmin** peuvent exécuter l’instruction BULK INSERT.  
   
- Case à cocher**dbcreator**  
+ Case à cocher **dbcreator**  
  Les membres du rôle serveur fixe **dbcreator** peuvent créer, modifier, supprimer et restaurer n’importe quelle base de données.  
   
- Case à cocher**diskadmin**  
+ Case à cocher **diskadmin**  
  Les membres du rôle serveur fixe **diskadmin** peuvent gérer les fichiers de disque.  
   
- Case à cocher**processadmin**  
+ Case à cocher **processadmin**  
  Les membres du rôle serveur fixe **processadmin** peuvent arrêter les processus en cours d’exécution dans une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Case à cocher**public**  
+ Case à cocher **public**  
  Tous les utilisateurs, groupes et rôles SQL Server appartiennent au rôle serveur fixe **public** par défaut.  
   
- Case à cocher**securityadmin**  
+ Case à cocher **securityadmin**  
  Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent assigner des autorisations GRANT, DENY et REVOKE au niveau du serveur. Ils peuvent aussi assigner des autorisations GRANT, DENY et REVOKE au niveau de la base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Case à cocher**serveradmin**  
+ Case à cocher **serveradmin**  
  Les membres du rôle serveur fixe **serveradmin** peuvent modifier les options de configuration à l’échelle du serveur et arrêter le serveur.  
   
- Case à cocher**setupadmin**  
+ Case à cocher **setupadmin**  
  Les membres du rôle serveur fixe **setupadmin** peuvent ajouter et supprimer des serveurs liés et exécuter certaines procédures stockées du système.  
   
- Case à cocher**sysadmin**  
+ Case à cocher **sysadmin**  
  Les membres du rôle serveur fixe **sysadmin** peuvent exécuter n’importe quelle activité dans le [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 ### <a name="user-mapping"></a>Mappage de l'utilisateur  

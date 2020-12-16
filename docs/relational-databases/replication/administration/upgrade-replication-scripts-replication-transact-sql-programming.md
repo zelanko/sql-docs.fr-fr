@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 31850fe7f9ecf78af666faced53f552646de672a
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 2a75dec86a197a5a0c4f4029a947ad801b1f2271
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364686"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467390"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Mettre à niveau les scripts de réplication (programmation Transact-SQL de la réplication)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,31 +37,31 @@ ms.locfileid: "93364686"
   
  Ces améliorations de sécurité, qui offrent un contrôle accru sur les autorisations en vous permettant de spécifier explicitement les comptes Windows [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sous lesquels les travaux de l'Agent de réplication sont exécutés, affectent les procédures stockées suivantes dans les scripts existants :  
   
--   **sp_addpublication_snapshot** :  
+-   **sp_addpublication_snapshot**:  
   
      Vous devez maintenant fournir les informations d’identification Windows comme `@job_login` et `@job_password` lors de l’exécution de [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) pour créer le travail sous lequel l’Agent d’instantané s’exécute sur le serveur de distribution.  
   
--   **sp_addpushsubscription_agent** :  
+-   **sp_addpushsubscription_agent**:  
   
      Vous devez maintenant exécuter [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) pour ajouter un travail explicitement et fournir les informations d’identification Windows (`@job_login` et `@job_password`) sous lesquelles le travail de l’Agent de distribution s’exécute sur le serveur de distribution. Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ces actions étaient exécutées automatiquement lors de la création d'un abonnement par émission de données.  
   
--   **sp_addmergepushsubscription_agent** :  
+-   **sp_addmergepushsubscription_agent**:  
   
      Vous devez maintenant exécuter [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) pour ajouter un travail explicitement et fournir les informations d’identification Windows (`@job_login` et `@job_password`) sous lesquelles le travail de l’Agent de fusion s’exécute sur le serveur de distribution. Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ces actions étaient exécutées automatiquement lors de la création d'un abonnement par émission de données.  
   
--   **sp_addpullsubscription_agent** :  
+-   **sp_addpullsubscription_agent**:  
   
      Vous devez maintenant fournir les informations d’identification Windows comme `@job_login` et `@job_password` lors de l’exécution de [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) pour créer le travail sous lequel l’Agent de distribution s’exécute sur l’Abonné.  
   
--   **sp_addmergepullsubscription_agent** :  
+-   **sp_addmergepullsubscription_agent**:  
   
      Vous devez maintenant fournir les informations d’identification Windows comme `@job_login` et `@job_password` lors de l’exécution de [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) pour créer le travail sous lequel l’Agent de fusion s’exécute sur l’abonné.  
   
--   **sp_addlogreader_agent** :  
+-   **sp_addlogreader_agent**:  
   
      Vous devez maintenant exécuter [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) pour ajouter manuellement le travail et fournir les informations d’identification Windows sous lesquelles l’Agent de lecture du journal s’exécute sur le serveur de distribution. Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ces actions étaient exécutées automatiquement lors de la création d'une publication transactionnelle.  
   
--   **sp_addqreader_agent** :  
+-   **sp_addqreader_agent**:  
   
      Vous devez maintenant exécuter [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) pour ajouter manuellement le travail et fournir les informations d’identification Windows sous lesquelles l’Agent de lecture de la file d’attente s’exécute sur le serveur de distribution. Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], ces actions étaient exécutées automatiquement lors de la création d'une publication transactionnelle prenant en charge la mise à jour en file d'attente.  
   

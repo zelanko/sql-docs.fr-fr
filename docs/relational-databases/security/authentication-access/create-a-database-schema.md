@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b1c23ddc584f909661b07058e519347be045fa
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bfb3ee2b9dee35b5154c019f47a25570b6f7eeae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005398"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468580"
 ---
 # <a name="create-a-database-schema"></a>Créer un schéma de base de données
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92005398"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
--   Le nouveau schéma appartient à l'un des principaux de base de données suivants : utilisateur de base de données, rôle de base de données ou rôle d'application. Les objets créés dans un schéma appartiennent au propriétaire du schéma. La valeur **principal_id** de ces objets est NULL dans **sys.objects** . Il est possible de transférer la propriété des objets contenus dans le schéma à n'importe quel principal de base de données, mais le propriétaire du schéma conserve toujours l'autorisation CONTROL sur les objets dans le schéma.  
+-   Le nouveau schéma appartient à l'un des principaux de base de données suivants : utilisateur de base de données, rôle de base de données ou rôle d'application. Les objets créés dans un schéma appartiennent au propriétaire du schéma. La valeur **principal_id** de ces objets est NULL dans **sys.objects**. Il est possible de transférer la propriété des objets contenus dans le schéma à n'importe quel principal de base de données, mais le propriétaire du schéma conserve toujours l'autorisation CONTROL sur les objets dans le schéma.  
   
 -   Quand vous créez un objet de base de données, si vous spécifiez un principal de domaine valide (utilisateur ou groupe) comme propriétaire de l'objet, le principal du domaine est ajouté à la base de données comme schéma. Le nouveau schéma appartient à ce principal de domaine.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "92005398"
   
 2.  Développez la base de données où créer le schéma de la base de données.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Sécurité** , pointez sur **Nouveau** , puis sélectionnez **Schéma** .  
+3.  Cliquez avec le bouton droit sur le dossier **Sécurité** , pointez sur **Nouveau**, puis sélectionnez **Schéma**.  
   
 4.  Dans la boîte de dialogue **Schéma - Nouveau** , sur la page **Général** , entrez un nom pour le nouveau schéma dans la zone **Nom du schéma** .  
   
@@ -63,10 +63,10 @@ ms.locfileid: "92005398"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 > [!NOTE]
-> Aucune boîte de dialogue ne s’affiche si vous créez un schéma avec SSMS sur une instance **Azure SQL Database** ou **Azure Synapse Analytics** . Vous devez exécuter l’instruction T-SQL Create Schema Template qui est générée.
+> Aucune boîte de dialogue ne s’affiche si vous créez un schéma avec SSMS sur une instance **Azure SQL Database** ou **Azure Synapse Analytics**. Vous devez exécuter l’instruction T-SQL Create Schema Template qui est générée.
   
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Schéma- Nouveau** offre également des options sur deux pages supplémentaires : **Autorisations** et **Propriétés étendues** .  
+ La boîte de dialogue **Schéma- Nouveau** offre également des options sur deux pages supplémentaires : **Autorisations** et **Propriétés étendues**.  
   
 -   La page **Autorisations** répertorie tous les éléments sécurisables possibles et les autorisations sur les éléments sécurisables qui peuvent être accordées à la connexion.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "92005398"
   
 #### <a name="to-create-a-schema"></a>Pour créer un schéma  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête** .  
+2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
 3.  L’exemple suivant crée un schéma nommé `Chains`, puis crée une table nommée `Sizes`.  
     ```sql  

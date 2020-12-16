@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: e978c269a17f42bc75729303a860c61d4868f3fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868596"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468610"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91868596"
 ### <a name="database-audit-specification"></a>Spécification de l'audit de la base de données  
  L'objet *Spécification de l'audit de la base de données* appartient également à un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez créer une spécification de l'audit de la base de données par base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par audit.  
   
- La spécification de l'audit de la base de données recueille des actions d'audit au niveau de la base de données déclenchées par la fonctionnalité Événements étendus. Vous pouvez ajouter des groupes d’actions d’audit ou des événements d’audit à une spécification de l’audit de la base de données. *Les événements d’audit* sont les opérations atomiques qui peuvent être auditées par le moteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les*groupes d'actions d'audit* sont des groupes d'actions prédéfinis. Tous deux sont à la portée de la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ces actions sont envoyées à l'audit, qui les enregistre dans la cible. N'incluez pas d'objets dans l'étendue du serveur, tels que les vues système, dans une spécification d'audit de base de données utilisateur.  
+ La spécification de l'audit de la base de données recueille des actions d'audit au niveau de la base de données déclenchées par la fonctionnalité Événements étendus. Vous pouvez ajouter des groupes d’actions d’audit ou des événements d’audit à une spécification de l’audit de la base de données. *Les événements d’audit* sont les opérations atomiques qui peuvent être auditées par le moteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Les *groupes d'actions d'audit* sont des groupes d'actions prédéfinis. Tous deux sont à la portée de la base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ces actions sont envoyées à l'audit, qui les enregistre dans la cible. N'incluez pas d'objets dans l'étendue du serveur, tels que les vues système, dans une spécification d'audit de base de données utilisateur.  
   
  Les actions d’audit et les groupes d’actions d’audit au niveau de la base de données sont décrits dans la rubrique [Actions et groupes d’actions SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "91868596"
   
 3.  Activez l'audit.  
   
-4.  Lisez les événements d’audit à l’aide de l’ **Observateur d’événements**Windows, de la **Visionneuse du fichier journal**ou de la fonction fn_get_audit_file.  
+4.  Lisez les événements d’audit à l’aide de l’ **Observateur d’événements** Windows, de la **Visionneuse du fichier journal** ou de la fonction fn_get_audit_file.  
 
  Pour plus d'informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) et [Créer une spécification de l’audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   

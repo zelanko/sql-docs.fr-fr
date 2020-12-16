@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3b29f98ad39d34935d65530841f8e81063233791
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719516"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468720"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Synchroniser un abonnement à l’aide du Gestionnaire de synchronisation Windows
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85719516"
   
     -   Dans Internet Explorer, cliquez sur **Outils**, puis sur **Synchroniser**.  
   
-    -   Cliquez sur **Démarrer**, pointez sur **Programmes** ou **Tous les programmes**, puis sur **Accessoires**et cliquez sur **Synchroniser**.  
+    -   Cliquez sur **Démarrer**, pointez sur **Programmes** ou **Tous les programmes**, puis sur **Accessoires** et cliquez sur **Synchroniser**.  
   
     -   Cliquez sur **Démarrer**, puis sur **Exécuter** . Dans la boîte de dialogue **Exécuter** , saisissez **mobsync.exe** in the **Ouvrir** , puis cliquez sur **OK**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "85719516"
   
     -   **Identification**  
   
-    -   **Connexion à l'Abonné**, **Connexion au serveur de distribution**et **Connexion au serveur de publication** (pour la réplication de fusion uniquement)  
+    -   **Connexion à l'Abonné**, **Connexion au serveur de distribution** et **Connexion au serveur de publication** (pour la réplication de fusion uniquement)  
   
     -   **Informations sur le serveur Web** (pour les abonnements de fusion sur les abonnés exécutant SQL Server 2005 ou supérieur)  
   

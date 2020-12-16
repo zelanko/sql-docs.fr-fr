@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88c0c8d1365d91489a7485e6eabed759b0515716
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 41f86301a0520201fb0316de6d4d3379d27c37d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428441"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467870"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88428441"
 |DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |SessionLoginName|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
-|EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 1 = Les requêtes d'une procédure stockée ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les procédures stockées.<br /><br /> Pour les procédures stockées avec un nombre *n* de requêtes :<br /><br /> Nombre*n* de type 1|21|Oui|  
+|EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 1 = Les requêtes d'une procédure stockée ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les procédures stockées.<br /><br /> Pour les procédures stockées avec un nombre *n* de requêtes :<br /><br /> Nombre *n* de type 1|21|Oui|  
 |IntegerData2|**int**|Fin de l'instruction dans la procédure stockée.<br /><br /> -1 pour la fin de la procédure stockée.|55|Oui|  
 |ObjectID|**int**|ID affecté à l'objet par le système.|22|Oui|  
 |Offset|**int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
@@ -79,7 +79,7 @@ ms.locfileid: "88428441"
 |DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |SessionLoginName|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
-|EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 2 = Les requêtes d'une instruction SQL ad hoc ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les traitements ad hoc.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> Nombre*n* de type 2|21|Oui|  
+|EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 2 = Les requêtes d'une instruction SQL ad hoc ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les traitements ad hoc.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> Nombre *n* de type 2|21|Oui|  
 |IntegerData2|**int**|Fin de l'instruction dans le traitement.<br /><br /> -1 pour la fin du traitement.|55|Oui|  
 |ObjectID|**int**|N/A|22|Oui|  
 |Offset|**int**|Décalage de départ de l'instruction dans le traitement.<br /><br /> 0 pour le début du traitement.|61|Oui|  

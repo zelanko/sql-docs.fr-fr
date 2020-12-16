@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2665ab9b5a30209a123056664921334ce3c8367
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eebd2896dc1931e03dd121867ee09c1940d02d36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485301"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466710"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Fonctions déterministes et non déterministes
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "88485301"
 |Fonction|Commentaires|  
 |--------------|--------------|  
 |Toutes les fonctions d'agrégation|Toutes les fonctions d'agrégation sont déterministes, sauf si elles sont spécifiées avec les clauses OVER et ORDER BY. Pour obtenir la liste de ces fonctions, consultez [Fonctions d’agrégation &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md).|  
-|CAST|Déterministe sauf si utilisée avec **datetime**, **smalldatetime**ou **sql_variant**.|  
+|CAST|Déterministe sauf si utilisée avec **datetime**, **smalldatetime** ou **sql_variant**.|  
 |CONVERT|Déterministe sauf dans l'un des cas suivants :<br /><br /> <br /><br /> Le type de source est **sql_variant**.<br /><br /> Le type de cible est **sql_variant** et son type de source est non déterministe.<br /><br /> Le type de source ou de cible est **datetime** ou **smalldatetime**, l’autre type de source ou de cible est une chaîne de caractères et un style non déterministe est spécifié. Pour être déterministe, le paramètre de style doit être une constante. De plus, les styles inférieurs ou égaux à 100 sont non-déterministes, à l'exception des styles 20 et 21. Les styles supérieurs à 100 sont déterministes, à l'exception des styles 106, 107, 109 et 113.|  
 |CHECKSUM|Déterministe, sauf CHECKSUM(*).|  
 |ISDATE|Déterministe uniquement si utilisé avec la fonction CONVERT, si le paramètre de style CONVERT est spécifié et si le style est différent de 0, 100, 9 ou 109.|  

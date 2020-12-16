@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38293d4b60168028a5669a9f5dd2e01ccbde012
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810731"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466750"
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "91810731"
  Pour accéder aux données modifiées associées à une instance de capture, l'utilisateur doit pouvoir accéder à toutes les colonnes capturées de la table source associée. De plus, si un rôle de régulation est spécifié lors de la création de l'instance de capture, l'appelant doit également être membre du rôle de régulation spécifié. Les autres fonctions de capture de données modifiées générales pour accéder aux métadonnées seront accessibles à tous les utilisateurs de base de données par le biais du rôle public, bien que l'accès aux métadonnées retournées soit en général également régulé par le biais de l'accès choisi aux tables sources sous-jacentes et par l'appartenance aux rôles de régulation définis.  
   
  **Opérations DDL pour modifier les tables sources activées pour la capture de données modifiées**  
- Lorsqu’une table est activée pour la capture de données modifiées, des opérations DDL peuvent être appliquées à la table uniquement par un membre du rôle serveur fixe **sysadmin**, un membre du **rôle de base de données db_owner**ou un membre du **rôle de base de données db_ddladmin**. Les utilisateurs autorisés de manière explicite à effectuer des opérations DDL sur la table recevront l'erreur 22914 s'ils tentent d'effectuer ces opérations.  
+ Lorsqu’une table est activée pour la capture de données modifiées, des opérations DDL peuvent être appliquées à la table uniquement par un membre du rôle serveur fixe **sysadmin**, un membre du **rôle de base de données db_owner** ou un membre du **rôle de base de données db_ddladmin**. Les utilisateurs autorisés de manière explicite à effectuer des opérations DDL sur la table recevront l'erreur 22914 s'ils tentent d'effectuer ces opérations.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>Considérations relatives aux types de données pour la capture de données modifiées  
  Tous les types de colonne de base sont pris en charge par la capture de données modifiées. Le tableau suivant indique le comportement et les limites de plusieurs types de colonne.  
