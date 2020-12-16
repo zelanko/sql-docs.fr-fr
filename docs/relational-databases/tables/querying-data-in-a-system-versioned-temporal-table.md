@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f25698110307ca4539b0939ad8c1f0cb9696145b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1efbdca9b0d3d7919cf3e3f54837decd37bdf5b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537817"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484441"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Interrogation des données dans une table temporelle avec version gérée par le système
 
@@ -35,7 +35,7 @@ Pour exécuter une analyse temporelle, utilisez la nouvelle clause **FOR SYSTEM_
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-La clause**FOR SYSTEM_TIME** peut être spécifiée de façon indépendante pour chaque table dans une requête. Elle peut être utilisée à l'intérieur d’expressions de table communes, de fonctions table incluses et de procédures stockées. Lors de l’utilisation d’un alias de table avec une table temporelle, la clause **FOR SYSTEM_TIME** doit être comprise entre le nom de la table temporelle et l’alias (consultez le deuxième exemple dans « Requête d’un point précis dans le temps à l’aide de la sous-clause AS OF »).
+La clause **FOR SYSTEM_TIME** peut être spécifiée de façon indépendante pour chaque table dans une requête. Elle peut être utilisée à l'intérieur d’expressions de table communes, de fonctions table incluses et de procédures stockées. Lors de l’utilisation d’un alias de table avec une table temporelle, la clause **FOR SYSTEM_TIME** doit être comprise entre le nom de la table temporelle et l’alias (consultez le deuxième exemple dans « Requête d’un point précis dans le temps à l’aide de la sous-clause AS OF »).
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Requête d’un point précis dans le temps à l'aide de la sous-clause AS OF
 

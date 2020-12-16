@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5919aa313147b54e52289aa0c1d530a5f0064aab
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: fe89a97c1fb13d9446b0fe07f04c7399b42a439e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195351"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489769"
 ---
 # <a name="oracle-source"></a>Source Oracle
 
@@ -162,7 +162,7 @@ Utilisez la page **Sortie d’erreur** de la boîte de dialogue **Éditeur de so
 **Comportement d’erreur**
 
 Sélectionnez la façon dont la source Oracle doit gérer les erreurs dans un flux : ignorer l’échec, rediriger la ligne ou faire échouer le composant.
-**Section connexe** : [Gestion des erreurs dans les données](./error-handling-in-data.md?view=sql-server-2017)
+**Section connexe** : [Gestion des erreurs dans les données](./error-handling-in-data.md)
 
 **Troncation**
 

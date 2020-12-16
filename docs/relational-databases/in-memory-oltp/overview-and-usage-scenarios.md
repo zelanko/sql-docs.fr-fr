@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f759c6cb9b13b75216f5927d078f45996378ab8
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35e59fa45d81c5b80fe6ff28e2cb3ab4abab47c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175983"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485271"
 ---
 # <a name="overview-and-usage-scenarios"></a>Vue d’ensemble et scénarios d’utilisation
 
@@ -37,10 +37,10 @@ Le fait que les données se trouvent en mémoire ne signifie pas pour autant que
 
 Pour tirer parti de l’OLTP en mémoire dans votre base de données, vous devez utiliser un ou plusieurs des types d’objets suivants :
 
-- Les*tables optimisées en mémoire* servent à stocker les données utilisateur. Vous déclarez qu’une table doit être optimisée en mémoire au moment de sa création.
-- Les*tables non durables* sont utilisées pour les données temporaires, soit pour la mise en cache, soit pour le jeu de résultats intermédiaire (à la place des tables temporaires traditionnelles). Une table non durable est une table optimisée en mémoire qui est déclarée avec DURABILITY=SCHEMA_ONLY, ce qui veut dire que les modifications apportées à ces tables n’entraînent aucune E/S. Cela évite la consommation de ressources d’E/S de journal lorsque la durabilité n’est pas un critère important.
-- Les*types de tables optimisées en mémoire* sont utilisés pour les paramètres table, ainsi que pour les jeux de résultats intermédiaires dans les procédures stockées. Ils peuvent être utilisés au lieu des types de tables traditionnels. Les variables de table et les paramètres table qui sont déclarés à l’aide d’un type de table optimisée en mémoire héritent des avantages des tables optimisées en mémoire non durables : accès efficace aux données et absence d’E/S.
-- Les*modules T-SQL compilés en mode natif* permettent d’accélérer encore plus l’exécution d’une transaction individuelle en réduisant les cycles processeur requis pour traiter les opérations. Vous déclarez qu’un module Transact-SQL doit être compilé en mode natif au moment de sa création. Les modules T-SQL suivants peuvent être compilés en mode natif : procédures stockées, déclencheurs et fonctions scalaires définies par l’utilisateur.
+- Les *tables optimisées en mémoire* servent à stocker les données utilisateur. Vous déclarez qu’une table doit être optimisée en mémoire au moment de sa création.
+- Les *tables non durables* sont utilisées pour les données temporaires, soit pour la mise en cache, soit pour le jeu de résultats intermédiaire (à la place des tables temporaires traditionnelles). Une table non durable est une table optimisée en mémoire qui est déclarée avec DURABILITY=SCHEMA_ONLY, ce qui veut dire que les modifications apportées à ces tables n’entraînent aucune E/S. Cela évite la consommation de ressources d’E/S de journal lorsque la durabilité n’est pas un critère important.
+- Les *types de tables optimisées en mémoire* sont utilisés pour les paramètres table, ainsi que pour les jeux de résultats intermédiaires dans les procédures stockées. Ils peuvent être utilisés au lieu des types de tables traditionnels. Les variables de table et les paramètres table qui sont déclarés à l’aide d’un type de table optimisée en mémoire héritent des avantages des tables optimisées en mémoire non durables : accès efficace aux données et absence d’E/S.
+- Les *modules T-SQL compilés en mode natif* permettent d’accélérer encore plus l’exécution d’une transaction individuelle en réduisant les cycles processeur requis pour traiter les opérations. Vous déclarez qu’un module Transact-SQL doit être compilé en mode natif au moment de sa création. Les modules T-SQL suivants peuvent être compilés en mode natif : procédures stockées, déclencheurs et fonctions scalaires définies par l’utilisateur.
 
 OLTP en mémoire est intégré à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Et comme ces objets se comportent de façon similaire aux objets standard équivalents, vous pouvez généralement améliorer les performances simplement en apportant quelques modifications minimes à la base de données et à l’application. De plus, vous pouvez avoir des tables optimisées en mémoire et des tables sur disque traditionnelles dans la même base de données, et exécuter simultanément des requêtes sur ces deux types de tables. Un script Transact-SQL présentant un exemple de chacun de ces types d’objets est fourni vers la fin de cet article.
 

@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecb1710f992535ca4e6ebca3a3f825c5e1bffc9a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4f2a00a567282eb4a2d5990360b630817d1950c6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496972"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489472"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -41,7 +41,7 @@ Renomme un utilisateur de base de données ou change son schéma par défaut.
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -57,7 +57,7 @@ Renomme un utilisateur de base de données ou change son schéma par défaut.
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -85,36 +85,36 @@ NAME = newUserName
 
 ## <a name="arguments"></a>Arguments
 
- *userName*  : spécifie le nom qui identifie l'utilisateur dans cette base de données.
+ *userName* : spécifie le nom qui identifie l'utilisateur dans cette base de données.
 
- LOGIN **=** _loginName_  : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
+ LOGIN **=** _loginName_ : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
 
- NAME **=** _newUserName_  : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
+ NAME **=** _newUserName_ : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } : spécifie le premier schéma que le serveur va interroger pour résoudre les noms des objets associés à cet utilisateur. La définition du schéma par défaut sur NULL supprime un schéma par défaut d'un groupe Windows. L'option NULL ne peut pas être utilisée avec un utilisateur Windows.
 
- PASSWORD **=** ' *password* '  **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** '*password*'  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Spécifie le mot de passe de l'utilisateur à modifier. Les mots de passe respectent la casse.
 
 > [!NOTE]
 > Cette option est uniquement disponible pour les utilisateurs à relation contenant-contenu. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md) et [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- Mot de passe de l’utilisateur actuel qui sera remplacé par ' *password* '. Les mots de passe respectent la casse. *OLD_PASSWORD* est obligatoire pour changer un mot de passe, sauf si vous disposez de l’autorisation **ALTER ANY USER** . La spécification obligatoire du paramètre *OLD_PASSWORD* empêche les utilisateurs disposant de l’autorisation **IMPERSONATION** de changer le mot de passe.
+ Mot de passe de l’utilisateur actuel qui sera remplacé par '*password*'. Les mots de passe respectent la casse. *OLD_PASSWORD* est obligatoire pour changer un mot de passe, sauf si vous disposez de l’autorisation **ALTER ANY USER**. La spécification obligatoire du paramètre *OLD_PASSWORD* empêche les utilisateurs disposant de l’autorisation **IMPERSONATION** de changer le mot de passe.
 
 > [!NOTE]
 > Cette option est uniquement disponible pour les utilisateurs à relation contenant-contenu.
 
- DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
+ DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
 
  Spécifie une langue par défaut à affecter à l'utilisateur. Si cette option a la valeur NONE, la langue par défaut est la langue par défaut actuellement définie pour la base de données. Si la langue par défaut de la base de données est modifiée ultérieurement, la langue par défaut de l'utilisateur reste inchangée. *DEFAULT_LANGUAGE* peut être l’ID local (lcid), le nom de la langue ou l’alias de langue.
 
 > [!NOTE]
 > Cette option peut être spécifiée uniquement dans une base de données autonome et uniquement pour les utilisateurs autonomes.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **S’applique à**  : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Supprime les contrôles de métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc. Cela permet à l’utilisateur de copier en bloc des données chiffrées entre des tables ou des bases de données, sans déchiffrer les données. La valeur par défaut est OFF.
 
@@ -132,7 +132,7 @@ NAME = newUserName
  En revanche, vous ne pouvez pas spécifier DEFAULT_SCHEMA pour un utilisateur mappé à un certificat ou à une clé asymétrique.
 
 > [!IMPORTANT]
-> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin** . Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
+> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin**. Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
 
  Vous ne pouvez modifier le nom d'un utilisateur associé à une connexion d'accès ou à un groupe Windows que si le SID du nouveau nom d'utilisateur correspond au SID enregistré dans la base de données. Cette vérification permet d'empêcher l'usurpation des identités de connexion Windows dans la base de données.
 
@@ -162,7 +162,7 @@ Le nom d’un utilisateur mappé à un compte de connexion [!INCLUDE[ssNoVersion
 
 ### <a name="permissions"></a>Autorisations
 
- Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER** .
+ Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER**.
 
  Pour changer la connexion cible d’un utilisateur, vous devez disposer de l’autorisation **CONTROL** sur la base de données.
 
@@ -196,7 +196,7 @@ GO
 
  L'exemple suivant modifie plusieurs options pour un utilisateur de base de données autonome dans une instruction.
 
-**S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
 
 ```sql
 ALTER USER Philip
@@ -216,11 +216,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -232,7 +232,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -278,31 +278,31 @@ ALTER USER userName
 
 ## <a name="arguments"></a>Arguments
 
- *userName*  : spécifie le nom qui identifie l'utilisateur dans cette base de données.
+ *userName* : spécifie le nom qui identifie l'utilisateur dans cette base de données.
 
- LOGIN **=** _loginName_  : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
+ LOGIN **=** _loginName_ : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
 
  Si l’instruction ALTER USER est la seule instruction d’un lot SQL, Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction ALTER USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.
 
- NAME **=** _newUserName_  : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
+ NAME **=** _newUserName_ : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } : spécifie le premier schéma que le serveur va interroger pour résoudre les noms des objets associés à cet utilisateur. La définition du schéma par défaut sur NULL supprime un schéma par défaut d'un groupe Windows. L'option NULL ne peut pas être utilisée avec un utilisateur Windows.
 
- PASSWORD **=** ' *password* '  **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** '*password*'  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Spécifie le mot de passe de l'utilisateur à modifier. Les mots de passe respectent la casse.
 
 > [!NOTE]
 > Cette option est uniquement disponible pour les utilisateurs à relation contenant-contenu. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md) et [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- Mot de passe de l’utilisateur actuel qui sera remplacé par ' *password* '. Les mots de passe respectent la casse. *OLD_PASSWORD* est obligatoire pour changer un mot de passe, sauf si vous disposez de l’autorisation **ALTER ANY USER** . La spécification obligatoire du paramètre *OLD_PASSWORD* empêche les utilisateurs disposant de l’autorisation **IMPERSONATION** de changer le mot de passe.
+ Mot de passe de l’utilisateur actuel qui sera remplacé par '*password*'. Les mots de passe respectent la casse. *OLD_PASSWORD* est obligatoire pour changer un mot de passe, sauf si vous disposez de l’autorisation **ALTER ANY USER**. La spécification obligatoire du paramètre *OLD_PASSWORD* empêche les utilisateurs disposant de l’autorisation **IMPERSONATION** de changer le mot de passe.
 
 > [!NOTE]
 > Cette option est uniquement disponible pour les utilisateurs à relation contenant-contenu.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **S’applique à**  : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Supprime les contrôles de métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc. Cela permet à l’utilisateur de copier en bloc des données chiffrées entre des tables ou des bases de données, sans déchiffrer les données. La valeur par défaut est OFF.
 
@@ -320,7 +320,7 @@ ALTER USER userName
  En revanche, vous ne pouvez pas spécifier DEFAULT_SCHEMA pour un utilisateur mappé à un certificat ou à une clé asymétrique.
 
 > [!IMPORTANT]
-> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin** . Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
+> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin**. Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
 
  Vous ne pouvez modifier le nom d'un utilisateur associé à une connexion d'accès ou à un groupe Windows que si le SID du nouveau nom d'utilisateur correspond au SID enregistré dans la base de données. Cette vérification permet d'empêcher l'usurpation des identités de connexion Windows dans la base de données.
 
@@ -350,7 +350,7 @@ Le nom d’un utilisateur mappé à un compte de connexion [!INCLUDE[ssNoVersion
 
 ### <a name="permissions"></a>Autorisations
 
- Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER** .
+ Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER**.
 
  Pour changer la connexion cible d’un utilisateur, vous devez disposer de l’autorisation **CONTROL** sur la base de données.
 
@@ -401,11 +401,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -417,7 +417,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -466,17 +466,17 @@ ALTER USER userName
 
 ## <a name="arguments"></a>Arguments
 
- *userName*  : spécifie le nom qui identifie l'utilisateur dans cette base de données.
+ *userName* : spécifie le nom qui identifie l'utilisateur dans cette base de données.
 
- LOGIN **=** _loginName_  : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
+ LOGIN **=** _loginName_ : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
 
  Si l’instruction ALTER USER est la seule instruction d’un lot SQL, Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction ALTER USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.
 
- NAME **=** _newUserName_  : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
+ NAME **=** _newUserName_ : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } : spécifie le premier schéma que le serveur va interroger pour résoudre les noms des objets associés à cet utilisateur. La définition du schéma par défaut sur NULL supprime un schéma par défaut d'un groupe Windows. L'option NULL ne peut pas être utilisée avec un utilisateur Windows.
 
- PASSWORD **=** ' *password* '
+ PASSWORD **=** '*password*'
 
  Spécifie le mot de passe de l'utilisateur à modifier. Les mots de passe respectent la casse.
 
@@ -485,7 +485,7 @@ ALTER USER userName
 
  OLD_PASSWORD **=** _'oldpassword'_
 
- Mot de passe de l’utilisateur actuel qui sera remplacé par ' *password* '. Les mots de passe respectent la casse. *OLD_PASSWORD* est obligatoire pour changer un mot de passe, sauf si vous disposez de l’autorisation **ALTER ANY USER** . La spécification obligatoire du paramètre *OLD_PASSWORD* empêche les utilisateurs disposant de l’autorisation **IMPERSONATION** de changer le mot de passe.
+ Mot de passe de l’utilisateur actuel qui sera remplacé par '*password*'. Les mots de passe respectent la casse. *OLD_PASSWORD* est obligatoire pour changer un mot de passe, sauf si vous disposez de l’autorisation **ALTER ANY USER**. La spécification obligatoire du paramètre *OLD_PASSWORD* empêche les utilisateurs disposant de l’autorisation **IMPERSONATION** de changer le mot de passe.
 
 > [!NOTE]
 > Cette option est uniquement disponible pour les utilisateurs à relation contenant-contenu.
@@ -515,7 +515,7 @@ ALTER USER userName
  En revanche, vous ne pouvez pas spécifier DEFAULT_SCHEMA pour un utilisateur mappé à un certificat ou à une clé asymétrique.
 
 > [!IMPORTANT]
-> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin** . Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
+> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin**. Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
 
  Vous ne pouvez modifier le nom d'un utilisateur associé à une connexion d'accès ou à un groupe Windows que si le SID du nouveau nom d'utilisateur correspond au SID enregistré dans la base de données. Cette vérification permet d'empêcher l'usurpation des identités de connexion Windows dans la base de données.
 
@@ -557,13 +557,13 @@ Ces remarques s’appliquent à l’authentification en tant qu’utilisateurs W
 - Dans tous les cas de migration, les rôles et les autorisations des utilisateurs ou des groupes Windows sont automatiquement transférés vers les nouveaux utilisateurs ou groupes Azure AD.
 - Une nouvelle extension de syntaxe, **FROM EXTERNAL PROVIDER** est disponible pour la modification des utilisateurs et des groupes Windows à partir de SQL local pour les utilisateurs et les groupes Azure AD. Le domaine Windows doit être fédéré avec Azure AD et tous les membres du domaine Windows doivent exister dans Azure AD lors de l’utilisation de cette extension. La syntaxe **FROM EXTERNAL PROVIDER** s’applique à Azure SQL Managed Instance et doit être utilisée si les utilisateurs Windows n’ont pas de connexion sur l’instance SQL d’origine et doivent être mappés à des utilisateurs de base de données Azure AD autonome.
 - Dans ce cas, le nom d’utilisateur (userName) autorisé peut être :
-- Un utilisateur Widows ( _domaine\utilisateur_ ).
-- Un groupe Windows ( _MyWidnowsGroup_ ).
-- Un alias Windows ( _MyWindowsAlias_ ).
+- Un utilisateur Widows (_domaine\utilisateur_).
+- Un groupe Windows (_MyWidnowsGroup_).
+- Un alias Windows (_MyWindowsAlias_).
 - Le résultat de la commande ALTER remplace l’ancien userName par le nom correspondant trouvé dans Azure AD en fonction du SID d’origine de l’ancien userName. Le nom modifié est remplacé et stocké dans les métadonnées de la base de données :
-- ( _domaine\utilisateur_ ) sera remplacé par Azure AD user@domain.com.
-- ( _domaine\\MyWidnowsGroup_ ) sera remplacé par un groupe Azure AD.
-- ( _MyWindowsAlias_ ) restera inchangé, mais le SID de cet utilisateur sera archivé Azure AD.
+- (_domaine\utilisateur_) sera remplacé par Azure AD user@domain.com.
+- (_domaine\\MyWidnowsGroup_) sera remplacé par un groupe Azure AD.
+- (_MyWindowsAlias_) restera inchangé, mais le SID de cet utilisateur sera archivé Azure AD.
 
 > [!NOTE]
 > Si le SID de l’utilisateur d’origine converti en objectID est introuvable dans Azure AD, la commande ALTER USER échoue.
@@ -584,7 +584,7 @@ Ces remarques s’appliquent à l’authentification en tant qu’utilisateurs W
 
 ### <a name="permissions"></a>Autorisations
 
- Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER** .
+ Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER**.
 
  Pour changer la connexion cible d’un utilisateur, vous devez disposer de l’autorisation **CONTROL** sur la base de données.
 
@@ -669,11 +669,11 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [Tutoriel : Migration d’utilisateurs et de groupes Windows locaux SQL Server vers SQL Managed Instance à l’aide de la syntaxe DDL T-SQL](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -685,7 +685,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -710,13 +710,13 @@ ALTER USER userName
 
 ## <a name="arguments"></a>Arguments
 
- *userName*  : spécifie le nom qui identifie l'utilisateur dans cette base de données.
+ *userName* : spécifie le nom qui identifie l'utilisateur dans cette base de données.
 
- LOGIN **=** _loginName_  : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
+ LOGIN **=** _loginName_ : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
 
  Si l’instruction ALTER USER est la seule instruction d’un lot SQL, Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction ALTER USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.
 
- NAME **=** _newUserName_  : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
+ NAME **=** _newUserName_ : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } : spécifie le premier schéma que le serveur va interroger pour résoudre les noms des objets associés à cet utilisateur. La définition du schéma par défaut sur NULL supprime un schéma par défaut d'un groupe Windows. L'option NULL ne peut pas être utilisée avec un utilisateur Windows.
 
@@ -731,7 +731,7 @@ ALTER USER userName
  En revanche, vous ne pouvez pas spécifier DEFAULT_SCHEMA pour un utilisateur mappé à un certificat ou à une clé asymétrique.
 
 > [!IMPORTANT]
-> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin** . Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
+> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin**. Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
 
  La clause WITH LOGIN active le remappage d'un utilisateur à une connexion différente. Les utilisateurs sans connexion, ceux mappés à un certificat ou bien ceux mappés à une clé asymétrique ne peuvent pas être remappés avec cette clause. Seuls les utilisateurs SQL et les utilisateurs (ou groupes) Windows peuvent être remappés. La clause WITH LOGIN ne peut pas être utilisée pour modifier le type d'utilisateur, par exemple pour modifier un compte Windows en connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -755,7 +755,7 @@ Le nom d’un utilisateur mappé à un compte de connexion [!INCLUDE[ssNoVersion
 
 ### <a name="permissions"></a>Autorisations
 
- Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER** .
+ Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER**.
 
  Pour changer la connexion cible d’un utilisateur, vous devez disposer de l’autorisation **CONTROL** sur la base de données.
 
@@ -794,11 +794,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -835,13 +835,13 @@ ALTER USER userName
 
 ## <a name="arguments"></a>Arguments
 
- *userName*  : spécifie le nom qui identifie l'utilisateur dans cette base de données.
+ *userName* : spécifie le nom qui identifie l'utilisateur dans cette base de données.
 
- LOGIN **=** _loginName_  : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
+ LOGIN **=** _loginName_ : remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.
 
  Si l’instruction ALTER USER est la seule instruction d’un lot SQL, Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction ALTER USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.
 
- NAME **=** _newUserName_  : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
+ NAME **=** _newUserName_ : spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } : spécifie le premier schéma que le serveur va interroger pour résoudre les noms des objets associés à cet utilisateur. La définition du schéma par défaut sur NULL supprime un schéma par défaut d'un groupe Windows. L'option NULL ne peut pas être utilisée avec un utilisateur Windows.
 
@@ -856,7 +856,7 @@ ALTER USER userName
  En revanche, vous ne pouvez pas spécifier DEFAULT_SCHEMA pour un utilisateur mappé à un certificat ou à une clé asymétrique.
 
 > [!IMPORTANT]
-> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin** . Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
+> La valeur DEFAULT_SCHEMA est ignorée si l’utilisateur est membre du rôle serveur fixe **sysadmin**. Tous les membres du rôle serveur fixe **sysadmin** possèdent le schéma par défaut `dbo`.
 
  La clause WITH LOGIN active le remappage d'un utilisateur à une connexion différente. Les utilisateurs sans connexion, ceux mappés à un certificat ou bien ceux mappés à une clé asymétrique ne peuvent pas être remappés avec cette clause. Seuls les utilisateurs SQL et les utilisateurs (ou groupes) Windows peuvent être remappés. La clause WITH LOGIN ne peut pas être utilisée pour modifier le type d'utilisateur, par exemple pour modifier un compte Windows en connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -880,7 +880,7 @@ Le nom d’un utilisateur mappé à un compte de connexion [!INCLUDE[ssNoVersion
 
 ### <a name="permissions"></a>Autorisations
 
- Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER** .
+ Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER**.
 
  Pour changer la connexion cible d’un utilisateur, vous devez disposer de l’autorisation **CONTROL** sur la base de données.
 

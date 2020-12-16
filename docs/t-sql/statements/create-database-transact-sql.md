@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Syntaxe de création de base de données pour SQL Server, Azure SQL Database, Azure Synapse Analytics et Système de plateforme d’analyse
 ms.custom: references_regions
-ms.date: 10/30/2020
+ms.date: 12/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -36,13 +36,13 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e66c5801b3a927b28f355e450be9d31c796e78dc
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
+ms.openlocfilehash: 0e0cf7b17061340f347af536cad762f63cc38ef3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235396"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489137"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -54,7 +54,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -70,7 +70,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -182,7 +182,7 @@ Si le nom de fichier de données n’est pas spécifié, [!INCLUDE[ssNoVersion](
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
 Spécifie l'état de la relation contenant-contenu de la base de données. NONE = Base de données non autonome. PARTIAL = Base de données partiellement autonome.
 
@@ -208,7 +208,7 @@ Pour plus d’informations sur les noms de classements Windows et SQL, voir [COL
 WITH \<option>
  **\<filestream_option>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.
 
 Spécifie le niveau d'accès FILESTREAM non transactionnel à la base de données.
 
@@ -219,7 +219,7 @@ Spécifie le niveau d'accès FILESTREAM non transactionnel à la base de donnée
 |FULL|L'accès non transactionnel complet aux FileTables FILESTREAM est activé.|
 
 DIRECTORY_NAME = \<directory_name>
-**S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures
+**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures
 
 Nom de répertoire compatible avec Windows. Ce nom doit être unique parmi tous les noms Database_Directory dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparaison d'unicité n'est pas sensible à la casse, indépendamment des paramètres de classement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option doit être définie avant de créer un FileTable dans cette base de données.
 
@@ -227,25 +227,25 @@ Les options suivantes sont autorisées uniquement lorsque CONTAINMENT a été d�
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
+  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
   Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration de serveur default full-text language](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md).
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
+  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
   Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration de serveur default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
+  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
   Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration de serveur nested triggers](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md).
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **S’applique à**  : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
+  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et ultérieur
 
   Pour obtenir une description complète de cette option, consultez [Configurer l’option de configuration de serveur transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).
 
@@ -292,7 +292,7 @@ Si une base de données en lecture-écriture possède un seul fichier journal qu
 
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tous les fichiers de texte intégral appartenant à la base de données qui est attachée seront attachés avec la base de données. Pour spécifier un nouveau chemin d'accès pour le catalogue de texte intégral, spécifiez le nouvel emplacement sans le nom de fichier du système d'exploitation en texte intégral. Pour plus d’informations, consultez la section Exemples.
 
-Le fait d’attacher une base de données qui contient une option FILESTREAM de « nom de répertoire », dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invitera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à vérifier que le nom Database_Directory est unique. Si ce n’est pas le cas, l’opération d’attachement échoue avec l’erreur « FILESTREAM Database_Directory name \<name> n’est pas unique dans cette instance SQL Server ». Pour éviter cette erreur, le paramètre facultatif, *directory_name* , doit être passé à cette opération.
+Le fait d’attacher une base de données qui contient une option FILESTREAM de « nom de répertoire », dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] invitera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à vérifier que le nom Database_Directory est unique. Si ce n’est pas le cas, l’opération d’attachement échoue avec l’erreur « FILESTREAM Database_Directory name \<name> n’est pas unique dans cette instance SQL Server ». Pour éviter cette erreur, le paramètre facultatif, *directory_name*, doit être passé à cette opération.
 
 FOR ATTACH ne peut pas être spécifié sur un instantané de base de données.
 
@@ -315,7 +315,7 @@ Lorsque vous attachez une base de données répliquée qui a été copiée au li
 - Si vous attachez la base de données à une instance de serveur différente, sans tenir compte de la version, vous devez exécuter [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) pour supprimer la réplication, une fois l’opération de rattachement effectuée.
 
 > [!NOTE]
-> L’attachement fonctionne avec le format de stockage **vardecimal** , mais le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doit être mis à niveau au minimum vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. Vous ne pouvez pas attacher une base de données à l'aide du format de stockage vardecimal à une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur le format de stockage **vardecimal** , consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).
+> L’attachement fonctionne avec le format de stockage **vardecimal**, mais le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doit être mis à niveau au minimum vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. Vous ne pouvez pas attacher une base de données à l'aide du format de stockage vardecimal à une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur le format de stockage **vardecimal**, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).
 
 Lorsqu'une base de données est attachée ou restaurée pour la première fois à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données (chiffrée par la clé principale du service) n'est pas encore stockée sur le serveur. Vous devez utiliser l’instruction **OPEN MASTER KEY** pour déchiffrer la clé principale de la base de données. Une fois la clé principale de la base de données déchiffrée, vous avez la possibilité d’activer le déchiffrement automatique dans le futur en exécutant l’instruction **ALTER MASTER KEY REGENERATE** pour fournir au serveur une copie de la clé principale de la base de données chiffrée avec la clé principale du service. Lorsqu'une base de données a été mise à niveau à partir d'une version antérieure, la clé DMK doit être régénérée de façon à utiliser le nouvel algorithme AES. Pour plus d’informations sur la régénération de la clé DMK, consultez l’article [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). La durée nécessaire pour régénérer la clé DMK à mettre à niveau vers AES dépend du nombre d'objets protégés par la clé DMK. La régénération de la clé DMK à mettre à niveau vers AES est nécessaire une seule fois et n'a aucune incidence sur les régénérations ultérieures effectuées dans le cadre d'une stratégie de rotation de clés. Pour plus d’informations sur la façon de mettre à niveau une base de données à l’aide de l’attachement, consultez [Mettre à niveau une base de données avec Detach et Attach](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).
 
@@ -377,7 +377,7 @@ Les suffixes kilo-octet (Ko), mégaoctet (Mo), gigaoctet (Go) ou téraoctet (To)
 
 MAXSIZE *max_size* spécifie la taille maximale que peut atteindre le fichier. MAXSIZE ne peut pas être spécifié quand *os_file_name* est spécifié en tant que chemin UNC.
 
-*max_size* Spécifie la taille de fichier maximale. Les indications Ko, Mo, Go et To peuvent être utilisées. La valeur par défaut est Mo. Indiquez un nombre entier sans aucune décimale. Si vous ne spécifiez pas *max_size* , le fichier peut s’accroître jusqu’à occuper tout l’espace disque disponible. *Max_size* est une valeur entière. Pour les valeurs supérieures à 2147483647, utilisez des unités plus grandes.
+*max_size* Spécifie la taille de fichier maximale. Les indications Ko, Mo, Go et To peuvent être utilisées. La valeur par défaut est Mo. Indiquez un nombre entier sans aucune décimale. Si vous ne spécifiez pas *max_size*, le fichier peut s’accroître jusqu’à occuper tout l’espace disque disponible. *Max_size* est une valeur entière. Pour les valeurs supérieures à 2147483647, utilisez des unités plus grandes.
 
 UNLIMITED Spécifie que la taille du fichier peut croître jusqu’à ce que le disque soit plein. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un fichier journal spécifié avec une croissance illimitée a une taille maximale de 2 To et un fichier de données une taille maximale de 16 To.
 
@@ -411,7 +411,7 @@ CONTAINS FILESTREAM Spécifie que le groupe de fichiers stocke des objets BLOB (
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**S’applique à**  : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et ultérieur
+**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et ultérieur
 
 Spécifie que le groupe de fichiers stocke des données optimisées en mémoire dans le système de fichiers. Pour plus d’informations, consultez l’article [OLTP en mémoire (optimisation en mémoire)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Un seul groupe de fichiers MEMORY_OPTIMIZED_DATA est autorisé par base de données. Pour obtenir des exemples de code qui créent un groupe de fichiers pour stocker des données à mémoire optimisée, consultez [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
@@ -456,7 +456,7 @@ Certaines fonctionnalités de base de données dépendent de fonctionnalités ou
 
 ## <a name="database-files-and-filegroups"></a>Groupes de fichiers et fichiers de base de données
 
-Chaque base de données comprend au moins deux fichiers, un *fichier primaire* et un *fichier journal des transactions* , et au moins un groupe de fichiers. Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifié pour chaque base de données.
+Chaque base de données comprend au moins deux fichiers, un *fichier primaire* et un *fichier journal des transactions*, et au moins un groupe de fichiers. Un maximum de 32 767 fichiers et 32 767 groupes de fichiers peut être spécifié pour chaque base de données.
 
 Lorsque vous créez une base de données, attribuez aux fichiers une taille aussi grande que possible, en tenant compte du volume maximal de données qu'est censée contenir la base de données.
 
@@ -859,11 +859,11 @@ GO
 - [Données Blob (Binary Large Object)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -875,7 +875,7 @@ GO
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -968,7 +968,7 @@ CREATE DATABASE database_name
 
 *database_name* est le nom de la nouvelle base de données. Ce nom doit être unique sur le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et doit respecter les règles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatives aux identificateurs. Pour plus d’informations, consultez [Identificateurs](https://go.microsoft.com/fwlink/p/?LinkId=180386).
 
-*Collation_name*  : spécifie le classement par défaut de la base de données. Le nom du classement peut être un nom de classement Windows ou SQL. S’il est omis, le classement par défaut, SQL_Latin1_General_CP1_CI_AS, est affecté à la base de données.
+*Collation_name* : spécifie le classement par défaut de la base de données. Le nom du classement peut être un nom de classement Windows ou SQL. S’il est omis, le classement par défaut, SQL_Latin1_General_CP1_CI_AS, est affecté à la base de données.
 
 Pour plus d’informations sur les noms de classements Windows et SQL, consultez [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md).
 
@@ -1013,7 +1013,7 @@ MAXSIZE : spécifie la taille maximale de la base de données. MAXSIZE doit êt
 |500 Go|N/A|N/A|√|√ (D)|√|
 |750 Go|N/A|N/A|√|√|√|
 |1 024 Go|N/A|N/A|√|√|√ (D)|
-|À partir de 1 024 Go jusqu’à 4 096 Go par incréments de 256 Go* |N/A|N/A|N/A|N/A|√|√|
+|À partir de 1 024 Go jusqu’à 4 096 Go par incréments de 256 Go* |N/A|N/A|N/A|NON APPLICABLE|√|√|
 
 \* P11 et P15 autorisent MAXSIZE jusqu’à 4 To, 1 024 Go étant la taille par défaut. P11 et P15 peuvent utiliser jusqu’à 4 To de stockage inclus sans frais supplémentaires. Au niveau Premium, une valeur MAXSIZE supérieure à 1 To est actuellement disponible dans les régions suivantes : USA Est 2, USA Ouest, US Gov Virginie, Europe Ouest, Allemagne Centre, Asie Sud-Est, Japon Est, Australie Est, Canada Centre et Canada Est. Pour plus d’informations sur les limitations des ressources du modèle DTU, consultez [Limites des ressources DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -1140,7 +1140,7 @@ Pour créer une base de données dans un pool de bases de données élastique, d
 AS COPY OF [source_server_name.]source_database_name **S’applique à :** Bases de données uniques et mises en pool uniquement.
 Pour la copie d'une base de données sur le même serveur ou sur un serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] différent.
 
-*source_server_name*  : nom du serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] où se trouve la base de données source. Ce paramètre est facultatif lorsque la base de données source et la base de données de destination se trouveront sur le même serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+*source_server_name* : nom du serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] où se trouve la base de données source. Ce paramètre est facultatif lorsque la base de données source et la base de données de destination se trouveront sur le même serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
 > [!NOTE]
 > l'argument `AS COPY OF` ne prend pas en charge les noms de domaine complets uniques. En d'autres termes, si le nom de domaine complet de votre serveur est `serverName.database.windows.net`, utilisez uniquement `serverName` pendant la copie de base de données.
@@ -1288,11 +1288,11 @@ CREATE DATABASE test_zone_redundancy
 - [ALTER DATABASE - Azure SQL Database](alter-database-transact-sql.md?view=azuresqldb-currentls)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1304,7 +1304,7 @@ CREATE DATABASE test_zone_redundancy
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1324,13 +1324,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```
 
 > [!IMPORTANT]
-> Pour ajouter des fichiers ou définir l’autonomie d’une base de données dans une instance managée, utilisez l’instruction [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi).
+> Pour ajouter des fichiers ou définir l’autonomie d’une base de données dans une instance managée, utilisez l’instruction [ALTER DATABASE](alter-database-transact-sql.md?tabs=sqldbmi).
 
 ## <a name="arguments"></a>Arguments
 
 *database_name* est le nom de la nouvelle base de données. Ce nom doit être unique sur le serveur SQL et respecter les règles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relatives aux identificateurs. Pour plus d’informations, consultez [Identificateurs](https://go.microsoft.com/fwlink/p/?LinkId=180386).
 
-*Collation_name*  : spécifie le classement par défaut de la base de données. Le nom du classement peut être un nom de classement Windows ou SQL. S’il est omis, le classement par défaut, SQL_Latin1_General_CP1_CI_AS, est affecté à la base de données.
+*Collation_name* : spécifie le classement par défaut de la base de données. Le nom du classement peut être un nom de classement Windows ou SQL. S’il est omis, le classement par défaut, SQL_Latin1_General_CP1_CI_AS, est affecté à la base de données.
 
 Pour plus d’informations sur les noms de classements Windows et SQL, consultez [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md).
 
@@ -1372,11 +1372,11 @@ CREATE DATABASE TestDB1;
 Voir [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current).
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1388,7 +1388,7 @@ Voir [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -1402,7 +1402,7 @@ Dans Azure Synapse, cette instruction peut être utilisée avec un serveur Azure
 
 ## <a name="syntax"></a>Syntaxe
 
-### <a name="sql-pool"></a>[Pool SQL](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[Pool SQL dédié](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1423,7 +1423,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
-### <a name="sql-on-demand-preview"></a>[SQL à la demande (préversion)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[Pool SQL serverless](#tab/sqlod)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 [;] 
@@ -1504,11 +1504,11 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 - [DROP DATABASE - Transact-SQL](../../t-sql/statements/drop-database-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-database-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](create-database-transact-sql.md?view=azuresqldb-current)
@@ -1548,11 +1548,11 @@ WITH (
 
 *database_name* est le nom de la nouvelle base de données. Pour plus d’informations sur les noms de bases de données autorisés, consultez « Règles de nommage d’objet » et « Noms de bases de données réservés » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
-AUTOGROW = ON | **OFF** spécifie si les paramètres *replicated_size* , *distributed_size* et *log_size* pour cette base de données croissent automatiquement en fonction des besoins au-delà de leur taille spécifiée. La valeur par défaut est **OFF**.
+AUTOGROW = ON | **OFF** spécifie si les paramètres *replicated_size*, *distributed_size* et *log_size* pour cette base de données croissent automatiquement en fonction des besoins au-delà de leur taille spécifiée. La valeur par défaut est **OFF**.
 
-Si AUTOGROW est ON, *replicated_size* , *distributed_size* , et *log_size* croissent en fonction des besoins (et non par blocs de la taille spécifiée initiale) lors de chaque insertion de données, mise à jour ou autre action nécessitant davantage de stockage que ce qui a déjà été alloué.
+Si AUTOGROW est ON, *replicated_size*, *distributed_size*, et *log_size* croissent en fonction des besoins (et non par blocs de la taille spécifiée initiale) lors de chaque insertion de données, mise à jour ou autre action nécessitant davantage de stockage que ce qui a déjà été alloué.
 
-Si AUTOGROW est OFF, les tailles n’augmentent pas automatiquement. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retourne une erreur en cas de tentative d’exécution d’une action qui exige que *replicated_size* , *distributed_size* ou *log_size* croisse au-delà de sa valeur spécifiée.
+Si AUTOGROW est OFF, les tailles n’augmentent pas automatiquement. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] retourne une erreur en cas de tentative d’exécution d’une action qui exige que *replicated_size*, *distributed_size* ou *log_size* croisse au-delà de sa valeur spécifiée.
 
 AUTOGROW est ON pour toutes les tailles ou OFF pour toutes les tailles. Par exemple, vous ne pouvez pas définir AUTOGROW ON pour *log_size* sans le définir également pour *replicated_size*.
 
@@ -1602,8 +1602,8 @@ Pour plus d’informations sur les contraintes minimales et maximales sur les ba
 Lors de la création d’une base de données, il doit y avoir suffisamment d’espace libre disponible *sur chaque nœud de calcul* pour allouer le total combiné des tailles suivantes :
 
 - Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec des tables de la taille de *replicated_table_size*.
-- Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec des tables de la taille de ( *distributed_table_size* / nombre de nœuds de calcul).
-- Journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la taille de ( *log_size* / nombre de nœuds de calcul).
+- Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec des tables de la taille de (*distributed_table_size* / nombre de nœuds de calcul).
+- Journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la taille de (*log_size* / nombre de nœuds de calcul).
 
 ## <a name="locking"></a>Verrouillage
 

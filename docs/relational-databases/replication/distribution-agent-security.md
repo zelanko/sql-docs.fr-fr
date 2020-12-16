@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dfad45eb3d0fcbf67e88c6ffbf5a120e1d179c16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 5cfa887d79c8ecc2e4c0fa5b0fbea498bae176c3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498806"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484891"
 ---
 # <a name="distribution-agent-security"></a>Sécurité de l'Agent de distribution
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2016"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-La boîte de dialogue **Sécurité de l'Agent de distribution** permet de spécifier le compte Windows sous lequel s'exécute l'Agent de distribution. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. Le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
+La boîte de dialogue **Sécurité de l'Agent de distribution** permet de spécifier le compte Windows sous lequel s'exécute l'Agent de distribution. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. Le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est également baptisé *compte de processus* du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
   
 -   Si vous accédez à la boîte de dialogue à partir de l'Assistant Nouvel abonnement, elle permet de spécifier le contexte dans lequel l'Agent de distribution établit les connexions avec l'Abonné (pour les abonnements par envoi de données) ou avec le serveur de distribution (pour les abonnements par extraction). La connexion peut avoir lieu en empruntant l’identité du compte Windows ou dans le contexte d’un compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez.  
   
@@ -52,7 +52,7 @@ La boîte de dialogue **Sécurité de l'Agent de distribution** permet de spéci
   
  Des autorisations supplémentaires sont indispensables si l'identité du compte de processus est empruntée lorsque les connexions sont établies. Voir les paragraphes **Se connecter au serveur de distribution** et **Connexion à l'Abonné** ci-dessous.  
   
- Le**compte de processus** ne peut être indiqué à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] pour des abonnements par extraction, car l’Agent de distribution ne s’exécute pas sur des instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ Le **compte de processus** ne peut être indiqué à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] pour des abonnements par extraction, car l’Agent de distribution ne s’exécute pas sur des instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
  **Mot de passe** et **Confirmer le mot de passe**  
  Entrez le mot de passe du compte Windows.  
@@ -105,7 +105,7 @@ Persist Security Info=False;Connection Pooling=True;
  [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
 ::: moniker-end
   
-::: monikerRange="azuresqldb-mi-current"
+::: moniker range="azuresqldb-mi-current"
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 La boîte de dialogue **Sécurité de l’Agent de distribution** permet de spécifier le compte d’authentification SQL sous lequel l’Agent de distribution s’exécute. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction.  La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1bb607326233dccdafa8fc57e3ce9d32cf20c9
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: a4221c4200d8b56a1ce1b848e024ef8f135d9129
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92195361"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489779"
 ---
 # <a name="oracle-destination"></a>Destination Oracle
 
@@ -200,7 +200,7 @@ Utilisez la page Sortie d’erreur de la boîte de dialogue Éditeur de destinat
 **Comportement d’erreur**
 
 Sélectionnez la façon dont la source Oracle doit gérer les erreurs dans un flux : ignorer l’échec, rediriger la ligne ou faire échouer le composant.
-**Section connexe** : [Gestion des erreurs dans les données](./error-handling-in-data.md?view=sql-server-2017)
+**Section connexe** : [Gestion des erreurs dans les données](./error-handling-in-data.md)
 
 **Troncation**
 

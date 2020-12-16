@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 875859d70488bd536223e400e183bcc88a3b4d99
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b9c6b440766763d00b62e3889a3091ad4af4ae6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92497011"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489879"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -40,7 +40,7 @@ Modifie les propriétés d'un compte de connexion [!INCLUDE[ssNoVersion](../../i
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -56,7 +56,7 @@ Modifie les propriétés d'un compte de connexion [!INCLUDE[ssNoVersion](../../i
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -159,7 +159,7 @@ Si MUST_CHANGE est spécifié, CHECK_EXPIRATION et CHECK_POLICY doivent prendre 
 
 Si CHECK_POLICY prend la valeur OFF, CHECK_EXPIRATION ne peut pas prendre la valeur ON. Si cette combinaison d'options est utilisée dans une instruction ALTER LOGIN, l'instruction échoue.
 
-Vous ne pouvez pas utiliser ALTER LOGIN avec l’argument DISABLE pour refuser l’accès à un groupe Windows. Par exemple, ALTERLOGIN [ *domaine\groupe* ] DISABLE retourne le message d’erreur suivant :
+Vous ne pouvez pas utiliser ALTER LOGIN avec l’argument DISABLE pour refuser l’accès à un groupe Windows. Par exemple, ALTERLOGIN [*domaine\groupe*] DISABLE retourne le message d’erreur suivant :
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -274,11 +274,11 @@ GO
 - [Gestion de clés extensible (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_**
@@ -290,7 +290,7 @@ GO
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -398,7 +398,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 L'exemple suivant mappe la connexion `Mary5` aux informations d'identification EKM `EKMProvider1`.
 
 
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 ALTER LOGIN Mary5
@@ -428,7 +428,7 @@ GO
 
 L'exemple suivant modifie le mot de passe de la connexion `TestUser` en une valeur déjà hachée.
 
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -446,11 +446,11 @@ GO
 - [Gestion de clés extensible (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](alter-login-transact-sql.md?view=azuresqldb-current)
@@ -462,7 +462,7 @@ GO
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -590,7 +590,7 @@ Si MUST_CHANGE est spécifié, CHECK_EXPIRATION et CHECK_POLICY doivent prendre 
 
 Si CHECK_POLICY prend la valeur OFF, CHECK_EXPIRATION ne peut pas prendre la valeur ON. Si cette combinaison d'options est utilisée dans une instruction ALTER LOGIN, l'instruction échoue.
 
-Vous ne pouvez pas utiliser ALTER_LOGIN avec l'argument DISABLE pour refuser l'accès à un groupe Windows. C'est la procédure normale. Par exemple, ALTER_LOGIN [ *domain\group* ] DISABLE retourne le message d’erreur suivant :
+Vous ne pouvez pas utiliser ALTER_LOGIN avec l'argument DISABLE pour refuser l'accès à un groupe Windows. C'est la procédure normale. Par exemple, ALTER_LOGIN [*domain\group*] DISABLE retourne le message d’erreur suivant :
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -655,7 +655,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 L'exemple suivant mappe la connexion `Mary5` aux informations d'identification EKM `EKMProvider1`.
 
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures ainsi qu’à Azure SQL Managed Instance.
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures ainsi qu’à Azure SQL Managed Instance.
 
 ```sql
 ALTER LOGIN Mary5
@@ -685,7 +685,7 @@ GO
 
 L'exemple suivant modifie le mot de passe de la connexion `TestUser` en une valeur déjà hachée.
 
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures ainsi qu’à Azure SQL Managed Instance.
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures ainsi qu’à Azure SQL Managed Instance.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -711,11 +711,11 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 - [Gestion de clés extensible (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](alter-login-transact-sql.md?view=azuresqldb-current)
@@ -727,7 +727,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -832,7 +832,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 L'exemple suivant mappe la connexion `Mary5` aux informations d'identification EKM `EKMProvider1`.
 
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 ALTER LOGIN Mary5
@@ -862,7 +862,7 @@ GO
 
 L'exemple suivant modifie le mot de passe de la connexion `TestUser` en une valeur déjà hachée.
 
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -880,11 +880,11 @@ GO
 - [Gestion de clés extensible (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](alter-login-transact-sql.md?view=azuresqldb-current)
@@ -972,7 +972,7 @@ Si MUST_CHANGE est spécifié, CHECK_EXPIRATION et CHECK_POLICY doivent prendre 
 
 Si CHECK_POLICY prend la valeur OFF, CHECK_EXPIRATION ne peut pas prendre la valeur ON. Si cette combinaison d'options est utilisée dans une instruction ALTER LOGIN, l'instruction échoue.
 
-Vous ne pouvez pas utiliser ALTER_LOGIN avec l'argument DISABLE pour refuser l'accès à un groupe Windows. C'est la procédure normale. Par exemple, ALTER_LOGIN [ *domain\group* ] DISABLE retourne le message d’erreur suivant :
+Vous ne pouvez pas utiliser ALTER_LOGIN avec l'argument DISABLE pour refuser l'accès à un groupe Windows. C'est la procédure normale. Par exemple, ALTER_LOGIN [*domain\group*] DISABLE retourne le message d’erreur suivant :
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -1035,7 +1035,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 L'exemple suivant mappe la connexion `Mary5` aux informations d'identification EKM `EKMProvider1`.
 
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 ALTER LOGIN Mary5
@@ -1065,7 +1065,7 @@ GO
 
 L'exemple suivant modifie le mot de passe de la connexion `TestUser` en une valeur déjà hachée.
 
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 ALTER LOGIN TestUser WITH

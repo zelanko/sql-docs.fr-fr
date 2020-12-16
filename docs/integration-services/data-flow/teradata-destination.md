@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 158184ea961aa8938bb0eb2b6f94890dd1eddbfa
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92194711"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489869"
 ---
 # <a name="teradata-destination"></a>Destination Teradata
 
@@ -223,7 +223,7 @@ Utilisez la page Sortie d’erreur de la boîte de dialogue Éditeur de destinat
 
 Sélectionnez la façon dont la destination Teradata doit gérer les erreurs dans un flux : ignorer l'échec, rediriger la ligne ou faire échouer le composant.
 
-**Rubriques connexes :** [Gestion des erreurs dans les données](./error-handling-in-data.md?view=sql-server-2017)
+**Rubriques connexes :** [Gestion des erreurs dans les données](./error-handling-in-data.md)
 
 **Troncation**
 

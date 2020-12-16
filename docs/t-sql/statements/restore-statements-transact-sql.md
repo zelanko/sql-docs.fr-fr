@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2e568e5fc2bc170101b47a436b8af24a22b0137
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
+ms.openlocfilehash: d1146d2b937c542a46ad0bf8cc473854e40800b2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496884"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489749"
 ---
 # <a name="restore-statements-transact-sql"></a>Instructions RESTORE (Transact-SQL)
 
@@ -58,7 +58,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -326,17 +326,17 @@ La restauration est contrôlée par l'instruction RESTORE et les options [ RECO
 
 - RECOVERY (valeur par défaut) indique que la restauration doit être effectuée après la restauration par progression de la sauvegarde actuelle.
 
-  Pour récupérer la base de données, le jeu de données faisant l’objet de la restauration ( *jeu de restauration par progression* ) doit être entièrement cohérent par rapport à la base de données. Si la restauration par progression du jeu de restauration par progression n'est pas allée assez loin pour être cohérente par rapport à la base de données et si l'option RECOVERY est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur. Pour plus d’informations sur le processus de récupération, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
+  Pour récupérer la base de données, le jeu de données faisant l’objet de la restauration (*jeu de restauration par progression*) doit être entièrement cohérent par rapport à la base de données. Si la restauration par progression du jeu de restauration par progression n'est pas allée assez loin pour être cohérente par rapport à la base de données et si l'option RECOVERY est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur. Pour plus d’informations sur le processus de récupération, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ## <a name="compatibility-support"></a>Prise en charge de la compatibilité
-Les sauvegardes des bases de données **master** , **model** et **msdb** créées avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Les sauvegardes des bases de données **master**, **model** et **msdb** créées avec une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peuvent pas être restaurées par [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
 > Aucune sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut être restaurée dans une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à celle sur laquelle la sauvegarde a été créée.
 
 Chaque version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un chemin d'accès par défaut différent de celui des versions antérieures. Par conséquent, pour restaurer une base de données créée à l'emplacement par défaut des sauvegardes de version antérieure, vous devez utiliser l'option MOVE. Pour plus d’informations sur le nouveau chemin par défaut, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
-Après avoir restauré une base de données de version antérieure dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est automatiquement mise à niveau. En général, la base de données est immédiatement disponible. Toutefois, si une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] comprend des index de recherche en texte intégral, le processus de mise à niveau les importe, les réinitialise ou les reconstruit, selon la valeur de la propriété de serveur **upgrade_option** . Si l’option de mise à niveau a la valeur Importer ( **upgrade_option** = 2) ou Reconstruire ( **upgrade_option** = 0), les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que lorsque l'option de mise à niveau est Importer, les index de recherche en texte intégral associés sont reconstruits si aucun catalogue de texte intégral n'est disponible. Pour modifier le paramètre de la propriété de serveur **upgrade_option** , utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).
+Après avoir restauré une base de données de version antérieure dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est automatiquement mise à niveau. En général, la base de données est immédiatement disponible. Toutefois, si une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] comprend des index de recherche en texte intégral, le processus de mise à niveau les importe, les réinitialise ou les reconstruit, selon la valeur de la propriété de serveur **upgrade_option**. Si l’option de mise à niveau a la valeur Importer (**upgrade_option** = 2) ou Reconstruire (**upgrade_option** = 0), les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que lorsque l'option de mise à niveau est Importer, les index de recherche en texte intégral associés sont reconstruits si aucun catalogue de texte intégral n'est disponible. Pour modifier le paramètre de la propriété de serveur **upgrade_option** , utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).
 
 Lorsqu'une base de données est attachée ou restaurée pour la première fois à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données (chiffrée par la clé principale du service) n'est pas encore stockée sur le serveur. Vous devez utiliser l’instruction **OPEN MASTER KEY** pour déchiffrer la clé principale de la base de données. Une fois la clé principale de la base de données déchiffrée, vous avez la possibilité d’activer le déchiffrement automatique dans le futur en exécutant l’instruction **ALTER MASTER KEY REGENERATE** pour fournir au serveur une copie de la clé principale de la base de données chiffrée avec la clé principale du service. Lorsqu'une base de données a été mise à niveau à partir d'une version antérieure, la clé DMK doit être régénérée de façon à utiliser le nouvel algorithme AES. Pour plus d’informations sur la régénération de la clé DMK, consultez l’article [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). La durée nécessaire pour régénérer la clé DMK à mettre à niveau vers AES dépend du nombre d'objets protégés par la clé DMK. La régénération de la clé DMK à mettre à niveau vers AES est nécessaire une seule fois et n'a aucune incidence sur les régénérations ultérieures effectuées dans le cadre d'une stratégie de rotation de clés.
 
@@ -369,7 +369,7 @@ Pour restaurer une base de données chiffrée, vous devez avoir accès au certif
 
 ### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>Restauration d'une base de données activée pour le stockage vardecimal
 
-Les sauvegardes et les restaurations fonctionnent correctement avec le format de stockage **vardecimal** . Pour plus d’informations sur le format de stockage **vardecimal** , consultez l’article [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).
+Les sauvegardes et les restaurations fonctionnent correctement avec le format de stockage **vardecimal**. Pour plus d’informations sur le format de stockage **vardecimal**, consultez l’article [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).
 
 ### <a name="restore-full-text-data"></a>Restauration de données de texte intégral
 
@@ -733,7 +733,7 @@ RESTORE DATABASE Sales
 [Historique de sauvegarde et informations d’en-tête](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
@@ -880,11 +880,11 @@ WHERE r.command = 'RESTORE DATABASE'
 > Cette vue affichera probablement deux requêtes restore. L’une est l’instruction RESTORE d’origine envoyée par le client, et l’autre est une instruction RESTORE en arrière-plan qui s’exécute même si la connexion du client échoue.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
@@ -901,7 +901,7 @@ WHERE r.command = 'RESTORE DATABASE'
 Restaure une base de données utilisateur [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] à partir d’une sauvegarde de base de données dans une appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. La base de données est restaurée à partir d’une sauvegarde créée précédemment par la commande [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md). Les opérations de sauvegarde et de restauration vous permettent d’établir un plan de récupération d’urgence ou de déplacer des bases de données d’une appliance vers une autre.
 
 > [!NOTE]
-> La restauration de la base de données MASTER inclut la restauration des informations de connexion d’appliance. Pour restaurer la base de données MASTER, accédez à la page [Restaurer la base de données MASTER](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) de l’outil **Configuration Manager** . Un administrateur ayant accès au nœud de contrôle peut effectuer cette opération. Pour plus d’informations sur les sauvegardes de bases de données [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], consultez la section relative à la sauvegarde et à la restauration dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+> La restauration de la base de données MASTER inclut la restauration des informations de connexion d’appliance. Pour restaurer la base de données MASTER, accédez à la page [Restaurer la base de données MASTER](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) de l’outil **Configuration Manager**. Un administrateur ayant accès au nœud de contrôle peut effectuer cette opération. Pour plus d’informations sur les sauvegardes de bases de données [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], consultez la section relative à la sauvegarde et à la restauration dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -929,11 +929,11 @@ RESTORE HEADERONLY
 
 ## <a name="arguments"></a>Arguments
 
-RESTORE DATABASE *database_name* Spécifie la restauration d’une base de données utilisateur dans une base de données appelée *database_name* . La base de données restaurée peut avoir un nom différent du nom de la base de données source qui a été sauvegardée. *database_name* ne peut pas déjà exister comme base de données dans l’appliance de destination. Pour plus d’informations sur les noms de base de données autorisés, consultez les règles de nommage d’objets dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+RESTORE DATABASE *database_name* Spécifie la restauration d’une base de données utilisateur dans une base de données appelée *database_name*. La base de données restaurée peut avoir un nom différent du nom de la base de données source qui a été sauvegardée. *database_name* ne peut pas déjà exister comme base de données dans l’appliance de destination. Pour plus d’informations sur les noms de base de données autorisés, consultez les règles de nommage d’objets dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 La restauration d’une base de données utilisateur a pour effet de restaurer une sauvegarde complète de base de données et éventuellement de restaurer une sauvegarde différentielle dans l’appliance. La restauration d’une base de données utilisateur inclut la restauration des utilisateurs de la base de données, ainsi que les rôles de base de données.
 
-FROM DISK = '\\\\*UNC_path*\\*backup_directory* ' Spécifie le chemin réseau et le répertoire dans lesquels [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaurera les fichiers de sauvegarde. Par exemple, FROM DISK = « \\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup» .
+FROM DISK = '\\\\*UNC_path*\\*backup_directory*' Spécifie le chemin réseau et le répertoire dans lesquels [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] restaurera les fichiers de sauvegarde. Par exemple, FROM DISK = « \\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup» .
 
 *backup_directory* Spécifie le nom d’un répertoire qui contient la sauvegarde complète ou différentielle. Par exemple, vous pouvez effectuer une opération RESTORE HEADERONLY sur une sauvegarde complète ou différentielle.
 

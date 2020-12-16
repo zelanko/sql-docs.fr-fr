@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 380fa9b4cb6941b438d0308be38956659862ce50
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6fbf5782ff67b3406cffad808b27c47112a48d97
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115452"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489859"
 ---
 # <a name="deploy-and-connect-to-sql-server-docker-containers"></a>Déployer des conteneurs Docker SQL Server et s’y connecter
 
@@ -45,8 +45,8 @@ Cette vidéo de 6 minutes offre une introduction à l’exécution de SQL Serve
 
 Pour extraire et exécuter les images conteneur Docker pour SQL Server 2017 et SQL Server 2019, suivez les prérequis et les étapes du guide de démarrage rapide suivant :
 
-- [Exécuter l’image conteneur de SQL Server 2017 avec Docker](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Exécuter l’image conteneur SQL Server 2019 avec Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Exécuter l’image conteneur de SQL Server 2017 avec Docker](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
+- [Exécuter l’image conteneur SQL Server 2019 avec Docker](quickstart-install-connect-docker.md?view=sql-server-ver15&preserve-view=true)
 
 Cet article de configuration fournit des scénarios d’utilisation supplémentaires dans les sections suivantes.
 
@@ -245,7 +245,7 @@ Il existe des scénarios dans lesquels il est possible que vous ne souhaitiez pa
 Vous pouvez également utiliser ces étapes pour rétrograder un conteneur existant. Par exemple, vous souhaiterez peut-être restaurer ou rétrograder un conteneur en cours d’exécution à des fins de dépannage ou de test. Pour rétrograder un conteneur en cours d’exécution, vous devez utiliser une technique de persistance pour le dossier de données. Suivez les mêmes étapes que celles décrites dans la [section de mise à niveau](#upgrade), mais spécifiez le nom de balise de l’ancienne version lorsque vous exécutez le nouveau conteneur.
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> Exécuter des images conteneurs basées sur RHEL
 
@@ -348,7 +348,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 L’exemple suivant crée deux conteneurs SQL Server 2019 et les mappe aux ports **1401** et **1402** sur l’ordinateur hôte.
 
@@ -426,12 +426,12 @@ Cela met à jour l’image de SQL Server pour les nouveaux conteneurs que vous c
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- Bien démarrer avec les images de conteneur SQL Server 2017 sur Docker en suivant le [démarrage rapide](quickstart-install-connect-docker.md?view=sql-server-2017)
+- Bien démarrer avec les images de conteneur SQL Server 2017 sur Docker en suivant le [démarrage rapide](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - Bien démarrer avec les images de conteneur SQL Server 2019 sur Docker en suivant le [démarrage rapide](quickstart-install-connect-docker.md?view=sql-server-ver15)
 

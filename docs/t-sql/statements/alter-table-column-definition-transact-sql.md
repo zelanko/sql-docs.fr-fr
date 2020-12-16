@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28472efd6747239910630388133bdfe3ca95a6a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4ff1708cf4c3986a90aff1b4c8048879bf0658e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547790"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489453"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -157,7 +157,7 @@ DEFAULT
  Valeur littérale, valeur NULL ou fonction système utilisée comme valeur de colonne par défaut. Si cet argument est utilisé avec une colonne définie pour être d’un type défini par l’utilisateur [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], l’implémentation du type doit prendre en charge une conversion implicite de *constant_expression* vers le type défini par l’utilisateur.  
   
 WITH VALUES   
- En cas d’ajout d’une colonne AND qui autorise les valeurs NULL avec WITH VALUES, ainsi que d’une contrainte DEFAULT, attribuez, pour les lignes existantes, la valeur donnée dans *constant_expression* DEFAULT à la nouvelle colonne. Si la colonne ajoutée n’autorise pas les valeurs NULL, sa valeur sera toujours celle qui est donnée dans *l’expression constante* DEFAULT pour les lignes existantes. À partir de SQL Server 2012, il peut s’agir d’une opération de métadonnées [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+ En cas d’ajout d’une colonne AND qui autorise les valeurs NULL avec WITH VALUES, ainsi que d’une contrainte DEFAULT, attribuez, pour les lignes existantes, la valeur donnée dans *constant_expression* DEFAULT à la nouvelle colonne. Si la colonne ajoutée n’autorise pas les valeurs NULL, sa valeur sera toujours celle qui est donnée dans *l’expression constante* DEFAULT pour les lignes existantes. À partir de SQL Server 2012, il peut s’agir d’une opération de métadonnées [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation).
 Si elle est utilisée sans que la colonne associée soit elle aussi ajoutée, elle n’a aucun effet.
  
  Spécifie que la valeur donnée dans DEFAULT *constant_expression* est stockée dans une nouvelle colonne ajoutée aux lignes existantes. Si la colonne ajoutée accepte les valeurs NULL et que l'option WITH VALUES est spécifiée, la valeur par défaut est stockée dans la nouvelle colonne ajoutée aux lignes existantes. Si WITH VALUES n'est pas spécifiée pour les colonnes acceptant les valeurs NULL, la valeur NULL est stockée dans la nouvelle colonne, dans des lignes existantes. Si la nouvelle colonne n'accepte pas les valeurs NULL, la valeur par défaut est stockée dans les nouvelles lignes, que l'option WITH VALUES soit spécifiée ou pas.  
@@ -205,9 +205,9 @@ SPARSE
  Spécifie la clé de chiffrement de colonne. Pour plus d’informations, consultez [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
- Le**chiffrement déterministe** utilise une méthode qui génère toujours la même valeur chiffrée pour une valeur de texte brut donnée. L’utilisation du chiffrement déterministe permet d’effectuer des recherches à l’aide de la comparaison d’égalité, d’effectuer des regroupements et de joindre des tables à l’aide de jointures d’égalité sur la base de valeurs chiffrées, mais elle peut aussi permettre à des utilisateurs non autorisés de deviner des informations concernant les valeurs chiffrées en examinant les séquences dans la colonne chiffrée. Joindre deux tables sur des colonnes chiffrées de façon déterministe n’est possible que si les deux colonnes sont chiffrées à l’aide de la même clé de chiffrement de colonne. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.  
+ Le **chiffrement déterministe** utilise une méthode qui génère toujours la même valeur chiffrée pour une valeur de texte brut donnée. L’utilisation du chiffrement déterministe permet d’effectuer des recherches à l’aide de la comparaison d’égalité, d’effectuer des regroupements et de joindre des tables à l’aide de jointures d’égalité sur la base de valeurs chiffrées, mais elle peut aussi permettre à des utilisateurs non autorisés de deviner des informations concernant les valeurs chiffrées en examinant les séquences dans la colonne chiffrée. Joindre deux tables sur des colonnes chiffrées de façon déterministe n’est possible que si les deux colonnes sont chiffrées à l’aide de la même clé de chiffrement de colonne. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.  
   
- Le**chiffrement aléatoire** utilise une méthode qui chiffre les données de manière moins prévisible. Le chiffrement aléatoire est plus sécurisé, mais il empêche tout calcul et indexation sur les colonnes chiffrées, sauf si votre instance de SQL Server prend en charge [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+ Le **chiffrement aléatoire** utilise une méthode qui chiffre les données de manière moins prévisible. Le chiffrement aléatoire est plus sécurisé, mais il empêche tout calcul et indexation sur les colonnes chiffrées, sauf si votre instance de SQL Server prend en charge [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
  Si vous utilisez Always Encrypted (sans enclaves sécurisées), utilisez le chiffrement déterministe pour les colonnes dans lesquelles effectuer des recherches avec des paramètres ou des paramètres de regroupement, par exemple un numéro d’identification gouvernemental. Utilisez le chiffrement aléatoire pour les données telles qu’un numéro de carte de crédit, qui ne sont pas regroupées avec d’autres enregistrements, ou utilisées pour joindre des tables, et qui ne sont pas soumises à des recherches car vous utilisez d’autres colonnes (par exemple un numéro de transaction) pour rechercher la ligne qui contient la colonne chiffrée qui vous intéresse.  
 

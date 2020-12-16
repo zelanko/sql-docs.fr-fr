@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 919b3126a47fb0f71efb41e645e0443c309f643e
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d581d8dcf038b56a6b3df5b5ecc67a9a32b4255f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867567"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485231"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Exemple de base de données pour OLTP en mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "91867567"
   
  Sales.SalesOrderHeader_inmem  
   
--   Les*contraintes par défaut* sont prises en charge pour les tables optimisées en mémoire, et la plupart des contraintes par défaut ont été migrées en l’état. Toutefois, la table d'origine Sales.SalesOrderHeader contient plusieurs contraintes par défaut qui récupèrent la date actuelle, pour les colonnes OrderDate et ModifiedDate. Dans une charge de travail de traitement des commandes à haut débit avec de nombreuses concurrences, toute ressource globale peut devenir un point de contention. L’heure système est l’une de ces ressources globales, et nous avons observé qu’elle peut devenir un goulot d’étranglement quand une charge de travail d’OLTP en mémoire qui insère des commandes client est exécutée, en particulier si l’heure système doit être extraite pour plusieurs colonnes dans l’en-tête de la commande, ainsi que pour ses détails. Le problème est résolu dans cet exemple en récupérant l'heure système une seule fois pour chaque commande client insérée, puis en utilisant cette valeur pour les colonnes datetime dans SalesOrderHeader_inmem et SalesOrderDetail_inmem, dans la procédure stockée Sales.usp_InsertSalesOrder_inmem.  
+-   Les *contraintes par défaut* sont prises en charge pour les tables optimisées en mémoire, et la plupart des contraintes par défaut ont été migrées en l’état. Toutefois, la table d'origine Sales.SalesOrderHeader contient plusieurs contraintes par défaut qui récupèrent la date actuelle, pour les colonnes OrderDate et ModifiedDate. Dans une charge de travail de traitement des commandes à haut débit avec de nombreuses concurrences, toute ressource globale peut devenir un point de contention. L’heure système est l’une de ces ressources globales, et nous avons observé qu’elle peut devenir un goulot d’étranglement quand une charge de travail d’OLTP en mémoire qui insère des commandes client est exécutée, en particulier si l’heure système doit être extraite pour plusieurs colonnes dans l’en-tête de la commande, ainsi que pour ses détails. Le problème est résolu dans cet exemple en récupérant l'heure système une seule fois pour chaque commande client insérée, puis en utilisant cette valeur pour les colonnes datetime dans SalesOrderHeader_inmem et SalesOrderDetail_inmem, dans la procédure stockée Sales.usp_InsertSalesOrder_inmem.  
   
 -   *UDT (types de données définis par l’utilisateur) alias* : la table d’origine utilise deux UDT alias, dbo.OrderNumber et dbo.AccountNumber, pour les colonnes PurchaseOrderNumber et AccountNumber, respectivement. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ne prend pas en charge le type défini par l’utilisateur alias pour les tables optimisées en mémoire, par conséquent les nouvelles tables utilisent les types de données système nvarchar(25) et nvarchar(15), respectivement.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "91867567"
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.
 
   
--   Les*contraintes de clé étrangère* sont prises en charge pour les tables optimisées en mémoire dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], mais uniquement si les tables référencées sont également optimisées en mémoire. Les clés étrangères qui référencent des tables également migrées vers des tables optimisées en mémoire sont conservées dans les tables migrées, tandis que les autres clés étrangères sont omises.  En outre, SalesOrderHeader_inmem est une table très sollicitée dans l'exemple de charge de travail, et les contraintes de clé étrangère nécessitent un traitement supplémentaire pour toutes les opérations DML, avec des recherches dans les autres tables référencées dans ces contraintes. Par conséquent, on formule l’hypothèse que l’application garantit l’intégrité référentielle pour la table Sales.SalesOrderHeader_inmem, et celle-ci n’est pas validée quand des lignes sont insérées.  
+-   Les *contraintes de clé étrangère* sont prises en charge pour les tables optimisées en mémoire dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], mais uniquement si les tables référencées sont également optimisées en mémoire. Les clés étrangères qui référencent des tables également migrées vers des tables optimisées en mémoire sont conservées dans les tables migrées, tandis que les autres clés étrangères sont omises.  En outre, SalesOrderHeader_inmem est une table très sollicitée dans l'exemple de charge de travail, et les contraintes de clé étrangère nécessitent un traitement supplémentaire pour toutes les opérations DML, avec des recherches dans les autres tables référencées dans ces contraintes. Par conséquent, on formule l’hypothèse que l’application garantit l’intégrité référentielle pour la table Sales.SalesOrderHeader_inmem, et celle-ci n’est pas validée quand des lignes sont insérées.  
   
 -   *Rowguid* : la colonne ROWGUID est omise. Alors que uniqueidentifier est pris en charge pour les tables optimisées en mémoire, l'option ROWGUIDCOL n'est pas prise en charge dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Les colonnes de ce type sont généralement utilisées pour la réplication de fusion ou pour des tables qui possèdent des colonnes FILESTREAM. Cet exemple ne comporte aucun de ces éléments.  
   

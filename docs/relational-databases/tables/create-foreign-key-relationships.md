@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea3a7bec04dcd7e584d541cf4fa4ccee3cf48915
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fdd110fd51d42ae13054a5d189c1180a9af623ee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645842"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484511"
 ---
 # <a name="create-foreign-key-relationships"></a>Créer des relations de clé étrangère
 
@@ -62,13 +62,13 @@ La création d'une clé étrangère dans une table existante nécessite l'autori
 2. Dans le menu **Concepteur de tables** , cliquez sur **Relations**.
 3. Dans la boîte de dialogue **Relations de clé étrangère** , cliquez sur **Ajouter**.
 
-   La relation s'affiche dans la liste **Relation sélectionné**e avec un nom fourni par le système au format FK_\<*tablename*>_\<*tablename*>, où  *est le nom de la table* de clé étrangère.
+   La relation s'affiche dans la liste **Relation sélectionné** e avec un nom fourni par le système au format FK_\<*tablename*>_\<*tablename*>, où  *est le nom de la table* de clé étrangère.
 4. Cliquez sur la relation dans la liste **Relation sélectionnée** .
 5. Cliquez sur **Spécification de tables et colonnes** dans la grille affichée à droite et cliquez sur le bouton de sélection ( **...** ), à droite de la propriété.
 6. Dans la liste déroulante **Clé primaire** de la boîte de dialogue **Tables et colonnes** , choisissez la table qui sera du côté clé primaire de la relation.
 7. Dans la grille située au-dessous, choisissez les colonnes qui participent à la clé primaire de la table. Dans la cellule de la grille située à droite de chaque colonne, choisissez la colonne clé étrangère correspondante dans la table de clé étrangère.
 
-   Le**Concepteur de tables** propose un nom pour la relation. Pour changer ce nom, modifiez le contenu de la zone de texte **Nom de la relation** .
+   Le **Concepteur de tables** propose un nom pour la relation. Pour changer ce nom, modifiez le contenu de la zone de texte **Nom de la relation** .
 8. Choisissez **OK** pour créer la relation.
 9. Fermez la fenêtre du concepteur de tables et **enregistrez** vos modifications pour que la modification de la relation de clé étrangère prennent effet.
 

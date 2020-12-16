@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d1c849a1828664fa24d8e2473dfe9c692c048cd
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f742ece496377a224a67b12223b09d198327812a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243602"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484491"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gérer la conservation des données d’historique dans les tables temporelles versionnées par le système
 
@@ -72,7 +72,7 @@ Vous pouvez configurer une table d’historique temporelle pour Stretch à l’a
 
 Pour les débutants, la méthode la plus simple consiste à utiliser l’Assistant Stretch pour activer Stretch pour la base de données entière, puis à sélectionner la table d’historique temporelle dans l’Assistant Stretch (cet exemple part du principe que vous avez configuré la table Department en tant que table temporelle avec versions gérées par le système dans une base de données autrement vide). Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous ne pouvez pas cliquer avec le bouton droit sur la table d’historique temporelle proprement dite et cliquer sur Stretch.
 
-1. Cliquez avec le bouton droit sur votre base de données et pointez sur **Tâches** , sur **Stretch** , puis cliquez sur **Activer** pour lancer l’Assistant.
+1. Cliquez avec le bouton droit sur votre base de données et pointez sur **Tâches**, sur **Stretch**, puis cliquez sur **Activer** pour lancer l’Assistant.
 2. Dans la fenêtre **Sélectionner des tables** , cochez la case de la table d’historique temporelle et cliquez sur Suivant.
 
     ![Sélection de la table d’historique dans la page Sélectionner des tables](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Sélection de la table d’historique dans la page Sélectionner des tables")
@@ -82,7 +82,7 @@ Pour les débutants, la méthode la plus simple consiste à utiliser l’Assista
 4. Dans la fenêtre **Informations d’identification sécurisées** , indiquez un mot de passe pour la clé principale de la base de données afin de sécuriser vos informations d’identification de base de données SQL Server source et cliquez sur Suivant.
 
     ![Page d’informations d’identification sécurisées de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Page d’informations d’identification sécurisées de l’Assistant Stretch Database")
-5. Dans la fenêtre **Sélectionner une adresse IP** , indiquez la plage d’adresses IP pour que votre serveur SQL Server permette à votre serveur Azure de communiquer avec lui (si vous sélectionnez un serveur existant pour lequel une règle de pare-feu existe déjà, il suffit de cliquer sur Suivant ici pour utiliser cette règle de pare-feu existante). Cliquez sur **Suivant** , puis sur **Terminer** pour activer Stretch Database pour la table d’historique temporelle.
+5. Dans la fenêtre **Sélectionner une adresse IP**, indiquez la plage d’adresses IP pour que votre serveur SQL Server permette à votre serveur Azure de communiquer avec lui (si vous sélectionnez un serveur existant pour lequel une règle de pare-feu existe déjà, il suffit de cliquer sur Suivant ici pour utiliser cette règle de pare-feu existante). Cliquez sur **Suivant**, puis sur **Terminer** pour activer Stretch Database pour la table d’historique temporelle.
 
     ![Page de sélection de l’adresse IP de l’Assistant Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Page de sélection de l’adresse IP de l’Assistant Stretch Database")
 6. Quand l’Assistant a terminé, vérifiez que Stretch est correctement activé pour votre base de données. Notez que les icônes de l’Explorateur d’objets indiquent que Stretch a été activé pour la base de données.
@@ -332,7 +332,7 @@ Dans un scénario de fenêtre glissante, la limite de partition inférieure est 
 - Cas RANGE LEFT : dans le cas de RANGE LEFT, la limite de partition inférieure appartient à la partition 1, qui est vide (après l’extraction de partition). Autrement dit, MERGE RANGE ne subit aucun déplacement de données.
 - Cas RANGE RIGHT : dans le cas de RANGE RIGHT, la limite inférieure appartient à la partition 2, qui n’est pas vide, étant entendu que la partition 1 a été vidée par l’extraction. Dans ce cas, MERGE RANGE entraîne un déplacement de données (les données de la partition 2 sont déplacées vers la partition 1). Pour éviter cela, dans le scénario de fenêtre glissante, RANGE RIGHT doit avoir la partition 1, qui est toujours vide. Cela signifie que si nous utilisons RANGE RIGHT, nous devons créer et maintenir une partition supplémentaire par rapport au cas RANGE LEFT.
 
-**Conclusion**  : l’utilisation de RANGE LEFT dans une partition glissante facilite grandement la gestion des partitions et évite le déplacement des données. Cependant, définir les limites de partition avec RANGE RIGHT s’avère un peu plus simple, car vous n’êtes pas confronté aux problèmes de cycle datetime/time.
+**Conclusion** : l’utilisation de RANGE LEFT dans une partition glissante facilite grandement la gestion des partitions et évite le déplacement des données. Cependant, définir les limites de partition avec RANGE RIGHT s’avère un peu plus simple, car vous n’êtes pas confronté aux problèmes de cycle datetime/time.
 
 ## <a name="using-custom-cleanup-script-approach"></a>Utilisation de la méthode de script de nettoyage personnalisé
 

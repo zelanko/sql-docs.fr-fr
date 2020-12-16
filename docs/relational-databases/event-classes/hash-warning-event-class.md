@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a39dcf3f4d9023b85d05a5368a979a8dc1ee5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ec0ced044ba6405d36f53bed4a42f17b57e7d342
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428491"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485421"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88428491"
 >  Les termes *jointure de hachage progressive* et *jointure de hachage récursive* servent aussi à décrire une interruption de hachage.  
   
 > [!IMPORTANT]  
->  Pour déterminer l'emplacement où se produit l'événement Hash Warning lorsque l'optimiseur de requête génère un plan d'exécution, vous pouvez également recueillir une classe d'événements Showplan dans la trace. Vous pouvez choisir n'importe quelle classe d'événements Showplan à l'exception des classes d'événements Showplan Text and Showplan Text (non encodées), qui ne retournent aucun ID de nœud. Les ID de nœud dans les plans d'exécution Showplan identifient chaque opération effectuée par l'optimiseur de requête lorsqu'il crée un plan d'exécution de requête. Ces opérations sont appelées *opérateurs*et chaque opérateur d’un Showplan a un ID de nœud. La colonne ObjectID des événements Hash Warning correspond à l'ID de nœud dans Showplans pour vous permettre de déterminer quel opérateur ou quelle opération est responsable de l'erreur.  
+>  Pour déterminer l'emplacement où se produit l'événement Hash Warning lorsque l'optimiseur de requête génère un plan d'exécution, vous pouvez également recueillir une classe d'événements Showplan dans la trace. Vous pouvez choisir n'importe quelle classe d'événements Showplan à l'exception des classes d'événements Showplan Text and Showplan Text (non encodées), qui ne retournent aucun ID de nœud. Les ID de nœud dans les plans d'exécution Showplan identifient chaque opération effectuée par l'optimiseur de requête lorsqu'il crée un plan d'exécution de requête. Ces opérations sont appelées *opérateurs* et chaque opérateur d’un Showplan a un ID de nœud. La colonne ObjectID des événements Hash Warning correspond à l'ID de nœud dans Showplans pour vous permettre de déterminer quel opérateur ou quelle opération est responsable de l'erreur.  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Colonnes de la classe d'événements Hash Warning  
   

@@ -46,13 +46,13 @@ helpviewer_keywords:
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e4763f4c4f28ad4787785b4e5838155fb9a05f10
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
+ms.openlocfilehash: 194aecd7e601c95047c9601a99d28626909b9be5
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496870"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489437"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -64,7 +64,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -74,7 +74,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
         [SQL Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -191,10 +191,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 DATABASE Spécifie une sauvegarde complète de la base de données. Si une liste de fichiers et de groupes de fichiers est spécifiée, seuls ceux-ci sont sauvegardés. Au cours d'une sauvegarde de base de données complète ou différentielle, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sauvegarde une portion suffisante du journal des transactions afin d'assurer la cohérence de la base de données lors de la restauration de la sauvegarde.
 
-Lorsque vous restaurez une sauvegarde créée par BACKUP DATABASE (une *sauvegarde de données* ), l’ensemble de la sauvegarde est restauré. Seule une sauvegarde du fichier journal peut être restaurée à un moment ou une transaction spécifique au sein de la sauvegarde.
+Lorsque vous restaurez une sauvegarde créée par BACKUP DATABASE (une *sauvegarde de données*), l’ensemble de la sauvegarde est restauré. Seule une sauvegarde du fichier journal peut être restaurée à un moment ou une transaction spécifique au sein de la sauvegarde.
 
 > [!NOTE]
-> Seule une sauvegarde complète peut être effectuée sur la base de données **master** .
+> Seule une sauvegarde complète peut être effectuée sur la base de données **master**.
 
 LOG
 
@@ -205,12 +205,12 @@ Vous pouvez restaurer une sauvegarde du fichier journal jusqu’à une date et h
 > [!NOTE]
 > Après une sauvegarde de fichier journal standard, certains enregistrements du journal des transactions deviennent inactifs, sauf si vous spécifiez `WITH NO_TRUNCATE` ou `COPY_ONLY`. Le journal est tronqué une fois que tous les enregistrements d'un ou de plusieurs fichiers journaux virtuels sont devenus inactifs. Si le journal n'est pas tronqué après des sauvegardes normales du journal, il se peut que quelque chose retarde la troncation du journal. Pour plus d’informations, consultez [Facteurs pouvant retarder la troncation du journal](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).
 
-{ _database\_name_ |  **@** _database\_name\_var_ } Spécifie la base de données à partir de laquelle le journal des transactions, la base de données partielle ou la base de données complète sont sauvegardés. S’il est fourni comme variable ( **@** _database\_name\_var_ ), ce nom peut être spécifié comme constante de chaîne ( **@** _database\_name\_var_ **=** _database name_ ) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text** .
+{ _database\_name_ |  **@** _database\_name\_var_ } Spécifie la base de données à partir de laquelle le journal des transactions, la base de données partielle ou la base de données complète sont sauvegardés. S’il est fourni comme variable ( **@** _database\_name\_var_), ce nom peut être spécifié comme constante de chaîne ( **@** _database\_name\_var_ **=** _database name_) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
 
 > [!NOTE]
 > La base de données miroir d'un partenariat de mise en miroir de bases de données ne peut pas être sauvegardée.
 
-\<file_or_filegroup> [ **,** ... *n* ] Utilisé uniquement avec BACKUP DATABASE, cet argument spécifie un fichier ou groupe de fichiers de base de données à inclure dans une sauvegarde de fichiers ou spécifie un fichier ou groupe de fichiers en lecture seule à inclure dans une sauvegarde partielle.
+\<file_or_filegroup> [ **,** ...*n* ] Utilisé uniquement avec BACKUP DATABASE, cet argument spécifie un fichier ou groupe de fichiers de base de données à inclure dans une sauvegarde de fichiers ou spécifie un fichier ou groupe de fichiers en lecture seule à inclure dans une sauvegarde partielle.
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } Spécifie le nom logique d’un fichier ou une variable dont la valeur correspond au nom logique d’un fichier à inclure dans la sauvegarde.
 
@@ -223,7 +223,7 @@ FILEGROUP **=** { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\
 
 Pour plus d’informations, consultez les articles [Sauvegardes de fichiers complètes](../../relational-databases/backup-restore/full-file-backups-sql-server.md) et [Sauvegarder des fichiers et des groupes de fichiers](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ... _n_ ] ] Spécifie une sauvegarde partielle. Une sauvegarde partielle inclut tous les fichiers en lecture/écriture dans une base de données : le groupe de fichiers primaire, tous les groupes de fichiers secondaires en lecture/écriture, ainsi que les fichiers ou groupes de fichiers en lecture seule qui ont été spécifiés.
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ..._n_ ] ] Spécifie une sauvegarde partielle. Une sauvegarde partielle inclut tous les fichiers en lecture/écriture dans une base de données : le groupe de fichiers primaire, tous les groupes de fichiers secondaires en lecture/écriture, ainsi que les fichiers ou groupes de fichiers en lecture seule qui ont été spécifiés.
 
 READ_WRITE_FILEGROUPS Spécifie que tous les groupes de fichiers en lecture/écriture doivent être sauvegardés dans la sauvegarde partielle. Si la base de données est en lecture seule, READ_WRITE_FILEGROUPS inclut uniquement le groupe de fichiers primaire.
 
@@ -236,13 +236,13 @@ FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ 
 
 Pour plus d’informations sur les sauvegardes partielles, consultez l’article [Sauvegardes partielles](../../relational-databases/backup-restore/partial-backups-sql-server.md).
 
-TO \<backup_device> [ **,** ... *n* ] Indique que le jeu d' [unités de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md) associé est soit un support de sauvegarde non miroir, soit le premier miroir d'un support de sauvegarde miroir (pour lequel une ou plusieurs clauses MIRROR TO sont déclarées).
+TO \<backup_device> [ **,** ...*n* ] Indique que le jeu d'[unités de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md) associé est soit un support de sauvegarde non miroir, soit le premier miroir d'un support de sauvegarde miroir (pour lequel une ou plusieurs clauses MIRROR TO sont déclarées).
 
 \<backup_device>
 
 Spécifie l'unité de sauvegarde logique ou physique à utiliser pour l'opération de sauvegarde.
 
-{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **S’applique à :** SQL Server Spécifie le nom logique de l’unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@ *logical_device_name_var* ), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (@ _logical\_device\_name\_var_ **=** logical backup device name) ou d’une variable de type chaîne de caractères, sauf pour les types de données **ntext** ou **text** .
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **S’applique à :** SQL Server Spécifie le nom logique de l’unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@*logical_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (@_logical\_device\_name\_var_ **=** logical backup device name) ou d’une variable de type chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
 
 { DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **S’applique à :** DISK, TAPE et URL s’appliquent à SQL Server.
 Spécifie un fichier sur disque ou support à bandes, ou un service de stockage Blob Microsoft Azure. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Microsoft Azure. Pour plus d’informations et d’exemples, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour suivre un tutoriel, consultez [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
@@ -252,7 +252,7 @@ Spécifie un fichier sur disque ou support à bandes, ou un service de stockage 
 > [!IMPORTANT]
 > De [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous ne pouvez sauvegarder que sur une seule unité de disque lorsque vous effectuez une sauvegarde vers une URL. Pour effectuer une sauvegarde sur plusieurs unités lorsque vous sauvegardez vers une URL, vous devez utiliser [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, ainsi que des jetons de signature d’accès partagé. Pour obtenir des exemples de signatures d’accès partagé, consultez [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with PowerShell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).
 
-**URL s’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et versions ultérieures).
+**URL s’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et versions ultérieures).
 
 Une unité de disque n'est pas tenue d'exister pour pouvoir être spécifiée dans une instruction BACKUP. Si l'unité physique existe et si l'option INIT n'est pas spécifiée dans l'instruction BACKUP, la sauvegarde est ajoutée à l'unité.
 
@@ -266,7 +266,7 @@ Pour plus d’informations, consultez l’article [Unités de sauvegarde](../../
 
 *n* Correspond à un espace réservé indiquant qu’il est possible de spécifier jusqu’à 64 unités de sauvegarde dans une liste séparée par des virgules.
 
-MIRROR TO \<backup_device> [ **,** ... *n* ] Spécifie un jeu constitué au maximum de trois unités de sauvegarde, dont chacune est le miroir des unités de sauvegarde spécifiées dans la clause TO. La clause MIRROR TO doit spécifier le même type et le même nombre d’unités de sauvegarde que la clause TO. Vous pouvez spécifier jusqu'à trois clauses MIRROR TO.
+MIRROR TO \<backup_device> [ **,** ...*n* ] Spécifie un jeu constitué au maximum de trois unités de sauvegarde, dont chacune est le miroir des unités de sauvegarde spécifiées dans la clause TO. La clause MIRROR TO doit spécifier le même type et le même nombre d’unités de sauvegarde que la clause TO. Vous pouvez spécifier jusqu'à trois clauses MIRROR TO.
 
 Cette option est disponible uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -288,7 +288,7 @@ Spécifie les options à utiliser avec une opération de sauvegarde.
 CREDENTIAL **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et versions ultérieures).
 S’utilise uniquement lors de la création d’une sauvegarde dans le service de stockage Blob Microsoft Azure.
 
-FILE_SNAPSHOT **S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).
+FILE_SNAPSHOT **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures).
 
 Utilisé pour créer un instantané Azure des fichiers de base de données lorsque tous les fichiers de base de données SQL Server sont stockés à l’aide du service Azure Blob Storage. Pour plus d’informations, consultez [Fichiers de données SQL Server dans Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). La sauvegarde d’instantanés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des instantanés Azure des fichiers de base de données (données et fichiers journaux) dont l’état est cohérent. Un ensemble cohérent d’instantanés Azure constitue une sauvegarde, qui est enregistrée dans le fichier de sauvegarde. La seule différence entre `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` et `BACKUP LOG TO URL WITH FILE_SNAPSHOT` est que ce dernier tronque le journal des transactions. Avec la sauvegarde d’instantanés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une fois effectuée la sauvegarde complète initiale dont a besoin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la chaîne de sauvegarde, seule une sauvegarde de fichier journal est nécessaire pour restaurer une base de données vers le point dans le temps correspondant à la sauvegarde de fichier journal. En outre, seules deux sauvegardes de fichier journal sont nécessaires pour restaurer une base de données vers un point dans le temps situé entre les deux sauvegardes de fichier journal.
 
@@ -355,15 +355,15 @@ NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } Spécifie le nom du
 
 { EXPIREDATE **='** _date_ **'** | RETAINDAYS **=** _days_ } Spécifie la date à laquelle le jeu de sauvegarde de cette sauvegarde peut être remplacé. Si ces options sont toutes les deux utilisées, RETAINDAYS l'emporte sur EXPIREDATE.
 
-Si aucune de ces options n’est spécifiée, la date d’expiration est déterminée par le paramètre de configuration **mediaretention** . Pour plus d’informations, consultez l’article [Options de configuration du serveur](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
+Si aucune de ces options n’est spécifiée, la date d’expiration est déterminée par le paramètre de configuration **mediaretention**. Pour plus d’informations, consultez l’article [Options de configuration du serveur](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
 
 > [!IMPORTANT]
 > Ces options empêchent seulement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'écraser un fichier. Le contenu des bandes peut être écrasé par d'autres méthodes, et les fichiers sur disque peuvent être supprimés à partir du système d'exploitation. Pour plus d'informations sur le contrôle du délai d'expiration, consultez SKIP et FORMAT dans cette rubrique.
 
-EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } Spécifie la date à laquelle le jeu de sauvegarde expire et peut donc être remplacé. Si elle est fournie en tant que variable (@ _date\_var_ ), cette date doit suivre le format **datetime** configuré par le système et prendre l’une des formes suivantes :
+EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } Spécifie la date à laquelle le jeu de sauvegarde expire et peut donc être remplacé. Si elle est fournie en tant que variable (@_date\_var_), cette date doit suivre le format **datetime** configuré par le système et prendre l’une des formes suivantes :
 
-- Une constante de chaîne (@ _date\_var_ **=** date)
-- Une variable de type chaîne de caractères (à l’exception des types de données **ntext** ou **text** )
+- Une constante de chaîne (@_date\_var_ **=** date)
+- Une variable de type chaîne de caractères (à l’exception des types de données **ntext** ou **text**)
 - Un **smalldatetime**
 - Une variable **datetime**
 
@@ -372,12 +372,12 @@ Par exemple :
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
 
-Pour plus d’informations sur la spécification des valeurs **datetime** , consultez [Types Date et Time](../../t-sql/data-types/date-and-time-types.md).
+Pour plus d’informations sur la spécification des valeurs **datetime**, consultez [Types Date et Time](../../t-sql/data-types/date-and-time-types.md).
 
 > [!NOTE]
 > Pour ignorer la date d’expiration, utilisez l’option `SKIP`.
 
-RETAINDAYS **=** { *days* |  **@** _days\_var_ } Spécifie le nombre de jours qui doivent s’écouler avant que ce support de sauvegarde puisse être remplacé. S’il est fourni en tant que variable ( **@** _days\_var_ ), sa valeur doit être un entier.
+RETAINDAYS **=** { *days* |  **@** _days\_var_ } Spécifie le nombre de jours qui doivent s’écouler avant que ce support de sauvegarde puisse être remplacé. S’il est fourni en tant que variable ( **@** _days\_var_), sa valeur doit être un entier.
 
 **Options du support de sauvegarde**
 
@@ -537,7 +537,7 @@ STANDBY **=** _standby_file_name_
 
 Effectue une sauvegarde de la fin du journal et laisse la base de données en lecture seule et en état STANDBY. La clause STANDBY écrit les données en attente (annulation avec option de restauration ultérieure). L'option STANDBY est semblable à BACKUP LOG WITH NORECOVERY suivie par RESTORE WITH STANDBY.
 
-Le mode d’attente nécessite un fichier d’annulation, spécifié par *standby_file_name* , dont l’emplacement figure dans le journal de la base de données. Si le fichier spécifié existe déjà, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'écrase ; sinon, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] le crée. Le fichier d'annulation devient partie intégrante de la base de données.
+Le mode d’attente nécessite un fichier d’annulation, spécifié par *standby_file_name*, dont l’emplacement figure dans le journal de la base de données. Si le fichier spécifié existe déjà, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'écrase ; sinon, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] le crée. Le fichier d'annulation devient partie intégrante de la base de données.
 
 Ce fichier contient les modifications annulées, qui doivent être restaurées si des opérations RESTORE LOG sont effectuées ultérieurement. Vous devez disposer d'un espace disque suffisant pour que le fichier d'annulation puisse contenir toutes les pages distinctes de la base de données qui ont été modifiées par suite du rejet des transactions non validées.
 
@@ -574,7 +574,7 @@ Les types de sauvegarde pris en charge dépendent du mode de récupération de l
     |Base de données partielle|Les [sauvegardes partielles](../../relational-databases/backup-restore/partial-backups-sql-server.md)couvrent les groupes de fichiers en lecture/écriture et, éventuellement, un ou plusieurs fichiers ou groupes de fichiers en lecture seule.<br /><br /> Chaque sauvegarde partielle peut éventuellement servir de base pour une série d’une ou de plusieurs [sauvegardes partielles différentielles](../../relational-databases/backup-restore/differential-backups-sql-server.md).|
     |Fichier ou groupe de fichiers|Les [sauvegardes de fichiers](../../relational-databases/backup-restore/full-file-backups-sql-server.md) couvrent un ou plusieurs fichiers ou groupes de fichiers et ne conviennent qu’aux bases de données contenant plusieurs groupes de fichiers. En mode de récupération simple, les sauvegardes de fichiers se limitent essentiellement aux groupes de fichiers secondaires en lecture seule.<br /> Chaque sauvegarde de fichiers peut éventuellement servir de base pour une série d’une ou de plusieurs [sauvegardes de fichiers différentielles](../../relational-databases/backup-restore/differential-backups-sql-server.md).|
 
-- En mode de récupération complète ou en mode de récupération utilisant les journaux de transactions, les sauvegardes standard incluent également les *sauvegardes des journaux de transactions* (ou *sauvegardes de fichier journal* ) séquentielles qui sont nécessaires. Chaque sauvegarde de fichier journal couvre la partie du journal des transactions qui est active au moment de la création de la sauvegarde et inclut tous les enregistrements de journal qui n'ont pas été sauvegardés lors d'une précédente sauvegarde de journal.
+- En mode de récupération complète ou en mode de récupération utilisant les journaux de transactions, les sauvegardes standard incluent également les *sauvegardes des journaux de transactions* (ou *sauvegardes de fichier journal*) séquentielles qui sont nécessaires. Chaque sauvegarde de fichier journal couvre la partie du journal des transactions qui est active au moment de la création de la sauvegarde et inclut tous les enregistrements de journal qui n'ont pas été sauvegardés lors d'une précédente sauvegarde de journal.
 
     Pour réduire au maximum les risques de perte de travail, mais avec un coût en termes de charge d'administration, vous devez planifier des sauvegardes de fichier journal fréquentes. La planification de sauvegardes différentielles entre des sauvegardes complètes peut réduire le temps de restauration en diminuant le nombre de sauvegardes de fichier journal à restaurer après la restauration des données.
 
@@ -661,7 +661,7 @@ Pour plus d’informations sur les supports de sauvegarde miroir, consultez l’
 
 ### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a> Restauration de sauvegardes SQL Server
 
-Pour restaurer une base de données et, éventuellement, la récupérer pour la mettre en ligne, ou pour restaurer un fichier ou un groupe de fichiers, utilisez l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ou les tâches [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de **restauration** . Pour plus d’informations, consultez l’article [Vue d’ensemble de la restauration et de la récupération](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
+Pour restaurer une base de données et, éventuellement, la récupérer pour la mettre en ligne, ou pour restaurer un fichier ou un groupe de fichiers, utilisez l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ou les tâches [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de **restauration**. Pour plus d’informations, consultez l’article [Vue d’ensemble de la restauration et de la récupération](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
 ## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a> Considérations supplémentaires à propos des options BACKUP
 
@@ -732,7 +732,7 @@ Si une opération de sauvegarde chevauche une opération de réduction ou de ges
 - [backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)
 - [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)
 
-Si une restauration est effectuée et si le jeu de sauvegarde n’est pas encore enregistré dans la base de données **msdb** , les tables d’historique de sauvegarde peuvent être modifiées.
+Si une restauration est effectuée et si le jeu de sauvegarde n’est pas encore enregistré dans la base de données **msdb**, les tables d’historique de sauvegarde peuvent être modifiées.
 
 ## <a name="security"></a>Sécurité
 
@@ -935,17 +935,17 @@ WHERE r.command LIKE 'BACKUP%'
 - [Restauration fragmentaire de bases de données avec des tables à mémoire optimisée](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+        [SQL Server](backup-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -996,9 +996,9 @@ DATABASE Spécifie une sauvegarde complète de la base de données. Au cours d�
 > [!IMPORTANT]
 > Une sauvegarde de base de données créée sur une instance managée ne peut être restaurée que sur une autre instance Azure SQL Managed Instance. Elle ne peut pas être restaurée sur une instance locale de SQL Server (de même qu’une sauvegarde d’une base de données SQL Server 2016 ne peut pas être restaurée sur une instance de SQL Server 2012).
 
-Lorsque vous restaurez une sauvegarde créée par BACKUP DATABASE (une *sauvegarde de données* ), l’ensemble de la sauvegarde est restauré. Pour effectuer une restauration à partir de sauvegardes automatiques SQL Managed Instance, consultez [Restaurer une base de données sur une instance managée](/azure/sql-database/sql-database-managed-instance-get-started-restore).
+Lorsque vous restaurez une sauvegarde créée par BACKUP DATABASE (une *sauvegarde de données*), l’ensemble de la sauvegarde est restauré. Pour effectuer une restauration à partir de sauvegardes automatiques SQL Managed Instance, consultez [Restaurer une base de données sur une instance managée](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
-{ *database_name* |  **@** _database\_name\_var_ } Spécifie la base de données à partir de laquelle la base de données complète est sauvegardée. S’il est fourni comme variable ( **@** _database\_name\_var_ ), ce nom peut être spécifié comme constante de chaîne ( **@** _database\_name\_var_ **=** _database name_ ) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text** .
+{ *database_name* |  **@** _database\_name\_var_ } Spécifie la base de données à partir de laquelle la base de données complète est sauvegardée. S’il est fourni comme variable ( **@** _database\_name\_var_), ce nom peut être spécifié comme constante de chaîne ( **@** _database\_name\_var_ **=** _database name_) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
 
 Pour plus d’informations, consultez les articles [Sauvegardes de fichiers complètes](../../relational-databases/backup-restore/full-file-backups-sql-server.md) et [Sauvegarder des fichiers et des groupes de fichiers](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
@@ -1106,7 +1106,7 @@ La taille maximale d’une bande de sauvegarde est de 195 Go (taille maximale de
 
 ### <a name="permissions"></a>Autorisations
 
-Les autorisations BACKUP DATABASE reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .
+Les autorisations BACKUP DATABASE reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator**.
 
 Des problèmes de propriété et d’autorisations sur l’URL sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de lire et d'écrire sur l'unité ; le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit avoir des autorisations d'écriture.
 
@@ -1125,11 +1125,11 @@ WITH STATS = 5, COPY_ONLY;
 [Restaurer la base de données](restore-statements-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+        [SQL Server](backup-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [SQL Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
@@ -1145,7 +1145,7 @@ WITH STATS = 5, COPY_ONLY;
 
 Crée une sauvegarde d’une base de données [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] et stocke la sauvegarde de l’appliance dans un emplacement réseau spécifié par l’utilisateur. Utilisez cette instruction avec [RESTORE DATABASE - Analytics Platform System](../../t-sql/statements/restore-statements-transact-sql.md) pour la récupération d’urgence, ou pour copier une base de données d’une appliance vers une autre.
 
-**Avant de commencer** , lisez la section relative à l’acquisition et à la configuration d’un serveur de sauvegarde dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+**Avant de commencer**, lisez la section relative à l’acquisition et à la configuration d’un serveur de sauvegarde dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Deux types de sauvegardes sont possibles dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Une *sauvegarde complète de base de données* correspond à la sauvegarde de l’intégralité d’une base de données [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Une *sauvegarde différentielle de base de données* contient uniquement les modifications effectuées depuis la dernière sauvegarde complète. Une sauvegarde de base de données utilisateur comprend les utilisateurs de la base de données, ainsi que ses rôles. La sauvegarde de la base de données MASTER comprend les connexions.
 
@@ -1176,10 +1176,10 @@ BACKUP DATABASE database_name
 
 *database_name* Nom de la base de données pour laquelle créer une sauvegarde. Il peut s’agir de la base de données MASTER ou d’une base de données utilisateur.
 
-TO DISK = '\\\\*UNC_path*\\*backup_directory* ' Chemin réseau et répertoire dans lesquels [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] doit écrire les fichiers de sauvegarde. Par exemple, « \\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup ».
+TO DISK = '\\\\*UNC_path*\\*backup_directory*' Chemin réseau et répertoire dans lesquels [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] doit écrire les fichiers de sauvegarde. Par exemple, « \\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup ».
 
 - Le chemin où se trouve le nom du répertoire de sauvegarde doit déjà exister et être spécifié comme un chemin UNC complet.
-- Le répertoire de sauvegarde ( *backup_directory* ) ne doit pas exister avant l’exécution de la commande de sauvegarde. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crée le répertoire de sauvegarde.
+- Le répertoire de sauvegarde (*backup_directory*) ne doit pas exister avant l’exécution de la commande de sauvegarde. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crée le répertoire de sauvegarde.
 - Le chemin du répertoire de sauvegarde ne peut pas être un chemin local ni un emplacement sur un nœud d’appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 - La longueur maximale du chemin UNC et du nom du répertoire de sauvegarde est de 200 caractères.
 - Le serveur ou l’hôte doivent être spécifiés comme une adresse IP. Vous ne pouvez pas le spécifier comme le nom de l’hôte ou du serveur.
@@ -1207,7 +1207,7 @@ Par exemple :
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite l’autorisation **BACKUP DATABASE** ou l’appartenance au rôle de base de données fixe **db_backupoperator** . La base de données MASTER peut uniquement être sauvegardée par un utilisateur standard ayant reçu le rôle de base de données fixe **db_backupoperator** . La base de données MASTER peut uniquement être sauvegardée par un **administrateur système** , un administrateur d’infrastructure ou un membre du rôle serveur fixe **sysadmin** .
+Nécessite l’autorisation **BACKUP DATABASE** ou l’appartenance au rôle de base de données fixe **db_backupoperator**. La base de données MASTER peut uniquement être sauvegardée par un utilisateur standard ayant reçu le rôle de base de données fixe **db_backupoperator**. La base de données MASTER peut uniquement être sauvegardée par un **administrateur système**, un administrateur d’infrastructure ou un membre du rôle serveur fixe **sysadmin**.
 
 Nécessite un compte Windows doté d’un droit d’accès, de création et d’écriture sur le répertoire de sauvegarde. Vous devez aussi stocker le nom de compte et le mot de passe Windows dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Pour ajouter ces informations d’identification réseau à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez la procédure stockée [sp_pdw_add_network_credentials [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
 
@@ -1226,7 +1226,7 @@ Des erreurs BACKUP DATABASE se produisent dans les conditions suivantes :
 - Un lancement de sauvegarde a été tenté dans une transaction.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017"
 ## <a name="general-remarks"></a>Remarques d'ordre général
 
 Avant d’effectuer une sauvegarde de base de données, utilisez [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) pour réduire la taille de votre base de données.
@@ -1240,7 +1240,7 @@ Si vous annulez une commande BACKUP, [!INCLUDE[ssPDW](../../includes/sspdw-md.md
 Les sauvegardes complètes et les sauvegardes différentielles sont stockées dans des répertoires différents. Les conventions de nommage ne sont pas appliquées lorsque vous associez une sauvegarde complète et une sauvegarde différentielle. Vous pouvez effectuer ce suivi à l’aide de vos propres conventions de nommage. Vous pouvez également effectuer ce suivi à l’aide de l’option WITH DESCRIPTION pour ajouter une description, puis à l’aide de l’instruction RESTORE HEADERONLY pour récupérer la description.
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
 
 Vous ne pouvez pas effectuer de sauvegarde différentielle pour la base de données MASTER. Seules les sauvegardes complètes sont possibles avec les bases de données MASTER.

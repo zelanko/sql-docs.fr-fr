@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 910671ecefc7a52f86a7e025492c3e5ec1371e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330435"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485361"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Audit de sécurité, catégorie d'événements (SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88330435"
 |[Audit DBCC, classe d’événements](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Indique qu'une commande DBCC a été émise.|  
 |[Audit Fulltext, classe d'événements](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indique qu'un événement de texte intégral s'est produit.|  
 |[Audit Login Change Password, classe d’événements](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indique qu'un utilisateur a modifié son mot de passe d'ouverture de session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Classe d'événements Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indique que la procédure **sp_defaultdb**, **sp_defaultlanguage**ou ALTER LOGIN a été utilisée pour modifier une propriété d’une connexion.|  
+|[Classe d'événements Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indique que la procédure **sp_defaultdb**, **sp_defaultlanguage** ou ALTER LOGIN a été utilisée pour modifier une propriété d’une connexion.|  
 |[Classe d'événements Audit Login](../../relational-databases/event-classes/audit-login-event-class.md)|Indique qu'un utilisateur s'est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Classe d'événements Audit Login Failed](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Indique qu'un utilisateur a tenté de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et a échoué.|  
 |[Classe d'événements Audit Login GDR](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Indique qu'un droit de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows a été ajouté ou supprimé.|  
