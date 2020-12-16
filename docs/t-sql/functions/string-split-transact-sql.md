@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
-ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017
+ms.openlocfilehash: d30220685c2654c745c40ecc8782b79049f5c598
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93405046"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461190"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -53,7 +53,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>Arguments
 
  *string*  
- [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère (par exemple, **nvarchar** , **varchar** , **nchar** ou **char** ).  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère (par exemple, **nvarchar**, **varchar**, **nchar** ou **char**).  
   
  *separator*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) d’un seul caractère de n’importe quel type de caractère (par exemple **nvarchar(1)** , **varchar(1)** , **nchar(1)** ou **char(1)** ) qui est utilisée comme séparateur pour les sous-chaînes concaténées.  
@@ -68,7 +68,7 @@ Retourne une table d’une seule colonne dont les lignes sont les sous-chaînes.
 
 Les lignes résultantes peuvent être dans n’importe quel ordre. Il n’est _pas_ garanti que l’ordre corresponde à l’ordre des sous-chaînes dans la chaîne en entrée. Vous pouvez remplacer l’ordre de tri final avec une clause ORDER BY sur l’instruction SELECT (`ORDER BY value`).
 
-0x0000 ( **char(0)** ) est un caractère non défini dans les classements Windows et ne peut pas être inclus dans STRING_SPLIT.
+0x0000 (**char(0)** ) est un caractère non défini dans les classements Windows et ne peut pas être inclus dans STRING_SPLIT.
 
 Les sous-chaînes vides de longueur nulle sont présentes quand la chaîne en entrée contient plusieurs occurrences consécutives du caractère délimiteur. Les sous-chaînes vides sont traitées de la même façon que les sous-chaînes contenant du texte. Vous pouvez filtrer les lignes contenant la sous-chaîne vide avec la clause WHERE (`WHERE value <> ''`). Si la chaîne en entrée est NULL, la fonction table STRING_SPLIT retourne une table vide.  
 

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08a3bbf542911c31681f72c74ed783cf6ae79d99
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03159a0a6656e4fa45d4b3363ee0e61ebdef6878
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439528"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460412"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "92439528"
   
 1.  Lancez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Cliquez sur **Nouvelle requête** .  
+2.  Cliquez sur **Nouvelle requête**.  
   
 3.  Collez ce code dans la nouvelle fenêtre de requête et exécutez chaque section.  
 
@@ -138,7 +138,7 @@ ms.locfileid: "92439528"
   
 2.  Dans l'Explorateur d'objets, cliquez avec le bouton droit sur la base de données que vous souhaitez surveiller.  
   
-3.  Dans le menu contextuel, sélectionnez **Rapports** -> **Standard Rapports** -> **Utilisation de la mémoire par les objets optimisés en mémoires** .  
+3.  Dans le menu contextuel, sélectionnez **Rapports** -> **Standard Rapports** -> **Utilisation de la mémoire par les objets optimisés en mémoires**.  
   
  ![Capture d’écran montrant l’Explorateur d’objets avec l’option Rapports > Rapports standard > Utilisation de la mémoire par les objets mémoire optimisés sélectionnée.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

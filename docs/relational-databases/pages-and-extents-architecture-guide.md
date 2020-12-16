@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4fdc13dcfa509ed2df3ec39afe5a9aa591aa6e39
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439393"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461940"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -182,7 +182,7 @@ Quand le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] a besoin d�
 
 Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] n’alloue une nouvelle étendue à une unité d’allocation que s’il ne trouve pas rapidement une page suffisamment grande dans une étendue existante pour accueillir la ligne à insérer. 
 
-<a name="ProportionalFill"></a> Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] alloue des étendues à partir de celles qui sont disponibles dans le groupe de fichiers à l’aide d’un **algorithme d’allocation de remplissage proportionnel** . Si, dans un même groupe de fichiers composé de deux fichiers, l’un d’entre eux dispose de deux fois plus d’espace disponible que l’autre, deux pages sont allouées à partir du fichier ayant le plus d’espace disponible pour chacune des pages allouées à partir de l’autre fichier. Cela signifie que chaque fichier d'un groupe doit avoir un pourcentage identique d'espace utilisé. 
+<a name="ProportionalFill"></a> Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] alloue des étendues à partir de celles qui sont disponibles dans le groupe de fichiers à l’aide d’un **algorithme d’allocation de remplissage proportionnel**. Si, dans un même groupe de fichiers composé de deux fichiers, l’un d’entre eux dispose de deux fois plus d’espace disponible que l’autre, deux pages sont allouées à partir du fichier ayant le plus d’espace disponible pour chacune des pages allouées à partir de l’autre fichier. Cela signifie que chaque fichier d'un groupe doit avoir un pourcentage identique d'espace utilisé. 
 
 ## <a name="tracking-modified-extents"></a>Suivi des extensions modifiées 
 

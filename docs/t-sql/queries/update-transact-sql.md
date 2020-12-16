@@ -38,13 +38,13 @@ helpviewer_keywords:
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56eaaeb3dfc90ee9de1f5ee769417eb75c232e4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 00ff65b2c1007f8c205bc30e27c48b5282b882b9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035812"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464210"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -145,7 +145,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Vous pouvez également utiliser des expressions de table courantes avec les instructions SELECT, INSERT, DELETE et CREATE VIEW. Pour plus d’informations, consultez [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP **(** _expression_ **)** [ PERCENT ]  
- Spécifie le nombre ou le pourcentage de lignes à mettre à jour. L'argument*expression* peut être un nombre ou un pourcentage de lignes.  
+ Spécifie le nombre ou le pourcentage de lignes à mettre à jour. L'argument *expression* peut être un nombre ou un pourcentage de lignes.  
   
  Les lignes référencées dans l'expression TOP utilisée dans les instructions INSERT, UPDATE ou DELETE ne sont pas triées dans un ordre précis.  
   
@@ -832,7 +832,7 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
  Les exemples de cette section illustrent des méthodes de mise à jour de valeurs dans les colonnes définies avec les types de données LOB.  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. Utilisation de l'instruction UPDATE avec la clause .WRITE pour modifier les données dans une colonne nvarchar(max)  
- L’exemple suivant utilise la clause .WRITE pour mettre à jour une valeur partielle dans `DocumentSummary`, une colonne**nvarchar(max)** dans la table `Production.Document`. Le terme `components` est remplacé par le terme `features`, en spécifiant le terme de remplacement, l'emplacement de départ (décalage) du terme à remplacer dans les données existantes et le nombre de caractères à remplacer (longueur). L’exemple utilise également la clause OUTPUT pour retourner les images avant et après de la colonne `DocumentSummary` à la variable de table `@MyTableVar`.  
+ L’exemple suivant utilise la clause .WRITE pour mettre à jour une valeur partielle dans `DocumentSummary`, une colonne **nvarchar(max)** dans la table `Production.Document`. Le terme `components` est remplacé par le terme `features`, en spécifiant le terme de remplacement, l'emplacement de départ (décalage) du terme à remplacer dans les données existantes et le nombre de caractères à remplacer (longueur). L’exemple utilise également la clause OUTPUT pour retourner les images avant et après de la colonne `DocumentSummary` à la variable de table `@MyTableVar`.  
   
 ```sql  
 USE AdventureWorks2012;  

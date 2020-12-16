@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 99b04548244da3bda45346e7aa4a7c4d72481789
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868167"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463090"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutoriel : Always Encrypted avec enclaves sécurisées avec SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -285,7 +285,7 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
     1. Démarrez une nouvelle instance SSMS.
     1. Dans la boîte de dialogue **Se connecter au serveur**, spécifiez le nom de votre serveur, sélectionnez une méthode d’authentification et spécifiez vos informations d’identification.
     1. Cliquez sur **Options >>** et sélectionnez l’onglet **Always Encrypted**.
-    1. Cochez la case **Activer Always Encrypted (chiffrement de colonne)** et spécifiez l’URL de votre attestation d’enclave (par exemple ht<span>tp://</span>hgs.bastion.local/Attestation).
+    1. Cochez la case **Activer Always Encrypted (chiffrement de colonne)** et spécifiez l’URL de votre attestation d’enclave (par exemple ht <span>tp://</span>hgs.bastion.local/Attestation).
     1. Sélectionnez **Connecter**.
     1. Si vous êtes invité à activer les requêtes Paramétrage pour Always Encrypted, sélectionnez **Activer**.
 

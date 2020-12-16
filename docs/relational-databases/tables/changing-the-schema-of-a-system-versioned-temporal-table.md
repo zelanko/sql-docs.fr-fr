@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b57082f1ce4f76e191c0237e80f404199a9ac4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538210"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462640"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Modification du schéma d’une table temporelle à version contrôlée par le système
 
@@ -58,7 +58,7 @@ ALTER TABLE dbo.Department
 
 ### <a name="important-remarks"></a>Remarques importantes
 
-- L’autorisation**CONTROL** sur les tables actuelles et historiques est nécessaire pour modifier le schéma de la table temporelle.
+- L’autorisation **CONTROL** sur les tables actuelles et historiques est nécessaire pour modifier le schéma de la table temporelle.
 - Pendant une opération **ALTER TABLE** , le système verrouille le schéma des deux tables.
 - La modification de schéma spécifiée est propagée à la table d’historique de manière appropriée (selon le type de modification).
 - Si vous ajoutez une colonne n’acceptant la valeur Null ou modifiez une colonne de sorte qu’elle n’accepte pas la valeur Null, vous devez spécifier la valeur par défaut des lignes existantes. Le système génère une valeur par défaut supplémentaire avec la même valeur et l’applique à la table historique. L’ajout de **DEFAULT** à une table non vide est une opération Taille des données dans toutes les éditions sauf dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (pour laquelle c’est une opération de métadonnées).
@@ -71,7 +71,7 @@ ALTER TABLE dbo.Department
 
   - Ajout d’une colonne calculée
   - Ajout d’une colonne **IDENTITY**
-  - Ajout d’une colonne **SPARSE** ou modification d’une colonne en **SPARSE**lorsque la table historique est configurée avec **DATA_COMPRESSION = PAGE** ou **DATA_COMPRESSION = ROW**, qui est la valeur par défaut pour la table historique.
+  - Ajout d’une colonne **SPARSE** ou modification d’une colonne en **SPARSE** lorsque la table historique est configurée avec **DATA_COMPRESSION = PAGE** ou **DATA_COMPRESSION = ROW**, qui est la valeur par défaut pour la table historique.
   - Ajout d’un **COLUMN_SET**
   - Ajout d’une colonne **ROWGUIDCOL** ou modification d’une colonne en **ROWGUIDCOL**
 

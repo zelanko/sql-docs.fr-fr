@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84adfac47c755bccee6603a632dfa44aa2c151b2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e5de0ea599650792feef01508c1eed54aed68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867357"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465430"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocs atomiques dans des procédures en mode natif
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91867357"
   
  S'il n'y a pas de transactions actives dans une session, **BEGIN ATOMIC** démarre une nouvelle transaction. Si aucune exception n'est levée en dehors de l'étendue du bloc, la transaction est validée à la fin du bloc. Si le bloc lève une exception (autrement dit, l'exception n'est pas interceptée et n'est pas gérée dans le bloc), la transaction est restaurée. Pour les transactions couvrant un bloc Atomic (une procédure stockée compilée en mode natif), vous n’avez pas besoin d’écrire d’instructions **BEGIN TRANSACTION** anetd **COMMIT** ou **ROLLBACK** explicites.  
   
- Les procédures stockées compilées en mode natif prennent en charge les constructions **TRY**, **CATCH**et **THROW** pour la gestion des erreurs. La fonction**RAISERROR** n'est pas prise en charge.  
+ Les procédures stockées compilées en mode natif prennent en charge les constructions **TRY**, **CATCH** et **THROW** pour la gestion des erreurs. La fonction **RAISERROR** n'est pas prise en charge.  
   
  L'exemple suivant illustre le comportement de gestion des erreurs avec les blocs Atomic et les procédures stockées compilées en mode natif :  
   
@@ -136,7 +136,7 @@ GO
   
 |Paramètre obligatoire|Description|  
 |----------------------|-----------------|  
-|**TRANSACTION ISOLATION LEVEL**|Les valeurs prises en charge sont **SNAPSHOT**, **REPEATABLEREAD**et **SERIALIZABLE**.|  
+|**TRANSACTION ISOLATION LEVEL**|Les valeurs prises en charge sont **SNAPSHOT**, **REPEATABLEREAD** et **SERIALIZABLE**.|  
 |**LANGUAGE**|Détermine les formats de date et d'heure, et les messages système. Tous les langages et les alias dans [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) sont pris en charge.|  
   
  Les paramètres suivants sont facultatifs :  

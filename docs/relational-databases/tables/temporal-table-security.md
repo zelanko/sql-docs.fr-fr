@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a29b6a050779cdf61d97833d49ad9854cac4e484
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 244a625cb41d05f0d2f7cf61e8d6631a85dc8a4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521576"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462560"
 ---
 # <a name="temporal-table-security"></a>Sécurité de la table temporelle
 
@@ -25,7 +25,7 @@ ms.locfileid: "89521576"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-Pour comprendre la sécurité appliquée aux tables temporelles, il est important de comprendre les principes de sécurité qui s’appliquent aux tables temporelles. Une fois que vous avez compris ces principes de sécurité, vous serez prêt à approfondir la sécurité concernant les instructions **CREATE TABLE**, **ALTER TABLE**et **SELECT** .
+Pour comprendre la sécurité appliquée aux tables temporelles, il est important de comprendre les principes de sécurité qui s’appliquent aux tables temporelles. Une fois que vous avez compris ces principes de sécurité, vous serez prêt à approfondir la sécurité concernant les instructions **CREATE TABLE**, **ALTER TABLE** et **SELECT** .
 
 ## <a name="security-principles"></a>Principes de sécurité
 
@@ -36,7 +36,7 @@ Pour comprendre la sécurité appliquée aux tables temporelles, il est importan
 |L’activation/la désactivation du contrôle de version système requiert des autorisations maximales sur les objets affectés|L’activation et la désactivation de SYSTEM_VERSIONING nécessitent l’autorisation CONTROL sur la table en cours et la table d’historique|
 |Les données d’historique ne peuvent pas être modifiées directement|Lorsque SYSTEM_VERSIONING est défini sur ON, les utilisateurs ne peuvent pas modifier les données d’historique, quelles que soient leurs autorisations sur la table en cours ou la table d’historique. Cela inclut les modifications de schéma et des données.|
 |L’interrogation des données d’historique nécessite l’autorisation **SELECT** sur la table d’historique|Même si un utilisateur dispose de l’autorisation **SELECT** sur la table en cours, cela ne signifie pas qu’il dispose de l’autorisation **SELECT** sur la table d’historique.|
-|Opérations de surfaces d’audit qui affectent la table d’historique d’une manière spécifique :|Les paramètres d’audit de la table actuelle ne sont pas appliqués automatiquement à la table d’historique. L’audit doit être activé explicitement pour la table d’historique.<br /><br /> Une fois activé, l’audit sur la table d’historique capture régulièrement toutes les tentatives directes d’accès aux données (même si elles ont échoué).<br /><br /> **SELECT** avec une extension de requête temporelle indique que la table d’historique a été affectée par cette opération.<br /><br /> La table temporelle**CREATE/ALTER** expose les informations relatives à la vérification d’autorisation sur la table d’historique également. Le fichier d’audit contient un enregistrement supplémentaire pour la table d’historique.<br /><br /> Les opérations DML sur la table en cours indiquent que la table d’historique a été affectée, mais additional_info fournit le contexte nécessaire (DML était le résultat de system_versioning).|
+|Opérations de surfaces d’audit qui affectent la table d’historique d’une manière spécifique :|Les paramètres d’audit de la table actuelle ne sont pas appliqués automatiquement à la table d’historique. L’audit doit être activé explicitement pour la table d’historique.<br /><br /> Une fois activé, l’audit sur la table d’historique capture régulièrement toutes les tentatives directes d’accès aux données (même si elles ont échoué).<br /><br /> **SELECT** avec une extension de requête temporelle indique que la table d’historique a été affectée par cette opération.<br /><br /> La table temporelle **CREATE/ALTER** expose les informations relatives à la vérification d’autorisation sur la table d’historique également. Le fichier d’audit contient un enregistrement supplémentaire pour la table d’historique.<br /><br /> Les opérations DML sur la table en cours indiquent que la table d’historique a été affectée, mais additional_info fournit le contexte nécessaire (DML était le résultat de system_versioning).|
 
 ## <a name="performing-schema-operations"></a>Exécution d’opérations de schéma
 
@@ -63,19 +63,19 @@ Lorsque SYSTEM_VERSIONING est défini sur ON, les opérations de modification de
 
 | Fonctionnalité | Créer une nouvelle table d’historique | Réutiliser la table d’historique existante |
 | ------- | ------------------------ | ---------------------------- |
-|Autorisations requises|Autorisation**CREATE TABLE** dans la base de données<br /><br /> Autorisation**ALTER** sur les schémas dans lesquels les tables en cours et d’historique sont créées|Autorisation**CREATE TABLE** dans la base de données<br /><br /> Autorisation**ALTER** sur le schéma dans lequel la table en cours va être créée<br /><br /> Autorisation**CONTROL** sur la table d’historique spécifiée dans le cadre de l’instruction **CREATE TABLE** qui crée la table temporelle|
+|Autorisations requises|Autorisation **CREATE TABLE** dans la base de données<br /><br /> Autorisation **ALTER** sur les schémas dans lesquels les tables en cours et d’historique sont créées|Autorisation **CREATE TABLE** dans la base de données<br /><br /> Autorisation **ALTER** sur le schéma dans lequel la table en cours va être créée<br /><br /> Autorisation **CONTROL** sur la table d’historique spécifiée dans le cadre de l’instruction **CREATE TABLE** qui crée la table temporelle|
 |Audit|L’audit révèle que les utilisateurs ont essayé de créer deux objets. L’opération peut échouer en raison d’autorisations insuffisantes pour créer une table dans la base de données ou en raison d’autorisations insuffisantes pour modifier les schémas des tables.|L’audit indique que la table temporelle a été créée. L’opération peut échouer en raison d’autorisations insuffisantes pour créer une table dans la base de données, en raison d’autorisations insuffisantes pour modifier le schéma de la table temporelle, ou en raison d’autorisations insuffisantes sur la table d’historique.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Sécurité de l’instruction ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF)
 
 | Fonctionnalité | Créer une nouvelle table d’historique | Réutiliser la table d’historique existante |
 | ------- | ------------------------ | ---------------------------- |
-|Autorisations requises|Autorisation**CONTROL** dans la base de données<br /><br /> Autorisation**CREATE TABLE** dans la base de données<br /><br /> Autorisation**ALTER** sur les schémas dans lesquels la table d’historique est créée|Autorisation**CONTROL** sur la table d’origine qui est modifiée<br /><br /> Autorisation**CONTROL** sur la table d’historique spécifiée dans le cadre de l’instruction **ALTER TABLE**|
+|Autorisations requises|Autorisation **CONTROL** dans la base de données<br /><br /> Autorisation **CREATE TABLE** dans la base de données<br /><br /> Autorisation **ALTER** sur les schémas dans lesquels la table d’historique est créée|Autorisation **CONTROL** sur la table d’origine qui est modifiée<br /><br /> Autorisation **CONTROL** sur la table d’historique spécifiée dans le cadre de l’instruction **ALTER TABLE**|
 |Audit|L’audit indique que la table temporelle a été modifiée et que la table d’historique a été créée en même temps. L’opération peut échouer en raison d’autorisations insuffisantes pour créer une table dans la base de données, en raison d’autorisations insuffisantes pour modifier le schéma de la table d’historique, ou en raison d’autorisations insuffisantes pour modifier la table temporelle.|L’audit indique que la table temporelle a été modifiée, mais que l’opération nécessitait l’accès à la table d’historique. L’opération peut échouer en raison d’autorisations insuffisantes sur la table d’historique ou d’autorisations insuffisantes sur la table en cours.|
 
 ## <a name="security-of-select-statement"></a>Sécurité de l’instruction SELECT
 
-L’autorisation**SELECT** reste inchangée pour les instructions **SELECT** qui n’affectent pas la table d’historique. Pour les instructions **SELECT** qui affectent la table d’historique, l’autorisation **SELECT** est nécessaire sur la table en cours et la table d’historique.
+L’autorisation **SELECT** reste inchangée pour les instructions **SELECT** qui n’affectent pas la table d’historique. Pour les instructions **SELECT** qui affectent la table d’historique, l’autorisation **SELECT** est nécessaire sur la table en cours et la table d’historique.
 
 ## <a name="see-also"></a>Voir aussi
 

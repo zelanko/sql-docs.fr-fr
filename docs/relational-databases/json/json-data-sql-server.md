@@ -13,13 +13,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
-monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c24de4dba33fce34eb88333b8c877d13a4a1ebb0
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3ca366f274f4880fdb629eab4b77fa180bacb60b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006589"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463510"
 ---
 # <a name="json-data-in-sql-server"></a>Données JSON dans SQL Server
 
@@ -112,7 +112,7 @@ SELECT modifiedJson = @json;
   
 ### <a name="convert-json-collections-to-a-rowset"></a>Convertir des collections JSON en ensemble de lignes
 
-Vous n’avez pas besoin d’un langage de requête personnalisé pour interroger les données JSON dans SQL Server. Pour interroger des données JSON, vous pouvez utiliser le langage T-SQL standard. Si vous devez créer une requête ou un rapport sur des données JSON, vous pouvez facilement convertir les données JSON en lignes et colonnes en appelant la fonction d’ensemble de lignes **OPENJSON** . Pour plus d’informations, consultez [Convertir des données JSON en lignes et colonnes avec OPENJSON (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md).  
+Vous n’avez pas besoin d’un langage de requête personnalisé pour interroger les données JSON dans SQL Server. Pour interroger des données JSON, vous pouvez utiliser le langage T-SQL standard. Si vous devez créer une requête ou un rapport sur des données JSON, vous pouvez facilement convertir les données JSON en lignes et colonnes en appelant la fonction d’ensemble de lignes **OPENJSON**. Pour plus d’informations, consultez [Convertir des données JSON en lignes et colonnes avec OPENJSON (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md).  
   
 L’exemple suivant appelle **OPENJSON** et transforme le tableau d’objets stocké dans la variable `@json` en un ensemble de lignes qui peut être interrogé à l’aide de l’instruction SQL **SELECT** standard :  
   
@@ -143,7 +143,7 @@ FROM OPENJSON(@json)
   
 **OPENJSON** transforme le tableau d’objets JSON en table dans laquelle chaque objet est représenté par une ligne, et des paires clé-valeur sont retournées sous forme de cellules. La sortie respecte les règles suivantes :
 
-- **OPENJSON** convertit les valeurs JSON aux types spécifiés dans la clause **WITH** .
+- **OPENJSON** convertit les valeurs JSON aux types spécifiés dans la clause **WITH**.
 - **OPENJSON** peut gérer à la fois les paires clé-valeur plates et les objets imbriqués organisés en hiérarchie.
 - Vous n’êtes pas obligé de retourner tous les champs contenus dans le texte JSON.
 - S’il n’existe pas de valeurs JSON, **OPENJSON** retourne des valeurs NULL.
@@ -269,7 +269,7 @@ Voici quelques cas d’utilisation qui vous montrent comment utiliser la prise e
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>Stocker et indexer des données JSON dans SQL Server
 
-JSON étant un format texte, les documents JSON peuvent être stockés en colonnes `NVARCHAR` dans une base de données SQL Database. Étant donné que le type `NVARCHAR` est pris en charge dans tous les sous-systèmes SQL Server, vous pouvez stocker les documents JSON dans des tables avec des index **CLUSTERED COLUMNSTORE** , dans des tables **à mémoire optimisée** ou dans des fichiers externes qui peuvent être lus avec OPENROWSET ou PolyBase.
+JSON étant un format texte, les documents JSON peuvent être stockés en colonnes `NVARCHAR` dans une base de données SQL Database. Étant donné que le type `NVARCHAR` est pris en charge dans tous les sous-systèmes SQL Server, vous pouvez stocker les documents JSON dans des tables avec des index **CLUSTERED COLUMNSTORE**, dans des tables **à mémoire optimisée** ou dans des fichiers externes qui peuvent être lus avec OPENROWSET ou PolyBase.
 
 Pour plus d’informations sur les options de stockage, d’indexation et d’optimisation des données JSON dans SQL Server, consultez les articles suivants :
 
@@ -279,7 +279,7 @@ Pour plus d’informations sur les options de stockage, d’indexation et d’op
 
 ### <a name="load-json-files-into-sql-server"></a>Charger de fichiers JSON dans SQL Server  
 
-Vous pouvez mettre les informations stockées dans les fichiers au format JSON standard ou JSON délimité par des lignes. SQL Server peut importer le contenu de fichiers JSON, l’analyser à l’aide des fonctions **OPENJSON** ou **JSON_VALUE** , puis le charger dans des tables.  
+Vous pouvez mettre les informations stockées dans les fichiers au format JSON standard ou JSON délimité par des lignes. SQL Server peut importer le contenu de fichiers JSON, l’analyser à l’aide des fonctions **OPENJSON** ou **JSON_VALUE**, puis le charger dans des tables.  
   
 -   Si vos documents JSON sont stockés dans des fichiers locaux, sur des lecteurs réseau partagés ou à des emplacements Azure Files accessibles par SQL Server, vous pouvez recourir à l’importation en bloc pour charger vos données JSON dans SQL Server.
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006222"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462960"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
 
@@ -151,7 +151,7 @@ LS Length    CS Length
 5.65685...   6.28318...
 ```
 
-Les instances **CircularString** utilisent moins de points pour stocker des limites de courbe avec une précision supérieure que les instances **LineString**. Les instances**CircularString** conviennent particulièrement bien au stockage de limites circulaires, comme par exemple un rayon de recherche de 20 kilomètres autour d’un point spécifique. Les instances**LineString** conviennent particulièrement bien au stockage de limites qui sont linéaires, comme un bloc d’agglomération carré.  
+Les instances **CircularString** utilisent moins de points pour stocker des limites de courbe avec une précision supérieure que les instances **LineString**. Les instances **CircularString** conviennent particulièrement bien au stockage de limites circulaires, comme par exemple un rayon de recherche de 20 kilomètres autour d’un point spécifique. Les instances **LineString** conviennent particulièrement bien au stockage de limites qui sont linéaires, comme un bloc d’agglomération carré.  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Comparaison de LineString et de CompoundCurve
 
@@ -187,7 +187,7 @@ Le stockage du graphique en secteurs à l’aide d’une instance **CircularStri
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
-Les instances**CompoundCurve** autorisent à la fois les composants **LineString** and **CircularString** . Ainsi, seuls deux points des segments de ligne du graphique en secteurs sont nécessaires.  Cet exemple de code indique comment utiliser un **CompoundCurve** pour stocker la même figure :
+Les instances **CompoundCurve** autorisent à la fois les composants **LineString** and **CircularString** . Ainsi, seuls deux points des segments de ligne du graphique en secteurs sont nécessaires.  Cet exemple de code indique comment utiliser un **CompoundCurve** pour stocker la même figure :
 
 ```sql
 DECLARE @g geometry;
@@ -197,7 +197,7 @@ SELECT @g.ToString(), @g.STLength();
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Comparaison de Polygon et de CurvePolygon
 
-Les instances**CurvePolygon** peuvent utiliser des instances **CircularString** et **CompoundCurve** instances when defining their exterior et interior rings. Les instances **Polygon** ne le peuvent pas.
+Les instances **CurvePolygon** peuvent utiliser des instances **CircularString** et **CompoundCurve** instances when defining their exterior et interior rings. Les instances **Polygon** ne le peuvent pas.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27776324d94176619c25acbeefb3b6bd901d8a2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4105a3c3b0ba43d3ed142cba31b2f991f6dc5287
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418933"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461560"
 ---
 # <a name="dml-triggers"></a>Déclencheurs DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,10 +61,10 @@ ms.locfileid: "88418933"
 |Applicabilité|Tables|Tables et vues|  
 |Quantité par table ou vue|Plusieurs par action de déclenchement (UPDATE, DELETE et INSERT)|Un par action de déclenchement (UPDATE, DELETE et INSERT)|  
 |Références en cascade|Aucune restriction|Les déclencheurs INSTEAD OF UPDATE et DELETE ne sont pas autorisés sur des tables qui sont des cibles de contraintes d'intégrité référentielle en cascade.|  
-|Exécution|Après :<br /><br /> Traitement des contraintes<br /><br /> Actions référentielles déclaratives<br /><br /> Création de tables**inserted** et **deleted**<br /><br /> L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de : L’action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
+|Exécution|Après :<br /><br /> Traitement des contraintes<br /><br /> Actions référentielles déclaratives<br /><br /> Création de tables **inserted** et **deleted**<br /><br /> L'action de déclenchement|Avant : Traitement des contraintes<br /><br /> Au lieu de : L’action de déclenchement<br /><br /> Après : Création de tables  **inserted** et **deleted**|  
 |Ordre d'exécution|La première et la dernière exécution peuvent être spécifiées|Non applicable|  
-|Références de colonnes**varchar(max)**, **nvarchar(max)** et **varbinary(max)** dans des  **inserted** et **deleted**|Autorisé|Autorisé|  
-|Références de colonnes**text**, **ntext**et **image** dans des  **inserted** et **deleted**|Non autorisé|Autorisé|  
+|Références de colonnes **varchar(max)**, **nvarchar(max)** et **varbinary(max)** dans des  **inserted** et **deleted**|Autorisé|Autorisé|  
+|Références de colonnes **text**, **ntext** et **image** dans des  **inserted** et **deleted**|Non autorisé|Autorisé|  
   
  Déclencheurs CLR  
  Un déclencheur CLR peut être un déclencheur AFTER ou INSTEAD OF. Il peut également s'agir d'un déclencheur DDL. Au lieu d'exécuter une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] , un déclencheur CLR exécute une ou plusieurs méthodes écrites en code managé que les membres d'un assembly ont créées dans .NET Framework et téléchargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

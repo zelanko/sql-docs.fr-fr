@@ -37,13 +37,13 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 026d00e38a94d50bad94c1e95ae91fa5a370f604
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 20351fa344eecb2c46190b1bbd5006128e1640ab
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990020"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464100"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -301,7 +301,7 @@ FROM Tn;
   
     -   Toutes les contraintes PRIMARY KEY des tables membres doivent être appliquées sur un nombre identique de colonnes.  
   
-    -   Toutes les tables membres de la vue doivent avoir le même paramètre de remplissage ANSI. Ce dernier peut être défini à l’aide de l’option **user options** qui se trouve dans **sp_configure**ou de l’instruction SET.  
+    -   Toutes les tables membres de la vue doivent avoir le même paramètre de remplissage ANSI. Ce dernier peut être défini à l’aide de l’option **user options** qui se trouve dans **sp_configure** ou de l’instruction SET.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Conditions de modification des données dans les vues partitionnées  
  Les restrictions suivantes s'appliquent aux instructions qui modifient les données dans les vues partitionnées :  

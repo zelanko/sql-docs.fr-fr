@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e77393d7c16034d90dc443a6c8750e798e22909
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5a7b0fcba94245ec72ac8f739ef184f5d11960e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92255254"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462420"
 ---
 # <a name="sql_variant_property-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Retourne le type de données de base et d’autres informations sur une valeur **sql_variant** .  
+  Retourne le type de données de base et d’autres informations sur une valeur **sql_variant**.  
   
  ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
 
 ## <a name="arguments"></a>Arguments
  *expression*  
- Expression de type **sql_variant** .  
+ Expression de type **sql_variant**.  
   
  *property*  
  Contient le nom de la propriété **sql_variant** dont les informations doivent être fournies. *property* est de type **varchar(** 128 **)** et peut prendre l’une des valeurs suivantes :  
@@ -56,7 +56,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
 |**BaseType**|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tel que :<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **bit**<br /><br /> **char**<br /><br /> **date**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = Entrée non valide.|  
 |**Précision**|Nombre de chiffres du type de données numériques de base :<br /><br /> **date** = 10<br /><br /> **datetime** = 23<br /><br /> **datetime2** = 27<br /><br /> **datetime2** (s) = 19 quand s = 0, sinon s + 20<br /><br /> **datetimeoffset** = 34<br /><br /> **datetimeoffset** (s) = 26 quand s = 0, sinon s + 27<br /><br /> **smalldatetime** = 16<br /><br /> **time** = 16<br /><br /> **time** (s) = 8 quand s = 0, sinon s + 9<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** et **numeric** = 18<br /><br /> **decimal** (p,s) et **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> Tous les autres types = 0|**int**<br /><br /> NULL = Entrée non valide.|  
 |**Mettre à l'échelle**|Nombre de chiffres décimaux après la virgule (point) dans le type de données numériques de base :<br /><br /> **decimal** et **numeric** = 0<br /><br /> **decimal** (p,s) et **numeric** (p,s) = s<br /><br /> **money** et **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> **datetime2** = 7<br /><br /> **datetime2** (s) = s (0 - 7)<br /><br /> **datetimeoffset** = 7<br /><br /> **datetimeoffset** (s) = s (0 - 7)<br /><br /> **time** = 7<br /><br /> **time** (s) = s (0 - 7)<br /><br /> Tous les autres types = 0|**int**<br /><br /> NULL = Entrée non valide.|  
-|**TotalBytes**|Nombre d'octets requis pour conserver les métadonnées et les données de la valeur. Ces informations permettent de vérifier la taille maximale des données dans une colonne **sql_variant** . Si cette valeur est supérieure à 900, la création de l’index échoue.|**int**<br /><br /> NULL = Entrée non valide.|  
+|**TotalBytes**|Nombre d'octets requis pour conserver les métadonnées et les données de la valeur. Ces informations permettent de vérifier la taille maximale des données dans une colonne **sql_variant**. Si cette valeur est supérieure à 900, la création de l’index échoue.|**int**<br /><br /> NULL = Entrée non valide.|  
 |**Classement**|Représente le classement de la valeur **sql_variant** particulière.|**sysname**<br /><br /> NULL = Entrée non valide.|  
 |**MaxLength**|Longueur maximale du type de données (en octets). Par exemple, **MaxLength** de **nvarchar(** 50 **)** est 100, **MaxLength** de **int** est 4.|**int**<br /><br /> NULL = Entrée non valide.|  
   
@@ -77,7 +77,7 @@ FROM      tableA
 WHERE      colB = 1689  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Notez que chacune de ces trois valeurs est de type **sql_variant** .  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Notez que chacune de ces trois valeurs est de type **sql_variant**.  
   
 ```  
 Base Type    Precision    Scale  

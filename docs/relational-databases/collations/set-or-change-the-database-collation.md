@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7fbaf22758dcf62d2159e63ee3af3c0507f3f607
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907373"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460572"
 ---
 # <a name="set-or-change-the-database-collation"></a>Définir ou changer le classement de la base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,23 +48,21 @@ ms.locfileid: "92907373"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions  
   
--   Les classements Windows Unicode seulement peuvent être utilisés uniquement avec la clause COLLATE pour appliquer des classements aux types de données **nchar** , **nvarchar** et **ntext** sur les données de niveau de colonne et de niveau d’expression. Ils ne peuvent pas être utilisés avec la clause COLLATE pour modifier le classement d'une instance de serveur ou de base de données.  
+-   Les classements Windows Unicode seulement peuvent être utilisés uniquement avec la clause COLLATE pour appliquer des classements aux types de données **nchar**, **nvarchar** et **ntext** sur les données de niveau de colonne et de niveau d’expression. Ils ne peuvent pas être utilisés avec la clause COLLATE pour modifier le classement d'une instance de serveur ou de base de données.  
   
 -   Si le classement spécifié ou le classement utilisé par l'objet référencé utilise une page de codes non gérée par Windows, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] affiche une erreur.  
 
--   Le classement ne peut pas être modifié avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] une fois la base de données créée sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il ne peut être modifié qu’à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].
-  
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recommandations  
   
 Vous trouverez les noms des classements pris en charge dans [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) et [Nom du classement SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). Vous pouvez également utiliser la fonction système [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
 Lorsque vous modifiez le classement d'une base de données, vous changez les éléments suivants :  
   
--   Toutes les colonnes **char** , **varchar** , **text** , **nchar** , **nvarchar** ou **ntext** présentes dans les tables système sont modifiées en fonction du nouveau classement.  
+-   Toutes les colonnes **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** présentes dans les tables système sont modifiées en fonction du nouveau classement.  
   
--   Tous les paramètres **char** , **varchar** , **text** , **nchar** , **nvarchar** ou **ntext** existants et les valeurs de retour scalaires destinés aux procédures stockées et aux fonctions définies par l’utilisateur sont modifiés en fonction du nouveau classement.  
+-   Tous les paramètres **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** existants et les valeurs de retour scalaires destinés aux procédures stockées et aux fonctions définies par l’utilisateur sont modifiés en fonction du nouveau classement.  
   
--   Les types de données système **char** , **varchar** , **text** , **nchar** , **nvarchar** ou **ntext** et tous les types de données définis par l’utilisateur sur la base de ces types de données système sont modifiés en fonction du nouveau classement par défaut.  
+-   Les types de données système **char**, **varchar**, **text**, **nchar**, **nvarchar** ou **ntext** et tous les types de données définis par l’utilisateur sur la base de ces types de données système sont modifiés en fonction du nouveau classement par défaut.  
   
 Vous pouvez modifier le classement de tous les objets créés dans une base de données utilisateur à l'aide de la clause `COLLATE` de l'instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Cette instruction **ne modifie pas** le classement des colonnes dans les tables définies par l'utilisateur existantes. Celles-ci peuvent être modifiées à l'aide de la clause `COLLATE` de l'instruction [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
 
@@ -105,7 +103,7 @@ En cas de modification du classement d’une base de données, seules les nouvel
   
 #### <a name="to-set-or-change-the-database-collation"></a>Pour définir ou modifier le classement de base de données  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], développez cette instance, puis développez **Bases de données**.  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], développez cette instance, puis développez **Bases de données**.  
   
 2.  Si vous créez une base de données, cliquez avec le bouton droit sur **Bases de données** , puis sélectionnez **Nouvelle base de données**. Si vous ne souhaitez pas définir le classement par défaut, cliquez sur la page **Options** , puis sélectionnez un classement dans la liste déroulante **Classement** .  
   

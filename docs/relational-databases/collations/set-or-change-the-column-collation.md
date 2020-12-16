@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98faafb23e6f5c3f981fdf04eca99a7ab3eb7a7b
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3f408175a59484aa162c0db654ebf4b1d5656901
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384812"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460582"
 ---
 # <a name="set-or-change-the-column-collation"></a>Définir ou changer le classement des colonnes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Vous pouvez remplacer le classement de la base de données pour les données **char** , **varchar** , **text** , **nchar** , **nvarchar** et **ntext** en spécifiant un classement différent pour une colonne spécifique d’une table et en utilisant l’un des éléments suivants :  
+  Vous pouvez remplacer le classement de la base de données pour les données **char**, **varchar**, **text**, **nchar**, **nvarchar** et **ntext** en spécifiant un classement différent pour une colonne spécifique d’une table et en utilisant l’un des éléments suivants :  
   
 -   Clause COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) et [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md), illustrée dans les exemples ci-dessous. 
 
@@ -88,13 +88,13 @@ ms.locfileid: "94384812"
 -   une contrainte CHECK ;  
 -   une contrainte FOREIGN KEY.  
   
- Quand vous utilisez **tempdb** , la clause [COLLATE](~/t-sql/statements/collations.md) contient une option *database_default* pour spécifier qu’une colonne de table temporaire utilise, pour la connexion, le classement par défaut de la base de données utilisateur active à la place du classement de **tempdb**.  
+ Quand vous utilisez **tempdb**, la clause [COLLATE](~/t-sql/statements/collations.md) contient une option *database_default* pour spécifier qu’une colonne de table temporaire utilise, pour la connexion, le classement par défaut de la base de données utilisateur active à la place du classement de **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Classements et colonnes text  
  Vous pouvez insérer ou mettre à jour les valeurs d’une colonne **text** dont le classement est différent de la page de codes du classement par défaut de la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement les valeurs en fonction du classement de la colonne.  
   
 ## <a name="collations-and-tempdb"></a>Classements et tempdb  
- La base de données **tempdb** est créée à chaque démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et a le même classement par défaut que la base de données **model** . Il est en général identique au classement par défaut de l'instance. Si vous créez une base de données utilisateur et spécifiez un classement par défaut différent de **model** , la base de données utilisateur a un classement par défaut différent de **tempdb**. Toutes les procédures stockées ou tables temporaires sont créées et stockées dans **tempdb**. En d'autres termes, toutes les colonnes implicites des tables temporaires et toutes les constantes, variables et paramètres modifiables par défaut des procédures stockées temporaires ont d'autres classements que les objets comparables créés dans les tables et procédures stockées permanentes.  
+ La base de données **tempdb** est créée à chaque démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et a le même classement par défaut que la base de données **model** . Il est en général identique au classement par défaut de l'instance. Si vous créez une base de données utilisateur et spécifiez un classement par défaut différent de **model**, la base de données utilisateur a un classement par défaut différent de **tempdb**. Toutes les procédures stockées ou tables temporaires sont créées et stockées dans **tempdb**. En d'autres termes, toutes les colonnes implicites des tables temporaires et toutes les constantes, variables et paramètres modifiables par défaut des procédures stockées temporaires ont d'autres classements que les objets comparables créés dans les tables et procédures stockées permanentes.  
   
  Ceci pourrait provoquer des problèmes de non-correspondance de classement entre les bases de données définies par l'utilisateur et les objets de base de données système. Par exemple, une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise le classement Latin1_General_CS_AS et vous exécutez les instructions suivantes :  
   

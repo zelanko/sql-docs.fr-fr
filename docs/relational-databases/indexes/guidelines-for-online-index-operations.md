@@ -18,13 +18,13 @@ ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 17c91b53c786934d292692493fa886698128b34d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91867675"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465300"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d’index en ligne
 
@@ -129,7 +129,7 @@ ELEVATE_ONLINE et ELEVATE_RESUMABLE s’appliquent uniquement aux instructions D
 > [!NOTE]
 > ELEVATE_ONLINE et ELEVATE_RESUMABLE ne s’appliquent pas aux opérations d’index XML.
 
-## <a name="related-content"></a>Contenu connexe
+## <a name="related-content"></a>Contenu associé
 
 - [Fonctionnement des opérations d'index en ligne](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md)  

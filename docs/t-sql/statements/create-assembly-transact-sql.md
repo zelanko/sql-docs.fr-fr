@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: badcd52070da65122e113116be763c903b3e509a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 4ae266962891a52ae9e2b201f7817365e71f8a74
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300160"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460792"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -62,7 +62,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  Nom de l'assembly. Ce nom doit être unique dans la base de données et correspondre à un [identificateur](../../relational-databases/databases/database-identifiers.md) valide.  
   
  AUTHORIZATION *owner_name*  
- Spécifie le nom d'un utilisateur ou d'un rôle comme propriétaire de l'assembly. *owner_name* doit être le nom d’un rôle dont l’utilisateur actuel est membre, ou l’utilisateur actuel doit disposer de l’autorisation IMPERSONATE sur *owner_name* . En l'absence de spécification, la propriété revient à l'utilisateur actuel.  
+ Spécifie le nom d'un utilisateur ou d'un rôle comme propriétaire de l'assembly. *owner_name* doit être le nom d’un rôle dont l’utilisateur actuel est membre, ou l’utilisateur actuel doit disposer de l’autorisation IMPERSONATE sur *owner_name*. En l'absence de spécification, la propriété revient à l'utilisateur actuel.  
   
  \<client_assembly_specifier>  
 Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve l'assembly en cours de téléchargement, et également le nom du fichier de manifeste qui correspond à l'assembly.  \<client_assembly_specifier> peut s’exprimer sous forme de chaîne de caractères fixe ou d’une expression qui correspond à une chaîne de caractères fixe, avec des variables. CREATE ASSEMBLY ne prend pas en charge le chargement d'assemblys multimodules. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche au même emplacement les assemblys dépendants de cet assembly et les télécharge avec le même propriétaire en tant qu'assembly au niveau racine. Si ces assemblys dépendants sont introuvables et s'ils ne sont pas déjà chargés dans la base de données active, l'instruction CREATE ASSEMBLY échoue. Si les assemblys dépendants sont déjà chargés dans la base de données active, leur propriétaire doit être identique à celui de l'assembly créé.
@@ -79,10 +79,10 @@ Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
  *varbinary_literal*  
- Est un littéral **varbinary** .  
+ Est un littéral **varbinary**.  
   
  *varbinary_expression*  
- Est une expression de type **varbinary** .  
+ Est une expression de type **varbinary**.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
 > [!IMPORTANT]
@@ -120,7 +120,7 @@ Quand elle est activée, l’option `PERMISSION_SET` dans les instructions `CREA
   
 Lors d’une tentative d’accès à l’assembly spécifié dans \<client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emprunte l’identité du contexte de sécurité de la connexion Windows active. Si \<client_assembly_specifier> spécifie un emplacement réseau (chemin UNC), l’emprunt d’identité de la connexion active n’est pas transféré à l’emplacement réseau en raison des restrictions de délégation. Dans ce cas, l'accès a lieu en utilisant le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
- Outre l’assembly racine spécifié par *assembly_name* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de charger les assemblys référencés par l’assembly racine en cours de chargement. Si un assembly référencé est déjà téléchargé dans une base de données du fait d'une précédente instruction CREATE ASSEMBLY, cet assembly n'est pas téléchargé, mais il est disponible pour l'assembly racine. Si un assembly dépendant n'a pas été téléchargé auparavant et si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne trouve pas son fichier de manifeste dans le répertoire source, CREATE ASSEMBLY renvoie une erreur.  
+ Outre l’assembly racine spécifié par *assembly_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de charger les assemblys référencés par l’assembly racine en cours de chargement. Si un assembly référencé est déjà téléchargé dans une base de données du fait d'une précédente instruction CREATE ASSEMBLY, cet assembly n'est pas téléchargé, mais il est disponible pour l'assembly racine. Si un assembly dépendant n'a pas été téléchargé auparavant et si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne trouve pas son fichier de manifeste dans le répertoire source, CREATE ASSEMBLY renvoie une erreur.  
   
  Si des assemblys dépendants référencés par l'assembly racine ne se trouvent pas déjà dans la base de données et sont chargés implicitement avec ce dernier, ils ont le même ensemble d'autorisations que l'assembly de niveau racine. Si les assemblys dépendants doivent être créés en utilisant un autre ensemble d'autorisations que celui de l'assembly racine, ils doivent être téléchargés explicitement avant l'assembly de niveau racine avec l'ensemble d'autorisations approprié.  
   
@@ -154,7 +154,7 @@ Lors d’une tentative d’accès à l’assembly spécifié dans \<client_assem
   
  Si PERMISSION_SET = EXTERNAL_ACCESS est spécifié, nécessite l’autorisation **EXTERNAL ACCESS ASSEMBLY** sur le serveur. Si PERMISSION_SET = UNSAFE est spécifié, nécessite l’autorisation **UNSAFE ASSEMBLY** sur le serveur.  
   
- L'utilisateur doit être propriétaire des assemblys référencés par l'assembly qui doivent être téléchargés s'ils existent déjà dans la base de données. Pour charger un assembly à l’aide d’un chemin de fichier, l’utilisateur actuel doit utiliser une connexion Windows authentifiée ou être membre du rôle serveur fixe **sysadmin** . La connexion Windows de l'utilisateur qui exécute l'instruction CREATE ASSEMBLY doit avoir l'autorisation de lecture sur le partage et sur les fichiers chargés dans l'instruction.  
+ L'utilisateur doit être propriétaire des assemblys référencés par l'assembly qui doivent être téléchargés s'ils existent déjà dans la base de données. Pour charger un assembly à l’aide d’un chemin de fichier, l’utilisateur actuel doit utiliser une connexion Windows authentifiée ou être membre du rôle serveur fixe **sysadmin**. La connexion Windows de l'utilisateur qui exécute l'instruction CREATE ASSEMBLY doit avoir l'autorisation de lecture sur le partage et sur les fichiers chargés dans l'instruction.  
 
 ### <a name="permissions-with-clr-strict-security"></a>Autorisations avec sécurité CLR stricte    
 Les autorisations suivantes sont requises pour créer un assembly CLR quand `CLR strict security` est activée :
@@ -170,7 +170,7 @@ Les autorisations suivantes sont requises pour créer un assembly CLR quand `CLR
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemple A : Création d’un assembly à partir d’une dll  
   
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  L’exemple suivant suppose que les exemples du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sont installés à l’emplacement par défaut de l’ordinateur local et que l’exemple d’application HelloWorld.csproj est compilé. Pour plus d’informations, consultez [Exemple Hello World](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130)).  
   
@@ -185,7 +185,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemple B : Création d’un assembly à partir de bits d’assembly  
   
-**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Remplacez les exemples de bits (qui ne sont pas terminés ou valides) par vos bits d’assembly.  
   

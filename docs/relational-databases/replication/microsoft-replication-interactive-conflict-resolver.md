@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c0ecc10fd8155a0f18e216458d2dcd47132d35d4
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: a0cbd836bc0a7676128067f44e4079d4901de962
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868087"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464720"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Outil de résolution des conflits de réplication Microsoft interactif
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91868087"
  **Abonné**  
  Valeur des données de l'abonné.  
   
- **Accepter la suggestion**, **Accepter le serveur de publication**et **Accepter l'Abonné**  
+ **Accepter la suggestion**, **Accepter le serveur de publication** et **Accepter l'Abonné**  
  Cliquez sur l'option correspondante pour accepter la ligne qui sera appliquée par le serveur de publication ou l'abonné, en fonction du perdant du conflit. Si le serveur de publication perd le conflit, tous les autres abonnés reçoivent la ligne gagnante lors de leur prochaine synchronisation avec le serveur de publication.  
   
  **Résoudre automatiquement tous les conflits restants**  

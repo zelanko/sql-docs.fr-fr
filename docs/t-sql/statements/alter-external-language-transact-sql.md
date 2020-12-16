@@ -10,13 +10,13 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 006a0577292ba825a3d28cd63cc573ac35cc5771
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: bca91a8745a36c845fd3ef7e08e1d0139b37bd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300424"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464150"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -115,7 +115,7 @@ Actuellement, **PARAMETERS** et **ENVIRONMENT_VARIABLES** ne sont pas pris en ch
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite l’autorisation `ALTER ANY EXTERNAL LANGUAGE`. Par défaut, tout utilisateur qui possède **dbo** , membre du rôle **db_owner** , dispose des autorisations nécessaires pour modifier un langage externe. En ce qui concerne les autres utilisateurs, vous devez leur en donner l’autorisation explicitement à l’aide d’une instruction [GRANT](./grant-database-permissions-transact-sql.md), en spécifiant le privilège ALTER ANY EXTERNAL LANGUAGE.
+Nécessite l’autorisation `ALTER ANY EXTERNAL LANGUAGE`. Par défaut, tout utilisateur qui possède **dbo**, membre du rôle **db_owner**, dispose des autorisations nécessaires pour modifier un langage externe. En ce qui concerne les autres utilisateurs, vous devez leur en donner l’autorisation explicitement à l’aide d’une instruction [GRANT](./grant-database-permissions-transact-sql.md), en spécifiant le privilège ALTER ANY EXTERNAL LANGUAGE.
 
 ## <a name="examples"></a>Exemples
 

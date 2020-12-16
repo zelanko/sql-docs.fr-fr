@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e56eb0ffcc4996ddd6903f2e79c14947b9a450
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a5225cdec356cbefc3df6abae58ae4cd512445b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485387"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461510"
 ---
 # <a name="manage-trigger-security"></a>Gérer la sécurité des déclencheurs
 
@@ -50,7 +50,7 @@ Ce déclencheur signifie que dès qu’un utilisateur disposant de l’autorisat
 ## <a name="trigger-security-best-practices"></a>Méthodes conseillées pour la sécurité liée aux déclencheurs  
  Nous vous proposons les mesures suivantes pour éviter que du code de déclencheur s'exécute sous des privilèges promus :  
   
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 -   Prenez connaissance des déclencheurs DML et DDL existant dans la base de données et sur l’instance du serveur en interrogeant les vues de catalogue [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) et [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . La requête suivante renvoie tous les déclencheurs DML de la base de données actuelle, tous les déclencheurs DDL au niveau de la base de données actuelle et tous les déclencheurs DDL de niveau serveur inclus dans l'instance du serveur :  
   
@@ -65,7 +65,7 @@ Ce déclencheur signifie que dès qu’un utilisateur disposant de l’autorisat
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 -   Prenez connaissance des déclencheurs DML et DDL existant dans la base de données en interrogeant la vue de catalogue [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). La requête suivante retourne tous les déclencheurs DDL de niveau base de données et DML dans la base de données actuelle :  
   

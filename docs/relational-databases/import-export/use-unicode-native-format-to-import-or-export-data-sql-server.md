@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7641e8f5468a6e915772edf10e97cd735c934f0d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 49e3681e448e0fb262e3ea1c52650106f15687e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010122"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465490"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif Unicode pour importer ou exporter des données (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ Le format natif Unicode est pris en charge par les options de commande suivantes
   
 |Commande|Option|Description|  
 |-------------|------------|-----------------|  
-|bcp|**-N**|Amène l’utilitaire **bcp** à utiliser le format natif Unicode, qui utilise des types de données (bases de données) natifs pour toutes les données qui ne sont pas de type caractère, et le format de données de type caractère Unicode pour toutes les données de type caractère (**char**, **nchar**, **varchar**, **nvarchar**, **text**et **ntext**).|  
+|bcp|**-N**|Amène l’utilitaire **bcp** à utiliser le format natif Unicode, qui utilise des types de données (bases de données) natifs pour toutes les données qui ne sont pas de type caractère, et le format de données de type caractère Unicode pour toutes les données de type caractère (**char**, **nchar**, **varchar**, **nvarchar**, **text** et **ntext**).|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|Utilise le format natif Unicode lors de l’importation en bloc des données.|  
 |OPENROWSET|N/A|Doit utiliser un fichier de format.|
     
@@ -133,7 +133,7 @@ REM Review results is SSMS
 ```
 
 ### <a name="using-bulk-insert-and-unicode-native-format-without-a-format-file"></a>**Utilisation de BULK INSERT et du format natif Unicode sans un fichier de format**<a name="bulk_widenative"></a>
-Argument**DATAFILETYPE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
+Argument **DATAFILETYPE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
 BULK INSERT TestDatabase.dbo.myWidenative
@@ -147,7 +147,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
 ### <a name="using-bulk-insert-and-unicode-native-format-with-a-non-xml-format-file"></a>**Utilisation de BULK INSERT et du format natif Unicode avec un fichier de format non XML**<a name="bulk_widenative_fmt"></a>
-Argument**FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
+Argument **FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
 BULK INSERT TestDatabase.dbo.myWidenative
@@ -161,7 +161,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 ```
 
 ### <a name="using-openrowset-and-unicode-native-format-with-a-non-xml-format-file"></a>**Utilisation d’OPENROWSET et du format natif Unicode avec un fichier de format non XML**<a name="openrowset_widenative_fmt"></a>
-Argument**FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
+Argument **FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidenative
