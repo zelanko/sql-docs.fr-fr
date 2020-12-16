@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810458"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474570"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
 
@@ -49,7 +49,7 @@ Les points suivants sur les tables temporelles à système par version avec tabl
 - Vous pouvez appliquer un vidage des données en appelant [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
 - Quand **SYSTEM_VERSIONING = OFF** ou quand le schéma de la table à système par version est modifié par l’ajout, la suppression ou le changement de colonnes, tout le contenu de la mémoire tampon de mise en lots interne est déplacé vers la table d’historique sur disque.
 - L’interrogation des données d’historique est en réalité sous le niveau d’isolement de capture instantanée et renvoie toujours une union entre la mémoire tampon de mise en lots en mémoire et la table sur disque sans doublons.
-- Les opérations**ALTER TABLE** qui modifient le schéma de la table en interne doivent effectuer un vidage de données, ce qui peut allonger la durée de l’opération.
+- Les opérations **ALTER TABLE** qui modifient le schéma de la table en interne doivent effectuer un vidage de données, ce qui peut allonger la durée de l’opération.
 
 ## <a name="the-internal-memory-optimized-staging-table"></a>La table de mise en lots interne optimisée en mémoire
 

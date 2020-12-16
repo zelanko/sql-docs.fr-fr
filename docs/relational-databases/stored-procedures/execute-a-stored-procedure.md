@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332611"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475300"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -114,7 +114,7 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
   
 -   Définition, désactivation et contrôle de l'exécution automatique  
   
-     Seul l’administrateur système (**sa**) peut marquer une procédure de sorte qu’elle s’exécute automatiquement. En outre, la procédure doit se trouver dans la base de données **master** , être la propriété de **sa**et ne pas posséder de paramètres d'entrée ou de sortie.  
+     Seul l’administrateur système (**sa**) peut marquer une procédure de sorte qu’elle s’exécute automatiquement. En outre, la procédure doit se trouver dans la base de données **master** , être la propriété de **sa** et ne pas posséder de paramètres d'entrée ou de sortie.  
   
      Utilisez [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) pour :  
   

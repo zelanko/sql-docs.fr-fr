@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 281f95c0e80b11e6295e94ef1e19b93969910790
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 92101ce00eb74e7a48a7e72b320eb536e4d60022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465223"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477820"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Présentation de l'interface du moniteur de réplication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88465223"
 ## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Affichage d'informations et réalisation de tâches associées aux serveurs de distribution  
  Le moniteur de réplication présente des informations sur les serveurs de distribution dans trois onglets :  
   
--   Onglet**Publications**  
+-   Onglet **Publications**  
   
      Cet onglet fournit des informations de résumé pour toutes les publications d'un serveur de distribution.  
   
--   Onglet**Liste de suivi des abonnements**  
+-   Onglet **Liste de suivi des abonnements**  
   
      Cet onglet fournit des informations sur les abonnements pour le serveur de distribution sélectionné. Vous pouvez filtrer la liste des abonnements pour identifier les erreurs, les avertissements et les abonnements qui ne fonctionnent pas correctement. Cet onglet vous permet également d'effectuer les tâches suivantes : accéder aux propriétés d'abonnement, accéder aux informations détaillées sur l'agent ou les agents associés à un abonnement, réinitialiser des abonnements et valider des abonnements.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88465223"
   
      Cet onglet n'est pas disponible pour les serveurs de distribution qui exécutent des versions de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou versions antérieures.  
   
--   Onglet**Agents**  
+-   Onglet **Agents**  
   
      Cet onglet affiche les informations détaillées sur les agents et les travaux utilisés par tous les types de réplication. L'onglet permet également de démarrer et d'arrêter chaque agent ou travail.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "88465223"
 ## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Affichage d'informations et réalisation de tâches associées aux serveurs de publication  
  Le moniteur de réplication présente des informations sur les serveurs de publication dans trois onglets :  
   
--   Onglet**Publications**  
+-   Onglet **Publications**  
   
      Cet onglet fournit des informations de résumé pour toutes les publications sur un serveur de publication.  
   
--   Onglet**Liste de suivi des abonnements**  
+-   Onglet **Liste de suivi des abonnements**  
   
      Cet onglet affiche des informations sur les abonnements provenant de toutes les publications disponibles sur le serveur de publication sélectionné. Vous pouvez filtrer la liste des abonnements pour identifier les erreurs, les avertissements et les abonnements qui ne fonctionnent pas correctement. Cet onglet vous permet également de : accéder aux propriétés d'abonnement, accéder aux informations détaillées sur l'agent ou les agents associés à un abonnement, réinitialiser des abonnements et valider des abonnements.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88465223"
   
      Cet onglet ne s'affiche pas pour les serveurs de distribution exécutant des versions antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   Onglet**Agents**  
+-   Onglet **Agents**  
   
      Cet onglet affiche les informations détaillées sur les agents et les travaux utilisés par tous les types de réplication. L'onglet permet également de démarrer et d'arrêter chaque agent ou travail.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "88465223"
 ## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Affichage d'informations et réalisation de tâches associées aux publications  
  Le moniteur de réplication présente des informations sur les publications dans trois onglets ainsi que dans plusieurs fenêtres de détails :  
   
--   Onglet**Tous les abonnements**  
+-   Onglet **Tous les abonnements**  
   
      Cet onglet montre des informations sur tous les abonnements à la publication sélectionnée. Par défaut, cet onglet est trié par ordre de priorité : erreurs, puis avertissements, ensuite dans l'ordre croissant des performances (les abonnements les moins performants étant tout en haut).  
   
@@ -136,7 +136,7 @@ ms.locfileid: "88465223"
   
          La grille de cet onglet présente des icônes d'erreur et d'avertissement pour tous les abonnements qui nécessitent une attention particulière.  
   
--   Onglet**Agents**  
+-   Onglet **Agents**  
   
      Cet onglet affiche des informations sur les agents utilisés par la réplication. Cet onglet affiche des informations sur les agents suivants :  
   
@@ -148,11 +148,11 @@ ms.locfileid: "88465223"
   
      L'onglet permet aussi d'effectuer les tâches suivantes : accéder aux informations détaillées à propos de chaque agent, et démarrer ou arrêter chaque agent. Pour plus d'informations sur les agents associés aux abonnements (l'Agent de distribution et l'Agent de fusion), consultez la section « Affichage d'informations et réalisation de tâches associées aux abonnements » dans cette rubrique.  
   
--   Onglets**Avertissements**  
+-   Onglets **Avertissements**  
   
      Cet onglet permet de spécifier des avertissements et des alertes pour les agents. Pour plus d’informations, voir [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
--   Onglet**Jetons de suivi** (réplication transactionnelle uniquement)  
+-   Onglet **Jetons de suivi** (réplication transactionnelle uniquement)  
   
      Cet onglet permet de mesurer la latence, à savoir le temps écoulé entre la validation d'une transaction sur le serveur de publication et la validation de la transaction correspondante sur l'Abonné.  
   
@@ -199,19 +199,19 @@ ms.locfileid: "88465223"
   
      Ces onglets sont décrits plus haut dans cette rubrique.  
   
--   Onglet**Historique du serveur de publication vers le serveur de distribution** (réplication transactionnelle uniquement)  
+-   Onglet **Historique du serveur de publication vers le serveur de distribution** (réplication transactionnelle uniquement)  
   
      Cet onglet présente des informations sur l'Agent de lecture du journal pour une publication (identique à la fenêtre de détails de l'Agent de lecture du journal).  
   
--   Onglet**Historique du serveur de distribution vers l'Abonné** (réplication d'instantané et réplication transactionnelle)  
+-   Onglet **Historique du serveur de distribution vers l'Abonné** (réplication d'instantané et réplication transactionnelle)  
   
      Cet onglet présente des informations sur l'Agent de distribution pour un abonnement.  
   
--   Onglet**Commandes non distribuées** (réplication transactionnelle uniquement)  
+-   Onglet **Commandes non distribuées** (réplication transactionnelle uniquement)  
   
      Cet onglet présente des informations sur le nombre de commandes de la base de données de distribution qui n'ont pas été remises à l'Abonné sélectionné, ainsi que le temps estimé de remise de ces commandes. Cet onglet vous aide à répondre à la question « Quel est le retard de mon abonnement ? » Cet onglet ne s'affiche pas pour les serveurs de distribution exécutant des versions antérieures à SQL Server 2005.  
   
--   Onglet**Historique de synchronisation** (réplication de fusion uniquement)  
+-   Onglet **Historique de synchronisation** (réplication de fusion uniquement)  
   
      Cet onglet présente des informations sur l'Agent de fusion pour un abonnement. Il vous aide à répondre à la question suivante :  
   

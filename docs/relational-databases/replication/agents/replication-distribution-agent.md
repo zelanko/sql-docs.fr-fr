@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395021"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475940"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -222,7 +222,7 @@ distrib [-?]
  **-PacketSize** _packet_size_  
  Taille du paquet en octets. La valeur par défaut est 4 096 octets.  
   
- **-PollingInterval** _polling_interval__  
+ **-PollingInterval** _polling_interval_ _  
  Fréquence, en secondes, à laquelle la base de données de distribution est interrogée au sujet des transactions répliquées. La valeur par défaut est 5 secondes.  
   
  **-ProfileName** _profile_name_  
@@ -280,7 +280,7 @@ distrib [-?]
  Spécifie le type d'abonnement pour la distribution. La valeur **0** indique un abonnement par émission de données, la valeur **1** un abonnement par extraction et la valeur **2** un abonnement anonyme.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
+ Spécifie l'intervalle de transaction pour la journalisation d'historique. Si le nombre de transactions validées après la dernière instance de journalisation d'historique est supérieur à cette option, un message d'historique est journalisé. La valeur par défaut est 100. Une valeur de **0** indique une quantité infinie de **TransactionsPerHistory**. See the preceding **–MessageInterval** parameter.  
   
  **-UseDTS**  
  Doit être spécifié en tant que paramètre pour une publication qui autorise la transformation de données.  

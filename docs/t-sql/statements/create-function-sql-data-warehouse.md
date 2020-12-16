@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47073d130f6a3881c7765d74f40fa06658b02f78
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 5d969da45ab53a82d71cea4d852a69f4bbc10999
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067380"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476620"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,7 +106,7 @@ RETURNS TABLE
  *parameter_data_type*  
  Type de données du paramètre. Pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], tous les types de données scalaires pris en charge dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sont autorisés. Le type de données timestamp (rowversion) n’est pas un type pris en charge.  
   
- [ = *default* ]  
+ [ =*default* ]  
  Valeur par défaut pour le paramètre. Si une valeur *default* est définie, la fonction peut être exécutée sans spécifier de valeur pour ce paramètre.  
   
  Lorsque l'un des paramètres de la fonction possède une valeur par défaut, le mot clé DEFAULT doit être spécifié lors de l'appel de la fonction afin de récupérer la valeur par défaut. Ce comportement est différent de l'utilisation de paramètres avec des valeurs par défaut dans des procédures stockées pour lesquelles l'omission du paramètre implique également la prise en compte de la valeur par défaut.  
@@ -126,7 +126,7 @@ RETURNS TABLE
  Représente l’instruction SELECT unique qui définit la valeur de retour d’une fonction table inline (préversion).
 
  TABLE **S’APPLIQUE À** : Azure Synapse Analytics  
- Indique que la valeur de retour de la fonction table est une table. Seules des constantes et des @ *local_variables* peuvent être passés aux fonctions table.
+ Indique que la valeur de retour de la fonction table est une table. Seules des constantes et des @*local_variables* peuvent être passés aux fonctions table.
 
  Dans les fonctions table inline (préversion), la valeur de retour TABLE est définie par une instruction SELECT unique. Aucune variable retournée n'est associée à une fonction en ligne.
   
@@ -244,7 +244,7 @@ RETURN
 );
 GO
 ```
-La fonction peut alors être appelée pour retourner tous les objets de vue ( **V** ) avec :
+La fonction peut alors être appelée pour retourner tous les objets de vue (**V**) avec :
 ```sql
 select * from dbo.ModulesByType('V');
 ```

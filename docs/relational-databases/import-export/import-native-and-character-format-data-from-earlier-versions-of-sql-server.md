@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a433735d5989a9708c9ca59ba92051634e1c2eed
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e89b0fb2445901ec981a5bdfa238cbd31704a039
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868741"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473950"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importer des données au format natif et caractère à partir de versions antérieures de SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91868741"
 ## <a name="interpretation-of-data-types"></a>Interprétation des types de données  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures prennent en charge certains nouveaux types. Pour importer un nouveau type de données dans une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure, ce type de données doit être stocké dans un format lisible par les anciens clients **bcp** . Le tableau ci-dessous résume le mode de conversion des nouveaux types de données pour assurer leur compatibilité avec les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nouveaux types de données dans SQL Server 2005|Types de données compatibles dans la version 6*x*|Types de données compatibles dans la version 70|Types de données compatibles dans la version 80|  
+|Nouveaux types de données dans SQL Server 2005|Types de données compatibles dans la version 6 *x*|Types de données compatibles dans la version 70|Types de données compatibles dans la version 80|  
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
 |**bigint**|**decimal**|**decimal**|*|  
 |**sql_variant**|**text**|**nvarchar(4000)**|*|  
@@ -55,7 +55,7 @@ ms.locfileid: "91868741"
  ** UDT indique un type défini par l’utilisateur.  
   
 ## <a name="exporting-using--v-80"></a>Exportation à l’aide de -V 80  
- Quand vous exportez des données en bloc à l’aide du commutateur **-V80**, les données **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , XML et UDT en mode natif sont stockées avec un préfixe à 4 octets, comme les données **text**, **image**et **ntext**, plutôt qu’avec un préfixe à 8 octets, qui s’utilise par défaut pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures.  
+ Quand vous exportez des données en bloc à l’aide du commutateur **-V80**, les données **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , XML et UDT en mode natif sont stockées avec un préfixe à 4 octets, comme les données **text**, **image** et **ntext**, plutôt qu’avec un préfixe à 8 octets, qui s’utilise par défaut pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures.  
   
 ## <a name="copying-date-values"></a>Copie de valeurs de date  
  **bcp** utilise l’API de copie en bloc ODBC. Par conséquent, pour importer des valeurs de date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** utilise le format de date ODBC (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]).  

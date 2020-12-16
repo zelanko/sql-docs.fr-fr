@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c1ab9e2681f229fba5294f061d8d83e98aabac64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364761"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475320"
 ---
 # <a name="create-a-stored-procedure"></a>Créer une procédure stockée
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,11 +45,11 @@ Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](.
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour créer une procédure dans l'Explorateur d'objets**  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
   
-2.  Développez **Bases de données** , la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , puis **Programmabilité**.  
+2.  Développez **Bases de données**, la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , puis **Programmabilité**.  
   
-3.  Cliquez avec le bouton droit sur **Procédures stockées** , puis cliquez sur **Nouvelle procédure stockée**.  
+3.  Cliquez avec le bouton droit sur **Procédures stockées**, puis cliquez sur **Nouvelle procédure stockée**.  
   
 4.  Dans le menu **Requête** , cliquez sur **Spécifier les valeurs des paramètres du modèle**.  
   
@@ -62,15 +62,15 @@ Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](.
     |Description|Retourne des données sur les employés.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar** (50)|  
+    |@Datatype_For_Param1|**nvarchar**(50)|  
     |Default_Value_For_Param1|NULL|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar** (50)|  
+    |@Datatype_For_Param2|**nvarchar**(50)|  
     |Default_Value_For_Param2|NULL|  
   
 6.  Cliquez sur **OK**.  
   
-7.  Dans l' **Éditeur de requête** , remplacez l'instruction SELECT par l'instruction suivante :  
+7.  Dans l' **Éditeur de requête**, remplacez l'instruction SELECT par l'instruction suivante :  
   
     ```sql  
     SELECT FirstName, LastName, Department  
@@ -95,7 +95,7 @@ Cette rubrique explique comment créer une procédure stockée [!INCLUDE[tsql](.
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour créer une procédure dans l'Éditeur de requête**  
   
-1.  Dans l' **Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans le menu **Fichier** , cliquez sur **Nouvelle requête**.  
   

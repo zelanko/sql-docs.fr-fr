@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6a0703042862d995d8890c01fee519915b513e3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 03b08fa667f8b0753c315a7cf66123618cb493f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482440"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475860"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,11 +52,11 @@ ms.locfileid: "88482440"
   
  Si vous répliquez les données vers des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
--   Affectez la valeur **False**à cette option, car les versions précédentes ne prennent pas en charge CREATE SCHEMA.  
+-   Affectez la valeur **False** à cette option, car les versions précédentes ne prennent pas en charge CREATE SCHEMA.  
   
 -   Pour chaque schéma, ajoutez un utilisateur à la base de données d'abonnement ayant le même nom que le schéma.  
   
- **Convertir XML en NTEXT**, **Convertir les types de données MAX en NTEXT et IMAGE**, **Convertir la nouvelle valeur datetime en NVARCHARXUIX**, **Convertir le flux de fichier en types de données MAX**, **Convertir CLR volumineux en types de données MAX**, **Convertir hierarchyId en types de données MAX**et **Convertir spatial en types de données MAX**.  
+ **Convertir XML en NTEXT**, **Convertir les types de données MAX en NTEXT et IMAGE**, **Convertir la nouvelle valeur datetime en NVARCHARXUIX**, **Convertir le flux de fichier en types de données MAX**, **Convertir CLR volumineux en types de données MAX**, **Convertir hierarchyId en types de données MAX** et **Convertir spatial en types de données MAX**.  
  Indique si les types de données et les attributs doivent être convertis comme indiqué. Spécifiez la valeur **True** pour répliquer ces types de données vers des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela garantit qu'ils pourront être traités correctement sur l'Abonné.  
   
  **Nom de l'objet de destination**  
@@ -111,7 +111,7 @@ ms.locfileid: "88482440"
  **Niveau de suivi**  
  Indique si les modifications d'une même ligne ou d'une même colonne doivent être traitées sous la forme d'un conflit.  
   
- **Vérifier l'autorisation INSERT**, **Vérifier l'autorisation UPDATE**et **Vérifier l'autorisation DELETE**  
+ **Vérifier l'autorisation INSERT**, **Vérifier l'autorisation UPDATE** et **Vérifier l'autorisation DELETE**  
  Permet d'indiquer si vous voulez vérifier au cours de la synchronisation si la connexion de l'Abonné dispose de l'autorisation INSERT, UPDATE ou DELETE sur les tables publiées dans la base de données de publication. La valeur par défaut est **False** , car la réplication de fusion n'a pas besoin d'accorder ces autorisations ; l'accès aux tables publiées est contrôlé par la liste d'accès à la publication. Pour plus d’informations sur la liste d’accès à la publication, consultez [Sécuriser le serveur de publication](../../relational-databases/replication/security/secure-the-publisher.md).  
   
  Vous pouvez demander la vérification des autorisations si vous voulez autoriser des abonnés à télécharger certaines modifications des données publiées. Vous pouvez, par exemple, ajouter un abonné à une liste d'accès à la publication, et ne fournir à l'abonné aucune autorisation sur les tables de la base de données de publication. Vous pouvez ensuite définir les autorisations DELETE en leur affectant la valeur **True**: l'Abonné peut télécharger les insertions et les modifications, mais pas les suppressions.  

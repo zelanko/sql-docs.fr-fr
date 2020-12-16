@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976bfdb47aae7037e3a7636299ff98e4a1424944
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 60a5fb875bf2ae69a4f87c543476b91844738276
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004273"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475580"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "92004273"
   
  Les rôles serveur fixes sont fournis pour des raisons de commodité et de compatibilité descendante. Attribuez des autorisations plus spécifiques chaque fois que cela est possible.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit neuf rôles serveur fixes. Les autorisations accordées aux rôles serveur fixes (à l’exception de **public** ) ne peuvent pas être changées. Depuis [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il est possible de créer des rôles serveur définis par l'utilisateur et de leur ajouter des autorisations au niveau du serveur.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit neuf rôles serveur fixes. Les autorisations accordées aux rôles serveur fixes (à l’exception de **public**) ne peuvent pas être changées. Depuis [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il est possible de créer des rôles serveur définis par l'utilisateur et de leur ajouter des autorisations au niveau du serveur.  
   
  Vous pouvez ajouter des principaux au niveau du serveur (connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], comptes et groupes Windows) à des rôles serveur. Chaque membre d'un rôle serveur fixe peut ajouter des connexions à ce rôle. Les membres de rôles serveur définis par l'utilisateur ne peuvent pas ajouter d'autres principaux de serveur à ces rôles.  
 > [!NOTE]
@@ -57,17 +57,17 @@ ms.locfileid: "92004273"
 |**bulkadmin**|Les membres du rôle serveur fixe **bulkadmin** peuvent exécuter l’instruction `BULK INSERT`.|  
 |**diskadmin**|Le rôle serveur fixe **diskadmin** permet de gérer les fichiers disque.|  
 |**dbcreator**|Les membres du rôle serveur fixe **dbcreator** peuvent créer, modifier, supprimer et restaurer n’importe quelle base de données.|  
-|**public**|Chaque connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appartient au rôle serveur **public** . Lorsqu'un principal de serveur ne s'est pas vu accorder ou refuser des autorisations spécifiques sur un objet sécurisable, l'utilisateur hérite des autorisations accordées à public sur cet objet. Vous ne devez affecter des autorisations publiques à un objet que lorsque vous souhaitez que ce dernier soit disponible pour tous les utilisateurs. Vous ne pouvez pas modifier l’appartenance au rôle public.<br /><br /> **Remarque :** **public** est implémenté différemment des autres rôles. Les autorisations peuvent être accordées, refusées ou révoquées à partir des rôles serveur fixes public.|  
+|**public**|Chaque connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appartient au rôle serveur **public**. Lorsqu'un principal de serveur ne s'est pas vu accorder ou refuser des autorisations spécifiques sur un objet sécurisable, l'utilisateur hérite des autorisations accordées à public sur cet objet. Vous ne devez affecter des autorisations publiques à un objet que lorsque vous souhaitez que ce dernier soit disponible pour tous les utilisateurs. Vous ne pouvez pas modifier l’appartenance au rôle public.<br /><br /> **Remarque :** **public** est implémenté différemment des autres rôles. Les autorisations peuvent être accordées, refusées ou révoquées à partir des rôles serveur fixes public.|  
   
 > [!IMPORTANT] 
-> La plupart des autorisations fournies par les rôles serveur suivants ne s’appliquent pas Synapse SQL - **processadmin** , **serveradmin** , **setupadmin** et **diskadmin** .
+> La plupart des autorisations fournies par les rôles serveur suivants ne s’appliquent pas Synapse SQL - **processadmin**, **serveradmin**, **setupadmin** et **diskadmin**.
   
 ## <a name="permissions-of-fixed-server-roles"></a>Autorisations des rôles serveur fixes  
  Certaines autorisations sont assignées à chaque rôle serveur fixe. Le graphique suivant présente les autorisations attribuées aux rôles serveur.   
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  L'autorisation **CONTROL SERVER** ressemble, mais n'est pas identique au rôle serveur fixe **sysadmin** . Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple, **CONTROL SERVER** n’implique pas l’appartenance au rôle serveur fixe **sysadmin** .) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes **DBCC** et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe **sysadmin** . Pour découvrir la liste des 171 procédures stockées système qui nécessitent l’appartenance à **sysadmin** , consultez le billet de blog suivant d’Andreas Wolter : [Comparaison entre CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et réaffectation de privilèges - avertissements](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
+>  L'autorisation **CONTROL SERVER** ressemble, mais n'est pas identique au rôle serveur fixe **sysadmin** . Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple, **CONTROL SERVER** n’implique pas l’appartenance au rôle serveur fixe **sysadmin**.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes **DBCC** et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe **sysadmin** . Pour découvrir la liste des 171 procédures stockées système qui nécessitent l’appartenance à **sysadmin** , consultez le billet de blog suivant d’Andreas Wolter : [Comparaison entre CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et réaffectation de privilèges - avertissements](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
 ## <a name="server-level-permissions"></a>Autorisations au niveau serveur  
  Seules des autorisations au niveau du serveur peuvent être ajoutées aux rôles serveur définis par l'utilisateur. Pour répertorier les autorisations au niveau du serveur, exécutez l'instruction suivante. Les autorisations au niveau du serveur sont :  

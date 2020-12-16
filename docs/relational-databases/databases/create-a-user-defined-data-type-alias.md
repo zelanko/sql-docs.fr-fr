@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e2bc61b8c69f3e52fc5149a1c3313ee4f0dc8d1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 85c93be3f041e470a7c4d1838467a997ff7dd56f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363153"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476500"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Créer un type de données d'alias défini par l'utilisateur
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "87363153"
   
 #### <a name="to-create-a-user-defined-data-type"></a>Pour créer un type de données défini par l'utilisateur  
   
-1.  Dans l’Explorateur d’objets, développez successivement **Bases de données**, une base de données, **Programmabilité**et **Types**, cliquez avec le bouton droit sur **Types de données définis par l’utilisateur**, puis cliquez sur **Nouveau type de données défini par l’utilisateur**.  
+1.  Dans l’Explorateur d’objets, développez successivement **Bases de données**, une base de données, **Programmabilité** et **Types**, cliquez avec le bouton droit sur **Types de données définis par l’utilisateur**, puis cliquez sur **Nouveau type de données défini par l’utilisateur**.  
   
      **Autoriser les valeurs NULL**  
      Spécifiez si le type de données défini par l'utilisateur accepte les valeurs NULL. L'acceptation de valeurs Null par un type de données défini par l'utilisateur existant n'est pas modifiable.  
@@ -105,7 +105,7 @@ ms.locfileid: "87363153"
   
 4.  Dans la zone **Type de données** , sélectionnez le type de données sur lequel le nouvel alias de type de données doit reposer.  
   
-5.  Renseignez les zones **Longueur**, **Précision**et **Échelle** du type de données, si nécessaire.  
+5.  Renseignez les zones **Longueur**, **Précision** et **Échelle** du type de données, si nécessaire.  
   
 6.  Activez **Autoriser les valeurs NULL** si le nouvel alias de type de données peut autoriser les valeurs NULL.  
   

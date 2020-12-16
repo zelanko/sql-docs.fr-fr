@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f88007fbb409004bc01d7b909dfa520cb7b8a051
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 626665bff61cd6f0c1799ef52134c50688d962b6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490613"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477730"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Définir et modifier un filtre de lignes statiques
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "88490613"
   
     -   Pour une publication transactionnelle ou d'instantané, cliquez sur **Ajouter**.  
   
-    -   Pour une publication de fusion, cliquez sur **Ajouter**puis sur **Ajouter un filtre**.  
+    -   Pour une publication de fusion, cliquez sur **Ajouter** puis sur **Ajouter un filtre**.  
   
 2.  Dans la boîte de dialogue **Ajouter un filtre** , sélectionnez une table à filtrer dans la zone de liste déroulante.  
   

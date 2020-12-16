@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 474fee6c8e37a52fbdb273b5fba95910b895f288
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f8f1ab5eb19e5590c5a4e3604469f93c2d524aac
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499384"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478180"
 ---
 # <a name="sort_in_tempdb-option-for-indexes"></a>Option SORT_IN_TEMPDB pour les index
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,6 +85,6 @@ Lorsque vous créez un index cluster sur une table qui a des index non-cluster, 
   
  [Configurer l’option de configuration Création d’index en mémoire.](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [Espace disque nécessaire pour les opérations DDL d'index](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Espace disque nécessaire pour les opérations DDL sur les index](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
   

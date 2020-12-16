@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f878144b8b7ff86636ff778ec586a0382ca801cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009925"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474060"
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "86009925"
 > [!NOTE]  
 >  La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] peut lire un fichier de format version 10.0 généré par **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], mais **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ne peut pas lire un fichier de format version 11.0 généré par **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Cette rubrique décrit l'utilisation de l' [utilitaire bcp](../../tools/bcp-utility.md) pour créer un fichier de format pour une table donnée. Le fichier de format est basé sur l’option de type de données spécifiée ( **-n**, **-c**, **-w**ou **-N**) et les délimiteurs de la table ou de la vue.  
+ Cette rubrique décrit l'utilisation de l' [utilitaire bcp](../../tools/bcp-utility.md) pour créer un fichier de format pour une table donnée. Le fichier de format est basé sur l’option de type de données spécifiée ( **-n**, **-c**, **-w** ou **-N**) et les délimiteurs de la table ou de la vue.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Création d'un fichier de format non-XML  
  Pour utiliser une commande **bcp** pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin de fichier de données. L’option **format** requiert également l’option **-f** , comme suit :  
