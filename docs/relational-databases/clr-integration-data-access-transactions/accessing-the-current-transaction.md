@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82c4e4f5b1f1af6194ff409a684ca239881487a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9220519a926ca75a00843dba54dfad797064aee
+ms.sourcegitcommit: 52252e8b4c9b50d3915aecd3135e8901d345e7e2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765405"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97599846"
 ---
 # <a name="accessing-the-current-transaction"></a>Accès à la transaction actuelle
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85765405"
   
 -   La procédure ou fonction managée peut annuler la transaction actuelle en appelant la méthode **Transaction.Rollback** si une certaine condition est remplie.  
   
- Lorsqu'elle est appelée dans une procédure ou fonction managée, la méthode **Transaction.Rollback** lève une exception avec un message d'erreur ambigu et peut être encapsulée dans un bloc try/catch. Le message d'erreur ressemble au suivant :  
+ Lorsqu'elle est appelée dans une procédure ou fonction managée, la méthode **Transaction.Rollback** lève une exception avec un message d'erreur ambigu et peut être encapsulée dans un bloc try/catch. Le message d’erreur est similaire à ce qui suit :  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  
