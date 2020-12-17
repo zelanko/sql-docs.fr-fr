@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59a25c594d45c57c7fe9a7f9baeb87c1fa49e3de
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 38b7faba88897317e1165b8938b0f6bfc69941de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987405"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440470"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertes de données Reporting Services
 
@@ -288,7 +288,7 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
      Pour plus d’informations sur la gestion de toutes les alertes de données d’un site, consultez [Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md) et [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
--   Dans la section**Configurer les abonnements et les alertes** vous déterminez si Reporting Services peut utiliser SQL Server Agent pour les alertes de données et télécharger les scripts qui autorisent l'accès à SQL Server Agent. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+-   Dans la section **Configurer les abonnements et les alertes** vous déterminez si Reporting Services peut utiliser SQL Server Agent pour les alertes de données et télécharger les scripts qui autorisent l'accès à SQL Server Agent. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="globalization-of-data-alerts"></a><a name="Globalization"></a> Globalisation des alertes de données  
  Certain script tel que l'arabe et hébreu sont écrits de droite à gauche. Les alertes de données prennent en charge les scripts de droite à gauche ainsi que les scripts de gauche à droite. Les alertes de données détectent la culture et modifient en conséquence l'apparence et le comportement de l'interface utilisateur, ainsi que la disposition des messages d'alerte de données. La culture est dérivée du paramètre régional du système d’exploitation de l’ordinateur de l’utilisateur. La culture est enregistrée chaque fois que vous mettez à jour puis resauvegardez la définition d'une alerte de données.  

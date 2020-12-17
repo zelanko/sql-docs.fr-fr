@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 7f7b7a22376cba31a54f5682e041e225cb15760c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194468"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470340"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Tutoriel Python : Entraîner et enregistrer un modèle Python à l’aide de T-SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -185,7 +185,7 @@ Cette procédure stockée utilise le nouveau package **revoscalepy**, qui est un
    Cette procédure stockée exécute les étapes suivantes dans le cadre de la formation du modèle :
 
    + La requête SELECT applique la fonction scalaire personnalisée _fnCalculateDistance_ pour calculer la distance directe entre les points de prise en charge et de dépose. Les résultats de la requête sont stockés dans la variable d’entrée Python par défaut, `InputDataset`.
-   + La variable binaire _tipped_ est utilisée comme *étiquette* ou colonne de résultat, et le modèle est adapté à l’aide de ces colonnes de caractéristiques :  _passenger_count_, _trip_distance_, _trip_time_in_secs_et _direct_distance_.
+   + La variable binaire _tipped_ est utilisée comme *étiquette* ou colonne de résultat, et le modèle est adapté à l’aide de ces colonnes de caractéristiques :  _passenger_count_, _trip_distance_, _trip_time_in_secs_ et _direct_distance_.
    + Le modèle formé est sérialisé et stocké dans la variable Python `logitObj`. En ajoutant le mot-clé T-SQL OUTPUT, vous pouvez ajouter la variable en tant que sortie de la procédure stockée. À l’étape suivante, cette variable est utilisée pour insérer le code binaire du modèle dans une table de base de données _nyc_taxi_models_. Ce mécanisme facilite le stockage et la réutilisation des modèles.
 
 2. Exécutez la procédure stockée comme suit pour insérer le modèle formé **revoscalepy** dans la table *nyc_taxi_models*.

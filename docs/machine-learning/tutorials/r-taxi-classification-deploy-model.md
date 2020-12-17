@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412519"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470110"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Didacticiel R : Exécuter des prédictions dans les procédures stockées SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -24,9 +24,9 @@ Dans la cinquième et dernière partie de ce tutoriel, vous apprendrez à *rendr
 
 Cet article illustre deux façons d’effectuer le scoring :
 
-+ **Mode de scoring par lot**  : utilisez une requête SELECT comme entrée de la procédure stockée. La procédure stockée retourne une table d’observations correspondant aux cas d’entrée.
++ **Mode de scoring par lot** : utilisez une requête SELECT comme entrée de la procédure stockée. La procédure stockée retourne une table d’observations correspondant aux cas d’entrée.
 
-+ **Mode de calcul de score individuel** : passer un ensemble de valeurs de paramètres en tant qu’entrée.  La procédure stockée retourne une seule ligne ou valeur.
++ **Mode de calcul de score individuel**: passer un ensemble de valeurs de paramètres en tant qu’entrée.  La procédure stockée retourne une seule ligne ou valeur.
 
 Dans cet article, vous allez :
 
@@ -76,7 +76,7 @@ GO
   
   Une trame de données ne pouvant contenir qu’une seule ligne, vous pouvez utiliser le même code pour le calcul de score unique ou de lot.
   
-+ La valeur retournée par la fonction `PREDICT` est une valeur flottante ( **float** ) qui représente la probabilité que le chauffeur recevra un pourboire, quel qu’en soit le montant.
++ La valeur retournée par la fonction `PREDICT` est une valeur flottante (**float**) qui représente la probabilité que le chauffeur recevra un pourboire, quel qu’en soit le montant.
 
 ## <a name="batch-scoring-a-list-of-predictions"></a>Scoring par lot (liste de prédictions)
 
@@ -154,7 +154,7 @@ Dans cette section, vous allez créer des prédictions uniques en utilisant une 
   
 Si vous appelez la procédure stockée à partir d’une application externe, vérifiez que les données correspondent aux critères du modèle R. Vous pourriez par exemple vérifier que les données d’entrée peuvent être transtypées ou converties en un type de données R, ou valider le type de données et la longueur des données.
 
-1. Créez une procédure stockée **RPredictSingleRow** .
+1. Créez une procédure stockée **RPredictSingleRow**.
   
    ```sql
    CREATE PROCEDURE [dbo].[RPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

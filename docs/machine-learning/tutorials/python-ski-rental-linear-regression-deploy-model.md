@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 07c62ab016f7db61d3619b19bb194bee1109651e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: de98a94f997d7107f0a2157d80919b16631ee7de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173405"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470420"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Tutoriel Python : Déployer un modèle de régression linéaire avec le Machine Learning SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de régression linéaire développé dans Python dans une base de données SQL Server à l’aide de Machine Learning Services ou sur des clusters Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de régression linéaire développé dans Python dans une base de données SQL Server à l’aide de Machine Learning Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de régression linéaire développé en Python dans une base de données Azure SQL Managed Instance à l’aide de Machine Learning Services.
 ::: moniker-end
 

@@ -7,13 +7,13 @@ ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016
+ms.openlocfilehash: 0ea96bf157c6ab781e8e0fa34dc8146e590c4b2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987245"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461370"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Système de gestion de versions dans la documentation SQL
 
@@ -115,7 +115,7 @@ L’article suivant a été ajouté pour SQL Server 2017. Il décrit les foncti
 | Attribut | Valeur |
 | :-------- | :---- |
 | Intitulé | Nouveautés de SQL Server 2017 |
-| Plage de monikers | `>= sql-server-2017 || = sqlallproducts-allversions` |
+| Plage de monikers | `=">= sql-server-2017"` |
 | Adresse `https` | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |
 
@@ -149,7 +149,7 @@ Le scénario suivant entraîne l’affichage d’un message d’information en h
 
 > La page demandée n’est pas disponible pour Azure SQL Database - current (Azure SQL Database - version actuelle). Vous avez été redirigé vers la dernière version du produit pour laquelle cette page est disponible.
 
-La version_la plus récente_ peut exclure les versions qui ne sont pas encore entièrement publiées et qui sont en _préversion_.
+La version _la plus récente_ peut exclure les versions qui ne sont pas encore entièrement publiées et qui sont en _préversion_.
 
 ![media_versioning-control-30-viewfallbackfrom.png](media/versioning-control-30-viewfallbackfrom.png)
 

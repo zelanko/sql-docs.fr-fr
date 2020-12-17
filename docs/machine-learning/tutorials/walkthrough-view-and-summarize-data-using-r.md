@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e48e25444acc2f84794afc487c95bdd5af64f30
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 0e746113d49c3cfa419a51826405bc993d90c51c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195071"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470040"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Afficher et synthétiser des données SQL Server à l’aide de R (procédure pas à pas)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -67,7 +67,7 @@ Exécutez les instructions R suivantes dans un environnement R sur la station de
     sqlConsoleOutput <- FALSE
     ```
 
-    - R utilise un répertoire temporaire pour la sérialisation bidirectionnelle des objets R entre votre station de travail et l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez spécifier le répertoire local qui est utilisé en tant que *sqlShareDir*ou accepter la valeur par défaut.
+    - R utilise un répertoire temporaire pour la sérialisation bidirectionnelle des objets R entre votre station de travail et l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez spécifier le répertoire local qui est utilisé en tant que *sqlShareDir* ou accepter la valeur par défaut.
   
     - Utilisez *sqlWait* pour indiquer si vous souhaitez que R attende les résultats du serveur.  Pour plus d’informations sur l’attente ou non des travaux, consultez [Distributed and parallel computing in Machine Learning Server](/r-server/r/how-to-revoscaler-distributed-computing) (Calcul distribué et parallèle dans Machine Learning Server).
   

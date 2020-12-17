@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 52a3ee78a73e2ba3e600d7dae99019d481da73a7
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987703"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559111"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement
 
@@ -775,7 +775,7 @@ Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour trans
         > Si vous déployez un projet de base de données identique à la base de données cible, le rapport résultant ne sera pas très explicite. Pour obtenir des résultats significatifs, déployez les modifications sur une base de données ou déployez une nouvelle base de données.  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>Déploiement de ligne de commande à l'aide du fichier dacpac généré  
-Une fois qu'un projet SQL a été créé, un fichier dacpac est créé qui peut être utilisé pour déployer le schéma à partir de la ligne de commande et qui peut activer le déploiement à partir d'un ordinateur différent tel qu'un ordinateur de génération. SqlPackage est un utilitaire de ligne de commande permettant le déploiement de fichiers dacpacs avec diverses options qui permettent aux utilisateurs de déployer un dacpac ou de générer un script de déploiement, entre autres actions. Pour plus d'informations, reportez-vous à [SqlPackage.exe](../tools/sqlpackage.md).  
+Une fois qu'un projet SQL a été créé, un fichier dacpac est créé qui peut être utilisé pour déployer le schéma à partir de la ligne de commande et qui peut activer le déploiement à partir d'un ordinateur différent tel qu'un ordinateur de génération. SqlPackage est un utilitaire de ligne de commande permettant le déploiement de fichiers dacpacs avec diverses options qui permettent aux utilisateurs de déployer un dacpac ou de générer un script de déploiement, entre autres actions. Pour plus d'informations, reportez-vous à [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
   
 > [!NOTE]  
 > Pour déployer avec succès des dacpacs à partir de projets créés avec la propriété DeploymentContributors définie, la ou les DLL contenant les contributeurs de déploiement doivent être installées sur l'ordinateur utilisé. Cela est dû au fait qu'elles ont été marquées spécifiquement pour que le déploiement aboutisse.  

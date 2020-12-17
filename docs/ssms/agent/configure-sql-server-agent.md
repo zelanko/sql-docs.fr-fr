@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a12ed0026afa31592d4b2f5f9f5dcc1cc30ae94
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 497ac3d6bd46de41ca9bd682381afca4919f6ef2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035646"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466550"
 ---
 # <a name="configure-sql-server-agent"></a>Configurer SQL Server Agent
 
@@ -62,7 +62,7 @@ Pour plus d’informations sur les autorisations Windows nécessaires pour le co
   
 1.  Cliquez sur le bouton **Démarrer** , puis, dans le menu **Démarrer**  , cliquez sur **Panneau de configuration**.  
   
-2.  Dans le Panneau de configuration, cliquez sur **Système et sécurité**, puis sur **Outils d'administration**et sélectionnez **Stratégie de sécurité locale**.  
+2.  Dans le Panneau de configuration, cliquez sur **Système et sécurité**, puis sur **Outils d'administration** et sélectionnez **Stratégie de sécurité locale**.  
   
 3.  Dans Stratégie de sécurité locale, cliquez sur le chevron pour développer le dossier **Stratégies locales** , puis cliquez sur le dossier **Attribution des droits utilisateur** .  
   

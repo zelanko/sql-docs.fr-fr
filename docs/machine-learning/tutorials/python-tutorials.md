@@ -8,24 +8,24 @@ ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f417a92a00b290f06326433b24b73137a0a424fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 6e527f7ba5d9a0f97a52cf068565b1b24ee696bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178546"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470310"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>Tutoriels Python pour l’apprentissage automatique SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Cet article décrit les tutoriels et les démarrages rapides Python pour [Machine Learning Services sur SQL Serveur](../sql-server-machine-learning-services.md) et les [clusters Big Data](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Cet article décrit les tutoriels et les démarrages rapides Python pour [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Cet article décrit les tutoriels et les démarrages rapides Python pour [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -33,7 +33,7 @@ Cet article décrit les tutoriels et les démarrages rapides Python pour [Azure 
 
 ## <a name="python-tutorials"></a>Tutoriels sur Python
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 | Didacticiel | Description |
 |-|-|
 | [Prédire les locations de skis avec la régression linéaire](python-ski-rental-linear-regression.md) | Utilisez Python et la régression linéaire pour prédire le nombre de skis qui seront loués. Utilisez des notebooks dans Azure Data Studio pour préparer les données et entraîner le modèle, et T-SQL pour le déploiement du modèle. |
