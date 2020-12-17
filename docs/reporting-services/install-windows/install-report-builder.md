@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: ca0071416491700254047b43056d32fc64ed1d9d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496986"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425127"
 ---
 # <a name="install-report-builder"></a>Installer le Générateur de rapports
 
@@ -33,11 +33,11 @@ ms.locfileid: "92496986"
   
  Vous pouvez démarrer l’[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir d’un portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou d’un site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d’informations, consultez [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>Site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- Sur un site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)],, si le menu **Nouveau document** ne répertorie pas **Rapport du Générateur de rapports** , **Modèle du générateur de rapports** et **Source de données du rapport** , leurs types de contenus doivent être ajoutés à la bibliothèque SharePoint. Pour plus d’informations, consultez [Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ Sur un site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)],, si le menu **Nouveau document** ne répertorie pas **Rapport du Générateur de rapports**, **Modèle du générateur de rapports** et **Source de données du rapport**, leurs types de contenus doivent être ajoutés à la bibliothèque SharePoint. Pour plus d’informations, consultez [Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ::: moniker-end
  
@@ -54,15 +54,15 @@ ms.locfileid: "92496986"
   
 ##  <a name="to-install-ssrbnoversion-from-the-download-site"></a><a name="download"></a> Pour installer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir du site de téléchargement  
   
-1.  Sur la [page Générateur de rapports du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968) , cliquez sur **Télécharger** .  
+1.  Sur la [page Générateur de rapports du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968) , cliquez sur **Télécharger**.  
   
-2.  Une fois le téléchargement du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] terminé, cliquez sur **Exécuter** .  
+2.  Une fois le téléchargement du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] terminé, cliquez sur **Exécuter**.  
   
      Cette opération lance l’Assistant SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
-3.  Acceptez les conditions du contrat de licence, puis cliquez sur **Suivant** .  
+3.  Acceptez les conditions du contrat de licence, puis cliquez sur **Suivant**.  
   
-4.  Dans la page **Serveur cible par défaut** , spécifiez éventuellement l'URL du serveur de rapports cible s'il est différent du serveur par défaut. Cliquez sur **Suivant** .  
+4.  Dans la page **Serveur cible par défaut** , spécifiez éventuellement l'URL du serveur de rapports cible s'il est différent du serveur par défaut. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
     >  Si vous prévoyez de travailler avec le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] quand celui-ci est connecté à un serveur de rapports, il est plus commode de spécifier l’URL du serveur à ce stade. Vous pouvez également le faire à partir de la boîte de dialogue **Options** dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
@@ -85,11 +85,11 @@ ms.locfileid: "92496986"
   
  Si vous souhaitez effectuer une installation totalement sans assistance, sans aucune interaction avec l’interface utilisateur, spécifiez l’option **/quiet** . Par défaut, l'indicateur d'option quiet supprime les erreurs d'installation. Il est par conséquent recommandé d’inclure l’option **/l** , qui spécifie l’enregistrement dans le journal, lorsque vous utilisez l’option quiet.   
   
-1.  Sur la [page Générateur de rapports du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968), cliquez sur **Télécharger** .  
+1.  Sur la [page Générateur de rapports du Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=734968), cliquez sur **Télécharger**.  
   
-2.  Une fois le téléchargement du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] terminé, cliquez sur **Enregistrer** .  
+2.  Une fois le téléchargement du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] terminé, cliquez sur **Enregistrer**.  
   
-3.  Dans le menu **Démarrer** , cliquez sur **Exécuter** .  
+3.  Dans le menu **Démarrer** , cliquez sur **Exécuter**.  
   
 4.  Dans la zone **Ouvrir** , tapez **cmd.**  
   
@@ -107,13 +107,13 @@ ms.locfileid: "92496986"
   
 ## <a name="set-ssrbnoversion-defaults"></a>Définir les paramètres par défaut du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
--   Après avoir installé le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], vous pouvez définir des options par défaut. Cliquez sur **Fichier** > **Options** .  
+-   Après avoir installé le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], vous pouvez définir des options par défaut. Cliquez sur **Fichier** > **Options**.  
   
      Le plus utile est de définir le site SharePoint ou le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] par défaut. Pour plus d’informations, consultez [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md).  
   
 -   Cliquez sur **Générateur de rapports** .  
   
-     Si le serveur de rapports ne figure pas dans la liste des serveurs existants, fermez la boîte de dialogue **Ouvrir un rapport** , puis cliquez sur **Se connecter** au bas de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] pour vous connecter au serveur.  
+     Si le serveur de rapports ne figure pas dans la liste des serveurs existants, fermez la boîte de dialogue **Ouvrir un rapport**, puis cliquez sur **Se connecter** au bas de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] pour vous connecter au serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)   

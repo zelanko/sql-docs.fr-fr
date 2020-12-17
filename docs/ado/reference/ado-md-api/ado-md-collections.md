@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f83f06c5aa72c31df711db05198032206c5a32b9
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: d5422c524cdd275f0afbb64cb5efabb9da0b224d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098668"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638037"
 ---
 # <a name="ado-md-collections"></a>Collections ADO MD
 
@@ -34,7 +34,7 @@ ms.locfileid: "92098668"
 |[Positions](./positions-collection-ado-md.md)|Contient les objets **position** qui définissent un point sur un axe.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Informations de référence sur l’API ADO MD](./ado-md-object-model.md)   
  [Exemples de code ADO MD](./ado-md-code-examples.md)   
  [ADO MD les constantes énumérées](./ado-md-enumerated-constants.md)   
  [Méthodes ADO MD](./ado-md-methods.md)   

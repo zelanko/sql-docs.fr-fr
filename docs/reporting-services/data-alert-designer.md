@@ -15,13 +15,13 @@ helpviewer_keywords:
 - creating, alerts
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: e83db2f4ce3a049a6c285b36a2d6a611369ca7bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243297"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484351"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
 
@@ -134,11 +134,11 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
   
  Selon le type de données du champ, le Concepteur d'alertes de données propose différentes comparaisons. Le Concepteur d'alertes de données fournit les comparaisons adaptées au type de données du champ auquel les valeurs sont comparées. Voici les comparaisons disponibles pour les différents types de données. Le type de données **Booléen** n’est pas pris en charge dans les règles.  
   
--   Comparaisons des types de données date/heure : **est**, **n’est pas**, **est avant**et **est après**  
+-   Comparaisons des types de données date/heure : **est**, **n’est pas**, **est avant** et **est après**  
   
--   Comparaisons des types de données numériques : **est**, **n’est pas**, **est inférieur à**, **est inférieur ou égal à**, **est supérieur à**et **est supérieur ou égal à**  
+-   Comparaisons des types de données numériques : **est**, **n’est pas**, **est inférieur à**, **est inférieur ou égal à**, **est supérieur à** et **est supérieur ou égal à**  
   
--   Comparaisons des types de données de chaîne : **est**, **n’est pas**et **contient**  
+-   Comparaisons des types de données de chaîne : **est**, **n’est pas** et **contient**  
   
  Quand vous créez une règle, vous spécifiez s’il faut utiliser une valeur ou un champ dans la comparaison en choisissant **Mode de saisie de valeur** ou **Mode de sélection de champ**. Si vous choisissez **Mode de saisie de valeur**, vous devez fournir une liste de valeurs à comparer. Une comparaison qui inclut plusieurs clauses OR est très similaire à la comparaison logique IN dans [!INCLUDE[tsql](../includes/tsql-md.md)], qui est une liste de valeurs à tester pour trouver une correspondance. Pour plus d’informations, consultez [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md).  
   

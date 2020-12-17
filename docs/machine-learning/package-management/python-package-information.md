@@ -8,25 +8,25 @@ ms.date: 06/03/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb55bf9bac934f78b0a309663ced729a8ef6534
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07166159b1d637b58f9eb7056218d1fc504a66
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869777"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471020"
 ---
 # <a name="get-python-package-information"></a>Obtenir des informations sur les packages Python
 
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Cet article explique comment obtenir des informations sur les packages Python installés, notamment les versions et les emplacements d’installation, sur [Machine Learning Services sur SQL Server](../sql-server-machine-learning-services.md) et sur [Clusters Big Data](../../big-data-cluster/machine-learning-services.md). Les exemples de scripts Python vous montrent comment répertorier des informations de package telles que le chemin d’installation et la version.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Cet article explique comment obtenir des informations sur les packages Python installés, notamment les versions et les emplacements d’installation, sur [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Les exemples de scripts Python vous montrent comment répertorier des informations de package telles que le chemin d’installation et la version.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Cet article explique comment obtenir des informations sur les packages Python installés, notamment les versions et les emplacements d’installation, sur [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). Les exemples de scripts Python vous montrent comment répertorier des informations de package telles que le chemin d’installation et la version.
 ::: moniker-end
 
@@ -37,7 +37,7 @@ Lorsque vous installez Machine Learning avec SQL Server, une seule bibliothèque
 Tous les scripts ou les codes qui s’exécutent dans la base de données sur SQL Server doivent charger les fonctions à partir de la bibliothèque d’instances. SQL Server ne peut pas accéder aux packages installés dans d’autres bibliothèques. Cela s’applique également aux clients distants : tout code Python qui s’exécute dans le contexte de calcul du serveur peut uniquement utiliser des packages installés dans la bibliothèque d’instances.
 Pour protéger les ressources du serveur, la bibliothèque d’instances par défaut ne peut être modifiée que par un administrateur de l’ordinateur.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Le chemin d’accès par défaut aux éléments binaires pour Python est :
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
@@ -45,7 +45,7 @@ Le chemin d’accès par défaut aux éléments binaires pour Python est :
 Cela nécessite d’utiliser l’instance SQL par défaut, MSSQLSERVER. Si SQL Server est installé en tant qu’instance nommée définie par l’utilisateur, le nom donné est utilisé à la place.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Le chemin d’accès par défaut aux éléments binaires pour Python est :
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES`
@@ -60,7 +60,7 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH override;
 ```
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 > [!IMPORTANT]
 > Sur Azure SQL Managed Instance, l’exécution des commandes sp_configure et RECONFIGURE déclenche un redémarrage de SQL Server pour que les paramètres RG prennent effet. Cela peut entraîner quelques secondes d’indisponibilité.
 ::: moniker-end
@@ -75,7 +75,7 @@ EXECUTE sp_execute_external_script
 
 Pour en savoir plus sur la variable `sys.path` et sur la façon dont elle est utilisée pour définir le chemin de recherche de l’interpréteur pour les modules, consultez la section [Chemin de recherche du module](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 > [!NOTE]
 > N’essayez pas d’installer directement des packages Python dans la bibliothèque de packages SQL à l’aide de **pip** ou de méthodes similaires. Utilisez plutôt **sqlmlutils** pour installer des packages dans une instance SQL. Pour plus d’informations, consultez [Installation de packages Python avec sqlmlutils](install-additional-python-packages-on-sql-server.md).
 ::: moniker-end
@@ -161,9 +161,9 @@ print(sys.version)
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [Installer des packages avec des outils Python](install-python-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Installer de nouveaux packages Python avec sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

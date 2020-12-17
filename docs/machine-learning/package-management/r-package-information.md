@@ -8,25 +8,25 @@ ms.date: 05/27/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bbc530a84ca09ce5e2797bc770e50a20fc5113e
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ee042503a0d88a878b96caba480551e9553d6a88
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869967"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471000"
 ---
 # <a name="get-r-package-information"></a>Obtenir des informations sur les packages R
 
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Cet article explique comment obtenir des informations sur les packages R installés sur [Machine Learning Services sur SQL Server](../sql-server-machine-learning-services.md) et sur [Clusters Big Data](../../big-data-cluster/machine-learning-services.md). Les exemples de scripts R vous montrent comment répertorier des informations de package telles que le chemin d’installation et la version.
 ::: moniker-end
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 Cet article explique comment obtenir des informations sur les packages R installés sur [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Les exemples de scripts R vous montrent comment répertorier des informations de package telles que le chemin d’installation et la version.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Cet article explique comment obtenir des informations sur les packages R installés sur [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). Les exemples de scripts R vous montrent comment répertorier des informations de package telles que le chemin d’installation et la version.
 ::: moniker-end
 
@@ -37,7 +37,7 @@ Lorsque vous installez Machine Learning avec SQL Server, une seule bibliothèque
 Tout script qui s’exécute dans la base de données sur SQL Server doit charger les fonctions à partir de la bibliothèque d’instances. SQL Server ne peut pas accéder aux packages installés dans d’autres bibliothèques. Cela s’applique également aux clients distants : tout script R qui s’exécute dans le contexte de calcul du serveur peut uniquement utiliser des packages installés dans la bibliothèque d’instances.
 Pour protéger les ressources du serveur, la bibliothèque d’instances par défaut ne peut être modifiée que par un administrateur de l’ordinateur.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Le chemin d’accès par défaut aux éléments binaires pour R est le suivant :
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
@@ -45,7 +45,7 @@ Le chemin d’accès par défaut aux éléments binaires pour R est le suivant :
 Cela nécessite d’utiliser l’instance SQL par défaut, MSSQLSERVER. Si SQL Server est installé en tant qu’instance nommée définie par l’utilisateur, le nom donné est utilisé à la place.
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Le chemin d’accès par défaut aux éléments binaires pour R est le suivant :
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
@@ -53,7 +53,7 @@ Le chemin d’accès par défaut aux éléments binaires pour R est le suivant :
 Cela nécessite d’utiliser l’instance SQL par défaut, MSSQLSERVER. Si SQL Server est installé en tant qu’instance nommée définie par l’utilisateur, le nom donné est utilisé à la place.
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 Le chemin d’accès par défaut aux éléments binaires pour R est le suivant :
 
 `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
@@ -73,7 +73,7 @@ GO
 
 ## <a name="default-microsoft-r-packages"></a>Packages Microsoft R par défaut
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Les packages Microsoft R suivants sont installés avec SQL Server R Services.
 
@@ -84,7 +84,7 @@ Les packages Microsoft R suivants sont installés avec SQL Server R Services.
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 Les packages Microsoft R suivants sont installés avec SQL Server Machine Learning Services lorsque vous sélectionnez la fonctionnalité R au moment de l’installation.
 
@@ -97,7 +97,7 @@ Les packages Microsoft R suivants sont installés avec SQL Server Machine Learni
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 
 Les packages Microsoft R suivants sont installés avec SQL Server Machine Learning Services lorsque vous sélectionnez la fonctionnalité R au moment de l’installation.
 
@@ -114,7 +114,7 @@ Les packages Microsoft R suivants sont installés avec SQL Server Machine Learni
 
 Par défaut, les packages R sont actualisés par le biais des Service Packs et des mises à jour cumulatives. Les packages supplémentaires et les mises à niveau de version complètes des composants de base de R ne sont possibles que par le biais de mises à niveau de produit ou par liaison de la prise en charge de R avec Microsoft Machine Learning Server.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 En outre, vous pouvez ajouter des packages MicrosoftML et olapR à une instance SQL Server à l’aide d’une mise à niveau des composants.
 ::: moniker-end
 
@@ -178,9 +178,9 @@ print(packageDescription("MicrosoftML"))
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="<=sql-server-2017"
 + [Installer des packages avec les outils R](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 + [Installer de nouveaux packages R avec sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

@@ -14,19 +14,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 744120ac17992b75f63e510414cdfc79e4527a8b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66eda4d5c7cf3d5098eec0f00e4cb5dbf50cd0d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036143"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478720"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Débogueur Transact-SQL - Fenêtre Sortie
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Cette fenêtre contient les messages d'état de plusieurs fonctionnalités de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La sortie est acheminée vers des volets spéciaux de la fenêtre **Sortie** du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] , des fonctionnalités d’outils externes ou les commandes exécutées dans la **Fenêtre Commande**du débogueur. La sortie généralement affichée dans la fenêtre d'invite de commande des outils externes (notamment les fichiers .bat ou .com) est également disponible.
+Cette fenêtre contient les messages d'état de plusieurs fonctionnalités de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La sortie est acheminée vers des volets spéciaux de la fenêtre **Sortie** du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] , des fonctionnalités d’outils externes ou les commandes exécutées dans la **Fenêtre Commande** du débogueur. La sortie généralement affichée dans la fenêtre d'invite de commande des outils externes (notamment les fichiers .bat ou .com) est également disponible.
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   

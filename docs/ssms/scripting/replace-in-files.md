@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d3ccbef48b79ef0706920ab2ff83a2daee68db9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 89097e7ef1b21008561db783fbb907ac903928f5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036403"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466330"
 ---
 # <a name="replace-in-files"></a>Remplacer dans les fichiers
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "92036403"
 > [!CAUTION]  
 >  Vérifiez que l’étendue définie dans **Rechercher dans** inclut seulement les fichiers que vous souhaitez modifier.  
   
- Un rappel avec une option **Conserver les fichiers modifiés ouverts** est affiché. Pour conserver l’option **Annuler** , vous devez sélectionner cette option. L’option**Annuler** est disponible uniquement dans les fichiers qui restent ouverts après avoir été modifiés.  
+ Un rappel avec une option **Conserver les fichiers modifiés ouverts** est affiché. Pour conserver l’option **Annuler** , vous devez sélectionner cette option. L’option **Annuler** est disponible uniquement dans les fichiers qui restent ouverts après avoir été modifiés.  
   
  **Ignorer le fichier**  
  Devient disponible quand **Regarder dans** inclut plusieurs fichiers. Cliquez sur ce bouton si vous ne voulez pas inspecter ni modifier le fichier en cours. La recherche continue dans le fichier suivant de la liste **Regarder dans**.  
@@ -74,7 +74,7 @@ ms.locfileid: "92036403"
  Sélectionnez une étendue de recherche prédéfinie dans cette liste ou entrez votre propre ensemble de répertoires à l’aide de la boîte de dialogue **Choisir des dossiers de recherche** .  
   
  **Document actif**  
- Cette option est disponible lorsqu'un document est ouvert dans un éditeur. La chaîne spécifiée dans **Rechercher**est recherchée uniquement dans le document actif.  
+ Cette option est disponible lorsqu'un document est ouvert dans un éditeur. La chaîne spécifiée dans **Rechercher** est recherchée uniquement dans le document actif.  
   
  **Tous les documents ouverts**  
  Effectue la recherche dans tous les fichiers actuellement ouverts à des fins d'édition.  
