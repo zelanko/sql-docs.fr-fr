@@ -17,13 +17,13 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f222f011015f4cf23cf4640b7c4bc2136d338583
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f888cc014c5cce3280f572c8a7eeddf194704624
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037257"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482151"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -101,7 +101,7 @@ La table suivante décrit comment le remplacement des jetons est contrôlé par 
   
 |Syntaxe des jetons|Remplacement de jetons d'alerte activé|Remplacement de jetons d'alerte désactivé|  
 |----------------|------------------------------|-------------------------------|  
-|Macro ESCAPE utilisée|Tous les jetons des travaux sont remplacés avec succès.|Les jetons activés par des alertes ne sont pas remplacés. Ces jetons sont **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**et **WMI(** _propriété_ **)** . Les autres jetons statiques sont remplacés comme il se doit.|  
+|Macro ESCAPE utilisée|Tous les jetons des travaux sont remplacés avec succès.|Les jetons activés par des alertes ne sont pas remplacés. Ces jetons sont **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** et **WMI(** _propriété_ **)** . Les autres jetons statiques sont remplacés comme il se doit.|  
 |Aucune macro ESCAPE utilisée|Échec de tous les travaux contenant des jetons.|Échec de tous les travaux contenant des jetons.|  
   
 ## <a name="token-syntax-update-examples"></a>Exemples de mise à jour de syntaxe de jeton  

@@ -43,13 +43,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: df5c82ef6887dba2d261a1517d1d1f9b871d5ec4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039017"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478810"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
 
@@ -204,7 +204,7 @@ Utilisez cette page pour spécifier la façon dont vous souhaitez que cet Assist
 
 - **Générer le script de suivi des modifications** - Génère le script de suivi des modifications s’il est activé sur la base de données d’origine ou sur des tables dans la base de données d’origine. La valeur par défaut est **False**. Pour plus d’informations, consultez [À propos du suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).
 
-- **Générer un script pour les contraintes de validation** - Ajoute des contraintes **CHECK** au script. La valeur par défaut est **True**. Les contraintes**CHECK** exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
+- **Générer un script pour les contraintes de validation** - Ajoute des contraintes **CHECK** au script. La valeur par défaut est **True**. Les contraintes **CHECK** exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
 
 - **Générer un script des options de compression de données** - Génère un script des options de compression de données si elles sont configurées sur la base de données d’origine ou sur des tables dans la base de données d’origine. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md). La valeur par défaut est **False**.
 

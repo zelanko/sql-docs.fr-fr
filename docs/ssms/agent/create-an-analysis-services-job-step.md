@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b828996ad806ad3c98694ed5065466e6b5f8c9f
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e65aa07cff708a7112b7a0c4e0bbc0338cb40860
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344045"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477110"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Créer une étape de travail Analysis Services
 
@@ -74,7 +74,7 @@ Cette rubrique explique comment créer et définir les étapes de travail de [!I
   
 3.  Dans la boîte de dialogue **Propriétés du travail** , cliquez sur la page **Étapes** , puis sur **Nouveau**.  
   
-4.  Dans la boîte de dialogue **Nouvelle étape du travail** , tapez le **Nom de l'étape**du travail.  
+4.  Dans la boîte de dialogue **Nouvelle étape du travail** , tapez le **Nom de l'étape** du travail.  
   
 5.  Dans la liste **Type** , cliquez sur **Commande SQL Server Analysis Services**.  
   
@@ -94,7 +94,7 @@ Cette rubrique explique comment créer et définir les étapes de travail de [!I
   
 3.  Dans la boîte de dialogue **Propriétés du travail** , cliquez sur la page **Étapes** , puis sur **Nouveau**.  
   
-4.  Dans la boîte de dialogue **Nouvelle étape du travail** , tapez un **nom d'étape**de travail.  
+4.  Dans la boîte de dialogue **Nouvelle étape du travail** , tapez un **nom d'étape** de travail.  
   
 5.  Dans la liste **Type** , cliquez sur **Requête SQL Server Analysis Services**.  
   

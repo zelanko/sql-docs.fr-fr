@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 41ae36248cff60542b7e7fe9ab0c1663ab7820f2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036172"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480630"
 ---
 # <a name="transact-sql-debugger---information"></a>Débogueur Transact-SQL - Informations
 
@@ -36,7 +36,7 @@ Chaque fois que le débogueur suspend l'exécution du code au niveau d'une instr
 
 ## <a name="debugger-windows"></a>Fenêtres du débogueur  
 
-En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre principale de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Le débogueur affiche toutes ses informations dans ces deux fenêtres. Chaque fenêtre du débogueur contient des onglets que vous pouvez sélectionner pour contrôler le jeu d'informations à afficher dans la fenêtre. La fenêtre gauche du débogueur contient les onglets **Variables locales**, **Espion 1**, **Espion 2**, **Espion 3**et **Espion 4** . La fenêtre droite du débogueur contient les onglets **Pile des appels**, **Threads**, **Points d’arrêt**, **Fenêtre de commande**et **Sortie** .  
+En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre principale de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Le débogueur affiche toutes ses informations dans ces deux fenêtres. Chaque fenêtre du débogueur contient des onglets que vous pouvez sélectionner pour contrôler le jeu d'informations à afficher dans la fenêtre. La fenêtre gauche du débogueur contient les onglets **Variables locales**, **Espion 1**, **Espion 2**, **Espion 3** et **Espion 4** . La fenêtre droite du débogueur contient les onglets **Pile des appels**, **Threads**, **Points d’arrêt**, **Fenêtre de commande** et **Sortie** .  
   
 > [!NOTE]  
 >  Les descriptions précédentes s'appliquent aux emplacements par défaut des fenêtres du débogueur. Vous pouvez faire glisser un onglet pour le déplacer dans une autre fenêtre, ou vous pouvez détacher un onglet pour créer une nouvelle fenêtre que vous pouvez positionner où bon vous semble.  
@@ -48,7 +48,7 @@ En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre prin
 -   Dans la barre d’outils **Déboguer** , cliquez sur **Points d’arrêt**, puis sélectionnez la fenêtre désirée.  
   
 ## <a name="transact-sql-expressions"></a>Expressions Transact-SQL  
- Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre gauche du débogueur peut afficher les valeurs de données qui sont actuellement affectées à des expressions dans cinq onglets ou fenêtres au maximum : **Variables locales, Espion 1**, **Espion 2**, **Espion 3**et **Espion 4**.  
+ Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre gauche du débogueur peut afficher les valeurs de données qui sont actuellement affectées à des expressions dans cinq onglets ou fenêtres au maximum : **Variables locales, Espion 1**, **Espion 2**, **Espion 3** et **Espion 4**.  
   
  La fenêtre **Variables locales** affiche des informations sur les variables locales dans l’étendue actuelle du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . L’ensemble d’expressions répertorié dans la fenêtre **Variables locales** change à mesure que le débogueur exécute les différentes parties du code.  
   
@@ -68,7 +68,7 @@ En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre prin
   
  Pour ajouter une expression dans une fenêtre **Espion** , vous pouvez sélectionner **Ajouter un espion** dans la boîte de dialogue **Espion express** ou entrer le nom de l’expression dans la colonne **Nom** d’une ligne vide dans une fenêtre **Espion** .  
   
- Vous pouvez définir les valeurs de données pour des variables dans les fenêtres **Variables locales**, **Espion**ou **Espion express** en cliquant avec le bouton droit sur la ligne, puis en sélectionnant **Modifier la valeur**. Les colonnes **Valeur** dans la fenêtre **Variables locales** , la fenêtre **Espion** et la boîte de dialogue **Espion express** prennent toutes en charge les visualiseurs de données texte, XML et HTML. Les visualiseurs sont représentés par une bulle d’informations en forme de loupe à droite de la colonne **Valeurs** . Vous pouvez utiliser les visualiseurs pour afficher des valeurs de données texte, XML ou HTML dans des affichages qui correspondent aux types de données, par exemple des fichiers XML dans une fenêtre de navigateur.  
+ Vous pouvez définir les valeurs de données pour des variables dans les fenêtres **Variables locales**, **Espion** ou **Espion express** en cliquant avec le bouton droit sur la ligne, puis en sélectionnant **Modifier la valeur**. Les colonnes **Valeur** dans la fenêtre **Variables locales** , la fenêtre **Espion** et la boîte de dialogue **Espion express** prennent toutes en charge les visualiseurs de données texte, XML et HTML. Les visualiseurs sont représentés par une bulle d’informations en forme de loupe à droite de la colonne **Valeurs** . Vous pouvez utiliser les visualiseurs pour afficher des valeurs de données texte, XML ou HTML dans des affichages qui correspondent aux types de données, par exemple des fichiers XML dans une fenêtre de navigateur.  
   
  En mode débogage, lorsque vous déplacez le pointeur de la souris sur un identificateur, une fenêtre contextuelle **Info express** affiche le nom de l’expression et sa valeur actuelle. Pour plus d’informations, consultez [Info express &#40;IntelliSense&#41;](./quick-info-intellisense.md).  
   
@@ -94,9 +94,9 @@ En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre prin
   
 -   Si l'appel est allé à une procédure stockée ou à une fonction ayant accepté des paramètres, les noms, types de données et valeurs de tous les paramètres sont également répertoriés.  
   
- Les expressions dans les fenêtres **Variables locales**, **Espion**et **Espion express** sont évaluées pour le frame de pile actuel. Par défaut, le frame de pile actuel est le premier frame de la pile, où le débogueur a suspendu l'exécution. Lorsque vous spécifiez un autre frame de pile en tant que frame actuel, les expressions dans les fenêtres **Variables locales**, **Espion**et **Espion express** sont réévaluées pour le nouveau frame de pile. Vous pouvez modifier le frame de pile actuel en double-cliquant sur un frame ou en cliquant sur un frame et en sélectionnant **Basculer vers le frame**. À ce stade, les expressions dans les fenêtres **Variables locales**, **Espion**et **Espion express** sont réévaluées pour le nouveau frame. Lorsque le frame de pile actuel n'est pas le premier frame de la pile, une flèche verte dans la marge gauche du frame de pile identifie le frame de pile actuel.  
+ Les expressions dans les fenêtres **Variables locales**, **Espion** et **Espion express** sont évaluées pour le frame de pile actuel. Par défaut, le frame de pile actuel est le premier frame de la pile, où le débogueur a suspendu l'exécution. Lorsque vous spécifiez un autre frame de pile en tant que frame actuel, les expressions dans les fenêtres **Variables locales**, **Espion** et **Espion express** sont réévaluées pour le nouveau frame de pile. Vous pouvez modifier le frame de pile actuel en double-cliquant sur un frame ou en cliquant sur un frame et en sélectionnant **Basculer vers le frame**. À ce stade, les expressions dans les fenêtres **Variables locales**, **Espion** et **Espion express** sont réévaluées pour le nouveau frame. Lorsque le frame de pile actuel n'est pas le premier frame de la pile, une flèche verte dans la marge gauche du frame de pile identifie le frame de pile actuel.  
   
- Lorsque vous cliquez avec le bouton droit sur un frame de pile et que vous sélectionnez **Atteindre le code source**, le code pour ce frame est affiché dans une fenêtre de l’éditeur de requête. Toutefois, ce frame ne devient pas le frame actuel, et le contenu des fenêtres **Variables locales**, **Espion**et **Espion express** n’est pas modifié.  
+ Lorsque vous cliquez avec le bouton droit sur un frame de pile et que vous sélectionnez **Atteindre le code source**, le code pour ce frame est affiché dans une fenêtre de l’éditeur de requête. Toutefois, ce frame ne devient pas le frame actuel, et le contenu des fenêtres **Variables locales**, **Espion** et **Espion express** n’est pas modifié.  
   
 ## <a name="system-information-and-transact-sql-results"></a>Informations système et résultats Transact-SQL  
  Le débogueur répertorie son état et des messages d’événements dans la fenêtre **Sortie** . Ces informations indiquent notamment à quel moment le débogueur se joint à d'autres processus et à quel moment les threads du débogueur se terminent.  

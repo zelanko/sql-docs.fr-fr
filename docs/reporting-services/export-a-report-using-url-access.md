@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c7a6907a20ecbfad89820c3afb792b50a7f2a6f8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d61f509fa07528b71cd7cbb23488bc14f33959ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247208"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472490"
 ---
 # <a name="export-a-report-using-url-access"></a>Exporter un rapport à l'aide de l'accès URL
   Vous pouvez éventuellement spécifier le format de rendu du rapport à l’aide du paramètre d’URL *rs:Format* .  Les formats HTML4.0 et HTM5 (extensions de rendu) seront restitués dans le navigateur. Pour les autres formats, le navigateur vous invite à enregistrer la sortie du rapport dans un fichier local.  
@@ -28,7 +28,7 @@ ms.locfileid: "87247208"
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  Et, pour un serveur de rapport SharePoint en mode intégré :  
   

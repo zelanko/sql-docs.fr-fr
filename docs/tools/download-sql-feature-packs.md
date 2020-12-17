@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: 44d46bd260b1f59b9d1bcffd4a7bfb6ea46c248c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 40ce4c62a28f404ceb3295f9644a8aefb4c789f8
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713747"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489789"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Télécharger les fonctionnalités et les outils étendus de SQL Server
 
@@ -50,7 +50,7 @@ Cet article fournit une brève explication des différents téléchargements et 
 | [Base de langages statistiques pour la recherche sémantique SQL Server](../relational-databases/search/install-and-configure-semantic-search.md) | La base de données des statistiques linguistiques de sémantique est un composant obligatoire de la fonctionnalité de recherche sémantique statistique dans Microsoft SQL Server. |
 | [Objets de gestion partagée SQL Server](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server Management Objects (SMO) est un modèle objet de Microsoft .NET Framework qui permet aux développeurs de logiciels de créer des applications côté client qui gèrent et administrent les objets et les services SQL Server. |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | Le package SQL Server System CLR Types contient les composants nécessaires à l’implémentation des types d’ID geometry, geography et hierarchy id dans SQL Server. **Remarque : ce composant requiert également [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** . |
-| [Extensions Windows PowerShell pour Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md?view=sql-server-2017) | Les extensions Microsoft Windows PowerShell pour SQL Server incluent un fournisseur et un ensemble d'applets de commande qui permettent aux administrateurs et aux développeurs de créer des scripts PowerShell pour gérer des instances de SQL Server. |
+| [Extensions Windows PowerShell pour Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md) | Les extensions Microsoft Windows PowerShell pour SQL Server incluent un fournisseur et un ensemble d'applets de commande qui permettent aux administrateurs et aux développeurs de créer des scripts PowerShell pour gérer des instances de SQL Server. |
 |||
 
 ## <a name="database-engine"></a>Moteur de base de données

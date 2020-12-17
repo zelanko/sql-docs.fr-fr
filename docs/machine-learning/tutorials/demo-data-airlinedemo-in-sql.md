@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ec47525a79738eafc2746808a669ee50df0363a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3b19e905d68d53764a496ab5ee7745e3529484cf
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194487"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489899"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration d’arrivée de vols Airline pour les didacticiels R et Python SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Dans cet exercice, créez une base de données SQL Server pour stocker des données importées à partir des jeux de données de démonstration Airline intégrés de R ou Python. Les distributions R et Python fournissent des données équivalentes, que vous pouvez importer dans une base de données SQL Server à l’aide de Management Studio.
 
-Pour effectuer cet exercice, vous devez avoir [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) ou un autre outil capable d’exécuter des requêtes T-SQL.
+Pour effectuer cet exercice, vous devez avoir [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) ou un autre outil capable d’exécuter des requêtes T-SQL.
 
 Voici les tutoriels et les démarrages rapides qui utilisant ce jeu de données :
 

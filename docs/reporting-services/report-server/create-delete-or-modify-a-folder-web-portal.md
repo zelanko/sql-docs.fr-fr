@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6826e09f85e001e9932e2c6f85c400f722534c2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987185"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409345"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Créer, supprimer ou modifier un dossier - Reporting Services
   Vous pouvez créer des dossiers pour organiser et gérer les éléments à publier sur un serveur de rapports. La création de dossiers peut permettre aux utilisateurs de rechercher les rapports qui les intéressent. Pour les gestionnaires de contenu, les dossiers fournissent l'infrastructure nécessaire à l'application d'autorisations. Vous pouvez créer des attributions de rôles pour des dossiers spécifiques afin de restreindre l'accès aux rapports en cours de développement ou dont la diffusion doit être restreinte.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="to-create-a-folder"></a>Pour créer un dossier  
   
@@ -69,7 +69,7 @@ ms.locfileid: "91987185"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
  
 ## <a name="to-create-a-folder"></a>Pour créer un dossier  
   

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 809d11c82a9b09a23590592ec3f7b433e3c9ca43
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d01a008e00d2effccb109555799bbe6d55baf1e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986655"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466570"
 ---
 # <a name="limit-report-history---reporting-services"></a>Limiter l’historique de rapport - Reporting Services
   L'historique de rapport est un ensemble d'instantanés de rapport que vous créez au fil du temps. Vous pouvez soit créer l'historique de rapport à la demande, soit planifier la fréquence à laquelle un instantané est créée et ajoutée à l'historique de rapport.  
   
  L'historique de rapport est stocké dans la base de données du serveur de rapports. Si les instantanés de rapport contiennent une grande quantité de données, pensez à limiter l’historique de rapport afin de réduire l’impact de la conservation des instantanés sur la taille de la base de données.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ## <a name="to-configure-report-history-for-a-report-server"></a>Pour configurer un historique de rapport destiné à un serveur de rapports  
   
@@ -53,7 +53,7 @@ ms.locfileid: "91986655"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-configure-report-history-for-a-report-server"></a>Pour configurer un historique de rapport destiné à un serveur de rapports  
   

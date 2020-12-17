@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a24b256e6d395b6cfd93773a8cb824fe7ba7ece
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78ebc356c31dcd32c650d0b04e78c20939e1cabb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198193"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466630"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>Intégration de Reporting Services à l’aide de SOAP - Application web
   Vous pouvez accéder aux fonctionnalités complètes du serveur de rapports via l'API SOAP de Reporting Services. Étant donné qu'il s'agit d'un service Web, l'API SOAP est facilement accessible afin de fournir des fonctionnalités de création de rapports d'entreprise à vos applications de gestion personnalisées. Vous accédez au service Web Report Server à partir d'une application Web à peu près de la même manière que vous accédez à l'API SOAP à partir d'une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. À l’aide du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez générer une classe proxy qui expose les propriétés et méthodes du service web Report Server et vous permet d’utiliser une infrastructure et des outils familiers pour générer des applications de gestion basées sur la technologie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -43,13 +43,13 @@ ms.locfileid: "79198193"
   
 ## <a name="managing-the-report-server-using-soap-api"></a>Gestion du serveur de rapports à l'aide de l'API SOAP  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  Vous pouvez également utiliser votre application Web pour gérer un serveur de rapports et son contenu. Le Gestionnaire de rapports, inclus dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], est un exemple d'application Web complètement créée à l'aide de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] et de l'API SOAP de Reporting Services. Vous pouvez ajouter les fonctionnalités de gestion de rapports du Gestionnaire de rapports à vos applications Web personnalisées. Par exemple, vous pouvez souhaiter retourner la liste des rapports disponibles dans la base de données du serveur de rapports afin de les afficher dans un contrôle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** pour permettre à vos utilisateurs d’en choisir un. Le code suivant permet de se connecter à la base de données du serveur de rapports et de retourner la liste des éléments contenus dans la base de données du serveur de rapports. Les rapports disponibles sont alors ajoutés à un contrôle ListBox, lequel affiche le chemin d'accès de chaque rapport.  
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
  Vous pouvez également utiliser votre application Web pour gérer un serveur de rapports et son contenu. Le portail web, inclus avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], est un exemple d’application web qui gère la plupart des tâches que vous effectuez généralement à l’aide de Reporting Services. Vous pouvez ajouter les fonctionnalités de gestion de rapports du portail web à vos applications web personnalisées. Par exemple, vous pouvez souhaiter retourner la liste des rapports disponibles dans la base de données du serveur de rapports afin de les afficher dans un contrôle [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** pour permettre à vos utilisateurs d’en choisir un. Le code suivant permet de se connecter à la base de données du serveur de rapports et de retourner la liste des éléments contenus dans la base de données du serveur de rapports. Les rapports disponibles sont alors ajoutés à un contrôle ListBox, lequel affiche le chemin d'accès de chaque rapport.  
 

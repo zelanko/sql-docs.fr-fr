@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e6c97089feee33f1bbff76f0820ea37de5ae69c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093436"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474310"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête
 
@@ -54,7 +54,7 @@ Grâce à l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] 
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>Pour basculer l'Éditeur de requête du moteur de base de données en mode SQLCMD  
   
-1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur le serveur et choisissez **Nouvelle requête**pour ouvrir une nouvelle fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur le serveur et choisissez **Nouvelle requête** pour ouvrir une nouvelle fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 2.  Dans le menu **Requête** , cliquez sur **Mode SQLCMD**.  
   

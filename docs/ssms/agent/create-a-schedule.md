@@ -16,13 +16,13 @@ ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3793bd48e3b14c5bf8ae0e9f709751cf2b1f10d7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: b3a3de7f3d87cfdcda48fce509799c2107e05f05
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039174"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474480"
 ---
 # <a name="create-a-schedule"></a>Créer une planification
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -67,7 +67,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
     -   Pour lancer le travail lorsque les processeurs atteignent une condition d'inactivité, cliquez sur **Démarrer dès que les processeurs sont inactifs**.  
   
-    -   Si vous voulez qu'une planification s'exécute de façon répétée, cliquez sur **Périodique**. Pour définir la planification périodique, renseignez les groupes **Fréquence**, **Fréquence quotidienne**et **Durée** dans la boîte de dialogue.  
+    -   Si vous voulez qu'une planification s'exécute de façon répétée, cliquez sur **Périodique**. Pour définir la planification périodique, renseignez les groupes **Fréquence**, **Fréquence quotidienne** et **Durée** dans la boîte de dialogue.  
   
     -   Si vous souhaitez que la planification ne s'exécute qu'une seule fois, cliquez sur **Une fois**. Pour définir la planification **Une fois** , renseignez le groupe **Une seule occurrence** dans la boîte de dialogue.  
   

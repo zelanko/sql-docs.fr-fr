@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 5943de8bcc6588572bc3acebed5b3ba4104b7a96
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869950"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471060"
 ---
 # <a name="install-packages-with-r-tools"></a>Installer des packages avec les outils R
 
@@ -24,7 +24,7 @@ Cet article décrit comment utiliser des outils R standard pour installer de nou
 Outre les outils R standard, vous pouvez installer des packages R à l’aide de :
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
@@ -35,13 +35,13 @@ Cela comprend les bibliothèques R installées avec d’autres produits Microsof
 
 + La bibliothèque de packages R se trouve dans le dossier de Fichiers programmes de votre instance et, par défaut, l’installation dans ce dossier requiert des autorisations d’administrateur. Pour plus d’informations, consultez [Emplacement de la bibliothèque de packages](../package-management/r-package-information.md#default-r-library-location).
 
-  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017"
   Les non-administrateurs peuvent installer des packages à l’aide de RevoScaleR 9.0.1 et versions ultérieures ou à l’aide de CREATE EXTERNAL LIBRARY. L’utilisateur **dbo_owner** ou un utilisateur disposant de l’autorisation CREATE EXTERNAL LIBRARY, peut installer des packages R dans la base de données actuelle. Pour plus d'informations, consultez les pages suivantes :
   + [Utiliser RevoScaleR pour installer des packages R](install-r-packages-with-revoscaler.md)
   + [Utiliser T-SQL (CREATE EXTERNAL LIBRARY) pour installer des packages R sur SQL Server](install-r-packages-with-tsql.md)
   ::: moniker-end
 
-  ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2016"
   Les non-administrateurs peuvent installer des packages à l’aide de RevoScaleR 9.0.1 et versions ultérieures. L’utilisateur **dbo_owner** peut installer des packages R dans la base de données actuelle. Pour plus d’informations, consultez [Utiliser RevoScaleR pour installer des packages R](install-r-packages-with-revoscaler.md).
   ::: moniker-end
 
@@ -56,13 +56,13 @@ Si le SQL Server a accès à Internet, vous pouvez utiliser les outils d’insta
 
 1. Déterminez l’emplacement de la bibliothèque d’instances (consultez [Obtenir des informations sur le package R](../package-management/r-package-information.md)) et accédez au dossier dans lequel les outils R sont installés.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Par exemple, le chemin d’accès par défaut d’une instance par défaut est le suivant :
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Par exemple, le chemin d’accès par défaut d’une instance par défaut est le suivant :
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
@@ -87,13 +87,13 @@ Une fois que le fichier zip se trouve sur l’instance, vous pouvez l’installe
 
 1. Déterminez l’emplacement de la bibliothèque d’instances (consultez [Obtenir des informations sur le package R](../package-management/r-package-information.md)) et accédez au dossier dans lequel les outils R sont installés. 
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Par exemple, le chemin d’accès par défaut d’une instance par défaut est le suivant :
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Par exemple, le chemin d’accès par défaut d’une instance par défaut est le suivant :
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`

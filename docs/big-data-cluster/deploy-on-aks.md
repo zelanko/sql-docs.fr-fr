@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27e2596894e6d36742472ad1d3ae192fc37787e6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765938"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489669"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de cluster Big Data SQL Server
 
@@ -149,7 +149,7 @@ Choisissez la dernière version disponible pour votre cluster. Prenez note du nu
 
 ## <a name="connect-to-the-cluster"></a>Se connecter au cluster
 
-1. Pour configurer kubectl afin qu’il se connecte à votre cluster Kubernetes, exécutez la commande [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). Cette étape permet de télécharger les informations d’identification et de configurer l’interface CLI de kubectl pour leur utilisation.
+1. Pour configurer kubectl afin qu’il se connecte à votre cluster Kubernetes, exécutez la commande [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials). Cette étape permet de télécharger les informations d’identification et de configurer l’interface CLI de kubectl pour leur utilisation.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,7 +165,7 @@ Choisissez la dernière version disponible pour votre cluster. Prenez note du nu
 
 Si vous rencontrez des problèmes lors de la création d’un service Azure Kubernetes avec les commandes précédentes, essayez les solutions suivantes :
 
-- Vérifiez que vous avez installé la [dernière version d’Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Vérifiez que vous avez installé la [dernière version d’Azure CLI](/cli/azure/install-azure-cli).
 - Essayez les mêmes étapes avec un autre groupe de ressources et un autre nom de cluster.
 - Pour plus de détails, consultez la [documentation sur la résolution des problèmes dans AKS](/azure/aks/troubleshooting).
 
