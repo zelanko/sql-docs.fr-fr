@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772228"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559201"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>Récupération de données par un DataReader
 
@@ -53,7 +53,7 @@ Appelez toujours la méthode **Close** quand vous avez fini d’utiliser l’obj
 > Pendant qu’un **DataReader** est ouvert, la **Connexion** est utilisée exclusivement par ce **DataReader**. Vous ne pouvez pas exécuter de commandes pour la **Connexion**, y compris créer un autre **DataReader**, tant que le **DataReader** d’origine n’est pas fermé.  
 
 > [!NOTE]
-> N’appelez pas **Close** ou **Dispose** sur une **Connexion**, sur un **DataReader** ou sur tout autre objet géré dans la méthode **Finalize** de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressources non gérées, n’incluez pas de méthode **Finalize** dans la définition de votre classe. Pour plus d’informations, consultez [Nettoyage de la mémoire](/dotnet/standard/garbage-collection/index.md).
+> N’appelez pas **Close** ou **Dispose** sur une **Connexion**, sur un **DataReader** ou sur tout autre objet géré dans la méthode **Finalize** de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressources non gérées, n’incluez pas de méthode **Finalize** dans la définition de votre classe. Pour plus d’informations, consultez [Nettoyage de la mémoire](/dotnet/standard/garbage-collection/index).
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>Récupération plusieurs jeux de résultats en utilisant NextResult
 

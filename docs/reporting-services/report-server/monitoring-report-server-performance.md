@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 12afa9794e4d48e2c7b16620ce845660f61801bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547941"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461410"
 ---
 # <a name="monitoring-report-server-performance"></a>Analyse des performances d'un serveur de rapports
   Utilisez les outils d'analyse des performances sur un serveur de rapports pour évaluer l'activité du serveur, observer les tendances, diagnostiquer les goulots d'étranglement du système ou collecter des données permettant de déterminer si la configuration actuelle est suffisante. Pour optimiser les performances du serveur, vous pouvez spécifier la fréquence de recyclage du domaine d'application du serveur de rapports. Pour plus d’informations, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "84547941"
   
 -   Valider que les modifications qui ont été apportées à la configuration du système ont l'effet souhaité sur les performances.  
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
   
 ## <a name="reporting-services-performance-objects"></a>Objets de performance de Reporting Services  
 SQL Server 2016 Reporting Services ou version ultérieure (SSRS) comprend les objets de performance suivants :  
@@ -69,7 +69,7 @@ SQL Server 2016 Reporting Services ou version ultérieure (SSRS) comprend les ob
  Si vous possédez plusieurs instances de serveurs de rapports sur un seul ordinateur, vous pouvez les analyser collectivement ou individuellement. Choisissez les instances à inclure au moment où vous ajoutez un compteur. Pour plus d’informations sur l’utilisation de la Console de performances (perfmon.msc) et l’ajout de compteurs, consultez la documentation du produit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 ## <a name="other-performance-counters"></a>Autres compteurs de performance  
- Les compteurs de performances [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] personnalisés sont fournis uniquement pour le **Service Web MSRS 2008**, le **Service Windows MSRS 2008**et **Service ReportServer**. Les objets de performance suivants fournissent des données d'analyse des performances supplémentaires pour le serveur de rapports.  
+ Les compteurs de performances [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] personnalisés sont fournis uniquement pour le **Service Web MSRS 2008**, le **Service Windows MSRS 2008** et **Service ReportServer**. Les objets de performance suivants fournissent des données d'analyse des performances supplémentaires pour le serveur de rapports.  
   
 |Objet de performance|Notes|  
 |------------------------|-----------|  

@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 04b814eece5041851b932f19e9e1d4cd1b63e035
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987765"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559191"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilisation de MSDeploy avec le fournisseur dbSqlPackage
 
-**DbSqlPackage**est un fournisseur **MSDeploy** qui vous permet d'interagir avec des bases de données SQL Server/Azure SQL Database. **DbSqlPackage** prend en charge les actions suivantes :  
+**DbSqlPackage** est un fournisseur **MSDeploy** qui vous permet d'interagir avec des bases de données SQL Server/Azure SQL Database. **DbSqlPackage** prend en charge les actions suivantes :  
   
 -   **Extraire** : crée un fichier de capture instantanée de base de données (.dacpac) à partir d’une base de données SQL Server ou Azure SQL Database active.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "91987765"
   
 -   **Script** : crée un script Transact\-SQL équivalent au script exécuté par l’action Publier.  
   
-Pour plus d’informations concernant DACFx, consultez la documentation sur l’API gérée par DACFx sous [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) ou [SqlPackage.exe](../tools/sqlpackage.md) (outil en ligne de commande DACFx).  
+Pour plus d’informations concernant DACFx, consultez la documentation sur l’API gérée par DACFx sous [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) ou [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) (outil en ligne de commande DACFx).  
   
 > [!IMPORTANT]  
 > La fonctionnalité de fournisseur dbSqlPackage sera supprimée dans la prochaine version majeure de Visual Studio. Pour plus d'informations sur la façon de publier une base de données avec Web Deploy, consultez [Fournisseur dbDacFx pour la publication de base de données incrémentielle](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  

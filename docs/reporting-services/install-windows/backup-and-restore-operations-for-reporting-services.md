@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
-ms.openlocfilehash: 31ec98b4fa474ab97b3cac37f49ae885f04d1414
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc0463e49bf19c60cab94a12c10c4d8e8289e848
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418665"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402825"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Opérations de sauvegarde et de restauration pour Reporting Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "88418665"
     - [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
     - [Faire migrer une installation Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2016"
   
     - [Migrer une installation Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
 
@@ -46,21 +46,21 @@ ms.locfileid: "88418665"
   
 -   Utilisez le mode de récupération simple pour sauvegarder la base de données **reportservertempdb**.  
   
--   Vous pouvez utiliser des planifications de sauvegarde différentes pour chaque base de données. La sauvegarde de **reportservertempdb** présente un seul intérêt, celui de ne pas avoir à recréer la base de données en cas de défaillance matérielle. En effet, il est inutile de récupérer les données dans **reportservertempdb**, mais la structure de la table est indispensable. Si votre base de données **reportservertempdb**est inutilisable, le seul moyen de la récupérer consiste à recréer la base de données du serveur de rapports. Si vous recréez la base de données **reportservertempdb**, il est important qu’elle porte le même nom que la base de données du serveur de rapports primaire.  
+-   Vous pouvez utiliser des planifications de sauvegarde différentes pour chaque base de données. La sauvegarde de **reportservertempdb** présente un seul intérêt, celui de ne pas avoir à recréer la base de données en cas de défaillance matérielle. En effet, il est inutile de récupérer les données dans **reportservertempdb**, mais la structure de la table est indispensable. Si votre base de données **reportservertempdb** est inutilisable, le seul moyen de la récupérer consiste à recréer la base de données du serveur de rapports. Si vous recréez la base de données **reportservertempdb**, il est important qu’elle porte le même nom que la base de données du serveur de rapports primaire.  
   
  Pour plus d’informations sur la sauvegarde et la récupération des bases de données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"  
+::: moniker range="=sql-server-2016"
 
 > [!IMPORTANT]  
->  Si votre serveur de rapports est en mode SharePoint, vous devez également vous occuper de bases de données supplémentaires, notamment les bases de données de configuration SharePoint et la base de données des alertes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En mode SharePoint, trois bases de données sont créées pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les bases de données **reportserver**, **reportservertempdb**et **dataalerting** . Pour plus d’informations, consultez [Applications de service SharePoint de sauvegarde et de restauration Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md).  
+>  Si votre serveur de rapports est en mode SharePoint, vous devez également vous occuper de bases de données supplémentaires, notamment les bases de données de configuration SharePoint et la base de données des alertes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En mode SharePoint, trois bases de données sont créées pour chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les bases de données **reportserver**, **reportservertempdb** et **dataalerting** . Pour plus d’informations, consultez [Applications de service SharePoint de sauvegarde et de restauration Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md).  
 
 ::: moniker-end
   
 ## <a name="backing-up-the-encryption-keys"></a>Sauvegarde des clés de chiffrement  
  Vous devez sauvegarder les clés de chiffrement quand vous configurez une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour la première fois. Vous devez également sauvegarder les clés chaque fois que vous changez l’identité des comptes de services ou renommez l’ordinateur. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Pour les serveurs de rapports en mode SharePoint, consultez la section « Gestion des clés » de l’article [Gérer une application de service Reporting Services SharePoint](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
 

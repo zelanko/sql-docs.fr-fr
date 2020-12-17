@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 19bdca4ab4b380d5a971078eb8e264cb409caa7c
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518979"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559081"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Procédure : Installer et gérer des extensions de fonctionnalités
 
@@ -37,7 +37,7 @@ Les extensions peuvent être exécutées dans le cadre de nos services de ligne 
 |Type d'extension|Service de ligne de commande|Dossier d'installation|  
 |------------------|------------------------|------------------|  
 |Condition de test personnalisée pour les tests unitaires SQL Server|MSBuild/MSTest peut être utilisé pour exécuter des tests unitaires dans l’Invite de commandes développeur de Visual Studio 2013 et avec des outils en ligne de commande similaires.|Le même qu’en cas d’exécution dans Visual Studio.|  
-|Collaborateurs de build<br /><br />Collaborateurs de déploiement|[SqlPackage.exe](../tools/sqlpackage.md), ou à l’aide de cibles de déploiement ou de publication MSBuild lors de la génération d’un projet de base de données.|MSBuild : Le même qu’en cas d’exécution dans Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md) : s’il se trouve dans le répertoire Visual Studio, le même qu’avant.<br /><br />Si SqlPackage.exe et d’autres DLL DacFx se trouvent en dehors de ce répertoire, les extensions doivent être placées dans le même répertoire ou dans C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
+|Collaborateurs de build<br /><br />Collaborateurs de déploiement|[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md), ou à l’aide de cibles de déploiement ou de publication MSBuild lors de la génération d’un projet de base de données.|MSBuild : Le même qu’en cas d’exécution dans Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) : s’il se trouve dans le répertoire Visual Studio, le même qu’avant.<br /><br />Si SqlPackage.exe et d’autres DLL DacFx se trouvent en dehors de ce répertoire, les extensions doivent être placées dans le même répertoire ou dans C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
 |Règles d'analyse statique du code|Vous pouvez utiliser MSBuild pour générer le projet et exécuter l'analyse statique du code.<br /><br />Vous pouvez de plus exécuter l’analyse du code avec une API CodeAnalysisService dans vos propres applications. Dans ce cas, les règles de recherche d'extension fonctionnent comme lors de l'utilisation de SqlPackage.exe.|Le même que pour les collaborateurs de déploiement et de génération.|  
   
 > [!NOTE]  

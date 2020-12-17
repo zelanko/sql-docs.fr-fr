@@ -9,12 +9,12 @@ ms.author: drskwier
 ms.reviewer: alayu, maghan
 ms.custom: seodec18
 ms.date: 10/28/2020
-ms.openlocfilehash: 212115d87f747d1ee35bc4d9445833daee5d25e5
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: 33a7470f3b80d74201c127823db938b11df068e6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035935"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559031"
 ---
 # <a name="azure-data-studio-faq"></a>FAQ sur Azure Data Studio
 
@@ -93,7 +93,7 @@ Les API SMO ne sont pas encore disponibles sur Linux ou macOS de manière consom
 
 Oui.
 
-[SqlPackage.exe](../tools/sqlpackage-download.md) est désormais disponible sur .NET Core pour Windows, macOS et Linux.  La fonctionnalité des projets SQL (SSDT) est activée dans Azure Data Studio de l'[extension de projets SQL Database](extensions/sql-database-project-extension.md).
+[SqlPackage.exe](../tools/sqlpackage/sqlpackage-download.md) est désormais disponible sur .NET Core pour Windows, macOS et Linux.  La fonctionnalité des projets SQL (SSDT) est activée dans Azure Data Studio de l'[extension de projets SQL Database](extensions/sql-database-project-extension.md).
 
 ## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>Les applets de commande SQL PowerShell seront-elles disponibles sur Linux et macOS ?
 

@@ -22,13 +22,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/04/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4bcfa24368b913258b1e5538bae6c21da7330450
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 121799da3fe6d259c92deb900fe21833cbfceef2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037813"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464370"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Sélectionner un compte pour le service SQL Server Agent
 
@@ -41,7 +41,7 @@ Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../
   
 -   **Compte intégré**. Vous pouvez choisir un compte dans la liste des comptes de service intégrés Windows suivants :  
   
-    -   Compte**Système local** . Le nom de ce compte est NT AUTHORITY\System. Ce compte puissant bénéficie d'un accès illimité à l'ensemble des ressources système locales. Il est membre du groupe **Administrateurs** Windows de l’ordinateur local et donc membre du rôle serveur fixe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**.  
+    -   Compte **Système local** . Le nom de ce compte est NT AUTHORITY\System. Ce compte puissant bénéficie d'un accès illimité à l'ensemble des ressources système locales. Il est membre du groupe **Administrateurs** Windows de l’ordinateur local et donc membre du rôle serveur fixe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**.  
   
         > [!IMPORTANT]  
         > Le **Compte système local** est fourni pour des raisons de compatibilité descendante uniquement. Le compte système local dispose d'autorisations dont l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a pas besoin. Évitez d'exécuter l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec ce compte. Pour une sécurité optimale, utilisez un compte de domaine Windows disposant des autorisations répertoriées dans la section suivante, « Autorisations de compte de domaine Windows ».  

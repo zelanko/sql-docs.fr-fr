@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1be2d280499ab73f7d71056a8c9f8882f1077896
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: c682e1e3598750cbbcc2e0e508b427ed88dc1e1f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901388"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463770"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Lanceur de démon de filtre de texte intégral SQL (onglet Service)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le lanceur de démon de filtre de texte intégral SQL (service de lancement FDHOST) est utilisé par la recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce service doit être en cours d'exécution pendant que vous utilisez la recherche en texte intégral. Pour plus d'informations sur les processus hôte de démon de filtre, consultez « Architecture de la recherche en texte intégral » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Utilisez l’onglet **Service**de la boîte de dialogue **Propriétés de Lanceur de démon de filtre de texte intégral SQL** pour afficher ou indiquer les options suivantes.  
+ Utilisez l’onglet **Service** de la boîte de dialogue **Propriétés de Lanceur de démon de filtre de texte intégral SQL** pour afficher ou indiquer les options suivantes.  
   
 ## <a name="options"></a>Options  
  **Chemin d'accès binaire**  
