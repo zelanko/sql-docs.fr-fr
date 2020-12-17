@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 9bb87af8d580830072dd3a8199958497b8e38a25
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b4e4c686411d40a2c161c670821e6566460db4a4
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440801"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644063"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.pdw_nodes_dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -35,8 +35,8 @@ Retourne le texte du lot SQL identifié par le *sql_handle* spécifié. Cette fo
 |**chiffrées**|**bit**|1 : le texte SQL est chiffré.<br /><br /> 0 : le texte SQL n’est pas chiffré.|  
 |**text**|**nvarchar(max)**|Texte de la requête SQL.<br /><br /> NULL pour les objets chiffrés.|  
 
-## <a name="remarks"></a>Remarks  
-Les mêmes remarques dans [sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md?view=sql-server-ver15) s’appliquent.  
+## <a name="remarks"></a>Remarques  
+Les mêmes remarques dans [sys.dm_exec_sql_text](./sys-dm-exec-sql-text-transact-sql.md) s’appliquent.  
   
 ## <a name="permissions"></a>Autorisations  
  Exiger un rôle de serveur **sysadmin** ou une `VIEW SERVER STATE` autorisation sur le serveur.  
