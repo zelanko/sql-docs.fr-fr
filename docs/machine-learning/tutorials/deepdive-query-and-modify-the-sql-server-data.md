@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d66452796f3c3cd669784ae7233fb9dcf8e5bc5c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 9938cdeca70e4fd7a97c9ce8b9d38035022ce714
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195101"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470560"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Interroger et modifier des données SQL Server (tutoriel SQL Server et RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -61,7 +61,7 @@ Dans cette étape, vous créez un vecteur de chaîne qui contient les abréviati
 
 Le fait de mapper la colonne vers les abréviations avant de l’utiliser comme facteur améliore également les performances. Pour plus d’informations, consultez [R et optimisation des données](../r/r-and-data-optimization-r-services.md).
 
-1. Commencez par créer la variable R *stateAbb*et par définir le vecteur des chaînes que vous lui ajoutez, comme suit :
+1. Commencez par créer la variable R *stateAbb* et par définir le vecteur des chaînes que vous lui ajoutez, comme suit :
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -104,7 +104,7 @@ Le fait de mapper la colonne vers les abréviations avant de l’utiliser comme 
     rowsPerRead = sqlRowsPerRead)
     ```
   
-    - Pour le paramètre *table* , passez la variable *sqlFraudTable*qui contient la source de données que vous avez créée.
+    - Pour le paramètre *table* , passez la variable *sqlFraudTable* qui contient la source de données que vous avez créée.
     - Pour le paramètre *colInfo* , passez la variable *ccColInfo* , qui contient les types de données de colonne et les niveaux de facteur.
 
 4.  Vous pouvez maintenant utiliser la fonction **rxGetVarInfo** pour demander des informations sur les variables dans la nouvelle source de données.
@@ -127,7 +127,7 @@ Le fait de mapper la colonne vers les abréviations avant de l’utiliser comme 
     Var 9: fraudRisk, Type: integer
     ```
 
-Les trois variables que vous avez spécifiées (*gender*, *state*et *cardholder*) sont maintenant traitées comme des facteurs.
+Les trois variables que vous avez spécifiées (*gender*, *state* et *cardholder*) sont maintenant traitées comme des facteurs.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 5190cc4e8525daf79354005132705ae1a27b32a3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636154"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471110"
 ---
 # <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Installer SQL Server Machine Learning Services hors connexion avec Python et R sur des ordinateurs sans accès à Internet
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ L’analytique en base de données repose sur une instance du moteur de base de 
 
 Sur un serveur isolé, des fonctionnalités spécifiques au machine learning et aux langages R/Python sont ajoutées par le biais de fichiers CAB. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 ## <a name="sql-server-2019-offline-install"></a>Installation hors connexion de SQL Server 2019
 
 Pour installer SQL Server Machine Learning Services (R et Python) sur un serveur isolé, commencez par télécharger la version initiale de SQL Server et les fichiers CAB correspondants pour la prise en charge de R et Python. Même si vous envisagez de mettre à jour immédiatement votre serveur pour utiliser la mise à jour cumulative la plus récente, vous devez d’abord installer une version initiale.
@@ -63,7 +63,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ## <a name="sql-server-2017-offline-install"></a>Installation hors connexion de SQL Server 2017
 
 Pour installer SQL Server Machine Learning Services (R et Python) sur un serveur isolé, commencez par télécharger la version initiale de SQL Server et les fichiers CAB correspondants pour la prise en charge de R et Python. Même si vous envisagez de mettre à jour immédiatement votre serveur pour utiliser la mise à jour cumulative la plus récente, vous devez d’abord installer une version initiale.
@@ -92,7 +92,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="sql-server-2016-offline-install"></a>Installation hors connexion de SQL Server 2016
 
@@ -142,7 +142,7 @@ Quand vous exécutez le programme d’installation de SQL Server sur un ordinate
 
 Nous vous recommandons d’appliquer la mise à jour cumulative la plus récente au moteur de base de données et aux composants de machine learning. Les mises à jour cumulatives sont installées par le biais du programme d’installation. 
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 1. Commencez avec une instance de base. Vous pouvez appliquer des mises à jour cumulatives uniquement aux installations existantes de la version initiale de SQL Server.
 
 2. Sur un appareil connecté à Internet, accédez à la liste des mises à jour cumulative pour votre version de SQL Server :
@@ -150,7 +150,7 @@ Nous vous recommandons d’appliquer la mise à jour cumulative la plus récente
    + Mises à jour de SQL Server 2019 *(aucune mise à jour n’est actuellement disponible pour la version 2019)*
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. Commencez avec une instance de base. Vous pouvez appliquer des mises à jour cumulatives uniquement aux installations existantes de la version initiale de SQL Server.
 
 2. Sur un appareil connecté à Internet, accédez à la liste des mises à jour cumulative pour votre version de SQL Server :
@@ -158,7 +158,7 @@ Nous vous recommandons d’appliquer la mise à jour cumulative la plus récente
    + [Mises à jour de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 1. Commencez avec une instance de base. Vous pouvez appliquer des mises à jour cumulatives uniquement aux installations existantes de la version initiale de SQL Server 2016, de SQL Server 2016 SP 1 ou de SQL Server 2016 SP 2.
 
 2. Sur un appareil connecté à Internet, accédez à la liste des mises à jour cumulative pour votre version de SQL Server :
@@ -193,7 +193,7 @@ Cette étape nécessite un redémarrage du serveur. Si vous vous apprêtez à ac
 
 ## <a name="post-install-configuration"></a>Configuration consécutive à l’installation
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Une fois l’installation terminée, redémarrez le service, puis configurez le serveur pour activer l’exécution de scripts :
 
 + [Activer l’exécution de scripts externes](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
@@ -204,7 +204,7 @@ Une installation hors connexion initiale de SQL Server Machine Learning Services
 + [Configuration supplémentaire nécessaire](sql-machine-learning-services-windows-install.md#additional-configuration)
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Une fois l’installation terminée, redémarrez le service, puis configurez le serveur pour activer l’exécution de scripts :
 
 + [Activer l’exécution de scripts externes](sql-r-services-windows-install.md#bkmk_enableFeature)

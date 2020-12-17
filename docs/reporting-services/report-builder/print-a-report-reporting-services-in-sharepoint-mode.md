@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eb3511714f893e4513c8a5ba1c215807003e6534
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 25d400a063d668972092a37d57b9371f74e5d980
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290814"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409540"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimer un rapport (Reporting Services en mode SharePoint)
   Pour un serveur de rapports qui s'exécute en mode SharePoint, il existe trois manières d'imprimer un rapport à partir d'une application Web SharePoint :  
@@ -32,7 +32,7 @@ ms.locfileid: "80290814"
 > [!NOTE]  
 >  Pour imprimer un rapport, vous devez être autorisé à l'afficher.  
   
- Pour obtenir des résultats optimaux lors de l’impression d’un rapport à partir d’une page web, utilisez la commande **Imprimer** du menu **Actions** . L’action **Imprimer** est liée à un contrôle d’impression client qui est téléchargé à partir du serveur de rapports. Le téléchargement n’a lieu qu’une seule fois, lorsque vous cliquez sur **Imprimer**pour la première fois.  
+ Pour obtenir des résultats optimaux lors de l’impression d’un rapport à partir d’une page web, utilisez la commande **Imprimer** du menu **Actions** . L’action **Imprimer** est liée à un contrôle d’impression client qui est téléchargé à partir du serveur de rapports. Le téléchargement n’a lieu qu’une seule fois, lorsque vous cliquez sur **Imprimer** pour la première fois.  
   
  Les utilisateurs qui créent des rapports peuvent les concevoir spécialement pour une impression ou pour un format d'application spécifique. Notez qu'en raison de la façon dont la pagination est implémentée pour les différents formats d'application, vous risquez de ne pas obtenir un résultat optimal identique à l'impression selon les rapports et les formats d'exportation. Contrairement aux rapports destinés à l'impression, les pages de rapport affichées à l'écran sont conçues pour accepter des quantités variables de données. Par exemple, les rapports qui comprennent une matrice peuvent entraîner l'agrandissement d'une page à la fois horizontalement et verticalement, selon la façon dont vous développez les lignes et les colonnes. Lors de l'impression d'un rapport de taille variable, un utilisateur qui ne développe pas une matrice obtiendra des résultats différents lors de l'impression. Pour la plupart des rapports exportés, les rapports imprimés incluent tout ce qui est visible sur les rapports, tel que l'utilisateur peut les voir sur un moniteur d'ordinateur.  
   

@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.custom: contperfq1, seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb5ab3d1f6408bb63d194b964626bf303ba9e249
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3704d0faa89ffbc2151f31aa6e41b320e0d33ca0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870002"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471300"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Architecture de sécurité de l’infrastructure d’extensibilité dans SQL Server Machine Learning Services
 
@@ -72,7 +72,7 @@ Par conséquent, tous les scripts externes qui sont lancés à partir d’un cli
 
 <a name="launchpad"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Services utilisés dans le traitement externe (launchpad)
 
@@ -88,7 +88,7 @@ SQL Server gère également un mappage de l’identité de l’utilisateur appel
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Services utilisés dans le traitement externe (launchpad)
 
@@ -104,7 +104,7 @@ SQL Server gère également un mappage de l’identité de l’utilisateur appel
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="services-used-in-external-processing"></a>Services utilisés dans le traitement externe
 
@@ -118,7 +118,7 @@ Pour plus d’informations, consultez [Architecture d’extensibilité dans SQL 
 
 <a name="sqlrusergroup"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="identities-used-in-processing-sqlrusergroup"></a>Identités utilisées pour le traitement (SQLRUserGroup)
 
@@ -148,7 +148,7 @@ Au cours de l’exécution, launchpad crée des dossiers temporaires pour stocke
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="appcontainer-isolation"></a>Isolation AppContainer
 
@@ -165,7 +165,7 @@ Lorsqu’une session est démarrée, launchpad mappe l’identité de l’utilis
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="identity-mapping"></a>Mappage d’identité
 
@@ -189,7 +189,7 @@ print(system("ls -al /var/opt/mssql-extensibility/data/*/*"))
 
 <a name="implied-authentication"></a>
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 ## <a name="implied-authentication-loopback-requests"></a>Authentification implicite (demandes de bouclage)
 
@@ -209,7 +209,7 @@ Le diagramme suivant illustre l’interaction entre les composants SQL Server et
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 ## <a name="implied-authentication-loopback-requests"></a>Authentification implicite (demandes de bouclage)
 
@@ -227,7 +227,7 @@ Le diagramme suivant illustre l’interaction entre les composants SQL Server et
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-linux-ver15"
 
 ## <a name="implied-authentication-loopback-requests"></a>Authentification implicite (demandes de bouclage)
 

@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c7575152ff23cec3096c9f5e1e22f1f0ea1a8094
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e13935b59d22a6184de14a29910117b9611ad4cd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036550"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466470"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriétés de l’étape du travail - Nouvelle étape du travail (page Général)
 
@@ -30,7 +30,7 @@ ms.locfileid: "92036550"
 
 Utilisez cette page pour afficher et changer les propriétés d’une étape d’un travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou pour définir une nouvelle étape de travail.  
   
-Pour naviguer vers cette page, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , développez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, cliquez avec le bouton droit sur **Travaux**, cliquez sur **Nouvelles tâches**, sélectionnez la page **Étapes** et cliquez sur **Nouveau**. Vous pouvez également accéder à cette page en cliquant avec le bouton droit sur un travail dans l’Explorateur d’objets, en cliquant sur **Propriétés**, en sélectionnant la page **Étapes** et en cliquant sur **Nouveau**, **Insérer**ou **Modifier**.  
+Pour naviguer vers cette page, dans l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , développez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, cliquez avec le bouton droit sur **Travaux**, cliquez sur **Nouvelles tâches**, sélectionnez la page **Étapes** et cliquez sur **Nouveau**. Vous pouvez également accéder à cette page en cliquant avec le bouton droit sur un travail dans l’Explorateur d’objets, en cliquant sur **Propriétés**, en sélectionnant la page **Étapes** et en cliquant sur **Nouveau**, **Insérer** ou **Modifier**.  
   
 ## <a name="options"></a>Options  
 **Nom de l’étape**  
@@ -228,7 +228,7 @@ Tapez le nom du serveur où est stocké le package [!INCLUDE[ssIS](../../include
 Les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l'authentification [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
   
 **Utiliser l’authentification SQL Server**  
-Les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez cette méthode d’authentification, entrez le **Nom d’utilisateur** et le **Mot de passe**appropriés.  
+Les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous sélectionnez cette méthode d’authentification, entrez le **Nom d’utilisateur** et le **Mot de passe** appropriés.  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fournie dans un souci de compatibilité descendante. Pour une sécurité renforcée, utilisez l'authentification Windows dans la mesure du possible.  

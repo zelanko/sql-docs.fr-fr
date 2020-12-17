@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b788a7f0996eaf8b6321caf9418d660deb08ac9c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: adf3998c70af1f13a4dc12c5a1b7c9b92ced9bb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039063"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466400"
 ---
 # <a name="find-and-replace"></a>Rechercher et remplacer
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "92039063"
 > [!CAUTION]  
 >  Vérifiez que l’étendue définie dans **Rechercher dans** inclut seulement les fichiers que vous souhaitez modifier.  
   
- Un rappel avec une option **Conserver les fichiers modifiés ouverts** est affiché. Pour conserver l’option **Annuler** , vous devez sélectionner cette option. L’option**Annuler** est disponible uniquement dans les fichiers qui restent ouverts après avoir été modifiés.  
+ Un rappel avec une option **Conserver les fichiers modifiés ouverts** est affiché. Pour conserver l’option **Annuler** , vous devez sélectionner cette option. L’option **Annuler** est disponible uniquement dans les fichiers qui restent ouverts après avoir été modifiés.  
   
  **Ignorer le fichier**  
  Ce bouton est activé lorsque la valeur spécifiée pour **Regarder dans** inclut plusieurs fichiers. Cliquez sur ce bouton si vous ne voulez pas inspecter ni modifier le fichier en cours. La recherche continue dans le fichier suivant de la liste **Regarder dans**.  
@@ -100,7 +100,7 @@ ms.locfileid: "92039063"
  Commence à rechercher le texte spécifié dans la zone **Rechercher** .  
   
  **Replace**  
- Cliquez sur ce bouton pour remplacer l’occurrence en cours de la chaîne spécifiée dans **Rechercher** par la chaîne spécifiée dans **Remplacer par**et pour rechercher l’occurrence suivante à l’intérieur de la zone de recherche spécifiée dans **Regarder dans**.  
+ Cliquez sur ce bouton pour remplacer l’occurrence en cours de la chaîne spécifiée dans **Rechercher** par la chaîne spécifiée dans **Remplacer par** et pour rechercher l’occurrence suivante à l’intérieur de la zone de recherche spécifiée dans **Regarder dans**.  
   
  **Replace All**  
  Cliquez sur ce bouton pour remplacer toutes les occurrences de la chaîne spécifiée dans **Rechercher** par la chaîne spécifiée dans **Remplacer par**, dans tous les fichiers se trouvant dans la zone de recherche spécifiée dans **Regarder dans**.  

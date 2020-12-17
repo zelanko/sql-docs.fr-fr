@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e9158976b1827eb32e807af1cc97279b0866ff97
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470480"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualiser des données SQL Server à l’aide de R (didacticiel sur SQL Server et RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,7 +43,7 @@ D’après les statistiques de synthèse calculées dans le tutoriel précédent
   
 2. Utilisez la variable *ccColInfo* créée dans le tutoriel précédent pour définir les colonnes de la source de données.
   
-   Ajoutez de nouvelles colonnes calculées (*numTrans*, *numIntlTrans*et *creditLine*) à la collection de colonnes qui remplacent la définition d’origine. Le script ci-dessous ajoute des facteurs basés sur les valeurs minimales et maximales, obtenus à partir de sumOut, qui stocke la sortie en mémoire de **rxSummary**. 
+   Ajoutez de nouvelles colonnes calculées (*numTrans*, *numIntlTrans* et *creditLine*) à la collection de colonnes qui remplacent la définition d’origine. Le script ci-dessous ajoute des facteurs basés sur les valeurs minimales et maximales, obtenus à partir de sumOut, qui stocke la sortie en mémoire de **rxSummary**. 
   
     ```R 
     ccColInfo <- list(
@@ -116,7 +116,7 @@ Les nuages de points sont souvent utilisés lors de l’exploration des données
   
     Pour spécifier les groupes utilisés pour calculer les moyennes de groupe, utilisez la notation `F()` . Dans cet exemple, `F(numTrans):F(numIntlTrans)` indique que les entiers dans les variables `numTrans` et `numIntlTrans` doivent être traités comme des variables catégorielles, avec un niveau pour chaque valeur d’entier.
   
-    La valeur renvoyée par défaut de **rxCube** est un *objet rxCube*qui représente un tableau croisé. 
+    La valeur renvoyée par défaut de **rxCube** est un *objet rxCube* qui représente un tableau croisé. 
   
 2. Appelez la fonction [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) pour convertir les résultats en une trame de données facilement exploitable dans l’une des fonctions de traçage standard de R.
   

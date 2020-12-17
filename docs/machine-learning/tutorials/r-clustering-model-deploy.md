@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b4f2d934a8591063e7c14ada914ac3a556866a
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 35a2b00b671d70849de0c191aae113ce1635b68c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870287"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470200"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>Tutoriel : Déployer un modèle de clustering dans R avec le Machine Learning SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en R, dans une base de données à l’aide de SQL Server Machine Learning Services ou sur Clusters Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en R, dans une base de données à l’aide de SQL Server Machine Learning Services.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en R, dans une base de données à l’aide de SQL Server R Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Dans la quatrième partie de cette série de quatre tutoriels, vous allez déployer un modèle de clustering, développé en R, dans une base de données à l’aide d’Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 

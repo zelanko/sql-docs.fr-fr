@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a5219b034abdd390a77e1dacd6b2b71d83a770e
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e44d7393b3f5dd447cc64a742181e535d05081e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195763"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470750"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Utilisation de données à partir de cubes OLAP dans R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -40,15 +40,15 @@ Voici d’autres termes qui vous seront peut-être utiles lorsque vous commencer
 
 + Le  *découpage* prend un sous-ensemble du cube à l’aide de valeurs provenant d’une dimension unique.
 
-+ Le*découpage en cubes* crée un sous-cube en spécifiant une plage de valeurs sur plusieurs dimensions.
++ Le *découpage en cubes* crée un sous-cube en spécifiant une plage de valeurs sur plusieurs dimensions.
 
-+ La*descente dans la hiérarchie* permet de naviguer d’un résumé vers les détails.
++ La *descente dans la hiérarchie* permet de naviguer d’un résumé vers les détails.
 
-+ La*montée dans la hiérarchie* permet de passer des détails à un niveau d’agrégation plus élevé.
++ La *montée dans la hiérarchie* permet de passer des détails à un niveau d’agrégation plus élevé.
 
-+ Le*regroupement* résume les données sur une dimension.
++ Le *regroupement* résume les données sur une dimension.
 
-+ La*rotation* faire pivoter le cube ou la sélection de données.
++ La *rotation* faire pivoter le cube ou la sélection de données.
 
 ## <a name="how-to-use-olapr-to-create-mdx-queries"></a>Guide pratique pour créer des requêtes MDX à l’aide d’olapR
 
