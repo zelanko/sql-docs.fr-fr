@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5480e7b56f1ebaae56d30be0b0027a989d6ff816
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 891293ec27ca78578ea0aa8fff7a27dd3706d059
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933488"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484281"
 ---
 # <a name="files-only-installation-reporting-services"></a>Installation de fichiers uniquement (Reporting Services)
   *L’installation de fichiers uniquement* fait référence à une installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans laquelle le programme d’installation crée l’arborescence pour les fichiers programme [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , copie les fichiers sur disque, inscrit le service Report Server sur l’ordinateur local, configure le compte de service, accorde les autorisations de fichiers au compte de service et inscrit le fournisseur WMI [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -61,7 +61,7 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  [Installer le mode SharePoint de Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 

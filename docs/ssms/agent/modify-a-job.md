@@ -15,13 +15,13 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7027d8f478ba0f0841e085ada61ef8ff1f379a0c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 785d22adc5bb1047618a14f8931e728753c2a957
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038850"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482215"
 ---
 # <a name="modify-a-job"></a>Modifier un travail
 
@@ -46,7 +46,7 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]et développez-la.  
   
-2.  Développez **SQL Server Agent**et **Travaux**, cliquez avec le bouton droit sur le travail à modifier, puis cliquez sur **Propriétés**.  
+2.  Développez **SQL Server Agent** et **Travaux**, cliquez avec le bouton droit sur le travail à modifier, puis cliquez sur **Propriétés**.  
   
 3.  Dans la boîte de dialogue **Propriétés du travail** , mettez à jour les propriétés, les étapes, la planification, les alertes et les notifications du travail en utilisant les pages correspondantes.  
   

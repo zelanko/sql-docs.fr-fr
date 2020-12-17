@@ -18,13 +18,13 @@ ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 33621e680b958bf6945fb26fa82209ee640ba9f2
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d0ec97acbbae3f0e5947348ba35308bd3cfc86ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033827"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424857"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
 
@@ -64,7 +64,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent affecter des alerte
   
 5.  Dans la boîte de dialogue **Propriétés**_nom\_opérateur_, sous **Sélectionner une page**, sélectionnez **Notifications**.  
   
-6.  Sous **Afficher les notifications envoyées à cet utilisateur par**, sélectionnez **Alertes** pour afficher la liste des alertes envoyées à cet opérateur, ou sélectionnez **Travaux** pour afficher la liste des travaux qui envoient des notifications à cet opérateur. Cochez une ou plusieurs cases parmi les suivantes pour définir, en fonction de vos besoins, la méthode de notification pour chaque notification : **Messagerie électronique**, **Radiomessagerie**ou **Net send**.  
+6.  Sous **Afficher les notifications envoyées à cet utilisateur par**, sélectionnez **Alertes** pour afficher la liste des alertes envoyées à cet opérateur, ou sélectionnez **Travaux** pour afficher la liste des travaux qui envoient des notifications à cet opérateur. Cochez une ou plusieurs cases parmi les suivantes pour définir, en fonction de vos besoins, la méthode de notification pour chaque notification : **Messagerie électronique**, **Radiomessagerie** ou **Net send**.  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

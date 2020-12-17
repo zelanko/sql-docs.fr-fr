@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: e335170c97f18039767fab8bf0b8400ce9f9b45d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636099"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643759"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturer une trace dans Assistant Expérimentation de base de données
 
@@ -33,9 +33,9 @@ La mise en cache des requêtes dans SQL Server peut affecter les résultats de l
 
     ![Créer une capture dans la DEA](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-2. Dans la page **nouvelle capture** , sous **Détails**de la capture, entrez ou sélectionnez les informations suivantes :
+2. Dans la page **nouvelle capture** , sous **Détails** de la capture, entrez ou sélectionnez les informations suivantes :
 
-    - **Nom**de la capture : entrez un nom pour le fichier de trace de votre capture.
+    - **Nom** de la capture : entrez un nom pour le fichier de trace de votre capture.
     - **Format**: spécifiez le format (trace ou XEvents) pour la capture.
     - **Durée**: sélectionnez la durée (en minutes) pendant laquelle vous souhaitez que la capture de trace s’exécute.
     - **Emplacement de capture**: sélectionnez le chemin d’accès de destination pour le fichier de trace.
@@ -45,7 +45,7 @@ La mise en cache des requêtes dans SQL Server peut affecter les résultats de l
 
 3. Vérifiez que vous avez effectué une sauvegarde en sélectionnant **Oui, j’ai manuellement suivi la sauvegarde...** .
 
-4. Sous **Détails**de la capture, entrez ou sélectionnez les informations suivantes :
+4. Sous **Détails** de la capture, entrez ou sélectionnez les informations suivantes :
 
     - **Type de serveur**: spécifiez le type de SQL Server **(SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
     - **Nom du serveur**: spécifiez le nom du serveur ou l’adresse IP de votre SQL Server.
@@ -133,7 +133,7 @@ Si une erreur s’affiche lorsque vous exécutez une capture de trace, vérifiez
 
 - Le nom de l’ordinateur exécutant SQL Server est valide. Pour confirmer, essayez de vous connecter à l’ordinateur qui exécute SQL Server à l’aide de SQL Server Management Studio (SSMS).
 - La configuration de votre pare-feu ne bloque pas les connexions à l’ordinateur exécutant SQL Server.
-- L’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
+- L’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](./database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
 - Le nom de la trace ne suit pas la Convention de substitution standard (capture \_ 1). Essayez plutôt les noms de trace comme capture \_ 1a ou Capture1.
 
 Voici quelques-unes des erreurs possibles et des solutions pour les résoudre :

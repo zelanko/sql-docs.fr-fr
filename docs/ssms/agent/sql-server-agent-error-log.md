@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3e07dd36e3ee4f27aa91e034848cab48e2f53105
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: b8d459824641e07f5b17bcf9aefbddb334d2b2da
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038780"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489579"
 ---
 # <a name="sql-server-agent-error-log"></a>Journal des erreurs de SQL Server Agent
 
@@ -41,7 +41,7 @@ ms.locfileid: "92038780"
   
 Par défaut, les messages de trace d'exécution ne sont pas écrits dans le journal d'erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, parce qu'ils risquent de le remplir. Lorsque le fichier d'erreurs est plein, votre possibilité de sélectionner et analyser les erreurs plus difficiles se trouve réduite. Le journal étant une charge supplémentaire de travail pour le serveur, il est important de bien réfléchir à ce que la capture de messages de trace d’exécution dans le journal des erreurs vous apporte. Il est en général préférable de capturer tous les messages uniquement au moment de corriger un problème donné.  
   
-Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n'est pas activé, vous pouvez modifier l'emplacement du journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Lorsque le journal est vide, il ne peut pas être ouvert. Vous pouvez parcourir le journal de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à tout moment sans devoir l’arrêter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec [dbo.sp_cycle_agent_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md?view=sql-server-2017).  
+Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n'est pas activé, vous pouvez modifier l'emplacement du journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Lorsque le journal est vide, il ne peut pas être ouvert. Vous pouvez parcourir le journal de l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à tout moment sans devoir l’arrêter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec [dbo.sp_cycle_agent_errorlog](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md).  
   
 **Pour afficher le journal des erreurs SQL Server Agent**  
   

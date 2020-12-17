@@ -13,13 +13,13 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0c677071eb146b7d1a0335108a41f168326d0350
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036120"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480590"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Débogueur Transact-SQL - Fenêtre Espion
 
@@ -33,7 +33,7 @@ La fenêtre **Espion** affiche des informations sur les expressions que vous ave
 
 **Pour accéder aux fenêtres Espion**  
   
--   Dans le menu **Déboguer** , cliquez sur **Fenêtres**, sur **Espion**puis sur **Espion 1**, **Espion 2, Espion 3**ou **Espion 4**.  
+-   Dans le menu **Déboguer** , cliquez sur **Fenêtres**, sur **Espion** puis sur **Espion 1**, **Espion 2, Espion 3** ou **Espion 4**.  
   
  **Pour modifier la valeur d'une expression**  
   
@@ -58,7 +58,7 @@ La fenêtre **Espion** affiche des informations sur les expressions que vous ave
   
  Si la longueur d'une expression dépasse la largeur de la colonne **Valeur** , une info-bulle affiche la valeur complète lorsque vous placez le pointeur sur la cellule **Valeur** de cette expression.  
   
- La présence d'une icône de loupe dans une cellule **Valeur** indique que le visualiseur du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] est disponible. Dans la liste, vous pouvez spécifier **Visualiseur de texte**, **Visualiseur XML**ou **Visualiseur HTML**. Pour démarrer un visualiseur du débogueur, cliquez sur l'icône de loupe. Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] ouvre une boîte de dialogue qui affiche les données dans un format adapté au type de données.  
+ La présence d'une icône de loupe dans une cellule **Valeur** indique que le visualiseur du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] est disponible. Dans la liste, vous pouvez spécifier **Visualiseur de texte**, **Visualiseur XML** ou **Visualiseur HTML**. Pour démarrer un visualiseur du débogueur, cliquez sur l'icône de loupe. Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] ouvre une boîte de dialogue qui affiche les données dans un format adapté au type de données.  
   
  **Type**  
  Affiche le type de données de l'expression.  

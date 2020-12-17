@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 463ccd2c76d5b3dc1428aa35540f068eee7fcc37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 34a46a86e24e784ac7ab1426c843cfd2e2639dc3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901085"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481590"
 ---
 # <a name="shared-memory-properties"></a>Propriétés de Mémoire partagée
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  La page **Protocole**de la boîte de dialogue **Propriétés de Mémoire partagée** permet d’activer ou de désactiver le protocole de mémoire partagée. Il s'agit du protocole le plus simple à utiliser et pour lequel aucun paramètre ne doit être configuré. Étant donné que les clients qui utilisent le protocole de mémoire partagée peuvent se connecter uniquement à une instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur le même ordinateur, ce protocole n’est généralement pas utile pour les activités de base de données. Utilisez le protocole de mémoire partagée pour débloquer une situation dans laquelle vous suspectez que les autres protocoles ne sont pas configurés correctement.  
+  La page **Protocole** de la boîte de dialogue **Propriétés de Mémoire partagée** permet d’activer ou de désactiver le protocole de mémoire partagée. Il s'agit du protocole le plus simple à utiliser et pour lequel aucun paramètre ne doit être configuré. Étant donné que les clients qui utilisent le protocole de mémoire partagée peuvent se connecter uniquement à une instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur le même ordinateur, ce protocole n’est généralement pas utile pour les activités de base de données. Utilisez le protocole de mémoire partagée pour débloquer une situation dans laquelle vous suspectez que les autres protocoles ne sont pas configurés correctement.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être redémarré pour activer ou désactiver le protocole.  
   

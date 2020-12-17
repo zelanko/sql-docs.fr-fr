@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6bf16d51d0180b56007f237001d01cedfecf8d
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 31e6b8705054001cb603af324ffb87d55bc18100
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870274"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470210"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Tutoriel : Préparer des données pour effectuer le clustering dans R avec le Machine Learning SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données d’une base de données pour effectuer un clustering en R avec SQL Server Machine Learning Services ou sur Clusters Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données d’une base de données pour effectuer un clustering en R avec SQL Server Machine Learning Services.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données d’une base de données pour effectuer un clustering en R avec SQL Server 2016 R Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Dans la deuxième partie de cette série de quatre tutoriels, vous allez préparer les données d’une base de données pour effectuer un clustering en R avec Azure SQL Managed Instance Machine Learning Services.
 ::: moniker-end
 

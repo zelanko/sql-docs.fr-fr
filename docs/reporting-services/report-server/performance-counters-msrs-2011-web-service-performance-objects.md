@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 482ff4d53e85214daf89f010f23a05ce4da0fb26
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 655c0a2fdcd36c7b93b87d3d8979751fcd757e8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986044"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424734"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Compteurs de performances - Service web MSRS 2011, objets de performance
   Cette rubrique décrit les compteurs de performance pour les objets de performance **MSRS 2011 Web Service** et **MSRS 2011 Windows Service** . Ces objets font partie d'un déploiement de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] en mode natif.  
@@ -55,7 +55,7 @@ ms.locfileid: "91986044"
 |**Absences dans le cache/s**|Nombre de requêtes par seconde qui n'ont pas retourné un rapport à partir du cache. Utilisez ce compteur afin de déterminer si les ressources utilisées pour la mise en cache (disque ou mémoire) sont suffisantes.|  
 |**Absences dans le cache/s (modèles sémantiques)**|Nombre de requêtes par seconde qui n'ont pas retourné de modèle à partir du cache. Utilisez ce compteur afin de déterminer si les ressources utilisées pour la mise en cache (disque ou mémoire) sont suffisantes.|  
 |**Premières demandes de sessions/s**|Nombre de nouvelles sessions utilisateur démarrées chaque seconde à partir du cache du serveur de rapports.|  
-|**Présences dans le cache mémoire/s**|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le*cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
+|**Présences dans le cache mémoire/s**|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le *cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
 |**Absences dans le cache mémoire/s**|Nombre de fois par seconde où les rapports n'ont pas pu être récupérés du cache mémoire.|  
 |**Demandes de sessions suivantes/s**|Nombre de requêtes par seconde pour les rapports qui sont ouverts dans une session existante (tels que les rapports rendus à partir d'un instantané de session).|  
 |**Demandes de rapports**|Nombre de rapports qui sont actuellement actifs et gérés par le serveur de rapports.|  
@@ -65,7 +65,7 @@ ms.locfileid: "91986044"
 |**Total des présences dans le cache (modèles sémantiques)**|Nombre total de demandes de modèle à partir du cache après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par ASP.NET.|  
 |**Total des absences dans le cache**|Nombre total d'échecs de retour d'un rapport à partir du cache après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Utilisez ce compteur pour déterminer si l'espace disque et la mémoire sont suffisants.|  
 |**Total des absences dans le cache (modèles sémantiques)**|Nombre total d'échecs de retour d'un modèle à partir du cache après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par ASP.NET. Utilisez ce compteur pour déterminer si l'espace disque et la mémoire sont suffisants.|  
-|**Total des présences dans le cache mémoire**|Nombre total de rapports mis en cache retournés par le cache mémoire après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Le*cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
+|**Total des présences dans le cache mémoire**|Nombre total de rapports mis en cache retournés par le cache mémoire après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Le *cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
 |**Total des absences dans le cache mémoire**|Nombre total d'absences dans le cache mémoire après le démarrage du service. Ce compteur est réinitialisé à chaque interruption du service Web du serveur de rapports par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .|  
 |**Total des échecs de traitement**|Nombre d'erreurs de traitement des requêtes pour le service Web du serveur de rapports.|  
 |**Total des threads rejetés**|Nombre total de threads rejetés pour le traitement asynchrone, puis gérés comme processus synchrones dans le même thread. Chaque source de données est traitée sur un thread. Si le volume de threads dépasse la capacité, les threads sont rejetés pour le traitement asynchrone et sont traités ensuite en série.|  
@@ -88,7 +88,7 @@ ms.locfileid: "91986044"
 |**Remises/s**|Nombre de remises de rapport par seconde, de toute extension de remise.|  
 |**Événements/s**|Nombre d'événements traités par seconde. Les événements contrôlés incluent **SnapshotUpdated** et **TimedSubscription**.|  
 |**Premières demandes de sessions/s**|Nombre de nouvelles sessions d'exécution de rapport crées par seconde.|  
-|**Présences dans le cache mémoire/s**|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le*cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
+|**Présences dans le cache mémoire/s**|Nombre de fois par seconde où les rapports sont récupérés du cache mémoire. Le *cache interne* fait partie de la mémoire cache qui stocke les rapports dans la mémoire de l’unité centrale. Quand le cache mémoire est utilisé, le serveur de rapports n’interroge pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le contenu mis en cache.|  
 |**Absences dans le cache mémoire/s**|Nombre de fois par seconde où les rapports ne peuvent pas être récupérés du cache mémoire.|  
 |**Demandes de sessions suivantes/s**|Nombre de requêtes par seconde pour les rapports qui sont ouverts dans une session existante (tels que les rapports rendus à partir d'un instantané de session).|  
 |**Demandes de rapports**|Nombre de rapports qui sont actuellement actifs et gérés par le serveur de rapports. Utilisez ce compteur pour évaluer la stratégie de mise en cache. Il peut exister beaucoup plus de requêtes que de rapports générés.|  

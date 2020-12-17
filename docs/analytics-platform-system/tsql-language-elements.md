@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ba4b4992b97cb930005458640215497f0487016f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778408"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641552"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Éléments de langage T-SQL pour les Data Warehouse parallèles
 Éléments de langage T-SQL pour le système de plateforme d’analyse (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -23,7 +23,7 @@ ms.locfileid: "88778408"
 * [conventions de syntaxe](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [Règles d'affectation des noms aux objets](../relational-databases/databases/database-identifiers.md)
 * [mots-clés réservés](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [classements](../t-sql/statements/collations.md?view=sql-server-ver15)
+* [classements](../t-sql/statements/collations.md)
 * [commentaires](../t-sql/language-elements/comment-transact-sql.md)
 * [constantes](../t-sql/data-types/constants-transact-sql.md)
 * [types de données](../t-sql/data-types/data-types-transact-sql.md)
@@ -60,7 +60,7 @@ ms.locfileid: "88778408"
 * [&lt; (Inférieur à)](../t-sql/language-elements/less-than-transact-sql.md)
 * [&gt;= (Supérieur ou égal à)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [&lt;= (Inférieur ou égal à)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
-* [&lt;&gt; (Non égal à)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
+* [&lt; &gt; (Non égal à)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (Différent de)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)

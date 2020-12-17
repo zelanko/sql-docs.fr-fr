@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dc6b582895a684386ed2d14b0c31612dcd0a47d1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777728"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641565"
 ---
 # <a name="transparent-data-encryption"></a>chiffrement transparent des données
 Vous pouvez prendre plusieurs précautions pour sécuriser la base de données telles que la conception d’un système sécurisé, le chiffrement de ressources confidentielles et la création d'un pare-feu autour des serveurs de base de données. Toutefois, pour un scénario dans lequel le support physique (tel que des lecteurs ou des bandes de sauvegarde) est volé, une partie malveillante peut simplement restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
@@ -142,7 +142,7 @@ L’affichage des métadonnées impliquées dans TDE nécessite l' `CONTROL SERV
 ## <a name="considerations"></a>Considérations  
 Lorsqu'une analyse de rechiffrement est en cours pour une opération de chiffrement de la base de données, les opérations de maintenance sur la base de données sont désactivées.  
   
-Vous pouvez trouver l’état du chiffrement de la base de données à l’aide de la vue de gestion dynamique **sys. dm_pdw_nodes_database_encryption_keys** . Pour plus d’informations, consultez la section *affichages catalogue et vues de gestion dynamique* plus haut dans cet article.  
+Vous pouvez trouver l’état du chiffrement de la base de données à l’aide de la **sys.dm_pdw_nodes_database_encryption_keys** vue de gestion dynamique. Pour plus d’informations, consultez la section *affichages catalogue et vues de gestion dynamique* plus haut dans cet article.  
   
 ### <a name="restrictions"></a>Restrictions  
 Les opérations suivantes ne sont pas autorisées au cours des `CREATE DATABASE ENCRYPTION KEY` `ALTER DATABASE ENCRYPTION KEY` instructions,, `DROP DATABASE ENCRYPTION KEY` ou `ALTER DATABASE...SET ENCRYPTION` .  
@@ -207,7 +207,7 @@ La clé de chiffrement de base de données (DEK) est protégée par les certific
   
 Le système peut accéder aux clés sans nécessiter une intervention humaine (comme fournir un mot de passe). Si le certificat n’est pas disponible, le système génère une erreur qui explique que le DEK ne peut pas être déchiffré tant que le certificat approprié n’est pas disponible.  
   
-Lors du déplacement d’une base de données d’une appliance vers une autre, le certificat utilisé pour protéger son « DEK » doit d’abord être restauré sur le serveur de destination. La base de données peut ensuite être restaurée comme d’habitude. Pour plus d’informations, consultez la documentation de SQL Server standard, à la page [déplacer une base de données protégée TDE vers une autre SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15).  
+Lors du déplacement d’une base de données d’une appliance vers une autre, le certificat utilisé pour protéger son « DEK » doit d’abord être restauré sur le serveur de destination. La base de données peut ensuite être restaurée comme d’habitude. Pour plus d’informations, consultez la documentation de SQL Server standard, à la page [déplacer une base de données protégée TDE vers une autre SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
 Les certificats utilisés pour chiffrer les chiffrement doivent être conservés tant qu’il existe des sauvegardes de base de données qui les utilisent. Les sauvegardes de certificats doivent inclure la clé privée du certificat, car sans la clé privée, un certificat ne peut pas être utilisé pour la restauration de la base de données. Ces sauvegardes de clés privées de certificat sont stockées dans un fichier distinct, protégé par un mot de passe qui doit être fourni pour la restauration des certificats.  
   
@@ -246,7 +246,7 @@ Exemple de l’action pour remplacer un ordinateur virtuel.
   
 Pendant la mise à niveau, si une base de donnée utilisateur est chiffrée et que le mot de passe DMK n’est pas fourni, l’action de mise à niveau échoue. Lors du remplacement, si le mot de passe approprié n’est pas fourni lorsqu’un DMK existe, l’opération ignore l’étape de récupération DMK. Toutes les autres étapes seront effectuées à la fin de l’action remplacer l’ordinateur virtuel, mais l’action signalera une erreur à la fin pour indiquer que des étapes supplémentaires sont requises. Dans les journaux d’installation (situés dans **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup \\<> \detail-Setup**), l’avertissement suivant s’affiche près de la fin.  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
+`**_ WARNING \_\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 Exécutez l’instruction manuellement dans PDW et redémarrez l’appliance après cela pour récupérer DMK :  
   

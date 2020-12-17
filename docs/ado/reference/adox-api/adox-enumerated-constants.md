@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1def9c0445551376aec56c36c554b9c74b15c02f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d4a6ab82630c058db9bbb0b05ca9ee5713a4c8ab
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985710"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641179"
 ---
 # <a name="adox-enumerated-constants"></a>Constantes énumérées ADOX
 Pour faciliter le débogage, les constantes énumérées ADOX répertorient une valeur pour chaque constante. Toutefois, cette valeur est purement consultative et peut passer d’une version d’ADOX à une autre. Votre code ne doit dépendre que du nom, et non de la valeur réelle, des constantes énumérées.  
@@ -30,7 +30,7 @@ Pour faciliter le débogage, les constantes énumérées ADOX répertorient une 
 |[ActionEnum](./actionenum.md)|Spécifie le type d’action à effectuer lorsque l’opération **SetPermissions** est appelée.|  
 |[AllowNullsEnum](./allownullsenum.md)|Spécifie si les enregistrements avec des valeurs NULL sont indexés.|  
 |[ColumnAttributesEnum](./columnattributesenum.md)|Spécifie les caractéristiques d’une **colonne**.|  
-|[DataTypeEnum](../ado-api/datatypeenum.md)|Spécifie le type de données d’un **champ**, d’un **paramètre**ou d’une **propriété**.|  
+|[DataTypeEnum](../ado-api/datatypeenum.md)|Spécifie le type de données d’un **champ**, d’un **paramètre** ou d’une **propriété**.|  
 |[InheritTypeEnum](./inherittypeenum.md)|Spécifie la manière dont les objets héritent des autorisations définies avec **SetPermissions**.|  
 |[KeyTypeEnum](./keytypeenum.md)|Spécifie le type de **clé**: primaire, étrangère ou unique.|  
 |[ObjectTypeEnum](./objecttypeenum.md)|Spécifie le type d’objet de base de données pour lequel définir des autorisations ou la propriété.|  
@@ -39,5 +39,5 @@ Pour faciliter le débogage, les constantes énumérées ADOX répertorient une 
 |[SortOrderEnum](./sortorderenum.md)|Spécifie la séquence de tri pour une colonne indexée.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Informations de référence sur l’API ADOX](./adox-object-model.md)   
  [Extensions ADO pour le langage de définition de données et la sécurité (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

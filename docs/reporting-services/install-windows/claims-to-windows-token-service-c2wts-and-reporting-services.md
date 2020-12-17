@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 78d7265398cab553a9378fecc54b25a32d36e84d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891599"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489829"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
 
@@ -31,7 +31,7 @@ Le composant WebPart Visionneuse de rapports peut être utilisé pour incorporer
 
 1. Configurez votre instance Reporting Services (mode natif) pour l’authentification Kerberos en spécifiant le compte de service SSRS, en définissant un SPN et en mettant à jour le fichier rsreportserver.config pour utiliser le type d’authentification RSWindowsNegotiate. [Enregistrer un nom de principal du service (SPN) pour un serveur de rapports](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Suivez les étapes dans [Étapes nécessaires pour configurer C2WTS](?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Suivez les étapes dans [Étapes nécessaires pour configurer C2WTS](#steps-needed-to-configure-c2wts)
  
 
 ## <a name="sharepoint-mode-integration"></a>Intégration du mode SharePoint
@@ -84,7 +84,7 @@ Si votre environnement utilise la délégation contrainte Kerberos, le service S
     * Sélectionnez **Utilisateurs ou ordinateurs...&#42;** et entrez le compte qui héberge le service. Par exemple, si un serveur SQL Server s’exécute sous un compte nommé *sqlservice*, entrez `sqlservice`. 
       Pour le **composant WebPart Visionneuse de rapports**, il s’agit du compte de service pour l’instance Reporting Services (mode natif).
 
-    * Sélectionnez la liste des services. Les SPN disponibles sur ce compte s’affichent. Si vous ne voyez pas le service sur ce compte, il est peut-être manquant ou placé sur un autre compte. Vous pouvez utiliser l’utilitaire SetSPN pour ajuster les SPN. Pour le **composant WebPart Visionneuse de rapports**, vous verrez le SPN HTTP configuré dans [Configuration du composant WebPart Visionneuse de rapports](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Sélectionnez la liste des services. Les SPN disponibles sur ce compte s’affichent. Si vous ne voyez pas le service sur ce compte, il est peut-être manquant ou placé sur un autre compte. Vous pouvez utiliser l’utilitaire SetSPN pour ajuster les SPN. Pour le **composant WebPart Visionneuse de rapports**, vous verrez le SPN HTTP configuré dans [Configuration du composant WebPart Visionneuse de rapports](#report-viewer-native-mode-web-part-configuration).
 
     * Cliquez sur OK pour fermer les boîtes de dialogue.
 

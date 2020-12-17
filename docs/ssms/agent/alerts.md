@@ -23,13 +23,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ea3cc85669b31eed9ba2b91d6d4c91c8b59bd603
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 82e633e1a0614882fef7775b9119077d3b9b9e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039221"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424749"
 ---
 # <a name="alerts"></a>Alertes
 
@@ -98,7 +98,7 @@ Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à une condition
   
 -   **Alerte si le compteur** et **Valeur**  
   
-    Indique le seuil d'alerte et le comportement qui déclenche l'alerte. Le seuil est une valeur numérique. Le comportement est l’un **des suivants : tombe sous**, **devient égal à**ou **s’élève au-dessus d’une valeur numérique déterminée**. La **valeur** est un nombre qui décrit le compteur des conditions de performances. Par exemple, pour définir le déclenchement d’une alerte pour l’objet de performances **SQLServer:Locks** quand le **Temps d’attente des verrous** dépasse 30 minutes, vous choisiriez **s’élève au-dessus** et **indiqueriez une valeur de 30**.  
+    Indique le seuil d'alerte et le comportement qui déclenche l'alerte. Le seuil est une valeur numérique. Le comportement est l’un **des suivants : tombe sous**, **devient égal à** ou **s’élève au-dessus d’une valeur numérique déterminée**. La **valeur** est un nombre qui décrit le compteur des conditions de performances. Par exemple, pour définir le déclenchement d’une alerte pour l’objet de performances **SQLServer:Locks** quand le **Temps d’attente des verrous** dépasse 30 minutes, vous choisiriez **s’élève au-dessus** et **indiqueriez une valeur de 30**.  
   
     De même, vous pourriez définir le déclenchement d’une alerte pour l’objet de performance **SQLServer:Transactions** quand l’espace disponible dans **tempdb** tombe en dessous de 1000 Ko. Pour définir ceci, choisissez le compteur **Espace disponible dans tempdb (Ko)** , **tombe sous**, et une **valeur** de **1000**.  
   

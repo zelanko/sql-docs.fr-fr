@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d21d06182f259451f53fed45ba77a5cbacbb382d
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 76d9f23cb32818c67c34e562b6b1f714a5666c72
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767000"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482258"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports
 
@@ -33,7 +33,7 @@ ms.locfileid: "83767000"
 
  **Mode local :** quand une extension de données prend en charge le mode local, la Visionneuse de rapports affiche directement les rapports depuis SharePoint. En *mode local* , il n'y a aucun serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous devez installer le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Toutefois, aucun serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’est requis. En mode local, les utilisateurs peuvent afficher des rapports, mais ils **n'ont pas** accès aux fonctionnalités côté serveur, telles que les abonnements et les alertes de données.  
   
- Le**mode connecté**, également appelé *mode distant* nécessite qu'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] soit en mode SharePoint et soit connecté à une batterie de serveurs SharePoint pour que le contrôle Visionneuse de rapports puisse effectuer le rendu des rapports.  
+ Le **mode connecté**, également appelé *mode distant* nécessite qu'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] soit en mode SharePoint et soit connecté à une batterie de serveurs SharePoint pour que le contrôle Visionneuse de rapports puisse effectuer le rendu des rapports.  
   
  Voici une liste des extensions pour le traitement des données qui prennent en charge la création de rapports en mode local :  
   

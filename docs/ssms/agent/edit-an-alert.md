@@ -15,13 +15,13 @@ ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ccc873742a2c2c8d547d3d0a8200e6fbf6beb90
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 50ea1739cda75e303e3f0d9f1d6ac50b8c876950
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034992"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423525"
 ---
 # <a name="edit-an-alert"></a>Modifier une alerte
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent modifier les
   
 4.  Cliquez avec le bouton droit sur l’alerte à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Mettez à jour les propriétés de l'alerte dans les pages **Général**, **Réponse**et **Options** .  
+5.  Mettez à jour les propriétés de l'alerte dans les pages **Général**, **Réponse** et **Options** .  
   
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

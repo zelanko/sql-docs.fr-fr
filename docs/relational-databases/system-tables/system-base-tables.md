@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 35d75fe78e9631423f6dc9acc48cd89ef41d8d79
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810204"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641897"
 ---
 # <a name="system-base-tables"></a>Tables de base système
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "91810204"
 |**sys.sysguidrefs**|Existe dans toutes les bases de données. Contient une ligne pour chaque référence d'ID classifiée GUID.|  
   
 ## <a name="updating-system-base-tables"></a>Mise à jour des tables de base système    
-Vous pouvez afficher les données dans les tables système par le biais des affichages catalogue système. Pour mettre à jour les métadonnées dans une table de base système, utilisez l’interface TSQL appropriée (par exemple, les instructions DDL). Vous ne pouvez pas mettre à jour manuellement les tables système. SQL Server signale les messages suivants lorsque vous effectuez des mises à jour directes sur des tables système.
+Vous pouvez afficher les données des tables système à l’aide des vues du catalogue système. Pour mettre à jour les métadonnées dans une table de base système, utilisez l’interface TSQL appropriée (par exemple, les instructions DDL). Vous ne pouvez pas mettre à jour manuellement les tables système. SQL Server signale les messages suivants lorsque vous effectuez des mises à jour directes sur des tables système.
 
 ### <a name="a-system-table-is-manually-updated"></a>Une table système est mise à jour manuellement
 Msg 17659 : Avertissement : l’ID de table système <id> a été mis à jour directement dans l’ID de base de données <id> et la cohérence du cache n’a peut-être pas été préservée. SQL Server doit être redémarré.
@@ -100,4 +100,4 @@ MSG 3859 : AVERTISSEMENT : le catalogue système a été mis à jour directeme
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Exécution de la commande DBCC_CHECKDB après la mise à jour manuelle d’une table système
 MSG 3859 : AVERTISSEMENT : le catalogue système a été mis à jour directement dans l’ID de base de données 17, le plus récemment à date_time.
 
-Si vous effectuez des mises à jour manuelles vers une table système et que vous rencontrez un problème, vous pouvez être invité à effectuer une restauration à partir d’une sauvegarde ou à copier les données de la base de données affectée vers une nouvelle base de données. En savoir plus sur [les messages d’erreur](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action)relatifs aux actions de l’utilisateur.
+Si vous effectuez des mises à jour manuelles vers une table système et que vous rencontrez un problème, vous pouvez être invité à effectuer une restauration à partir d’une sauvegarde ou à copier les données de la base de données affectée vers une nouvelle base de données. En savoir plus sur [les messages d’erreur](../errors-events/mssqlserver-8992-database-engine-error.md#user-action)relatifs aux actions de l’utilisateur.

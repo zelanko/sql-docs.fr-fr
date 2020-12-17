@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: a8f3cfc9e47cc18df2728e7b6078cc355c488fa0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c5c908d8db988e83d682bbf636de08ef86a8223a
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440795"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644058"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 
@@ -70,9 +70,9 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |actual_read_row_count|**bigint**|Nombre de lignes lues par un opérateur avant l’application du prédicat résiduel.| 
 |estimated_read_row_count|**bigint**|**S’applique à :** À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Nombre de lignes dont la lecture est estimée par un opérateur avant l’application du prédicat résiduel.|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Remarques
 
-Les mêmes remarques dans [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) s’appliquent.  
+Les mêmes remarques dans [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) s’appliquent.  
 
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
