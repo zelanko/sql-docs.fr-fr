@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c7739675f03e5c7d895939a286d4f262c8302586
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935272"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472510"
 ---
 # <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration du serveur de rapports)
 
@@ -91,7 +91,7 @@ Il existe trois types d'informations d'identification utilisables dans une conne
   
 Si l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est configurée pour l'authentification Windows et se trouve dans le même domaine ou un domaine approuvé avec le serveur de rapports, vous pouvez configurer la connexion pour utiliser le compte de service ou un compte d'utilisateur de domaine que vous gérez comme propriété de connexion à travers l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si le serveur de base de données figure dans un domaine différent ou si vous utilisez la sécurité de groupe de travail, vous devez configurer la connexion pour utiliser une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dans ce cas, veillez bien à chiffrer la connexion.  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Quand vous utilisez Azure SQL Managed Instance pour héberger des bases de données du serveur de rapports, l’authentification SQL Server est le seul type d’informations d’identification pris en charge. De plus, notez que Managed Instance ne peut pas héberger l’instance du serveur de rapports.
@@ -118,9 +118,9 @@ Vous pouvez spécifier une seule connexion [!INCLUDE[ssNoVersion](../../includes
 
 Les rôles suivants sont attribués aux comptes utilisés pour la connexion à la base de données du serveur de rapports :  
 
-- Rôles**public** et **RSExecRole** pour la base de données **ReportServer** .  
+- Rôles **public** et **RSExecRole** pour la base de données **ReportServer** .  
 
-- Rôle**RSExecRole** pour les bases de données **master**, **msdb**et **ReportServerTempDB** .  
+- Rôle **RSExecRole** pour les bases de données **master**, **msdb** et **ReportServerTempDB** .  
 
 Lorsque vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer ou modifier la connexion, ces autorisations sont automatiquement accordées. Si vous recourez à l'utilitaire rsconfig.exe et que vous spécifiez un autre compte pour la connexion, vous devez mettre à jour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour ce nouveau compte. Dans l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez créer les fichiers de script qui mettent à jour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le serveur de rapports.  
 

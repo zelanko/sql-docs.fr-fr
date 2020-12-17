@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b67460528da7cac2e7d3d2d10dfbb4719b08d77f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777718"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638068"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Surveiller les chargements dans des Data Warehouse parallèles
 Surveiller les chargements [dwloader](dwloader.md) actifs et récents à l’aide de la console d’administration APS (Analytics Platform System) ou des [vues système](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)de l’Data Warehouse parallèle (PDW). 
@@ -49,7 +49,7 @@ Pour plus d’informations sur les métadonnées relatives à la charge affiché
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -58,7 +58,7 @@ Pour plus d’informations sur les métadonnées relatives à la charge affiché
 ### <a name="to-monitor-loads-by-using-system-views"></a>Pour surveiller les charges à l’aide des vues système  
 Pour surveiller les charges actives et récentes à l’aide de SQL Server PDW vues, suivez les étapes ci-dessous. Pour chaque vue système utilisée, consultez la documentation de cette vue pour obtenir des informations sur les colonnes et les valeurs potentielles retournées par la vue.  
   
-1.  Recherchez la `request_id` pour la charge dans la vue [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) en recherchant la ligne de commande du chargeur dans la `command` colonne pour cette vue.  
+1.  Recherchez la `request_id` pour la charge dans la vue [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) en recherchant la ligne de commande du chargeur dans la `command` colonne pour cette vue.  
   
     Par exemple, la commande suivante retourne le texte de la commande et l’état actuel, ainsi que le `request_id` .  
   
@@ -66,7 +66,7 @@ Pour surveiller les charges actives et récentes à l’aide de SQL Server PDW v
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  Utilisez le `request_id` pour récupérer des informations supplémentaires sur la charge à l’aide des vues [sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) et [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Par exemple, la requête suivante retourne les `run_id` informations et au début, à la fin et à la durée de la charge, ainsi que toutes les erreurs et les informations sur le nombre de lignes traitées :  
+2.  Utilisez le `request_id` pour récupérer des informations supplémentaires sur la charge à l’aide des vues [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) et [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Par exemple, la requête suivante retourne les `run_id` informations et au début, à la fin et à la durée de la charge, ainsi que toutes les erreurs et les informations sur le nombre de lignes traitées :  
   
     ```sql  
     SELECT lbr.run_id,   

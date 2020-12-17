@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247538"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477060"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planifier la conception de rapports et le déploiement de rapports | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs approches pour créer et déployer des rapports paginés. Découvrez comment planifier un outil de création de rapports et un environnement de serveur de rapports qui fonctionnent ensemble.
@@ -53,7 +53,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
 -   **Portail web :** Chargez un rapport vers un serveur de rapports configuré en mode natif à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint :** Chargez un rapport vers un site SharePoint configuré avec un serveur de rapports en mode SharePoint.  
 
@@ -73,7 +73,7 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
   
  Vous pouvez extraire du serveur de rapports une copie en lecture seule du fichier de définition de rapport (.rdl). Sur un serveur de rapports en mode natif, accédez au [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], sélectionnez le rapport et cliquez sur **Télécharger**. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Dans un déploiement en mode SharePoint, accédez à la bibliothèque de documents, sélectionnez le rapport et cliquez sur **Télécharger une copie**.  
 

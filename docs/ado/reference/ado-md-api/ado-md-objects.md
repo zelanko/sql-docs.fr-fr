@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a75672db242d5b7388eb625bc028728c8522b11c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c988c6a1bbe0d8d582af3ab8a355f1109906401c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987430"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639646"
 ---
 # <a name="ado-md-objects"></a>Objets ADO MD
 
@@ -47,7 +47,7 @@ ms.locfileid: "88987430"
  De nombreux objets ADO MD peuvent être contenus dans une collection correspondante. Par exemple, un objet [CubeDef](./cubedef-object-ado-md.md) peut être contenu dans une collection [CubeDefs](./cubedefs-collection-ado-md.md) d’un **catalogue**. Pour plus d’informations, consultez [ADO MD collections](./ado-md-collections.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Informations de référence sur l’API ADO MD](./ado-md-object-model.md)   
  [Exemples de code ADO MD](./ado-md-code-examples.md)   
  [Collections de ADO MD](./ado-md-collections.md)   
  [ADO MD les constantes énumérées](./ado-md-enumerated-constants.md)   

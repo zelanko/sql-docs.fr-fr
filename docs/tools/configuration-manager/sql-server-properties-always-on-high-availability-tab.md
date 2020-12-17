@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c67f5f1e1021a303a1cdb52e02fdb5c8c1f8f2e2
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d623bd63cfb9d2d72f41bf498259b1d13fe651b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901542"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478420"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>Propriétés de SQL Server (onglet Haute disponibilité AlwaysOn)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88901542"
  **Activer les groupes de disponibilité Always On**  
  Cochez cette case pour activer ou désactiver Groupes de disponibilité AlwaysOn sur cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme suit :  
   
--   Si cette case à cocher est vide, Groupes de disponibilité AlwaysOn est désactivé. Pour activer Groupes de disponibilité AlwaysOn, cochez cette case, cliquez sur **OK**et redémarrez manuellement le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Si cette case à cocher est vide, Groupes de disponibilité AlwaysOn est désactivé. Pour activer Groupes de disponibilité AlwaysOn, cochez cette case, cliquez sur **OK** et redémarrez manuellement le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Si cette case est déjà cochée, Groupes de disponibilité AlwaysOn est actuellement activé. Pour désactiver Groupes de disponibilité AlwaysOn, décochez la case et cliquez sur **OK**. Cela entraîne le redémarrage de l'instance de serveur.  
   

@@ -27,13 +27,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: fcd184e195ce8c81e16ca4ceaaab03a1f156a812
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005948"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471830"
 ---
 # <a name="sqlcmd-utility"></a>Utilitaire sqlcmd
 
@@ -270,7 +270,7 @@ sessions **sqlcmd**.
 
 Nous vous recommandons d’utiliser un mot de passe fort.
 
-#### <a name="use-a-strong-password"></a>[**Utilisez un mot de passe fort !** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**Utilisez un mot de passe fort !**](../relational-databases/security/strong-passwords.md)
 
  L’invite de mot de passe s’affiche en imprimant l’invite de commande sur la console, comme suit : `Password:`  
   
@@ -298,7 +298,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  Spécifiez *server_name* pour vous connecter à l’instance par défaut de SQL Server sur cet ordinateur serveur. Spécifiez *server_name* [ **\\** _instance\_name_ ] pour vous connecter à une instance nommée de SQL Server sur cet ordinateur serveur. Si aucun ordinateur serveur n’est spécifié, **sqlcmd** se connecte à l’instance par défaut de SQL Server sur l’ordinateur local. Cette option est indispensable lorsque vous exécutez **sqlcmd** à partir d’un ordinateur distant connecté au réseau.  
   
- Le*protocole* peut avoir la valeur **tcp** (TCP/IP), **lpc** (mémoire partagée) ou **np** (canaux nommés).  
+ Le *protocole* peut avoir la valeur **tcp** (TCP/IP), **lpc** (mémoire partagée) ou **np** (canaux nommés).  
   
  Si vous ne spécifiez pas *server_name* [ **\\** _instance\_name_ ] quand vous démarrez **sqlcmd**, SQL Server cherche et utilise la variable d’environnement SQLCMDSERVER.  
   
@@ -423,7 +423,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
 >  La valeur de délai d’expiration réelle peut différer de quelques secondes de la valeur *délai_expiration* .  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- Crée une variable de script **sqlcmd**qui peut être utilisée dans un script **sqlcmd** . Placez la valeur entre guillemets si elle contient des espaces. Vous pouvez spécifier plusieurs valeurs _**var**_= **"** _valeurs_ **"** . Si l’une des valeurs spécifiées comporte des erreurs, **sqlcmd** génère un message d’erreur et se termine.  
+ Crée une variable de script **sqlcmd** qui peut être utilisée dans un script **sqlcmd** . Placez la valeur entre guillemets si elle contient des espaces. Vous pouvez spécifier plusieurs valeurs _**var**_= **"** _valeurs_ **"** . Si l’une des valeurs spécifiées comporte des erreurs, **sqlcmd** génère un message d’erreur et se termine.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -633,7 +633,7 @@ Pour utiliser **sqlcmd** de façon interactive, tapez **sqlcmd** dans l’invite
     > [!IMPORTANT]  
     >  Pour assurer la compatibilité descendante avec les scripts **osql** existants, certaines commandes sont reconnues sans les deux-points. Elles sont indiquées par [ **:** ].
   
-- Les commandes**sqlcmd** ne sont reconnues que si elles apparaissent au début d’une ligne.  
+- Les commandes **sqlcmd** ne sont reconnues que si elles apparaissent au début d’une ligne.  
   
 - Toutes les commandes **sqlcmd** ne respectent pas la casse.  
   
@@ -684,12 +684,12 @@ Pour utiliser **sqlcmd** de façon interactive, tapez **sqlcmd** dans l’invite
  Affiche la liste des variables de script actuellement définies.  
   
 > [!NOTE]  
->  Seules les variables de script qui sont définies par **sqlcmd**et celles qui sont définies avec la commande **:Setvar** s’affichent.  
+>  Seules les variables de script qui sont définies par **sqlcmd** et celles qui sont définies avec la commande **:Setvar** s’affichent.  
   
  **Commandes de sortie**  
   **:Error**   
  _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
- Redirige l’ensemble de la sortie d’erreur dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. La commande **Error** peut apparaître plusieurs fois dans un script. Par défaut, la sortie d'erreur est envoyée à **stderr**.  
+ Redirige l’ensemble de la sortie d’erreur dans le fichier spécifié par *nom_fichier* vers **stderr** ou vers **stdout**. La commande **Error** peut apparaître plusieurs fois dans un script. Par défaut, la sortie d'erreur est envoyée à **stderr**.  
   
  *nom de fichier*  
  Crée et ouvre un fichier destiné à recevoir la sortie. Si le fichier existe déjà, il est tronqué à zéro octet. Si le fichier n'est pas disponible car des autorisations sont requises, ou pour d'autres raisons, la sortie n'est pas modifiée, et elle est envoyée à la dernière destination spécifiée ou à la destination par défaut.  
@@ -701,10 +701,10 @@ Pour utiliser **sqlcmd** de façon interactive, tapez **sqlcmd** dans l’invite
  Fait basculer la sortie d’erreur vers le flux **stdout** . Si cette destination a été redirigée, la cible de cette redirection reçoit la sortie d'erreur.  
   
  **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
- Crée et redirige l’ensemble des résultats de requête dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. Par défaut, la sortie est envoyée à **stdout**. Si le fichier existe déjà, il est tronqué à zéro octet. La commande **Out** peut apparaître plusieurs fois dans un script.  
+ Crée et redirige l’ensemble des résultats de requête dans le fichier spécifié par *nom_fichier* vers **stderr** ou vers **stdout**. Par défaut, la sortie est envoyée à **stdout**. Si le fichier existe déjà, il est tronqué à zéro octet. La commande **Out** peut apparaître plusieurs fois dans un script.  
   
  **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
- Crée et redirige l’ensemble des informations de traces de performances dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. Par défaut, la sortie de traces de performances est envoyée à **stdout**. Si le fichier existe déjà, il est tronqué à zéro octet. La commande **Perftrace** peut apparaître plusieurs fois dans un script.  
+ Crée et redirige l’ensemble des informations de traces de performances dans le fichier spécifié par *nom_fichier* vers **stderr** ou vers **stdout**. Par défaut, la sortie de traces de performances est envoyée à **stdout**. Si le fichier existe déjà, il est tronqué à zéro octet. La commande **Perftrace** peut apparaître plusieurs fois dans un script.  
   
  **Commandes de contrôle d’exécution**  
   **:On Error**[ **exit** | **ignore**]  
@@ -823,7 +823,7 @@ Pour utiliser **sqlcmd** de façon interactive, tapez **sqlcmd** dans l’invite
  Répertorie les commandes **sqlcmd** avec une brève description de chaque commande.  
   
 ### <a name="sqlcmd-file-names"></a>Noms de fichiers sqlcmd  
- Les fichiers d’entrée**sqlcmd** peuvent être spécifiés avec l’option **-i** ou la commande **:r** . Les fichiers de sortie peuvent être spécifiés avec l’option **-o** ou les commandes **:Error**, **:Out** et **:Perftrace** . Voici quelques consignes relatives à l'utilisation de ces fichiers :  
+ Les fichiers d’entrée **sqlcmd** peuvent être spécifiés avec l’option **-i** ou la commande **:r** . Les fichiers de sortie peuvent être spécifiés avec l’option **-o** ou les commandes **:Error**, **:Out** et **:Perftrace** . Voici quelques consignes relatives à l'utilisation de ces fichiers :  
   
 - **:Error**, **:Out** et **:Perftrace** doivent utiliser un autre **\<**_filename_**>** . Si le même **\<**_filename_**>** est utilisé, les entrées des commandes peuvent être mélangées.  
   

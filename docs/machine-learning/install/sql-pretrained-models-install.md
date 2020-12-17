@@ -8,18 +8,18 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8402ec9094b7e765764d5e650ac27a0b87b0e5d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793746"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471120"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer des modèles Machine Learning préformés sur SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Cet article explique comment utiliser PowerShell pour ajouter des modèles Machine Learning préentraînés gratuits pour l’ *analyse des sentiments* et la *génération de fonctionnalités d’images* à une instance SQL Server avec l’intégration R ou Python. Les modèles préformés sont générés par Microsoft et prêts à être utilisés. Ils sont d’ailleurs ajoutés à une instance suite à l’installation. Pour plus d’informations sur ces modèles, consultez la section [Ressources](#bkmk_resources) de cet article.
+Cet article explique comment utiliser PowerShell pour ajouter des modèles Machine Learning préentraînés gratuits pour l’*analyse des sentiments* et la *génération de fonctionnalités d’images* à une instance SQL Server avec l’intégration R ou Python. Les modèles préformés sont générés par Microsoft et prêts à être utilisés. Ils sont d’ailleurs ajoutés à une instance suite à l’installation. Pour plus d’informations sur ces modèles, consultez la section [Ressources](#bkmk_resources) de cet article.
 
 Une fois installés, les modèles préformés sont considérés comme des détails d’implémentation qui alimentent des fonctions spécifiques dans les bibliothèques MicrosoftML (R) et microsoftml (Python). Vous ne devez pas (et ne pouvez pas) afficher, personnaliser ou reformer les modèles. Vous ne pouvez pas non plus les traiter en tant que ressource indépendante dans du code personnalisé ou dans d’autres fonctions couplées. 
 
@@ -38,13 +38,13 @@ Vous devez disposer de droits d’administrateur sur l’ordinateur et SQL Serve
 
 Les scripts externes doivent être activés, et le service SQL Server LaunchPad doit être en cours d’exécution. Les instructions d’installation fournissent les étapes nécessaires à l’activation et à la vérification de ces fonctionnalités. 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Le [package MicrosoftML R](/machine-learning-server/r-reference/microsoftml/microsoftml-package) ou le [package MicrosoftML Python](/machine-learning-server/python-reference/microsoftml/microsoftml-package) contiennent les modèles préformés.
 
 [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) contient les deux versions de langage de la bibliothèque Machine Learning ; cette condition préalable est donc remplie sans aucune autre action de votre part. Étant donné que les bibliothèques sont présentes, vous pouvez utiliser le script PowerShell décrit dans cet article pour ajouter les modèles préformés à ces bibliothèques.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Le [package MicrosoftML R](/machine-learning-server/r-reference/microsoftml/microsoftml-package) contient les modèles préformés.
 
 [SQL Server R Services](sql-r-services-windows-install.md), qui est R uniquement, n’inclut pas le [package MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) prêt à l’emploi. Pour ajouter MicrosoftML, vous devez effectuer une [mise à niveau du composant](../install/upgrade-r-and-python.md). L’un des avantages de la mise à niveau des composants est que vous pouvez ajouter simultanément les modèles préformés, ce qui rend l’exécution du script PowerShell inutile. Toutefois, si vous avez déjà effectué la mise à niveau, mais que vous avez omis d’ajouter les modèles préformés, vous pouvez exécuter le script PowerShell comme décrit dans cet article. Il fonctionne pour les deux versions de SQL Server. Avant cela, vérifiez que la bibliothèque MicrosoftML existe dans `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
@@ -73,11 +73,11 @@ Si les modèles sont déjà installés, passez directement à [l’étape de val
 
 ## <a name="download-the-installation-script"></a>Télécharger le script d’installation
 
-Cliquez sur [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) pour télécharger le fichier **Install-MLModels.ps1** .
+Cliquez sur [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) pour télécharger le fichier **Install-MLModels.ps1**.
 
 ## <a name="execute-with-elevated-privileges"></a>Exécuter avec des privilèges élevés
 
-1. Démarrez PowerShell. Dans la barre des tâches, cliquez avec le bouton droit sur l’icône de programme PowerShell, puis sélectionnez **Exécuter en tant qu’administrateur** .
+1. Démarrez PowerShell. Dans la barre des tâches, cliquez avec le bouton droit sur l’icône de programme PowerShell, puis sélectionnez **Exécuter en tant qu’administrateur**.
 2. Entrez un chemin d’accès complet au fichier de script de script d’installation et incluez le nom de l’instance. En partant du principe que vous utilisez le dossier Téléchargements et une instance par défaut, la commande peut ressembler à ce qui suit :
 
    ```powershell
@@ -196,7 +196,7 @@ Le lien suivant inclut un exemple de code appelant les modèles préformés.
 
 ## <a name="research-and-resources"></a>Recherche et ressources
 
-Actuellement, les modèles qui sont disponibles sont les modèles de réseau neuronal profond pour l’analyse des sentiments et la classification des images. Tous les modèles préformés ont été formés à l’aide du Microsoft [Computation Network Toolkit](https://cntk.ai/Features/Index.html) ou **CNTK** .
+Actuellement, les modèles qui sont disponibles sont les modèles de réseau neuronal profond pour l’analyse des sentiments et la classification des images. Tous les modèles préformés ont été formés à l’aide du Microsoft [Computation Network Toolkit](https://cntk.ai/Features/Index.html) ou **CNTK**.
 
 La configuration de chaque réseau reposait sur les implémentations de référence suivantes :
 

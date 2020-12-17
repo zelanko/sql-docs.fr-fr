@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d8f65baaec3038431455712d64803459a96e45c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: 842daa6574dc660346733e7b74b539eba5c7f7b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956960"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471030"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>Scoring natif à l’aide de la fonction T-SQL PREDICT avec le Machine Learning SQL
 
@@ -60,16 +60,16 @@ Les formats de modèle pris en charge par la fonction `PREDICT` dépendent de la
 | Azure SQL Edge | Oui | Non |
 | Azure Synapse Analytics | Oui | Non |
 
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="onnx-models"></a>Modèles ONNX
 
 Le modèle doit être au format [ONNX (Open Neural Network Exchange)](https://onnx.ai/get-started.html).
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ### <a name="revoscale-models"></a>Modèles RevoScale
 
-Le modèle doit être entraîné à l’avance avec l’un des algorithmes **rx** pris en charge de la liste ci-dessous à l’aide du package [RevoScaleR](../r/ref-r-revoscaler.md) ou[revoscalepy](../python/ref-py-revoscalepy.md).
+Le modèle doit être entraîné à l’avance avec l’un des algorithmes **rx** pris en charge de la liste ci-dessous à l’aide du package [RevoScaleR](../r/ref-r-revoscaler.md) ou [revoscalepy](../python/ref-py-revoscalepy.md).
 
 Sérialisez le modèle avec [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel) pour R et [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) pour Python. Ces fonctions de sérialisation ont été optimisées pour prendre en charge le scoring rapide.
 
@@ -106,7 +106,7 @@ Parmi les types de modèles non pris en charge, citons les suivants :
 ::: moniker-end
 
 ## <a name="examples"></a>Exemples
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="predict-with-an-onnx-model"></a>PREDICT avec un modèle ONNX
 
 Cet exemple montre comment utiliser un modèle ONNX stocké dans la table `dbo.models` pour le scoring natif.
@@ -145,7 +145,7 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 > Les colonnes et les valeurs retournées par **PREDICT** pouvant varier selon le type de modèle, vous devez définir le schéma des données retournées à l’aide d’une clause **WITH**.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017"
 ### <a name="predict-with-revoscale-model"></a>PREDICT avec un modèle RevoScale
 
 Dans cet exemple, vous créez un modèle à l’aide de **RevoScaleR** en R, puis appelez la fonction de prédiction en temps réel à partir de T-SQL.

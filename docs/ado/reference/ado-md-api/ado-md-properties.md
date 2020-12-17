@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1ffc556d5c4138f35b1831a8aebeb15622328d4c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987420"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637859"
 ---
 # <a name="ado-md-properties"></a>Propriétés ADO MD
 
@@ -52,7 +52,7 @@ ms.locfileid: "88987420"
 |[Valeur](./value-property-ado-md.md)|Indique la valeur de la cellule active.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Informations de référence sur l’API ADO MD](./ado-md-object-model.md)   
  [Exemples de code ADO MD](./ado-md-code-examples.md)   
  [Collections de ADO MD](./ado-md-collections.md)   
  [ADO MD les constantes énumérées](./ado-md-enumerated-constants.md)   

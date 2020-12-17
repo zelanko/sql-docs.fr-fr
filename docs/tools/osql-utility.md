@@ -25,13 +25,13 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2c3767addadd34aebac1b29ee1b7fbdba189ae43
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 29f495dda754d3456e8d8df8811620548426cd89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002982"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478440"
 ---
 # <a name="osql-utility"></a>Utilitaire osql
 
@@ -198,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 >  Les options **-n**, **-O** et **-D** ne sont plus prises en charge par **osql**.  
   
 ## <a name="remarks"></a>Notes  
- L’utilitaire **osql** doit être exécuté directement à partir du système d’exploitation à l’aide des options respectant la casse énumérées ici. Une fois **osql**démarré, il accepte les instructions SQL et les envoie de manière interactive à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les résultats sont mis en forme et affichés à l’écran (**stdout**). Pour quitter **osql**, utilisez QUIT ou EXIT.  
+ L’utilitaire **osql** doit être exécuté directement à partir du système d’exploitation à l’aide des options respectant la casse énumérées ici. Une fois **osql** démarré, il accepte les instructions SQL et les envoie de manière interactive à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les résultats sont mis en forme et affichés à l’écran (**stdout**). Pour quitter **osql**, utilisez QUIT ou EXIT.  
   
  Si vous ne spécifiez pas de nom d’utilisateur quand vous démarrez **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vérifie les variables d’environnement et les utilise, par exemple, **osqluser=(** _user_ **)** ou **osqlserver=(** _server_ **)** . Si aucune variable d'environnement n'est définie, le nom d'utilisateur du poste de travail est utilisé. Si vous n'indiquez pas de serveur, le nom du poste de travail est utilisé.  
   
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
  Si vous utilisez **osql** en mode interactif, vous pouvez lire un fichier du système d’exploitation dans le tampon de commandes en entrant **:r**_nom\_fichier_. Cette opération adresse le script SQL qui se trouve dans *nom_fichier* directement au serveur en un seul traitement.  
   
 > [!NOTE]  
->  Quand **osql**est utilisé, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] traite le délimiteur de lot « GO » comme une erreur de syntaxe s’il apparaît dans un fichier de script SQL.  
+>  Quand **osql** est utilisé, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] traite le délimiteur de lot « GO » comme une erreur de syntaxe s’il apparaît dans un fichier de script SQL.  
   
 ## <a name="inserting-comments"></a>Insertion de commentaires  
  Vous pouvez inclure des commentaires dans une instruction Transact-SQL soumise à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par **osql**. Deux styles de commentaires sont autorisés : `--` et `/*...*/`.  

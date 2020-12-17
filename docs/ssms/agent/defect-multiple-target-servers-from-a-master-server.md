@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0397c22a479f911ebe5e070ece2d9cdf1fe6ab07
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f047c57adc1c9cd660b38d7c72bc5dc3a00cc9e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036625"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477050"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître
 
@@ -43,7 +43,7 @@ Cette rubrique explique comment annuler l'inscription de plusieurs serveurs cibl
   
 2.  Cliquez avec le bouton droit sur **Agent SQL Server**, pointez sur **Administration multiserveur**, puis cliquez sur **Gérer les serveurs cibles**.  
   
-3.  Cliquez sur **Publier les instructions**puis, dans la liste **Type d'instruction** , sélectionnez **Désinscrire**.  
+3.  Cliquez sur **Publier les instructions** puis, dans la liste **Type d'instruction** , sélectionnez **Désinscrire**.  
   
 4.  Sous **Destinataires**, activez l'une des options suivantes :  
   

@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1526f1c9eaaf4924ec248b523bd44148398e031b
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 28dbaf6f3496004ba90731d6bf5eaef693036e19
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870112"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471050"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>Utiliser RevoScaleR pour installer des packages R
 
@@ -21,7 +21,7 @@ ms.locfileid: "94870112"
 
 Cet article décrit comment utiliser les fonctions [RevoScaleR](../r/ref-r-revoscaler.md) (version 9.0.1 et version ultérieure) pour installer les packages R sur SQL Server avec Machine Learning Services ou Services R. Les fonctions RevoScaleR peuvent être utilisées par des non administrateurs distants pour installer des packages sur SQL Server sans accès direct au serveur.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 > [!NOTE]
 > Les clients SQL Server R Services doivent procéder à une [mise à jour des composants](../install/upgrade-r-and-python.md) pour obtenir les fonctions de gestion des packages RevoScaleR. Pour obtenir des instructions sur comment récupérer la version et le contenu du package, consultez [Obtenir des informations sur le package R](../package-management/r-package-information.md).
 ::: moniker-end

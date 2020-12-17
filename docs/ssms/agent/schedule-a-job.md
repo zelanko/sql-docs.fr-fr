@@ -15,13 +15,13 @@ ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 75bb7c1f392487db9a9c851753d0c3c2591f106e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 18cb7d2e1c6ccf51ed1921d65a0c31fa84c54b5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035532"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478820"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +68,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
     -   Cliquez sur **Démarrer dès que les processeurs sont inactifs** pour démarrer le travail lorsque les processeurs se trouvent à l'état inactif.  
   
-    -   Cliquez sur **Périodique** si vous voulez que la planification s'exécute de façon répétée. Pour définir la planification périodique, renseignez les groupes **Fréquence**, **Fréquence quotidienne**et **Durée** dans la boîte de dialogue.  
+    -   Cliquez sur **Périodique** si vous voulez que la planification s'exécute de façon répétée. Pour définir la planification périodique, renseignez les groupes **Fréquence**, **Fréquence quotidienne** et **Durée** dans la boîte de dialogue.  
   
     -   Cliquez sur **Une fois** si vous voulez que la planification s'exécute une seule fois. Pour définir la planification **Une fois** , renseignez le groupe **Une seule occurrence** dans la boîte de dialogue.  
   
@@ -76,7 +76,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 1.  Dans **l’Explorateur d'objets** , connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]et développez-la.  
   
-2.  Développez **Agent SQL Server**et **Travaux**, cliquez avec le bouton droit sur le travail à planifier, puis cliquez sur **Propriétés**.  
+2.  Développez **Agent SQL Server** et **Travaux**, cliquez avec le bouton droit sur le travail à planifier, puis cliquez sur **Propriétés**.  
   
 3.  Sélectionnez la page **Planifications** , puis cliquez sur **Choisir**.  
   

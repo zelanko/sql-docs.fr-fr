@@ -13,13 +13,13 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5f8796a3103400a457559efc33ac295429562695
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: a29d5064bd480b986ce686dd1202c339a44bfe71
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036507"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472520"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Propriétés de l’alerte - Nouvelle alerte (page Réponse)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ Permet d'afficher et de modifier le travail sélectionné. Cette option n'est pa
 Active les contrôles qui vous permettent d'ajouter, de supprimer ou de modifier des opérateurs.  
   
 **Liste d'opérateurs**  
-Répertorie les opérateurs à notifier lorsqu'une alerte se produit. Pour spécifier une méthode de notification, cochez la case **Messagerie électronique**, **Radiomessagerie**ou **Envoi réseau** affichée après le nom de l’opérateur. Cette option n’est pas disponible quand **Notifier les opérateurs** n’est pas sélectionné.  
+Répertorie les opérateurs à notifier lorsqu'une alerte se produit. Pour spécifier une méthode de notification, cochez la case **Messagerie électronique**, **Radiomessagerie** ou **Envoi réseau** affichée après le nom de l’opérateur. Cette option n’est pas disponible quand **Notifier les opérateurs** n’est pas sélectionné.  
   
 **Messagerie électronique**  
 Utilisez un courrier électronique pour notifier l'opérateur.  

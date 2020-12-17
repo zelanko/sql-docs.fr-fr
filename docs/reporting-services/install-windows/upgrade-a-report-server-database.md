@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: b4d5b4e01abaf0643f6f121be28abe98972078a2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891169"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472430"
 ---
 # <a name="upgrade-a-report-server-database"></a>Mettre à niveau une base de données du serveur de rapports
 
@@ -25,7 +25,7 @@ La base de données du serveur de rapports offre un espace de stockage pour une 
   
  **Mode natif** : En mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la base de données de serveur de rapports est composée de deux bases de données qui portent les noms par défaut ReportServer et ReportServerTempDB.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
  **Mode SharePoint :** en mode SharePoint SQL Server 2016 Reporting Services, la base de données du serveur de rapports est une collection de bases de données créée pour chaque instance de l’application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 

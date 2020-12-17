@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ffd13c07fad10d4b0386d342a6ddcbec37256da
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a32419db6e4dd04cc57b31b1d9267e80a30db41d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989330"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638129"
 ---
 # <a name="save-method"></a>Save, méthode
 Enregistre le [Recordset](./recordset-object-ado.md) dans un objet de fichier ou de [flux](./stream-object-ado.md) .  
@@ -36,15 +36,15 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Paramètres  
  *Destination*  
- facultatif. **Variant** qui représente le nom de chemin d’accès complet du fichier dans lequel le **Recordset** doit être enregistré, ou une référence à un objet de **flux** .  
+ Facultatif. **Variant** qui représente le nom de chemin d’accès complet du fichier dans lequel le **Recordset** doit être enregistré, ou une référence à un objet de **flux** .  
   
  *PersistFormat*  
- facultatif. Valeur [PersistFormatEnum](./persistformatenum.md) qui spécifie le format dans lequel l' **objet Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
+ Facultatif. Valeur [PersistFormatEnum](./persistformatenum.md) qui spécifie le format dans lequel l' **objet Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
   
-## <a name="remarks"></a>Notes  
- La méthode [Save Method]() ne peut être appelée que sur un **Recordset**ouvert. Utilisez la méthode [Open (ADO Recordset)](./open-method-ado-recordset.md) pour restaurer ultérieurement le **Recordset** de la *destination*.  
+## <a name="remarks"></a>Remarques  
+ La méthode **Save Method** ne peut être appelée que sur un **Recordset** ouvert. Utilisez la méthode [Open (ADO Recordset)](./open-method-ado-recordset.md) pour restaurer ultérieurement le **Recordset** de la *destination*.  
   
- Si la propriété Filter de la [propriété](./filter-property.md) est appliquée à l' **objet Recordset**, seules les lignes accessibles sous le filtre sont enregistrées. Si le **jeu d’enregistrements** est hiérarchique, le **jeu d’enregistrements** enfant actuel et ses enfants sont enregistrés, y compris le **Recordset**parent. Si la méthode Save d’un **jeu d’enregistrements** enfant est appelée, l’enfant et tous ses enfants sont enregistrés, mais le parent n’est pas.  
+ Si la propriété Filter de la [propriété](./filter-property.md) est appliquée à l' **objet Recordset**, seules les lignes accessibles sous le filtre sont enregistrées. Si le **jeu d’enregistrements** est hiérarchique, le **jeu d’enregistrements** enfant actuel et ses enfants sont enregistrés, y compris le **Recordset** parent. Si la méthode Save d’un **jeu d’enregistrements** enfant est appelée, l’enfant et tous ses enfants sont enregistrés, mais le parent n’est pas.  
   
  La première fois que vous enregistrez le **Recordset**, il est facultatif de spécifier la *destination*. Si vous omettez la *destination*, un nouveau fichier est créé avec un nom défini sur la valeur de la propriété source du **Recordset**.  
   
@@ -63,9 +63,9 @@ recordset.Save Destination, PersistFormat
  Lorsqu’un **jeu d’enregistrements** est conservé avec la propriété **CursorLocation** définie sur **adUseServer**, la fonctionnalité de mise à jour du **Recordset** est limitée. En règle générale, seules les mises à jour, les insertions et les suppressions sur une seule table sont autorisées (dépend de la fonctionnalité du fournisseur). La méthode [Resync](./resync-method.md) n’est pas non plus disponible dans cette configuration.  
   
 > [!NOTE]
->  L’enregistrement d’un **jeu d’enregistrements** avec des **champs** de type **adVariant**, **adIDispatch**ou **adIUnknown** n’est pas pris en charge par ADO et peut entraîner des résultats imprévisibles.  
+>  L’enregistrement d’un **jeu d’enregistrements** avec des **champs** de type **adVariant**, **adIDispatch** ou **adIUnknown** n’est pas pris en charge par ADO et peut entraîner des résultats imprévisibles.  
   
- Seuls les filtres sous la forme de chaînes de critères (par exemple, OrderDate > ' 12/31/1999 ') affectent le contenu d’un **jeu d’enregistrements**persistant. Les filtres créés à l’aide d’un tableau de **signets** ou de l’utilisation d’une valeur de [FilterGroupEnum](./filtergroupenum.md) n’affectent pas le contenu de l' **objet Recordset**persistant. Ces règles s’appliquent aux **jeux d’enregistrements**créés à l’aide de curseurs côté client ou côté serveur.  
+ Seuls les filtres sous la forme de chaînes de critères (par exemple, OrderDate > ' 12/31/1999 ') affectent le contenu d’un **jeu d’enregistrements** persistant. Les filtres créés à l’aide d’un tableau de **signets** ou de l’utilisation d’une valeur de [FilterGroupEnum](./filtergroupenum.md) n’affectent pas le contenu de l' **objet Recordset** persistant. Ces règles s’appliquent aux **jeux d’enregistrements** créés à l’aide de curseurs côté client ou côté serveur.  
   
  Étant donné que le paramètre de *destination* peut accepter tout objet qui prend en charge l’interface OLE DB IStream, vous pouvez enregistrer un **jeu d’enregistrements** directement dans l’objet de réponse ASP. Pour plus d’informations, consultez le **scénario de persistance d’un jeu d’enregistrements XML**.  
   
@@ -84,7 +84,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 ```  
   
 > [!NOTE]
->  Deux limitations s’appliquent lors de l’enregistrement de recordsets hiérarchiques (formes de données) au format XML. Vous ne pouvez pas enregistrer dans XML si le **jeu d’enregistrements** hiérarchique contient des mises à jour en attente et que vous ne pouvez pas enregistrer un **jeu d’enregistrements**hiérarchique paramétré.  
+>  Deux limitations s’appliquent lors de l’enregistrement de recordsets hiérarchiques (formes de données) au format XML. Vous ne pouvez pas enregistrer dans XML si le **jeu d’enregistrements** hiérarchique contient des mises à jour en attente et que vous ne pouvez pas enregistrer un **jeu d’enregistrements** hiérarchique paramétré.  
   
  Un **jeu d’enregistrements** enregistré au format XML est enregistré à l’aide du format UTF-8. Lorsqu’un fichier de ce type est chargé dans un flux ADO, l’objet Stream ne tente pas d’ouvrir un **Recordset** à partir du flux, sauf si la propriété Charset du flux est définie sur la valeur appropriée pour le format UTF-8.  
   
