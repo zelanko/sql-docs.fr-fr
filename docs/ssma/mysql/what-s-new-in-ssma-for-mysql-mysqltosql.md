@@ -4,22 +4,32 @@ description: Découvrez les modifications apportées à Assistant Migration SQL 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: efd716c1e41597e276c4b33bb19122d70b91dd03
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: b97f27f2e6c1fbed9109abbde012d7a8cf97935a
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036035"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665830"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Nouveautés de SSMA pour MySQL (MySQLToSql)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications MySQL dans chaque version.
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+La version v 8.16 de SSMA pour MySQL contient les modifications suivantes :
+
+* Ajouter la prise en charge des colonnes calculées
+* Résoudre les problèmes lors `INSERT` de la conversion d’une instruction pour les tables avec des contraintes et des clés primaires uniques
+* Mettre à jour l’analyseur pour respecter `ANSI_QUOTES` et les `NO_BACKSLASH_ESCAPES` modes serveur
+* Supprimer la prise en charge de l’analyseur hérité
+* Résoudre le problème lié à l’actualisation des objets à partir de la base de données
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -83,7 +93,7 @@ En outre, SSMA pour MySQL fournit désormais la conversion pour la `LIMIT` claus
 
 En plus d’un ensemble ciblé de correctifs conçus pour améliorer la facilité d’utilisation et les performances, la version 8.6 de SSMA pour MySQL a été améliorée en ajoutant un paramètre qui permet aux utilisateurs d’omettre les propriétés étendues SSMA dans le code converti.
 
-Pour tirer parti de ce paramètre, dans SSMA pour MySQL, accédez à **Outils**  >  **paramètres du projet**  >  **General**  >  **conversion** générale, puis sous **divers** , mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui** .
+Pour tirer parti de ce paramètre, dans SSMA pour MySQL, accédez à **Outils**  >  **paramètres du projet**  >    >  **conversion** générale, puis sous **divers**, mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui**.
 
 ![Paramètre d’omission des propriétés étendues](../mysql/media/ssma-omit-extended-properties.png)
 

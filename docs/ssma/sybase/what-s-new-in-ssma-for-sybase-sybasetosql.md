@@ -4,22 +4,29 @@ description: Découvrez les modifications apportées à Assistant Migration SQL 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 10/28/2020
+ms.date: 12/17/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 57b589ef62259904d63106298326dd537d33fc15
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: c9bbea58446a4e42410273e6d20f2649121ee813
+ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036060"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665859"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Nouveautés de SSMA pour SAP ASE (SybaseToSQL)
 
 Cet article répertorie les modifications apportées à Assistant Migration SQL Server (SSMA) pour SAP ASE (anciennement SSMA pour Sybase) dans chaque version.
+
+## <a name="ssma-v816"></a>SSMA v 8.16
+
+La version v 8.16 de SSMA pour SAP ASE contient les modifications suivantes :
+
+* Supprimer la prise en charge de l’analyseur hérité
+* Résoudre le problème lié à l’actualisation des objets à partir de la base de données
 
 ## <a name="ssma-v815"></a>SSMA v 8.15
 
@@ -81,7 +88,7 @@ La version v 8.7 de SSMA pour SAP ASE présente des correctifs mineurs et des am
 
 En plus d’un ensemble ciblé de correctifs conçus pour améliorer la facilité d’utilisation et les performances, la version 8.6 de SSMA pour SAP ASE a été améliorée en ajoutant un paramètre qui permet aux utilisateurs d’omettre les propriétés étendues SSMA dans le code converti.
 
-Pour tirer parti de ce paramètre, dans SSMA pour SAP ASE, accédez à **Outils**  >  **paramètres du projet**  >  **General**  >  **conversion** générale, puis sous **divers** , mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui** .
+Pour tirer parti de ce paramètre, dans SSMA pour SAP ASE, accédez à **Outils**  >  **paramètres du projet**  >    >  **conversion** générale, puis sous **divers**, mettez à jour la valeur du paramètre **omettre les propriétés étendues** sur **Oui**.
 
 ![Paramètre d’omission des propriétés étendues](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -162,7 +169,7 @@ La version v 7.9 de SSMA pour SAP ASE contient les modifications suivantes :
 
 La version 7.8 de SSMA pour SAP ASE contient les modifications suivantes :
 
-* Modifiez le mappage de type mis en surbrillance dans les **paramètres du projet** .
+* Modifiez le mappage de type mis en surbrillance dans les **paramètres du projet**.
 * La possibilité pour les utilisateurs de désactiver la télémétrie.
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
