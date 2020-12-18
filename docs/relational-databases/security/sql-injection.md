@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad927941169f7f93f43a534535f80449682c9d60
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ea1d2300b2ff2431d58b8fb2d6139ecad130a965
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472521"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97432303"
 ---
 # <a name="sql-injection"></a>l’injection de code SQL ;
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +95,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |**;**|Délimiteur de requête|  
 |**'**|Délimiteur de chaîne de données de caractères|  
 |**--**|Délimiteur de chaîne de données de caractères<br />.|  
-|**/\*** ... **\*/**|Délimiteurs de commentaire. Le serveur n’évalue pas le texte qui figure entre les caractères **/\*** et **\*/** .|  
+|**/\**_ ... _*\*/**|Délimiteurs de commentaire. Le serveur n’évalue pas le texte qui figure entre les caractères **/\* *_ et _* \*/** .|  
 |**xp_**|Figure au début du nom des procédures stockées étendues de catalogue, telles que `xp_cmdshell`.|  
   
 ### <a name="use-type-safe-sql-parameters"></a>Utilisation de paramètres SQL de type sécurisé  

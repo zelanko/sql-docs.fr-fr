@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 88b25ab93d2baf680464d70b08bf6962b6aafb4c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001715"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407561"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "86001715"
         > [!NOTE]  
         >  Si vous ajoutez le commutateur **-n** (correspondant aux données natives) ou **-N** (format natif Unicode), les indicateurs de fin ne sont pas insérés.  
   
-    -   Si une commande **bcp** interactive contient l’option **in** ou **out** sans le commutateur du fichier de format ( **-f**) ou celui du fichier de données ( **-n**, **-c**, **-w**ou **-N**) mais que vous n’avez pas non plus précisé la longueur du préfixe et la longueur de champ, la commande vous invite à saisir l’indicateur de fin de champ de chaque champ, tout en vous proposant par défaut de ne pas en spécifier :  
+    -   Si une commande **bcp** interactive contient l’option **in** ou **out** sans le commutateur du fichier de format ( **-f**) ou celui du fichier de données ( **-n**, **-c**, **-w** ou **-N**) mais que vous n’avez pas non plus précisé la longueur du préfixe et la longueur de champ, la commande vous invite à saisir l’indicateur de fin de champ de chaque champ, tout en vous proposant par défaut de ne pas en spécifier :  
   
          `Enter field terminator [none]:`  
   
@@ -138,8 +138,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualificateur|Description|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='***field_terminator***'**|Spécifie l'indicateur de fin de champ à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, c'est le caractère de tabulation (\t).|  
-    |ROWTERMINATOR **='***row_terminator***'**|Spécifie l'indicateur de fin de ligne à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, il s'agit du caractère de saut de ligne (\n).|  
+    |FIELDTERMINATOR **='** _field_terminator_*_'_*|Spécifie l'indicateur de fin de champ à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, c'est le caractère de tabulation (\t).|  
+    |ROWTERMINATOR **='** _row_terminator_*_'_*|Spécifie l'indicateur de fin de ligne à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, il s'agit du caractère de saut de ligne (\n).|  
   
      Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   

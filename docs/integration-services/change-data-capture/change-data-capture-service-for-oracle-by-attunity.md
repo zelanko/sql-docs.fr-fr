@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 715ff2845d686d5cff37a66fdd26866e47c51a99
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 08bfc658b939520cb7b694d39c3c9bee557172a1
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257972"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934041"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Service de capture de données modifiées pour Oracle par Attunity
 
@@ -29,6 +29,7 @@ ms.locfileid: "92257972"
 
 Téléchargez le concepteur et le service de capture de données modifiées Microsoft pour Oracle par Attunity pour obtenir la version de SQL Server correspondante à partir des liens ci-dessous :
 
+- [Feature Pack Microsoft SQL Server 2012 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Feature Pack Microsoft SQL Server 2016 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Feature Pack Microsoft SQL Server 2017 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Feature Pack Microsoft SQL Server 2019 Integration Services](https://www.microsoft.com/download/details.aspx?id=100303)
@@ -57,6 +58,8 @@ Téléchargez le concepteur et le service de capture de données modifiées Micr
 -   Oracle Database 10g version 2
 -   Oracle Database 11g version 1 et version 2
 -   Oracle Database 12c en installation classique. (L’installation multi-locataire n’est pas prise en charge.)  
+-   Oracle Database 18c en installation classique. (L’installation multi-locataire n’est pas prise en charge.) 
+-   Oracle Database 19c en installation classique. (L’installation multi-locataire n’est pas prise en charge.) 
   
 ### <a name="target-sql-server-database"></a>Base de données SQL Server cible  
  Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  

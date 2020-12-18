@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f1e526621d9ff769094830af5cf312eb8c1f17f9
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323517"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutoriel : Utiliser l’authentification Active Directory avec SQL Server sur Linux
 
@@ -64,7 +64,11 @@ Joignez votre hôte SQL Server Linux à un contrôleur de domaine Active Directo
    ```
 
    > [!NOTE]
-   > La meilleure pratique de sécurité consiste à disposer d’un compte AD dédié pour SQL Server, afin que les informations d’identification de SQL Server ne soient pas partagées avec d’autres services utilisant le même compte. Toutefois, vous pouvez éventuellement réutiliser un compte AD existant si vous connaissez le mot de passe du compte (qui est requis pour générer un fichier keytab à l’étape suivante). De plus, le compte doit être activé pour prendre en charge le chiffrement Kerberos AES 128 bits et 256 bits (attribut **msDS-SupportedEncryptionTypes**) sur le compte d’utilisateur.
+   > La meilleure pratique de sécurité consiste à disposer d’un compte AD dédié pour SQL Server, afin que les informations d’identification de SQL Server ne soient pas partagées avec d’autres services utilisant le même compte. Toutefois, vous pouvez éventuellement réutiliser un compte AD existant si vous connaissez le mot de passe du compte (qui est requis pour générer un fichier keytab à l’étape suivante). De plus, le compte doit être activé pour prendre en charge le chiffrement Kerberos AES 128 bits et 256 bits (attribut **msDS-SupportedEncryptionTypes**) sur le compte d’utilisateur. Pour confirmer que le chiffrement AES est activé pour le compte, localisez le compte dans l’utilitaire **Utilisateurs et ordinateurs Active Directory**, puis sélectionnez **Propriétés**. Localisez l’onglet **Comptes** dans **Propriétés** et validez que les deux cases à cocher ci-dessous sont sélectionnées. 
+   >
+   > 1. **Ce compte prend en charge le chiffrement AES 128 bits via Kerberos**
+   >
+   > 2. **Ce compte prend en charge le chiffrement AES 256 bits via Kerberos**
 
 2. Définissez le nom de principal du service (SPN) pour ce compte à l’aide de l’outil **setspn.exe**. Le SPN doit être mis en forme exactement comme spécifié dans l’exemple suivant. Vous pouvez trouver le nom de domaine complet de la machine hôte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en exécutant `hostname --all-fqdns` sur l'hôte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le port TCP doit être 1433, sauf si vous avez configuré [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour utiliser un numéro de port différent.
 

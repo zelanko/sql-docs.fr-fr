@@ -11,13 +11,13 @@ ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2dc811a3e3217c3aa6bf2d9a006cfd1ff0c7796b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868795"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481470"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT et JOIN à partir de vues système pour les événements étendus dans SQL Server
 
@@ -116,7 +116,7 @@ Vous trouverez de la documentation de référence sur les affichages catalogue p
 
 Dans SSMS, dans l’ **Explorateur d’objets**, vous pouvez démarrer la boîte de dialogue **Nouvelle session** en développant **Gestion** > **Événements étendus**, puis en cliquant avec le bouton droit sur **Sessions** > **Nouvelle session**.
 
-Dans la grande boîte de dialogue **Nouvelle session** , dans la première section intitulée **Général**, nous constatons que l’option **Démarrer la session d’événements au démarrage du serveur**a été sélectionnée.
+Dans la grande boîte de dialogue **Nouvelle session** , dans la première section intitulée **Général**, nous constatons que l’option **Démarrer la session d’événements au démarrage du serveur** a été sélectionnée.
 
 ![Nouvelle session > Général, Démarrer la session d’événements au démarrage du serveur.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
@@ -675,7 +675,7 @@ Voici un échantillonnage des 153 lignes de sortie de l’instruction T-SQL SELE
 
 
 ```
-/***  5 sampled rows from the actual 153 rows returned.
+/**_  5 sampled rows from the actual 153 rows returned.
     NOTE:  'resource_type' under 'Column'.
 
 Package     Object          Object-Type   O--C   Column          Column-Type-Name     Column-Type   Column-Value   C--M   Map-Value        Map-Key
@@ -689,7 +689,7 @@ sqlserver   lock_deadlock   event         o--c   resource_type   lock_resource_t
 Therefore, on your CREATE EVENT SESSION statement, in its ADD EVENT WHERE clause,
 you could put:
     WHERE( ... resource_type = 6 ...)  -- Meaning:  6 = PAGE.
-***/
+_*_/
 ```
 
 
@@ -700,7 +700,7 @@ you could put:
 
 L’instruction SELECT suivante retourne chaque paramètre pour votre cible. Chaque paramètre est balisé pour indiquer s’il est obligatoire. Les valeurs que vous assignez aux paramètres affectent le comportement de la cible.
 
-- Notez l’élément de clause WHERE : *object_type = 'customizable'* .
+- Notez l’élément de clause WHERE : _object_type = 'customizable'*.
 - Vous devez aussi modifier la valeur de la clause WHERE pour *o.name =* .
 
 
@@ -754,7 +754,7 @@ package0   event_file   lazy_create_blob     boolean              Not_mandatory 
 package0   event_file   max_file_size        uint64               Not_mandatory   Maximum file size in MB
 package0   event_file   max_rollover_files   uint32               Not_mandatory   Maximum number of files to retain
 package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory   Not used
-***/
+**_/
 ```
 
 
@@ -766,7 +766,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 Cette instruction SELECT de DMV retourne les lignes de données à partir de la cible de votre session d’événements active. Les données sont converties au format XML, ce qui rend la cellule retournée interactive pour faciliter l’affichage dans SSMS.
 
 - Si votre session d’événements est arrêtée, cette instruction SELECT retourne zéro ligne.
-- Vous devez modifier la valeur de la clause WHERE pour *s.name =* .
+- Vous devez modifier la valeur de la clause WHERE pour _s.name =*.
 
 
 ```sql

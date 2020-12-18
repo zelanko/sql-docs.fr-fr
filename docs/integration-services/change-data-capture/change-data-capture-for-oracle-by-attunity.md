@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 897172c3a268ac07f1fccb0c3756d10d89054978
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6126a2676e20230e21502ae7022adca2eeb3df63
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426171"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934001"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture pour Oracle d’Attunity
 
@@ -33,6 +33,7 @@ Le téléchargement Capture de données modifiées pour Oracle par Attunity incl
 
 Téléchargez le concepteur et le service de capture de données modifiées Microsoft pour Oracle par Attunity pour obtenir la version de SQL Server correspondante à partir des liens ci-dessous :
 
+- [Feature Pack Microsoft SQL Server 2012 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=51606)
 - [Feature Pack Microsoft SQL Server 2016 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=55802)
 - [Feature Pack Microsoft SQL Server 2017 Integration Services Concepteur/Service de capture de données modifiées Attunity Oracle](https://www.microsoft.com/download/details.aspx?id=56610)
 - [Feature Pack Microsoft SQL Server 2019 Integration Services](https://www.microsoft.com/download/details.aspx?id=100303)

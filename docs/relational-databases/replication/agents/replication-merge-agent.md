@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4053b827b51eda8f238e6cada863773d625d1f59
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394984"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999225"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -292,7 +292,12 @@ replmerg [-?]
  Spécifie si la sortie doit être en clair. Si le niveau de détail est **0**, seuls les messages d'erreur sont imprimés. Si le niveau de détail est **1**, tous les messages du rapport de progression sont imprimés. Si le niveau de détail est **2** (valeur par défaut), tous les messages d'erreur et tous les messages du rapport de progression sont imprimés, ce qui peut s'avérer utile lors du débogage.  
   
  **-ParallelUploadDownload** [**0**\|**1**]  
- Spécifie si l'Agent de fusion doit traiter en parallèle les modifications téléchargées vers le serveur de publication et celles téléchargées vers l'Abonné, ce qui peut s'avérer utile dans les environnements de grands volumes avec une bande passante réseau élevée. Si **ParallelUploadDownload** a la valeur **1**, le traitement parallèle est activé.  
+ Spécifie si l’Agent de fusion doit traiter en parallèle les changements chargés sur le Serveur de publication et ceux téléchargés vers l’Abonné, ce qui peut s’avérer utile dans les environnements où les volumes sont élevés avec une bande passante réseau élevée. Toutefois, notez l’avertissement ci-dessous pour les cas où **ParallelUploadDownload** est défini sur **1**.
+ 
+La dépréciation prochaine de ce paramètre est envisagée. Nous vous recommandons de définir le paramètre **ParallelUploadDownload** sur 0 et d’éviter d’utiliser le profil d’Agent de fusion « serveur à serveur haut volume », car **ParallelUploadDownload** est défini sur 1 dans ce profil.
+
+> [!WARNING]
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
   
  **-PacketSize**  
  Taille du paquet en octets. La valeur par défaut est 4 096 octets.  

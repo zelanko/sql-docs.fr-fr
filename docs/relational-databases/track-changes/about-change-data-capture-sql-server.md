@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d0c6f18fc92c778478066c218707fbc17c45c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55bb82e19a97a91dbe00b44b195e74a250ddf1dc
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463740"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900959"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88463740"
  La source des données modifiées pour la capture de données modifiées est le journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . À mesure que des insertions, des mises à jour et des suppressions sont appliquées aux tables sources suivies, les entrées qui décrivent ces modifications sont ajoutées au journal. Le journal sert d’entrée au processus de capture. Le journal est lu et les informations relatives aux modifications sont ajoutées à la table de modifications associée de la table faisant l’objet d’un suivi. Des fonctions sont fournies afin d'énumérer les modifications qui apparaissent dans les tables de modifications sur une plage spécifiée ; ces fonctions retournent les informations sous la forme d'un jeu de résultats filtré. Le jeu de résultats filtré est utilisé en général par un processus d'application pour mettre à jour une représentation de la source dans un environnement externe.  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Fonctionnement de la capture de données modifiées et de l'instance de capture  
- Pour que les modifications apportées à une table d'une base de données puissent être suivies, la capture de données modifiées doit être activée explicitement pour la base de données. Pour cela, utilisez la procédure stockée [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md). Lorsque la base de données est activée, les tables sources peuvent être identifiées en tant que tables faisant l’objet d’un suivi à l’aide de la procédure stockée [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md). Lorsqu'une table est activée pour la capture de données modifiées, une instance de capture associée est créée afin de prendre en charge la dissémination des données modifiées dans la table source. L'instance de capture se compose d'une table de modifications et de deux fonctions de requête maximum. Les métadonnées qui décrivent les détails de configuration de l’instance de capture sont conservées dans les tables de métadonnées de capture de données modifiées, **cdc.change_tables**, **cdc.index_columns**et **cdc.captured_columns**. Ces informations peuvent être extraites en utilisant la procédure stockée [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ Pour que les modifications apportées à une table d'une base de données puissent être suivies, la capture de données modifiées doit être activée explicitement pour la base de données. Pour cela, utilisez la procédure stockée [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md). Lorsque la base de données est activée, les tables sources peuvent être identifiées en tant que tables faisant l’objet d’un suivi à l’aide de la procédure stockée [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md). Lorsqu'une table est activée pour la capture de données modifiées, une instance de capture associée est créée afin de prendre en charge la dissémination des données modifiées dans la table source. L'instance de capture se compose d'une table de modifications et de deux fonctions de requête maximum. Les métadonnées qui décrivent les détails de configuration de l’instance de capture sont conservées dans les tables de métadonnées de capture de données modifiées, **cdc.change_tables**, **cdc.index_columns** et **cdc.captured_columns**. Ces informations peuvent être extraites en utilisant la procédure stockée [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
  Tous les objets associés à une instance de capture sont créés dans le schéma de capture de données modifiées de la base de données activée. Le nom d'instance de capture doit être un nom d'objet valide et doit être unique parmi les instances de capture de base de données. Par défaut, le nom est \<*schema name*\_*table name*> de la table source. Sa table de modifications associée est nommée en ajoutant **_CT** au nom d’instance de capture. La fonction utilisée pour vérifier la présence de modifications est nommée en ajoutant le préfixe **fn_cdc_get_all_changes_** au nom d’instance de capture. Si l’instance de capture est configurée pour prendre en charge **net changes**, la fonction de requête **net_changes** est également créée et nommée en ajoutant le préfixe **fn_cdc_get_net_changes\_** au nom d’instance de capture.  
   
@@ -137,6 +137,10 @@ CREATE TABLE T1(
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
+
+## <a name="columnstore-indexes"></a>Index columnstore
+
+La capture des changements de données ne peut pas être activée sur les tables avec un index columnstore cluster. À compter de SQL Server 2016, elle peut être activée sur les tables avec un index columnstore non cluster.
 
 ## <a name="see-also"></a>Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

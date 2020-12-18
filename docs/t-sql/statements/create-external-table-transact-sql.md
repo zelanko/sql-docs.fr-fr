@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6bfa965b74aada909b7e28e1429941d4a82b65a
-ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d45781583e8ac6147f5f761cebc288cc60f9bd9a
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96328029"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489051"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -39,7 +39,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -101,6 +101,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Arguments
 
 *{database_name.schema_name.table_name | nom_schéma.nom_table | nom_table}*  Nom (composé d’une à trois parties) de la table à créer. Pour une table externe, SQL stocke uniquement les métadonnées de la table avec des statistiques de base sur le fichier ou le dossier qui est référencé dans Hadoop ou le Stockage Blob Azure. Aucune donnée n’est déplacée ni stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+> [!IMPORTANT]
+> Pour des performances optimales, si le pilote de source de données externe prend en charge un nom en trois parties, il est fortement recommandé de fournir ce nom en trois parties.  
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE prend en charge la possibilité de configurer le nom de colonne, le type de données, la possibilité d’une valeur Null et le classement. Vous ne pouvez pas utiliser DEFAULT CONSTRAINT sur des tables externes.
 
@@ -589,11 +592,11 @@ WITH
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL Database \*_** &nbsp;
@@ -641,6 +644,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Arguments
 
 *{database_name.schema_name.table_name | nom_schéma.nom_table | nom_table}*  Nom (composé d’une à trois parties) de la table à créer. Pour une table externe, SQL stocke uniquement les métadonnées de la table avec des statistiques de base sur le fichier ou le dossier qui est référencé dans Azure SQL Database. Aucune donnée n’est déplacée ni stockée dans Azure SQL Database.
+
+> [!IMPORTANT]
+> Pour des performances optimales, si le pilote de source de données externe prend en charge un nom en trois parties, il est fortement recommandé de fournir ce nom en trois parties.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE prend en charge la possibilité de configurer le nom de colonne, le type de données, la possibilité d’une valeur Null et le classement. Vous ne pouvez pas utiliser DEFAULT CONSTRAINT sur des tables externes.
 
@@ -750,11 +756,11 @@ WITH
 - [Bien démarrer avec les requêtes de bases de données croisées (partitionnement vertical)](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -825,6 +831,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Arguments
 
 *{database_name.schema_name.table_name | nom_schéma.nom_table | nom_table}*  Nom (composé d’une à trois parties) de la table à créer. Pour une table externe, seules les métadonnées de la table avec des statistiques de base sur le fichier ou le dossier qui sont référencées dans Azure Data Lake, Hadoop ou le stockage Blob Azure. Aucune donnée réelle n’est déplacée ni stockée lors de la création de tables externes.
+
+> [!IMPORTANT]
+> Pour des performances optimales, si le pilote de source de données externe prend en charge un nom en trois parties, il est fortement recommandé de fournir ce nom en trois parties.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE prend en charge la possibilité de configurer le nom de colonne, le type de données, la possibilité d’une valeur Null et le classement. Vous ne pouvez pas utiliser DEFAULT CONSTRAINT sur des tables externes.
 
@@ -1020,11 +1029,11 @@ AS SELECT * FROM
 - [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Base de données SQL](create-external-table-transact-sql.md?view=azuresqldb-current)
@@ -1078,6 +1087,9 @@ column_name <data_type>
 ## <a name="arguments"></a>Arguments
 
 *{database_name.schema_name.table_name | nom_schéma.nom_table | nom_table}*  Nom (composé d’une à trois parties) de la table à créer. Pour une table externe, le système de la plateforme d’analyse stocke uniquement les métadonnées de la table avec des statistiques de base sur le fichier ou le dossier qui est référencé dans Hadoop ou le Stockage Blob Azure. Aucune donnée réelle est déplacée ou stockée dans le système de la plateforme d’analyse.
+
+> [!IMPORTANT]
+> Pour des performances optimales, si le pilote de source de données externe prend en charge un nom en trois parties, il est fortement recommandé de fournir ce nom en trois parties.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE prend en charge la possibilité de configurer le nom de colonne, le type de données, la possibilité d’une valeur Null et le classement. Vous ne pouvez pas utiliser DEFAULT CONSTRAINT sur des tables externes.
 

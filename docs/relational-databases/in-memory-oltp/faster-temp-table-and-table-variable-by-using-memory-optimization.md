@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eac4d8a51dabb844ff6f3607383e676ecf0fc16a
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09d3e92d2e181264965a1d4525d13f7d13b4504d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175968"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460482"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -411,7 +411,7 @@ Beginning execution loop
 Batch execution completed 5001 times.  
 2016-04-20 00:27:05.440  = End time, _tempdb.  
 ---- Tests done. ----  
-***/
+**_/
 ```
   
   
@@ -423,7 +423,7 @@ Vous pouvez apprendre à prévoir les besoins en mémoire active de vos tables o
 - [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Taille de la table et des lignes dans les tables à mémoire optimisée : Exemple de calcul](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-Pour les variables de table plus importantes, les index non cluster utilisent plus de mémoire que pour les *tables*optimisées en mémoire. Plus le nombre de lignes et la clé d’index sont importants, plus la différence augmente.  
+Pour les variables de table de plus grande taille, les index non cluster utilisent plus de mémoire que pour les _tables* à mémoire optimisée. Plus le nombre de lignes et la clé d’index sont importants, plus la différence augmente.  
   
 Si la variable de table optimisée en mémoire est accessible uniquement avec une valeur de clé exacte par accès, un index de hachage peut être un meilleur choix qu’un index non cluster. Toutefois, si vous ne pouvez pas estimer la valeur BUCKET_COUNT appropriée, un index non cluster représente une bonne alternative.  
   

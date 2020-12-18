@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866665"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408049"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Préparer des données à une exportation ou une importation en bloc
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866665"
   
 -   Pour importer des données à partir de fichiers de données contenant des champs de longueur fixe ou de largeur fixe, utilisez un fichier de format. Pour plus d’informations, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
--   Les fichiers de valeurs séparées par des virgules (CSV, Comma-Separated Value) ne sont pas pris en charge par les opérations d'importation en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Toutefois, dans certains cas, un fichier CSV peut être utilisé comme fichier de données pour une importation en bloc de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Notez que la marque de fin de champ d'un fichier CSV n'est pas nécessairement une virgule. Pour être utilisable comme fichier de données pour une importation en bloc, un fichier CSV doit être conforme aux restrictions suivantes :  
+-  À compter de SQL Server 2017, un fichier CSV peut être utilisé comme fichier de données pour une importation en bloc de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Notez que la marque de fin de champ d'un fichier CSV n'est pas nécessairement une virgule. Pour être utilisable comme fichier de données pour une importation en bloc, un fichier CSV doit être conforme aux restrictions suivantes :  
   
     -   Les champs de données ne contiennent jamais la marque de fin de champ.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 6721d36159003077cf771fbff6a0e7a50a182ed2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197037"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490009"
 ---
 # <a name="install-integration-services-ssis"></a>Installer Integration Services (SSIS)
 
@@ -66,11 +66,11 @@ Si vous ne disposez pas de Microsoft SQL Server, téléchargez une édition d’
 
 Si vous utilisez l’Assistant Installation pour installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous utilisez une série de pages pour spécifier les composants et les options.
 
-- Dans la page **Sélection des fonctionnalités** , sous **Fonctionnalités partagées** , sélectionnez **Integration Services** .
+- Dans la page **Sélection des fonctionnalités**, sous **Fonctionnalités partagées**, sélectionnez **Integration Services**.
 
-- Sous **Fonctionnalités de l’instance** , sélectionnez si vous le souhaitez **Services Moteur de base de données** pour héberger la base de données du catalogue SSIS, `SSISDB`, afin de stocker, gérer, exécuter et surveiller des packages SSIS.
+- Sous **Fonctionnalités de l’instance**, sélectionnez si vous le souhaitez **Services Moteur de base de données** pour héberger la base de données du catalogue SSIS, `SSISDB`, afin de stocker, gérer, exécuter et surveiller des packages SSIS.
 
-- Pour installer des assemblys managés pour la programmation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], également sous **Fonctionnalités partagées** , sélectionnez **Kit de développement logiciel (SDK) des outils clients** .
+- Pour installer des assemblys managés pour la programmation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], également sous **Fonctionnalités partagées**, sélectionnez **Kit de développement logiciel (SDK) des outils clients**.
 
 > [!NOTE]
 > Parmi les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous pouvez sélectionner dans la page **Sélection de composant** de l’Assistant Installation, certains n’installent qu’une partie des composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Ces composants sont utiles pour des tâches spécifiques, mais les fonctionnalités de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s’en trouvent limitées. Par exemple, l'option **Services Moteur de base de données** installe les composants [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] requis pour l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour garantir une installation complète de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez sélectionner **Integration Services** dans la page **Sélection de composant** .
@@ -97,7 +97,7 @@ Pour une installation complète de [!INCLUDE[ssISnoversion](../../includes/ssisn
 
   - L’installation de SSIS n’installe **PAS** les outils nécessaires pour concevoir et développer des packages SSIS.
 
-- **Moteur de base de données SQL Server** . Installer le moteur de base de données avec l’Assistant Installation de SQL Server. La sélection du moteur de base de données vous permet de créer et d’héberger la base de données du catalogue SSIS, `SSISDB`, afin de stocker, gérer, exécuter et surveiller des packages SSIS.
+- **Moteur de base de données SQL Server**. Installer le moteur de base de données avec l’Assistant Installation de SQL Server. La sélection du moteur de base de données vous permet de créer et d’héberger la base de données du catalogue SSIS, `SSISDB`, afin de stocker, gérer, exécuter et surveiller des packages SSIS.
 
 - **SQL Server Data Tools (SSDT)** . Pour télécharger et installer SSDT, consultez [Télécharger SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). L’installation de SSDT vous permet de concevoir et de déployer des packages SSIS. SSDT installe les éléments suivants :
 
@@ -115,7 +115,7 @@ Pour une installation complète de [!INCLUDE[ssISnoversion](../../includes/ssisn
 
 - **SQL Server Data Tools (SSDT)** . Nous avons supprimé le programme d’installation autonome de SSDT pour Visual Studio 2019. Pour Visual Studio 2019, vous pouvez désormais obtenir l’extension du concepteur SSIS à partir de la [Place de marché Visual Studio](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
-- **Integration Services Feature Pack pour Azure** . Pour télécharger et installer le Feature Pack, consultez [Microsoft SQL Server 2017 Integration Services Feature Pack pour Azure](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017). L’installation du Feature Pack permet à vos packages de se connecter aux services de stockage et d’analytique dans le cloud Azure, notamment aux services suivants :
+- **Integration Services Feature Pack pour Azure**. Pour télécharger et installer le Feature Pack, consultez [Feature Pack Microsoft SQL Server Integration Services pour Azure](../azure-feature-pack-for-integration-services-ssis.md). L’installation du Feature Pack permet à vos packages de se connecter aux services de stockage et d’analytique dans le cloud Azure, notamment aux services suivants :
 
   - Stockage Blob Azure.
 
@@ -127,7 +127,7 @@ Pour une installation complète de [!INCLUDE[ssISnoversion](../../includes/ssisn
 
   - Azure Data Lake Storage (Gen2).
 
-- **Composants supplémentaires facultatifs** . Vous pouvez éventuellement télécharger des composants tiers supplémentaires à partir du SQL Server Feature Package.
+- **Composants supplémentaires facultatifs**. Vous pouvez éventuellement télécharger des composants tiers supplémentaires à partir du SQL Server Feature Package.
 
   - Microsoft® Connector pour SAP BW pour Microsoft SQL Server®. Pour obtenir ces composants, consultez [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 

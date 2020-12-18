@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115672"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471670"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Red Hat
 
@@ -28,7 +28,7 @@ Dans ce démarrage rapide, vous installez SQL Server 2017 ou SQL Server 2019 s
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Dans ce guide de démarrage rapide, vous installez SQL Server 2019 sur Red Hat Enterprise Linux (RHEL) 8. Ensuite, vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
@@ -40,16 +40,16 @@ Dans ce guide de démarrage rapide, vous installez SQL Server 2019 sur Red Hat 
 ## <a name="prerequisites"></a>Prérequis
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-Vous devez disposer d’une machine RHEL 7.3 -7.8, ou 8.0 - 8.2 avec **au moins 2 Go** de mémoire.
+Vous devez disposer d’une machine RHEL 7.3 - 7.8 ou 8.0 - 8.3 avec **au moins 2 Go** de mémoire.
 
 ::: moniker-end
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Vous devez disposer d’une machine RHEL 7.3, 7.4, 7.5, 7.6 ou 8.0 avec **au moins 2 Go** de mémoire.
+Vous devez disposer d’une machine RHEL 7.3 - 7.8 ou 8.0 - 8.3 avec **au moins 2 Go** de mémoire.
 
 ::: moniker-end
 
@@ -129,7 +129,7 @@ Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un t
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="install-sql-server"></a><a id="install"></a>Installer SQL Server
 

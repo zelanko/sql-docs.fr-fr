@@ -18,14 +18,14 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37e3914abd99f03fa441a2b6284bd43ea570e269
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868965"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468630"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -200,7 +200,7 @@ GO
   
     1.  Pour supprimer une propriété de document, cliquez sur l'en-tête de ligne à gauche de la propriété et appuyez sur DEL.  
   
-    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite de **\*** , et entrez les valeurs de la nouvelle propriété.  
+    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite de * *\** _,puis entrez les valeurs de la nouvelle propriété.  
   
          Pour plus d'informations sur ces valeurs, consultez [Éditeur de liste de propriétés de recherche](../../t-sql/statements/create-search-property-list-transact-sql.md). Pour plus d’informations sur la façon d’obtenir ces valeurs pour les propriétés définies par Microsoft, consultez [Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Pour plus d'informations sur les propriétés définies par un éditeur de logiciels indépendant (ISV), consultez la documentation de ce dernier.  
   
@@ -209,7 +209,7 @@ GO
 ###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> Suppression d'une liste de propriétés de recherche  
  Vous ne pouvez pas supprimer une liste de propriétés d'une base de données tant que la liste est associée à un index de recherche en texte intégral.  
   
- **Pour supprimer une propriété d'une liste de propriétés de recherche avec Transact-SQL**  
+ _ *Pour supprimer une liste de propriétés de recherche avec Transact-SQL**  
   
  Utilisez l’instruction [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md).  
   

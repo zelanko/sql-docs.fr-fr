@@ -2,7 +2,7 @@
 title: Configuration de la gestion de clés extensibles Transparent Data Encryption (TDE) avec Azure Key Vault
 description: Installer et configurer le connecteur SQL Server pour Azure Key Vault.
 ms.custom: seo-lt-2019
-ms.date: 10/08/2020
+ms.date: 11/25/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,15 +12,16 @@ helpviewer_keywords:
 - EKM, with key vault setup
 - SQL Server Connector, setup
 - SQL Server Connector
+- TDE, AKV, EKM
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: Rupp29
 ms.author: arupp
-ms.openlocfilehash: 4df1fb243b2e811b216b03ec453164ae1a00b1af
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 03ed7f3bca347bbb65ea0b51c807547d7bdb5656
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130210"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489597"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Configuration de la Gestion de clés extensible de SQL Server TDE avec Azure Key Vault
 
@@ -258,13 +259,13 @@ Le coffre de clés et la clé créés ici seront utilisés par le moteur de base
 1. Générer une clé asymétrique dans le coffre de clés. Vous pouvez le faire de deux manières : importer une clé existante ou créer une nouvelle clé.  
 
      > [!NOTE]
-     > SQL Server prend en charge uniquement les clés RSA 2 048 bits.
+     > SQL Server prend uniquement en charge les clés RSA 2 048 bits et 3 072 bits, ainsi que les clés RSA-HSM 2 048 bits et 3 072 bits.
 
 ### <a name="best-practices"></a>Meilleures pratiques
 
 Pour garantir la récupération rapide de clé et être en mesure d’accéder à vos données en dehors d’Azure, nous recommandons les meilleures pratiques suivantes :
 
-- Créez votre clé de chiffrement localement sur un appareil HSM (hardware security module) local. Vérifiez qu’il s’agit d’une clé RSA 2 048 bits asymétrique, donc prise en charge par SQL Server.
+- Créez votre clé de chiffrement localement sur un appareil HSM (hardware security module) local. Vérifiez qu’il s’agit d’une clé RSA 2048 ou 3072 asymétrique, donc prise en charge par SQL Server.
 - Importez la clé de chiffrement dans votre coffre de clés Azure. Ce processus est décrit dans les prochaines sections.
 - Avant d’utiliser la clé dans le coffre de clés Azure pour la première fois, sauvegardez la clé Azure Key Vault. Pour en savoir plus, voir la commande [Backup-AzureKeyVaultKey]().
 - Chaque fois que vous modifiez la clé (par exemple, ajout de listes de contrôle d’accès, ajout d’étiquettes, ajout d’attributs de clé), veillez à faire une autre sauvegarde de la clé Azure Key Vault.
@@ -274,7 +275,7 @@ Pour garantir la récupération rapide de clé et être en mesure d’accéder �
 
 ### <a name="types-of-keys"></a>Types de clés
 
-Vous pouvez générer deux types de clés dans Azure Key Vault qui fonctionnent avec SQL Server. Les deux types sont des clés RSA asymétriques 2 048 bits.  
+Vous pouvez générer quatre types de clés dans un coffre de clés Azure qui fonctionnent avec SQL Server. Les clés RSA 2 048 bits et 3 072 bits asymétriques, ainsi que les clés RSA-HSM 2 048 bits et 3 072 bits.
   
 - **À protection logicielle** : Traitées dans le logiciel et chiffrées au repos. Les opérations sur les clés à protection logicielle ont lieu sur les machines virtuelles Azure. Nous recommandons ce type pour les clés qui ne sont pas utilisées dans un déploiement de production.  
 
@@ -340,7 +341,8 @@ Téléchargez le connecteur SQL Server à partir du [Centre de téléchargement 
 > - À partir de la version 1.0.3.0, le connecteur SQL Server signale les messages d’erreur pertinents dans les journaux des événements Windows à des fins de résolution des problèmes.
 > - À partir de la version 1.0.4.0, il existe une prise en charge des clouds privés Azure, y compris Azure Chine, Azure Allemagne et Azure Government.
 > - Un changement cassant figure dans la version 1.0.5.0, lié à l’algorithme d’empreinte. Vous pouvez rencontrer un échec de restauration des bases de données après la mise à niveau vers la version 1.0.5.0. Pour plus d’informations, consultez [l’article 447099 de la Base de connaissances](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
-> - **À partir de la version 1.0.5.0 (horodatage : septembre 2020), le connecteur SQL Server prend en charge le filtrage des messages et la logique de nouvelle tentative de requête réseau.**
+> - À partir de la version 1.0.5.0 (horodatage : septembre 2020), le connecteur SQL Server prend en charge le filtrage des messages et la logique de nouvelle tentative de requête réseau.
+> - **À compter de la version 1.0.5.0 (horodatage : novembre 2020), le connecteur SQL Server prend en charge les clés RSA 2048, RSA 3072, RSA-HSM 2048 et RSA-HSM 3072.**
   
   ![Capture d’écran de l’Assistant d’installation du Connecteur SQL Server](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

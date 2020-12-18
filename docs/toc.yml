@@ -348,7 +348,7 @@
               href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Répertorier les notebooks d’opérations
               href: big-data-cluster/cluster-manage-notebooks.md
-        - name: Superviser
+        - name: Monitor
           items:
             - name: Analyser avec Azure Data Studio
               href: big-data-cluster/cluster-monitor-ads.md
@@ -8506,8 +8506,14 @@
               href: ssms/sql-server-management-studio-ssms.md
         - name: Démarrages rapides
           items:
-            - name: "Connexion & interrogation de SQL\_Server"
-              href: ssms/quickstarts/connect-query-sql-server.md
+            - name: "Se connecter à et interroger SQL\_Server"
+              href: ssms/quickstarts/ssms-connect-query-sql-server.md
+            - name: "Se connecter à SQL\_Server et l’interroger sur une machine virtuelle Azure"
+              href: ssms/quickstarts/ssms-connect-query-sql-server-azure-vm.md
+            - name: Se connecter à et interroger Azure SQL Database
+              href: ssms/quickstarts/ssms-connect-query-azure-sql.md
+            - name: Se connecter à un pool SQL dédié et l’interroger dans Azure Synapse Analytics
+              href: ssms/quickstarts/ssms-connect-query-azure-synapse-analytics.md
         - name: Tutoriels
           items:
             - name: Configuration de SSMS
